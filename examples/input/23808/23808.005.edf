@@ -1,0 +1,150 @@
+$  APEX-Seabird (061125) Iridium Message Parser & Calibration Applicator [SwiftWare]
+$  $Revision$  $Date$
+$  Cmd Line: /www/argo/bin/Apf11Sbe41cpOptodeIsusPhFlbbOcr061125-parser if=23808.005.msg of=23808.005.edf 
+$
+$ E    lat     lon       date   time  zbot  zmax sh co           stnid      n
+$ H  47.65 -122.31 09/04/2025 19.092     *   101  *  *        23808.005      3
+$
+$  Processed engineering data:
+$  BatteryVoltage=15.8V  VoltCount=221
+$  AirBladderPressure=9.2psi  AirBladderPressureCount=159
+$  Vacuum=11.6psi  VacuumCount=200
+$  BottomPistonPosition=9
+$  HumidityPark=inf% HumidityAd12Park=4094
+$  HumidityPneumaticRef=61.5% HumidityAd12PneumaticRef=2933
+$  HumidityPneumatic=61.0% HumidityAd12Pneumatic=2917
+$  IAirPump=76mA  AmpCount=19
+$  IHighPressurePump=143mA  AmpCount=39
+$  IQuiescent=9.3mA  AmpCount=2
+$  ISbe41cp=13mA  AmpCount=3
+$  VAirPump=15.1V  VoltCount=212
+$  VHighPressurePump=15.1V  VoltCount=212
+$  VLoad=15.1V  VoltCount=212
+$  VQuiescent=15.8V  VoltCount=221
+$  VSbe41cp=15.7V  VoltCount=220
+$  PumpMotorSeconds=2187 sec
+$  DeepProfilePistonPosition=9
+$  ParkPistonPosition=19
+$  SurfacePistonPosition=136
+$  SurfacePressure=0.0 dbar
+$  ProfileTermination=0x0000
+$  Sbe41cpStatus=0x0000
+$
+$  Raw engineering meta data:
+$  ActiveBallastAdjustments=0
+$  AirBladderPressure=159
+$  AirPumpAmps=19
+$  AirPumpVolts=212
+$  Apf11FwRev=061125
+$  BuoyancyPumpAmps=39
+$  BuoyancyPumpOnTime=2187
+$  BuoyancyPumpVolts=212
+$  ConnectionAttempts=5
+$  Connections=2
+$  Coulombs=2.9kC
+$  CoulombsDescent=2.3kC
+$  CoulombsPark=2.6kC
+$  CoulombsPrfDescent=2.7kC
+$  CoulombsProfile=2.7kC
+$  CoulombsSleep=0.1kC
+$  CoulombsTelemetry=2.9kC
+$  CoulombsWake=2.7kC
+$  CurrentPistonPosition=231
+$  DeepProfilePistonPosition=9
+$  DuraPowerCycleCounter=0
+$  DuraWakeCurrent=47.6mA
+$  DuraWakePower=728.9mW
+$  DuraWakeVolts=15.3V
+$  FlbbAmps=11
+$  FlbbStatus=0x00
+$  FlbbVolts=218
+$  FloatId=23808
+$  GpsFixTime=28
+$  HumidityAd12Park=4094 (inf%)
+$  HumidityAd12Pneumatic=2917 (61.0%)
+$  HumidityAd12PneumaticRef=2933 (61.5%)
+$  IsusPowerCycleCounter=0
+$  IsusWakeCurrent=49.1mA
+$  IsusWakePower=752.8mW
+$  IsusWakeVolts=15.3V
+$  LeakDetectorChan[0]={sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}
+$  LeakDetectorChan[1]={sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}
+$  LeakDetectorChan[2]={sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}
+$  LeakDetectorChan[3]={sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}
+$  LeakSensor={state:0, count:0, ad12:3875cnt, v:2.37V, index:0.0%, epoch:1756972977sec, mtime:1078sec}
+$  MuxerHumidity=6.1%
+$  MuxerTemperature=16.90C
+$  MuxerWakeCurrent=0.0mA
+$  MuxerWakePower=0.0mW
+$  MuxerWakeVolts=15.5V
+$  ObsIndex=1
+$  OcrAmps=7
+$  OcrStatuss=0x00
+$  OcrVolts=219
+$  OptodeAmps=13
+$  OptodeVolts=218
+$  ParkDescentPCnt=2
+$  ParkDescentP[0]=10
+$  ParkDescentP[1]=10
+$  ParkObs={ 100.8dbar, 18.715C, 33.5754PSU / nan / 19.181C 31.176 8.439 / 800, 2116, 549}
+$  ParkPistonPosition=19
+$  ProfileId=005
+$  QuiescentAmps=2
+$  QuiescentVolts=221
+$  RtcSkew=-4
+$  Sbe41cpAmps=3
+$  Sbe41cpStatus=0x00000000
+$  Sbe41cpVolts=220
+$  SleepSec=36946
+$  StandbySec=146393
+$  SurfaceObs={ 100.8dbar, nan, nan / nan / 25.986C 29.935 8.548 / 50, 49, 539}
+$  SurfacePistonPosition=136
+$  SurfacePressure=100.83
+$  TimeStartDescent=1756971900         Sep 04 2025 07:45:00
+$  TimeStartPark=1756973710            Sep 04 2025 08:15:10
+$  TimeStartProfile=1757004299         Sep 04 2025 16:44:59
+$  TimeStartProfileDescent=1757002581  Sep 04 2025 16:16:21
+$  TimeStartTelemetry=1757012093       Sep 04 2025 18:54:53
+$  TimeStopProfile=1757011509          Sep 04 2025 18:45:09
+$  Vacuum=200
+$  WakeCycles=1255
+$  WakeSec=2914
+$  status=0x00000011
+$
+$  NFix=1   //       lon     lat Julian-sec       date   hour nsat FixTime
+$  Fix(First):  -122.313  47.651 1757012730 09-04-2025 19.092    7      28
+$ F %7.2f %7.4f %7.4f %7.4f %7.4f %5.1f %4u
+$ T     p        t        s    theta    sigma  speed    n
+   100.79  18.7147  33.5754  18.6971  24.0100      *    1
+   100.80  22.0690  33.6940  22.0491  23.2136    0.8  255
+   100.81  20.7234  33.6929  20.7044  23.5799      *    1
+$ LowResF %6.1f %6.3f %6.3f %6.3f %6.3f %6.3f %6.1f %8.5f %5d %5d %5d %6.3f %7.4f %5.1f %6.1f %6.1f %7.3f %7.3f %7.3f %8.1f
+$ LowRes       p       t       s  TPhase    Topt  RPhase     no3        pH   FSig  BbSig   TSig   theta    sigma  o2sat  OptO2     NO3   380nm   443nm   490nm      PAR
+$ LowRes   100.8  20.723  33.693   30.76   21.42    8.48   -12.2  -0.85605    972   2013    547  20.704  23.5799  224.5  205.4   -11.9  0.0000  0.0000  0.0000   0.0000
+$
+$  Park-phase PT time-series: 9 samples
+$                      UnixEpoch  MTime       p       t   fl   bb tsig |-------- Date --------|
+$  ParkPtFlbb [001]:  1756973719   1820   100.8 19.4060  462 2236  548 Thu Sep  4 08:15:19 2025
+$  ParkPtFlbb [002]:  1756975507   3608   100.8 18.5248  462 2224  548 Thu Sep  4 08:45:07 2025
+$  ParkPtFlbb [003]:  1756979107   7208   100.8 17.4487  467 2199  550 Thu Sep  4 09:45:07 2025
+$  ParkPtFlbb [004]:  1756982707  10808   100.8 16.9884  469 2169  551 Thu Sep  4 10:45:07 2025
+$  ParkPtFlbb [005]:  1756986307  14408   100.8 15.6936  476 1927  553 Thu Sep  4 11:45:07 2025
+$  ParkPtFlbb [006]:  1756989907  18008   100.8 15.2221  483 1851  554 Thu Sep  4 12:45:07 2025
+$  ParkPtFlbb [007]:  1756993507  21608   100.8 15.2129  551 1768  554 Thu Sep  4 13:45:07 2025
+$  ParkPtFlbb [008]:  1756997107  25208   100.8 16.2989  725 1846  553 Thu Sep  4 14:45:07 2025
+$  ParkPtFlbb [009]:  1757000707  28808   100.8 18.3703  781 2145  551 Thu Sep  4 15:45:07 2025
+$
+$  Optode air calibration data: 12 samples
+$                        UnixEpoch abp       p     TOpt   TPhase   RPhase  |-------- Date --------|
+$  OptodeAirCal [001]:  1757012095 122  100.83   25.119   30.014    8.542  Thu Sep  4 18:54:55 2025
+$  OptodeAirCal [002]:  1757012128 121  100.82   25.104   30.050    8.543  Thu Sep  4 18:55:28 2025
+$  OptodeAirCal [003]:  1757012162 120  100.82   25.133   30.043    8.541  Thu Sep  4 18:56:02 2025
+$  OptodeAirCal [004]:  1757012195 120  100.83   25.184   30.036    8.540  Thu Sep  4 18:56:35 2025
+$  OptodeAirCal [005]:  1757012392 155  100.84   25.512   29.983    8.550  Thu Sep  4 18:59:52 2025
+$  OptodeAirCal [006]:  1757012425 155  100.83   25.476   30.009    8.546  Thu Sep  4 19:00:25 2025
+$  OptodeAirCal [007]:  1757012459 155  100.82   25.527   30.014    8.544  Thu Sep  4 19:00:59 2025
+$  OptodeAirCal [008]:  1757012492 155  100.83   25.581   30.005    8.544  Thu Sep  4 19:01:32 2025
+$  OptodeAirCal [009]:  1757012525 155  100.83   25.548   29.994    8.545  Thu Sep  4 19:02:05 2025
+$  OptodeAirCal [010]:  1757012558 154  100.82   25.660   29.985    8.549  Thu Sep  4 19:02:38 2025
+$  OptodeAirCal [011]:  1757012591 154  100.83   25.769   29.967    8.548  Thu Sep  4 19:03:11 2025
+$  OptodeAirCal [012]:  1757012625 154  100.83   25.837   29.952    8.547  Thu Sep  4 19:03:45 2025
