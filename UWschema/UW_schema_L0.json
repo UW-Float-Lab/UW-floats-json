@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "UW argo float L0 json",
-  "description": "UW argo float L0 json, version 0.2.0, updated 2026-01-09",
+  "description": "UW argo float L0 json, version 0.3.0, updated 2026-03-06",
   
   "$defs": {
     "ISO8601": {
@@ -54,7 +54,7 @@
     "INSTRUMENT_TYPE": {
       "description": "the type of float",
       "type": "string",
-      "enum": ["UW-APEX", "UW-APEX-BGC", "UW-NAVIS-BGC"]
+      "enum": ["UW-APEX-core", "UW-APEX-BGC", "UW-NAVIS-BGC"]
     },
     "OPERATING_INSTITUTION": {
       "description": "Institution responsible for operating the float",
@@ -71,21 +71,25 @@
       "type": "string"
     },
     "TRANSMISSION ID NUMBER": {
-      "description": "[TO BE SPECIFIED]",
-      "type": ["integer", "null"]
+      "description": "[[TO BE SPECIFIED]]",
+      "type": "integer"
+    },
+    "AOML_ID NUMBER": {
+      "description": "AOML ID number",
+      "type": "integer"
+    },
+    "WMO_ID NUMBER": {
+      "description": "WMO ID number",
+      "type": "integer"
     },
     "WMO INSTRUMENT TYPE (TABLE 1770)": {
-      "description": "[TO BE SPECIFIED]",
+      "description": "[[TO BE SPECIFIED]]",
       "type": ["integer", "null"]
     }, 
     "WMO RECORDER TYPE (TABLE 4770)": {
-      "description": "[TO BE SPECIFIED]",
+      "description": "[[TO BE SPECIFIED]]",
       "type": ["integer", "null"]
     }, 
-    "WMO_ID NUMBER": {
-      "description": "[TO BE SPECIFIED]",
-      "type": ["integer", "null"]
-    },
     "PROJECT_NAME": {
       "description": "The project under which the float operates",
       "type": "string"
@@ -231,6 +235,47 @@
           "PSAL": {
             "description": "Practical salinity",
             "type": "number"
+          },
+          "Temp_optode": {
+            "description": "Temperature (in celsius) as measured by the optode sensor",
+            "type": "number"
+          },
+          "TPhase": {
+            "description": "TPhase (in [[???]]) as measured by optode sensor",
+            "type": "number"
+          },
+          "RPhase": {
+            "description": "RPhase (in [[???]]) as measured by the optode sensor",
+            "type": "number"
+          },
+          "NO3": {
+            "description": "Nitrate concentration from MBARI ISUS sensor in micromolar units",
+            "type": ["null", "number"]
+          },
+          "pH_V": {
+            "description": "MBARI ISUS pH sensor raw voltage (in volts)",
+            "type": ["null", "number"]
+          },
+          "FSig": {
+            "description": "Raw count of fluorescence",
+            "type": "integer"
+          },
+          "BbSig": {
+            "description": "Raw count of backscatter",
+            "type": "integer"
+          },
+          "TSig": {
+            "description": "Fluorometer Raw temperature signal",
+            "type": "integer"
+          },
+          "Ocr": {
+            "description": "four 32-bit channels of downwelling radiance reported by the OCR-504. Each array element represent 32-bit ADC values",
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+                "type": ["null", "integer"]
+            }
           }
         },
         "required": [
@@ -286,6 +331,18 @@
             "description": "Practical salinity",
             "type": "number"
           },
+          "FSig": {
+            "description": "Raw count of fluorescence",
+            "type": "integer"
+          },
+          "BbSig": {
+            "description": "Raw count of backscatter",
+            "type": "integer"
+          },
+          "TSig": {
+            "description": "Fluorometer Raw temperature signal",
+            "type": "integer"
+          },
           "TIME": {
             "description": "Time at which the CTD data is taken",
             "$ref": "#/$defs/ISO8601"
@@ -297,6 +354,65 @@
         "additionalProperties": false
       },
       "minItems": 1
+    },
+    "optode_air_calibration": {
+      "description": "Samples collected at the surface just before and just after the pneumatic bladder is inflated. The samples collected just before inflation are intended to collect optode samples in-water very near the surface. The samples collected just after inflation are intended to represent samples collected in-air.", 
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Pres_air": {
+            "description": "Pressure (in A/D counts) of the pneumatic bladder which is less than 90 for a deflated bladder and greater than 115 for an inflated bladder",
+            "type": "integer"
+          },
+          "Pres_CTD": {
+            "description": "Pressure (in dbar) as measured by the CTD",
+            "type": "number"
+          },
+          "Temp_optode": {
+            "description": "Temperature (in celsius) as measured by the optode sensor",
+            "type": "number"
+          },
+          "TPhase": {
+            "description": "TPhase (in [[???]]) as measured by optode sensor",
+            "type": "number"
+          },
+          "RPhase": {
+            "description": "RPhase (in [[???]]) as measured by the optode sensor",
+            "type": "number"
+          },
+          "FSig": {
+            "description": "Raw count of fluorescence",
+            "type": "integer"
+          },
+          "BbSig": {
+            "description": "Raw count of backscatter",
+            "type": "integer"
+          },
+          "TSig": {
+            "description": "Fluorometer Raw temperature signal",
+            "type": "integer"
+          },
+          "Ocr": {
+            "description": "four 32-bit channels of downwelling radiance reported by the OCR-504. Each array element represent 32-bit ADC values",
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+                "type": "integer"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "dura": {
+      "description": "Data and metadata from Dura sensor. [[More details to be added]]",
+      "type": "object"
+    },
+    "isus": {
+      "description": "Data and metadata from Isus sensor. [[More details to be added]]",
+      "type": "object"
     },
     "raw_mission_config": {
       "type": "object",
@@ -369,6 +485,8 @@
     "DECODER_VERSION",
     "SCHEMA_VERSION",
     "INTERNAL_ID_NUMBER",
+    "AOML_ID NUMBER",
+    "WMO_ID NUMBER",
     "INSTRUMENT_TYPE",
     "OPERATING_INSTITUTION",
     "FILE_CREATION_INSTITUTION",

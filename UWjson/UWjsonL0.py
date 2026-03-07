@@ -1,5 +1,5 @@
 '''
-Version: 0.2.0
+Version: 0.3.0
 '''
 
 import re, itertools
@@ -9,8 +9,8 @@ from datetime import datetime, UTC
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.2.0",
-  "SCHEMA_VERSION": "0.2.0",
+  "DECODER_VERSION": "0.3.0",
+  "SCHEMA_VERSION": "0.3.0",
   "PI": "RISER, STEVE AND GRAY, ALISON",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
@@ -64,6 +64,12 @@ irid_fix_rx = re.compile(r"IridiumFix: <lon,lat>:\s*([\S]+)\s+([\S]+)\s*IrEpoch:
 # regex for parked sample
 parkpt_rx = re.compile(r"ParkPt:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+([\S]+)\s+([\S]+)\s+([\S]+)")
 
+# regex for parked PT, Flbb sample
+parkptflbb_rx = re.compile(r"ParkPtFlbb:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+
+# regex for Optode air-calibration data
+optode_rx = re.compile(r"OptodeAirCal:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+
 # regex for engineering parameters
 engr_rx = re.compile(r"^([A-Za-z0-9]+)=(.*?)$")
 
@@ -71,26 +77,40 @@ engr_rx = re.compile(r"^([A-Za-z0-9]+)=(.*?)$")
 engr_array_rx = re.compile(r"^([A-Za-z0-9]+)\[([0-9]+)\]=(.*?)$")
 
 # regex for a generic log entry
-log_rx = re.compile(r"^\((" + mmmdy_hms + r"),\s+([0-9]+)\s+sec\)\s+([_:A-Za-z0-9]+)(?:\(\))?\s+(.*?)$")
+log_rx = re.compile(r"^\((" + mmmdy_hms + r"),\s+([0-9]+)\s+sec\)\s+([_:A-Za-z0-9]+)\(?\)?\s+(.*?)$")
 
 # regex for parsing datetime values in engineering datetime information
 engr_time_rx = re.compile(r"([0-9]+)\s+(" + mmmdy_hms + ")")
 
+# regex for profile header in .dura and .isus files
+dura_header_rx = re.compile(r"Profile: ([0-9]+)\.([0-9]+) [A-Z][a-z]{2} (" + mmmd_hms_y + ")")
+
+# regex for <EOP> line in .dura and .isus files
+dura_EOP_rx = re.compile(r"<EOP>\s+:\s+([0-9]+)\.([0-9]+) [A-Z][a-z]{2} (" + mmmd_hms_y + ")")
+
+# regex for dura and isus engineering data
+dura_engr_rx = re.compile(r"^H, ([^,]+),(.*)$")
 
 #### Utility functions
+
+def parseNaN(val):
+    '''
+    parse a string and convert nan to None
+    '''
+    return None if (val.strip().lower() == "nan") else val
 
 def parseHex(val):
     '''
     Parse a hexadecimal string into integer
     '''
-    return int(val, 16)
+    return None if (val.strip().lower() == "nan") else int(val, 16)
 
 
 def parseInt(val):
     '''
     Parse an integer string into integer. nan is converted to None
     '''
-    return None if (val.strip().lower() == "nan") else int(val)
+    return None if (val.strip().lower() == "nan") else int(val, 10)
 
 
 def parseFloat(val):
@@ -151,24 +171,53 @@ def decode_hex(code, jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 
         val -= jump
 
     return round(scalar * val + offset, dp)
-    
-    
+
+
+def decode_if_number(value):
+    '''
+    Decode a string IF it can be parsed as a numerical value. Integer is tried
+    first and accepted if agree with the floating point representation
+    '''
+    if val.strip().lower() == "nan":
+        return None
+
+    try:
+        out1 = int(value)
+    except ValueError:
+        out1 = None
+
+    try:
+        out2 = float(value)
+    except ValueError:
+        out2 = None
+
+    if out1 is None:
+        if out2 is None:
+            return value
+        else:
+            return out2
+    else:
+        if out1 == out2:
+            return out1
+        else:
+            return out2
+
+
 def decode_time(value):
     '''
     Decode a string that represent calendar date time. Common formats for the 
     datetime code are tried until one that works. The resulting datetime object 
     is then recoded using the ISO 8601 standard.
     '''
-    
 
     # try different format string until seeing the one that works
-    
+
     if isinstance(value, str):
         try:
             value = datetime.strptime(value, "%b %d %Y %H:%M:%S")
         except ValueError:
             pass
-        
+
     if isinstance(value, str):
         try:
             value = datetime.strptime(value, "%m/%d/%Y %H:%M:%S")
@@ -180,13 +229,13 @@ def decode_time(value):
             value = datetime.strptime(value, "%m/%d/%Y %H%M%S")
         except ValueError:
             pass
-            
+
     if isinstance(value, str):
         try:
             value = datetime.strptime(value, "%b %d %H:%M:%S %Y")
         except ValueError:
             pass
-            
+
     return value.isoformat() + "Z"
 
 
@@ -198,24 +247,27 @@ def dict_to_list(in_dict):
     return out
 
 
-#### Componenet functions (for decoding specific part(s) of file/python object)
+#### Component functions (for decoding specific part(s) of file/python object)
 
 def infer_instrument(msg_dict):
     '''
     Infer the float type
     '''
-    # to be developed
-    return "UW-APEX"
+    # to be further developed
+    if "OptodeAirCal" in msg_dict:
+        return "UW-APEX-BGC"
+    else:
+        return "UW-APEX-core"
 
 
 def infer_positioning(msg_dict):
     '''
     Infer the mechanism for positioning the float
     '''
-    
+
     if "gps" in msg_dict and msg_dict["gps"]:
         return "GPS"
-    elif "Iridium" in msg_dict and msg_dict["iridium"]:
+    elif "Iridium" in msg_dict and msg_dict["Iridium"]:
         return "Iridium"
     else:
         return None
@@ -236,7 +288,7 @@ def parse_gps(gps_list):
         out_entry["sat_cnt"] = parseInt(entry["nsat"])
         out_entry["time_to_fix"] = parseInt(entry["t_fix"])
         out.append(out_entry)
-        
+
     return out
 
 
@@ -267,9 +319,9 @@ def parse_engr_time(time_dict):
     '''
     Parse timestamp information in engineering data
     '''
-    
+
     out = {}
-    
+
     rx_match = engr_time_rx.match(time_dict.get('TimeStartDescent', ""))
     if rx_match: 
         out["StartDescent"] = decode_time(rx_match[2])
@@ -293,26 +345,46 @@ def parse_engr_time(time_dict):
     rx_match = engr_time_rx.match(time_dict.get('TimeStartTelemetry', ""))
     if rx_match: 
         out["StartTelemetry"] = decode_time(rx_match[2])
-    
+
     return out
 
 
-def parse_discrete(disc_dict):
+def parse_discrete(disc_dict, logger=print):
     '''
     Parse discrete CTD samples of the float
     '''
     out = []
-    
-    if len(disc_dict["headers"]) == 3:
+
+    if len(disc_dict["headers"]) == 3: # core CTD data only
         for item in disc_dict["park_data"]:
             out.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
         for item in disc_dict["data"]:
             out.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
 
+    elif len(disc_dict["headers"]) == 15: # CTD(3) + optode(3) + nitrate(2) + FLBB(3) + OCR(4)
+        for item in disc_dict["park_data"]:
+            out.append({
+                "PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"]),
+                "Temp_optode": parseFloat(item["Topt"]), "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"]),
+                "NO3": parseFloat(item["no3"]), "pH_V": parseFloat(item["pH(V)"]),
+                "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), "TSig": parseInt(item["TSig"]),
+                "Ocr": [parseHex(item["Ocr[0]"]), parseHex(item["Ocr[1]"]), parseHex(item["Ocr[2]"]), parseHex(item["Ocr[3]"])]
+            })
+        for item in disc_dict["data"]:
+            out.append({
+                "PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"]),
+                "Temp_optode": parseFloat(item["Topt"]), "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"]),
+                "NO3": parseFloat(item["no3"]), "pH_V": parseFloat(item["pH(V)"]),
+                "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), "TSig": parseInt(item["TSig"]),
+                "Ocr": [parseHex(item["Ocr[0]"]), parseHex(item["Ocr[1]"]), parseHex(item["Ocr[2]"]), parseHex(item["Ocr[3]"])]
+            })
+    else:
+        logger("Unknown data fields. No entries returned")
+
     return out
 
 
-def parse_continuous(cont_dict):
+def parse_continuous(cont_dict, logger=print):
     '''
     Parse continuous CTD samples of the float
     '''
@@ -320,9 +392,9 @@ def parse_continuous(cont_dict):
     out = []
 
     if cont_dict["hex_len"] == 14:
-        
+
         for item in cont_dict["data"]:
-            
+
             if item == "0" * 14: continue
 
             tmp = {}
@@ -332,25 +404,67 @@ def parse_continuous(cont_dict):
             tmp["n_samp"] = decode_hex(item[12:])
 
             out.append(tmp)
+
+    else:
+        logger("Unknown hex legnth. No entries returned")
     
     return out
 
 
-def parse_parked(park_dict, type):
+def parse_parked(park_dict, meas_type, logger=print):
     '''
     Parse parked CTD samples of the float
     '''
     out = []
-    
-    if type == "ParkPt":
+
+    if meas_type == "ParkPt":
 
         for item in park_dict:
-            tmp = {}
-            tmp["PRES"] = float(item["p"])
-            tmp["TEMP"] = float(item["t"])
-            tmp["TIME"] = decode_time(item["time"])
-            out.append(tmp)
+            out.append({
+                "PRES": parseFloat(item["p"]),
+                "TEMP": parseFloat(item["t"]),
+                "TIME": decode_time(item["time"])
+            })
 
+    elif meas_type == "ParkPtFlbb":
+
+        for item in park_dict:
+            out.append({
+                "PRES": parseFloat(item["p"]),
+                "TEMP": parseFloat(item["t"]),
+                "FSig": parseInt(item["FSig"]),
+                "BbSig": parseInt(item["BbSig"]),
+                "TSig": parseInt(item["TSig"]),
+                "TIME": decode_time(item["time"])
+            })
+
+    else:
+        logger("Unknown measurement type. No entries returned")
+
+    return out
+
+
+def parse_OptodeAirCal(optode_list):
+
+    out = []
+    for item in optode_list:
+        out.append({
+            "Pres_air": parseInt(item["AirP"]),
+            "Pres_CTD": parseFloat(item["p"]),
+            "Temp_optode": parseFloat(item["optodeT"]),
+            "TPhase": parseFloat(item["TPhase"]),
+            "RPhase": parseFloat(item["RPhase"]),
+            "FSig": parseInt(item["FSig"]),
+            "BbSig": parseInt(item["BbSig"]),
+            "TSig": parseInt(item["TSig"]),
+            "Ocr": [
+                parseHex(item["Ocr[0]"]),
+                parseHex(item["Ocr[1]"]),
+                parseHex(item["Ocr[2]"]),
+                parseHex(item["Ocr[3]"]),
+            ],
+            "TIME": decode_time(item["time"])
+        })
     return out
 
 
@@ -360,13 +474,12 @@ def parse_mission_config(config_dict):
 
     WARNING: the input dictionary is modified in place and returned
     '''
-    
+
     if "AtDialCmd" in config_dict:
         config_dict["AtDialCmd"] = { "value": config_dict["AtDialCmd"]["value"] }
     if "AltDialCmd" in config_dict:
         config_dict["AltDialCmd"] = { "value": config_dict["AltDialCmd"]["value"] }
 
-    
     return config_dict
 
 
@@ -383,13 +496,200 @@ def parse_engineering_data(engr_list):
 
             if isinstance(v, dict):
                 engr_dict[k] = dict_to_list(v)
-            
+
     return engr_list
+
+
+def parse_AOML_ID_map(line_list, logger=print):
+    '''
+    Construct mapping between internal float ID to AOML ID using the 
+    AomlIdMap file
+    '''
+    out_dict = {}
+    Apf_set = set()
+    Aoml_set = set()
+
+    for i, line in enumerate(line_list, 1):
+        line = line.strip()
+        if (not line.startswith("#")) and (not line.startswith("//")):
+
+            entries = line.split()
+
+            try:
+                AOML_Id = entries[0]
+            except IndexError:
+                continue
+            try:
+                AOML_Id = int(AOML_Id)
+            except ValueError:
+                logger(f"Line {i}: WARNING: non-integer value AOML ID '{AOML_Id}'")
+
+            if AOML_Id in Aoml_set:
+                logger(f"Line {i}: WARNING: multiple occurrence of AOML ID {AOML_Id}")
+            Aoml_set.add(AOML_Id)
+
+            try:
+                Apf_Id = entries[1]
+            except IndexError:
+                # ignore unassigned numbers
+                #logger(f"Line {i}: WARNING: unassigned AOML ID {AOML_Id}")
+                continue
+            if Apf_Id.startswith("#") or Apf_Id.startswith("//"):
+                # ignore unassigned numbers
+                #logger(f"Line {i}: WARNING: unassigned AOML ID {AOML_Id}")
+                continue
+
+            try:
+                Apf_Id = int(Apf_Id)
+            except ValueError:
+                logger(f"Line {i}: WARNING: non-integer value Apf ID '{Apf_Id}'")
+
+            if Apf_Id in Apf_set:
+                logger(f"Line {i}: WARNING: multiple occurrence of Apf ID {Apf_Id}")
+            Apf_set.add(Apf_Id)
+
+            out_dict[Apf_Id] = AOML_Id
+
+    return out_dict
+
+
+def parse_WMO_ID_map(line_list, logger=print):
+    '''
+    Construct mapping between internal float ID to WMO ID using the 
+    WmoIdMap file
+    '''
+    out_dict = {}
+    Apf_set = set()
+    Wmo_set = set()
+
+    for i, line in enumerate(line_list, 1):
+        line = line.strip()
+        if (not line.startswith("#")) and (not line.startswith("//")):
+
+            entries = line.split()
+
+            try:
+                WMO_Id = entries[0]
+            except IndexError:
+                continue
+
+            try:
+                WMO_Id = int(WMO_Id)
+            except ValueError:
+                logger(f"Line {i}: WARNING: non-integer value WMO ID '{WMO_Id}'")
+
+            if WMO_Id in Wmo_set:
+                logger(f"Line {i}: WARNING: multiple occurrence of WMO ID {WMO_Id}")
+            Wmo_set.add(WMO_Id)
+
+            try:
+                Apf_Id = entries[1]
+            except IndexError:
+                # ignore unassigned numbers
+                #logger(f"Line {i}: WARNING: unassigned WMO ID {WMO_Id}")
+                continue
+
+            if Apf_Id.startswith("#") or Apf_Id.startswith("//"):
+                # ignore unassigned numbers
+                #logger(f"Line {i}: WARNING: unassigned WMO ID {WMO_Id}")
+                continue
+
+            try:
+                Apf_Id = int(Apf_Id)
+            except ValueError:
+                logger(f"Line {i}: WARNING: non-integer value Apf ID '{Apf_Id}'")
+
+            if Apf_Id in Apf_set:
+                logger(f"Line {i}: WARNING: multiple occurrence of Apf ID {Apf_Id}")
+            Apf_set.add(Apf_Id)
+
+            out_dict[Apf_Id] = WMO_Id
+
+    return out_dict
+
+
+def parse_dura_science(line, dura_type, logger=print):
+
+    out = {}
+
+    vals = line.split(",")
+    assert len(vals) == 22
+
+    out["CRC"] = vals[0]
+    out["ID"] = vals[1]
+    out["datetime"] = decode_time(vals[2])
+    out["CTD_depth"] = parseFloat(vals[4])
+    out["CTD_temp"] = parseFloat(vals[5])
+    out["CTD_salinity"] = parseFloat(vals[6])
+    out["sample_counter"] = parseInt(vals[7])
+    out["power_cycle_counter"] = parseInt(vals[8])
+    out["error_counter"] = parseInt(vals[9])
+    out["housing_temp"] = parseFloat(vals[10])
+    out["housing_humidity"] = parseFloat(vals[11])
+    out["input_voltage"] = parseFloat(vals[12])
+    out["input_current"] = parseFloat(vals[13])
+    out["foobar_pH"] = parseFloat(vals[14])
+    out["backup_battery_V"] = parseFloat(vals[15])
+    out["Vrs_mean"] = parseFloat(vals[16])
+    out["Vrs_stdev"] = parseFloat(vals[17])
+    out["Vk_mean"] = parseFloat(vals[18])
+    out["Vk_stdev"] = parseFloat(vals[19])
+    if dura_type=="MSC3":
+        out["lk"] = 1e-9 * parseFloat(vals[20])
+        out["lb"] = 1e-9 * parseFloat(vals[21])
+    elif dura_type=="MSC1":
+        out["lk"] = parseFloat(vals[20])
+        out["lb"] = parseFloat(vals[21])
+    else:
+        raise ValueError(f'Unknown dura_type "{dura_type}"')
+
+    return out
+
+
+def parse_isus_science(line, logger=print):
+
+    out = {}
+
+    vals = line.split(",")
+    assert len(vals) == 26
+
+    out["CRC"] = vals[0]
+    out["ID"] = vals[1]
+    out["datetime"] = decode_time(vals[2])
+    out["CTD_depth"] = parseFloat(vals[4])
+    out["CTD_temp"] = parseFloat(vals[5])
+    out["CTD_salinity"] = parseFloat(vals[6])
+    out["sample_counter"] = parseInt(vals[7])
+    out["POR_counter"] = parseInt(vals[8])
+    out["isus_error_counter"] = parseInt(vals[9])
+    out["sys_error_counter"] = parseInt(vals[10])
+    out["housing_temp"] = parseFloat(vals[11])
+    out["housing_humidity"] = parseFloat(vals[12])
+    out["input_voltage"] = parseFloat(vals[13])
+    out["input_current"] = parseFloat(vals[14])
+    out["max_lamp_intensity"] = parseFloat(vals[15])
+    out["min_lamp_intensity"] = parseFloat(vals[16])
+    out["DC_mean"] = parseFloat(vals[17])
+    out["DC_stdev"] = parseFloat(vals[18])
+    out["isus_salinity"] = parseFloat(vals[19])
+    out["isus_nitrate"] = parseFloat(vals[20])
+    out["fit_error"] = parseFloat(vals[21])
+    out["data_pixel_begin"] = parseInt(vals[22])
+    out["data_pixel_end"] = parseInt(vals[23])
+    out["DC_sw"] = parseFloat(vals[25])
+
+    hex_str = vals[24]
+    packed = [parseHex(hex_str[i:i+4]) for i in range(0, len(hex_str), 4)]
+    assert len(packed) == out["data_pixel_end"] - out["data_pixel_begin"] + 1
+
+    out["packed_data"] = packed
+
+    return out
 
 
 #### conglomerate functions
 
-def msg_tokenizer(file, logger=print):
+def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
     '''
     "Tokenizer" for .msg files. Given a filename sans the .msg extension, 
     read the file and parse it into a dictionary of strings. Keep track of any 
@@ -414,7 +714,7 @@ def msg_tokenizer(file, logger=print):
         # parse line by line
         line = next(lines_iter).rstrip()
         while True:
-        
+
             if line.strip() == "<EOT>":
                 if engineering_sect:
                     engineering_data.append(engineering_sect)
@@ -425,15 +725,15 @@ def msg_tokenizer(file, logger=print):
                     out["gps"].append(gps_sect)
                     gps_sect = {}
                 if iridium_sect:
-                    if "iridium" not in out:
-                        out["iridium"] = []
-                    out["iridium"].append(iridium_sect)
+                    if "Iridium" not in out:
+                        out["Iridium"] = []
+                    out["Iridium"].append(iridium_sect)
                     iridium_sect = {}
                 EOT_cnt += 1
-    
+
             # mission config lines
             elif line.startswith("$"):
-    
+
                 if (rx_match := mission_params_rx.match(line)):
                     key = rx_match[1]
                     if key in mission_config:
@@ -444,7 +744,7 @@ def msg_tokenizer(file, logger=print):
                         mission_config[key] = { "value": rx_match[2] }
                     else:
                         mission_config[key] = { "value": rx_match[2], "unit": rx_match[3] }
-                    
+
                 elif (rx_match := mission_config_rx.match(line)):
                     if "model" in mission_config:
                         logger('Duplicated key: "mission_config"')
@@ -462,12 +762,12 @@ def msg_tokenizer(file, logger=print):
                 elif (rx_match := msg_gen_rx.match(line)):
                     out["bin_msg_file:"] = rx_match[1]
                     out["msg_file:"] = rx_match[2]
-                    
+
                 elif (rx_match := profile_terminated_rx.match(line)):
                     if "profile_terminated" in out:
                         logger('Duplicated key: "profile_terminated"')
                     out["profile_terminated"] = {"FloatId": rx_match[1], "ProfileID": rx_match[2], "time": rx_match[3]}
-                    
+
                 elif (rx_match := discrete_sample_rx.match(line)):
                     stage = 2
                     if "discrete_samples" in out:
@@ -476,11 +776,11 @@ def msg_tokenizer(file, logger=print):
                     discrete = {"N": rx_match[1]}
                     park_data = []
                     data = []
-                     
+
                     # reading header of discrete samples
                     line = next(lines_iter).rstrip()
                     headers = line.split()[1:]
-    
+
                     # reading discrete samples
                     line = next(lines_iter).rstrip()
                     while line.startswith("  "):
@@ -494,27 +794,27 @@ def msg_tokenizer(file, logger=print):
                         else:
                             data.append(entry)
                         line = next(lines_iter).rstrip()
-    
+
                     # pack the results
                     discrete["headers"] = headers
                     discrete["park_data"] = park_data
                     discrete["data"] = data
                     out["discrete_samples"] = discrete
-                    
+
                     # rewind one element
                     lines_iter = itertools.chain([line], lines_iter)
-    
+
                 elif line.strip() == "$":
                     if stage == 1:
                         stage = 2 # single '$' indicates that mission parameters record ended
-    
+
                 else:
                     logger('Not decoded: "' + line + '"')
-    
+
             elif line.startswith("#"):
                 
                 if (rx_match := cont_header_rx.match(line)):
-    
+
                     if "cont_samples" in out:
                         logger('Duplicated key: "cont_samples"')
 
@@ -523,15 +823,15 @@ def msg_tokenizer(file, logger=print):
                         
                     continuous = {"SerNo": rx_match[1], "NSample": rx_match[2], "NBin": rx_match[3]}
                     data = []
-    
+
                     line = next(lines_iter).rstrip()
-    
+
                     # detect the length of hex data
                     rx_match = cont_data_rx.match(line)
                     continuous["hex_len"] = len(rx_match[1])
                     
                     while (rx_match := cont_data_rx.match(line)):
-    
+
                         if (k := rx_match[2]) is not None:
                             for _i in range(int(k)):
                                 data.append(rx_match[1])
@@ -539,21 +839,21 @@ def msg_tokenizer(file, logger=print):
                             data.append(rx_match[1])
                         
                         line = next(lines_iter).rstrip()
-    
+
                     # pack the result
                     continuous["data"] = data
                     out["cont_samples"] = continuous
-                    
+
                     # rewind one element
                     lines_iter = itertools.chain([line], lines_iter)
-    
+
                 elif (rx_match := gps_header_rx.match(line)):
 
                     stage = 3 # gps data marks the start of engineering data section
 
                     if gps_sect:
                         logger('Duplicated key: "gps"')
-                    
+
                     line = next(lines_iter).rstrip()
                     if line.startswith("#"):
                         line = next(lines_iter).rstrip()
@@ -563,7 +863,7 @@ def msg_tokenizer(file, logger=print):
                         "time": values[3] + " " + values[4],
                         "nsat": values[5], "t_fix": rx_match[1]
                     }
-                                     
+
                 elif line.startswith("# Attempt to get GPS fix failed"):
                     pass
 
@@ -577,26 +877,26 @@ def msg_tokenizer(file, logger=print):
                 if (rx_match := irid_geo_rx.match(line)):
                     geo = {"x": rx_match[1], "y": rx_match[2], "z": rx_match[3], "sys_time": rx_match[4]}
                     if {"x", "y", "z", "sys_time"} & iridium_sect.keys():
-                        logger('Duplicated key: "iridium"')
+                        logger('Duplicated key: "Iridium"')
                     iridium_sect |= geo
-    
+
                 elif (rx_match := irid_fix_rx.match(line)):
                     fix = {"lon": rx_match[1], "lat": rx_match[2], "epoch": rx_match[3], "time": rx_match[4]}
                     if {"lon", "lat", "time", "epoch"} & iridium_sect.keys():
-                        logger('Duplicated key: "iridium"')
+                        logger('Duplicated key: "Iridium"')
                     iridium_sect |= fix
-    
+
                 else:
                      logger('Not decoded: "' + line + '"')
-    
+
             elif "=" in line and stage == 3:
-    
+
                 if (rx_match := engr_rx.match(line)):
                     if rx_match[1] in engineering_sect:
                         logger('Duplicated key:"' + rx_match[1] + '"')
-    
+
                     engineering_sect[rx_match[1]] = rx_match[2]
-    
+
                 elif (rx_match := engr_array_rx.match(line)):
                     if rx_match[1] in engineering_sect:
                         if rx_match[2] in engineering_sect[rx_match[1]]:
@@ -604,10 +904,10 @@ def msg_tokenizer(file, logger=print):
                         engineering_sect[rx_match[1]] |= {int(rx_match[2]): rx_match[3]}
                     else:
                         engineering_sect[rx_match[1]] = {int(rx_match[2]): rx_match[3]}
-    
+
                 else:
                     logger('Not decoded: "' + line + '"')
-    
+
             elif (rx_match := parkpt_rx.match(line)):
                 parkpt = {
                     "time": rx_match[1], "epoch": rx_match[2], "mtime": rx_match[3], 
@@ -617,13 +917,38 @@ def msg_tokenizer(file, logger=print):
                     out["ParkPt"].append(parkpt)
                 else:
                     out["ParkPt"] = [ parkpt ]
-    
+
+            elif (rx_match := parkptflbb_rx.match(line)):
+                nums = rx_match[3].split()
+                parkpt = {
+                    "time": rx_match[1], "epoch": rx_match[2], "mtime": nums[0],
+                    "p": nums[1], "t": nums[2], 
+                    "FSig": nums[3], "BbSig": nums[4], "TSig": nums[5]
+                }
+                if "ParkPtFlbb" in out:
+                    out["ParkPtFlbb"].append(parkpt)
+                else:
+                    out["ParkPtFlbb"] = [ parkpt ]
+
+            elif (rx_match := optode_rx.match(line)):
+                nums = rx_match[3].split()
+                optode = {
+                    "time": rx_match[1], "epoch": rx_match[2], 
+                    "AirP": nums[0], "p": nums[1], "optodeT": nums[2], 
+                    "TPhase": nums[3], "RPhase": nums[4],
+                    "FSig": nums[5], "BbSig": nums[6], "TSig": nums[7],
+                    "Ocr[0]": nums[8], "Ocr[1]": nums[9], "Ocr[2]": nums[10], "Ocr[3]": nums[11]
+                }
+                if "OptodeAirCal" in out:
+                    out["OptodeAirCal"].append(optode)
+                else:
+                    out["OptodeAirCal"] = [ optode ]
             elif line.strip() == "":
                 pass # OK to skip line
-    
+
             else:
                 logger('Not decoded: "' + line + '"')
-    
+
             line = next(lines_iter).rstrip()
 
     except StopIteration:
@@ -638,12 +963,11 @@ def msg_tokenizer(file, logger=print):
             gps_sect = {}
             logger('GPS data after last "<EOT>"')
         if iridium_sect:
-            if "iridium" not in out:
-                out["iridium"] = []
-            out["iridium"].append(iridium_sect)
+            if "Iridium" not in out:
+                out["Iridium"] = []
+            out["Iridium"].append(iridium_sect)
             iridium_sect = {}
             logger('Iridium data after last "<EOT>"')
-        
 
     # consolidate data
     out["mission_config"] = mission_config
@@ -658,7 +982,7 @@ def msg_tokenizer(file, logger=print):
     return out
 
 
-def log_tokenizer(file, logger=print):
+def log_tokenizer(file, logger=lambda x: print("[LOG] " + x)):
     '''
     "Tokenizer" (actually, data is lightly parsed) for .log file
     Given a filename sans the .log extension, read the file and parse 
@@ -667,15 +991,15 @@ def log_tokenizer(file, logger=print):
     message are kept as string. Keep track of any lines that have not 
     been parsed
     '''
-    
+
     out = [] # output list
     cuts = [] # list of cut points
     prev_mtime = -1
-    
+
     # read the entire file at once
     with open(file + ".log", "r") as infile:
         lines = infile.readlines()
-    
+
     for line in lines:
 
         if (rx_match := log_rx.match(line)):
@@ -687,11 +1011,11 @@ def log_tokenizer(file, logger=print):
                 "call": rx_match[3], 
                 "message": rx_match[4]
             }
-            
+
             if cur_mtime < prev_mtime:
                 cuts.append(len(out))
             prev_mtime = cur_mtime
-            
+
             out.append(entry)
 
         elif line.strip() == "" or line.strip() == "<EOT>":
@@ -703,7 +1027,204 @@ def log_tokenizer(file, logger=print):
     return (out, cuts)
 
 
-def L0_parser(msg_dict, log_dict, supp_dict=None, consume=False, logger=print):
+def dura_tokenizer(file, dura_type, logger=lambda x: print("[DURA] " + x)):
+
+    out_list = []
+    out = {} # output dictionary
+    stage = 0
+    EOP_cnt = 0
+    EOT_cnt = 0
+    engr_list = []
+    engr_dict = {}
+    sci_data = []
+
+    # read the entire file at once
+    with open(file + ".dura", "r") as infile:
+        lines = infile.readlines()
+    lines_iter = iter(lines)
+
+    try:
+        # parse line by line
+        line = next(lines_iter).rstrip()
+        while True:
+
+            if (rx_match := dura_engr_rx.match(line)):
+
+                key = rx_match[1].strip()
+                val = rx_match[2].strip()
+
+                if stage != 1 and stage != 3:
+                    logger(f'Engineering data at the wrong stage (={stage})')
+                if key in engr_dict:
+                    logger(f'Duplicated engineering data key: "{key}"')
+                engr_dict[key] = val
+
+            elif line.startswith("0x"):
+
+                if stage == 1:
+                    stage = 2
+                if stage != 2:
+                    logger(f'Science data at the wrong stage (={stage})')
+
+                sci_data.append(parse_dura_science(line, dura_type, logger))
+
+            elif (rx_match := dura_header_rx.match(line)):
+
+                if "Id" in engr_dict:
+                    logger('Duplicated key: "Id"')
+                if stage != 0:
+                    logger(f"Header at the wrong stage (={stage})")
+                stage = 1 # advance stage for next line
+                engr_dict["Id"] = parseInt(rx_match[1])
+                engr_dict["ProfileId"] = parseInt(rx_match[2])
+                engr_dict["Timestamp"] = decode_time(rx_match[3])
+
+            elif (rx_match := dura_EOP_rx.match(line)):
+                EOP_cnt += 1
+                engr_list.append(engr_dict)
+                engr_dict = {}
+                engr_dict["Id"] = parseInt(rx_match[1])
+                engr_dict["ProfileId"] = parseInt(rx_match[2])
+                engr_dict["Timestamp"] = decode_time(rx_match[3])
+                stage = 3 # advance stage
+
+            elif line.strip() == "":
+                pass
+
+            elif line.strip() == "# No error records to log.":
+                pass
+
+            elif line.strip() == "<EOT>":
+
+                EOT_cnt += 1
+                stage = 0
+
+                engr_list.append(engr_dict)
+                out["science_data"] = sci_data
+                out["engineering_data"] = engr_list
+                out_list.append(out)
+                out = {}
+                engr_list = []
+                engr_dict = {}
+                sci_data = []
+
+            else:
+                logger('Not decoded: "' + line + '"')
+
+            line = next(lines_iter).rstrip()
+
+    except StopIteration:
+        pass
+
+    # EOT check
+    if EOT_cnt == 0:
+        logger('"<EOT>" missing')
+    elif EOT_cnt > 1:
+        logger('More than 1 "<EOT>" found')
+
+    return out_list[-1]
+
+
+def isus_tokenizer(file, logger=lambda x: print("[ISUS] " + x)):
+
+    out_list = []
+    out = {} # output dictionary
+    stage = 0
+    EOP_cnt = 0
+    EOT_cnt = 0
+    engr_list = []
+    engr_dict = {}
+    sci_data = []
+
+    # read the entire file at once
+    with open(file + ".isus", "r") as infile:
+        lines = infile.readlines()
+    lines_iter = iter(lines)
+
+    try:
+        # parse line by line
+        line = next(lines_iter).rstrip()
+        while True:
+
+            if (rx_match := dura_engr_rx.match(line)):
+
+                key = rx_match[1].strip()
+                val = rx_match[2].strip()
+
+                if stage != 1 and stage != 3:
+                    logger(f'Engineering data at the wrong stage (={stage})')
+                if key in engr_dict:
+                    logger(f'Duplicated engineering data key: "{key}"')
+                engr_dict[key] = val
+
+            elif line.startswith("0x"):
+                if stage == 1:
+                    stage = 2
+                if stage != 2:
+                    logger(f'Science data at the wrong stage (={stage})')
+
+                sci_data.append(parse_isus_science(line, logger))
+
+            elif (rx_match := dura_header_rx.match(line)):
+
+                if "Id" in engr_dict:
+                    logger('Duplicated key: "Id"')
+                if stage != 0:
+                    logger(f"Header at the wrong stage (={stage})")
+                stage = 1 # advance stage for next line
+                engr_dict["Id"] = parseInt(rx_match[1])
+                engr_dict["ProfileId"] = parseInt(rx_match[2])
+                engr_dict["Timestamp"] = decode_time(rx_match[3])
+
+            elif (rx_match := dura_EOP_rx.match(line)):
+                EOP_cnt += 1
+                engr_list.append(engr_dict)
+                engr_dict = {}
+                engr_dict["Id"] = parseInt(rx_match[1])
+                engr_dict["ProfileId"] = parseInt(rx_match[2])
+                engr_dict["Timestamp"] = decode_time(rx_match[3])
+                stage = 3 # advance stage
+
+            elif line.strip() == "":
+                pass
+
+            elif line.strip() == "# No error records to log.":
+                pass
+
+            elif line.strip() == "<EOT>":
+                EOT_cnt += 1
+                stage = 0
+
+                engr_list.append(engr_dict)
+                out["science_data"] = sci_data
+                out["engineering_data"] = engr_list
+                out_list.append(out)
+                out = {}
+                engr_list = []
+                engr_dict = {}
+                sci_data = []
+
+            else:
+                logger('Not decoded: "' + line + '"')
+
+            line = next(lines_iter).rstrip()
+
+    except StopIteration:
+        pass
+
+    # EOT check
+    if EOT_cnt == 0:
+        logger('"<EOT>" missing')
+    elif EOT_cnt > 1:
+        logger('More than 1 "<EOT>" found')
+
+    return out_list[-1]
+
+
+def L0_parser(
+    msg_dict, log_dict, dura_dict, isus_dict, cp_dict, 
+    AOML_map, WMO_map, supp_dict=None, consume=False, logger=print
+):
     '''
     Parser for L0 json
 
@@ -717,20 +1238,22 @@ def L0_parser(msg_dict, log_dict, supp_dict=None, consume=False, logger=print):
     config_dict = msg_dict.get("mission_config", {})
     engr_list = msg_dict.get("engineering_data", [{}])
     engr_dict = engr_list[-1]
-    
+
     out_dict = {}
 
     # In general, prefer to extract info from engineering data as opposed to mission config
     # general header information
     t_string = datetime.now(UTC).replace(microsecond=0).isoformat()[:-6] + "Z"
+    float_id = int(engr_dict["FloatId"])
     out_dict["FILE_CREATION_DATE"] = t_string
     out_dict["FILE_UPDATE_DATE"] = t_string
     out_dict["DECODER_VERSION"] = supp_dict["DECODER_VERSION"]
     out_dict["SCHEMA_VERSION"] = supp_dict["SCHEMA_VERSION"]
-    out_dict["INTERNAL_ID_NUMBER"] = int(engr_dict["FloatId"])
-    out_dict["TRANSMISSION ID NUMBER"] = None
+    out_dict["INTERNAL_ID_NUMBER"] = float_id
+    out_dict["TRANSMISSION ID NUMBER"] = float_id
     out_dict["INSTRUMENT_TYPE"] = infer_instrument(msg_dict)
-    out_dict["WMO_ID NUMBER"] = None # to be filled in
+    out_dict["AOML_ID NUMBER"] = AOML_map[float_id]
+    out_dict["WMO_ID NUMBER"] = WMO_map[float_id]
     out_dict["WMO INSTRUMENT TYPE (TABLE 1770)"] = None # to be filled in
     out_dict["WMO RECORDER TYPE (TABLE 4770)"] = None # to be filled in
     out_dict["OPERATING_INSTITUTION"] = supp_dict["OPERATING_INSTITUTION"]
@@ -747,12 +1270,15 @@ def L0_parser(msg_dict, log_dict, supp_dict=None, consume=False, logger=print):
     if tmp: 
         out_dict["Timestamps"] = tmp
 
+    # interpreting GPS and Iridium location data
     if "gps" in msg_dict:
         out_dict["GPS"] = parse_gps(msg_dict["gps"])
         if consume: del msg_dict["gps"]
-    if "iridium" in msg_dict:
-        out_dict["Iridium"] = parse_iridium(msg_dict["iridium"])
-        if consume: del msg_dict["iridium"]
+    if "Iridium" in msg_dict:
+        out_dict["Iridium"] = parse_iridium(msg_dict["Iridium"])
+        if consume: del msg_dict["Iridium"]
+
+    # Interpreting science data
     if "discrete_samples" in msg_dict:
         out_dict["CTD Discrete"] = parse_discrete(msg_dict["discrete_samples"])
         if consume: del msg_dict["discrete_samples"]
@@ -762,12 +1288,36 @@ def L0_parser(msg_dict, log_dict, supp_dict=None, consume=False, logger=print):
     if "ParkPt" in msg_dict:
         out_dict["CTD Drift"] = parse_parked(msg_dict["ParkPt"], "ParkPt")
         if consume: del msg_dict["ParkPt"]
+    if "ParkPtFlbb" in msg_dict:
+        out_dict["CTD Drift"] = parse_parked(msg_dict["ParkPtFlbb"], "ParkPtFlbb")
+        if consume: del msg_dict["ParkPtFlbb"]
+
+    # interpret calibration data
+    if "OptodeAirCal" in msg_dict:
+        out_dict["optode_air_calibration"] = parse_OptodeAirCal(msg_dict["OptodeAirCal"])
+        if consume: del msg_dict["OptodeAirCal"]
+
+    # Write raw mission config and engineering data
     if config_dict:
         out_dict["raw_mission_config"] = parse_mission_config(config_dict)
+        if consume: del msg_dict["mission_config"]
     if any(engr_list):
         out_dict["raw_engineering_data"] = parse_engineering_data(engr_list)
+        if consume: del msg_dict["engineering_data"]
+
+    # Write log data
     if log_dict is not None:
         out_dict["Log"] = log_dict.copy()
         if consume: log_dict.clear()
-    
+
+    # Write dura data
+    if dura_dict is not None:
+        out_dict["dura"] = dura_dict.copy()
+        if consume: dura_dict.clear()
+
+    # Write isus data
+    if isus_dict is not None:
+        out_dict["isus"] = isus_dict.copy()
+        if consume: isus_dict.clear()
+
     return out_dict
