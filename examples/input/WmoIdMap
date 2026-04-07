@@ -1,0 +1,3787 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# $Id: WmoIdMap,v 1.245 2026/01/12 23:25:43 rupan Exp $
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# This file contains the WMO bouy identifiers for UW's PALACE floats.  
+# They were obtained by contacting Mike Burdette (228-688-2868, 
+# michael.k.burdette@noaa.gov) at the NOAA SEAS office.
+#
+# After contacting Mike Burdette at the NOAA SEAS office to get more WMO id
+# numbers I learned that Eric Meindel (228-688-1717, eric.meindl@noaa.gov,
+# ericm@ndbc.noaa.gov) is now in charge of distributing WMO id numbers for
+# PALACE drifters. 2/8/99 -dds
+#
+# After contacting Eric Meindel at the NOAA SEAS office to get more WMO id
+# numbers I learned that Phil Newkirk (phil.newkirk.contractor@noaa.gov, 
+# 228-688-2719) is now in charge of distributing WMO id numbers for PALACE 
+# drifters. Eric also asked that I CC the email request to Dave Gilhousen 
+# (dave.gilhousen@noaa.gov).  9/6/02 -dds
+#
+# Robert Weir (robert.weir@noaa.gov, 228-688-2427) has taken over for Phil 
+# Newkirk in assigning WMO ids. 1/21/04 -dds
+#
+# Dawn Petraitis (dawn.petraitis@noaa.gov) has taken over for Robert Weir
+# in assigning WMO ids. 04/25/13 -dds
+#
+# RCS Log:
+#
+# $Log: WmoIdMap,v $
+# Revision 1.245  2026/01/12 23:25:43  rupan
+# Update for World and SDA cruise.
+#
+# Revision 1.244  2025/12/22 07:57:57  rupan
+# Correct Float ID for SANNAE
+#
+# Revision 1.243  2025/12/15 19:07:44  rupan
+# Update for SANAE and NCPOR
+#
+# Revision 1.242  2025/11/28 20:30:54  rupan
+# Assign Kaharoa2025 Core Id's and Added 100 WMO Id's
+#
+# Revision 1.241  2025/11/22 00:02:36  rupan
+# Update Kaharoa2025 BGC Id's.
+#
+# Revision 1.240  2025/09/26 16:37:40  rupan
+# Add HawaiiMSC3 cruise
+#
+# Revision 1.239  2025/08/13 01:06:56  rupan
+# Update for BlueFinGuam correction.
+#
+# Revision 1.238  2025/08/13 01:04:03  rupan
+# Update for BlueFinGuam.
+#
+# Revision 1.237  2025/08/12 21:32:23  swift
+# Assign WMO ids to two prototype MSC3 floats.
+#
+# Revision 1.236  2025/06/24 00:59:15  rupan
+# Update duplicate Id's
+#
+# Revision 1.235  2025/06/02 18:31:29  rupan
+# Add AltabetBoB, OceanX, BluefunLeg1
+#
+# Revision 1.234  2025/04/13 22:22:43  rupan
+# Add Sikuliaq, Investigator and Nuyin cruises.
+#
+# Revision 1.233  2025/02/18 22:44:04  rupan
+# Add Bermuda Transit floats
+#
+# Revision 1.232  2025/01/07 01:40:08  rupan
+# Update WMO's for Polarstern cruise
+#
+# Revision 1.231  2025/01/02 17:39:33  rupan
+# Update Guam Student Cruise, Dufresne, half PolarStern.
+#
+# Revision 1.230  2024/11/04 23:39:51  rupan
+# Added Sonne, KaharoaII, Siquliac
+#
+# Revision 1.229  2024/11/04 23:16:09  rupan
+# Added Sonne, KaharoaII, Siquliac
+#
+# Revision 1.228  2024/09/30 14:43:10  rupan
+# Update Linblad floats
+#
+# Revision 1.227  2024/07/10 19:47:13  rupan
+# Update Nautilus float WMOid.
+#
+# Revision 1.226  2024/07/09 16:28:48  rupan
+# Add Kaharoa Leg2 floats.
+#
+# Revision 1.225  2024/06/26 17:29:54  rupan
+# Update for Sally Ride cruise.
+#
+# Revision 1.224  2024/04/15 18:19:00  rupan
+# Add WmoIds and assgin Kaharoa delivery leg 1 floats.
+#
+# Revision 1.223  2024/04/14 23:55:20  rupan
+# Update Palmer '24 and Packard delivery.
+#
+# Revision 1.222  2024/03/01 19:53:40  rupan
+# Update I08S IDs.
+#
+# Revision 1.221  2024/01/17 22:25:35  rupan
+# Add new Nautilus.
+#
+# Revision 1.220  2024/01/12 17:51:13  rupan
+# Update floats for new bladder.
+#
+# Revision 1.219  2024/01/12 17:47:46  rupan
+# Update floats for I09.
+#
+# Revision 1.218  2023/10/11 23:19:49  rupan
+# Assign Mirai Dutch.
+#
+# Revision 1.217  2023/10/02 18:43:58  rupan
+# Update Revelle Ward cruise.
+#
+# Revision 1.216  2023/08/10 13:58:36  rupan
+# Fix Mistaken Apfid for I05.
+#
+# Revision 1.215  2023/08/04 17:46:05  rupan
+# Add BluefinGuam2023 and RevelleI05, Update JCOMMOPS Ids.
+#
+# Revision 1.214  2023/06/01 15:26:10  rupan
+# Assign May23 HOT field trial floats.
+#
+# Revision 1.213  2023/06/01 15:23:39  rupan
+# Add first batch of WMO IDs from Ocean ops.
+#
+# Revision 1.212  2023/05/19 16:35:48  rupan
+# Added ThompsonGuam cruise.
+#
+# Revision 1.211  2023/05/16 15:42:03  rupan
+# Assign 3 cruises, PalmerLyttleton, RevelleAstral, AtlantisClio.
+#
+# Revision 1.210  2023/04/01 14:24:36  rupan
+# Update PalmerLyttleton floats.
+#
+# Revision 1.209  2023/03/29 17:30:13  rupan
+# Update floats for ThompsonThesis
+#
+# Revision 1.208  2023/03/01 22:26:54  rupan
+# Assign Thompson Gradients floats
+#
+# Revision 1.207  2023/01/02 20:20:16  rupan
+# Add Kaharoa 22 core floats.
+#
+# Revision 1.206  2023/01/02 16:58:33  rupan
+# Added Araon cruise.
+#
+# Revision 1.205  2022/12/31 00:07:23  rupan
+# Added 99 WMOids from Dawn.
+#
+# Revision 1.204  2022/11/16 21:31:14  rupan
+# Add Kaharoa 2022 BGC floats.
+#
+# Revision 1.203  2022/11/04 18:59:11  rupan
+# Update Ids for Palmer Circumpolar.
+#
+# Revision 1.202  2022/10/20 13:35:36  rupan
+# Assign AgulhasMadagascar floats.
+#
+# Revision 1.201  2022/06/10 16:47:31  rupan
+# Assign Sikuliaq Webb float.
+#
+# Revision 1.200  2022/06/10 16:40:56  rupan
+# Assign Sikuliaq Wells floats.
+#
+# Revision 1.199  2022/03/25 06:46:46  swift
+# Assigned and id to float 20675.
+#
+# Revision 1.198  2022/03/24 12:45:31  swift
+# Assign floats to ids.
+#
+# Revision 1.197  2022/02/17 15:31:49  swift
+# Assigned WMO id to navis 111{8,9}.
+#
+# Revision 1.196  2022/02/07 15:00:01  swift
+# Assigned a float.
+#
+# Revision 1.195  2021/12/29 23:10:57  swift
+# Assigned 3 SBD floats.
+#
+# Revision 1.194  2021/12/20 17:55:14  swift
+# Assigned 2 floats.
+#
+# Revision 1.193  2021/11/17 17:08:03  swift
+# Assign ids to floats.
+#
+# Revision 1.192  2021/11/10 21:44:56  swift
+# Assigned floats.
+#
+# Revision 1.191  2021/10/27 22:48:07  swift
+# Eliminate duplicates.
+#
+# Revision 1.190  2021/10/23 07:27:35  swift
+# Assigned WMO id to two floats.
+#
+# Revision 1.189  2021/10/05 23:13:36  swift
+# Assigned floats for Kaharoa and Revelle.
+#
+# Revision 1.188  2021/10/01 18:42:21  swift
+# Assign IDs to floats.
+#
+# Revision 1.187  2021/08/18 15:12:53  swift
+# Assigned ids for 4 floats on Reising cruise.
+#
+# Revision 1.186  2021/07/22 17:49:37  swift
+# Eliminate duplicate WMO id for float 17439.
+#
+# Revision 1.185  2021/06/29 09:06:45  swift
+# Comment-out old deployments of floats 112{1,2}.
+#
+# Revision 1.184  2021/05/30 17:58:46  swift
+# Assign WMO ids to Bluefin and WCOA cruises.
+#
+# Revision 1.183  2021/05/24 17:43:01  swift
+# Assigned IDs to floats on the Brown WCOA cruise.
+#
+# Revision 1.182  2021/04/02 05:33:13  swift
+# Assigned ids to floats.
+#
+# Revision 1.181  2021/03/23 20:45:10  swift
+# Assigned float 19719.
+#
+# Revision 1.180  2021/02/24 22:49:23  swift
+# Substituted float 19605 for 19097.
+#
+# Revision 1.179  2021/02/17 23:20:27  swift
+# Added A20/A22 floats to map.
+#
+# Revision 1.178  2021/01/26 02:40:39  swift
+# Assigned ids to floats.
+#
+# Revision 1.177  2021/01/08 16:14:37  swift
+# Eliminated old duplicate ApfIds.
+#
+# Revision 1.176  2020/12/28 13:15:41  swift
+# Comment out float with duplicate ApfId.
+#
+# Revision 1.175  2020/10/25 17:10:37  swift
+# Fixed line terminations.
+#
+# Revision 1.174  2020/10/21 21:04:44  swift
+# Assigned floats to ids.
+#
+# Revision 1.173  2020/10/19 22:05:23  swift
+# Eliminated duplicate entries.
+#
+# Revision 1.172  2020/10/09 21:42:23  swift
+# Assigned floats.
+#
+# Revision 1.171  2020/09/02 14:34:02  swift
+# Added ids.
+#
+# Revision 1.170  2020/09/01 18:49:45  swift
+# Assign ids to 4 TPOS floats.
+#
+# Revision 1.169  2020/08/13 19:30:19  swift
+# Added California Current and RBR field trial floats.
+#
+# Revision 1.168  2020/08/01 20:26:41  swift
+# Added 42 floats for Kaharoa cruise.
+#
+# Revision 1.167  2020/04/27 22:47:56  swift
+# Eliminate four duplicate assignments.
+#
+# Revision 1.166  2020/03/25 17:39:48  swift
+# Assign WMO ids to Brown A13.5 floats.
+#
+# Revision 1.165  2020/03/16 18:36:07  swift
+# Assign WMO id to float 18340.
+#
+# Revision 1.164  2020/03/01 09:15:31  swift
+# Assigned WMO ids to floats on Tao155w170w cruise.
+#
+# Revision 1.163  2019/12/18 19:31:17  swift
+# Assigned WMO ids to floats.
+#
+# Revision 1.162  2019/12/18 19:22:07  swift
+# Assigned WMO ids to floats.
+#
+# Revision 1.161  2019/12/10 23:13:04  swift
+# Added 150 new WMO ids.
+#
+# Revision 1.160  2019/10/08 13:58:13  swift
+# Assigned floats from Discovery TAO cruise.
+#
+# Revision 1.159  2019/06/25 19:51:48  swift
+# Assigned WMO id to two floats.
+#
+# Revision 1.158  2019/06/11 16:12:15  swift
+# Assigned WMO id to floats 17267 & 17307.
+#
+# Revision 1.157  2019/06/01 12:40:38  swift
+# Assigned WMO ids to floats.
+#
+# Revision 1.156  2019/04/19 18:42:16  swift
+# Assigned WMO ids to floats.
+#
+# Revision 1.155  2019/04/01 13:25:59  swift
+# Assigned WMO ids to floats.
+#
+# Revision 1.154  2019/03/22 16:18:50  swift
+# Assigned WMO ids to floats.
+#
+# Revision 1.153  2019/03/05 16:58:13  swift
+# Added 6 soccom floats for JC Ross Andrex cruise.
+#
+# Revision 1.152  2018/12/17 15:58:59  swift
+# Assigned floats for Jamstec cruise.
+#
+# Revision 1.151  2018/12/17 15:33:57  swift
+# Assigned Polarstern floats.
+#
+# Revision 1.150  2018/12/06 19:52:54  swift
+# Added two floats.
+#
+# Revision 1.149  2018/09/27 16:58:37  swift
+# Assign Andrea Fassbender's Navis floats.
+#
+# Revision 1.148  2018/09/17 18:55:10  swift
+# More swapping of WMO ids.
+#
+# Revision 1.147  2018/09/14 00:29:02  swift
+# Fixed some WMO id assignments.
+#
+# Revision 1.146  2018/09/13 01:24:22  swift
+# Assigned WMO ids to AMT28 cruise.
+#
+# Revision 1.145  2018/08/17 21:54:50  swift
+# Added floats from Bluefin cruise.
+#
+# Revision 1.144  2018/08/06 16:37:14  swift
+# Added WMO ids and assigned Kaharoa floats to WMO ids.
+#
+# Revision 1.143  2018/04/24 19:04:49  swift
+# Assign floats to ids.
+#
+# Revision 1.142  2018/01/27 18:45:12  swift
+# Added Polarstern floats for Maud Rise.
+#
+# Revision 1.141  2018/01/24 17:29:45  swift
+# Added floats of soccom deployments from Investigator.
+#
+# Revision 1.140  2018/01/03 14:31:46  swift
+# Added five floats for Mauritius cruise.
+#
+# Revision 1.139  2017/10/28 15:42:59  swift
+# Added SPURS SBD floats.
+#
+# Revision 1.138  2017/10/21 17:21:54  swift
+# Assigned 47 Kaharoa floats.
+#
+# Revision 1.137  2017/10/13 22:21:08  swift
+# Assigned ids to Southampton cruise on Discovery.
+#
+# Revision 1.136  2017/10/13 18:38:43  swift
+# Assigned WmoIds to 2 floats.
+#
+# Revision 1.135  2017/09/20 20:01:37  swift
+# Added a new batch of 33 WMO ids.
+#
+# Revision 1.134  2017/09/20 14:55:53  swift
+# Added a new batch of 67 WMO ids.
+#
+# Revision 1.133  2017/09/20 14:34:53  swift
+# Assigned ids to three floats from SewardKilo cruise.
+#
+# Revision 1.132  2017/09/10 17:38:59  swift
+# Assigned WmoIds for floats on Agulhas cruise.
+#
+# Revision 1.131  2017/06/30 13:41:02  swift
+# Assigned WmoIds to 27 Palmer P6 floats.
+#
+# Revision 1.130  2017/04/17 13:44:00  swift
+# Added 7 floats for the PIPERS cruise.
+#
+# Revision 1.129  2017/03/04 19:01:41  swift
+# Added Arabian Sea floats.
+#
+# Revision 1.128  2017/02/09 01:00:34  swift
+# Added floats for P17 cruise.
+#
+# Revision 1.127  2017/01/25 20:04:19  swift
+# Assigned new WMO id to float 8501 for 2nd deployment.
+#
+# Revision 1.126  2017/01/04 15:50:49  swift
+# Added floats for SOCCOM ACE cruise.
+#
+# Revision 1.125  2016/12/30 07:17:09  swift
+# Added 2 Sikuliaq deployments.
+#
+# Revision 1.124  2016/11/04 15:22:03  swift
+# Added floats for Palmer Hazmat cruise.
+#
+# Revision 1.123  2016/11/04 14:54:10  swift
+# Initialized floats for P18 (Brown) cruise.
+#
+# Revision 1.122  2016/09/19 17:36:55  swift
+# Added 100 more WMO ids.
+#
+# Revision 1.121  2016/09/16 23:59:26  swift
+# Assigned 3 Deep Apex.
+#
+# Revision 1.120  2016/09/12 15:43:35  swift
+# Assigned WMO id to 2016 Kaharoa floats.
+#
+# Revision 1.119  2016/08/27 00:07:36  swift
+# Added SPURS-2 floats.
+#
+# Revision 1.118  2016/06/22 14:52:50  swift
+# Eliminated double entry of float 9630.
+#
+# Revision 1.117  2016/05/19 16:10:30  swift
+# Assigned floats for WHOI NAAMES cruise.
+#
+# Revision 1.116  2016/04/14 10:55:42  swift
+# Added more floats to the map.
+#
+# Revision 1.115  2016/04/14 10:25:12  swift
+# Assigned more floats to map.
+#
+# Revision 1.114  2015/10/13 13:30:22  swift
+# Added another group of 100 new WMO ids.
+#
+# Revision 1.113  2014/12/08 21:19:34  swift
+# Added 100 new WMO ids (5904596-5904695).
+#
+# Revision 1.112  2014/12/06 15:04:31  swift
+# Assigned new floats for SOCCOM.
+#
+# Revision 1.111  2014/08/22 16:28:33  swift
+# Added floats for SBD field trials.
+#
+# Revision 1.110  2014/01/06 22:36:31  swift
+# Re-assigned id for floats 7631,7543 in preparation for redeployment.
+#
+# Revision 1.109  2013/12/18 19:38:01  swift
+# Added 4 new assignments.
+#
+# Revision 1.108  2013/11/27 19:51:31  swift
+# Re-assigned id for float 8514 in preparation for redeployment.
+#
+# Revision 1.107  2013/11/18 22:15:06  swift
+# Float 7600 was recovered and redeployed.  AOML requested
+# that we give the float a new AOML and WMO id.
+#
+# Revision 1.106  2013/11/06 19:02:25  swift
+# Swapped WMO ids between floats 7543 and 8081.
+#
+# Revision 1.105  2013/10/15 15:39:03  swift
+# Added another 101 WMO ids.
+#
+# Revision 1.104  2013/10/09 16:54:00  swift
+# Eliminated duplicate assignments.
+#
+# Revision 1.103  2013/10/08 18:49:01  swift
+# Assigned a large number of floats to the list.
+#
+# Revision 1.102  2013/09/14 10:01:19  swift
+# Added float 8514 to list.
+#
+# Revision 1.101  2013/08/02 18:55:39  swift
+# Added floats 8208 8176 8218.
+#
+# Revision 1.100  2013/07/18 01:40:18  swift
+# Assigned more floats.
+#
+# Revision 1.98  2013/02/18 22:59:48  swift
+# Assigned new deployments.
+#
+# Revision 1.97  2012/08/26 15:02:33  swift
+# Assigned floats for 2012 Kaharoa cruise and SPURS cruise.  Added
+# 100 new WMO ids obtained from Robert Weir.
+#
+# Revision 1.96  2011/05/31 15:17:10  swift
+# Added 59 Kaharoa floats and 100 new WMO ids.
+#
+# Revision 1.95  2011/04/23 00:20:41  alace
+# Added new deployments.
+#
+# Revision 1.94  2011/01/11 17:47:30  alace
+# Added several new deployments.
+#
+# Revision 1.93  2010/12/03 00:35:58  alace
+# Assigned WMO ids to 5 Coral Sea deployments.
+#
+# Revision 1.92  2010/11/13 23:37:36  alace
+# Assigned WMO ids to a slew of new deployments.
+#
+# Revision 1.91  2010/11/07 23:52:13  alace
+# Added 48 Karahoa deployments.
+#
+# Revision 1.90  2010/07/28 13:36:39  swift
+# Bob Weir emailed an all-hands request to return the old 5-digit reusable WMO
+# ids for surface drifters.  UW used many of these WmoIds in the ACCE and JES
+# experiments.  Since these were pre-ARGO then these WMO ids can be turned back
+# in for re-use.  However, a few of them were assigned to early ARGO floats and
+# they will be retained in order to avoid potential id-collision in the future.
+# The following ranges of 5-digit WMO ids were assigned to UW and have now been
+# returned: 21853-21888, 41531-41551, 41862-41900, 44870-44875, 62876-62880
+#
+# Revision 1.89  2010/07/15 20:18:15  swift
+# Added 100 new WMO ids.
+#
+# Revision 1.88  2010/07/01 20:38:51  swift
+# Added 10 deployments.
+#
+# Revision 1.87  2010/05/26 19:25:02  swift
+# Added two new deployments.
+#
+# Revision 1.86  2010/05/15 00:11:18  swift
+# Added new deployments.
+#
+# Revision 1.85  2010/02/03 14:20:07  swift
+# Added some deployments to the map.
+#
+# Revision 1.84  2009/11/11 16:14:24  swift
+# Incorporated new deployments.
+#
+# Revision 1.83  2009/03/11 13:55:14  swift
+# Added new deployments and new WMO ids.
+#
+# Revision 1.82  2009/02/27 14:49:14  swift
+# Added 11 deployments from Palmer into S Pacific and Amundsen Sea.
+#
+# Revision 1.81  2008/07/29 19:29:12  swift
+# Added float 5241.
+#
+# Revision 1.80  2008/07/11 14:35:46  swift
+# Added new assignments of floats to WMO ids.
+#
+# Revision 1.79  2008/04/17 16:24:33  swift
+# Fixed typos that caused WMO ids to be 1-digit too long.
+#
+# Revision 1.78  2008/03/11 20:47:05  swift
+# Eliminate a doubly-assigned float.  Added 100 new WMO ids.
+#
+# Revision 1.77  2008/03/11 18:50:18  swift
+# Assigned floats to a whole slew of WMO ids.
+#
+# Revision 1.76  2008/01/25 22:23:16  swift
+# Added WMO ids for Kaiimi cruise
+#
+# Revision 1.75  2008/01/09 23:30:12  swift
+# Fixed a mapping error to float 5131.
+#
+# Revision 1.74  2008/01/08 00:24:17  swift
+# Added two float deployments.
+#
+# Revision 1.73  2008/01/04 20:21:32  swift
+# Corrected WMO id for Ecuador float 5160.
+#
+# Revision 1.72  2007/10/05 13:13:21  swift
+# Corrected duplicates of float 1160 and 5046.
+#
+# Revision 1.71  2007/10/01 21:45:15  swift
+# Updated new deployments.
+#
+# Revision 1.70  2007/08/10 01:30:00  swift
+# Fixed typo on WmoId 5901333.
+#
+# Revision 1.69  2007/08/04 14:45:28  swift
+# Added float 2267 to the map.
+#
+# Revision 1.68  2007/04/29 16:22:32  swift
+# Added 3 Revelle deployments.
+#
+# Revision 1.67  2007/04/18 17:51:08  alace
+# Added several new deployments.
+#
+# Revision 1.66  2007/04/03 02:37:15  swift
+# Added 100 new WMO ids received from Robert Weir.
+#
+# Revision 1.65  2007/04/02 18:36:30  swift
+# Added two new deployments.  Changed Robert Weir's email address.
+#
+# Revision 1.64  2007/03/29 19:40:18  swift
+# Added 6 new deployments.
+#
+# Revision 1.63  2007/03/15 16:17:44  alace
+# Added new deployments.
+#
+# Revision 1.62  2007/03/09 00:46:48  alace
+# Added float 5075
+#
+# Revision 1.61  2007/03/07 17:46:15  alace
+# Added floats 5073 and 5095.
+#
+# Revision 1.60  2007/03/05 21:02:33  swift
+# Added deployed floats.
+#
+# Revision 1.59  2007/03/01 14:59:32  alace
+# Added WMO ids issued to Kenya and Ecuador.
+#
+# Revision 1.58  2007/01/19 20:18:15  alace
+# Corrected WMO id for float 2788.
+#
+# Revision 1.57  2006/09/16 16:31:52  alace
+# Added deployments.
+#
+# Revision 1.56  2006/08/26 14:53:21  alace
+# Added new WMO ids and new deployments.
+#
+# Revision 1.55  2006/07/06 14:44:01  alace
+# Added NAVO air deployments and deployment of RAFOS floats.
+#
+# Revision 1.54  2006/03/15 23:49:22  alace
+# Added 3 new deployments.
+#
+# Revision 1.53  2006/03/03 21:16:50  alace
+# Added new deployments.
+#
+# Revision 1.52  2006/02/22 23:49:27  alace
+# Added new deployments.
+#
+# Revision 1.51  2006/02/14 22:02:53  alace
+# Added new deployments.
+#
+# Revision 1.50  2006/01/30 22:35:25  alace
+# Added new deployments.
+#
+# Revision 1.49  2006/01/28 03:06:27  alace
+# Added new Kaharoa & Thompson deployments.
+#
+# Revision 1.48  2006/01/23 17:22:35  alace
+# Added new deployments.
+#
+# Revision 1.47  2005/12/07 22:07:23  alace
+# Added Kaharoa deployments.
+#
+# Revision 1.46  2005/11/22 23:04:20  alace
+# Eliminated duplicate entry of float 1160 (under WMO id 5900410).
+#
+# Revision 1.45  2005/11/16 20:55:41  swift
+# Added deployments from the Kaharoa.
+#
+# Revision 1.43  2005/09/26 16:16:18  swift
+# Added iridium deployments.
+#
+# Revision 1.42  2005/08/30 17:54:52  alace
+# Added new deployments.
+#
+# Revision 1.41  2005/06/22 20:56:06  alace
+# Added some Kaharoa deployments.
+#
+# Revision 1.40  2005/05/16 21:40:46  alace
+# Added Kaharoa deployments
+#
+# Revision 1.38  2005/03/29 17:11:07  alace
+# Added 11 new deployments (Palmer).
+#
+# Revision 1.37  2005/01/20 23:51:14  alace
+# Added 5 new WMO ids for Sarantis Sofianos floats.
+#
+# Revision 1.36  2004/12/18 22:45:38  alace
+# Added new deployments.
+#
+# Revision 1.35  2004/11/19 15:30:34  alace
+# Added 11 new deployments.
+#
+# Revision 1.34  2004/10/13 16:50:18  alace
+# Added new deployments.
+#
+# Revision 1.34  2004/10/01 23:59:51  alace
+# Added new deployments and new WMO ids.
+#
+# Revision 1.33  2004/06/22 19:38:45  alace
+# Added deployment of FLSS float 0005.
+#
+# Revision 1.32  2004/05/10 18:00:43  alace
+# Added new deployments.
+#
+# Revision 1.31  2004/04/02 19:18:26  alace
+# Added 8 deployments in the S Pacific (Kaharoa).
+#
+# Revision 1.30  2004/01/21 16:38:39  alace
+# Neutered range of WMO ids from 4900316-4900318 due to assignment conflict
+# with JMA.
+#
+# Revision 1.29  2004/01/02 18:32:09  alace
+# Added 5 new deployments.
+#
+# Revision 1.28  2003/09/15 20:39:24  alace
+# Added 10 new Indian Ocean deployments.
+#
+# Revision 1.27  2003/07/26 14:46:40  alace
+# Added 26 new VOS deployments from Auckland to Panama Canal.
+#
+# Revision 1.26  2003/06/23 15:01:57  alace
+# Added 10 new Indian Ocean air deployments.
+#
+# Revision 1.25  2003/04/21 21:08:27  alace
+# Added deployment locations.
+#
+# Revision 1.24  2003/04/17 00:32:37  alace
+# Added 2 new WMO ids.
+#
+# Revision 1.23  2003/04/15 19:56:21  alace
+# Added new NE Pacific deployments.
+#
+# Revision 1.22  2003/04/07 15:32:42  alace
+# Added deployment of prototype APF9 float.
+#
+# Revision 1.21  2003/03/13 17:00:06  alace
+# Added 16 new deployments in the Indian Ocean.
+#
+# Revision 1.20  2002/12/13 03:07:09  alace
+# Updated deployment sites.
+#
+# Revision 1.19  2002/12/12 00:09:17  alace
+# Added new deployments in Indian Ocean.
+#
+# Revision 1.18  2002/09/10 21:37:48  alace
+# Added new WMO ids for the NE Pacific.
+#
+# Revision 1.17  2002/09/09 18:47:43  alace
+# Added new deployments and new 7-digit WMO ids.  Removed unused
+# older 5-digit WMO ids that won't be used for drifters.
+#
+# Revision 1.16  2002/09/06 13:22:04  alace
+# Added deployment times/locations to recent deployments.
+#
+# Revision 1.15  2002/09/06 13:12:22  alace
+# Added new contact info for obtaining WMO ids.
+#
+# Revision 1.14  2002/09/02 17:41:14  alace
+# Added new float deployments.
+#
+# Revision 1.13  2001/08/28 18:29:48  alace
+# Added 7 digit WMO ids.
+#
+# Revision 1.12  2001/05/07 18:37:23  alace
+# Typo fix.
+#
+# Revision 1.11  2001/05/07 18:37:06  alace
+# Add floats 544 & 559 in NE Pacific.
+#
+# Revision 1.10  2000/12/21 20:47:14  alace
+# Added Atlantic ARGO floats deployed in Dec 2000.
+#
+# Revision 1.9  2000/11/06 15:37:29  alace
+# Added floats 408, 402, 421 in the S Pacific.
+#
+# Revision 1.8  2000/10/23 09:56:53  alace
+# Added Apex260-SBE float 418 to the map.
+#
+# Revision 1.7  2000/09/02 17:51:14  alace
+# Added Apex(260)-Sbe float 422 deployed near Bermuda.
+#
+# Revision 1.6  2000/07/24 17:14:07  alace
+# Added 5 more ids from the S. Pacific NOPP region.
+#
+# Revision 1.5  2000/07/24 15:49:08  alace
+# Added WMO ids for JES floats and S. Pacific NOPP floats.
+#
+# Revision 1.4  1999/03/01 16:40:35  alace
+# Added entries for drifters deployed in the Atlantic Ocean and Japan Sea.
+#
+# Revision 1.3  1999/02/08 15:15:02  alace
+# Added note about change of contact person at NOAA SEAS office.
+#
+# Revision 1.2  1998/11/02 18:53:14  alace
+# Added 21 new WMO id's (41531-41551).
+#
+# Revision 1.1  1998/10/22 19:09:45  swift
+# Initial revision
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+# 
+# The following WMO id's are reserved for drifters deployed
+# in the southwest quadrant of the subtropical N Atlantic.
+# WMO-id drifter-id   // ..............    Comments  .......................
+// 41531        001   // 5-digit surface-drifter id returned to Robert Weir on 7/28/1
+// 41532        002   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41533        003   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41534        004   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41535        010   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41536        011   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41537        013   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41538        014   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41539        016   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41540        017   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41541        018   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41542        019   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41543        020   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41544        021   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41545        022   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41546        023   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41547        024   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41548        026   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41549        027   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41550        028   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41551        029   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41862        063   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41863        079   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41864        080   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41865        081   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41866        086   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41867        088   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41868        090   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41869        091   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41870        092   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41871        095   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41872        096   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41873        098   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+// 41874        099   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41875        104   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41876        105   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41877        106   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41878        107   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41879        108   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41880        109   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41881        110   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41882        111   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41883        113   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41884        114   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41885        115   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41886        116   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41887        117   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41888        118   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41889        119   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41890        121   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41891        125   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41892        126   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41893        186   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41894        191   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41895        193   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41896        215   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41897        216   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41898        220   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41899        221   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41900        228   // digit surface-drifter id returned to Robert Weir on 7/28/10.
+   41951        422   // Deployed at 295.48 32.21 on 08/29/00 at 05:13 GMT.
+   41952        477   // Deployed at 308.83 12.80 on 12/12/00 at 02:49 GMT.
+   41953        419   // Deployed at 313.32 10.72 on 12/12/00 at ??:?? GMT.
+#
+# The following WMO id's are reserved for drifters deployed
+# in the northwest quadrant of the NE Pacific.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   49069       0544   // Deployed at 236.99 36.56 on 04/16/01 at 16:30 GMT.
+   49070       0559   // Deployed at 215.79 56.85 on 04/27/01 at 11:26 GMT.
+ 4900086       0583   // Deployed at 212.4 27.5 on 07/20/02 at 21:31 GMT.
+ 4900087       0632   // Deployed at 208.8 25.4 on 07/21/02 at 08:37 GMT.
+ 4900088       0641   // Deployed at 205.5 23.3 on 07/21/02 at 18:58 GMT.
+ 4900089       0643   // Deployed at 230.5 35.7 on 07/18/02 at 20:14 GMT.
+ 4900090       0644   // Deployed at 225.6 33.8 on 07/19/02 at 08:53 GMT.
+ 4900091       0646   // Deployed at 220.6 31.7 on 07/19/02 at 22:10 GMT.
+ 4900092       0651   // Deployed at 216.4 29.7 on 07/20/02 at 09:52 GMT.
+ 4900093       0894   // Deployed at 202.0 22.8 on 08/29/02 at 14:19 GMT.
+ 4900094       0986   // Deployed at 201.9 22.9 on 08/29/02 at 17:30 GMT.
+ 4900095       0640   // Deployed at 227.74 19.96 on 08/29/02 at 18:30 GMT.
+ 4900096       0829   // Deployed at 233.88 32.05 on 08/27/02 at 22:30 GMT.
+ 4900097       0841   // Deployed at 235.42 34.81 on 08/27/02 at 12:22 GMT.
+ 4900098       0881   // Deployed at 230.68 25.91 on 08/28/02 at 20:37 GMT.
+ 4900099       0882   // Deployed at 232.28 29.02 on 08/28/02 at 09:29 GMT.
+ 4900100       0953   // Deployed at 229.18 22.93 on 08/29/02 at 07:18 GMT.
+ 4900274       0586   // Deployed at 218.07 37.91 on 09/15/02 at 17:47 GMT.
+ 4900275       0589   // Deployed at 212.95 37.75 on 09/16/02 at 06:07 GMT.
+ 4900276       0591   // Deployed at 225.00 38.09 on 09/15/02 at 05:16 GMT.
+ 4900277       0595   // Deployed at 228.00 38.09 on 09/14/02 at 23:03 GMT.
+ 4900278       0581   // Deployed at 221.80 37.99 on 09/15/02 at 11:53 GMT.
+ 4900279       0642   // Deployed at 216.00 37.87 on 09/15/02 at 23:51 GMT.
+ 4900280       0582   // Deployed at 192.00 34.74 on 09/18/02 at 03:10 GMT.
+ 4900281       0649   // Deployed at 230.72 38.03 on 09/14/02 at 17:24 GMT.
+ 4900282       0650   // Deployed at 233.98 37.88 on 09/14/02 at 10:46 GMT.
+ 4900283       0807   // Deployed at 198.00 36.00 on 09/17/02 at 13:50 GMT.
+ 4900284       0809   // Deployed at 195.00 35.42 on 09/17/02 at 20:26 GMT. 
+ 4900285       0820   // Deployed at 207.00 37.29 on 09/16/02 at 18:34 GMT.
+ 4900286       0822   // Deployed at 210.00 37.56 on 09/16/02 at 12:17 GMT.
+ 4900287       0836   // Deployed at 204.00 36.94 on 09/17/02 at 00:54 GMT.
+ 4900306       0837   // Deployed at 201.00 36.51 on 09/17/02 at 07:17 GMT.
+ 4900307       1162   // Deployed at 202.94 25.45 on 04/09/03 at 05:53 GMT.
+ 4900308       1163   // Deployed at 203.38 28.72 on 04/09/03 at 23:38 GMT.
+ 4900309       1164   // Deployed at 203.84 31.98 on 04/10/03 at 17:42 GMT.
+ 4900310       1166   // Deployed at 204.74 38.00 on 04/12/03 at 06:44 GMT.
+ 4900311       1167   // Deployed at 205.38 42.00 on 04/13/03 at 01:25 GMT.
+ 4900312       1168   // Deployed at 205.89 45.00 on 04/13/03 at 15:40 GMT.
+ 4900313       1123   // Deployed at -123.00 5.62 on 29/01/03 at 02:50 GMT. 
+ 4900314       1124   // Deployed at -120.00 4.67 on 28/01/03 at 17:23 GMT. 
+ 4900315       0635   // Deployed at -117.00 3.7 on 28/01/03 at 07:57 GMT.  
+ 4900316              // Dont' use - Assignment conflict with JMA. (1/21/04)
+ 4900317              // Dont' use - Assignment conflict with JMA. (1/21/04)
+ 4900318              // Dont' use - Assignment conflict with JMA. (1/21/04)
+ 4900319       0003   // Deployed at 5.01  243.62 on 01/02/2004 at 13:48 GMT.
+ 4900320       0018   // Deployed at on 09/16/2004 at 22:06 GMT.
+ 4900321       5023   // Deployed at 36.21 305.14 on 11/17/2005 at 23:58 GMT.   
+ 4900322       2274   // Deployed at 23.40 244.00 on 01/13/2006 at 09:58 GMT.
+ 4900323       5012   // Deployed at 19.80 248.00 on 01/14/2006 at 18:53 GMT.
+ 4900324       5005   // Deployed at 16.10 252.25 on 01/16/2006 at 04:47 GMT.
+ 4900325       2191   // Deployed at 13.70 246.00 on 01/23/2006 at 08:59 GMT. 
+ 4900326       2190   // Deployed at 15.20 243.00 on 01/24/2006 at 04:43 GMT.
+ 4900327       5015   // Deployed at 16.70 240.00 on 01/25/2006 at 01:11 GMT. 
+ 4900341       1169   // Deployed at 206.41 48.00 on 04/14/2003 at 09:03 GMT.
+ 4900342       1215   // Deployed at 207.00 51.00 on 04/15/2003 at 01:04 GMT.
+ 4900343       1165   // Deployed at 204.28 35.00 on 04/11/2003 at 13:26 GMT.
+ 4900344       1216   // Deployed at 207.60 54.00 on 04/15/2003 at 18:14 GMT.
+ 4900345       0005   // Deployed at 51.84 311.57 on 06/12/2004 at 08:25 GMT.
+ 4900346       2188   // Deployed at 18.20 237.00 on 01/25/2006 at 21:41 GMT.
+ 4900347       5003   // Deployed at 21.20 231.00 on 01/27/2006 at 13:06 GMT.
+ 4900348       2187   // Deployed at 24.65 231.00 on 01/29/2006 at 04:44 GMT.
+ 4900356       5050   // Deployed at 31.71 295.92 on 06/28/2006 at 18:50 GMT.
+ 4900357       5051   // Deployed at  on  at  GMT.
+ 4900472       5079   //
+ 4900473       5074   //   
+ 4900474       5071   //
+ 4900475       5072   //   
+ 4900476       5094   //
+ 4900477       5093   //
+ 4900478       5062   //
+ 4900479       5058   //
+ 4900480       5068   //
+ 4900481       5069   //
+ 4900482       5095   //
+ 4900483       5073   //
+ 4900484       5075   // 
+ 4900485       5100   //
+ 4900486       5119   //
+ 4900487       5092   //
+ 4900488       3025   //
+ 4900489       1325   //
+ 4900540       1550   //
+ 4900541       2206   //
+ 4900542       2619   //
+ 4900543       3026   //
+#
+# The following WMO id's are reserved for drifters deployed
+# in the central north Pacific and south Pacific.
+# WMO-id drifter-id   // ..............    Comments  .......................
+ 5900230       0804   // Deployed at 224.89 13.92 on 08/30/02 at 16:03 GMT.
+ 5900231       0805   // Deployed at 226.32 16.97 on 08/30/02 at 05:01 GMT.
+ 5900232       0830   // Deployed at 222.10  7.97 on 08/31/02 at 13:05 GMT.
+ 5900233       0831   // Deployed at 223.47 10.93 on 08/31/02 at 02:37 GMT.
+ 5900234       0975   // Deployed at 90.00 2.25 on 12/03/02 at 07:15 GMT.
+ 5900235       0821   // Deployed at 80.01 -37.72 on 12/07/02 at 00:29 GMT.
+ 5900236       0856   // Deployed at 88.99 -37.14 on 12/08/02 at 17:20 GMT.
+ 5900237       0857   // Deployed at 86.00 -37.33 on 12/08/02 at 03:45 GMT.
+ 5900238       1074   // Deployed at 82.99 -37.52 on 12/07/02 at 14:07 GMT.
+ 5900239       1075   // Deployed at 92.00 -36.96 on 12/09/02 at 06:55 GMT.
+ 5900240       0873   // Deployed at 95.00 -36.78 on 12/09/02 at 18:15 GMT.
+ 5900241       0874   // Deployed at 98.00 -36.59 on 12/10/02 at 05:42 GMT.
+ 5900242       1090   // Deployed at 149.22 -44.99 on 04/01/03 at 00:00 GMT.
+ 5900243       1091   // Deployed at 154.92 -50.73 on 05/01/03 at 11:02 GMT.
+ 5900244       1086   // Deployed at 157.72 -53.32 on 06/01/03 at 03:12 GMT.
+ 5900245       0893   // Deployed at 152.16 -48.02 on 04/01/03 at 18:36 GMT.
+ 5900246       1087   // Deployed at 161.75 -57.-01 on 08/01/03 at 20:01 GMT.
+ 5900247       1092   // Deployed at 165.65 -60.02 on 09/01/03 at 13:01 GMT.
+ 5900248       1093   // Deployed at 168.16 -61.83 on 09/01/03 at 23:32 GMT.
+ 5900249       0877   // Deployed at 170.50 -61.99 on 20/01/03 at 12:48 GMT.
+ 5900250       1089   // Deployed at 170.07 -59.01 on 21/01/03 at 03:19 GMT.
+ 5900251       0878   // Deployed at 169.8 -61.83 on 09/01/03 at 13:12 GMT.
+ 5900252       1088   // Deployed at 169.6 -55.34 on 21/01/03 at 21:20 GMT.
+ 5900253       0648   // Deployed at 082.00 -09.54 on 03/09/03 at 17:54 GMT.
+ 5900254       0858   // Deployed at 086.00 -12.37 on 03/10/03 at 06:13 GMT.
+ 5900255       1150   // Deployed at 090.00 -15.16 on 03/10/03 at 18:05 GMT.
+ 5900256       1151   // Deployed at 093.00 -17.22 on 03/11/03 at 02:46 GMT.
+ 5900257       1152   // Deployed at 096.00 -19.27 on 03/11/03 at 11:28 GMT.
+ 5900258       1153   // Deployed at 099.00 -21.29 on 03/11/03 at 20:22 GMT.
+ 5900259       1154   // Deployed at 102.00 -23.27 on 03/12/03 at 04:38 GMT.
+ 5900260       1155   // Deployed at 105.00 -25.25 on 03/12/03 at 12:54 GMT.
+ 5900261       1158   // Deployed at 108.00 -27.18 on 03/12/03 at 21:08 GMT.
+ 5900262       1159   // Deployed at 111.00 -29.07 on 03/13/03 at 05:16 GMT.
+ 5900263       0001   // Deployed at 171.4 6.57 on 03/27/03 at 23:00 GMT.       
+ 5900264       1129   // Deployed at 180.1 -42.8 on 07/13/03 at 16:13 GMT.
+ 5900409       1130   // Deployed at -39.2 -169.3 on 07/14/03 at 14:28 GMT.
+ 5900410       
+ 5900411       1278   // Deployed at -37.57  195.61 on 07/15/2003 at 02:53 GMT.
+ 5900412       1279   // Deployed at -40.20  187.90 on 07/14/2003 at 08:54 GMT.
+ 5900413       1280   // Deployed at -41.89  182.81 on 07/13/2003 at 23:36 GMT.
+ 5900414       0009   //
+ 5900415       5217   //
+ 5900416       1285   // Deployed at -25.51  228.63 on 07/18/2003 at 14:16 GMT.
+ 5900417       1312   // Deployed at -35.66  200.91 on 07/15/2003 at 14:13 GMT.
+ 5900418       1313   // Deployed at -38.51  193.02 on 07/14/2003 at 19:52 GMT.
+ 5900419       1314   // Deployed at -22.21  235.15 on 07/19/2003 at 14:33 GMT.
+ 5900420       1326   // Deployed at -20.61  238.07 on 07/19/2003 at 19:26 GMT.
+ 5900421       1327   // Deployed at -41.03  185.45 on 07/14/2003 at 04:39 GMT.
+ 5900422       1328   // Deployed at -36.63  198.32 on 07/15/2003 at 08:45 GMT.
+ 5900423       1160   // Deployed at -23.61  232.61 on 07/19/2003 at 03:21 GMT.
+ 5900424       1201   // Deployed at 21.13  240.17 on 12/30/2003 at 06:22 GMT.
+ 5900425       1333   // Deployed at 18.08  240.81 on 12/30/2003 at 20:20 GMT.
+#5900426       1342   // Deployed at 12.0 -117.9 on 01/01/04
+ 5900427       1352   // Deployed at 15.0 -118.5 on 12/31/03 
+ 5900428       1349   // Deployed at -35.99  231.51 on 04/01/2004 at 03:39 GMT.
+ 5900541       1566   // Deployed at -35.99  236.00 on 03/31/2004 at 08:14 GMT.
+ 5900542       1567   // Deployed at -36.00  238.99 on 03/30/2004 at 16:36 GMT.
+ 5900543       1296   // Deployed at -36.0 -118.0 on 03/30/04
+ 5900544       1199   // Deployed at -27.01  197.99 on 04/08/2004 at 16:56 GMT.
+ 5900545       1203   // Deployed at -36.02  226.99 on 04/02/2004 at 01:57 GMT.
+#5900546       1204   // Deployed at -35.78  222.51 on 04/03/2004 at 01:45 GMT.
+ 5900547       1336   // Deployed at -35.00  218.00 on 04/03/2004 at 20:30 GMT.
+ 5900548       1348   // Deployed at -29.64  209.93 on 04/05/2004 at 23:32 GMT.
+ 5900549       1335   // Deployed at -28.00  206.98 on 04/06/2004 at 18:56 GMT.
+ 5900550       1563   // Deployed at -27.25  204.00 on 04/07/2004 at 09:52 GMT.
+#5900551       1341   // Deployed at -26.99  201.01 on 04/08/2004 at 02:30 GMT.
+ 5900552       1198   // Deployed at -27.01  195.01 on 04/09/2004 at 11:15 GMT.
+ 5900553       1345   // Deployed at -27.16  192.10 on 04/10/2004 at 02:08 GMT.
+ 5900554       1344   // Deployed at -28.16  189.01 on 04/10/2004 at 19:52 GMT.
+ 5900555       1347   // Deployed at -29.07  186.83 on 04/11/2004 at 08:23 GMT.
+ 5900556       1334   // Deployed at -30.99  185.18 on 04/12/2004 at 01:45 GMT.
+ 5900557       1200   // Deployed at -33.01  183.52 on 04/12/2004 at 13:01 GMT.
+ 5900558       1346   // Deployed at -34.98  181.79 on 04/13/2004 at 06:00 GMT.
+ 5900559       1351   // Deployed at -29.00  158.00 on 07/24/2004 at 22:47 GMT.
+ 5900560       1587   // Deployed at -38.51  161.03 on 07/22/2004 at 12:08 GMT.
+ 5900561       1588   // Deployed at -40.01  164.49 on 07/21/2004 at 12:31 GMT. 
+ 5900562       1626   // Deployed at -32.89  158.04 on 07/24/2004 at 00:46 GMT.
+ 5900563       1638   // Deployed at 
+ 5900564       1634   // Deployed at -15.00  233.99 on 08/23/2004 at 13:31 GMT. 
+ 5900565       1637   // Deployed at -15.01  239.97 on 08/24/2004 at 23:35 GMT. 
+ 5900566       1668   // Deployed at -15.60  223.01 on 08/20/2004 at 22:41 GMT.
+#5900567       1670   // Deployed at -15.17  227.98 on 08/22/2004 at 03:35 GMT.
+#5900568       1672   // Deployed at -12.80  192.49 on 08/07/2004 at 18:00 GMT.
+ 5900569       1686   // Deployed at -13.00  197.98 on 08/09/2004 at 06:18 GMT.
+ 5900570       1687   // Deployed at -14.00  203.99 on 08/10/2004 at 19:01 GMT.
+ 5900571       1630   // Deployed at -15.81  163.48 on 07/31/2004 at 06:32 GMT.
+ 5900572       1631   // Deployed at -29.00  164.98 on 07/27/2004 at 01:48 GMT.
+ 5900573       1632   // Deployed at -15.29  172.47 on 08/02/2004 at 11:29 GMT.
+#5900574       1671   // Deployed at -15.11  176.97 on 08/03/2004 at 15:02 GMT.
+ 5900575       1684   // Deployed at -25.03  165.03 on 07/28/2004 at 06:01 GMT.
+ 5900576       1685   // Deployed at -18.02  160.99 on 07/30/2004 at 04:36 GMT.
+ 5900577       1749   // Deployed at -28.86  100.18 on 08/19/2004 at 12:24 GMT.
+ 5900578       1750   // Deployed at -27.94   96.13 on 08/20/2004 at 23:57 GMT.
+ 5900579       1751   // Deployed at -26.53   88.54 on 08/20/2004 at 23:13 GMT.
+ 5900580       1752   // Deployed at -27.19   92.32 on 08/20/2004 at 11:59 GMT.
+ 5900581       1753   // Deployed at -25.16   81.15 on 08/21/2004 at 20:14 GMT.
+ 5900582       1754   // Deployed at -25.85   84.80 on 08/21/2004 at 08:49 GMT.
+ 5900583       1755   // Deployed at -29.57  104.10 on 08/19/2004 at 00:59 GMT.
+ 5900584       1624   // Deployed at 17.45  200.01 on 08/30/2004 at 06:33 GMT.
+ 5900585       1759   // Deployed at -13.46 185.74 on 09/05/2004 at 18:28 GMT.
+# 5900586       1763   // Deployed at -6.99  188.56 on 09/04/2004 at 10:41 GMT.
+ 5900587       1766   // Deployed at 11.67  197.21 on 08/31/2004 at 12:55 GMT.
+ 5900588       0019   // Deployed at 20.30  201.42 on 08/29/2004 at 11:41 GMT.
+ 5900589       1615   // Deployed at -20.99 240.00 on 09/10/2004 at 21:32 GMT.
+ 5900590       1562   // Deployed at -21.00 234.00 on 09/12/2004 at 06:56 GMT.
+ 5900591       1667   // Deployed at -21.00 229.00 on 09/13/2004 at 14:36 GMT.
+ 5900592       1586   // Deployed at -19.36 214.50 on 09/17/2004 at 03:03 GMT.
+ 5900593       1585   // Deployed at -17.30 200.03 on 09/28/2004 at 04:41 GMT.
+ 5900594       1584   // Deployed at -17.30 194.00 on 09/29/2004 at 14:56 GMT.
+ 5900595       1583   // Deployed at -18.20 186.36 on 10/01/2004 at 01:07 GMT.
+ 5900596       1621   // Deployed at -21.00 176.99 on 10/04/2004 at 00:38 GMT.
+ 5900597       1619   // Deployed at -25.00 173.00 on 10/05/2004 at 00:20 GMT.
+ 5900598       0002   // Deployed at -28.00 171.00 on 10/06/2004 at 00:19 GMT.
+ 5900599       0007   // Deployed at -32.00 176.00 on 10/07/2004 at 10:50 GMT.
+ 5900600       1783   // Deployed at -15.00  81.00 on 11/17/2004 at 07:53 GMT.
+ 5900683       1785   // Deployed at -15.00  84.00 on 11/17/2004 at 08:41 GMT.
+ 5900684       1786   // Deployed at -15.00  87.00 on 11/17/2004 at 09:21 GMT.
+# 5900685       1770   // Deployed at -15.00  90.00 on 11/15/2004 at 09:55 GMT.
+ 5900686       1622   // Deployed at -56.02  84.40 on 12/12/2004 at 09:01 GMT.
+ 5900687       1623   // Deployed at -57.97  83.00 on 12/12/2004 at 01:18 GMT.
+ 5900688       1760   // Deployed at -57.07  83.71 on 12/12/2004 at 04:53 GMT.
+ 5900689       1790   // Deployed at -50.01  88.02 on 12/13/2004 at 08:47 GMT.
+ 5900695       1791   // Deployed at -51.99  86.49 on 12/13/2004 at 00:47 GMT.
+ 5900696       2012   // Deployed at -54.01  85.62 on 12/12/2004 at 16:55 GMT.
+ 5900697       1625   // Deployed at -47.99  89.43 on 12/13/2004 at 19:14 GMT.
+ 5900698       1788   // Deployed at -45.99  91.13 on 12/14/2004 at 07:25 GMT.
+ 5900699       1789   // Deployed at -43.99  93.12 on 12/14/2004 at 18:50 GMT.
+ 5900700       1729   // Deployed at -42.00  95.03 on 12/15/2004 at 05:28 GMT.
+ 5900701       1757   // Deployed at -39.66  98.33 on 12/15/2004 at 17:25 GMT.
+ 5900702       1958   // Deployed at -54.00 209.77 on 04/13/2005 at 09:02 GMT.
+ 5900703       2147   // Deployed at -54.01 191.76 on 04/11/2005 at 04:37 GMT.
+ 5900704       2148   // Deployed at -54.02 186.77 on 04/10/2005 at 12:59 GMT.
+ 5900705       2151   // Deployed at -49.50 217.20 on 04/18/2005 at 13:35 GMT.
+ 5900706       2152   // Deployed at -50.01 222.01 on 04/17/2005 at 18:53 GMT.
+ 5900707       2153   // Deployed at -54.02 201.97 on 04/12/2005 at 10:32 GMT.
+ 5900894       2154   // Deployed at -53.97 207.03 on 04/13/2005 at 00:37 GMT.
+ 5900895       2155   // Deployed at -54.01 216.81 on 04/14/2005 at 04:22 GMT.
+ 5900896       2156   // Deployed at -54.01 221.99 on 04/14/2005 at 19:20 GMT.
+ 5900897       2158   // Deployed at -54.00 197.01 on 04/11/2005 at 19:58 GMT.
+ 5900898       2161   // Deployed at -50.00 229.98 on 04/16/2005 at 14:11 GMT.
+ 5900899       2162   // Deployed at -54.00 229.91 on 04/15/2005 at 18:23 GMT.
+ 5900900       2163   // Deployed at -54.02 226.80 on 04/15/2005 at 10:21 GMT.
+ 5900924       2172   // Deployed at -09.99 083.32 on 04/15/2005 at 08:49 GMT.
+ 5900925       2174   // Deployed at -09.97 086.35 on 04/15/2005 at 09:38 GMT.
+ 5900926       2175   // Deployed at -09.99 089.99 on 04/15/2005 at 10:38 GMT.
+ 5900927       2165   // Deployed at -10.00 063.33 on 04/14/2005 at 07:08 GMT.  
+ 5900928       2143   // Deployed at -49.01 212.01 on 04/19/2005 at 06:06 GMT.
+ 5900929       2144   // Deployed at -48.48 207.02 on 04/20/2005 at 00:43 GMT.
+ 5900930       2149   // Deployed at -47.97 202.11 on 04/21/2005 at 23:07 GMT.
+ 5900931       2150   // Deployed at -47.49 197.03 on 04/21/2005 at 18:59 GMT.
+ 5900932       2145   // Deployed at -47.00 191.99 on 04/22/2005 at 12:57 GMT.
+ 5900933       2146   // Deployed at -46.43 187.01 on 04/23/2005 at 08:32 GMT.
+ 5900934       2272   // Deployed at -38.50 180.51 on 04/23/2005 at 13:20 GMT.
+ 5900935       2273   // Deployed at -29.50 184.24 on 04/25/2005 at 23:30 GMT.
+ 5900936       2159   // Deployed at -50.00 227.02 on 04/17/2005 at 02:07 GMT.
+ 5900937       0031   // Deployed at -21.00 194.00 on 04/29/2005 at 11:30 GMT.
+ 5900938       0032   // Deployed at -21.00 200.00 on 04/30/2005 at 21:42 GMT.
+ 5900939       1793   // Deployed at -21.00 209.03 on 05/02/2005 at 22:44 GMT. 
+ 5900940       0033   // Deployed at -25.00 217.00 on 05/05/2005 at 02:31 GMT.
+ 5900941       0029   // Deployed at -20.50 215.75 on 05/06/2005 at 22:42 GMT.
+ 5900942       0030   // Deployed at -09.00 212.50 on 05/10/2005 at 03:10 GMT.
+ 5900943       2270   // Deployed at -02.00 212.50 on 05/11/2005 at 20:53 GMT.
+ 5900944       2271   // Deployed at -04.01 212.52 on 05/13/2005 at 08:04 GMT.
+ 5900945       2166   // Deployed at -10.00 094.00 on 05/16/2005 at 07:31 GMT.
+ 5900946       2173   // Deployed at -10.00 090.98 on 05/16/2005 at 07:45 GMT.
+ 5900947       2179   // Deployed at  15.00 207.50 on 05/15/2005 at 14:04 GMT.
+ 5900948       0028   // Deployed at  19.96 196.00 on 05/28/2005 at 15:17 GMT.
+ 5900949       0027   // Deployed at  18.43 190.00 on 05/30/2005 at 01:16 GMT.
+ 5900950       2180   // Deployed at  16.67 184.00 on 05/31/2005 at 12:17 GMT.
+ 5900951       2181   // Deployed at  10.00 171.80 on 06/04/2005 at 02:00 GMT.
+ 5900952       0035   // Deployed at  22.68 201.90 on 05/29/2005 at 10:00 GMT.
+ 5900953       2182   // Deployed at  -4.00 169.25 on 06/07/2005 at 19:44 GMT.
+ 5900954       2268   // Deployed at  -8.00 169.00 on 06/08/2005 at 21:33 GMT.
+ 5900955       2269   // Deployed at -14.00 170.80 on 06/10/2005 at 16:45 GMT.
+ 5900956       2176   // Deployed at -16.00 171.40 on 06/11/2005 at 05:27 GMT.
+ 5900957       2178   // Deployed at -22.62 172.39 on 06/13/2005 at 11:28 GMT.
+ 5900958       0013   // Deployed at  21.60 203.20 on 08/01/2005 at 02:39 GMT.
+ 5900959       5036   // Deployed at  22.68 201.90 on 05/29/2005 at 04:22 GMT.  
+ 5900960       5041   // Deployed at  22.84 206.10 on 08/01/2005 at 19:23 GMT.
+ 5900961       0015   // Deployed at  52.59 217.34 on 08/24/2005 at 14:34 GMT.
+ 5900962       5037   // Deployed at  48.46 231.29 on 09/15/2005 at 23:56 GMT.
+ 5900963       5039   // Deployed at  47.91 231.75 on 09/15/2005 at 00:38 GMT.
+ 5900964       5040   // Deployed at  47.93 231.08 on 09/15/2005 at 01:46 GMT.
+ 5900965       2339   // Deployed at -42.80 189.99 on 10/24/2005 at 13:38 GMT.
+ 5900966       5019   // Deployed at -43.10 192.99 on 10/25/2005 at 03:05 GMT.
+ 5901042       2340   // Deployed at -43.40 196.00 on 10/25/2005 at 16:35 GMT.
+ 5901043       5020   // Deployed at -43.70 199.00 on 10/26/2005 at 05:56 GMT.
+ 5901044       5021   // Deployed at -44.12 203.00 on 10/26/2005 at 23:29 GMT.
+ 5901045       2341   // Deployed at -43.92 201.00 on 10/26/2005 at 14:33 GMT.
+ 5901046       2342   // Deployed at -44.32 205.00 on 10/27/2005 at 08:33 GMT.
+ 5901047       5004   // Deployed at -44.70 208.00 on 10/27/2005 at 21:42 GMT.
+ 5901048       5006   // Deployed at -44.00 213.99 on 10/28/2005 at 23:43 GMT.
+ 5901049       2343   // Deployed at -44.35 212.00 on 10/28/2005 at 14:52 GMT.
+ 5901050       5024   // Deployed at -42.50 218.50 on 10/29/2005 at 21:01 GMT.
+ 5901051       2344   // Deployed at -43.50 215.50 on 10/29/2005 at 06:56 GMT.
+ 5901052       2345   // Deployed at -41.00 223.00 on 10/30/2005 at 18:22 GMT.
+ 5901053       5025   // Deployed at -39.87 230.00 on 11/01/2005 at 03:53 GMT.
+ 5901054       2346   // Deployed at -39.68 235.89 on 11/02/2005 at 13:49 GMT.
+ 5901055       2754   // Deployed at  28.88 239.86 on 02/10/2006 at 02:40 GMT.
+ 5901056       5038   // Deployed at  23.00 235.15 on 02/11/2006 at 20:11 GMT.
+ 5901057       0034   // Deployed at  16.99 231.75 on 02/13/2006 at 17:30 GMT.
+ 5901058       2753   // Deployed at  14.00 229.70 on 02/14/2006 at 17:28 GMT.
+ 5901059       5045   // Deployed at -00.50 227.90 on 02/18/2006 at 13:13 GMT.
+ 5901060       5052   // Deployed at -01.00 227.70 on 02/18/2006 at 16:51 GMT.
+ 5901061       2164   // Deployed at -07.00 226.90 on 02/20/2006 at 05:57 GMT.
+ 5901062       5030   // Deployed at -24.00 226.40 on 02/24/2006 at 17:25 GMT.
+ 5901063       2277   // Deployed at -29.00 222.80 on 02/27/2006 at 03:17 GMT.
+ 5901064       2278   // Deployed at -31.85 218.00 on 02/27/2006 at 21:31 GMT.
+ 5901065       2279   // Deployed at -34.55 210.00 on 03/01/2006 at 14:33 GMT.
+ 5901066       2280   // Deployed at -36.25 202.00 on 03/03/2006 at 10:03 GMT.
+ 5901067       2275   // Deployed at -37.66 194.00 on 03/05/2006 at 22:28 GMT.
+ 5901068       2276   // Deployed at -39.40 187.00 on 03/07/2006 at 14:40 GMT.
+ 5901069       5034   // Deployed at  22.76 201.91 on 03/12/2006 at 03:47 GMT.
+ 5901070       2818   // Deployed at               on            at       GMT.
+ 5901071       5046   // Deployed at  22.76 202.04 on 05/29/2006 at 00:34 GMT.
+ 5901072       5048   // Deployed at  22.76 202.04 on 05/29/2006 at 00:30 GMT.
+ 5901073       5067   // Deployed at               on            at       GMT.
+ 5901074       2788   // Deployed at               on            at       GMT.
+ 5901075       2789   // Deployed at               on            at       GMT.
+ 5901076       2790   // Deployed at               on            at       GMT.
+ 5901077       2791   // Deployed at               on            at       GMT.
+ 5901078       2792   // Deployed at               on            at       GMT.
+ 5901079       2794   // Deployed at               on            at       GMT.
+ 5901080       2795   // Deployed at               on            at       GMT.
+ 5901081       2796   // Deployed at  49.01 174.98 on 05/03/2006 at 22:16 GMT.
+ 5901082       2797   // Deployed at  46.00 175.10 on 05/03/2006 at 21:09 GMT.
+ 5901083       2798   // Deployed at  42.97 175.10 on 05/03/2006 at 22:03 GMT.
+ 5901084       2799   // Deployed at  42.95 165.08 on 05/04/2006 at 00:34 GMT.
+ 5901085       2800   // Deployed at  45.97 165.05 on 05/04/2006 at 00:54 GMT.
+ 5901086       2820   // Deployed at  43.98 160.01 on 05/04/2006 at 01:58 GMT.
+ 5901087       2821   // Deployed at  43.98 150.01 on 05/11/2006 at 00:36 GMT.
+ 5901088       5031   // Deployed at  45.02 154.03 on 05/11/2006 at 01:21 GMT.
+ 5901089       5032   // Deployed at  47.52 160.04 on 05/11/2006 at 02:19 GMT.
+ 5901090       5033   // Deployed at  49.01 165.00 on 05/11/2006 at 03:07 GMT.
+ 5901091       2781   // Deployed at               on            at       GMT.   
+ 5901092       2782   // Deployed at               on            at       GMT.
+ 5901093       2783   // Deployed at               on            at       GMT.
+ 5901094       2784   // Deployed at               on            at       GMT.
+ 5901095       2785   // Deployed at               on            at       GMT.
+ 5901096       2812   // Deployed at               on            at       GMT.
+ 5901097       2813   // Deployed at               on            at       GMT.
+ 5901098       2814   // Deployed at               on            at       GMT.
+ 5901099       2815   // Deployed at               on            at       GMT.
+ 5901100       2816   // Deployed at               on            at       GMT.
+ 5901101       2817   // Deployed at               on            at       GMT.
+ 5901305       2819   // Deployed at               on            at       GMT
+ 5901306       2910   // Deployed at               on            at       GMT
+ 5901307       2911   // Deployed at               on            at       GMT
+ 5901308       2912   // Deployed at               on            at       GMT
+ 5901309       2913   // Deployed at               on            at       GMT
+ 5901310       5085   // Deployed at               on            at       GMT
+ 5901311       5047   // Deployed at               on            at       GMT
+ 5901312       5135   // Deployed at               on            at       GMT
+ 5901313       5086   // Deployed at               on            at       GMT
+ 5901314       0116   // Deployed at               on            at       GMT
+ 5901315       5090   // Deployed at               on            at       GMT
+ 5901316       5049   // Deployed at               on            at       GMT
+ 5901317       5091   // Deployed at               on            at       GMT
+ 5901318       5137   // Deployed at               on            at       GMT
+ 5901319       5138   // Deployed at               on            at       GMT
+ 5901320       5139   // Deployed at               on            at       GMT
+ 5901321       5140   // Deployed at               on            at       GMT
+ 5901322       5141   // Deployed at               on            at       GMT
+ 5901323       5142   // Deployed at               on            at       GMT
+ 5901324       5080   // Deployed at               on            at       GMT
+ 5901325       5081   // Deployed at               on            at       GMT
+ 5901326       5082   // Deployed at               on            at       GMT 
+ 5901327       5083   // Deployed at               on            at       GMT
+ 5901328       5084   // Deployed at               on            at       GMT
+ 5901329       5112   // Deployed at               on            at       GMT
+ 5901330       5113   // Deployed at               on            at       GMT
+ 5901331       5114   // Deployed at               on            at       GMT
+ 5901332       5115   // Deployed at               on            at       GMT
+ 5901333       5116   // Deployed at               on            at       GMT
+ 5901334       5118   // Deployed at               on            at       GMT
+ 5901335       5120   // Deployed at               on            at       GMT
+ 5901336       5087   // Deployed at               on            at       GMT
+ 5901337       5055   // Deployed at               on            at       GMT
+ 5901338       5088   // Deployed at               on            at       GMT
+ 5901339       5089   // Deployed at               on            at       GMT
+ 5901340       5060   // Deployed at               on            at       GMT
+ 5901341       5063   // Deployed at               on            at       GMT
+ 5901342       5064   // Deployed at               on            at       GMT
+ 5901343       5065   // Deployed at               on            at       GMT
+ 5901344       5122   // Deployed at               on            at       GMT
+ 5901345       5111   // Deployed at               on            at       GMT
+ 5901346       5132   // Deployed at               on            at       GMT
+ 5901347       5136   // Deployed at               on            at       GMT
+ 5901348       5056   // Deployed at               on            at       GMT
+ 5901349       5097   // Deployed at               on            at       GMT
+ 5901350       5099   // Deployed at               on            at       GMT
+ 5901351       5121   // Deployed at               on            at       GMT
+ 5901352       5101   // Deployed at               on            at       GMT
+ 5901353       5102   // Deployed at               on            at       GMT
+ 5901354       5103   // Deployed at               on            at       GMT
+ 5901355       5104   // Deployed at               on            at       GMT
+ 5901356       5105   // Deployed at               on            at       GMT
+ 5901357       5106   // Deployed at               on            at       GMT
+ 5901358       5107   // Deployed at               on            at       GMT
+ 5901359       5108   // Deployed at               on            at       GMT
+ 5901360       5109   // Deployed at               on            at       GMT
+ 5901361       5123   // Deployed at               on            at       GMT
+ 5901362       5124   // Deployed at               on            at       GMT
+ 5901363       2786   // 
+ 5901364       2787   //
+ 5901365       5126   //
+ 5901366       5127   //
+ 5901367       5156   //
+ 5901368       5157   //
+ 5901369       5209   //
+ 5901370       5128   //
+ 5901371       5159   //
+ 5901372       5210   //
+ 5901373       5130   //
+ 5901374       5161   //
+ 5901375       2267   // 
+ 5901376       3281   //
+ 5901377       3282   //
+ 5901378       3283   //
+ 5901379       3284   //
+ 5901380       3285   //
+ 5901381       3286   //
+ 5901382       3287   //
+ 5901383       3288   //
+ 5901384       5162   //
+#
+# The following WMO id's are reserved for drifters deployed
+# in the NW Pacific and north Indian ocean.
+# WMO-id drifter-id   // ..............    Comments  .......................
+ 2900099       0854   // Deployed at 81.00 -04.35 on 12/01/02 at 17:02 GMT.
+ 2900100       0855   // Deployed at 84.00 -02.16 on 12/02/02 at 05:45 GMT.
+ 2900101       0974   // Deployed at 87.00 00.04 on 12/02/02 at 18:38 GMT.
+ 2900102       0270   // Deployed at 3.42   69.00 on 09/11/2003 at 08:55 GMT.
+ 2900103       0984   // Deployed at 2.67   66.11 on 09/11/2003 at 18:43 GMT.
+ 2900104       1197   // Deployed at 1.11   60.03 on 09/12/2003 at 16:36 GMT.
+ 2900105       1276   // Deployed at 4.19   72.03 on 09/11/2003 at 01:27 GMT.
+ 2900106       1795   // Deployed at 14.1N  84.9E on 10/02/2004 at 09:23 GMT.
+ 2900107       0006   // Deployed at 12.7N  85.1E on 10/02/2004 at 15:12 GMT.
+ 2900108       5163   //
+ 2900109       5164   //
+ 2900110       5165   //
+ 2900111       5166   //
+ 2900112       5167   //
+ 2900113       5144   //
+ 2900114       5208   //
+ 2900115       5247   //
+ 2900116       5248   //
+ 2900117       5249   //
+ 2900118       5250   //
+ 2900119       5251   //
+ 2900120       5252   //
+ 2900121       5154   //
+ 2900122       0040   //
+ 2900123       5226   //
+ 2900124       5155   //
+ 2900125       5242   //
+ 2900126       5243   //
+ 2900127       5244   //
+ 2900128       5245   //
+ 2900129       5246   //
+ 2900130       5240   //
+# 2900131       1681   //
+# 2900132       1689   //
+ 2900133       5170   //
+#
+# The following WMO id's are reserved for drifters deployed
+# in the NW Pacific and north Indian ocean.
+# WMO-id drifter-id   // ..............    Comments  .......................
+ 1900042       0834   // Deployed at  52.07E 45.81S on 11/19/02 at 19:38 GMT.
+ 1900043       0835   // Deployed at  54.00E 47.16S on 11/22/02 at 00:58 GMT.
+ 1900044       0851   // Deployed at  57.00E 48.15S on 11/22/02 at 11:53 GMT.
+ 1900045       0849   // Deployed at  63.02E 50.08S on 11/23/02 at 08:24 GMT.
+ 1900046       0875   // Deployed at  60.03E 49.14S on 11/22/02 at 22:21 GMT.
+ 1900047       0645   // Deployed at  65.74E 50.90S on 11/23/02 at 18:10 GMT.
+ 1900048       0827   // Deployed at  69.00E 51.89S on 11/24/02 at 08:03 GMT.
+ 1900049       0824   // Deployed at  70.37E 52.30S on 11/24/02 at 13:45 GMT.
+ 1900050       0593   // Deployed at 57.00 -20.08 on 11/27/02 at 09:21 GMT.
+ 1900051       0652   // Deployed at 54.03 -21.42 on 11/26/02 at 22:04 GMT.
+ 1900052       0654   // Deployed at 60.00 -18.44 on 11/27/02 at 20:47 GMT.
+ 1900053       0828   // Deployed at 63.00 -16.54 on 11/28/02 at 09:04 GMT.
+ 1900054       0823   // Deployed at 66.00 -14.75 on 11/28/02 at 22:05 GMT.
+ 1900055       0872   // Deployed at 69.00 -12.77 on 11/29/02 at 11:29 GMT.
+ 1900056       0876   // Deployed at 72.00 -10.75 on 11/30/02 at 01:19 GMT.
+ 1900143       0833   // Deployed at 75.00 -08.63 on 11/30/02 at 14:48 GMT.
+ 1900144       0832   // Deployed at 78.14 -06.42 on 12/01/02 at 04:36 GMT.
+ 1900145       0853   // Deployed at 73.20 -47.00 on 12/02/02 at 19:36 GMT.
+ 1900146       0839   // Deployed at 75.81 -45.01 on 12/02/02 at 12:24 GMT.
+ 1900147       0840   // Deployed at 76.99 -43.99 on 12/03.02 at 21:12 GMT.
+ 1900148       0852   // Deployed at 77.13 -42.01 on 12/04/02 at 13:45 GMT.
+ 1900149       1077   // Deployed at 74.57 -46.00 on 12/03/02 at 04:33 GMT.
+ 1900150       1078   // Deployed at 77.10 -38.98 on 12/05/02 at 04:21 GMT.
+ 1900151       1079   // Deployed at 77.12 -40.13 on 12/04/02 at 22:54 GMT.
+ 1900152       0594   // Deployed at 77.13 -40.99 on 12/04/02 at 18:48 GMT.
+ 1900153       1076   // Deployed at 77.15 -43.11 on 12/04/02 at 08:00 GMT.
+ 1900154       1146   // Deployed at 078.00 -06.71 on 03/09/03 at 05:54 GMT.
+ 1900155       1147   // Deployed at 075.00 -04.56 on 03/08/03 at 20:51 GMT.
+ 1900156       1148   // Deployed at 060.00 06.18 on 03/06/03 at 23:05 GMT.
+ 1900157       1149   // Deployed at 063.00 04.04 on 03/08/03 at 08:05 GMT.
+ 1900158       1156   // Deployed at 066.00 01.88 on 03/07/03 at 17:23 GMT.
+ 1900159       1157   // Deployed at 070.00 -00.98 on 03/08/03 at 05:54 GMT.
+ 1900160       0880   // Air deployed at 052.67  05.33 on 06/16/03 at 10:02 GMT.
+ 1900161       1068   // Air deployed at 051.58  03.17 on 06/16/03 at 10:49 GMT.
+$1900162       1205   // Air deployed at 055.00  10.00 on 06/16/03 at 08:26 GMT.
+ 1900169       1270   // Air deployed at 050.50  00.92 on 06/17/03 at 06:57 GMT.
+ 1900170       1271   // Air deployed at 049.25 -01.83 on 06/17/03 at 07:46 GMT.
+ 1900171       1272   // Air deployed at 047.92 -03.50 on 06/17/03 at 08:32 GMT.
+ 1900172       1273   // Air deployed at 046.42 -05.75 on 06/17/03 at 09:22 GMT.
+ 1900180       1274   // Air deployed at 045.25 -07.92 on 06/17/03 at 10:00 GMT.
+ 1900181       1275   // Air deployed at 044.00 -10.00 on 06/17/03 at 10:44 GMT.
+ 1900182       1277   // Air deployed at 053.83  07.67 on 06/16/03 at 09:13 GMT.
+ 1900183       1170   // Deployed at  0.37   57.08 on 09/13/2003 at 02:15 GMT.
+ 1900184       1171   // Deployed at -0.39   54.04 on 09/13/2003 at 14:14 GMT.
+ 1900185       1172   // Deployed at -1.12   51.07 on 09/14/2003 at 03:26 GMT.
+ 1900186       1173   // Deployed at -1.96   48.04 on 09/14/2003 at 11:44 GMT.
+ 1900187       1187   // Deployed at -2.74   45.03 on 09/14/2003 at 22:48 GMT.
+ 1900188       1188   // Deployed at -3.54   42.02 on 09/15/2003 at 09:53 GMT.
+#1900189       1570   // Deployed at -47.94  35.93 on 04/12/2004 at 13:33 GMT.
+#1900190       1571   // Deployed at -49.51  31.48 on 04/14/2004 at 17:47 GMT.
+ 1900191       1568   // Deployed at -50.55  33.05 on 04/23/2004 at 22:56 GMT.
+ 1900192       1569   // Deployed at -50.94  32.94 on 04/23/2004 at 18:49 GMT.
+#1900193       1575   // Deployed at -49.55  32.96 on 04/24/2004 at 04:39 GMT.
+#1900194       1572   // Deployed at -39.51  25.59 on 05/04/2004 at 20:18 GMT.
+ 1900195       1574   // Deployed at -40.07  26.68 on 05/04/2004 at 16:57 GMT.
+ 1900196       1577   // Deployed at -44.56  34.16 on 05/02/2004 at 16:56 GMT.
+#1900197       1578   // Deployed at -43.01  31.55 on 05/03/2004 at 08:39 GMT.
+ 1900198       1580   // Deployed at -41.60  29.33 on 05/03/2004 at 22:22 GMT.
+ 1900199       1669   // Deployed at -23.42  70.48 on 08/23/2004 at 01:45 GMT.
+ 1900200       1746   // Deployed at -22.80  67.00 on 08/23/2004 at 10:16 GMT.
+ 1900266       1747   // Deployed at -24.56  77.49 on 08/22/2004 at 08:39 GMT.
+ 1900267       1748   // Deployed at -24.00  73.98 on 08/22/2004 at 17:05 GMT.
+ 1900268       1776   // Deployed at -15.00  60.00 on 11/16/2004 at 07:44 GMT.
+ 1900269       1777   // Deployed at -15.00  63.00 on 11/16/2004 at 08:31 GMT.
+ 1900270       1779   // Deployed at -15.00  69.00 on 11/16/2004 at 09:56 GMT.
+ 1900271       1780   // Deployed at -15.00  72.00 on 11/16/2004 at 10:37 GMT.
+ 1900272       1781   // Deployed at -15.00  75.00 on 11/17/2004 at 06:29 GMT.
+ 1900273       1782   // Deployed at -15.00  78.00 on 11/17/2004 at 07:07 GMT.
+ 1900274       1778   // Deployed at -15.00  66.00 on 11/16/2004 at 09:11 GMT.       
+ 1900353       2167   // Deployed at -10.03  66.65 on 04/14/2005 at 08:30 GMT.
+ 1900354       2168   // Deployed at -10.00  70.02 on 04/14/2005 at 09:21 GMT.
+ 1900355       2169   // Deployed at -09.97  73.35 on 04/14/2005 at 09:59 GMT.
+ 1900356       2170   // Deployed at -10.00  76.67 on 04/14/2005 at 10:47 GMT.
+ 1900357       2171   // Deployed at -10.00  80.00 on 04/15/2005 at 07:51 GMT.
+ 1900358       2914   // Deployed at               on            at       GMT.
+ 1900367       2915   // Deployed at               on            at       GMT.
+ 1900406       2916   // Deployed at               on            at       GMT.
+ 1900407       2917   // Deployed at               on            at       GMT.
+ 1900408       5076   // Deployed at               on            at       GMT.
+ 1900409       5077   // Deployed at               on            at       GMT.
+ 1900410       5078   // Deployed at               on            at       GMT.
+ 1900411       5053   // Deployed at               on            at       GMT.
+ 1900412       5057   // Deployed at               on            at       GMT.
+ 1900413       5061   // Deployed at               on            at       GMT.
+ 1900414       5133   // Deployed at               on            at       GMT.
+ 1900722       5035   // Deployed at               on            at       GMT
+ 1900723       5134   // Deployed at               on            at       GMT
+ 1900724       3053   //
+ 1900725       3054   //
+ 1900726       3055   //
+ 1900727       3276   //
+ 1900728       3277   //
+ 1900729       3278   //
+ 1900730       3279   //
+ 1900731       3280   //
+#
+# The following WMO id's are reserved for drifters deployed
+# in the northwest quadrant of the S Atlantic.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   39037        420   // Deployed at 326.35  2.40 on 12/14/00 at 20:47 GMT.
+   39038        423   // Deployed at 334.30 -3.83 on 12/16/00 at 06:59 GMT. 
+   39039        424   // Deployed at 341.81 10.08 on 12/17/00 at 14:24 GMT.
+   39040        452   // Deployed at 316.70  8.63 on 12/13/00 at 06:29 GMT.
+   39041        453   // Deployed at 329.53  0.32 on 12/15/00 at 07:55 GMT.
+   39042        454   // Deployed at 339.03  8.00 on 12/17/00 at 04:07 GMT.
+   39043        456   // Deployed at 320.00  6.55 on 12/13/00 at 19:30 GMT.
+   39044        457   // Deployed at 323.17  4.48 on 12/14/00 at 07:34 GMT.
+   39045        458   // Deployed at 336.65  5.92 on 12/16/00 at 17:40 GMT.
+   39046        459   // Deployed at 331.97  1.77 on 12/15/00 at 20:19 GMT.
+#
+# The following WMO id's are reserved for drifters deployed
+# in the northeast quadrant of the S Atlantic.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   19018        455   // Deployed at 343.93 -12.10 on 12/18/00 at 01:14 GMT.
+   19019        478   // Deployed at 346.50 -14.23 on 12/18/00 at 12:00 GMT.
+   19020        479   // Deployed at 349.12 -16.30 on 12/18/00 at 22:27 GMT.
+   19021        481   // Deployed at 351.85 -18.40 on 12/19/00 at 09:15 GMT.
+#
+# The following WMO id's are reserved for drifters deployed
+# in the northwest quadrant of the N Atlantic.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   44870        082   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   44871        084   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   44872        085   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   44873        087   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   44874        093   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   44875        094   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+# 
+# The following WMO id's are reserved for drifters deployed
+# in the northeast quadrant of the N Atlantic.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   62876        089   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   62877        097   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   62878        112   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   62879        120   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   62880        122   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+# 
+# The following WMO id's are reserved for drifters deployed
+# in the NW Pacific including the Japan and Okhotsk seas.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   21853        190   // rk5-digit surface-drifter id returned to Robert Weir on 7/28/10. 
+   21854        194   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.         
+   21855        195   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21856        213   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21857        214   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21858        223   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21859        224   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21860        225   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21861        226   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21862        227   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21863        229   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21864        230   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+#  21865        231   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21866        232   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21867        233   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21868        257   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21869        258   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21870        259   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+#  21871        260   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21872        261   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21873        262   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21874        263   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21875        265   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21876        266   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21877        267   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.  
+   21878        268   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.  
+   21879        269   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10. 
+   21880        271   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21881        272   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21882        273   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21883        274   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21884        275   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+#  21885        276   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+   21886        277   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.  
+   21887        279   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+#  21888        288   // 5-digit surface-drifter id returned to Robert Weir on 7/28/10.
+# 
+# The following WMO id's are reserved for drifters deployed
+# in the S Pacific NOPP region.
+# WMO-id drifter-id   // ..............    Comments  .......................
+   39029        404   // Deployed at 102.50W 10.01S on 07/02/00 at 05:41 GMT
+   39030        405   // Deployed at 107.76W 13.00S on 07/03/00 at 01:25 GMT
+   39031        406   // Deployed at 114.92W 17.00S on 07/04/00 at 03:38 GMT
+   39032        418   // Deployed at  94.64W  9.14S on 10/21/00 at 19:35 GMT
+   39033        408   // Deployed at 113.08W  7.41S on 10/29/00 at 20:41 GMT 
+   39034        402   // Deployed at 117.90W  9.20S on 11/01/00 at 03:29 GMT
+   39035        421   // Deployed at 130.00W 12.20S on 11/03/00 at 12:05 GMT
+   59019        407   // Deployed at 120.39W 20.00S on 07/05/00 at 01:09 GMT
+ 3900068       0592   // Deployed at -84.09 -9.8 on 24/01/03 at 00:44 GMT.  
+#3900095       1117   // Deployed at -99.00 -2.16 on 25/01/03 at 23:38 GMT.  
+#3900096       1118   // Deployed at -96.03 -3.12 on 25/01/03 at 14:58 GMT. 
+#3900097       1119   // Deployed at -93.00 -4.1 on 25/01/03 at 05:50 GMT.  
+#3900098       1120   // Deployed at -90.00 -5.07 on 24/01/03 at 20:38 GMT. 
+#3900099       1121   // Deployed at -87.00 -6.7 on 23/01/03 at 10:38 GMT.  
+#3900100       1122   // Deployed at -81.32 -9.9 on 23/01/03 at 14:59 GMT.  
+ 3900101       1125   // Deployed at -105.00 -0.2 on 26/01/03 at 17:55 GMT. 
+ 3900102       1126   // Deployed at -102.00 1.17 on 26/01/03 at 08:41 GMT. 
+ 3900103       1127   // Deployed at -108.00 1.76 on 27/01/03 at 04:48 GMT. 
+ 3900104       1128   // Deployed at -111.00 2.36 on 27/01/03 at 13:44 GMT. 
+ 3900105       1094   // Deployed at -114.00 2.96 on 27/01/03 at 22:50 GMT. 
+ 3900154       1161   // Deployed at -19.03  241.04 on 07/20/2003 at 06:44 GMT.
+ 3900155       1315   // Deployed at -17.16  244.44 on 07/20/2003 at 15:29 GMT.
+ 3900156       1281   // Deployed at -13.24  251.40 on 07/21/2003 at 13:37 GMT.
+ 3900157       1282   // Deployed at -15.01  248.26 on 07/21/2003 at 02:25 GMT.
+ 3900158       1202   // Deployed at -11.19  254.99 on 07/22/2003 at 04:18 GMT.
+ 3900159       1316   // Deployed at -9.04  258.76 on  07/22/2003 at 13:20 GMT.
+ 3900160       1317   // Deployed at -6.85  262.54 on 07/23/2003 at 01:49 GMT.
+ 3900161       1318   // Deployed at -4.77  266.15 on 07/19/2003 at 14:29 GMT.
+ 3900162       1320   // Deployed at -2.42  270.14 on 07/24/2003 at 07:14 GMT.
+ 3900163       1321   // Deployed at -0.24  272.59 on 07/24/2003 at 16:10 GMT.
+ 3900164       1322   // Deployed at 2.06  274.93 on 07/19/2003 at 23:22 GMT.
+ 3900165       1323   // Deployed at 4.28  277.18 on 07/25/2003 at 11:59 GMT.
+ 3900166       1324   // Deployed at  6.46  279.34 on 07/25/2003 at 18:07 GMT.
+ 3900167       1268   // Deployed at -36.38  248.54 on 03/28/2004 at 19:03 GMT.
+ 3900168       1337   // Deployed at -38.20  265.98 on 03/25/2004 at 03:48 GMT.
+ 3900169       1338   // Deployed at -37.90  263.03 on 03/25/2004 at 22:10 GMT.
+ 3900170       1564   // Deployed at -36.67  251.27 on 03/28/2004 at 07:33 GMT.
+ 3900171       1565   // Deployed at -37.02  254.03 on 03/27/2004 at 17:42 GMT.
+ 3900172       1339   // Deployed at -37.30  -103.00 on 03/26/2004 at 23:43 GMT.
+ 3900173       1340   // Deployed at -37.60  -100.00 on 03/26/2004 at 09:37 GMT.
+ 3900238       0010   // Deployed at -15.00  257.97 on 08/29/2004 at 08:20 GMT.
+ 3900239       0014   // Deployed at -15.00  -96.03 on 08/30/2004 at 19:10 GMT.
+ 3900240       1581   // Deployed at -15.02  251.96 on 08/27/2004 at 21:19 GMT.
+ 3900241       1582   // Deployed at -14.99  245.99 on 08/26/2004 at 08:55 GMT.
+ 3900242       1616   // Deployed at -21.00  270.00 on 09/04/2004 at 03:47 GMT.
+ 3900243       1617   // Deployed at -20.99  263.98 on 09/05/2004 at 11:52 GMT.
+ 3900244       1633   // Deployed at -21.00  257.97 on 09/06/2004 at 21:04 GMT.
+ 3900245       1635   // Deployed at -21.01  251.99 on 09/08/2004 at 05:36 GMT.
+ 3900246       1673   // Deployed at -15.00  269.98 on 09/01/2004 at 07:46 GMT.
+ 3900254       1674   // Deployed at -17.99  272.99 on 09/02/2004 at 17:23 GMT.
+ 3900255       1614   // Deployed at -21.00  246.00 on 09/09/2004 at 12:48 GMT.
+ 3900256       1756   // Deployed at -50.92  253.98 on 03/17/2005 at 15:49 GMT.
+ 3900257       1758   // Deployed at -52.28  267.02 on 03/19/2005 at 02:21 GMT.
+ 3900258       1761   // Deployed at -52.91  272.03 on 03/20/2005 at 12:57 GMT.
+ 3900259       1762   // Deployed at -53.00  268.98 on 03/20/2005 at 01:41 GMT.
+# 3900260       1764   // Deployed at -50.07  248.03 on 03/16/2005 at 17:14 GMT.
+ 3900261       1765   // Deployed at -51.61  259.99 on 03/18/2005 at 14:15 GMT.
+# 3900262       1767   // Deployed at -53.09  265.98 on 03/19/2005 at 14:52 GMT.
+ 3900263       1768   // Deployed at -53.09  274.99 on 03/20/2005 at 23:42 GMT.
+ 3900264       1769   // Deployed at -51.22  256.99 on 03/18/2005 at 02:29 GMT.
+ 3900331       1784   // Deployed at -50.57  250.97 on 03/17/2005 at 04:48 GMT.
+ 3900332       1787   // Deployed at -52.97  277.99 0n 03/21/2005 at 10:06 GMT.
+ 3900333       2347   // Deployed at -39.21  247.01 on 11/04/2005 at 17:53 GMT
+ 3900334       2348   // Deployed at -38.77  259.01 on 11/07/2005 at 02:22 GMT.
+ 3900335       2189   // Deployed at -30.50  283.90 on 11/20/2005 at 05:28 GMT. 
+ 3900336       5013   // Deployed at -21.99  280.80 on 11/22/2005 at 06:42 GMT.
+ 3900337       5016   // Deployed at -19.00  279.65 on 11/23/2005 at 00:54 GMT
+ 3900338       5017   // Deployed at -16.00  278.70 on 11/23/2005 at 19:24 GMT.
+ 3900339       5018   // Deployed at -13.00  277.75 on 11/24/2005 at 14:37 GMT
+ 3900340       5001   // Deployed at -11.00  275.00 on 11/25/2005 at 15:35 GMT
+ 3900341       5002   // Deployed at -11.00  270.00 on 11/26/2005 at 22:00 GMT.
+ 3900342       5008   // Deployed at -11.00  264.00 on 11/28/2005 at 12:03 GMT.
+ 3900343       5010   // Deployed at -11.00  258.00 on 11/30/2005 at 00:45 GMT.
+ 3900344       5026   // Deployed at -39.44  242.05 on 11/03/2005 at 17:38 GMT
+ 3900345       5027   // Deployed at -38.99  253.00 on 11/05/2005 at 22:42 GMT.
+ 3900346       5028   // Deployed at -38.55  265.01 on 11/08/2005 at 05:39 GMT.
+ 3900347       5029   // Deployed at -38.33  271.01 on 11/09/2005 at 09:54 GMT.
+// 3900348     0016   // Deployed at -38.13  277.03 on 11/10/2005 at 14:13 GMT.
+ 3900349       5014   // Deployed at -11.00  252.00 on 12/01/2005 at 14:41 GMT.
+ 3900350       5007   // Deployed at -11.00  246.00 on 12/03/2005 at 03:47 GMT.
+ 3900497       5009   // Deployed at -08.00  243.00 on 12/04/2005 at 17:39 GMT.
+ 3900498       5011   // Deployed at -04.00  243.00 on 12/05/2005 at 18:35 GMT.
+ 3900499       2157   // Deployed at  00.00  243.00 on 12/06/2005 at 18:02 GMT.
+ 3900500       2186   // Deployed at  03.00  243.00 on 12/07/2005 at 13:26 GMT.
+ 3900501       0020   // Deployed at -01.96  270.96 on 01/27/2006 at 12:33 GMT.
+ 3900502       0024   // Deployed at -01.49  268.00 on 01/13/2006 at 16:03 GMT.
+ 3900503       0025   // Deployed at -01.49  268.00 on 01/13/2006 at 16:05 GMT.
+ 3900504       5044   // Deployed at  00.56  270.97 on 01/28/2006 at 10:45 GMT.
+ 3900505              //     
+ 3900506       3290   //
+ 3900507       5168   //
+ 3900508       5169   //
+ 3900509       5193   //
+ 3900510       5187   //
+ 3900511       5192   //
+ 3900512       0041   //
+ 3900513       5197   //
+ 3900514       5198   //
+ 3900539       5199   //
+ 3900540       5125   //
+# 
+# The following WMO id's are reserved for drifters deployed
+# in the Aegean/Mediterrean region
+# WMO-id drifter-id   // ..............    Comments  .......................
+6900118        2014   // Deployed at  40.25  025.26 on 03/04/2005 at 16:47 GMT.
+6900119        2058   // Deployed at  35.68  025.24 on 03/09/2005 at 05:17 GMT.
+6900120        2041   // Deployed at  35.90  025.10 on 02/11/2006 at 17:54 GMT.
+6900121        2620   // Deployed at  38.41  025.48 on 02/09/2006 at 05:20 GMT.
+6900122
+# 
+# The following WMO id's are reserved for drifters deployed
+# in the S Pacific Antarctic region.
+# WMO-id drifter-id   // ..............    Comments  .......................
+ 79000002
+ 79000003
+ 79000004
+ 79000005
+ 79000006
+ 79000007
+# The following WMO ids were issued to Kenya and Ecuador per Steve's email: Feb 28, 2007
+# Kenya: 1901045 - 1901049
+ 1901045         1350  //       
+ 1901046         1573  //
+ 1901047         1618  //
+ 1901048         1682  //
+ 1901049         1683  //
+# Ecuador: 3900843 - 3900845
+ 3900843         1688  //
+ 3900845         5158  //
+ 3900844         5160  //
+#
+ 5901435         5176  //
+ 5901436         5177  //
+ 5901437         5178  //
+ 5901438         5179  //
+ 5901439         5180  //
+ 5901440         5222  //
+ 5901441         5223  //
+ 5901442         5224  //
+ 5901443         5218  //
+ 5901444         5220  //
+ 5901445         5221  //
+ 5901446         5206  //
+ 5901447         5207  //
+ 5901448         5236  //
+ 5901449         5237  //
+ 5901450         5254  //
+ 5901451         5225  //
+ 5901452         5235  //
+ 5901453         5227  //
+ 5901454         5228  //
+ 5901455         5229  //
+ 5901456         5230  //
+ 5901457         5211  //
+ 5901458         5212  //
+ 5901459         5213  //
+ 5901460         5214  //
+ 5901461         5215  //
+ 5901462         5216  //
+ 5901463         5231  //
+ 5901464         5234  //
+ 5901465         5238  //
+ 5901466         5239  //
+ 5901467         5255  //
+ 5901468         5145  //
+ 5901469         5131  //
+ 5901470         0052  //
+ 5901471         0053  //
+ 5901472         3289  //
+ 5901473         5376  //
+ 5901474         5377  //
+ 5901475         5378  //
+ 5901476         5380  //
+ 5901477         5381  //
+ 5901478         5383  //
+ 5901479         5384  //
+ 5901480         2853  //
+ 5901481         2854  //
+ 5901482         5172  //
+ 5901483         5173  //
+ 5901484         5174  //
+ 5901485         5175  //
+ 5901486         5194  //
+ 5901487         5195  //
+ 5901488         5278  //
+ 5901489         5279  //
+ 5901490         6872  //
+ 5901491         5257  //
+ 5901492         5146  //
+ 5901493         0051  //
+ 5901494         5171  //
+ 5901495         5280  //
+ 5901496         5281  //
+ 5901497         5282  //
+ 5901498         5283  //
+ 5901713         5285  //
+ 5901714         5287  //
+ 5901715         5288  //
+ 5901716         5316  //
+ 5901717         5317  //
+ 5901718         5318  //
+ 5901719         5319  //
+ 5901720         5320  //
+ 5901721         5321  //
+ 5901722         5323  //
+ 5901723         5324  //
+ 5901724         5325  //
+ 5901725         5326  //
+ 5901726         5327  //
+ 5901727         5329  //
+ 5901728         5330  //
+ 5901729         5331  //
+ 5901730         5307  //
+ 5901731         5295  //
+ 5901732         5298  //
+ 5901733         5299  //
+ 5901734         5300  //
+ 5901735         5301  //
+ 5901736         5302  //
+ 5901737         5303  //
+ 5901738         5304  //
+ 5901739         5305  //
+ 5901740         5306  //
+ 5901741         5308  //
+ 5901742         5309  //
+ 5901743         5310  //
+ 5901744         5311  //
+ 5901745         5284  //
+ 5901746         0054  //
+ 5901747         0055  //
+ 5901748         5066  //
+ 5901880         5385  //
+ 5901881         5388  //
+ 5901882         5389  //
+ 5901883         5390  //
+ 5901884         5391  //
+ 5901885         5386  //
+ 5901886         5397  //
+ 5901887         5398  //
+ 5901888         5399  //
+ 5901889         5400  //
+ 5901890         5401  //
+ 5901891         5402  //
+ 5901892         5403  //
+ 5901893         5181  //
+ 5901894         6018  //
+ 5901895         6019  //
+ 5901896         6020  //
+ 5901897         6021  //
+ 5901898         5392  //
+ 5901899         5424  //
+ 5901900         5425  //
+ 5901901         5433  //
+ 5901902         5410  //
+ 5901903         5411  //
+ 5901904         5412  //
+ 5901905         5413  //
+ 5901906         5414  //
+ 5901907         5415  //
+ 5901908         5416  //
+ 5901909         5417  //
+ 5901910         5418  //
+ 5901911         5419  //
+ 5901912         5420  //
+ 5902068         5434  //
+ 5902069         5435  //
+ 5902070         5444  //
+ 5902071         5445  //
+ 5902072         5446  //
+ 5902073         5448  //
+ 5902074         5449  //
+ 5902075         5450  //
+ 5902076         6022  //
+ 5902077         6023  //
+ 5902078         6024  //
+ 5902079         6025  //
+ 5902080         6026  //
+ 5902081         5421  //
+ 5902082         5422  //
+ 5902083         5423  //
+ 5902084         5451  //
+ 5902085         5452  //
+ 5902086         5453  //
+ 5902087         0057  //
+ 5902088         0058  //
+ 5902089         5447  //
+ 5902090         0059  //
+ 5902091         0060  //
+ 5902092         0061  //
+ 5902093         0062  //
+#5902094         0063  // reassigned to new Nautilus -apr
+ 5902095         5182  //
+ 5902096         5196  //
+ 5902097         5395  //
+ 5902098         5200  //
+ 5902099         5332  //
+ 5902100         5333  //
+ 5902101         5334  //
+ 5902102         5343  //
+ 5902103         5345  //
+ 5902104         5346  //
+ 5902105         0056  //
+ 5902106         5183  //
+ 5902107         5184  //
+ 5902108         5241  //
+ 5902109         6092  //
+ 5902110         5429  //
+ 5902111         6098  //
+ 5902112         5426  //
+ 5902113         6093  //
+#5902114         0065  //
+ 5902115         5322  //
+ 5902116         6094  //
+ 5902117         6095  //
+ 5902118         6097  //
+ 5902119         6102  //
+ 5902120         6027  //
+ 5902121         6028  // 
+ 5902122         6103  //
+ 5902123         6113  //
+ 5902124         6115  //
+ 5902125         6117  //
+ 5902126         6119  //
+ 5902127         6177  //
+ 5902128         5143  //
+ 5902129         5409  //
+ 5902130         6300  //
+ 5902131         6299  //
+ 5902132         6286  //
+ 5902133         6383  //
+#5902134         0067  // Float number reassigned to Nautilus
+ 1901116         6099  //
+ 1901117         6212  //
+ 1901118         6218  //
+ 1901369         6223  //
+ 1901370         6224  //
+ 1901371         6222  //
+ 1901372         6279  //
+ 1901373         6219  //
+ 1901374         6220  //
+ 1901375         6285  //
+ 1901376         6280  //
+ 1901377         6278  //
+ 1901378         6391  //
+ 1901379         6401  //
+#1901380         0064  //
+ 1901381         6225  //
+ 1901382         6226  //
+ 1901383         6227  //
+ 1901384         6228  //
+ 1901385         6001  //
+ 1901386         6277  //
+ 1901387         6311  //
+ 1901388         6328  //
+ 1901389         6308  //
+ 1901390         6302  //
+ 1901391         6340  //
+ 1901392         6303  //
+ 1901393         6305  //
+ 1901394         6306  //
+ 1901395         6307  //
+ 1901396         6310  //
+ 1901397         6309  //
+ 1901398         6334  //
+ 1901399         6335  //
+ 1901400         6301  //
+ 1901401         6304  //
+ 1901402         6329  //
+ 1901403         6336  //
+ 1901404         6337  //
+ 1901405         6338  //
+ 1901406         6339  //
+ 1901407         6008  //
+ 1901408         6350  //
+ 1901409         6352  //
+ 1901410         6355  //
+ 1901411         6357  //
+ 1901412         6358  //
+ 1901413         6375  //
+ 1901414         6353  //
+ 1901415         6354  //
+ 5902250         6356  //
+ 5902251         6359  //
+ 5902252         6360  //
+ 5902253         6436  //
+ 5902254         6361  //
+ 5902255         6362  //
+ 5902256         6486  //
+ 5902257         6483  //
+ 5902258         6484  //
+ 5902259         6485  //
+ 5902260         6488  //
+ 5902261         6101  // 
+ 5902262         6393  //
+ 5902263         6394  //
+ 5902264         6396  //
+ 5902265         6120  //
+ 5902266         5232  //
+ 5902267         6179  //
+ 5903268         6883  //
+ 5903269         6884  //
+ 5903270         6885  //
+ 5903271         6887  //
+ 5903272         6891  //
+ 5903273         6916  //        
+ 5903274         6400  //
+ 5903275         6628  //
+ 5903276         6631  //
+ 5903277         6632  //
+ 5903278         6633  //
+ 5903279         6634  //
+ 5903280         6638  //
+ 5903281         6882  //
+ 5903282         6888  //
+ 5903283         6889  //
+ 5903284         6536  //
+ 5903285         6537  //
+ 5903286         6630  //
+ 5903287         6542  //
+ 5903288         6746  //
+ 5903289         6747  //
+ 5903290         6748  //
+ 5903291         6749  //
+ 5903292         6750  //
+ 5903293         6751  //
+ 5903294         6745  //
+ 5903295         7138  //
+ 5903296         7139  //
+ 5903297         7140  //
+ 5903298         7141  //
+ 5903299         6752  //
+ 5903345         6753  //
+ 5903346         6755  //
+ 5903347         6754  //
+ 5903348         6756  //
+ 5903349         6757  //
+ 5903350         6711  //
+ 5903351         7166  //
+ 5903352         7167  //
+ 5903353         7181  //
+ 5903354         7182  //
+ 5903355         7183  //
+ 5903356         7184  //
+ 5903357         7185  //
+ 5903358         7186  //
+ 5903359         7187  //
+ 5903360         7189  //
+ 5903361         7190  //
+ 5903362         7191  //
+ 5903363         7149  //
+ 5903364         7153  //
+ 5903365         7154  //
+ 5903366         7155  //
+ 5903367         7158  //
+ 5903368         7151  //
+ 5903369         7152  //
+ 5903370         7156  //
+ 5903371         7159  //
+ 5903372         7160  //
+ 5903373         7161  //
+ 5903374         7164  //
+ 5903375         7165  //
+#5903376         0066  // Float number reassigned to Nautilus
+ 5903377         6976  //
+ 5903378         6239  //
+ 5903379         6275  //
+ 5903380         6636  //
+ 5903381         6276  //
+ 5903382         6643  //
+ 5903383         6915  //
+ 5903384         6917  //
+ 5903385         6403  //
+ 5903386         6284  //
+ 5903387         7150  //
+ 5903388         7157  //
+ 5903389         7168  //
+ 5903390         7188  //
+ 5903391         7211  //
+ 5903392         7212  //
+ 5903393         7213  //
+ 5903394         7214  //
+ 5903395         7215  //
+ 5903396         7216  //
+ 5903397         7219  //
+ 5903398         7220  //
+ 5903399         7222  //
+ 5903400         7223  //
+ 5903401         6402  //
+ 5903402         6862  //
+ 5903403         6874  //
+ 5903404         6877  //
+ 5903405         6972 //
+ 5903406         7264  //
+ 5903407         7377 //
+ 5903408         7378 //
+ 5903409         7398 //
+ 5903410         7405 //
+ 5903411         7422 //
+ 5903412         7425 //
+ 5903413         7446 //
+ 5903414         7458 //
+ 5903415         7467 //
+ 5903416         7496 //
+ 5903417         5186 //
+ 5903418         6229 //
+ 5903419         6256 //
+ 5903420         6323 //
+ 5903421         6629 //
+ 5903422         6637 //
+ 5903423         6639 //
+ 5903424         6640 //
+ 5903425         6641 //
+ 5903426         6642 //
+ 5903427         6792 //
+ 5903428         6793 //
+ 5903429         6794 //
+ 5903430         7221 //
+ 5903431         7258 //
+ 5903432         7260 //
+ 5903433         7261 //
+ 5903434         7262 //
+ 5903435         7263 //
+ 5903436         6644 //
+ 5903437         7250 //
+ 5903438         7251 //
+ 5903439         7252 //
+ 5903440         7253 //
+ 5903441         7254 //
+ 5903442         7257 //
+ 5903443         7343 //
+ 5903444         7345 //
+ 5903566         7349 //
+ 5903567         7352 //
+ 5903568         7353 //
+ 5903569         7382 //
+ 5903570         7384 //
+ 5903571         7389 //
+ 5903572         7394 //
+ 5903573         5188 //
+ 5903574         7400 //
+ 5903575         7403 //
+ 5903576         7408 //
+ 5903577         7412 //
+ 5903578         7415 //
+ 5903579         7429 //
+ 5903580         7445 //
+ 5903581         8189 //
+ 5903582         7514 //
+ 5903583         7518 //
+ 5903584         7530 //
+ 5903585         7380 //
+ 5903586         6381 //
+ 5903587         6918 //
+ 5903588         6920 //
+ 5903589         6922 //
+ 5903590         6924 //
+ 5903591         7426 //
+ 5903592         7564 //
+ 5903593         7552 //
+ 5903594         6975 //
+ 5903595         7487 //
+ 5903596         7780 //
+ 5903597         7792 //
+ 5903598         7785 //
+ 5903599         7831 //
+ 5903600         7836 //
+ 5903601         7850 //
+ 5903602         7857 //
+ 5903603         7814 //
+ 5903604         7861 //
+ 5903605         7983 //
+ 5903606         7839 //
+ 5903607         7849 //
+ 5903608         7845 //
+ 5903609         6921 //
+ 5903610         6879 //
+ 5903611         7622 //
+ 5903612         6967 //
+ 5903613         7080 //
+ 5903614         7081 //
+ 5903615         7083 //
+ 5903616         7084 //
+ 5903617         5315 //
+ 5903708         6873 //
+ 5903709         6096 // 
+ 5903710         8024 //
+ 5903711         7558 //
+ 5903712         7550 //
+ 5903713         7049 //
+ 5903714         7601 // 
+ 5903715         6392 //
+ 5903716         6397 //
+#5903717         0068 // Float number reassigned to Nautilus 
+ 5903718         6968 //
+ 5903719         7085 //
+ 5903720         7067 //
+ 5903721         7079 //
+ 5903722         7082 //
+ 5903723         7077 //
+ 5903724         7078 //
+ 5903725         8041 //
+ 5903726         7089 //
+ 5903727         7097 //
+ 5903728         6583 //
+ 5903729         8185 //
+ 5903730         7096 //
+ 5903731         6281 //
+ 5903732         7578 //
+ 5903733         7548 //
+ 5903734         7586 //
+ 5903735         7589 // 
+ 5903736         7090 //
+ 5903737         7118 //
+ 5903738         7107 //
+ 5903739         7074 //
+ 5903740         7112 //
+ 5903741         8374 //
+ 5903742         6960 //
+ 5903743         8397 //
+ 5903744         5233 //
+ 5903745         7059 //
+ 5903746         7086 //
+ 5903747         7092 //
+ 5903748         7106 //
+ 5903749         7539 //
+ 5903750         7595 //
+ 5903751         7599 //  
+ 5903752         6795 //
+ 5903753         7597 //
+ 5903754         7593 //
+ 5903755         7553 //
+ 5903887         7596 //
+ 5903888         7072 //
+ 5903889         7066 //
+ 5903890         0069 //
+ 5903891         6881 //
+ 5903892         7663 //
+ 5903893         7672 //
+ 5903894         7806 //
+ 5903895         7897 //
+ 5903896         8126 //
+ 5903897         8134 //
+ 5903898         8127 //
+ 5903899         8108 //
+ 5903900         8149 //
+ 5903901         8142 //
+ 5903902         8121 //
+ 5903903         7953 //
+ 5903904         8144 //
+ 5903905         8123 //
+ 5903906         7969 //
+ 5903907         7923 //
+ 5903958         7967 //
+ 5903959         8143 //
+ 5903960         8139 //
+ 5903961         8161 //
+ 5903962         8138 //
+ 5903963         8146 //
+ 5903964         8125 //
+ 5903965         8130 //
+ 5903966         8151 //
+ 5903967         8152 //
+ 5903968         8118 //
+ 5903969         8111 //
+ 5903970         7926 //
+ 5903971         7956 //
+ 5903972         8162 //
+ 5903973         8129 //
+ 5903974         7997 //
+ 5903975         8005 //
+ 5903976         8007 //
+ 5903977         8009 //
+ 5903978         8010 //
+ 5903979         8019 //
+ 5903980         8039 //
+ 5903981         8050 //
+ 5903982         8065 //
+ 5903983         8053 //
+ 5903984         8087 //
+ 5903985         8052 //
+ 5903986         8085 //
+ 5903987         8067 //
+ 5903988         8082 //
+ 5903989         8066 //
+ 5903990         5396 //
+ 5903991         6003 //
+ 5903992         6012 //
+ 5903993         6282 //
+ 5903994         7576 //
+ 5903995         7574 //
+ 5903996         7594 //
+ 5903997         7585 //
+ 5903998         7582 //
+ 5903999         7547 //
+ 5904000         7598 //
+ 5904001         7611 //
+ //5904002       7631 // Redeployed: AOML reqeuested new WMO id.
+ 5904003         7699 //
+ 5904004         7587 //
+ 5904005         7607 //
+ 5904006         7568 //
+ 5904007         7681 //
+ 5904008         7605 //
+ 5904009         7660 //
+ 5904010         7742 //
+ 5904011         7569 //
+ 5904012         7635 //
+ 5904013         7604 //
+ 5904014         7603 //
+//5904015        7600 // Redeployed: AOML reqeuested new WMO id.
+ 5904016         6923 //
+//5904017        7543 // Redeployed: AOML reqeuested new WMO id.
+ 5904018         7572 //
+ 5904019         7648 //
+ 5904020         7650 //
+ 5904021         7647 //
+ 5904022         8145 //
+ 5904023         7683 //
+ 5904024         7661 //
+ 5904025         8382 //
+ 5904026         8372 //
+ 5904027         8387 //
+ 5904028         8381 //
+ 5904029         5328 //
+ 5904030         8375 //
+ 5904031         8394 //
+ 5904032         7657 //
+ 5904033         7665 //
+ 5904034         7546 //
+ 5904035         7674 //
+ 5904036         7095 //
+ 5904089         7101 //
+ 5904090         7055 //
+ 5904091         7102 //
+ 5904092         7088 //
+ 5904093         8383 //
+ 5904094         8497 //
+ 5904095         8390 //
+ 5904096         8408 //
+ 5904097         8510 //
+ 5904098         8406 //
+ 5904099         8380 //
+ 5904100         7666 //
+ 5904101         8511 //
+ 5904102         8499 //
+ 5904103         8395 //
+ 5904104         7620 //
+ 5904105         7619 //
+ 5904106         7128 //
+ 5904107         7618 //
+ 5904108         7615 //
+ 5904109         8167 //
+ 5904110         8165 //
+ 5904111         8175 //
+ 5904112         8173 //
+ 5904113         8174 //
+ 5904114         8179 //
+ 5904115         8091 //
+ 5904116         8182 //
+ 5904117         8192 //
+ 5904118         6002 //
+ 5904119         8216 //
+ 5904120         6005 //
+ 5904121         6283 //
+ 5904122         6010 //
+ 5904123         5190 //
+ 5904124         8486 //
+ 5904125         7641 //
+ 5904126         7668 // 
+ 5904127         7642 //
+ 5904128         7698 //
+ 5904129         8208 //
+ 5904130         8176 //
+ 5904131         8218 //
+// 5904132       8514 // Redeployed: AOML reqeuested new WMO id.
+ 5904133         6919 //
+ 5904134         8088 //
+ 5904135         7612 //
+ 5904136         7695 //
+ 5904137         7700 //
+ 5904138         7606 //
+ 5904139         7609 //
+ 5904140         7704 //
+ 5904141         7610 //
+ 5904142         8193 //
+ 5904143         8081 //
+ 5904144         8178 //
+ 5904145         8481 //
+ 5904146         8433 //
+ 5904147         8485 //
+ 5904148         8450 //
+ 5904149         8409 //
+ 5904150         8401 //
+ 5904151         8498 //
+ 5904152         8451 //
+ 5904153         8477 //
+ 5904154         8458 //
+ 5904155         8461 //
+ 5904156         8789 //
+ 5904157         8820 //
+ 5904158         8795 //
+ 5904159         8464 //
+ 5904160         8467 //
+ 5904161         8487 //
+ 5904162         8472 //
+ 5904163         8809 //
+ 5904164         8480 //
+ 5904165         7670 //
+ 5904166         8495 //
+ 5904167         8823 //
+ 5904168         8483 //
+ 5904169         8194 //
+ 5904170         8217 //
+ 5904171         7600 //   
+// 5904172       8514 // redeployed in 2015
+ 5904173         8203 //
+ 5904174         8212 //
+ 5904175         8164 //
+ 5904176         8213 //
+ 5904177         7631 //
+ 5904178         7543 //
+ 5904179         6091 //
+ 5904180         7613 //
+ 5904181         7557 //
+ 5904182         7567 //
+ 5904183         7614 //
+ 5904184         9091 //
+ 5904185         9092 //
+ 5904186         9018 //
+ 5904187         9101 //
+ 5904188         9095 //
+ 5904395         9254 //
+ 5904396         9031 //
+ 5904397         9125 //
+ 5904398         5189 //
+ 5904399  8279 //
+ 5904400 10442 //
+ 5904401 10443 //
+ 5904402 10448 //
+ 5904403 10449 //
+ 5904404 10479 //
+ 5904405 10485 //
+ 5904406 10488 //
+ 5904407 10494 //
+ 5904408 10497 //
+ 5904409 10499 //
+ 5904410  5191 //
+ 5904411  5455 //
+ 5904412  6011 //
+ 5904413  8028 //
+ 5904414  8172 //
+ 5904415  8188 //
+ 5904416  8166 //
+ 5904417  8197 //
+ 5904418  8199 //
+ 5904419  8206 //
+ 5904420  8207 //
+ 5904421  8209 //
+ 5904422  8211 //
+ 5904423  8214 //
+ 5904424  8226 //
+ 5904425  8232 //
+ 5904426  8243 //
+ 5904427  8246 //
+ 5904428  8249 //
+ 5904429  8252 //
+ 5904430  8253 //
+ 5904431  8257 //
+ 5904432  8281 //
+ 5904433  8284 //
+ 5904434  8295 //
+ 5904435  8302 //
+ 5904436  8325 //
+ 5904437 10427 //
+ 5904438 10431 //
+ 5904439 10433 //
+ 5904440 10435 //
+ 5904441 10437 //
+ 5904442 10439 //
+ 5904443 10455 //
+ 5904444 10456 //
+ 5904445 10458 //
+ 5904446 10460 //
+ 5904447 10461 //
+ 5904448 10463 //
+ 5904449 10464 //
+ 5904450 10470 //
+ 5904451 10471 //
+ 5904452 10490 //
+ 5904453 10495 //
+ 5904454  8223 //
+ 5904455  8237 //
+ 5904456  8339 //
+ 5904457  8277 //
+ 5904458  8890 //
+ 5904459  8899 //
+ 5904460  8895 //
+ 5904461  8897 //
+ 5904462  9017 //
+ 5904463  9005 //
+ 5904464  9291 //
+ 5904465  9312 //
+ 5904466  9293 //
+ 5904467  7652 //
+ 5904468  9099 //
+ 5904469  9096 //
+ 5904470  8514 //
+ 5904471  9094 //
+ 5904472  9275 //
+ 5904473  9260 //
+ 5904474  9313 //
+ 5904475  0037 //
+ 5904476  0508 //
+ 5904477  0509 //
+ 5904478  0511 //
+ 5904479  0276 //
+ 5904480  9325 //
+ 5904481  5314 //
+ 5904482  9318 //
+ 5904483  9319 // 
+ 5904484  9306 //
+ 5904485  9294 //
+ 5904486  9303 //
+ 5904487  9305 //
+ 5904488  8469 //
+ 5904489 10434 // 
+ 5904490 10436 //
+ 5904491 10586 //
+ 5904492  8254 //
+ 5904493  9264 //
+ 5904494  9284 //
+ 5904495  9266 //
+ 5904596  9256 //
+ 5904597  9257 //
+ 5904598  9300 //
+ 5904599  9311 //
+ 5904600  9301 // 
+ 5904601  9304 // 
+ 5904602  9315 //
+ 5904603 11051 //
+ 5904604 11062 //
+ 5904605  7556 //
+ 5904606  7559 //
+ 5904607  7563 //
+ 5904608  8075 //
+ 5904609  8163 //
+ 5904610  8196 //
+ 5904611  8200 //
+ 5904612  8201 //
+ 5904613  8368 //
+ 5904614  8369 //
+ 5904615  8378 //
+ 5904616  8384 //
+ 5904617  8391 //
+ 5904618  8392 //
+ 5904619  8393 //
+ 5904620  8898 //
+ 5904621  9014 //
+ 5904622 10981 //
+ 5904623 10982 //
+ 5904624 10983 //
+ 5904625 10985 //
+ 5904626 10986 //
+ 5904627 10987 //
+ 5904628 10988 //
+ 5904629 10989 //
+ 5904630 10991 //
+ 5904631 10994 //
+ 5904632 10995 //
+ 5904633 10996 //
+ 5904634 10998 //
+ 5904635 11002 //
+ 5904636 11003 //
+ 5904637 11007 //
+ 5904638 11008 //
+ 5904639 11012 //
+ 5904640 11014 //
+ 5904641 11018 //
+ 5904642 11019 //
+ 5904643 11020 //
+ 5904644 11053 //
+ 5904645 11054 //
+ 5904646 11055 //
+ 5904647 11057 //
+ 5904648 11063 //
+ 5904649 11086 //
+ 5904650 11089 //
+ 5904651 11091 //
+ 5904652 11092 //
+ 5904653 11093 //
+ 5904654 11103 //
+ 5904655  9274 //
+ 5904656  8447 //
+ 5904657  9662 //
+ 5904658  9655 //
+ 5904659  9657 //
+ 5904660  9652 //
+ 5904661  9646 //
+ 5904662  9666 //
+ 5904663  9668 //
+ 5904664  9759 //
+ 5904665  9765 //
+ 5904666  9754 //
+ 5904667  9726 //
+ 5904668  8435 //
+ 5904669 11058 //
+ 5904670  0506 //
+ 5904671  0507 //
+ 5904672  0565 //
+ 5904673  0571 //
+ 5904674  9630 //
+ 5904675  9749 //
+ 5904676  9645 //
+ 5904677  9631 //
+ 5904678  9744 //
+ 5904679  9757 //
+// 5904680  8501 // redeployed in Jan 2017
+ 5904681  8443 //
+ 5904682  9637 //
+ 5904683  9650 //
+ 5904684  9602 //
+ 5904685  9642 // 
+ 5904686  0510 //
+ 5904687  0564 //
+ 5904688  9600 //
+ 5904689  9758 //
+ 5904690  9737 //
+ 5904691  9768 //
+ 5904692  9763 //
+ 5904693  9634 //
+ 5904694  9752 //
+ 5904695  9265 //
+ 5904761  9660 //
+ 5904762  8444 //
+ 5904763  9632 //
+ 5904764  9761 //
+ 5904765  9762 //
+ 5904766  0566 //
+ 5904767  0568 //
+ 5904768  0570 //
+ 5904769  9755 //
+ 5904770  9764 //
+ 5904771 11098 //
+ 5904772 11081 //
+ 5904773 11097 //
+ 5904774 11108 //
+ 5904775  9302 //
+ 5904776  9711 //
+ 5904777 12360 //
+ 5904778 12457 //
+ 5904779 12448 //
+ 5904780 12408 //
+ 5904781 12458 //
+ 5904782 12433 //
+ 5904783 12450 //
+ 5904784 12455 //
+ 5904785 12453 //
+ 5904786 12406 //
+ 5904787 12452 //
+ 5904788  9022 //
+ 5904789 10992 //
+ 5904790 10990 //
+ 5904791 10997 //
+ 5904792 11066 //
+ 5904793 11076 //
+ 5904794 11073 //
+ 5904795 11065 //
+ 5904796 11074 //
+ 5904797 11083 //
+ 5904798 11094 //
+ 5904799 11106 //
+ 5904800 11107 //
+ 5904801 11113 //
+ 5904802 11138 //
+ 5904803 11117 //
+ 5904804 11112 //
+ 5904805 11111 //
+ 5904806 11118 //
+ 5904807 12404 //
+ 5904808 12419 //
+ 5904809 12415 //
+ 5904810 11125 //
+ 5904811 12424 //
+ 5904812 12401 //
+ 5904813 12417 //
+ 5904814 12418 //
+ 5904815 12400 //
+ 5904816 12410 //
+ 5904817 12423 //
+ 5904818 12407 //
+ 5904819 12413 //
+ 5904820 12412 //
+ 5904821 12459 //
+ 5904822 12451 //
+ 5904823 12454 //
+ 5904824 12456 //
+ 5904825 12449 //
+ 5904826 12475 //
+ 5904827 12481 //
+ 5904828 12480 //
+ 5904829 12478 //
+ 5904830 12477 //
+ 5904831 12485 //
+ 5904832 12479 //
+ 5904833 12484 //
+ 5904834 12483 //
+ 5904835 12482 //
+ 5904836 12476 //
+ 5904837 11120 //
+ 5904838  0012 //
+ 5904839  0016 //
+ 5904840  0011 //
+ 5904841 12382 //
+ 5904842 12552 //
+ 5904843  9659 //
+ 5904844  9766 //
+ 5904845  9750 //
+ 5904846  0688 //
+ 5904847  0689 //
+ 5904848 12395 //
+ 5904849 12365 //
+ 5904850 12383 //
+ 5904851 12373 //
+ 5904852 12385 //
+ 5904853 12384 //
+ 5904854 12575 //
+ 5904855 12559 //
+ 5904856 12545 //
+ 5904857 12381 //
+ 5904858 12551 //
+ 5904859 12549 //
+ 5904860 12541 //
+ 5904980 12543 //
+ 5904981 12390 //
+ 5904982 12573 //
+ 5904983  0567 //
+ 5904984  0569 //
+ 5904985 12416 //
+ 5904986 12446 //
+ 5904987 12409 //
+ 5905065 12431 //
+ 5905066 12411 //
+ 5905067 12606 //
+ 5905068 12421 //
+ 5905069 12558 //
+ 5905070 12537 //
+ 5905071  0690 //
+ 5905072  0691 //
+ 5905073  0692 //
+ 5905074  0693 //
+ 5905075  8501 //
+ 5905076 12386 // 
+ 5905077 12379 //
+ 5905078 12371 //
+ 5905079 12542 //
+ 5905080 12366 //
+ 5905081 11095 //
+ 5905082 11099 //
+ 5905083 11100 //
+ 5905084 11101 //
+ 5905085 11102 //
+ 5905086 11104 //
+ 5905087 11105 //
+ 5905088 11110 //
+ 5905089 11085 //
+ 5905090 11084 //
+ 5905091 12345 //
+ 5905092 12368 //
+ 5905093 12364 //
+ 5905094 12362 //
+ 5905095 12367 //
+ 5905096 12434 //
+ 5905097 12429 //
+ 5905098 12430 //
+ 5905099 12388 //
+ 5905100 12361 //
+ 5905101 12378 //
+ 5905102 12363 //
+ 5905103 12370 //
+ 5905104 12396 //
+ 5905105 12540 //
+ 5905106 12369 //
+ 5905107 12372 //
+ 5905108 12380 //
+ 5905109  8204 //
+ 5905110 12550 //
+ 5905111 12374 //
+ 5905112 12770 //
+ 5905113  6963 //
+ 5905114 12447 //
+ 5905115 12444 //
+ 5905116 12643 //
+ 5905117 12426 //
+ 5905118 12420 //
+ 5905119 12428 //
+ 5905120 12611 //
+ 5905121 12626 //
+ 5905122 12623 //
+ 5905123 12608 //
+ 5905124 12644 //
+ 5905125 12609 //
+ 5905126 11096 //
+ 5905127 12645 //
+ 5905128 12638 //
+ 5905129 12471 //
+ 5905130 12744 //
+ 5905131 12733 //
+ 5905132 12745 //
+ 5905133 12729 //
+ 5905134 12723 //
+ 5905135 12742 //
+ 5905136 12615 //
+ 5905137 12616 //
+ 5905138 12620 //
+ 5905139 12717 //
+ 5905140 12728 //
+ 5905141 12791 //
+ 5905142 12785 //
+ 5905143 12630 //
+ 5905144 12640 //
+ 5905145 12648 //
+ 5905146 12634 //
+ 5905147 12402 //
+ 5905148 11122 //
+ 5905149  8170 //
+ 5905150 12622 //
+ 5905151 12639 //
+ 5905152 12618 //
+ 5905153 12828 //
+ 5905154 12827 //
+ 5905155 12825 //
+ 5905156 12822 //
+ 5905317 12445 //
+ 5905318 12613 //
+ 5905319 12614 //
+ 5905320 12823 //
+ 5905321 12818 //
+ 5905322 12605 //
+ 5905323 12461 //
+ 5905324 12460 //
+ 5905325 12607 //
+ 5905326 12824 //
+ 5905327 12604 //
+ 5905328 12490 //
+ 5905329 12494 //
+ 5905330 12462 //
+ 5905331 12464 //
+ 5905332 12468 //
+ 5905333 12629 //
+ 5905334 12633 //
+ 5905335 12624 //
+ 5905336 12610 //
+ 5905337 12628 //
+ 5905338 12617 //
+ 5905339 12497 //
+ 5905340 12649 //
+ 5905341 12627 //
+ 5905342 12658 //
+ 5905343 12496 //
+ 5905344 12647 //
+ 5905345 12655 //
+ 5905346 12646 //
+ 5905347 12767 //
+ 5905348 12635 //
+ 5905349 12641 //
+ 5905350  9088 //
+ 5905351 12621 //
+ 5905352 12657 //
+ 5905353 12473 //
+ 5905354 12487 //
+ 5905355 12625 //
+ 5905356 12642 //
+ 5905357 12653 //
+ 5905358 12637 //
+ 5905359 12654 //
+ 5905360 12651 //
+ 5905361 12656 //
+ 5905362 12650 //
+ 5905363 12636 //
+ 5905364 12659 //
+ 5905365 12619 //
+ 5905366 12757 //
+ 5905367 12755 //
+ 5905368 12781 //
+ 5905369 12730 //
+ 5905370 12734 //
+ 5905371 12779 //
+ 5905372 12784 //
+ 5905373 12769 //
+ 5905374 12782 //
+ 5905375 12709 //
+ 5905376 12736 //
+ 5905377 12741 //
+ 5905378 12748 //
+ 5905379 12702 //
+ 5905380 12712 //
+ 5905381 12472 //
+ 5905382 12631 //
+ 5905383 12652 //
+ 5905634 12768 //
+ 5905635 12701 //
+ 5905636 12754 //
+ 5905637 12758 //
+ 5905638 12398 //
+ 5905639 12787 //
+ 5905640 12612 //
+ 5905641 10984 //
+ 5905642 12821 //
+ 5905643  9290 //
+ 5905644 12724 //
+ 5905645 12725 //
+ 5905646 12716 //
+ 5905647 12750 //
+ 5905648 12819 //
+ 5905649  8215 //
+ 5905650 12820 //
+ 5905651 12751 //
+ 5905652 12826 //
+ 5905653 12829 //
+ 5905654  8180 //
+ 5905655  8183 //
+ 5905656 10535 //
+ 5905657  8198 //
+ 5905658  8210 //
+ 5905659  8476 //
+ 5905660  8900 //
+ 5905661  9134 //
+ 5905662  6382 //
+ 5905663  6914 //
+ 5905664  6970 //
+ 5905665  8184 //
+ 5905666  8205 //
+ 5905963 12353 //
+ 5905964 12358 //
+ 5905965 12376 //
+ 5905966 12377 //
+ 5905967 12393 //
+ 5905968 12722 //
+ 5905969 12792 //
+ 5905970 12783 //
+ 5905971 12780 //
+ 5905972  8474 //
+ 5905973 12788 //
+ 5905974 12773 //
+ 5905975 12774 //
+ 5905976 12776 //
+ 5905977 12632 //
+ 5905978 17315 //
+ 5905979 17395 //
+ 5905980 12696 //
+ 5905981 12883 //
+ 5905982 12881 //
+ 5905983 12700 //
+ 5905984 12747 //
+ 5905985 12778 //
+ 5905986 12691 //
+ 5905987  0948 //
+ 5905988  0949 //
+ 5905989 17378 //
+ 5905990 17942 //
+ 5905991 12688 //
+ 5905992 12749 //
+ 5905993 12886 //
+ 5905994 12739 //
+ 5905995 11090 //
+ 5905996  0886 //
+ 5905997 12714 //
+ 5905998 12727 //
+ 5905999 12887 //
+ 5906000 12711 //
+ 5906001 12708 //
+ 5906002 12889 //
+ 5906003 12707 //
+ 5906004 12752 //
+ 5906005 12786 //
+ 5906006 12884 //
+ 5906007 12880 //
+ 5906008 12879 //
+ 5906009 17149 //
+ 5906010 17168 //
+ 5906011 17271 //
+ 5906012 17266 //
+ 5906013 17514 //
+ 5906014 17728 //
+ 5906015 17466 //
+ 5906016 17435 //
+ 5906017 17308 //
+ 5906018  9296 //
+ 5906019 12775 //
+ 5906020 12790 //
+ 5906021 12764 //
+ 5906022 17764 // 
+ 5906023 17429 //
+ 5906024 
+ 5906025 
+ 5906026  1248 //
+ 5906027 19727 //
+ 5906028 19065 //
+ 5906029
+ 5906030 12888 //
+ 5906031 12885 //
+ 5906032 12882 //
+ 5906033 12878 //
+ 5906034 12892 //
+ 5906035  0888 //
+ 5906036  0889 //
+ 5906037 17078 //
+ 5906038 17127 //
+ 5906039 17267 //
+ 5906040 17307 //
+ 5906041  8482 //
+ 5906042 11017 //
+ 5906043 17534 //
+ 5906044 17350 //
+ 5906045 17862 //
+ 5906046 18608 //
+ 5906047 18850 //
+ 5906048 18780 //
+ 5906049 17929 //
+ 5906050 18930 //
+ 5906051 18631 //
+ 5906052 18030 //
+ 5906053 18294 //
+ 5906054 18014 //
+ 5906055 18034 //
+ 5906056 17341 //
+ 5906057 18460 //
+ 5906058 17475 //
+ 5906059 17428 //
+ 5906060 17387 //
+ 5906061 17715 //
+ 5906062 18489 //
+ 5906063 17338 //
+ 5906064 17195 //
+ 5906065 17971 //
+ 5906066 17893 //
+ 5906067 17598 //
+ 5906068 17439 //
+ 5906069 17010 //
+ 5906070 17615 //
+ 5906071 17327 //
+ 5906072 18135 //
+ 5906073 18651 //
+ 5906074 18876 //
+ 5906075 17422 //
+ 5906076 17859 //
+ 5906077 18510 //
+ 5906078 18392 //
+ 5906079 18594 //
+ 5906080 18101 //
+ 5906081 17072 //
+ 5906082 18938 //
+ 5906083 18287 //
+ 5906194 18009 //
+ 5906195 18093 //
+ 5906196 18024 //
+ 5906197 18888 //
+ 5906198 18627 //
+ 5906199 18054 //
+ 5906200 18233 //
+ 5906201 18827 //
+ 5906202 18822 //
+ 5906203 18668 //
+ 5906204 18299 //
+ 5906205 18082 //
+ 5906206 18821 //
+ 5906207 18013 //
+ 5906208 17898 //
+ 5906209 18739 //
+ 5906210 18994 //
+ 5906211 18864 //
+ 5906212 18721 //
+ 5906213 18320 //
+ 5906214 18242 //
+ 5906215 18098 //
+ 5906216 18545 //
+ 5906217 18771 //
+ 5906218 18081 //
+ 5906219 18110 //
+ 5906220 18417 //
+ 5906221 18796 //
+ 5906222 18852 //
+ 5906223 18862 //
+ 5906224 18643 //
+ 5906225 18861 //
+ 5906226 18829 //
+ 5906227 18169 //
+ 5906228 18097 //
+ 5906229 17533 //
+ 5906230 18267 //
+ 5906231 18050 //
+ 5906232 17554 //
+ 5906233 17650 //
+ 5906234 17381 //
+ 5906235 18820 //
+ 5906236 18709 //
+ 5906237 18114 //
+ 5906238 18601 //
+ 5906239 17415 //
+ 5906240 17155 //
+ 5906241 17609 //
+ 5906242 17553 //
+#5906243 18340 // Mbari deployed and recovered
+ 5906244 18677 //
+ 5906245 18764 //
+ 5906246 18431 //
+ 5906247 18161 //
+ 5906248 18450 //
+ 5906249 18321 //
+ 5906250 18069 //
+ 5906251 18183 //
+ 5906252 18403 //
+ 5906253 17972 //
+ 5906254 17262 //
+ 5906255 18322 //
+ 5906256 18794 //
+ 5906257 18463 //
+ 5906258 18330 //
+ 5906259 18349 //
+ 5906260 18065 //
+ 5906261 18064 //
+ 5906262 17675 //
+ 5906263 18308 //
+ 5906264 18375 //
+ 5906265 18372 //
+ 5906266 18557 //
+ 5906267 18758 //
+ 5906268 18567 //
+ 5906269 18361 //
+ 5906270 18973 //
+ 5906271 19409 //
+ 5906272 19345 //
+ 5906273 17063 //
+ 5906274 17126 //
+ 5906275 17708 //
+ 5906276 18913 //
+ 5906277 18920 //
+ 5906278 18818 //
+ 5906279 17494 //
+ 5906280 18656 //
+ 5906281 18221 //
+ 5906282 18590 //
+ 5906283 18761 //
+ 5906284 18368 //
+ 5906285 18554 //
+ 5906286 18737 //
+ 5906287 18697 //
+ 5906288 18386 //
+ 5906289 17225 //
+ 5906290 18306 //
+ 5906291 18472 //
+ 5906292 18752 //
+ 5906293 19139 //
+ 5906294 19875 //
+ 5906295 19063 //
+ 5906296 19050 //
+ 5906297 19211 //
+ 5906298 18726 //
+ 5906299 18692 //
+ 5906300 19412 //
+ 5906301 19090 //
+ 5906302 19644 //
+ 5906303 19017 //
+ 5906304  0887 //
+ 5906305  1113 //
+ 5906306  1114 //
+ 5906307  1115 //
+ 5906308  1116 //
+ 5906309  1117 //
+ 5906310  1204 //
+ 5906311  1205 //
+ 5906312 19118 //
+ 5906313 19327 //
+ 5906314 18808 //
+ 5906315 17328 //
+ 5906316 19085 //
+ 5906317 19067 //
+ 5906318 19018 //
+ 5906319 19072 //
+ 5906320 19191 //
+ 5906321 18387 //
+ 5906322 19576 //
+ 5906323 19601 //
+ 5906324 18101 //
+ 5906325 19427 //
+ 5906326 19066 //
+ 5906327 19216 //
+ 5906328 19169 //
+ 5906329 19347 //
+ 5906330 19614 //
+ 5906331 19626 //
+ 5906332 19264 //
+ 5906333 19122 //
+ 5906334 19577 //
+ 5906335 19110 //
+ 5906336 19176 //
+ 5906337 19290 //
+ 5906338 19969 //
+ 5906339 19588 //
+ 5906340 19364 //
+ 5906341 19061 //
+ 5906342 19142 //
+ 5906343 19881 //
+ 5906434 19970 //
+ 5906435 19512 //
+ 5906436 19605 //
+ 5906437 19443 //
+ 5906438 19129 //
+ 5906439 19531 //
+ 5906440 19107 //
+ 5906441 19719 //      
+ 5906442  1120 //     
+ 5906443  1121 //
+ 5906444  1122 //
+ 5906445  1341 //
+ 5906446 19314 //
+ 5906447  1342 //
+ 5906448 19751 //
+ 5906449 20043 //
+ 5906450 20704 //
+ 5906451 19077 // 
+ 5906452 20339 //
+ 5906453 20615 // 
+ 5906454 19276 //
+ 5906455 20206 //
+ 5906456 20260 //
+ 5906457 20333 //
+ 5906458 20487 //
+ 5906459 20096 //
+ 5906460 20270 //
+ 5906461 20229 //
+ 5906462 19641 //
+ 5906463 19359 //
+ 5906464 20997 //
+ 5906465 17076 //
+ 5906466 19876 //
+ 5906467 20443 //
+ 5906468 20132 //
+ 5906469 20328 //
+ 5906470 20970 //     
+ 5906471 20532 //       
+ 5906472 20060 //     
+ 5906473 20912 //
+ 5906474 20084 //
+ 5906475 20592 //
+ 5906476 20135 //
+ 5906477 19199 //
+ 5906478 19746 //
+ 5906479 19834 //
+ 5906480 19694 //
+ 5906481 19843 //
+ 5906482 19298 //
+ 5906483 20520 //
+ 5906484 20175 //
+ 5906485 20162 //
+ 5906486 20137 //
+ 5906487 19806 //        
+ 5906488 19389 //      
+ 5906489 19976 //
+ 5906490 20932 //
+ 5906491 20220 //
+ 5906492 20627 //
+ 5906493 19378 //
+ 5906494 19951 //
+ 5906495 19045 //
+ 5906496 19598 //
+ 5906497 19996 //
+ 5906498 19445 //
+ 5906499 19441 //
+ 5906500 19302 //
+ 5906501 19014 //
+ 5906502 20804 //
+ 5906503 20144 //
+ 5906504 20053 //
+ 5906505 20246 //
+ 5906506 20365 //
+ 5906507 20148 //
+ 5906508  1118 //
+ 5906509  1119 //
+ 5906510 20913 //
+ 5906511 20150 //
+ 5906512 20632 //
+ 5906513 20358 //
+ 5906514 20001 //
+ 5906515 20492 //
+ 5906516 20134 //
+ 5906517 20842 //
+ 5906518 20547 //
+ 5906519 20603 //
+ 5906520 20618 //
+ 5906521 20620 //
+ 5906522 20496 //
+ 5906523 20136 //
+ 5906524 20644 //
+ 5906525 20926 //
+ 5906526 20108 //
+ 5906527 20662 //
+ 5906528 20002 //
+ 5906529 20675 //
+ 5906530 20579 //
+ 5906531 20589 //
+ 5906532 1342  //
+ 5906533 20728 //
+ 5906534 20528 //
+ 5906535 20169 //
+ 5906536 20138 //
+ 5906537 1448  //
+ 5906538 1449  //
+ 5906539 1451  //
+ 5906540 1452  //
+ 5906541 20057 //
+ 5906542 20352 //
+ 5906543 18340 //
+ 5906544 19319 //
+ 5906545 19356 //
+ 5906546 19180 //
+ 5906547 21311 //
+ 5906548 21142 //
+ 5906549 21811 //
+ 5906550 20040 //
+ 5906551 17182 //
+ 5906552 20832 //
+ 5906553 20336 //
+ 5906554 20189 //
+ 5906555 17545 //
+ 5906556 20602 //
+ 5906557 20623 //
+ 5906558 21250 //
+ 5906559 21141 //
+ 5906560 21475 //
+ 5906561 21489 //
+ 5906562 19993 //
+ 5906563 1365  //
+ 5906564 1366  //
+ 5906565 1364  //
+ 5906566 1367  //
+ 5906567 20549 //
+ 5906568 20039 //
+ 5906569 20962 //
+ 5906570 21900 //
+ 5906571 21996 //
+ 5906572 21891 //
+ 5906573 21279 //
+ 5906574 21874 //
+ 5906575 21827 //
+ 5906576 21984 //
+ 5906577 21844 //
+ 5906578 20329 //
+ 5906579 20380 //
+ 5906580 20343 //
+ 5906581 21951 //
+ 5906582 20109 //
+ 5906583 21302 //
+ 7900823 21888 //
+ 7900824 21871 //
+ 7900825 21838 //
+ 7900826 20572 //
+ 7900827 21803 //
+ 7900828 20988 //
+ 7900829 20185 //
+ 7900830 17917 //
+ 7900831 20355 //
+ 7900832 20526 //
+ 7900833 17581 //
+ 7900834 20540 //
+ 7900835 20488 //
+ 7900836 20694 //
+ 7900837 20700 //
+ 7900838 20561 //
+ 7900839 20527 //
+ 7900840 20272 //
+ 7900841 20884 //
+ 7900842 20991 //
+ 7900843 20573 //
+ 7900844 20580 //
+ 7900845 20971 //
+ 7900846 17173 //
+ 7900847 20248 //
+ 3902350 17476 //
+ 3902351 20110 //
+ 3902352 20077 //
+ 3902353 20130 //
+ 3902354 20091 //
+ 3902355 20058 //
+ 3902356 19616 //
+ 3902357 19744 //
+ 3902358 20723 //
+ 3902359 20534 //
+ 3902360 20596 //
+ 3902361 19981 //
+ 3902362 19764 //
+ 3902363 20922 //
+ 3902364 20011 //
+ 3902365 20224 //
+ 3902366 20241 //
+ 3902367 20284 //
+ 3902368 20619 //
+ 3902369 20628 //
+ 3902370 20833 //
+ 3902371 19672 //
+ 3902372 19505 //
+ 3902373 19915 //
+ 3902374 19151 //
+ 2903450 20953 //
+ 2903451 1363  //
+ 2903452 19400 //
+ 2903453 21902 //
+ 2903454 21485 //
+ 2903455 21479 //
+ 2903456 21675 //
+ 2903457 21105 //
+ 2903458 20103 //
+ 2903459 1504  //
+ 2903460 1506  //
+ 2903461 1510  //
+ 2903462 1511  //
+ 2903463 1512  //
+ 2903464 1472  //
+ 2903465 1473  //
+ 2903466 1501  //
+ 2903467 1502  //
+ 2903468 1503  //
+ 2903469 20563 //
+ 2903470 20209 //
+ 2903471 21546 //
+ 2903472 21267 //
+ 2903473 21441 //
+ 2903474 19006 //
+ 4903572 21718 //
+ 4903573 21753 //
+ 4903574 21997 //
+ 4903575 21698 //
+ 4903576 21386 //
+ 4903577 21379 //
+ 4903578 20377 //
+ 4903579 21674 //
+ 4903580 21488 //
+ 4903581 21974 //
+ 4903582 20044 //
+ 4903583 21054 //
+ 4903584 21669 //
+ 4903585 21880 //
+ 4903586 21455 //
+ 4903587 21883 //
+ 4903588 21824 //
+ 4903589 20462 //
+ 4903590 21910 //
+ 4903591 21298 //
+ 4903592 21336 //
+ 4903593 21525 //
+ 4903594 21294 //
+ 4903595 21932 //
+ 7901106	21146 // GO-BGC Not in Second list sent by JCOMMOPS Must rectify
+ 2903854 22213	//	Argo GO-BGC, UW
+ 5907050	21467	//	Argo GO-BGC, UW
+ 3902554	21075	//	Argo GO-BGC, UW
+ 2903855	1514	//	Argo GO-BGC, UW
+ 7901095	1513	//	Argo GO-BGC, UW
+ 7901097	1515	//	Argo GO-BGC, UW
+ 2903856	1517	//	Argo GO-BGC, UW
+ 7901098	1507	//	Argo GO-BGC, UW
+ 7901099	1509	//	Argo GO-BGC, UW
+ 4903744	1519	//	Argo GO-BGC, UW
+ 3902556	1516	//	Argo GO-BGC, UW
+ 2903858	1525	//	Argo GO-BGC, UW
+ 5907057	1526	//	Argo GO-BGC, UW
+ 1902644	1450	//	Argo GO-BGC, UW
+ 5907058	21818	//	Argo GO-BGC, UW
+ 2903860	21861	//	Argo GO-BGC, UW
+ 1902646	21810	//	Argo GO-BGC, UW
+ 4903748	21939	//	Argo GO-BGC, UW
+ 6990584	21839	//	Argo GO-BGC, UW
+ 6990585	21792	//	Argo GO-BGC, UW
+ 2903862	21285	//	Argo GO-BGC, UW
+ 2903863	0063	//	Argo GO-BGC, UW
+ 2903864	21848	//	Argo GO-BGC, UW
+ 4903751	21986	//	Argo GO-BGC, UW
+ 3902559	17465	//	Argo GO-BGC, UW
+ 2903865	21865	//	Argo GO-BGC, UW
+ 4903752	1522	//	Argo GO-BGC, UW
+ 7901102	1570	//	Argo GO-BGC, UW
+ 7901103	1571 	//	Argo GO-BGC, UW
+ 2903866	1572	//	Argo GO-BGC, UW
+ 4903755	22958	//	Argo GO-BGC, UW
+ 1902648	22185	//	Argo GO-BGC, UW
+ 4903756	22372	//	Argo GO-BGC, UW
+ 4903757	22912	//	Argo GO-BGC, UW
+#7901106 Duplicate WMOID           
+ 7901109	1520	//	Argo GO-BGC, UW
+ 1902652	1521	//	Argo GO-BGC, UW
+ 1902653	1532	//	Argo GO-BGC, UW
+ 6990590	1523	//	Argo GO-BGC, UW
+ 5907061	21291	//	Argo GO-BGC, UW
+ 7901094	20640	//	Argo UW
+ 5907062	20605	//	Argo UW
+ 4903742	21433	//	Argo UW
+ 5907049	21963	//	Argo UW
+ 1902654	21805	//	Argo UW
+ 4903758	21751	//	Argo UW
+ 7901110	22829	//	Argo UW
+ 3902562 22495	//	Argo UW
+ 6990589 22119	//	Argo UW
+ 1902651	23599	//	Argo UW
+ 6990588	21206	//	Argo UW
+ 7901108	21026	//	Argo UW
+ 7901107	21216	//	Argo UW
+ 7901105	22477	//	Argo UW
+ 1902649	22843	//	Argo UW
+ 3902561	22973	//	Argo UW
+ 7901104	22484	//	Argo UW
+ 2903868	22755	//	Argo UW
+ 6990586	21436	//	Argo UW
+ 4903754	21115	//	Argo UW
+ 4903753	21769	//	Argo UW
+ 3902560	21529	//	Argo UW
+ 5907060	21917	//	Argo UW
+ 7901096	21815	//	Argo UW
+ 3902555	21665	//	Argo UW
+ 1902641	21680	//	Argo UW
+ 1902642	21835	//	Argo UW
+ 4903743	21662	//	Argo UW
+ 7901100	21347	//	Argo UW
+ 2903857	21425	//	Argo UW
+ 5907053	21416	//	Argo UW
+ 5907056	21400	//	Argo UW
+ 4903746	22060	//	Argo UW
+ 2903859	22248	//	Argo UW
+ 1902645	22095	//	Argo UW
+ 3902558	22757	//	Argo UW
+ 5907059	21564	//	Argo UW
+ 7901101	22971	//	Argo UW
+ 2903861	22231	//	Argo UW
+ 4903749	22515	//	Argo UW
+ 4903747	21857	//	Argo UW-SOCCOM
+ 5907051	21535	//	Argo UW-SOCCOM
+ 4903745	21576	//	Argo UW-SOCCOM
+ 2903869	21519	//	Argo UW-SOCCOM
+ 5907055	21286	//	Argo UW-SOCCOM
+ 5907054	21977	//	Argo UW-SOCCOM
+ 1902643	22725	//	Argo UW-SOCCOM
+ 4903750	21648	//	Argo UW-SOCCOM
+ 6990583	22080	//	Argo UW-SOCCOM
+ 2903872	22496	//	Argo UW-SOCCOM
+ 3902557	23596	//	Argo UW-SOCCOM
+ 2903867	20265	//	Argo UW-SOCCOM
+ 6990582	22751	//	Argo UW-SOCCOM
+ 6990587	22537	//	Argo UW-SOCCOM
+ 5907052	21499	//	Argo UW-SOCCOM
+ 2903871	21960	//	Argo UW-SOCCOM
+ 1902650	20075	//	Argo UW-SOCCOM
+ 2903870	21905	//	Argo UW-SOCCOM
+ 7901111	22826	//	Argo UW-SOCCOM
+ 1902647	22264	//	Argo UW-SOCCOM
+ 7902000 21463 // Argo        
+ 7902001 21502 // Argo
+ 7902002 21376 // Argo
+ 7902003 22063 // Argo
+ 7902004 22205 // Argo
+ 7902005 22936 // Argo
+ 7902006 22392 // Argo
+ 7902007 22497 // Argo
+ 7902008 22055 // Argo
+ 7902009 22601 // Argo
+ 7902010 22292 // Argo
+ 7902011 22969 // Argo
+ 7902012 22255 // Argo
+ 7902013 22754 // Argo
+ 7902014 22870 // Argo
+ 7902015 22981 // Argo
+ 7902016 22525 // Argo
+ 7902017 22410 // Argo
+ 7902018 21363 // Argo
+ 7902019 21494 // Argo
+ 7902020 21890 // Argo
+ 7902021 21780 // Argo
+ 7902022 22584 // Argo
+ 7902023 22741 // Argo
+ 7902024 23031 // Argo
+ 7902025 23094 // Argo
+ 7902026 19280 // Argo
+ 7902027 21845 // Argo
+ 7902028 23597 // Argo
+ 7902029 23136 // Argo
+ 7902030 23917 // Argo
+ 7902031 23995 // Argo
+ 7902032 22242 // Argo
+ 7902033 23056 // Argo
+ 7902034 19716 // Argo
+ 7902035 22702 // Argo
+ 7902036 22810 // Argo
+ 7902037 22234 // Argo
+ 7902038 23047 // Argo
+ 7902039 23941 // Argo
+ 7902040 23063 // Argo
+ 7902041 23334 // Argo
+ 7902042 22308 // Argo
+ 7902043 23049 // Argo
+ 7902044 22154 // Argo
+ 7902045 23786 // Argo
+ 7902046 22199 // Argo
+ 7902047 23356 // Argo
+ 7902048 22640 // Argo
+ 7902049 23343 // Argo
+ 7902050 22446 // Argo
+ 7902051 22723 // Argo
+ 7902052 23526 // Argo
+ 7902053 22805 // Argo
+ 7902054 22096 // Argo
+ 7902055 22090 // Argo
+ 7902056 22724 // Argo
+ 7902057 21122 // Argo
+ 7902058 22785 // Argo
+ 7902059 22270 // Argo
+ 7902060 22150 // Argo
+ 7902061 22991 // Argo
+ 7902062 20861 // Argo
+ 7902063 23150 // Argo
+ 7902064 23931 // Argo
+ 7902065 22440 // Argo
+ 7902066 21501 // Argo
+ 7902067 22035 // Argo
+ 7902068 21940 // Argo
+ 7902069 23549 // Argo
+ 7902070 23449 // Argo
+ 7902071 23437 // Argo
+ 7902072 23912 // Argo
+ 7902073 23387 // Argo
+ 7902074 23190 // Argo
+ 7902075 23124 // Argo
+ 7902076 23753 // Argo
+ 7902077 23054 // Argo
+ 7902078 23413 // Argo
+ 7902079 22803 // Argo
+ 7902080 23312 // Argo
+ 7902081 23852 // Argo
+ 7902082 23024 // Argo
+ 7902083 23108 // Argo
+ 7902084 23656 // Argo
+ 7902085 23183 // Argo
+ 7902086 23802 // Argo
+ 7902087 22167 // Argo
+ 7902088 22673 // Argo
+ 7902089 22168 // Argo
+ 7902090 22728 // Argo
+ 7902091 22067 // Argo
+ 7902092 22855 // Argo
+ 7902093 22447 // Argo
+ 7902094 22706 // Argo
+ 7902095 23854 // Argo
+ 7902096 23845 // Argo
+ 7902097 22473 // Argo
+ 7902098 22621 // Argo
+ 7902099 23556 // Argo
+ 7902100 22127 // Argo GO-BGC, UW
+ 7902101 1578  // Argo GO-BGC, UW
+ 7902102 1538  // Argo GO-BGC, UW
+ 7902103 1534  // Argo GO-BGC, UW 
+ 7902104 1579  // Argo GO-BGC, UW
+ 7902105 21832 // Argo GO-BGC, UW 
+ 7902106 21972 // Argo GO-BGC, UW
+ 7902107 22693 // Argo GO-BGC, UW
+ 7902108 22555 // Argo GO-BGC, UW
+ 7902109 22658 // Argo GO-BGC, UW
+ 7902110 22678 // Argo GO-BGC, UW
+ 7902111 0064  // Argo GO-BGC, UW
+ 7902112 0065  // Argo GO-BGC, UW
+ 7902113 20293 // Argo GO-BGC, UW
+ 7902114 20116 // Argo GO-BGC, UW
+ 7902115 1535  // Argo GO-BGC, UW
+ 7902116 22257 // Argo GO-BGC, UW
+ 7902117 22508 // Argo GO-BGC, UW
+ 7902118 22278 // Argo GO-BGC, UW
+ 7902119 22972 // Argo GO-BGC, UW
+ 7902120 22365 // Argo GO-BGC, UW
+ 7902121 22554 // Argo GO-BGC, UW
+ 7902122 22218 // Argo GO-BGC, UW
+ 7902123 22615 // Argo GO-BGC, UW
+ 7902124 22771 // Argo GO-BGC, UW
+ 7902125 22934 // Argo GO-BGC, UW
+ 7902126 22873 // Argo GO-BGC, UW
+ 7902127 22739 // Argo GO-BGC, UW
+ 7902128 22653 // Argo GO-BGC, UW
+ 7902129 22923 // Argo GO-BGC, UW
+ 7902130 22279 // Argo GO-BGC, UW
+ 7902131 21730 // Argo GO-BGC, UW
+ 7902132 17777 // Argo GO-BGC, UW
+ 7902133 22849 // Argo GO-BGC, UW
+ 7902134 22175 // Argo GO-BGC, UW
+ 7902135 22775 // Argo GO-BGC, UW
+ 7902136 1537  // Argo GO-BGC, UW
+ 7902137 20276 // Argo GO-BGC, UW
+ 7902138 1446  // Argo GO-BGC, UW
+ 7902139 22044 // Argo GO-BGC, UW
+ 7902140 22243 //	Argo UW-SOCCOM
+ 7902141 22578 //	Argo UW-SOCCOM
+ 7902142 22438 //	Argo UW-SOCCOM
+ 7902143 22953 //	Argo UW-SOCCOM
+ 7902144 22219 //	Argo UW-SOCCOM
+ 7902145 22743 //	Argo UW-SOCCOM
+ 7902146 22732 //	Argo UW-SOCCOM
+ 7902147 22186 //	Argo UW-SOCCOM
+ 7902148 22210 //	Argo UW-SOCCOM
+ 7902149 23680 //	Argo UW-SOCCOM
+ 7902150 22745 //	Argo UW-SOCCOM
+ 7902151 23962 //	Argo UW-SOCCOM
+ 7902152 23186 //	Argo UW-SOCCOM
+ 7902153 22985 //	Argo UW-SOCCOM
+ 7902154 23082 //	Argo UW-SOCCOM
+ 7902155 23402 //	Argo UW-SOCCOM
+ 7902156 23497 //	Argo UW-SOCCOM
+ 7902157 23432 //	Argo UW-SOCCOM
+ 7902158 22274 //	Argo UW-SOCCOM
+ 7902159 22769 //	Argo UW-SOCCOM
+ 7902160 23513 //	Argo UW-SOCCOM
+ 7902161 23362 //	Argo UW-SOCCOM
+ 7902162 23073 //	Argo UW-SOCCOM
+ 7902163 23867 //	Argo UW-SOCCOM
+ 7902164 23559 //	Argo UW-SOCCOM
+ 7902165 23337 //	Argo UW-SOCCOM
+ 7902166 23069 //	Argo UW-SOCCOM
+ 7902167 23509 //	Argo UW-SOCCOM
+ 7902168 23455 //	Argo UW-SOCCOM
+ 7902169 23953 //	Argo UW-SOCCOM
+ 1902741 22081 // Argo GO-BGC, UW
+ 7902261 22715 // Argo GO-BGC, UW
+ 2903964 22551 // Argo GO-BGC, UW
+ 7902262 22893 // Argo GO-BGC, UW
+ 1902742 1678  // Argo GO-BGC, UW
+ 6990687 1691  // Argo GO-BGC, UW
+ 4903849 1677  // Argo GO-BGC, UW
+ 5907148 1681  // Argo GO-BGC, UW
+ 5907149 23748 // Argo GO-BGC, UW
+ 4903850 23461 // Argo GO-BGC, UW
+ 5907150 21878 // Argo GO-BGC, UW
+ 7902263 23983 // Argo GO-BGC, UW
+ 7902264 22760 // Argo GO-BGC, UW
+ 2903965 22916 // Argo GO-BGC, UW
+ 4903851 22956 // Argo GO-BGC, UW
+ 6990688 22720 // Argo GO-BGC, UW
+ 2903966 1670  // Argo GO-BGC, UW
+ 6990689 1671  // Argo GO-BGC, UW
+ 4903852 1672  // Argo GO-BGC, UW
+ 3902642 0066  // Argo GO-BGC, UW
+ 5907151 0067  // Argo GO-BGC, UW
+ 5907152 0068  // Argo GO-BGC, UW
+ 5907153 23946 // Argo GO-BGC, UW
+ 6990690 23489 // Argo GO-BGC, UW
+ 6990691 1453  // Argo GO-BGC, UW
+ 4903853 1518  // Argo GO-BGC, UW
+ 4903854 1536  // Argo GO-BGC, UW
+ 2903967 1575  // Argo GO-BGC, UW
+ 4903855 1576  // Argo GO-BGC, UW
+ 1902743 1676  // Argo GO-BGC, UW
+ 2903968 1679  // Argo GO-BGC, UW
+ 7902265 1692  // Argo GO-BGC, UW
+ 1902744 1693  // Argo GO-BGC, UW
+ 5907154 1694  // Argo GO-BGC, UW
+ 3902643 1695  // Argo GO-BGC, UW
+ 6990692 1696  // Argo GO-BGC, UW
+ 7902266 23808 // Argo GO-BGC, UW
+ 5907155 23299 // Argo GO-BGC, UW
+ 2903969 23484 // Argo GO-BGC, UW
+ 3902644 23517 // Argo GO-BGC, UW
+ 5907156 23436 // Argo GO-BGC, UW
+ 6990693 23881 // Argo GO-BGC, UW
+ 2903970 23851 // Argo GO-BGC, UW
+ 5907157 23577 // Argo GO-BGC, UW
+ 2903971 23368 // Argo GO-BGC, UW
+ 7902267 22474 // Argo GO-BGC, UW
+ 1902745 23782 // Argo GO-BGC, UW
+ 7902268 23734 // Argo GO-BGC, UW
+ 3902645 23942 // Argo GO-BGC, UW
+ 2903972 23070 // Argo GO-BGC, UW
+ 1902746 23482 // Argo GO-BGC, UW
+ 5907158 23704 // Argo GO-BGC, UW
+ 4903856 23608 // Argo GO-BGC, UW
+ 3902646 23530 // Argo GO-BGC, UW
+ 4903857 22790 // Argo GO-BGC, UW
+ 4903858 1764  // Argo GO-BGC, UW
+ 1902747 1524  // Argo GO-BGC, UW
+ 3902647 23728 // Argo GO-BGC, UW
+ 2903973 23842 // Argo GO-BGC, UW
+ 2903974 1770  // Argo GO-BGC, UW
+ 3902648 1771  // Argo GO-BGC, UW
+ 3902649 1772  // Argo GO-BGC, UW
+ 6990694 1763  // Argo GO-BGC, UW
+ 3902650 23610 // Argo GO-BGC, UW
+ 4903859 1767  // Argo GO-BGC, UW
+ 1902748       // Argo GO-BGC, UW
+ 1902749       // Argo GO-BGC, UW
+ 6990695       // Argo GO-BGC, UW
+ 5907159       // Argo GO-BGC, UW
+ 7902269       // Argo GO-BGC, UW
+ 3902651       // Argo GO-BGC, UW
+ 6990696       // Argo GO-BGC, UW
+ 3902652       // Argo GO-BGC, UW
+ 5907160       // Argo GO-BGC, UW
+ 4903860       // Argo GO-BGC, UW
+ 2903975       // Argo GO-BGC, UW
+ 5907161       // Argo GO-BGC, UW
+ 3902653       // Argo GO-BGC, UW
+ 4903861       // Argo GO-BGC, UW
+ 7902270       // Argo GO-BGC, UW
+ 5907162       // Argo GO-BGC, UW
+ 3902654       // Argo GO-BGC, UW
+ 2903976       // Argo GO-BGC, UW
+ 1902750       // Argo GO-BGC, UW
+ 1902751       // Argo GO-BGC, UW
+ 1902752       // Argo GO-BGC, UW
+ 1902753       // Argo GO-BGC, UW
+ 7902271       // Argo GO-BGC, UW
+ 2903977       // Argo GO-BGC, UW
+ 6990697       // Argo GO-BGC, UW
+ 3902655       // Argo GO-BGC, UW
+ 5907163       // Argo GO-BGC, UW
+ 3902656       // Argo GO-BGC, UW
+ 2903978       // Argo GO-BGC, UW
+ 6990698       // Argo GO-BGC, UW
+ 6990699       // Argo GO-BGC, UW
+ 7902272       // Argo GO-BGC, UW
+ 5907164       // Argo GO-BGC, UW
+ 7902273       // Argo GO-BGC, UW
+ 5907165       // Argo GO-BGC, UW
+ 7902353 23611 // Argo
+ 3902727 22291 // Argo
+ 5907234 22556 // Argo
+ 5907235 23280 // Argo
+ 2904056 23034 // Argo
+ 1902823 23592 // Argo
+ 2904057 23479 // Argo
+ 2904058 23861 // Argo
+ 2904059 23493 // Argo
+ 3902728 23682 // Argo
+ 7902354 23452 // Argo
+ 4903949 23712 // Argo
+ 3902729 23050 // Argo
+ 3902730 23473 // Argo
+ 1902824 23969 // Argo
+ 4903950 23102 // Argo
+ 2904060 22642 // Argo
+ 1902825 23193 // Argo
+ 5907236 23809 // Argo
+ 4903951 23218 // Argo
+ 3902731 23072 // Argo
+ 3902732 23870 // Argo
+ 2904061 23777 // Argo
+ 2904062 22519 // Argo
+ 2904063 24776 // Argo
+ 4903952 24518 // Argo
+ 1902826 24353 // Argo
+ 4903953 24892 // Argo
+ 7902355 22408 // Argo
+ 4903954 23415 // Argo
+ 1902827 24657 // Argo
+ 5907237 24573 // Argo
+ 4903955 23945 // Argo
+ 2904064       // Argo
+ 5907238       // Argo
+ 2904065       // Argo
+ 1902828       // Argo
+ 2904066       // Argo
+ 7902356       // Argo
+ 3902733       // Argo
+ 3902734       // Argo
+ 2904067       // Argo
+ 1902829       // Argo
+ 4903956       // Argo
+ 3902735       // Argo
+ 1902830       // Argo
+ 1902831       // Argo
+ 4903957       // Argo
+ 7902357       // Argo
+ 1902832       // Argo
+ 2904068       // Argo
+ 3902736       // Argo
+ 4903958       // Argo
+ 3902737       // Argo
+ 4903959       // Argo
+ 2904069       // Argo
+ 7902358       // Argo
+ 4903960       // Argo
+ 1902833       // Argo
+ 3902738       // Argo
+ 5907239       // Argo
+ 7902359       // Argo
+ 4903961       // Argo
+ 7902360       // Argo
+ 7902361       // Argo
+ 3902739       // Argo
+ 5907240       // Argo
+ 4903962       // Argo
+ 7902362       // Argo
+ 3902740       // Argo
+ 7902363       // Argo
+ 2904070       // Argo
+ 2904071       // Argo
+ 2904072       // Argo
+ 3902741       // Argo
+ 5907241       // Argo
+ 2904073       // Argo
+ 4903963       // Argo
+ 2904074       // Argo
+ 4903964       // Argo
+ 1902834       // Argo
+ 1902835       // Argo
+ 2904075       // Argo
+ 3902742       // Argo
+ 2904076       // Argo
+ 7902364       // Argo
+ 7902365       // Argo
+ 1902836       // Argo

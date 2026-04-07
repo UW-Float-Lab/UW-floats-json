@@ -1,0 +1,1855 @@
+{
+  "FILE_CREATION_DATE": "2026-04-07T17:30:22Z",
+  "FILE_UPDATE_DATE": "2026-04-07T17:30:22Z",
+  "DECODER_VERSION": "0.3.0",
+  "SCHEMA_VERSION": "0.3.0",
+  "INTERNAL_ID_NUMBER": 23808,
+  "TRANSMISSION ID NUMBER": 23808,
+  "INSTRUMENT_TYPE": "UW-APEX-BGC",
+  "AOML_ID NUMBER": 10071,
+  "WMO_ID NUMBER": 7902266,
+  "WMO INSTRUMENT TYPE (TABLE 1770)": null,
+  "WMO RECORDER TYPE (TABLE 4770)": null,
+  "OPERATING_INSTITUTION": "UW, Seattle, WA",
+  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PI": "RISER, STEVE AND GRAY, ALISON",
+  "PROJECT_NAME": "Core Float",
+  "PROFILE_NUMBER": 5,
+  "POSITIONING_SYSTEM": "GPS",
+  "Timestamps": {
+    "StartDescent": "2025-09-04T07:45:00Z",
+    "StartPark": "2025-09-04T08:15:10Z",
+    "StartProfileDescent": "2025-09-04T16:16:21Z",
+    "StartProfile": "2025-09-04T16:44:59Z",
+    "StopProfile": "2025-09-04T18:45:09Z",
+    "StartTelemetry": "2025-09-04T18:54:53Z"
+  },
+  "GPS": [
+    {
+      "description": "GPS_FIX",
+      "TIME": "2025-09-04T19:05:30Z",
+      "LATITUDE": 47.6509,
+      "LONGITUDE": -122.3132,
+      "sat_cnt": 7,
+      "time_to_fix": 28
+    }
+  ],
+  "Iridium": [
+    {
+      "LATITUDE": 47.685,
+      "LONGITUDE": -122.271,
+      "TIME": "2025-09-04T07:41:14Z",
+      "x": -2296.0,
+      "y": -3636.0,
+      "z": 4692.0,
+      "system_time": 3968371552
+    }
+  ],
+  "CTD Discrete": [
+    {
+      "PRES": 100.79,
+      "TEMP": 18.7147,
+      "PSAL": 33.5754,
+      "Temp_optode": 19.181,
+      "TPhase": 31.176,
+      "RPhase": 8.439,
+      "NO3": null,
+      "pH_V": null,
+      "FSig": 800,
+      "BbSig": 2116,
+      "TSig": 549,
+      "Ocr": [
+        2147885449,
+        2147445257,
+        2148023606,
+        2147453787
+      ]
+    },
+    {
+      "PRES": 100.81,
+      "TEMP": 20.7234,
+      "PSAL": 33.6929,
+      "Temp_optode": 21.422,
+      "TPhase": 30.762,
+      "RPhase": 8.479,
+      "NO3": -12.2,
+      "pH_V": -0.85605,
+      "FSig": 972,
+      "BbSig": 2013,
+      "TSig": 547,
+      "Ocr": [
+        2147886016,
+        2147428306,
+        2148021531,
+        2147442203
+      ]
+    }
+  ],
+  "CTD Binned": [
+    {
+      "PRES": 100.8,
+      "TEMP": 22.069,
+      "PSAL": 33.694,
+      "n_samp": 255
+    }
+  ],
+  "CTD Drift": [
+    {
+      "PRES": 100.81,
+      "TEMP": 19.406,
+      "FSig": 462,
+      "BbSig": 2236,
+      "TSig": 548,
+      "TIME": "2025-09-04T08:15:19Z"
+    },
+    {
+      "PRES": 100.82,
+      "TEMP": 18.5248,
+      "FSig": 462,
+      "BbSig": 2224,
+      "TSig": 548,
+      "TIME": "2025-09-04T08:45:07Z"
+    },
+    {
+      "PRES": 100.82,
+      "TEMP": 17.4487,
+      "FSig": 467,
+      "BbSig": 2199,
+      "TSig": 550,
+      "TIME": "2025-09-04T09:45:07Z"
+    },
+    {
+      "PRES": 100.82,
+      "TEMP": 16.9884,
+      "FSig": 469,
+      "BbSig": 2169,
+      "TSig": 551,
+      "TIME": "2025-09-04T10:45:07Z"
+    },
+    {
+      "PRES": 100.81,
+      "TEMP": 15.6936,
+      "FSig": 476,
+      "BbSig": 1927,
+      "TSig": 553,
+      "TIME": "2025-09-04T11:45:07Z"
+    },
+    {
+      "PRES": 100.8,
+      "TEMP": 15.2221,
+      "FSig": 483,
+      "BbSig": 1851,
+      "TSig": 554,
+      "TIME": "2025-09-04T12:45:07Z"
+    },
+    {
+      "PRES": 100.78,
+      "TEMP": 15.2129,
+      "FSig": 551,
+      "BbSig": 1768,
+      "TSig": 554,
+      "TIME": "2025-09-04T13:45:07Z"
+    },
+    {
+      "PRES": 100.79,
+      "TEMP": 16.2989,
+      "FSig": 725,
+      "BbSig": 1846,
+      "TSig": 553,
+      "TIME": "2025-09-04T14:45:07Z"
+    },
+    {
+      "PRES": 100.78,
+      "TEMP": 18.3703,
+      "FSig": 781,
+      "BbSig": 2145,
+      "TSig": 551,
+      "TIME": "2025-09-04T15:45:07Z"
+    }
+  ],
+  "optode_air_calibration": [
+    {
+      "Pres_air": 122,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.119,
+      "TPhase": 30.014,
+      "RPhase": 8.542,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 540,
+      "Ocr": [
+        2147864694,
+        2147408438,
+        2147997851,
+        2147420617
+      ],
+      "TIME": "2025-09-04T18:54:55Z"
+    },
+    {
+      "Pres_air": 121,
+      "Pres_CTD": 100.82,
+      "Temp_optode": 25.104,
+      "TPhase": 30.05,
+      "RPhase": 8.543,
+      "FSig": 50,
+      "BbSig": 50,
+      "TSig": 540,
+      "Ocr": [
+        2147865179,
+        2147403337,
+        2147998628,
+        2147422537
+      ],
+      "TIME": "2025-09-04T18:55:28Z"
+    },
+    {
+      "Pres_air": 120,
+      "Pres_CTD": 100.82,
+      "Temp_optode": 25.133,
+      "TPhase": 30.043,
+      "RPhase": 8.541,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 540,
+      "Ocr": [
+        2147858642,
+        2147404608,
+        2147999789,
+        2147422244
+      ],
+      "TIME": "2025-09-04T18:56:02Z"
+    },
+    {
+      "Pres_air": 120,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.184,
+      "TPhase": 30.036,
+      "RPhase": 8.54,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 540,
+      "Ocr": [
+        2147864640,
+        2147402020,
+        2147994176,
+        2147420598
+      ],
+      "TIME": "2025-09-04T18:56:35Z"
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": 100.84,
+      "Temp_optode": 25.512,
+      "TPhase": 29.983,
+      "RPhase": 8.55,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147862765,
+        2147400292,
+        2147998582,
+        2147422180
+      ],
+      "TIME": "2025-09-04T18:59:52Z"
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.476,
+      "TPhase": 30.009,
+      "RPhase": 8.546,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147856786,
+        2147404553,
+        2147995894,
+        2147418788
+      ],
+      "TIME": "2025-09-04T19:00:25Z"
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": 100.82,
+      "Temp_optode": 25.527,
+      "TPhase": 30.014,
+      "RPhase": 8.544,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147860150,
+        2147402797,
+        2147994230,
+        2147420827
+      ],
+      "TIME": "2025-09-04T19:00:59Z"
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.581,
+      "TPhase": 30.005,
+      "RPhase": 8.544,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147863076,
+        2147396461,
+        2147997010,
+        2147423314
+      ],
+      "TIME": "2025-09-04T19:01:32Z"
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.548,
+      "TPhase": 29.994,
+      "RPhase": 8.545,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147860662,
+        2147397961,
+        2147995392,
+        2147419840
+      ],
+      "TIME": "2025-09-04T19:02:05Z"
+    },
+    {
+      "Pres_air": 154,
+      "Pres_CTD": 100.82,
+      "Temp_optode": 25.66,
+      "TPhase": 29.985,
+      "RPhase": 8.549,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147859437,
+        2147400941,
+        2147994532,
+        2147419099
+      ],
+      "TIME": "2025-09-04T19:02:38Z"
+    },
+    {
+      "Pres_air": 154,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.769,
+      "TPhase": 29.967,
+      "RPhase": 8.548,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147862043,
+        2147401737,
+        2147992365,
+        2147419328
+      ],
+      "TIME": "2025-09-04T19:03:11Z"
+    },
+    {
+      "Pres_air": 154,
+      "Pres_CTD": 100.83,
+      "Temp_optode": 25.837,
+      "TPhase": 29.952,
+      "RPhase": 8.547,
+      "FSig": 50,
+      "BbSig": 49,
+      "TSig": 539,
+      "Ocr": [
+        2147860160,
+        2147403977,
+        2147994011,
+        2147416109
+      ],
+      "TIME": "2025-09-04T19:03:45Z"
+    }
+  ],
+  "raw_mission_config": {
+    "model": {
+      "value": "Apf11"
+    },
+    "Id": {
+      "value": "23808"
+    },
+    "FwRev": {
+      "value": "061125"
+    },
+    "AscentTimeOut": {
+      "value": "120",
+      "unit": "min"
+    },
+    "AtDialCmd": {
+      "value": "AT+CBST=71,0,1;DT00881600005496"
+    },
+    "AltDialCmd": {
+      "value": "ATDT0012066163256"
+    },
+    "BuoyancyNudge": {
+      "value": "10",
+      "unit": "count"
+    },
+    "CompensatorHyperRetraction": {
+      "value": "0",
+      "unit": "count"
+    },
+    "ConnectTimeOut": {
+      "value": "60",
+      "unit": "sec"
+    },
+    "CpActivationP": {
+      "value": "985",
+      "unit": "dbar"
+    },
+    "DeepProfileDescentTime": {
+      "value": "30",
+      "unit": "min"
+    },
+    "DeepProfilePistonPos": {
+      "value": "9",
+      "unit": "count"
+    },
+    "DeepProfilePressure": {
+      "value": "200",
+      "unit": "dbar"
+    },
+    "DownTime": {
+      "value": "540",
+      "unit": "min"
+    },
+    "DuraRefWarmUpHrs": {
+      "value": "255"
+    },
+    "DuraInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "FatFsEnable": {
+      "value": "1"
+    },
+    "FlbbMode": {
+      "value": "1"
+    },
+    "FloatId": {
+      "value": "23808"
+    },
+    "FullExtension": {
+      "value": "231",
+      "unit": "count"
+    },
+    "FullRetraction": {
+      "value": "9",
+      "unit": "count"
+    },
+    "InitialBuoyancyNudge": {
+      "value": "22",
+      "unit": "count"
+    },
+    "IsusInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "MaxAirBladder": {
+      "value": "154",
+      "unit": "count"
+    },
+    "MaxLogKb": {
+      "value": "60",
+      "unit": "KByte"
+    },
+    "MissionPrelude": {
+      "value": "180",
+      "unit": "min"
+    },
+    "OcrInit": {
+      "value": "-500",
+      "unit": "dbar"
+    },
+    "OkVacuum": {
+      "value": "230",
+      "unit": "count"
+    },
+    "OptodeMode": {
+      "value": "1"
+    },
+    "PActivationPistonPosition": {
+      "value": "16",
+      "unit": "count"
+    },
+    "ParkDescentTime": {
+      "value": "30",
+      "unit": "min"
+    },
+    "ParkPistonPos": {
+      "value": "19",
+      "unit": "count"
+    },
+    "ParkPressure": {
+      "value": "100",
+      "unit": "dbar"
+    },
+    "PnPCycleLen": {
+      "value": "1"
+    },
+    "TelemetryRetry": {
+      "value": "15",
+      "unit": "min"
+    },
+    "TimeOfDay": {
+      "value": "DISABLED",
+      "unit": "min"
+    },
+    "UpTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "ZModemTimeOut": {
+      "value": "80",
+      "unit": "sec"
+    },
+    "Verbosity": {
+      "value": "2"
+    },
+    "DebugBits": {
+      "value": "0x0002"
+    }
+  },
+  "raw_engineering_data": [
+    {
+      "Apf11FwRev": "061125",
+      "ActiveBallastAdjustments": "0",
+      "AirBladderPressure": "159",
+      "AirPumpAmps": "19",
+      "AirPumpVolts": "212",
+      "BuoyancyPumpOnTime": "2187",
+      "BuoyancyPumpAmps": "39",
+      "BuoyancyPumpVolts": "212",
+      "ConnectionAttempts": "5",
+      "Connections": "2",
+      "Coulombs": "2.9kC",
+      "CoulombsDescent": "2.3kC",
+      "CoulombsPark": "2.6kC",
+      "CoulombsPrfDescent": "2.7kC",
+      "CoulombsProfile": "2.7kC",
+      "CoulombsSleep": "0.1kC",
+      "CoulombsTelemetry": "2.9kC",
+      "CoulombsWake": "2.7kC",
+      "CurrentPistonPosition": "231",
+      "DeepProfilePistonPosition": "9",
+      "DuraPowerCycleCounter": "0",
+      "DuraWakeCurrent": "47.6mA",
+      "DuraWakePower": "728.9mW",
+      "DuraWakeVolts": "15.3V",
+      "FlbbAmps": "11",
+      "FlbbStatus": "0x00",
+      "FlbbVolts": "218",
+      "FloatId": "23808",
+      "GpsFixTime": "28",
+      "HumidityAd12Park": "4094 (inf%)",
+      "HumidityAd12Pneumatic": "2917 (61.0%)",
+      "HumidityAd12PneumaticRef": "2933 (61.5%)",
+      "IsusPowerCycleCounter": "0",
+      "IsusWakeCurrent": "49.1mA",
+      "IsusWakePower": "752.8mW",
+      "IsusWakeVolts": "15.3V",
+      "LeakDetectorChan": [
+        "{sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}",
+        "{sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}",
+        "{sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}",
+        "{sample:0xf state:0 count:0 epoch:1756972977 mtime:1078}"
+      ],
+      "LeakSensor": "{state:0, count:0, ad12:3875cnt, v:2.37V, index:0.0%, epoch:1756972977sec, mtime:1078sec}",
+      "MuxerTemperature": "16.90C",
+      "MuxerHumidity": "6.1%",
+      "MuxerWakeCurrent": "0.0mA",
+      "MuxerWakePower": "0.0mW",
+      "MuxerWakeVolts": "15.5V",
+      "ObsIndex": "1",
+      "OcrAmps": "7",
+      "OcrStatuss": "0x00",
+      "OcrVolts": "219",
+      "OptodeAmps": "13",
+      "OptodeVolts": "218",
+      "ParkDescentPCnt": "2",
+      "ParkDescentP": [
+        "10",
+        "10"
+      ],
+      "ParkPistonPosition": "19",
+      "ParkObs": "{ 100.8dbar, 18.715C, 33.5754PSU / nan / 19.181C 31.176 8.439 / 800, 2116, 549}",
+      "ProfileId": "005",
+      "QuiescentAmps": "2",
+      "QuiescentVolts": "221",
+      "RtcSkew": "-4",
+      "Sbe41cpAmps": "3",
+      "Sbe41cpStatus": "0x00000000",
+      "Sbe41cpVolts": "220",
+      "SleepSec": "36946",
+      "StandbySec": "146393",
+      "status": "0x00000011",
+      "SurfaceObs": "{ 100.8dbar, nan, nan / nan / 25.986C 29.935 8.548 / 50, 49, 539}",
+      "SurfacePistonPosition": "136",
+      "SurfacePressure": "100.83",
+      "TimeStartDescent": "1756971900         Sep 04 2025 07:45:00",
+      "TimeStartPark": "1756973710            Sep 04 2025 08:15:10",
+      "TimeStartProfileDescent": "1757002581  Sep 04 2025 16:16:21",
+      "TimeStartProfile": "1757004299         Sep 04 2025 16:44:59",
+      "TimeStopProfile": "1757011509          Sep 04 2025 18:45:09",
+      "TimeStartTelemetry": "1757012093       Sep 04 2025 18:54:53",
+      "Vacuum": "200",
+      "WakeCycles": "1255",
+      "WakeSec": "2914"
+    }
+  ],
+  "Log": [
+    {
+      "time": "2025-09-04T07:44:59Z",
+      "mission_time": 0,
+      "call": "DescentInit",
+      "message": "Deep profile 5 initiated at mission-time 41199sec."
+    },
+    {
+      "time": "2025-09-04T07:45:00Z",
+      "mission_time": 1,
+      "call": "DescentInit",
+      "message": "Surface pressure: 100.8dbars."
+    },
+    {
+      "time": "2025-09-04T07:45:00Z",
+      "mission_time": 1,
+      "call": "DescentInit",
+      "message": "Charge consumption model: OCV:15.0V Wake-Cycles:656 Standby:1.3days Wake:2.2kC Sleep:0.1kC"
+    },
+    {
+      "time": "2025-09-04T07:45:12Z",
+      "mission_time": 13,
+      "call": "DescentInit",
+      "message": "Pneumatic humidity: 2933(61.5%) -> 2917(61.0%)"
+    },
+    {
+      "time": "2025-09-04T07:45:12Z",
+      "mission_time": 13,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->019 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 [1049sec, 14.8Volts, 0.146Amps, CPT:1049sec]"
+    },
+    {
+      "time": "2025-09-04T08:02:46Z",
+      "mission_time": 1067,
+      "call": "DescentInit",
+      "message": "Air solenoid open: Barometer [204cnt,  12.0psi]  Pneumometer [104cnt,  12.2psi]"
+    },
+    {
+      "time": "2025-09-04T08:02:56Z",
+      "mission_time": 1077,
+      "call": "Descent",
+      "message": "Pressure: 100.8"
+    },
+    {
+      "time": "2025-09-04T08:15:09Z",
+      "mission_time": 1810,
+      "call": "Descent",
+      "message": "Pressure: 100.8"
+    },
+    {
+      "time": "2025-09-04T08:15:10Z",
+      "mission_time": 1811,
+      "call": "ParkInit",
+      "message": "Charge consumption model: OCV:15.5V Wake-Cycles:658 Standby:1.3days Wake:2.5kC Sensors:0.1kC"
+    },
+    {
+      "time": "2025-09-04T16:15:41Z",
+      "mission_time": 30642,
+      "call": "CtdPower",
+      "message": "[  100.79, 18.6920, 33.8919]"
+    },
+    {
+      "time": "2025-09-04T16:15:41Z",
+      "mission_time": 30642,
+      "call": "CtdPower",
+      "message": "CTD Power consumption [220VCnt 3ACnt]: 15.478Volts * 0.011Amps = 0.17Watts."
+    },
+    {
+      "time": "2025-09-04T16:15:47Z",
+      "mission_time": 30648,
+      "call": "ParkTerminate",
+      "message": "Piston Position:19 Vacuum:200 HumidityAd12:4094(inf%) Vq:221 Aq:2 Vsbe:220 Asbe:3 Vflbb:218 Aflbb:11 Vopt:218 Aopt:13 Vocr:219 Aocr:7 MuxTemp:16.897C MuxHumidity:6.1%"
+    },
+    {
+      "time": "2025-09-04T16:16:20Z",
+      "mission_time": 30681,
+      "call": "ParkTerminate",
+      "message": "PTS/O2,T2,TPhase,RawTemp: 100.8dbars 18.7147C 33.5754PSU / 279.4uM 19.181C 31.176 8.439 168.069"
+    },
+    {
+      "time": "2025-09-04T16:16:20Z",
+      "mission_time": 30681,
+      "call": "ParkTerminate",
+      "message": "FLBB FSig, BbSig, TSig: 800, 2116, 549 / Ocr: 0x80062189 0x7fff6a09 0x80083d36 0x7fff8b5b"
+    },
+    {
+      "time": "2025-09-04T16:16:21Z",
+      "mission_time": 30682,
+      "call": "GoDeepInit",
+      "message": "Charge consumption model: OCV:15.5V Wake-Cycles:667 Standby:1.6days Wake:2.5kC Sensors:0.1kC"
+    },
+    {
+      "time": "2025-09-04T16:16:21Z",
+      "mission_time": 30682,
+      "call": "GoDeepInit",
+      "message": "Moving piston."
+    },
+    {
+      "time": "2025-09-04T16:16:21Z",
+      "mission_time": 30682,
+      "call": "PistonMoveAbsWTO",
+      "message": "019->009 018 017 016 015 014 013 012 011 010 009 [49sec, 15.1Volts, 0.147Amps, CPT:1098sec]"
+    },
+    {
+      "time": "2025-09-04T16:44:59Z",
+      "mission_time": 32400,
+      "call": "ProfileInit",
+      "message": "Charge consumption model: OCV:15.5V Wake-Cycles:673 Standby:1.6days Wake:2.6kC Sensors:0.1kC"
+    },
+    {
+      "time": "2025-09-04T16:44:59Z",
+      "mission_time": 32400,
+      "call": "ProfileInit",
+      "message": "PrfId:005  Pressure:100.8dbar  pTable[50]:100dbar"
+    },
+    {
+      "time": "2025-09-04T16:45:01Z",
+      "mission_time": 32402,
+      "call": "ProfileInit",
+      "message": "Muxer PPIs K{1,2} quiescent: 15.48V, 0.0mA, 0.0mW"
+    },
+    {
+      "time": "2025-09-04T16:45:05Z",
+      "mission_time": 32406,
+      "call": "ProfileInit",
+      "message": "ISUS powered up."
+    },
+    {
+      "time": "2025-09-04T16:45:08Z",
+      "mission_time": 32409,
+      "call": "ProfileInit",
+      "message": "Muxer PPIs K{1,2} w/ ISUS awake: 15.33V, 49.1mA, 752.8mW"
+    },
+    {
+      "time": "2025-09-04T16:45:15Z",
+      "mission_time": 32416,
+      "call": "MscErrorLog_",
+      "message": "No error records to log."
+    },
+    {
+      "time": "2025-09-04T16:45:22Z",
+      "mission_time": 32423,
+      "call": "ProfileInit",
+      "message": "DURA powered up."
+    },
+    {
+      "time": "2025-09-04T16:45:25Z",
+      "mission_time": 32426,
+      "call": "ProfileInit",
+      "message": "Muxer PPIs K{1,2} w/ DURA awake: 15.31V, 47.6mA, 728.9mW"
+    },
+    {
+      "time": "2025-09-04T16:45:31Z",
+      "mission_time": 32432,
+      "call": "MscErrorLog_",
+      "message": "No error records to log."
+    },
+    {
+      "time": "2025-09-04T16:46:55Z",
+      "mission_time": 32516,
+      "call": "Sbe41cpStartCP",
+      "message": "Continuous profile started."
+    },
+    {
+      "time": "2025-09-04T16:47:36Z",
+      "mission_time": 32557,
+      "call": "Profile",
+      "message": "Sample 0 initiated at 100.8dbars for bin 50 [100dbars].  PTS/O2,T2,TPhase,RPhase,RawTemp/NO3/pH/FSig,BbSig,TSig/Ocr: 100.8dbars 20.7234C 33.6929PSU / 266.6uM 21.422C 30.762 8.479 94.451 / -12.2uM / -0.856050V /  972 2013  547 / 0x800623c0 0x7fff27d2 0x8008351b 0x7fff5e1b"
+    },
+    {
+      "time": "2025-09-04T16:47:37Z",
+      "mission_time": 32558,
+      "call": "PistonMoveAbsWTO",
+      "message": "009->031 010 011 012 013 014 015 [30sec, 15.1Volts, 0.159Amps, CPT:1128sec]"
+    },
+    {
+      "time": "2025-09-04T16:48:18Z",
+      "mission_time": 32599,
+      "call": "PistonMoveAbsWTO",
+      "message": "015->031 016 017 018 019 020 021 [30sec, 15.0Volts, 0.149Amps, CPT:1158sec]"
+    },
+    {
+      "time": "2025-09-04T16:48:59Z",
+      "mission_time": 32640,
+      "call": "PistonMoveAbsWTO",
+      "message": "021->031 022 023 024 025 026 027 028 [30sec, 14.9Volts, 0.157Amps, CPT:1188sec]"
+    },
+    {
+      "time": "2025-09-04T16:49:40Z",
+      "mission_time": 32681,
+      "call": "PistonMoveAbsWTO",
+      "message": "028->031 029 030 031 [15sec, 14.9Volts, 0.152Amps, CPT:1203sec]"
+    },
+    {
+      "time": "2025-09-04T17:00:01Z",
+      "mission_time": 33302,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 36 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:00:01Z",
+      "mission_time": 33302,
+      "call": "PistonMoveAbsWTO",
+      "message": "031->036 032 033 034 035 036 [24sec, 15.0Volts, 0.162Amps, CPT:1227sec]"
+    },
+    {
+      "time": "2025-09-04T17:05:01Z",
+      "mission_time": 33602,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 41 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:05:01Z",
+      "mission_time": 33602,
+      "call": "PistonMoveAbsWTO",
+      "message": "036->041 037 038 039 040 041 [25sec, 15.0Volts, 0.152Amps, CPT:1252sec]"
+    },
+    {
+      "time": "2025-09-04T17:10:12Z",
+      "mission_time": 33913,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 46 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:10:12Z",
+      "mission_time": 33913,
+      "call": "PistonMoveAbsWTO",
+      "message": "041->046 042 043 044 045 046 [25sec, 15.0Volts, 0.148Amps, CPT:1277sec]"
+    },
+    {
+      "time": "2025-09-04T17:15:12Z",
+      "mission_time": 34213,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 51 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:15:12Z",
+      "mission_time": 34213,
+      "call": "PistonMoveAbsWTO",
+      "message": "046->051 047 048 049 050 051 [26sec, 15.0Volts, 0.151Amps, CPT:1303sec]"
+    },
+    {
+      "time": "2025-09-04T17:20:13Z",
+      "mission_time": 34514,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 56 (v=0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:20:13Z",
+      "mission_time": 34514,
+      "call": "PistonMoveAbsWTO",
+      "message": "051->056 052 053 054 055 056 [24sec, 15.0Volts, 0.153Amps, CPT:1327sec]"
+    },
+    {
+      "time": "2025-09-04T17:25:13Z",
+      "mission_time": 34814,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 61 (v=0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:25:13Z",
+      "mission_time": 34814,
+      "call": "PistonMoveAbsWTO",
+      "message": "056->061 057 058 059 060 061 [25sec, 15.0Volts, 0.156Amps, CPT:1352sec]"
+    },
+    {
+      "time": "2025-09-04T17:30:13Z",
+      "mission_time": 35114,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 66 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:30:13Z",
+      "mission_time": 35114,
+      "call": "PistonMoveAbsWTO",
+      "message": "061->066 062 063 064 065 066 [25sec, 15.0Volts, 0.147Amps, CPT:1377sec]"
+    },
+    {
+      "time": "2025-09-04T17:35:13Z",
+      "mission_time": 35414,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 71 (v=0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:35:13Z",
+      "mission_time": 35414,
+      "call": "PistonMoveAbsWTO",
+      "message": "066->071 067 068 069 070 071 [25sec, 15.0Volts, 0.152Amps, CPT:1402sec]"
+    },
+    {
+      "time": "2025-09-04T17:40:13Z",
+      "mission_time": 35714,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 76 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:40:13Z",
+      "mission_time": 35714,
+      "call": "PistonMoveAbsWTO",
+      "message": "071->076 072 073 074 075 076 [25sec, 15.0Volts, 0.147Amps, CPT:1427sec]"
+    },
+    {
+      "time": "2025-09-04T17:45:13Z",
+      "mission_time": 36014,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 81 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:45:13Z",
+      "mission_time": 36014,
+      "call": "PistonMoveAbsWTO",
+      "message": "076->081 077 078 079 080 081 [24sec, 15.0Volts, 0.147Amps, CPT:1451sec]"
+    },
+    {
+      "time": "2025-09-04T17:50:13Z",
+      "mission_time": 36314,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 86 (v=0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:50:13Z",
+      "mission_time": 36314,
+      "call": "PistonMoveAbsWTO",
+      "message": "081->086 082 083 084 085 086 [25sec, 15.0Volts, 0.144Amps, CPT:1476sec]"
+    },
+    {
+      "time": "2025-09-04T17:55:13Z",
+      "mission_time": 36614,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 91 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T17:55:13Z",
+      "mission_time": 36614,
+      "call": "PistonMoveAbsWTO",
+      "message": "086->091 087 088 089 090 091 [25sec, 15.0Volts, 0.149Amps, CPT:1501sec]"
+    },
+    {
+      "time": "2025-09-04T18:00:13Z",
+      "mission_time": 36914,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 96 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:00:13Z",
+      "mission_time": 36914,
+      "call": "PistonMoveAbsWTO",
+      "message": "091->096 092 093 094 095 096 [25sec, 15.0Volts, 0.156Amps, CPT:1526sec]"
+    },
+    {
+      "time": "2025-09-04T18:05:19Z",
+      "mission_time": 37220,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 101 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:05:19Z",
+      "mission_time": 37220,
+      "call": "PistonMoveAbsWTO",
+      "message": "096->101 097 098 099 100 101 [24sec, 15.0Volts, 0.155Amps, CPT:1550sec]"
+    },
+    {
+      "time": "2025-09-04T18:10:21Z",
+      "mission_time": 37522,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 106 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:10:21Z",
+      "mission_time": 37522,
+      "call": "PistonMoveAbsWTO",
+      "message": "101->106 102 103 104 105 106 [25sec, 15.0Volts, 0.148Amps, CPT:1575sec]"
+    },
+    {
+      "time": "2025-09-04T18:15:22Z",
+      "mission_time": 37823,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 111 (v=0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:15:22Z",
+      "mission_time": 37823,
+      "call": "PistonMoveAbsWTO",
+      "message": "106->111 107 108 109 110 111 [24sec, 15.0Volts, 0.148Amps, CPT:1599sec]"
+    },
+    {
+      "time": "2025-09-04T18:20:22Z",
+      "mission_time": 38123,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 116 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:20:22Z",
+      "mission_time": 38123,
+      "call": "PistonMoveAbsWTO",
+      "message": "111->116 112 113 114 115 116 [25sec, 15.0Volts, 0.148Amps, CPT:1624sec]"
+    },
+    {
+      "time": "2025-09-04T18:25:23Z",
+      "mission_time": 38424,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 121 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:25:23Z",
+      "mission_time": 38424,
+      "call": "PistonMoveAbsWTO",
+      "message": "116->121 117 118 119 120 121 [24sec, 15.0Volts, 0.143Amps, CPT:1648sec]"
+    },
+    {
+      "time": "2025-09-04T18:30:23Z",
+      "mission_time": 38724,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 126 (v=0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:30:23Z",
+      "mission_time": 38724,
+      "call": "PistonMoveAbsWTO",
+      "message": "121->126 122 123 124 125 126 [25sec, 15.1Volts, 0.152Amps, CPT:1673sec]"
+    },
+    {
+      "time": "2025-09-04T18:35:24Z",
+      "mission_time": 39025,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 131 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:35:24Z",
+      "mission_time": 39025,
+      "call": "PistonMoveAbsWTO",
+      "message": "126->131 127 128 129 130 131 [25sec, 15.1Volts, 0.154Amps, CPT:1698sec]"
+    },
+    {
+      "time": "2025-09-04T18:40:25Z",
+      "mission_time": 39326,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 136 (v=-0.000dbar/sec)."
+    },
+    {
+      "time": "2025-09-04T18:40:25Z",
+      "mission_time": 39326,
+      "call": "PistonMoveAbsWTO",
+      "message": "131->136 132 133 134 135 136 [24sec, 15.1Volts, 0.156Amps, CPT:1722sec]"
+    },
+    {
+      "time": "2025-09-04T18:45:09Z",
+      "mission_time": 39610,
+      "call": "MissionControlAgent",
+      "message": "Ascent time-out exceeded; aborting profile."
+    },
+    {
+      "time": "2025-09-04T18:46:13Z",
+      "mission_time": 39674,
+      "call": "Sbe41cpBinAverage",
+      "message": "Finished averaging 7106 samples in 59 seconds."
+    },
+    {
+      "time": "2025-09-04T18:46:18Z",
+      "mission_time": 39679,
+      "call": "Sbe41cpUploadCP_",
+      "message": "Sbe41cpSerNo[20478] NSample[7106] NBin[51]"
+    },
+    {
+      "time": "2025-09-04T18:46:36Z",
+      "mission_time": 39697,
+      "call": "Sbe41cpUploadCP_",
+      "message": "Continuous profile uploaded [51 lines]."
+    },
+    {
+      "time": "2025-09-04T18:46:49Z",
+      "mission_time": 39710,
+      "call": "MscErrorLog_",
+      "message": "No error records to log."
+    },
+    {
+      "time": "2025-09-04T18:46:59Z",
+      "mission_time": 39720,
+      "call": "MscErrorLog_",
+      "message": "No error records to log."
+    },
+    {
+      "time": "2025-09-04T18:47:06Z",
+      "mission_time": 39727,
+      "call": "PistonMoveAbsWTO",
+      "message": "136->231 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [465sec, 14.9Volts, 0.149Amps, CPT:2187sec]"
+    },
+    {
+      "time": "2025-09-28T08:14:30Z",
+      "mission_time": 52692,
+      "call": "TelemetryInit",
+      "message": "Profile 5. (Apf11 FwRev: 061125)"
+    },
+    {
+      "time": "2025-09-28T08:14:30Z",
+      "mission_time": 52692,
+      "call": "TelemetryInit",
+      "message": "Charge consumption model: OCV:15.2V Wake-Cycles:6548 Standby:7.0days Wake:6.5kC Sensors:0.5kC"
+    },
+    {
+      "time": "2025-09-28T08:19:46Z",
+      "mission_time": 53008,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 243.9uM 27.226C 29.471 8.570 -92.846 / 54,138,535"
+    },
+    {
+      "time": "2025-09-28T08:19:46Z",
+      "mission_time": 53008,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.2dbars / 0x8005ef40 0x7ffeb56d 0x80079080 0x7fff0392"
+    },
+    {
+      "time": "2025-09-28T08:20:19Z",
+      "mission_time": 53041,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 243.1uM 27.228C 29.505 8.568 -92.888 / 54,137,534"
+    },
+    {
+      "time": "2025-09-28T08:20:19Z",
+      "mission_time": 53041,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.2dbars / 0x8005f040 0x7ffec8a4 0x8007a1c9 0x7fff10ad"
+    },
+    {
+      "time": "2025-09-28T08:20:53Z",
+      "mission_time": 53075,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.3dbars / 243.5uM 27.226C 29.490 8.568 -92.833 / 54,138,534"
+    },
+    {
+      "time": "2025-09-28T08:20:53Z",
+      "mission_time": 53075,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.3dbars / 0x8005d852 0x7ffed06d 0x8007965b 0x7fff0a36"
+    },
+    {
+      "time": "2025-09-28T08:21:26Z",
+      "mission_time": 53108,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 244.4uM 27.167C 29.470 8.566 -90.960 / 54,139,534"
+    },
+    {
+      "time": "2025-09-28T08:21:26Z",
+      "mission_time": 53108,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.2dbars / 0x8005e789 0x7ffebaa4 0x80079e12 0x7fff13c0"
+    },
+    {
+      "time": "2025-09-28T08:24:32Z",
+      "mission_time": 53294,
+      "call": "AirSystem",
+      "message": "Battery [216cnt, 15.2V]  Current [20cnt, 79.4mA]  Pneumometer [156cnt, 18.3psi]  Run-Time [89s]"
+    },
+    {
+      "time": "2025-09-28T08:24:45Z",
+      "mission_time": 53307,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 252.1uM 25.367C 29.814 8.566 -33.595 / 54,140,534"
+    },
+    {
+      "time": "2025-09-28T08:24:45Z",
+      "mission_time": 53307,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.0dbars / 0x8005f1e4 0x7ffec7ed 0x80079a12 0x7fff0a09"
+    },
+    {
+      "time": "2025-09-28T08:25:19Z",
+      "mission_time": 53341,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 248.9uM 25.781C 29.794 8.565 -46.837 / 54,137,534"
+    },
+    {
+      "time": "2025-09-28T08:25:19Z",
+      "mission_time": 53341,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.0dbars / 0x8005e9c0 0x7ffec680 0x8007a1b6 0x7fff0e00"
+    },
+    {
+      "time": "2025-09-28T08:25:52Z",
+      "mission_time": 53374,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 243.9uM 26.319C 29.813 8.562 -64.017 / 55,138,534"
+    },
+    {
+      "time": "2025-09-28T08:25:52Z",
+      "mission_time": 53374,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x8005ea24 0x7ffebfb6 0x80079cdb 0x7fff0a5b"
+    },
+    {
+      "time": "2025-09-28T08:26:25Z",
+      "mission_time": 53407,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 248.2uM 26.203C 29.662 8.560 -60.329 / 53,138,534"
+    },
+    {
+      "time": "2025-09-28T08:26:25Z",
+      "mission_time": 53407,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x8005ff89 0x7ffebda4 0x800791db 0x7fff0592"
+    },
+    {
+      "time": "2025-09-28T08:26:58Z",
+      "mission_time": 53440,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 252.1uM 26.015C 29.566 8.560 -54.338 / 54,138,534"
+    },
+    {
+      "time": "2025-09-28T08:26:58Z",
+      "mission_time": 53440,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.1dbars / 0x8005f949 0x7ffebde4 0x800790c0 0x7fff0b76"
+    },
+    {
+      "time": "2025-09-28T08:27:31Z",
+      "mission_time": 53473,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 247.0uM 25.948C 29.815 8.558 -52.182 / 54,140,534"
+    },
+    {
+      "time": "2025-09-28T08:27:31Z",
+      "mission_time": 53473,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.1dbars / 0x8005f0c9 0x7ffec780 0x8007a91b 0x7fff04ed"
+    },
+    {
+      "time": "2025-09-28T08:28:05Z",
+      "mission_time": 53507,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 250.4uM 25.545C 29.818 8.557 -39.291 / 53,139,534"
+    },
+    {
+      "time": "2025-09-28T08:28:05Z",
+      "mission_time": 53507,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.1dbars / 0x8005e6b6 0x7ffecf76 0x8007abd2 0x7fff1b89"
+    },
+    {
+      "time": "2025-09-28T08:28:38Z",
+      "mission_time": 53540,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 247.7uM 25.875C 29.813 8.559 -49.844 / 54,140,534"
+    },
+    {
+      "time": "2025-09-28T08:28:38Z",
+      "mission_time": 53540,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.1dbars / 0x8005f2f6 0x7ffecdc9 0x80079c1b 0x7fff1809"
+    },
+    {
+      "time": "2025-09-28T08:28:55Z",
+      "mission_time": 53557,
+      "call": "AirSystem",
+      "message": "Battery [217cnt, 15.2V]  Current [20cnt, 79.7mA]  Pneumometer [158cnt, 18.6psi]  Run-Time [9s]"
+    },
+    {
+      "time": "2025-09-28T08:29:36Z",
+      "mission_time": 53598,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 251.2uM 25.313C 29.871 8.557 -31.864 / 53,136,534"
+    },
+    {
+      "time": "2025-09-28T08:29:36Z",
+      "mission_time": 53598,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x8005f6c0 0x7ffed592 0x80079540 0x7fff0d92"
+    },
+    {
+      "time": "2025-09-28T08:29:39Z",
+      "mission_time": 53601,
+      "call": "GpsServices",
+      "message": "GPS almanac is current."
+    },
+    {
+      "time": "2025-09-28T08:29:39Z",
+      "mission_time": 53601,
+      "call": "GpsServices",
+      "message": "Initiating GPS fix acquisition."
+    },
+    {
+      "time": "2025-09-28T08:29:49Z",
+      "mission_time": 53611,
+      "call": "gga",
+      "message": "$GPGGA,083000,2732.8733,N,15758.4427,W,0,00,,,M,,M,,*44"
+    },
+    {
+      "time": "2025-09-28T08:29:58Z",
+      "mission_time": 53620,
+      "call": "gga",
+      "message": "$GPGGA,083010,2732.8733,N,15758.4427,W,0,00,,,M,,M,,*45"
+    },
+    {
+      "time": "2025-09-28T08:30:08Z",
+      "mission_time": 53630,
+      "call": "gga",
+      "message": "$GPGGA,083020,2732.8733,N,15758.4427,W,0,00,,,M,,M,,*46"
+    },
+    {
+      "time": "2025-09-28T08:30:19Z",
+      "mission_time": 53641,
+      "call": "gga",
+      "message": "$GPGGA,083030,2732.7433,N,15758.3694,W,1,07,1.0,-8.6,M,-5.6,M,,*62"
+    },
+    {
+      "time": "2025-09-28T08:30:19Z",
+      "mission_time": 53641,
+      "call": "GpsServices",
+      "message": "Profile 5 GPS fix obtained in 40 seconds."
+    },
+    {
+      "time": "2025-09-28T08:30:19Z",
+      "mission_time": 53641,
+      "call": "GpsServices",
+      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
+    },
+    {
+      "time": "2025-09-28T08:30:19Z",
+      "mission_time": 53641,
+      "call": "GpsServices",
+      "message": "Fix: -157.9728  27.5457 09/28/2025 083030    7"
+    },
+    {
+      "time": "2025-09-28T08:30:29Z",
+      "mission_time": 53651,
+      "call": "gga",
+      "message": "$GPGGA,083040,2732.7438,N,15758.3676,W,1,11,0.7,-3.4,M,-5.6,M,,*6A"
+    },
+    {
+      "time": "2025-09-28T08:30:38Z",
+      "mission_time": 53660,
+      "call": "gga",
+      "message": "$GPGGA,083050,2732.7443,N,15758.3662,W,1,11,0.7,-3.0,M,-5.6,M,,*66"
+    },
+    {
+      "time": "2025-09-28T08:30:38Z",
+      "mission_time": 53660,
+      "call": "GpsServices",
+      "message": "APF11 RTC skew (-12s) OK."
+    },
+    {
+      "time": "2025-09-28T08:30:38Z",
+      "mission_time": 53660,
+      "call": "GpsServices",
+      "message": "GPS services complete."
+    },
+    {
+      "time": "2025-09-28T08:31:13Z",
+      "mission_time": 53695,
+      "call": "IrGeoLoc",
+      "message": "<x,y,z>=<-5244km,-2120km,2932km> lat=27.557 lon=-157.988 IrSysTime=0xeddf6ab9"
+    },
+    {
+      "time": "2025-09-28T08:31:16Z",
+      "mission_time": 53698,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "time": "2025-09-28T08:31:34Z",
+      "mission_time": 53716,
+      "call": "CLogin",
+      "message": "Connection 1 established in 18 seconds."
+    },
+    {
+      "time": "2025-09-28T08:32:15Z",
+      "mission_time": 53757,
+      "call": "expect",
+      "message": "Attempt to read prompt string [Last login:] failed."
+    },
+    {
+      "time": "2025-09-28T08:32:15Z",
+      "mission_time": 53757,
+      "call": "login",
+      "message": "Login failed."
+    },
+    {
+      "time": "2025-09-28T08:32:45Z",
+      "mission_time": 53787,
+      "call": "expect",
+      "message": "Attempt to read prompt string [login:] failed."
+    },
+    {
+      "time": "2025-09-28T08:32:45Z",
+      "mission_time": 53787,
+      "call": "login",
+      "message": "Login prompt not received."
+    },
+    {
+      "time": "2025-09-28T08:32:55Z",
+      "mission_time": 53797,
+      "call": "CLogin",
+      "message": "Connection 2 established in 99 seconds."
+    },
+    {
+      "time": "2025-09-28T08:33:30Z",
+      "mission_time": 53832,
+      "call": "expect",
+      "message": "Attempt to read prompt string [Last login:] failed."
+    },
+    {
+      "time": "2025-09-28T08:33:30Z",
+      "mission_time": 53832,
+      "call": "login",
+      "message": "Login failed."
+    },
+    {
+      "time": "2025-09-28T08:34:00Z",
+      "mission_time": 53862,
+      "call": "expect",
+      "message": "Attempt to read prompt string [login:] failed."
+    },
+    {
+      "time": "2025-09-28T08:34:00Z",
+      "mission_time": 53862,
+      "call": "login",
+      "message": "Login prompt not received."
+    },
+    {
+      "time": "2025-09-28T08:34:00Z",
+      "mission_time": 53862,
+      "call": "CLogin",
+      "message": "Attempt to connect to primary host failed after 2 tries.  Connecting to alternate host."
+    },
+    {
+      "time": "2025-09-28T08:34:13Z",
+      "mission_time": 53875,
+      "call": "CLogin",
+      "message": "Connection 3 established in 177 seconds."
+    },
+    {
+      "time": "2025-09-28T08:34:38Z",
+      "mission_time": 53900,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "time": "2025-09-28T08:34:42Z",
+      "mission_time": 53904,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 29 seconds]"
+    },
+    {
+      "time": "2025-09-28T08:34:44Z",
+      "mission_time": 53906,
+      "call": "RxConfig",
+      "message": "Downloading \"mission.cfg\" from host."
+    },
+    {
+      "time": "2025-09-28T08:34:59Z",
+      "mission_time": 53921,
+      "call": "RxConfig",
+      "message": "Download successful: [bytes:33, sec:13.0, bps:3]"
+    },
+    {
+      "time": "2025-09-28T08:35:03Z",
+      "mission_time": 53925,
+      "call": "WriteVitals_",
+      "message": "Writing vitals to \"23808.005.msg\"."
+    },
+    {
+      "time": "2025-09-28T08:35:11Z",
+      "mission_time": 53933,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.005.log\" to host."
+    },
+    {
+      "time": "2025-09-28T08:37:56Z",
+      "mission_time": 54098,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:42086, sec:165.3, bps:255]"
+    },
+    {
+      "time": "2025-09-28T08:37:57Z",
+      "mission_time": 54099,
+      "call": "fmove",
+      "message": "Moved: 23808.005.log -> archive/23808.005.log"
+    },
+    {
+      "time": "2025-09-28T08:38:01Z",
+      "mission_time": 54103,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.005.msg\" to host."
+    },
+    {
+      "time": "2025-09-28T08:39:44Z",
+      "mission_time": 54206,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:22172, sec:103.3, bps:215]"
+    },
+    {
+      "time": "2025-09-28T08:39:46Z",
+      "mission_time": 54208,
+      "call": "fmove",
+      "message": "Moved: 23808.005.msg -> archive/23808.005.msg"
+    },
+    {
+      "time": "2025-09-28T08:39:49Z",
+      "mission_time": 54211,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.005.isus\" to host."
+    },
+    {
+      "time": "2025-09-28T08:41:25Z",
+      "mission_time": 54307,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:24395, sec:95.5, bps:255]"
+    },
+    {
+      "time": "2025-09-28T08:41:26Z",
+      "mission_time": 54308,
+      "call": "fmove",
+      "message": "Moved: 23808.005.isus -> archive/23808.005.isus"
+    },
+    {
+      "time": "2025-09-28T08:41:30Z",
+      "mission_time": 54312,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.005.dura\" to host."
+    },
+    {
+      "time": "2025-09-28T08:42:24Z",
+      "mission_time": 54366,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:11975, sec:54.6, bps:219]"
+    },
+    {
+      "time": "2025-09-28T08:42:25Z",
+      "mission_time": 54367,
+      "call": "fmove",
+      "message": "Moved: 23808.005.dura -> archive/23808.005.dura"
+    },
+    {
+      "time": "2025-09-28T08:42:26Z",
+      "mission_time": 54368,
+      "call": "UpLoad",
+      "message": "Files successfully uploaded: 4"
+    },
+    {
+      "time": "2025-09-28T08:42:26Z",
+      "mission_time": 54368,
+      "call": "UpLoad",
+      "message": "Upload complete."
+    },
+    {
+      "time": "2025-09-28T08:42:33Z",
+      "mission_time": 54375,
+      "call": "chat",
+      "message": "Expected string [cmd>] not received."
+    },
+    {
+      "time": "2025-09-28T08:42:33Z",
+      "mission_time": 54375,
+      "call": "logout",
+      "message": "Can't get command prompt."
+    },
+    {
+      "time": "2025-09-28T08:42:34Z",
+      "mission_time": 54376,
+      "call": "logout",
+      "message": "Log-out successful."
+    },
+    {
+      "time": "2025-09-28T08:42:35Z",
+      "mission_time": 54377,
+      "call": "Telemetry",
+      "message": "Telemetry cycle complete: PrfId=5 ConnectionAttempts=3  Connections=3"
+    },
+    {
+      "time": "2025-09-28T08:42:35Z",
+      "mission_time": 54377,
+      "call": "TelemetryTerminate",
+      "message": "Parsing new mission configuration."
+    },
+    {
+      "time": "2025-09-28T08:42:36Z",
+      "mission_time": 54378,
+      "call": "configure",
+      "message": "Parsing configurators in \"mission.cfg\"."
+    },
+    {
+      "time": "2025-09-28T08:42:36Z",
+      "mission_time": 54378,
+      "call": "configure",
+      "message": "TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)]."
+    },
+    {
+      "time": "2025-09-28T08:42:37Z",
+      "mission_time": 54379,
+      "call": "configure",
+      "message": "Configuration CRCs and syntax OK."
+    },
+    {
+      "time": "2025-09-28T08:42:37Z",
+      "mission_time": 54379,
+      "call": "ConfigSupervisor",
+      "message": "Sanity check violated: cfg->TimeDeepProfileDescent >= (cfg->PressureProfile-cfg->PressurePark)/dPdt"
+    },
+    {
+      "time": "2025-09-28T08:42:37Z",
+      "mission_time": 54379,
+      "call": "ConfigSupervisor",
+      "message": "Configuration accepted."
+    },
+    {
+      "time": "2025-09-28T08:42:37Z",
+      "mission_time": 54379,
+      "call": "TelemetryTerminate",
+      "message": "Reconditioning the file system."
+    }
+  ],
+  "dura": {
+    "science_data": [
+      {
+        "CRC": "0xA829",
+        "ID": "pH",
+        "datetime": "2025-09-04T16:47:14Z",
+        "CTD_depth": 100.81,
+        "CTD_temp": 20.7234,
+        "CTD_salinity": 33.6929,
+        "sample_counter": 3,
+        "power_cycle_counter": 0,
+        "error_counter": 0,
+        "housing_temp": 18.79,
+        "housing_humidity": 4.0,
+        "input_voltage": 15.226,
+        "input_current": 0.03875,
+        "foobar_pH": 6.894,
+        "backup_battery_V": 3.467,
+        "Vrs_mean": -0.85605,
+        "Vrs_stdev": 9e-06,
+        "Vk_mean": -0.861432,
+        "Vk_stdev": 7e-06,
+        "lk": 2.44e-10,
+        "lb": -1.0008400000000001e-07
+      }
+    ],
+    "engineering_data": [
+      {
+        "Id": 23808,
+        "ProfileId": 5,
+        "Timestamp": "2025-09-04T16:45:22Z",
+        "Datalogger Serial Num": "SN:3004",
+        "Application      Name": "MoSoS v5.1.7 MSC3 1290 revB",
+        "App Build        Date": "Jun  6 2025, 20:24:34",
+        "Power Up Time   (GMT)": "09/04/2025 16:45:19",
+        "Current  Time   (GMT)": "09/04/2025 16:45:25",
+        "Serial Inactive Sleep": "30 sec",
+        "MSC3 Info": "Tiva 1290 running MoSoS v5",
+        "Storage          Size": "973504",
+        "Storage          Left": "99.68%",
+        "WatchDog      Counter": "0",
+        "System Reset  Counter": "16",
+        "System Error  Counter": "0",
+        "Last System     Error": "0",
+        "Last System ErrorTime": "09/04/2025 16:45:25",
+        "DURA  Error   Counter": "0",
+        "Last DURA       Error": "0",
+        "Last DURA Error  Time": "01/01/1900 06:00:00",
+        "DURA Sample   Counter": "2",
+        "Last Sample Rec. Time": "09/04/2025 05:20:33"
+      },
+      {
+        "Id": 23808,
+        "ProfileId": 5,
+        "Timestamp": "2025-09-04T18:46:51Z",
+        "Datalogger Serial Num": "SN:3004",
+        "Application      Name": "MoSoS v5.1.7 MSC3 1290 revB",
+        "App Build        Date": "Jun  6 2025, 20:24:34",
+        "Power Up Time   (GMT)": "09/04/2025 18:46:38",
+        "Current  Time   (GMT)": "09/04/2025 18:46:54",
+        "Serial Inactive Sleep": "30 sec",
+        "MSC3 Info": "Tiva 1290 running MoSoS v5",
+        "Storage          Size": "973504",
+        "Storage          Left": "99.68%",
+        "WatchDog      Counter": "0",
+        "System Reset  Counter": "19",
+        "System Error  Counter": "0",
+        "Last System     Error": "0",
+        "Last System ErrorTime": "09/04/2025 18:46:54",
+        "DURA  Error   Counter": "0",
+        "Last DURA       Error": "0",
+        "Last DURA Error  Time": "01/01/1900 06:00:00",
+        "DURA Sample   Counter": "3",
+        "Last Sample Rec. Time": "09/04/2025 16:47:12"
+      }
+    ]
+  },
+  "isus": {
+    "science_data": [
+      {
+        "CRC": "0x2CAF",
+        "ID": "A",
+        "datetime": "2025-09-04T16:47:30Z",
+        "CTD_depth": 100.81,
+        "CTD_temp": 20.7234,
+        "CTD_salinity": 33.6929,
+        "sample_counter": 2,
+        "POR_counter": 0,
+        "isus_error_counter": 0,
+        "sys_error_counter": 0,
+        "housing_temp": 18.85,
+        "housing_humidity": 4.0,
+        "input_voltage": 14.766,
+        "input_current": 0.4338,
+        "max_lamp_intensity": 34068.0,
+        "min_lamp_intensity": 13378.0,
+        "DC_mean": 754.01,
+        "DC_stdev": 32.32,
+        "isus_salinity": 33.69,
+        "isus_nitrate": -12.2,
+        "fit_error": 0.05468,
+        "data_pixel_begin": 34,
+        "data_pixel_end": 75,
+        "DC_sw": 52037.4,
+        "packed_data": [
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535,
+          65535
+        ]
+      }
+    ],
+    "engineering_data": [
+      {
+        "Id": 23808,
+        "ProfileId": 5,
+        "Timestamp": "2025-09-04T16:45:05Z",
+        "Datalogger Serial Num": "SN:3004",
+        "Application      Name": "MoSoS v5.1.7 MSC3 1290 revB",
+        "App Build        Date": "Jun  6 2025, 20:24:34",
+        "Power Up Time   (GMT)": "09/04/2025 16:45:03",
+        "Current  Time   (GMT)": "09/04/2025 16:45:08",
+        "Serial Inactive Sleep": "30 sec",
+        "MSC3 Info": "Tiva 1290 running MoSoS v5",
+        "Storage          Size": "973504",
+        "Storage          Left": "99.68%",
+        "WatchDog      Counter": "0",
+        "System Reset  Counter": "15",
+        "System Error  Counter": "0",
+        "Last System     Error": "0",
+        "Last System ErrorTime": "09/04/2025 16:45:08",
+        "ISUS  Error   Counter": "0",
+        "Last ISUS       Error": "0",
+        "Last ISUS Error  Time": "01/01/1900 06:00:00",
+        "ISUS Sample   Counter": "2",
+        "Last Sample Rec. Time": "09/04/2025 05:20:51",
+        "Fiberlite    Odometer": "00:01:03",
+        "Fiberlite      Cycles": "14",
+        "Spec Intensity LampON": "5000",
+        "Spec Integration Time": "1000",
+        "Spec Pre  scans taken": "2",
+        "Spec Lite scans taken": "3",
+        "Spec Dark scans taken": "1",
+        "Calibration      Date": "06/19/2025",
+        "Sw Calibration   Temp": "19.94",
+        "Wavelength Fit  Range": "217.250 <-> 240.226",
+        "Pixel Fit       Range": "34 <-> 63",
+        "Fitted Concentrations": "2",
+        "Baseline        Model": "(ax + b)",
+        "Br Temp  Compensation": "ENABLED",
+        "Bromide Term in Model": "will be FIXED (to external CTD value)",
+        "Zeiss Coefficient Vals": "1.897380e+02,7.819820e-01,1.266210e-04,-2.974700e-07,0.000000e+00"
+      },
+      {
+        "Id": 23808,
+        "ProfileId": 5,
+        "Timestamp": "2025-09-04T18:46:40Z",
+        "Datalogger Serial Num": "SN:3004",
+        "Application      Name": "MoSoS v5.1.7 MSC3 1290 revB",
+        "App Build        Date": "Jun  6 2025, 20:24:34",
+        "Power Up Time   (GMT)": "09/04/2025 18:46:38",
+        "Current  Time   (GMT)": "09/04/2025 18:46:43",
+        "Serial Inactive Sleep": "30 sec",
+        "MSC3 Info": "Tiva 1290 running MoSoS v5",
+        "Storage          Size": "973504",
+        "Storage          Left": "99.68%",
+        "WatchDog      Counter": "0",
+        "System Reset  Counter": "19",
+        "System Error  Counter": "0",
+        "Last System     Error": "0",
+        "Last System ErrorTime": "09/04/2025 18:46:43",
+        "ISUS  Error   Counter": "0",
+        "Last ISUS       Error": "0",
+        "Last ISUS Error  Time": "01/01/1900 06:00:00",
+        "ISUS Sample   Counter": "3",
+        "Last Sample Rec. Time": "09/04/2025 16:47:30",
+        "Fiberlite    Odometer": "00:01:07",
+        "Fiberlite      Cycles": "15",
+        "Spec Intensity LampON": "5000",
+        "Spec Integration Time": "1000",
+        "Spec Pre  scans taken": "2",
+        "Spec Lite scans taken": "3",
+        "Spec Dark scans taken": "1",
+        "Calibration      Date": "06/19/2025",
+        "Sw Calibration   Temp": "19.94",
+        "Wavelength Fit  Range": "217.250 <-> 240.226",
+        "Pixel Fit       Range": "34 <-> 63",
+        "Fitted Concentrations": "2",
+        "Baseline        Model": "(ax + b)",
+        "Br Temp  Compensation": "ENABLED",
+        "Bromide Term in Model": "will be FIXED (to external CTD value)",
+        "Zeiss Coefficient Vals": "1.897380e+02,7.819820e-01,1.266210e-04,-2.974700e-07,0.000000e+00"
+      }
+    ]
+  }
+}

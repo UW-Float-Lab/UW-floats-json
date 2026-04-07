@@ -1,0 +1,907 @@
+{
+  "FILE_CREATION_DATE": "2026-04-07T17:30:21Z",
+  "FILE_UPDATE_DATE": "2026-04-07T17:30:21Z",
+  "DECODER_VERSION": "0.3.0",
+  "SCHEMA_VERSION": "0.3.0",
+  "INTERNAL_ID_NUMBER": 23808,
+  "TRANSMISSION ID NUMBER": 23808,
+  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "AOML_ID NUMBER": 10071,
+  "WMO_ID NUMBER": 7902266,
+  "WMO INSTRUMENT TYPE (TABLE 1770)": null,
+  "WMO RECORDER TYPE (TABLE 4770)": null,
+  "OPERATING_INSTITUTION": "UW, Seattle, WA",
+  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PI": "RISER, STEVE AND GRAY, ALISON",
+  "PROJECT_NAME": "Core Float",
+  "PROFILE_NUMBER": 0,
+  "POSITIONING_SYSTEM": "GPS",
+  "Timestamps": {
+    "StartTelemetry": "2025-09-25T12:38:43Z"
+  },
+  "GPS": [
+    {
+      "description": "GPS_FIX",
+      "TIME": "2025-09-25T12:40:40Z",
+      "LATITUDE": 27.5223,
+      "LONGITUDE": -157.9932,
+      "sat_cnt": 5,
+      "time_to_fix": 31
+    }
+  ],
+  "Iridium": [
+    {
+      "LATITUDE": 27.525,
+      "LONGITUDE": -157.988,
+      "TIME": "2025-09-25T12:28:13Z",
+      "x": -5244.0,
+      "y": -2120.0,
+      "z": 2928.0,
+      "system_time": 3988722874
+    }
+  ],
+  "raw_mission_config": {
+    "model": {
+      "value": "Apf11"
+    },
+    "Id": {
+      "value": "23808"
+    },
+    "FwRev": {
+      "value": "061125"
+    },
+    "AscentTimeOut": {
+      "value": "540",
+      "unit": "min"
+    },
+    "AtDialCmd": {
+      "value": "AT+CBST=71,0,1;DT00881600005496"
+    },
+    "AltDialCmd": {
+      "value": "ATDT0012066163256"
+    },
+    "BuoyancyNudge": {
+      "value": "10",
+      "unit": "count"
+    },
+    "CompensatorHyperRetraction": {
+      "value": "0",
+      "unit": "count"
+    },
+    "ConnectTimeOut": {
+      "value": "60",
+      "unit": "sec"
+    },
+    "CpActivationP": {
+      "value": "985",
+      "unit": "dbar"
+    },
+    "DeepProfileDescentTime": {
+      "value": "120",
+      "unit": "min"
+    },
+    "DeepProfilePistonPos": {
+      "value": "25",
+      "unit": "count"
+    },
+    "DeepProfilePressure": {
+      "value": "1200",
+      "unit": "dbar"
+    },
+    "DownTime": {
+      "value": "540",
+      "unit": "min"
+    },
+    "DuraRefWarmUpHrs": {
+      "value": "255"
+    },
+    "DuraInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "FatFsEnable": {
+      "value": "1"
+    },
+    "FlbbMode": {
+      "value": "1"
+    },
+    "FloatId": {
+      "value": "23808"
+    },
+    "FullExtension": {
+      "value": "231",
+      "unit": "count"
+    },
+    "FullRetraction": {
+      "value": "9",
+      "unit": "count"
+    },
+    "InitialBuoyancyNudge": {
+      "value": "22",
+      "unit": "count"
+    },
+    "IsusInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "MaxAirBladder": {
+      "value": "154",
+      "unit": "count"
+    },
+    "MaxLogKb": {
+      "value": "60",
+      "unit": "KByte"
+    },
+    "MissionPrelude": {
+      "value": "360",
+      "unit": "min"
+    },
+    "OcrInit": {
+      "value": "-500",
+      "unit": "dbar"
+    },
+    "OkVacuum": {
+      "value": "230",
+      "unit": "count"
+    },
+    "OptodeMode": {
+      "value": "1"
+    },
+    "PActivationPistonPosition": {
+      "value": "16",
+      "unit": "count"
+    },
+    "ParkDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "ParkPistonPos": {
+      "value": "70",
+      "unit": "count"
+    },
+    "ParkPressure": {
+      "value": "800",
+      "unit": "dbar"
+    },
+    "PnPCycleLen": {
+      "value": "1"
+    },
+    "TelemetryRetry": {
+      "value": "15",
+      "unit": "min"
+    },
+    "TimeOfDay": {
+      "value": "DISABLED",
+      "unit": "min"
+    },
+    "UpTime": {
+      "value": "660",
+      "unit": "min"
+    },
+    "ZModemTimeOut": {
+      "value": "80",
+      "unit": "sec"
+    },
+    "Verbosity": {
+      "value": "2"
+    },
+    "DebugBits": {
+      "value": "0x0002"
+    }
+  },
+  "raw_engineering_data": [
+    {
+      "Apf11FwRev": "061125",
+      "ActiveBallastAdjustments": "0",
+      "AirBladderPressure": "157",
+      "AirPumpAmps": "22",
+      "AirPumpVolts": "218",
+      "BuoyancyPumpOnTime": "1079",
+      "BuoyancyPumpAmps": "0",
+      "BuoyancyPumpVolts": "0",
+      "ConnectionAttempts": "1",
+      "Connections": "1",
+      "Coulombs": "2.0kC",
+      "CoulombsDescent": "0.0kC",
+      "CoulombsPark": "0.0kC",
+      "CoulombsPrfDescent": "0.0kC",
+      "CoulombsProfile": "0.0kC",
+      "CoulombsSleep": "0.0kC",
+      "CoulombsTelemetry": "2.0kC",
+      "CoulombsWake": "2.0kC",
+      "CurrentPistonPosition": "231",
+      "DeepProfilePistonPosition": "25",
+      "DuraPowerCycleCounter": "0",
+      "DuraWakeCurrent": "0.0mA",
+      "DuraWakePower": "0.0mW",
+      "DuraWakeVolts": "0.0V",
+      "FlbbAmps": "0",
+      "FlbbStatus": "0x00",
+      "FlbbVolts": "0",
+      "FloatId": "23808",
+      "GpsFixTime": "31",
+      "HumidityAd12Park": "0 (-23.8%)",
+      "HumidityAd12Pneumatic": "0 (-23.8%)",
+      "HumidityAd12PneumaticRef": "0 (-23.8%)",
+      "IsusPowerCycleCounter": "0",
+      "IsusWakeCurrent": "0.0mA",
+      "IsusWakePower": "0.0mW",
+      "IsusWakeVolts": "0.0V",
+      "LeakDetectorChan": [
+        "{sample:0xf state:0 count:0 epoch:1758783403 mtime:1094}",
+        "{sample:0xf state:0 count:0 epoch:1758783403 mtime:1094}",
+        "{sample:0xf state:0 count:0 epoch:1758783403 mtime:1094}",
+        "{sample:0xf state:0 count:0 epoch:1758783403 mtime:1094}"
+      ],
+      "LeakSensor": "{state:0, count:0, ad12:3868cnt, v:2.36V, index:0.0%, epoch:1758783403sec, mtime:1094sec}",
+      "MuxerTemperature": "0.00C",
+      "MuxerHumidity": "0.0%",
+      "MuxerWakeCurrent": "0.0mA",
+      "MuxerWakePower": "0.0mW",
+      "MuxerWakeVolts": "0.0V",
+      "ObsIndex": "0",
+      "OcrAmps": "0",
+      "OcrStatuss": "0x00",
+      "OcrVolts": "0",
+      "OptodeAmps": "0",
+      "OptodeVolts": "0",
+      "ParkDescentPCnt": "0",
+      "ParkPistonPosition": "70",
+      "ParkObs": "{ 0.0dbar, 0.000C, 0.0000PSU / nan / 0.000C 0.000 0.000 / 0, 0, 0}",
+      "ProfileId": "000",
+      "QuiescentAmps": "0",
+      "QuiescentVolts": "0",
+      "RtcSkew": "-4",
+      "Sbe41cpAmps": "0",
+      "Sbe41cpStatus": "0x00000000",
+      "Sbe41cpVolts": "0",
+      "SleepSec": "14034",
+      "StandbySec": "397490",
+      "status": "0x00000000",
+      "SurfaceObs": "{ 0.1dbar, nan, nan / nan / 26.511C 29.484 8.572 / 55, 136, 535}",
+      "SurfacePistonPosition": "0",
+      "SurfacePressure": "0.00",
+      "TimeStartDescent": "0",
+      "TimeStartPark": "0",
+      "TimeStartProfileDescent": "0",
+      "TimeStartProfile": "0",
+      "TimeStopProfile": "0",
+      "TimeStartTelemetry": "1758803923       Sep 25 2025 12:38:43",
+      "Vacuum": "209",
+      "WakeCycles": "86",
+      "WakeSec": "7588"
+    }
+  ],
+  "Log": [
+    {
+      "time": "2025-09-20T19:53:23Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->016 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 [1044sec, 15.0Volts, 0.139Amps, CPT:1079sec]"
+    },
+    {
+      "time": "2025-09-20T20:11:03Z",
+      "mission_time": 1060,
+      "call": "Apf11Init",
+      "message": "Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal)."
+    },
+    {
+      "time": "2025-09-25T06:38:29Z",
+      "mission_time": 0,
+      "call": "PreludeInit",
+      "message": "Mission restarted. [pid=0, itime=384306]"
+    },
+    {
+      "time": "2025-09-25T06:38:29Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1079sec, 14.7Volts, 0.225Amps, CPT:1079sec]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "Prelude",
+      "message": "Logging configuration and initiating telemetry."
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "Mission configuration for Apf11 FwRev 061125:"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "AscentTimeOut(540) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "AltDialCmd(ATDT0012066163256) [alternate]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudge(10) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudgeInitial(22) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "CompensatorHyperRetraction(0) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "ConnectTimeOut(60) [sec]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "CpActivationP(985) [dbar]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DeepProfileDescentTime(120) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePistonPos(25) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePressure(1200) [dbar]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DownTime(540) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DuraRefWarmUpHrs(255)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DuraInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "FatFsEnable(1)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "FlbbMode(1)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "FloatId(23808)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "FullExtension(231) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "FullRetraction(9) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "MaxAirBladder(154) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "MaxLogKb(60) [KByte]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "MissionPrelude(360) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "OcrInit(-500) [dbar]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "OkVacuum(230) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "OptodeMode(1)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "PActivationPistonPosition(16) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "ParkDescentTime(240) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "ParkPistonPos(70) [count]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "ParkPressure(800) [dbar]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "PnPCycleLen(1)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "Pwd(0xafb3)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "TelemetryRetry(15) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "TimeOfDay(DISABLED) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "UpTime(660) [min]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "User(f23808)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "ZModemTimeOut(80) [sec]"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "Verbosity(2)"
+    },
+    {
+      "time": "2025-09-25T06:56:38Z",
+      "mission_time": 1089,
+      "call": "LogConfiguration",
+      "message": "DebugBits(0x0002)"
+    },
+    {
+      "time": "2025-09-25T12:38:43Z",
+      "mission_time": 21614,
+      "call": "TelemetryInit",
+      "message": "Profile 0. (Apf11 FwRev: 061125)"
+    },
+    {
+      "time": "2025-09-25T12:38:43Z",
+      "mission_time": 21614,
+      "call": "TelemetryInit",
+      "message": "Charge consumption model: OCV:15.5V Wake-Cycles:86 Standby:4.6days Wake:2.0kC Sensors:0.0kC"
+    },
+    {
+      "time": "2025-09-25T12:39:30Z",
+      "mission_time": 21661,
+      "call": "AirSystem",
+      "message": "Battery [218cnt, 15.3V]  Current [21cnt, 80.5mA]  Pneumometer [157cnt, 18.5psi]  Run-Time [23s]"
+    },
+    {
+      "time": "2025-09-25T12:40:04Z",
+      "mission_time": 21695,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.1dbars / 249.7uM 26.511C 29.484 8.572 -70.151 / 55,136,535"
+    },
+    {
+      "time": "2025-09-25T12:40:04Z",
+      "mission_time": 21695,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.1dbars / 0x8005f1c0 0x7ffeebc9 0x8007bd52 0x7fff2992"
+    },
+    {
+      "time": "2025-09-25T12:40:07Z",
+      "mission_time": 21698,
+      "call": "GpsServices",
+      "message": "GPS almanac is current."
+    },
+    {
+      "time": "2025-09-25T12:40:07Z",
+      "mission_time": 21698,
+      "call": "GpsServices",
+      "message": "Initiating GPS fix acquisition."
+    },
+    {
+      "time": "2025-09-25T12:40:17Z",
+      "mission_time": 21708,
+      "call": "gga",
+      "message": "$GPGGA,124020,2731.4208,N,15759.6465,W,0,00,,,M,,M,,*4D"
+    },
+    {
+      "time": "2025-09-25T12:40:28Z",
+      "mission_time": 21719,
+      "call": "gga",
+      "message": "$GPGGA,124030,2731.3395,N,15759.5943,W,6,05,1.6,,M,-5.5,M,,*6D"
+    },
+    {
+      "time": "2025-09-25T12:40:38Z",
+      "mission_time": 21729,
+      "call": "gga",
+      "message": "$GPGGA,124040,2731.3392,N,15759.5930,W,1,05,1.6,,M,-5.5,M,,*6E"
+    },
+    {
+      "time": "2025-09-25T12:40:38Z",
+      "mission_time": 21729,
+      "call": "GpsServices",
+      "message": "Profile 0 GPS fix obtained in 31 seconds."
+    },
+    {
+      "time": "2025-09-25T12:40:38Z",
+      "mission_time": 21729,
+      "call": "GpsServices",
+      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
+    },
+    {
+      "time": "2025-09-25T12:40:38Z",
+      "mission_time": 21729,
+      "call": "GpsServices",
+      "message": "Fix: -157.9932  27.5223 09/25/2025 124040    5"
+    },
+    {
+      "time": "2025-09-25T12:40:47Z",
+      "mission_time": 21738,
+      "call": "gga",
+      "message": "$GPGGA,124050,2731.4061,N,15759.6341,W,1,05,1.6,-7.9,M,-5.5,M,,*65"
+    },
+    {
+      "time": "2025-09-25T12:40:56Z",
+      "mission_time": 21747,
+      "call": "gga",
+      "message": "$GPGGA,124100,2731.4069,N,15759.6340,W,1,05,1.6,-9.1,M,-5.5,M,,*6E"
+    },
+    {
+      "time": "2025-09-25T12:40:56Z",
+      "mission_time": 21747,
+      "call": "GpsServices",
+      "message": "APF11 RTC skew (-4s) OK."
+    },
+    {
+      "time": "2025-09-25T12:40:56Z",
+      "mission_time": 21747,
+      "call": "GpsServices",
+      "message": "GPS services complete."
+    },
+    {
+      "time": "2025-09-25T12:41:31Z",
+      "mission_time": 21782,
+      "call": "IrGeoLoc",
+      "message": "<x,y,z>=<-5244km,-2120km,2928km> lat=27.525 lon=-157.988 IrSysTime=0xedbf14ba"
+    },
+    {
+      "time": "2025-09-25T12:41:34Z",
+      "mission_time": 21785,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "time": "2025-09-25T12:41:56Z",
+      "mission_time": 21807,
+      "call": "CLogin",
+      "message": "Connection 1 established in 22 seconds."
+    },
+    {
+      "time": "2025-09-25T12:42:05Z",
+      "mission_time": 21816,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "time": "2025-09-25T12:42:16Z",
+      "mission_time": 21827,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 20 seconds]"
+    },
+    {
+      "time": "2025-09-25T12:42:17Z",
+      "mission_time": 21828,
+      "call": "RxConfig",
+      "message": "Downloading \"mission.cfg\" from host."
+    },
+    {
+      "time": "2025-09-25T12:42:36Z",
+      "mission_time": 21847,
+      "call": "RxConfig",
+      "message": "Download successful: [bytes:33, sec:17.1, bps:2]"
+    },
+    {
+      "time": "2025-09-25T12:42:42Z",
+      "mission_time": 21853,
+      "call": "WriteVitals_",
+      "message": "Writing vitals to \"23808.000.msg\"."
+    },
+    {
+      "time": "2025-09-25T12:43:17Z",
+      "mission_time": 21888,
+      "call": "chat",
+      "message": "Expected string [rz] not received."
+    },
+    {
+      "time": "2025-09-25T12:43:17Z",
+      "mission_time": 21888,
+      "call": "UpLoadFile",
+      "message": "Failed attempt to execute \"rz\" on the host."
+    },
+    {
+      "time": "2025-09-25T12:43:22Z",
+      "mission_time": 21893,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "time": "2025-09-25T12:43:33Z",
+      "mission_time": 21904,
+      "call": "CLogin",
+      "message": "Connection 2 established in 11 seconds."
+    },
+    {
+      "time": "2025-09-25T12:43:47Z",
+      "mission_time": 21918,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "time": "2025-09-25T12:43:52Z",
+      "mission_time": 21923,
+      "call": "chat",
+      "message": "Expected string [cmd>] not received."
+    },
+    {
+      "time": "2025-09-25T12:43:52Z",
+      "mission_time": 21923,
+      "call": "login",
+      "message": "Attempt to set the command prompt failed."
+    },
+    {
+      "time": "2025-09-25T12:43:57Z",
+      "mission_time": 21928,
+      "call": "chat",
+      "message": "Expected string [cmd>] not received."
+    },
+    {
+      "time": "2025-09-25T12:43:57Z",
+      "mission_time": 21928,
+      "call": "login",
+      "message": "Attempt to set the command prompt failed."
+    },
+    {
+      "time": "2025-09-25T12:44:02Z",
+      "mission_time": 21933,
+      "call": "chat",
+      "message": "Expected string [cmd>] not received."
+    },
+    {
+      "time": "2025-09-25T12:44:02Z",
+      "mission_time": 21933,
+      "call": "login",
+      "message": "Attempt to set the command prompt failed."
+    },
+    {
+      "time": "2025-09-25T12:44:06Z",
+      "mission_time": 21937,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 33 seconds]"
+    },
+    {
+      "time": "2025-09-25T12:44:26Z",
+      "mission_time": 21957,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.000.msg\" to host."
+    },
+    {
+      "time": "2025-09-25T12:44:59Z",
+      "mission_time": 21990,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:3429, sec:33.3, bps:103]"
+    },
+    {
+      "time": "2025-09-25T12:45:00Z",
+      "mission_time": 21991,
+      "call": "fmove",
+      "message": "Moved: 23808.000.msg -> archive/23808.000.msg"
+    },
+    {
+      "time": "2025-09-25T12:45:05Z",
+      "mission_time": 21996,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.2509251225.log\" to host."
+    },
+    {
+      "time": "2025-09-25T12:46:48Z",
+      "mission_time": 22099,
+      "call": "readline",
+      "message": "Time-out expired, aborting ZMODEM transfer."
+    },
+    {
+      "time": "2025-09-25T12:46:48Z",
+      "mission_time": 22099,
+      "call": "UpLoadFile",
+      "message": "Upload failed."
+    },
+    {
+      "time": "2025-09-25T12:48:13Z",
+      "mission_time": 22184,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "time": "2025-09-25T12:48:18Z",
+      "mission_time": 22189,
+      "call": "chat",
+      "message": "Expected string [OK] not received."
+    },
+    {
+      "time": "2025-09-25T12:49:26Z",
+      "mission_time": 22257,
+      "call": "chat",
+      "message": "Expected string [CONNECT] not received."
+    },
+    {
+      "time": "2025-09-25T12:49:26Z",
+      "mission_time": 22257,
+      "call": "modem_connect",
+      "message": "Modem command [AT+CBST=71,0,1;DT00881600005496] failed."
+    },
+    {
+      "time": "2025-09-25T12:49:26Z",
+      "mission_time": 22257,
+      "call": "connect",
+      "message": "Connection attempt failed."
+    },
+    {
+      "time": "2025-09-25T12:49:35Z",
+      "mission_time": 22266,
+      "call": "CLogin",
+      "message": "Connection 3 established in 82 seconds."
+    },
+    {
+      "time": "2025-09-25T12:49:45Z",
+      "mission_time": 22276,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "time": "2025-09-25T12:49:56Z",
+      "mission_time": 22287,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 21 seconds]"
+    },
+    {
+      "time": "2025-09-25T12:49:59Z",
+      "mission_time": 22290,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.2509251225.log\" to host."
+    },
+    {
+      "time": "2025-09-25T12:50:25Z",
+      "mission_time": 22316,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:4485, sec:25.8, bps:174]"
+    },
+    {
+      "time": "2025-09-25T12:50:26Z",
+      "mission_time": 22317,
+      "call": "fmove",
+      "message": "Moved: 23808.2509251225.log -> archive/23808.2509251225.log"
+    },
+    {
+      "time": "2025-09-25T12:50:27Z",
+      "mission_time": 22318,
+      "call": "UpLoad",
+      "message": "Files successfully uploaded: 2"
+    },
+    {
+      "time": "2025-09-25T12:50:27Z",
+      "mission_time": 22318,
+      "call": "UpLoad",
+      "message": "Upload complete."
+    },
+    {
+      "time": "2025-09-25T12:50:35Z",
+      "mission_time": 22326,
+      "call": "chat",
+      "message": "Expected string [logout] not received."
+    },
+    {
+      "time": "2025-09-25T12:50:35Z",
+      "mission_time": 22326,
+      "call": "logout",
+      "message": "Attempt to log-out failed."
+    },
+    {
+      "time": "2025-09-25T12:50:35Z",
+      "mission_time": 22326,
+      "call": "logout",
+      "message": "No carrier detected."
+    },
+    {
+      "time": "2025-09-25T12:50:35Z",
+      "mission_time": 22326,
+      "call": "Telemetry",
+      "message": "Telemetry cycle complete: PrfId=0 ConnectionAttempts=4  Connections=3"
+    }
+  ]
+}
