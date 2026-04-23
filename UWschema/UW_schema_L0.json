@@ -447,8 +447,8 @@
       "items": {
         "type": "object",
         "properties": {
-          "time": {
-            "description": "the time at which the function call is made",
+          "datetime": {
+            "description": "the date and time at which the function call is made",
             "$ref": "#/$defs/ISO8601"
           },
           "mission_time": {
@@ -465,7 +465,7 @@
             "type": "string"
           }
         },
-        "required": ["time", "mission_time", "call", "message"],
+        "required": ["datetime", "mission_time", "call", "message"],
         "additionalProperties": false
       }
     }

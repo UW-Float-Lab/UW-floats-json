@@ -1006,7 +1006,7 @@ def log_tokenizer(file, logger=lambda x: print("[LOG] " + x)):
             
             cur_mtime = parseInt(rx_match[2])
             entry = {
-                "time": decode_time(rx_match[1]), 
+                "datetime": decode_time(rx_match[1]), 
                 "mission_time": cur_mtime, 
                 "call": rx_match[3], 
                 "message": rx_match[4]
