@@ -1,5 +1,5 @@
 '''
-Version: 0.3.0
+Version: 0.3.1
 '''
 
 import re, itertools
@@ -9,8 +9,8 @@ from datetime import datetime, UTC
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.3.0",
-  "SCHEMA_VERSION": "0.3.0",
+  "DECODER_VERSION": "0.3.1",
+  "SCHEMA_VERSION": "0.3.1",
   "PI": "RISER, STEVE AND GRAY, ALISON",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
@@ -178,7 +178,7 @@ def decode_if_number(value):
     Decode a string IF it can be parsed as a numerical value. Integer is tried
     first and accepted if agree with the floating point representation
     '''
-    if val.strip().lower() == "nan":
+    if value.strip().lower() == "nan":
         return None
 
     try:
@@ -1250,17 +1250,15 @@ def L0_parser(
     out_dict["DECODER_VERSION"] = supp_dict["DECODER_VERSION"]
     out_dict["SCHEMA_VERSION"] = supp_dict["SCHEMA_VERSION"]
     out_dict["INTERNAL_ID_NUMBER"] = float_id
-    out_dict["TRANSMISSION ID NUMBER"] = float_id
+    out_dict["TRANSMISSION_ID_NUMBER"] = float_id
+    out_dict["AOML_ID_NUMBER"] = AOML_map[float_id]
+    out_dict["WMO_ID_NUMBER"] = WMO_map[float_id]
     out_dict["INSTRUMENT_TYPE"] = infer_instrument(msg_dict)
-    out_dict["AOML_ID NUMBER"] = AOML_map[float_id]
-    out_dict["WMO_ID NUMBER"] = WMO_map[float_id]
-    out_dict["WMO INSTRUMENT TYPE (TABLE 1770)"] = None # to be filled in
-    out_dict["WMO RECORDER TYPE (TABLE 4770)"] = None # to be filled in
     out_dict["OPERATING_INSTITUTION"] = supp_dict["OPERATING_INSTITUTION"]
     out_dict["FILE_CREATION_INSTITUTION"] = supp_dict["FILE_CREATION_INSTITUTION"]
     out_dict["PI"] = supp_dict["PI"]
     out_dict["PROJECT_NAME"] = supp_dict["PROJECT_NAME"]
-    out_dict["PROFILE_NUMBER"] = int(engr_dict["ProfileId"], 10)
+    out_dict["CYCLE_NUMBER"] = int(engr_dict["ProfileId"], 10)
     out_dict["POSITIONING_SYSTEM"] = infer_positioning(msg_dict)
 
     # interpreting mission config data

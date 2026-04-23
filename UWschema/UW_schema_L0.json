@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "UW argo float L0 json",
-  "description": "UW argo float L0 json, version 0.3.0, updated 2026-03-06",
+  "description": "UW argo float L0 json, version 0.3.1, updated 2026-04-23",
   
   "$defs": {
     "ISO8601": {
@@ -51,10 +51,26 @@
       "description": "UW Internal ID number for the float",
       "type": "integer"
     },
+    "AOML_ID_NUMBER": {
+      "description": "AOML ID number",
+      "type": "integer"
+    },
+    "WMO_ID_NUMBER": {
+      "description": "WMO ID number",
+      "type": "integer"
+    },
+    "TRANSMISSION_ID_NUMBER": {
+      "description": "[[TO BE SPECIFIED]]",
+      "type": "integer"
+    },
     "INSTRUMENT_TYPE": {
       "description": "the type of float",
       "type": "string",
       "enum": ["UW-APEX-core", "UW-APEX-BGC", "UW-NAVIS-BGC"]
+    },
+    "PI": {
+      "description": "Principal investigator(s) associated with the float",
+      "type": "string"
     },
     "OPERATING_INSTITUTION": {
       "description": "Institution responsible for operating the float",
@@ -66,35 +82,11 @@
       "type": "string",
       "const": "UW, Seattle, WA"
     },
-    "PI": {
-      "description": "Principal investigator(s) associated with the float",
-      "type": "string"
-    },
-    "TRANSMISSION ID NUMBER": {
-      "description": "[[TO BE SPECIFIED]]",
-      "type": "integer"
-    },
-    "AOML_ID NUMBER": {
-      "description": "AOML ID number",
-      "type": "integer"
-    },
-    "WMO_ID NUMBER": {
-      "description": "WMO ID number",
-      "type": "integer"
-    },
-    "WMO INSTRUMENT TYPE (TABLE 1770)": {
-      "description": "[[TO BE SPECIFIED]]",
-      "type": ["integer", "null"]
-    }, 
-    "WMO RECORDER TYPE (TABLE 4770)": {
-      "description": "[[TO BE SPECIFIED]]",
-      "type": ["integer", "null"]
-    }, 
     "PROJECT_NAME": {
       "description": "The project under which the float operates",
       "type": "string"
     },
-    "PROFILE_NUMBER": {
+    "CYCLE_NUMBER": {
       "description": "The profile number associated with the json file",
       "type": "integer"
     },
@@ -485,14 +477,15 @@
     "DECODER_VERSION",
     "SCHEMA_VERSION",
     "INTERNAL_ID_NUMBER",
-    "AOML_ID NUMBER",
-    "WMO_ID NUMBER",
+    "AOML_ID_NUMBER",
+    "WMO_ID_NUMBER",
+    "TRANSMISSION_ID_NUMBER",
     "INSTRUMENT_TYPE",
     "OPERATING_INSTITUTION",
     "FILE_CREATION_INSTITUTION",
     "PI",
     "PROJECT_NAME",
-    "PROFILE_NUMBER",
+    "CYCLE_NUMBER",
     "POSITIONING_SYSTEM"
   ]
 }
