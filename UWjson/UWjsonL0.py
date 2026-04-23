@@ -1278,16 +1278,16 @@ def L0_parser(
 
     # Interpreting science data
     if "discrete_samples" in msg_dict:
-        out_dict["CTD Discrete"] = parse_discrete(msg_dict["discrete_samples"])
+        out_dict["CTD_Discrete"] = parse_discrete(msg_dict["discrete_samples"])
         if consume: del msg_dict["discrete_samples"]
     if "cont_samples" in msg_dict:
-        out_dict["CTD Binned"] = parse_continuous(msg_dict["cont_samples"])
+        out_dict["CTD_Binned"] = parse_continuous(msg_dict["cont_samples"])
         if consume: del msg_dict["cont_samples"]
     if "ParkPt" in msg_dict:
-        out_dict["CTD Drift"] = parse_parked(msg_dict["ParkPt"], "ParkPt")
+        out_dict["CTD_Drift"] = parse_parked(msg_dict["ParkPt"], "ParkPt")
         if consume: del msg_dict["ParkPt"]
     if "ParkPtFlbb" in msg_dict:
-        out_dict["CTD Drift"] = parse_parked(msg_dict["ParkPtFlbb"], "ParkPtFlbb")
+        out_dict["CTD_Drift"] = parse_parked(msg_dict["ParkPtFlbb"], "ParkPtFlbb")
         if consume: del msg_dict["ParkPtFlbb"]
 
     # interpret calibration data
@@ -1297,10 +1297,10 @@ def L0_parser(
 
     # Write raw mission config and engineering data
     if config_dict:
-        out_dict["raw_mission_config"] = parse_mission_config(config_dict)
+        out_dict["ARGO_Mission"] = parse_mission_config(config_dict)
         if consume: del msg_dict["mission_config"]
     if any(engr_list):
-        out_dict["raw_engineering_data"] = parse_engineering_data(engr_list)
+        out_dict["Engineering_Data"] = parse_engineering_data(engr_list)
         if consume: del msg_dict["engineering_data"]
 
     # Write log data

@@ -211,7 +211,7 @@
       "required": [],
       "additionalProperties": false
     },
-    "CTD Discrete": {
+    "CTD_Discrete": {
       "type": "array",
       "items": {
         "type": "object",
@@ -277,7 +277,7 @@
       },
       "minItems": 1
     },
-    "CTD Binned": {
+    "CTD_Binned": {
       "type": "array",
       "items": {
         "type": "object",
@@ -306,7 +306,7 @@
       },
       "minItems": 1
     },
-    "CTD Drift": {
+    "CTD_Drift": {
       "type": "array",
       "items": {
         "type": "object",
@@ -406,7 +406,7 @@
       "description": "Data and metadata from Isus sensor. [[More details to be added]]",
       "type": "object"
     },
-    "raw_mission_config": {
+    "ARGO_Mission": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
@@ -423,7 +423,7 @@
         "required": [ "value" ]
       }
     },
-    "raw_engineering_data": {
+    "Engineering_Data": {
       "type": "array",
       "items": {
         "type": "object",

@@ -1,6 +1,6 @@
 {
-  "FILE_CREATION_DATE": "2026-04-23T21:01:33Z",
-  "FILE_UPDATE_DATE": "2026-04-23T21:01:33Z",
+  "FILE_CREATION_DATE": "2026-04-23T21:10:47Z",
+  "FILE_UPDATE_DATE": "2026-04-23T21:10:47Z",
   "DECODER_VERSION": "0.3.1",
   "SCHEMA_VERSION": "0.3.1",
   "INTERNAL_ID_NUMBER": 23031,
@@ -43,7 +43,7 @@
       "system_time": 3698940606
     }
   ],
-  "CTD Discrete": [
+  "CTD_Discrete": [
     {
       "PRES": 1090.26,
       "TEMP": 3.9404,
@@ -150,7 +150,7 @@
       "PSAL": 34.2808
     }
   ],
-  "CTD Binned": [
+  "CTD_Binned": [
     {
       "PRES": 4.1,
       "TEMP": 8.263,
@@ -3080,14 +3080,14 @@
       "n_samp": 1
     }
   ],
-  "CTD Drift": [
+  "CTD_Drift": [
     {
       "PRES": 1092.55,
       "TEMP": 3.9472,
       "TIME": "2024-11-27T19:56:46Z"
     }
   ],
-  "raw_mission_config": {
+  "ARGO_Mission": {
     "model": {
       "value": "Apf11"
     },
@@ -3215,7 +3215,7 @@
       "value": "0x0002"
     }
   },
-  "raw_engineering_data": [
+  "Engineering_Data": [
     {
       "Apf11FwRev": "121123",
       "ActiveBallastAdjustments": "0",
