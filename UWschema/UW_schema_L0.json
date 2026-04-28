@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "UW argo float L0 json",
-  "description": "UW argo float L0 json, version 0.3.1, updated 2026-04-23",
+  "description": "UW argo float L0 json, version 0.3.2, updated 2026-04-27",
   
   "$defs": {
     "ISO8601": {
@@ -400,11 +400,57 @@
     },
     "dura": {
       "description": "Data and metadata from Dura sensor. [[More details to be added]]",
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "science_data": {
+          "description": "Science data contained in the .dura file",
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1
+        },
+        "engineering_data": {
+          "description": "Engineering data contained in the .dura file",
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "science_data",
+        "engineering_data"
+      ]
     },
     "isus": {
       "description": "Data and metadata from Isus sensor. [[More details to be added]]",
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "science_data": {
+          "description": "Science data contained in the .isus file",
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1
+        },
+        "engineering_data": {
+          "description": "Engineering data contained in the .isus file",
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "science_data",
+        "engineering_data"
+      ]
     },
     "ARGO_Mission": {
       "type": "object",
