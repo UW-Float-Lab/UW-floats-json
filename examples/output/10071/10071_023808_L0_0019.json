@@ -1,8 +1,8 @@
 {
-  "FILE_CREATION_DATE": "2026-04-28T04:28:14Z",
-  "FILE_UPDATE_DATE": "2026-04-28T04:28:14Z",
-  "DECODER_VERSION": "0.3.1",
-  "SCHEMA_VERSION": "0.3.1",
+  "FILE_CREATION_DATE": "2026-05-04T03:40:02Z",
+  "FILE_UPDATE_DATE": "2026-05-04T03:40:02Z",
+  "DECODER_VERSION": "0.4.0",
+  "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23808,
   "TRANSMISSION_ID_NUMBER": 23808,
   "AOML_ID_NUMBER": 10071,
@@ -60,1279 +60,1453 @@
       "system_time": 4008631913
     }
   ],
+  "Fall": [
+    {
+      "TIME": "2025-10-11T00:23:26Z",
+      "PRES": 72.3,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2025-10-11T01:11:11Z",
+      "PRES": 503.6,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2025-10-11T02:11:11Z",
+      "PRES": 855.9,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2025-10-11T03:11:11Z",
+      "PRES": 980.3,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2025-10-11T04:11:11Z",
+      "PRES": 990.3,
+      "description": "Descent"
+    }
+  ],
+  "Drift": [
+    {
+      "TIME": "2025-10-11T04:11:21Z",
+      "PRES": 990.36
+    },
+    {
+      "TIME": "2025-10-11T05:11:19Z",
+      "PRES": 992.45
+    },
+    {
+      "TIME": "2025-10-11T06:11:19Z",
+      "PRES": 996.7
+    },
+    {
+      "TIME": "2025-10-11T07:11:19Z",
+      "PRES": 999.36
+    },
+    {
+      "TIME": "2025-10-11T08:11:19Z",
+      "PRES": 998.52
+    },
+    {
+      "TIME": "2025-10-11T09:11:19Z",
+      "PRES": 999.62
+    },
+    {
+      "TIME": "2025-10-11T10:11:19Z",
+      "PRES": 998.09
+    },
+    {
+      "TIME": "2025-10-11T11:11:19Z",
+      "PRES": 999.91
+    },
+    {
+      "TIME": "2025-10-11T12:11:19Z",
+      "PRES": 997.71
+    },
+    {
+      "TIME": "2025-10-11T13:11:19Z",
+      "PRES": 1004.3
+    },
+    {
+      "TIME": "2025-10-11T14:11:19Z",
+      "PRES": 999.87
+    },
+    {
+      "TIME": "2025-10-11T15:11:19Z",
+      "PRES": 993.95
+    },
+    {
+      "TIME": "2025-10-11T16:11:19Z",
+      "PRES": 991.46
+    },
+    {
+      "TIME": "2025-10-11T17:11:19Z",
+      "PRES": 989.6
+    },
+    {
+      "TIME": "2025-10-11T18:11:19Z",
+      "PRES": 993.53
+    },
+    {
+      "TIME": "2025-10-11T19:11:19Z",
+      "PRES": 998.32
+    },
+    {
+      "TIME": "2025-10-11T20:11:19Z",
+      "PRES": 997.26
+    },
+    {
+      "TIME": "2025-10-11T21:11:19Z",
+      "PRES": 1001.42
+    },
+    {
+      "TIME": "2025-10-11T22:11:19Z",
+      "PRES": 1004.57
+    },
+    {
+      "TIME": "2025-10-11T23:11:19Z",
+      "PRES": 1000.24
+    },
+    {
+      "TIME": "2025-10-12T00:11:19Z",
+      "PRES": 1000.3
+    },
+    {
+      "TIME": "2025-10-12T01:11:19Z",
+      "PRES": 1000.83
+    },
+    {
+      "TIME": "2025-10-12T02:11:19Z",
+      "PRES": 997.64
+    },
+    {
+      "TIME": "2025-10-12T03:11:19Z",
+      "PRES": 995.26
+    },
+    {
+      "TIME": "2025-10-12T04:11:19Z",
+      "PRES": 996.97
+    },
+    {
+      "TIME": "2025-10-12T05:11:19Z",
+      "PRES": 996.2
+    },
+    {
+      "TIME": "2025-10-12T06:11:19Z",
+      "PRES": 995.68
+    },
+    {
+      "TIME": "2025-10-12T07:11:19Z",
+      "PRES": 998.98
+    },
+    {
+      "TIME": "2025-10-12T08:11:19Z",
+      "PRES": 1001.84
+    },
+    {
+      "TIME": "2025-10-12T09:11:19Z",
+      "PRES": 1003.08
+    },
+    {
+      "TIME": "2025-10-12T10:11:19Z",
+      "PRES": 999.38
+    },
+    {
+      "TIME": "2025-10-12T11:11:19Z",
+      "PRES": 1002.47
+    },
+    {
+      "TIME": "2025-10-12T12:11:19Z",
+      "PRES": 1005.43
+    },
+    {
+      "TIME": "2025-10-12T13:11:19Z",
+      "PRES": 1002.34
+    },
+    {
+      "TIME": "2025-10-12T14:11:19Z",
+      "PRES": 1000.33
+    },
+    {
+      "TIME": "2025-10-12T15:11:19Z",
+      "PRES": 1000.79
+    },
+    {
+      "TIME": "2025-10-12T16:11:19Z",
+      "PRES": 994.75
+    },
+    {
+      "TIME": "2025-10-12T17:11:19Z",
+      "PRES": 991.75
+    },
+    {
+      "TIME": "2025-10-12T18:11:19Z",
+      "PRES": 993.6
+    },
+    {
+      "TIME": "2025-10-12T19:11:19Z",
+      "PRES": 997.38
+    },
+    {
+      "TIME": "2025-10-12T20:11:19Z",
+      "PRES": 995.22
+    },
+    {
+      "TIME": "2025-10-12T21:11:19Z",
+      "PRES": 996.35
+    },
+    {
+      "TIME": "2025-10-12T22:11:19Z",
+      "PRES": 1000.23
+    },
+    {
+      "TIME": "2025-10-12T23:11:19Z",
+      "PRES": 1001.95
+    },
+    {
+      "TIME": "2025-10-13T00:11:19Z",
+      "PRES": 1003.91
+    },
+    {
+      "TIME": "2025-10-13T01:11:19Z",
+      "PRES": 1000.21
+    },
+    {
+      "TIME": "2025-10-13T02:11:19Z",
+      "PRES": 998.89
+    },
+    {
+      "TIME": "2025-10-13T03:11:19Z",
+      "PRES": 998.94
+    },
+    {
+      "TIME": "2025-10-13T04:11:19Z",
+      "PRES": 998.48
+    },
+    {
+      "TIME": "2025-10-13T05:11:19Z",
+      "PRES": 998.24
+    },
+    {
+      "TIME": "2025-10-13T06:11:19Z",
+      "PRES": 999.63
+    },
+    {
+      "TIME": "2025-10-13T07:11:19Z",
+      "PRES": 999.22
+    },
+    {
+      "TIME": "2025-10-13T08:11:19Z",
+      "PRES": 997.84
+    },
+    {
+      "TIME": "2025-10-13T09:11:19Z",
+      "PRES": 999.79
+    },
+    {
+      "TIME": "2025-10-13T10:11:19Z",
+      "PRES": 1003.52
+    },
+    {
+      "TIME": "2025-10-13T11:11:19Z",
+      "PRES": 1002.85
+    },
+    {
+      "TIME": "2025-10-13T12:11:19Z",
+      "PRES": 1004.52
+    },
+    {
+      "TIME": "2025-10-13T13:11:19Z",
+      "PRES": 1003.0
+    },
+    {
+      "TIME": "2025-10-13T14:11:19Z",
+      "PRES": 1005.62
+    },
+    {
+      "TIME": "2025-10-13T15:11:19Z",
+      "PRES": 1001.08
+    },
+    {
+      "TIME": "2025-10-13T16:11:19Z",
+      "PRES": 1002.31
+    },
+    {
+      "TIME": "2025-10-13T17:11:19Z",
+      "PRES": 995.36
+    },
+    {
+      "TIME": "2025-10-13T18:11:19Z",
+      "PRES": 994.95
+    },
+    {
+      "TIME": "2025-10-13T19:11:19Z",
+      "PRES": 992.98
+    },
+    {
+      "TIME": "2025-10-13T20:11:19Z",
+      "PRES": 995.45
+    },
+    {
+      "TIME": "2025-10-13T21:11:19Z",
+      "PRES": 994.75
+    },
+    {
+      "TIME": "2025-10-13T22:11:19Z",
+      "PRES": 995.68
+    },
+    {
+      "TIME": "2025-10-13T23:11:19Z",
+      "PRES": 1008.68
+    },
+    {
+      "TIME": "2025-10-14T00:11:19Z",
+      "PRES": 1004.49
+    },
+    {
+      "TIME": "2025-10-14T01:11:19Z",
+      "PRES": 1000.51
+    },
+    {
+      "TIME": "2025-10-14T02:11:19Z",
+      "PRES": 996.33
+    },
+    {
+      "TIME": "2025-10-14T03:11:19Z",
+      "PRES": 999.78
+    },
+    {
+      "TIME": "2025-10-14T04:11:19Z",
+      "PRES": 1002.81
+    },
+    {
+      "TIME": "2025-10-14T05:11:19Z",
+      "PRES": 999.24
+    },
+    {
+      "TIME": "2025-10-14T06:11:19Z",
+      "PRES": 1002.05
+    },
+    {
+      "TIME": "2025-10-14T07:11:19Z",
+      "PRES": 999.7
+    },
+    {
+      "TIME": "2025-10-14T08:11:19Z",
+      "PRES": 1000.86
+    },
+    {
+      "TIME": "2025-10-14T09:11:19Z",
+      "PRES": 1003.93
+    },
+    {
+      "TIME": "2025-10-14T10:11:19Z",
+      "PRES": 1002.91
+    },
+    {
+      "TIME": "2025-10-14T11:11:19Z",
+      "PRES": 1006.46
+    },
+    {
+      "TIME": "2025-10-14T12:11:19Z",
+      "PRES": 1002.11
+    },
+    {
+      "TIME": "2025-10-14T13:11:19Z",
+      "PRES": 1003.18
+    },
+    {
+      "TIME": "2025-10-14T14:11:19Z",
+      "PRES": 997.62
+    },
+    {
+      "TIME": "2025-10-14T15:11:19Z",
+      "PRES": 996.95
+    },
+    {
+      "TIME": "2025-10-14T16:11:19Z",
+      "PRES": 999.1
+    },
+    {
+      "TIME": "2025-10-14T17:11:19Z",
+      "PRES": 999.78
+    },
+    {
+      "TIME": "2025-10-14T18:11:19Z",
+      "PRES": 995.95
+    },
+    {
+      "TIME": "2025-10-14T19:11:19Z",
+      "PRES": 994.22
+    },
+    {
+      "TIME": "2025-10-14T20:11:19Z",
+      "PRES": 994.5
+    },
+    {
+      "TIME": "2025-10-14T21:11:19Z",
+      "PRES": 998.33
+    },
+    {
+      "TIME": "2025-10-14T22:11:19Z",
+      "PRES": 1002.65
+    },
+    {
+      "TIME": "2025-10-14T23:11:19Z",
+      "PRES": 1003.25
+    },
+    {
+      "TIME": "2025-10-15T00:11:19Z",
+      "PRES": 1003.16
+    },
+    {
+      "TIME": "2025-10-15T01:11:19Z",
+      "PRES": 1008.21
+    },
+    {
+      "TIME": "2025-10-15T02:11:19Z",
+      "PRES": 1003.19
+    },
+    {
+      "TIME": "2025-10-15T03:11:19Z",
+      "PRES": 999.22
+    },
+    {
+      "TIME": "2025-10-15T04:11:19Z",
+      "PRES": 1000.73
+    },
+    {
+      "TIME": "2025-10-15T05:11:19Z",
+      "PRES": 998.81
+    },
+    {
+      "TIME": "2025-10-15T06:11:19Z",
+      "PRES": 998.97
+    },
+    {
+      "TIME": "2025-10-15T07:11:19Z",
+      "PRES": 998.88
+    },
+    {
+      "TIME": "2025-10-15T08:11:19Z",
+      "PRES": 998.86
+    },
+    {
+      "TIME": "2025-10-15T09:11:19Z",
+      "PRES": 1002.58
+    },
+    {
+      "TIME": "2025-10-15T10:11:19Z",
+      "PRES": 1000.81
+    },
+    {
+      "TIME": "2025-10-15T11:11:19Z",
+      "PRES": 1001.69
+    },
+    {
+      "TIME": "2025-10-15T12:11:19Z",
+      "PRES": 1005.24
+    },
+    {
+      "TIME": "2025-10-15T13:11:19Z",
+      "PRES": 1002.63
+    },
+    {
+      "TIME": "2025-10-15T14:11:19Z",
+      "PRES": 1003.55
+    },
+    {
+      "TIME": "2025-10-15T15:11:19Z",
+      "PRES": 1004.66
+    },
+    {
+      "TIME": "2025-10-15T16:11:19Z",
+      "PRES": 1005.61
+    },
+    {
+      "TIME": "2025-10-15T17:11:19Z",
+      "PRES": 998.85
+    },
+    {
+      "TIME": "2025-10-15T18:11:19Z",
+      "PRES": 999.03
+    },
+    {
+      "TIME": "2025-10-15T19:11:19Z",
+      "PRES": 994.89
+    }
+  ],
+  "Rise": [
+    {
+      "TIME": "2025-10-16T00:11:11Z",
+      "PRES": 1632.6,
+      "description": "Profile Init"
+    },
+    {
+      "TIME": "2025-10-16T00:18:38Z",
+      "PRES": 1601.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T00:36:41Z",
+      "PRES": 1501.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T00:55:08Z",
+      "PRES": 1401.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T01:14:53Z",
+      "PRES": 1299.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T01:32:13Z",
+      "PRES": 1201.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T01:52:29Z",
+      "PRES": 1101.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T02:10:55Z",
+      "PRES": 1002.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T02:19:06Z",
+      "PRES": 951.2,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T02:28:55Z",
+      "PRES": 901.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T02:38:11Z",
+      "PRES": 851.1,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T02:47:38Z",
+      "PRES": 801.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T02:57:59Z",
+      "PRES": 751.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T03:07:47Z",
+      "PRES": 701.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T03:15:57Z",
+      "PRES": 651.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T03:24:50Z",
+      "PRES": 601.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T03:35:31Z",
+      "PRES": 551.2,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T03:45:31Z",
+      "PRES": 501.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T03:54:02Z",
+      "PRES": 451.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:02:59Z",
+      "PRES": 401.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:07:09Z",
+      "PRES": 381.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:11:29Z",
+      "PRES": 361.2,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:13:24Z",
+      "PRES": 351.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:14:59Z",
+      "PRES": 341.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:16:34Z",
+      "PRES": 331.1,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:18:10Z",
+      "PRES": 321.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:20:07Z",
+      "PRES": 311.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:22:04Z",
+      "PRES": 301.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:24:12Z",
+      "PRES": 291.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:26:09Z",
+      "PRES": 282.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:28:17Z",
+      "PRES": 271.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:30:25Z",
+      "PRES": 261.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:32:44Z",
+      "PRES": 251.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:35:00Z",
+      "PRES": 241.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:36:57Z",
+      "PRES": 231.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:39:14Z",
+      "PRES": 221.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:40:48Z",
+      "PRES": 211.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:42:23Z",
+      "PRES": 201.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:43:58Z",
+      "PRES": 191.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:45:33Z",
+      "PRES": 181.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:47:08Z",
+      "PRES": 171.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:48:43Z",
+      "PRES": 161.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:50:18Z",
+      "PRES": 151.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:52:04Z",
+      "PRES": 141.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:54:01Z",
+      "PRES": 131.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:56:09Z",
+      "PRES": 122.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T04:58:28Z",
+      "PRES": 111.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:00:58Z",
+      "PRES": 101.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:02:44Z",
+      "PRES": 96.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:04:41Z",
+      "PRES": 91.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:07:22Z",
+      "PRES": 86.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:11:23Z",
+      "PRES": 81.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:12:58Z",
+      "PRES": 76.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:14:54Z",
+      "PRES": 71.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:19:58Z",
+      "PRES": 67.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:26:59Z",
+      "PRES": 61.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:29:50Z",
+      "PRES": 57.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:32:55Z",
+      "PRES": 51.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:34:51Z",
+      "PRES": 46.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:36:50Z",
+      "PRES": 41.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:38:24Z",
+      "PRES": 36.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:39:58Z",
+      "PRES": 31.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:41:32Z",
+      "PRES": 26.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:43:06Z",
+      "PRES": 21.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:44:40Z",
+      "PRES": 16.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:46:03Z",
+      "PRES": 11.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2025-10-16T05:47:26Z",
+      "PRES": 7.4,
+      "description": "Profile"
+    }
+  ],
+  "Piston": [
+    {
+      "TIME": "2025-10-11T00:11:24Z",
+      "piston_start": 198,
+      "piston_end": 53,
+      "current": 0.129,
+      "voltage": 15.0,
+      "duration": 708
+    },
+    {
+      "TIME": "2025-10-15T20:12:20Z",
+      "piston_start": 53,
+      "piston_end": 9,
+      "current": 0.05,
+      "voltage": 15.0,
+      "duration": 216
+    },
+    {
+      "TIME": "2025-10-16T00:11:48Z",
+      "piston_start": 9,
+      "piston_end": 15,
+      "current": 0.554,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T00:12:29Z",
+      "piston_start": 15,
+      "piston_end": 20,
+      "current": 0.547,
+      "voltage": 14.3,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T00:13:10Z",
+      "piston_start": 20,
+      "piston_end": 25,
+      "current": 0.541,
+      "voltage": 14.1,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T00:13:51Z",
+      "piston_start": 25,
+      "piston_end": 30,
+      "current": 0.537,
+      "voltage": 14.1,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T00:14:32Z",
+      "piston_start": 30,
+      "piston_end": 31,
+      "current": 0.533,
+      "voltage": 14.2,
+      "duration": 1
+    },
+    {
+      "TIME": "2025-10-16T00:36:43Z",
+      "piston_start": 31,
+      "piston_end": 36,
+      "current": 0.513,
+      "voltage": 14.4,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T00:37:24Z",
+      "piston_start": 36,
+      "piston_end": 41,
+      "current": 0.502,
+      "voltage": 14.3,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-10-16T01:12:38Z",
+      "piston_start": 41,
+      "piston_end": 46,
+      "current": 0.473,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T01:13:19Z",
+      "piston_start": 46,
+      "piston_end": 51,
+      "current": 0.468,
+      "voltage": 14.4,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-10-16T01:38:08Z",
+      "piston_start": 51,
+      "piston_end": 56,
+      "current": 0.436,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T01:38:49Z",
+      "piston_start": 56,
+      "piston_end": 61,
+      "current": 0.438,
+      "voltage": 14.4,
+      "duration": 23
+    },
+    {
+      "TIME": "2025-10-16T02:03:44Z",
+      "piston_start": 61,
+      "piston_end": 66,
+      "current": 0.398,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T02:04:25Z",
+      "piston_start": 66,
+      "piston_end": 71,
+      "current": 0.409,
+      "voltage": 14.5,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-10-16T02:24:17Z",
+      "piston_start": 71,
+      "piston_end": 76,
+      "current": 0.382,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T02:24:58Z",
+      "piston_start": 76,
+      "piston_end": 81,
+      "current": 0.383,
+      "voltage": 14.4,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-10-16T02:54:50Z",
+      "piston_start": 81,
+      "piston_end": 86,
+      "current": 0.349,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T02:55:31Z",
+      "piston_start": 86,
+      "piston_end": 91,
+      "current": 0.34,
+      "voltage": 14.4,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-10-16T03:05:00Z",
+      "piston_start": 91,
+      "piston_end": 96,
+      "current": 0.329,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T03:05:41Z",
+      "piston_start": 96,
+      "piston_end": 101,
+      "current": 0.331,
+      "voltage": 14.5,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-10-16T03:30:23Z",
+      "piston_start": 101,
+      "piston_end": 107,
+      "current": 0.302,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T03:31:04Z",
+      "piston_start": 107,
+      "piston_end": 111,
+      "current": 0.295,
+      "voltage": 14.5,
+      "duration": 22
+    },
+    {
+      "TIME": "2025-10-16T03:45:44Z",
+      "piston_start": 111,
+      "piston_end": 116,
+      "current": 0.282,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T03:46:25Z",
+      "piston_start": 117,
+      "piston_end": 121,
+      "current": 0.278,
+      "voltage": 14.5,
+      "duration": 21
+    },
+    {
+      "TIME": "2025-10-16T04:11:31Z",
+      "piston_start": 121,
+      "piston_end": 126,
+      "current": 0.249,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T04:12:12Z",
+      "piston_start": 126,
+      "piston_end": 131,
+      "current": 0.246,
+      "voltage": 14.6,
+      "duration": 22
+    },
+    {
+      "TIME": "2025-10-16T04:32:45Z",
+      "piston_start": 131,
+      "piston_end": 136,
+      "current": 0.223,
+      "voltage": 14.7,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T04:33:26Z",
+      "piston_start": 136,
+      "piston_end": 141,
+      "current": 0.219,
+      "voltage": 14.6,
+      "duration": 22
+    },
+    {
+      "TIME": "2025-10-16T04:37:53Z",
+      "piston_start": 141,
+      "piston_end": 147,
+      "current": 0.219,
+      "voltage": 14.7,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-10-16T04:39:15Z",
+      "piston_start": 147,
+      "piston_end": 151,
+      "current": 0.21,
+      "voltage": 14.6,
+      "duration": 20
+    },
+    {
+      "TIME": "2025-10-16T05:09:46Z",
+      "piston_start": 151,
+      "piston_end": 156,
+      "current": 0.183,
+      "voltage": 14.9,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-10-16T05:19:59Z",
+      "piston_start": 156,
+      "piston_end": 161,
+      "current": 0.167,
+      "voltage": 14.9,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-10-16T05:24:59Z",
+      "piston_start": 161,
+      "piston_end": 166,
+      "current": 0.179,
+      "voltage": 15.0,
+      "duration": 26
+    },
+    {
+      "TIME": "2025-10-16T05:30:01Z",
+      "piston_start": 166,
+      "piston_end": 171,
+      "current": 0.17,
+      "voltage": 14.9,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-10-16T05:35:02Z",
+      "piston_start": 171,
+      "piston_end": 176,
+      "current": 0.166,
+      "voltage": 14.9,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-10-16T05:48:04Z",
+      "piston_start": 176,
+      "piston_end": 198,
+      "current": 0.159,
+      "voltage": 14.9,
+      "duration": 107
+    }
+  ],
   "CTD_Discrete": [
     {
       "PRES": 996.09,
       "TEMP": 3.8128,
-      "PSAL": 34.4155,
-      "Temp_optode": 3.809,
-      "TPhase": 56.889,
-      "RPhase": 8.039,
-      "NO3": null,
-      "pH_V": null,
-      "FSig": 54,
-      "BbSig": 112,
-      "TSig": 572,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.4155
     },
     {
       "PRES": 1598.98,
       "TEMP": 2.6079,
-      "PSAL": 34.5669,
-      "Temp_optode": 2.603,
-      "TPhase": 52.861,
-      "RPhase": 8.05,
-      "NO3": 41.3,
-      "pH_V": -0.88458,
-      "FSig": 53,
-      "BbSig": 111,
-      "TSig": 574,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.5669
     },
     {
       "PRES": 1499.91,
       "TEMP": 2.7791,
-      "PSAL": 34.5516,
-      "Temp_optode": 2.773,
-      "TPhase": 53.339,
-      "RPhase": 8.067,
-      "NO3": 41.6,
-      "pH_V": -0.88464,
-      "FSig": 55,
-      "BbSig": 112,
-      "TSig": 573,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.5516
     },
     {
       "PRES": 1399.45,
       "TEMP": 3.0399,
-      "PSAL": 34.5296,
-      "Temp_optode": 3.033,
-      "TPhase": 53.895,
-      "RPhase": 8.07,
-      "NO3": 41.9,
-      "pH_V": -0.88464,
-      "FSig": 53,
-      "BbSig": 112,
-      "TSig": 573,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.5296
     },
     {
       "PRES": 1297.69,
       "TEMP": 3.2161,
-      "PSAL": 34.5097,
-      "Temp_optode": 3.21,
-      "TPhase": 54.54,
-      "RPhase": 8.074,
-      "NO3": 42.2,
-      "pH_V": -0.88462,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 573,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.5097
     },
     {
       "PRES": 1199.77,
       "TEMP": 3.4074,
-      "PSAL": 34.4926,
-      "Temp_optode": 3.4,
-      "TPhase": 54.821,
-      "RPhase": 8.078,
-      "NO3": 42.4,
-      "pH_V": -0.88422,
-      "FSig": 54,
-      "BbSig": 114,
-      "TSig": 572,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.4926
     },
     {
       "PRES": 1099.52,
       "TEMP": 3.708,
-      "PSAL": 34.4495,
-      "Temp_optode": 3.7,
-      "TPhase": 55.854,
-      "RPhase": 8.083,
-      "NO3": 42.7,
-      "pH_V": -0.88463,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 572,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.4495
     },
     {
       "PRES": 999.67,
       "TEMP": 3.862,
-      "PSAL": 34.3963,
-      "Temp_optode": 3.854,
-      "TPhase": 57.176,
-      "RPhase": 8.088,
-      "NO3": 43.2,
-      "pH_V": -0.88457,
-      "FSig": 55,
-      "BbSig": 116,
-      "TSig": 572,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.3963
     },
     {
       "PRES": 951.16,
       "TEMP": 3.9813,
-      "PSAL": 34.3664,
-      "Temp_optode": 3.972,
-      "TPhase": 57.62,
-      "RPhase": 8.092,
-      "NO3": 43.3,
-      "pH_V": -0.88468,
-      "FSig": 54,
-      "BbSig": 115,
-      "TSig": 571,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.3664
     },
     {
       "PRES": 900.91,
       "TEMP": 4.1249,
-      "PSAL": 34.3211,
-      "Temp_optode": 4.117,
-      "TPhase": 58.115,
-      "RPhase": 8.094,
-      "NO3": 43.4,
-      "pH_V": -0.88478,
-      "FSig": 56,
-      "BbSig": 115,
-      "TSig": 571,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.3211
     },
     {
       "PRES": 851.04,
       "TEMP": 4.2868,
-      "PSAL": 34.2757,
-      "Temp_optode": 4.278,
-      "TPhase": 58.009,
-      "RPhase": 8.098,
-      "NO3": 43.1,
-      "pH_V": -0.88433,
-      "FSig": 56,
-      "BbSig": 115,
-      "TSig": 571,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.2757
     },
     {
       "PRES": 801.62,
       "TEMP": 4.4716,
-      "PSAL": 34.2262,
-      "Temp_optode": 4.463,
-      "TPhase": 57.458,
-      "RPhase": 8.103,
-      "NO3": 42.6,
-      "pH_V": -0.88373,
-      "FSig": 55,
-      "BbSig": 117,
-      "TSig": 571,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.2262
     },
     {
       "PRES": 751.59,
       "TEMP": 4.7547,
-      "PSAL": 34.1704,
-      "Temp_optode": 4.745,
-      "TPhase": 56.31,
-      "RPhase": 8.109,
-      "NO3": 41.6,
-      "pH_V": -0.88239,
-      "FSig": 54,
-      "BbSig": 115,
-      "TSig": 571,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.1704
     },
     {
       "PRES": 701.48,
       "TEMP": 5.1078,
-      "PSAL": 34.1032,
-      "Temp_optode": 5.097,
-      "TPhase": 54.427,
-      "RPhase": 8.117,
-      "NO3": 40.2,
-      "pH_V": -0.88086,
-      "FSig": 54,
-      "BbSig": 116,
-      "TSig": 570,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.1032
     },
     {
       "PRES": 650.91,
       "TEMP": 5.4867,
-      "PSAL": 34.0535,
-      "Temp_optode": 5.481,
-      "TPhase": 51.703,
-      "RPhase": 8.127,
-      "NO3": 37.9,
-      "pH_V": -0.87808,
-      "FSig": 54,
-      "BbSig": 120,
-      "TSig": 570,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.0535
     },
     {
       "PRES": 601.84,
       "TEMP": 6.0345,
-      "PSAL": 34.0102,
-      "Temp_optode": 6.023,
-      "TPhase": 48.485,
-      "RPhase": 8.142,
-      "NO3": 34.6,
-      "pH_V": -0.87419,
-      "FSig": 53,
-      "BbSig": 118,
-      "TSig": 569,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.0102
     },
     {
       "PRES": 551.08,
       "TEMP": 7.1034,
-      "PSAL": 34.0036,
-      "Temp_optode": 7.099,
-      "TPhase": 44.58,
-      "RPhase": 8.174,
-      "NO3": 29.6,
-      "pH_V": -0.86864,
-      "FSig": 53,
-      "BbSig": 118,
-      "TSig": 568,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.0036
     },
     {
       "PRES": 501.85,
       "TEMP": 8.1349,
-      "PSAL": 34.0144,
-      "Temp_optode": 8.125,
-      "TPhase": 41.259,
-      "RPhase": 8.204,
-      "NO3": 24.5,
-      "pH_V": -0.86304,
-      "FSig": 51,
-      "BbSig": 119,
-      "TSig": 566,
-      "Ocr": [
-        null,
-        null,
-        null,
-        null
-      ]
+      "PSAL": 34.0144
     },
     {
       "PRES": 451.45,
       "TEMP": 9.1093,
-      "PSAL": 34.059,
-      "Temp_optode": 9.127,
-      "TPhase": 38.88,
-      "RPhase": 8.227,
-      "NO3": 20.2,
-      "pH_V": -0.85808,
-      "FSig": 51,
-      "BbSig": 119,
-      "TSig": 565,
-      "Ocr": [
-        2147908736,
-        2147497097,
-        2148039378,
-        2147467757
-      ]
+      "PSAL": 34.059
     },
     {
       "PRES": 401.56,
       "TEMP": 10.2387,
-      "PSAL": 34.1203,
-      "Temp_optode": 10.232,
-      "TPhase": 37.414,
-      "RPhase": 8.252,
-      "NO3": 16.7,
-      "pH_V": -0.85454,
-      "FSig": 51,
-      "BbSig": 118,
-      "TSig": 563,
-      "Ocr": [
-        2147905572,
-        2147492470,
-        2148033645,
-        2147469476
-      ]
+      "PSAL": 34.1203
     },
     {
       "PRES": 381.31,
       "TEMP": 10.6475,
-      "PSAL": 34.1472,
-      "Temp_optode": 10.649,
-      "TPhase": 37.009,
-      "RPhase": 8.265,
-      "NO3": 15.6,
-      "pH_V": -0.8534,
-      "FSig": 50,
-      "BbSig": 119,
-      "TSig": 562,
-      "Ocr": [
-        2147904457,
-        2147495725,
-        2148030537,
-        2147466596
-      ]
+      "PSAL": 34.1472
     },
     {
       "PRES": 361.17,
       "TEMP": 11.1446,
-      "PSAL": 34.1758,
-      "Temp_optode": 11.143,
-      "TPhase": 36.641,
-      "RPhase": 8.28,
-      "NO3": 14.5,
-      "pH_V": -0.85227,
-      "FSig": 51,
-      "BbSig": 119,
-      "TSig": 561,
-      "Ocr": [
-        2147910454,
-        2147485001,
-        2148030390,
-        2147467748
-      ]
+      "PSAL": 34.1758
     },
     {
       "PRES": 351.3,
       "TEMP": 11.2611,
-      "PSAL": 34.181,
-      "Temp_optode": 11.262,
-      "TPhase": 36.543,
-      "RPhase": 8.285,
-      "NO3": 14.3,
-      "pH_V": -0.85189,
-      "FSig": 50,
-      "BbSig": 117,
-      "TSig": 561,
-      "Ocr": [
-        2147911881,
-        2147485677,
-        2148030226,
-        2147462518
-      ]
+      "PSAL": 34.181
     },
     {
       "PRES": 340.87,
       "TEMP": 11.4437,
-      "PSAL": 34.191,
-      "Temp_optode": 11.439,
-      "TPhase": 36.444,
-      "RPhase": 8.29,
-      "NO3": 13.8,
-      "pH_V": -0.85148,
-      "FSig": 50,
-      "BbSig": 122,
-      "TSig": 561,
-      "Ocr": [
-        2147905005,
-        2147484004,
-        2148031780,
-        2147462976
-      ]
+      "PSAL": 34.191
     },
     {
       "PRES": 330.99,
       "TEMP": 11.727,
-      "PSAL": 34.2084,
-      "Temp_optode": 11.724,
-      "TPhase": 36.29,
-      "RPhase": 8.298,
-      "NO3": 13.3,
-      "pH_V": -0.85094,
-      "FSig": 50,
-      "BbSig": 116,
-      "TSig": 560,
-      "Ocr": [
-        2147909741,
-        2147486134,
-        2148026724,
-        2147462253
-      ]
+      "PSAL": 34.2084
     },
     {
       "PRES": 321.63,
       "TEMP": 11.9495,
-      "PSAL": 34.2235,
-      "Temp_optode": 11.941,
-      "TPhase": 36.179,
-      "RPhase": 8.303,
-      "NO3": 12.8,
-      "pH_V": -0.85044,
-      "FSig": 50,
-      "BbSig": 119,
-      "TSig": 560,
-      "Ocr": [
-        2147904402,
-        2147485915,
-        2148029430,
-        2147464310
-      ]
+      "PSAL": 34.2235
     },
     {
       "PRES": 311.26,
       "TEMP": 12.1234,
-      "PSAL": 34.2369,
-      "Temp_optode": 12.126,
-      "TPhase": 36.045,
-      "RPhase": 8.312,
-      "NO3": 12.5,
-      "pH_V": -0.85001,
-      "FSig": 50,
-      "BbSig": 115,
-      "TSig": 560,
-      "Ocr": [
-        2147907136,
-        2147483949,
-        2148029970,
-        2147463844
-      ]
+      "PSAL": 34.2369
     },
     {
       "PRES": 301.4,
       "TEMP": 12.5351,
-      "PSAL": 34.2678,
-      "Temp_optode": 12.533,
-      "TPhase": 35.864,
-      "RPhase": 8.316,
-      "NO3": 11.6,
-      "pH_V": -0.84923,
-      "FSig": 50,
-      "BbSig": 118,
-      "TSig": 559,
-      "Ocr": [
-        2147902171,
-        2147482907,
-        2148033526,
-        2147461714
-      ]
+      "PSAL": 34.2678
     },
     {
       "PRES": 291.22,
       "TEMP": 12.8599,
-      "PSAL": 34.2888,
-      "Temp_optode": 12.854,
-      "TPhase": 35.649,
-      "RPhase": 8.322,
-      "NO3": 11.0,
-      "pH_V": -0.84854,
-      "FSig": 50,
-      "BbSig": 125,
-      "TSig": 559,
-      "Ocr": [
-        2147910619,
-        2147480621,
-        2148025865,
-        2147460333
-      ]
+      "PSAL": 34.2888
     },
     {
       "PRES": 281.89,
       "TEMP": 13.0197,
-      "PSAL": 34.3034,
-      "Temp_optode": 13.024,
-      "TPhase": 35.547,
-      "RPhase": 8.327,
-      "NO3": 10.6,
-      "pH_V": -0.84819,
-      "FSig": 50,
-      "BbSig": 121,
-      "TSig": 559,
-      "Ocr": [
-        2147896749,
-        2147484827,
-        2148026806,
-        2147461906
-      ]
+      "PSAL": 34.3034
     },
     {
       "PRES": 271.4,
       "TEMP": 13.2523,
-      "PSAL": 34.3195,
-      "Temp_optode": 13.247,
-      "TPhase": 35.442,
-      "RPhase": 8.33,
-      "NO3": 10.2,
-      "pH_V": -0.84771,
-      "FSig": 50,
-      "BbSig": 114,
-      "TSig": 558,
-      "Ocr": [
-        2147904256,
-        2147479707,
-        2148031140,
-        2147456621
-      ]
+      "PSAL": 34.3195
     },
     {
       "PRES": 261.4,
       "TEMP": 13.5029,
-      "PSAL": 34.3389,
-      "Temp_optode": 13.496,
-      "TPhase": 35.356,
-      "RPhase": 8.336,
-      "NO3": 9.9,
-      "pH_V": -0.84726,
-      "FSig": 50,
-      "BbSig": 121,
-      "TSig": 558,
-      "Ocr": [
-        2147898130,
-        2147477933,
-        2148027053,
-        2147457298
-      ]
+      "PSAL": 34.3389
     },
     {
       "PRES": 251.6,
       "TEMP": 13.8636,
-      "PSAL": 34.3653,
-      "Temp_optode": 13.857,
-      "TPhase": 34.988,
-      "RPhase": 8.343,
-      "NO3": 8.6,
-      "pH_V": -0.84611,
-      "FSig": 50,
-      "BbSig": 119,
-      "TSig": 557,
-      "Ocr": [
-        2147898112,
-        2147475072,
-        2148021193,
-        2147457929
-      ]
+      "PSAL": 34.3653
     },
     {
       "PRES": 241.55,
       "TEMP": 14.2939,
-      "PSAL": 34.3964,
-      "Temp_optode": 14.277,
-      "TPhase": 34.656,
-      "RPhase": 8.349,
-      "NO3": 7.8,
-      "pH_V": -0.84534,
-      "FSig": 50,
-      "BbSig": 117,
-      "TSig": 557,
-      "Ocr": [
-        2147897078,
-        2147475529,
-        2148022930,
-        2147450066
-      ]
+      "PSAL": 34.3964
     },
     {
       "PRES": 231.76,
       "TEMP": 14.6851,
-      "PSAL": 34.4274,
-      "Temp_optode": 14.689,
-      "TPhase": 34.489,
-      "RPhase": 8.355,
-      "NO3": 7.2,
-      "pH_V": -0.84474,
-      "FSig": 52,
-      "BbSig": 119,
-      "TSig": 557,
-      "Ocr": [
-        2147895341,
-        2147468836,
-        2148023506,
-        2147450541
-      ]
+      "PSAL": 34.4274
     },
     {
       "PRES": 220.88,
       "TEMP": 15.0958,
-      "PSAL": 34.4668,
-      "Temp_optode": 15.092,
-      "TPhase": 34.302,
-      "RPhase": 8.365,
-      "NO3": 6.4,
-      "pH_V": -0.84386,
-      "FSig": 52,
-      "BbSig": 120,
-      "TSig": 556,
-      "Ocr": [
-        2147896877,
-        2147473654,
-        2148024374,
-        2147454573
-      ]
+      "PSAL": 34.4668
     },
     {
       "PRES": 211.51,
       "TEMP": 15.711,
-      "PSAL": 34.5079,
-      "Temp_optode": 15.696,
-      "TPhase": 33.856,
-      "RPhase": 8.368,
-      "NO3": 5.2,
-      "pH_V": -0.84266,
-      "FSig": 55,
-      "BbSig": 121,
-      "TSig": 555,
-      "Ocr": [
-        2147901787,
-        2147472137,
-        2148026276,
-        2147451867
-      ]
+      "PSAL": 34.5079
     },
     {
       "PRES": 201.39,
       "TEMP": 16.2711,
-      "PSAL": 34.5818,
-      "Temp_optode": 16.297,
-      "TPhase": 33.735,
-      "RPhase": 8.377,
-      "NO3": 5.3,
-      "pH_V": -0.84251,
-      "FSig": 55,
-      "BbSig": 122,
-      "TSig": 555,
-      "Ocr": [
-        2147895771,
-        2147476662,
-        2148020772,
-        2147452608
-      ]
+      "PSAL": 34.5818
     },
     {
       "PRES": 191.64,
       "TEMP": 16.5689,
-      "PSAL": 34.6187,
-      "Temp_optode": 16.562,
-      "TPhase": 33.9,
-      "RPhase": 8.388,
-      "NO3": 4.9,
-      "pH_V": -0.84206,
-      "FSig": 55,
-      "BbSig": 120,
-      "TSig": 554,
-      "Ocr": [
-        2147894957,
-        2147464786,
-        2148017417,
-        2147453924
-      ]
+      "PSAL": 34.6187
     },
     {
       "PRES": 181.76,
       "TEMP": 17.0861,
-      "PSAL": 34.6803,
-      "Temp_optode": 17.082,
-      "TPhase": 33.655,
-      "RPhase": 8.393,
-      "NO3": 4.3,
-      "pH_V": -0.84132,
-      "FSig": 58,
-      "BbSig": 122,
-      "TSig": 554,
-      "Ocr": [
-        2147895021,
-        2147467364,
-        2148015917,
-        2147450797
-      ]
+      "PSAL": 34.6803
     },
     {
       "PRES": 171.46,
       "TEMP": 17.7668,
-      "PSAL": 34.7601,
-      "Temp_optode": 17.757,
-      "TPhase": 33.483,
-      "RPhase": 8.408,
-      "NO3": 4.4,
-      "pH_V": -0.84067,
-      "FSig": 62,
-      "BbSig": 127,
-      "TSig": 553,
-      "Ocr": [
-        2147889362,
-        2147463634,
-        2148015963,
-        2147449910
-      ]
+      "PSAL": 34.7601
     },
     {
       "PRES": 161.52,
       "TEMP": 18.123,
-      "PSAL": 34.8177,
-      "Temp_optode": 18.128,
-      "TPhase": 33.528,
-      "RPhase": 8.416,
-      "NO3": 4.1,
-      "pH_V": -0.84039,
-      "FSig": 65,
-      "BbSig": 133,
-      "TSig": 552,
-      "Ocr": [
-        2147890642,
-        2147463881,
-        2148014592,
-        2147447424
-      ]
+      "PSAL": 34.8177
     },
     {
       "PRES": 151.61,
       "TEMP": 18.3747,
-      "PSAL": 34.8473,
-      "Temp_optode": 18.375,
-      "TPhase": 33.445,
-      "RPhase": 8.419,
-      "NO3": 3.8,
-      "pH_V": -0.83991,
-      "FSig": 67,
-      "BbSig": 136,
-      "TSig": 551,
-      "Ocr": [
-        2147887067,
-        2147457865,
-        2148013248,
-        2147443638
-      ]
+      "PSAL": 34.8473
     },
     {
       "PRES": 141.25,
       "TEMP": 18.9214,
-      "PSAL": 34.9098,
-      "Temp_optode": 18.894,
-      "TPhase": 33.26,
-      "RPhase": 8.424,
-      "NO3": 3.4,
-      "pH_V": -0.83923,
-      "FSig": 77,
-      "BbSig": 136,
-      "TSig": 551,
-      "Ocr": [
-        2147889664,
-        2147461430,
-        2148009408,
-        2147445915
-      ]
+      "PSAL": 34.9098
     },
     {
       "PRES": 131.84,
       "TEMP": 19.1418,
-      "PSAL": 34.9375,
-      "Temp_optode": 19.146,
-      "TPhase": 33.103,
-      "RPhase": 8.433,
-      "NO3": 3.4,
-      "pH_V": -0.83858,
-      "FSig": 82,
-      "BbSig": 141,
-      "TSig": 550,
-      "Ocr": [
-        2147885092,
-        2147454345,
-        2148012379,
-        2147443364
-      ]
+      "PSAL": 34.9375
     },
     {
       "PRES": 121.9,
       "TEMP": 19.7629,
-      "PSAL": 35.0116,
-      "Temp_optode": 19.762,
-      "TPhase": 32.604,
-      "RPhase": 8.441,
-      "NO3": 2.4,
-      "pH_V": -0.83737,
-      "FSig": 100,
-      "BbSig": 145,
-      "TSig": 549,
-      "Ocr": [
-        2147883968,
-        2147455012,
-        2148009782,
-        2147442825
-      ]
+      "PSAL": 35.0116
     },
     {
       "PRES": 111.32,
       "TEMP": 20.4322,
-      "PSAL": 35.0866,
-      "Temp_optode": 20.414,
-      "TPhase": 32.066,
-      "RPhase": 8.453,
-      "NO3": 1.5,
-      "pH_V": -0.836,
-      "FSig": 132,
-      "BbSig": 146,
-      "TSig": 548,
-      "Ocr": [
-        2147885394,
-        2147454701,
-        2148008905,
-        2147436443
-      ]
+      "PSAL": 35.0866
     },
     {
       "PRES": 101.87,
       "TEMP": 20.7888,
-      "PSAL": 35.1023,
-      "Temp_optode": 20.78,
-      "TPhase": 31.307,
-      "RPhase": 8.459,
-      "NO3": 1.5,
-      "pH_V": -0.83458,
-      "FSig": 95,
-      "BbSig": 143,
-      "TSig": 547,
-      "Ocr": [
-        2147881499,
-        2147445586,
-        2148007424,
-        2147437577
-      ]
+      "PSAL": 35.1023
     },
     {
       "PRES": 96.57,
       "TEMP": 21.0766,
-      "PSAL": 35.1236,
-      "Temp_optode": 21.068,
-      "TPhase": 30.962,
-      "RPhase": 8.465,
-      "NO3": 1.5,
-      "pH_V": -0.83408,
-      "FSig": 85,
-      "BbSig": 142,
-      "TSig": 547,
-      "Ocr": [
-        2147886262,
-        2147448548,
-        2148004946,
-        2147432896
-      ]
+      "PSAL": 35.1236
     },
     {
       "PRES": 91.66,
       "TEMP": 21.6674,
-      "PSAL": 35.1624,
-      "Temp_optode": 21.63,
-      "TPhase": 30.761,
-      "RPhase": 8.465,
-      "NO3": 1.5,
-      "pH_V": -0.83339,
-      "FSig": 82,
-      "BbSig": 161,
-      "TSig": 546,
-      "Ocr": [
-        2147886966,
-        2147446089,
-        2148001737,
-        2147434560
-      ]
+      "PSAL": 35.1624
     },
     {
       "PRES": 86.82,
       "TEMP": 22.1464,
-      "PSAL": 35.1884,
-      "Temp_optode": 22.13,
-      "TPhase": 30.213,
-      "RPhase": 8.477,
-      "NO3": 1.8,
-      "pH_V": -0.83265,
-      "FSig": 80,
-      "BbSig": 147,
-      "TSig": 545,
-      "Ocr": [
-        2147880667,
-        2147442258,
-        2147999003,
-        2147429321
-      ]
+      "PSAL": 35.1884
     },
     {
       "PRES": 81.49,
       "TEMP": 22.5276,
-      "PSAL": 35.2049,
-      "Temp_optode": 22.52,
-      "TPhase": 29.948,
-      "RPhase": 8.491,
-      "NO3": 1.8,
-      "pH_V": -0.83216,
-      "FSig": 74,
-      "BbSig": 151,
-      "TSig": 544,
-      "Ocr": [
-        2147874697,
-        2147440722,
-        2148001965,
-        2147428809
-      ]
+      "PSAL": 35.2049
     },
     {
       "PRES": 76.74,
       "TEMP": 22.6257,
-      "PSAL": 35.21,
-      "Temp_optode": 22.621,
-      "TPhase": 29.808,
-      "RPhase": 8.494,
-      "NO3": 2.0,
-      "pH_V": -0.83201,
-      "FSig": 70,
-      "BbSig": 148,
-      "TSig": 544,
-      "Ocr": [
-        2147874971,
-        2147434770,
-        2148000365,
-        2147428736
-      ]
+      "PSAL": 35.21
     },
     {
       "PRES": 71.66,
       "TEMP": 23.1818,
-      "PSAL": 35.2363,
-      "Temp_optode": 23.144,
-      "TPhase": 29.587,
-      "RPhase": 8.497,
-      "NO3": 1.9,
-      "pH_V": -0.83161,
-      "FSig": 76,
-      "BbSig": 147,
-      "TSig": 543,
-      "Ocr": [
-        2147878125,
-        2147434523,
-        2147997156,
-        2147425837
-      ]
+      "PSAL": 35.2363
     },
     {
       "PRES": 66.99,
       "TEMP": 23.5147,
-      "PSAL": 35.2541,
-      "Temp_optode": 23.507,
-      "TPhase": 29.401,
-      "RPhase": 8.507,
-      "NO3": 1.8,
-      "pH_V": -0.83127,
-      "FSig": 69,
-      "BbSig": 155,
-      "TSig": 542,
-      "Ocr": [
-        2147878052,
-        2147432356,
-        2147997403,
-        2147422701
-      ]
+      "PSAL": 35.2541
     },
     {
       "PRES": 61.6,
       "TEMP": 24.9588,
-      "PSAL": 35.3363,
-      "Temp_optode": 24.934,
-      "TPhase": 29.24,
-      "RPhase": 8.521,
-      "NO3": 2.6,
-      "pH_V": -0.83029,
-      "FSig": 66,
-      "BbSig": 153,
-      "TSig": 541,
-      "Ocr": [
-        2147866724,
-        2147427629,
-        2147983177,
-        2147422674
-      ]
+      "PSAL": 35.3363
     },
     {
       "PRES": 56.96,
       "TEMP": 25.8755,
-      "PSAL": 35.4481,
-      "Temp_optode": 25.855,
-      "TPhase": 29.42,
-      "RPhase": 8.536,
-      "NO3": 2.1,
-      "pH_V": -0.82967,
-      "FSig": 64,
-      "BbSig": 150,
-      "TSig": 540,
-      "Ocr": [
-        2147866715,
-        2147427675,
-        2147986505,
-        2147418386
-      ]
+      "PSAL": 35.4481
     },
     {
       "PRES": 51.57,
       "TEMP": 26.459,
-      "PSAL": 35.529,
-      "Temp_optode": 26.45,
-      "TPhase": 29.625,
-      "RPhase": 8.543,
-      "NO3": 2.4,
-      "pH_V": -0.82926,
-      "FSig": 59,
-      "BbSig": 150,
-      "TSig": 539,
-      "Ocr": [
-        2147866697,
-        2147422601,
-        2147980489,
-        2147417609
-      ]
+      "PSAL": 35.529
     },
     {
       "PRES": 46.77,
       "TEMP": 26.4815,
-      "PSAL": 35.5198,
-      "Temp_optode": 26.483,
-      "TPhase": 29.677,
-      "RPhase": 8.544,
-      "NO3": 2.4,
-      "pH_V": -0.82918,
-      "FSig": 58,
-      "BbSig": 154,
-      "TSig": 538,
-      "Ocr": [
-        2147866825,
-        2147419044,
-        2147981723,
-        2147415542
-      ]
+      "PSAL": 35.5198
     },
     {
       "PRES": 41.5,
       "TEMP": 26.4836,
-      "PSAL": 35.4587,
-      "Temp_optode": 26.486,
-      "TPhase": 29.66,
-      "RPhase": 8.542,
-      "NO3": 2.5,
-      "pH_V": -0.82882,
-      "FSig": 56,
-      "BbSig": 148,
-      "TSig": 537,
-      "Ocr": [
-        2147871241,
-        2147422528,
-        2147982582,
-        2147415533
-      ]
+      "PSAL": 35.4587
     },
     {
       "PRES": 36.59,
       "TEMP": 26.5999,
-      "PSAL": 35.4576,
-      "Temp_optode": 26.6,
-      "TPhase": 29.681,
-      "RPhase": 8.541,
-      "NO3": 2.5,
-      "pH_V": -0.82852,
-      "FSig": 58,
-      "BbSig": 146,
-      "TSig": 537,
-      "Ocr": [
-        2147861440,
-        2147419702,
-        2147980781,
-        2147415259
-      ]
+      "PSAL": 35.4576
     },
     {
       "PRES": 31.65,
       "TEMP": 26.6654,
-      "PSAL": 35.4617,
-      "Temp_optode": 26.664,
-      "TPhase": 29.683,
-      "RPhase": 8.542,
-      "NO3": 2.5,
-      "pH_V": -0.82829,
-      "FSig": 58,
-      "BbSig": 144,
-      "TSig": 537,
-      "Ocr": [
-        2147865261,
-        2147419748,
-        2147981458,
-        2147414683
-      ]
+      "PSAL": 35.4617
     },
     {
       "PRES": 26.78,
       "TEMP": 26.7365,
-      "PSAL": 35.4662,
-      "Temp_optode": 26.739,
-      "TPhase": 29.664,
-      "RPhase": 8.542,
-      "NO3": 2.4,
-      "pH_V": -0.8282,
-      "FSig": 54,
-      "BbSig": 148,
-      "TSig": 536,
-      "Ocr": [
-        2147861796,
-        2147417316,
-        2147979026,
-        2147410358
-      ]
+      "PSAL": 35.4662
     },
     {
       "PRES": 21.85,
       "TEMP": 26.7565,
-      "PSAL": 35.4671,
-      "Temp_optode": 26.759,
-      "TPhase": 29.658,
-      "RPhase": 8.544,
-      "NO3": 2.4,
-      "pH_V": -0.8281,
-      "FSig": 56,
-      "BbSig": 143,
-      "TSig": 536,
-      "Ocr": [
-        2147862976,
-        2147416237,
-        2147981494,
-        2147415350
-      ]
+      "PSAL": 35.4671
     },
     {
       "PRES": 16.36,
       "TEMP": 26.7592,
-      "PSAL": 35.4685,
-      "Temp_optode": 26.766,
-      "TPhase": 29.654,
-      "RPhase": 8.542,
-      "NO3": 2.3,
-      "pH_V": -0.82804,
-      "FSig": 56,
-      "BbSig": 141,
-      "TSig": 536,
-      "Ocr": [
-        2147862518,
-        2147412928,
-        2147979949,
-        2147412059
-      ]
+      "PSAL": 35.4685
     },
     {
       "PRES": 11.65,
       "TEMP": 26.7599,
-      "PSAL": 35.4683,
-      "Temp_optode": 26.767,
-      "TPhase": 29.65,
-      "RPhase": 8.54,
-      "NO3": 2.5,
-      "pH_V": -0.82796,
-      "FSig": 56,
-      "BbSig": 143,
-      "TSig": 536,
-      "Ocr": [
-        2147863341,
-        2147413412,
-        2147978715,
-        2147412251
-      ]
+      "PSAL": 35.4683
     },
     {
       "PRES": 7.39,
       "TEMP": 26.7619,
-      "PSAL": 35.468,
-      "Temp_optode": 26.767,
-      "TPhase": 29.648,
-      "RPhase": 8.539,
-      "NO3": 2.5,
-      "pH_V": -0.82788,
-      "FSig": 55,
-      "BbSig": 140,
-      "TSig": 536,
-      "Ocr": [
-        2147862189,
-        2147413129,
-        2147980726,
-        2147414198
-      ]
+      "PSAL": 35.468
     }
   ],
   "CTD_Binned": [
@@ -4269,6 +4443,971 @@
     {
       "PRES": 990.36,
       "TEMP": 3.8683,
+      "TIME": "2025-10-11T04:11:21Z"
+    },
+    {
+      "PRES": 992.45,
+      "TEMP": 3.8649,
+      "TIME": "2025-10-11T05:11:19Z"
+    },
+    {
+      "PRES": 996.7,
+      "TEMP": 3.8774,
+      "TIME": "2025-10-11T06:11:19Z"
+    },
+    {
+      "PRES": 999.36,
+      "TEMP": 3.8892,
+      "TIME": "2025-10-11T07:11:19Z"
+    },
+    {
+      "PRES": 998.52,
+      "TEMP": 3.877,
+      "TIME": "2025-10-11T08:11:19Z"
+    },
+    {
+      "PRES": 999.62,
+      "TEMP": 3.8697,
+      "TIME": "2025-10-11T09:11:19Z"
+    },
+    {
+      "PRES": 998.09,
+      "TEMP": 3.869,
+      "TIME": "2025-10-11T10:11:19Z"
+    },
+    {
+      "PRES": 999.91,
+      "TEMP": 3.8742,
+      "TIME": "2025-10-11T11:11:19Z"
+    },
+    {
+      "PRES": 997.71,
+      "TEMP": 3.882,
+      "TIME": "2025-10-11T12:11:19Z"
+    },
+    {
+      "PRES": 1004.3,
+      "TEMP": 3.9179,
+      "TIME": "2025-10-11T13:11:19Z"
+    },
+    {
+      "PRES": 999.87,
+      "TEMP": 3.8803,
+      "TIME": "2025-10-11T14:11:19Z"
+    },
+    {
+      "PRES": 993.95,
+      "TEMP": 3.8597,
+      "TIME": "2025-10-11T15:11:19Z"
+    },
+    {
+      "PRES": 991.46,
+      "TEMP": 3.8405,
+      "TIME": "2025-10-11T16:11:19Z"
+    },
+    {
+      "PRES": 989.6,
+      "TEMP": 3.8315,
+      "TIME": "2025-10-11T17:11:19Z"
+    },
+    {
+      "PRES": 993.53,
+      "TEMP": 3.8319,
+      "TIME": "2025-10-11T18:11:19Z"
+    },
+    {
+      "PRES": 998.32,
+      "TEMP": 3.8514,
+      "TIME": "2025-10-11T19:11:19Z"
+    },
+    {
+      "PRES": 997.26,
+      "TEMP": 3.8811,
+      "TIME": "2025-10-11T20:11:19Z"
+    },
+    {
+      "PRES": 1001.42,
+      "TEMP": 3.8697,
+      "TIME": "2025-10-11T21:11:19Z"
+    },
+    {
+      "PRES": 1004.57,
+      "TEMP": 3.9088,
+      "TIME": "2025-10-11T22:11:19Z"
+    },
+    {
+      "PRES": 1000.24,
+      "TEMP": 3.9018,
+      "TIME": "2025-10-11T23:11:19Z"
+    },
+    {
+      "PRES": 1000.3,
+      "TEMP": 3.8884,
+      "TIME": "2025-10-12T00:11:19Z"
+    },
+    {
+      "PRES": 1000.83,
+      "TEMP": 3.8704,
+      "TIME": "2025-10-12T01:11:19Z"
+    },
+    {
+      "PRES": 997.64,
+      "TEMP": 3.8636,
+      "TIME": "2025-10-12T02:11:19Z"
+    },
+    {
+      "PRES": 995.26,
+      "TEMP": 3.8465,
+      "TIME": "2025-10-12T03:11:19Z"
+    },
+    {
+      "PRES": 996.97,
+      "TEMP": 3.8596,
+      "TIME": "2025-10-12T04:11:19Z"
+    },
+    {
+      "PRES": 996.2,
+      "TEMP": 3.8484,
+      "TIME": "2025-10-12T05:11:19Z"
+    },
+    {
+      "PRES": 995.68,
+      "TEMP": 3.8437,
+      "TIME": "2025-10-12T06:11:19Z"
+    },
+    {
+      "PRES": 998.98,
+      "TEMP": 3.8593,
+      "TIME": "2025-10-12T07:11:19Z"
+    },
+    {
+      "PRES": 1001.84,
+      "TEMP": 3.8701,
+      "TIME": "2025-10-12T08:11:19Z"
+    },
+    {
+      "PRES": 1003.08,
+      "TEMP": 3.8737,
+      "TIME": "2025-10-12T09:11:19Z"
+    },
+    {
+      "PRES": 999.38,
+      "TEMP": 3.8969,
+      "TIME": "2025-10-12T10:11:19Z"
+    },
+    {
+      "PRES": 1002.47,
+      "TEMP": 3.8773,
+      "TIME": "2025-10-12T11:11:19Z"
+    },
+    {
+      "PRES": 1005.43,
+      "TEMP": 3.9086,
+      "TIME": "2025-10-12T12:11:19Z"
+    },
+    {
+      "PRES": 1002.34,
+      "TEMP": 3.8756,
+      "TIME": "2025-10-12T13:11:19Z"
+    },
+    {
+      "PRES": 1000.33,
+      "TEMP": 3.8792,
+      "TIME": "2025-10-12T14:11:19Z"
+    },
+    {
+      "PRES": 1000.79,
+      "TEMP": 3.8582,
+      "TIME": "2025-10-12T15:11:19Z"
+    },
+    {
+      "PRES": 994.75,
+      "TEMP": 3.8589,
+      "TIME": "2025-10-12T16:11:19Z"
+    },
+    {
+      "PRES": 991.75,
+      "TEMP": 3.8241,
+      "TIME": "2025-10-12T17:11:19Z"
+    },
+    {
+      "PRES": 993.6,
+      "TEMP": 3.8141,
+      "TIME": "2025-10-12T18:11:19Z"
+    },
+    {
+      "PRES": 997.38,
+      "TEMP": 3.8309,
+      "TIME": "2025-10-12T19:11:19Z"
+    },
+    {
+      "PRES": 995.22,
+      "TEMP": 3.8411,
+      "TIME": "2025-10-12T20:11:19Z"
+    },
+    {
+      "PRES": 996.35,
+      "TEMP": 3.8376,
+      "TIME": "2025-10-12T21:11:19Z"
+    },
+    {
+      "PRES": 1000.23,
+      "TEMP": 3.8689,
+      "TIME": "2025-10-12T22:11:19Z"
+    },
+    {
+      "PRES": 1001.95,
+      "TEMP": 3.8738,
+      "TIME": "2025-10-12T23:11:19Z"
+    },
+    {
+      "PRES": 1003.91,
+      "TEMP": 3.9099,
+      "TIME": "2025-10-13T00:11:19Z"
+    },
+    {
+      "PRES": 1000.21,
+      "TEMP": 3.8987,
+      "TIME": "2025-10-13T01:11:19Z"
+    },
+    {
+      "PRES": 998.89,
+      "TEMP": 3.8741,
+      "TIME": "2025-10-13T02:11:19Z"
+    },
+    {
+      "PRES": 998.94,
+      "TEMP": 3.8637,
+      "TIME": "2025-10-13T03:11:19Z"
+    },
+    {
+      "PRES": 998.48,
+      "TEMP": 3.8676,
+      "TIME": "2025-10-13T04:11:19Z"
+    },
+    {
+      "PRES": 998.24,
+      "TEMP": 3.8649,
+      "TIME": "2025-10-13T05:11:19Z"
+    },
+    {
+      "PRES": 999.63,
+      "TEMP": 3.8573,
+      "TIME": "2025-10-13T06:11:19Z"
+    },
+    {
+      "PRES": 999.22,
+      "TEMP": 3.8507,
+      "TIME": "2025-10-13T07:11:19Z"
+    },
+    {
+      "PRES": 997.84,
+      "TEMP": 3.8434,
+      "TIME": "2025-10-13T08:11:19Z"
+    },
+    {
+      "PRES": 999.79,
+      "TEMP": 3.8599,
+      "TIME": "2025-10-13T09:11:19Z"
+    },
+    {
+      "PRES": 1003.52,
+      "TEMP": 3.8726,
+      "TIME": "2025-10-13T10:11:19Z"
+    },
+    {
+      "PRES": 1002.85,
+      "TEMP": 3.886,
+      "TIME": "2025-10-13T11:11:19Z"
+    },
+    {
+      "PRES": 1004.52,
+      "TEMP": 3.8952,
+      "TIME": "2025-10-13T12:11:19Z"
+    },
+    {
+      "PRES": 1003.0,
+      "TEMP": 3.8881,
+      "TIME": "2025-10-13T13:11:19Z"
+    },
+    {
+      "PRES": 1005.62,
+      "TEMP": 3.8883,
+      "TIME": "2025-10-13T14:11:19Z"
+    },
+    {
+      "PRES": 1001.08,
+      "TEMP": 3.8725,
+      "TIME": "2025-10-13T15:11:19Z"
+    },
+    {
+      "PRES": 1002.31,
+      "TEMP": 3.8731,
+      "TIME": "2025-10-13T16:11:19Z"
+    },
+    {
+      "PRES": 995.36,
+      "TEMP": 3.8353,
+      "TIME": "2025-10-13T17:11:19Z"
+    },
+    {
+      "PRES": 994.95,
+      "TEMP": 3.791,
+      "TIME": "2025-10-13T18:11:19Z"
+    },
+    {
+      "PRES": 992.98,
+      "TEMP": 3.792,
+      "TIME": "2025-10-13T19:11:19Z"
+    },
+    {
+      "PRES": 995.45,
+      "TEMP": 3.7921,
+      "TIME": "2025-10-13T20:11:19Z"
+    },
+    {
+      "PRES": 994.75,
+      "TEMP": 3.8013,
+      "TIME": "2025-10-13T21:11:19Z"
+    },
+    {
+      "PRES": 995.68,
+      "TEMP": 3.798,
+      "TIME": "2025-10-13T22:11:19Z"
+    },
+    {
+      "PRES": 1008.68,
+      "TEMP": 3.8662,
+      "TIME": "2025-10-13T23:11:19Z"
+    },
+    {
+      "PRES": 1004.49,
+      "TEMP": 3.8992,
+      "TIME": "2025-10-14T00:11:19Z"
+    },
+    {
+      "PRES": 1000.51,
+      "TEMP": 3.8732,
+      "TIME": "2025-10-14T01:11:19Z"
+    },
+    {
+      "PRES": 996.33,
+      "TEMP": 3.8636,
+      "TIME": "2025-10-14T02:11:19Z"
+    },
+    {
+      "PRES": 999.78,
+      "TEMP": 3.8612,
+      "TIME": "2025-10-14T03:11:19Z"
+    },
+    {
+      "PRES": 1002.81,
+      "TEMP": 3.862,
+      "TIME": "2025-10-14T04:11:19Z"
+    },
+    {
+      "PRES": 999.24,
+      "TEMP": 3.8621,
+      "TIME": "2025-10-14T05:11:19Z"
+    },
+    {
+      "PRES": 1002.05,
+      "TEMP": 3.8622,
+      "TIME": "2025-10-14T06:11:19Z"
+    },
+    {
+      "PRES": 999.7,
+      "TEMP": 3.8627,
+      "TIME": "2025-10-14T07:11:19Z"
+    },
+    {
+      "PRES": 1000.86,
+      "TEMP": 3.8632,
+      "TIME": "2025-10-14T08:11:19Z"
+    },
+    {
+      "PRES": 1003.93,
+      "TEMP": 3.8641,
+      "TIME": "2025-10-14T09:11:19Z"
+    },
+    {
+      "PRES": 1002.91,
+      "TEMP": 3.8663,
+      "TIME": "2025-10-14T10:11:19Z"
+    },
+    {
+      "PRES": 1006.46,
+      "TEMP": 3.8772,
+      "TIME": "2025-10-14T11:11:19Z"
+    },
+    {
+      "PRES": 1002.11,
+      "TEMP": 3.8791,
+      "TIME": "2025-10-14T12:11:19Z"
+    },
+    {
+      "PRES": 1003.18,
+      "TEMP": 3.8695,
+      "TIME": "2025-10-14T13:11:19Z"
+    },
+    {
+      "PRES": 997.62,
+      "TEMP": 3.8646,
+      "TIME": "2025-10-14T14:11:19Z"
+    },
+    {
+      "PRES": 996.95,
+      "TEMP": 3.8423,
+      "TIME": "2025-10-14T15:11:19Z"
+    },
+    {
+      "PRES": 999.1,
+      "TEMP": 3.8616,
+      "TIME": "2025-10-14T16:11:19Z"
+    },
+    {
+      "PRES": 999.78,
+      "TEMP": 3.8617,
+      "TIME": "2025-10-14T17:11:19Z"
+    },
+    {
+      "PRES": 995.95,
+      "TEMP": 3.8412,
+      "TIME": "2025-10-14T18:11:19Z"
+    },
+    {
+      "PRES": 994.22,
+      "TEMP": 3.8357,
+      "TIME": "2025-10-14T19:11:19Z"
+    },
+    {
+      "PRES": 994.5,
+      "TEMP": 3.8183,
+      "TIME": "2025-10-14T20:11:19Z"
+    },
+    {
+      "PRES": 998.33,
+      "TEMP": 3.8421,
+      "TIME": "2025-10-14T21:11:19Z"
+    },
+    {
+      "PRES": 1002.65,
+      "TEMP": 3.8482,
+      "TIME": "2025-10-14T22:11:19Z"
+    },
+    {
+      "PRES": 1003.25,
+      "TEMP": 3.867,
+      "TIME": "2025-10-14T23:11:19Z"
+    },
+    {
+      "PRES": 1003.16,
+      "TEMP": 3.8868,
+      "TIME": "2025-10-15T00:11:19Z"
+    },
+    {
+      "PRES": 1008.21,
+      "TEMP": 3.9034,
+      "TIME": "2025-10-15T01:11:19Z"
+    },
+    {
+      "PRES": 1003.19,
+      "TEMP": 3.9036,
+      "TIME": "2025-10-15T02:11:19Z"
+    },
+    {
+      "PRES": 999.22,
+      "TEMP": 3.8599,
+      "TIME": "2025-10-15T03:11:19Z"
+    },
+    {
+      "PRES": 1000.73,
+      "TEMP": 3.859,
+      "TIME": "2025-10-15T04:11:19Z"
+    },
+    {
+      "PRES": 998.81,
+      "TEMP": 3.848,
+      "TIME": "2025-10-15T05:11:19Z"
+    },
+    {
+      "PRES": 998.97,
+      "TEMP": 3.8468,
+      "TIME": "2025-10-15T06:11:19Z"
+    },
+    {
+      "PRES": 998.88,
+      "TEMP": 3.8507,
+      "TIME": "2025-10-15T07:11:19Z"
+    },
+    {
+      "PRES": 998.86,
+      "TEMP": 3.8507,
+      "TIME": "2025-10-15T08:11:19Z"
+    },
+    {
+      "PRES": 1002.58,
+      "TEMP": 3.8479,
+      "TIME": "2025-10-15T09:11:19Z"
+    },
+    {
+      "PRES": 1000.81,
+      "TEMP": 3.8581,
+      "TIME": "2025-10-15T10:11:19Z"
+    },
+    {
+      "PRES": 1001.69,
+      "TEMP": 3.8547,
+      "TIME": "2025-10-15T11:11:19Z"
+    },
+    {
+      "PRES": 1005.24,
+      "TEMP": 3.8866,
+      "TIME": "2025-10-15T12:11:19Z"
+    },
+    {
+      "PRES": 1002.63,
+      "TEMP": 3.8844,
+      "TIME": "2025-10-15T13:11:19Z"
+    },
+    {
+      "PRES": 1003.55,
+      "TEMP": 3.8824,
+      "TIME": "2025-10-15T14:11:19Z"
+    },
+    {
+      "PRES": 1004.66,
+      "TEMP": 3.8861,
+      "TIME": "2025-10-15T15:11:19Z"
+    },
+    {
+      "PRES": 1005.61,
+      "TEMP": 3.8951,
+      "TIME": "2025-10-15T16:11:19Z"
+    },
+    {
+      "PRES": 998.85,
+      "TEMP": 3.8354,
+      "TIME": "2025-10-15T17:11:19Z"
+    },
+    {
+      "PRES": 999.03,
+      "TEMP": 3.8368,
+      "TIME": "2025-10-15T18:11:19Z"
+    },
+    {
+      "PRES": 994.89,
+      "TEMP": 3.8508,
+      "TIME": "2025-10-15T19:11:19Z"
+    }
+  ],
+  "ECO_Discrete": [
+    {
+      "PRES": 996.09,
+      "FSig": 54,
+      "BbSig": 112,
+      "TSig": 572
+    },
+    {
+      "PRES": 1598.98,
+      "FSig": 53,
+      "BbSig": 111,
+      "TSig": 574
+    },
+    {
+      "PRES": 1499.91,
+      "FSig": 55,
+      "BbSig": 112,
+      "TSig": 573
+    },
+    {
+      "PRES": 1399.45,
+      "FSig": 53,
+      "BbSig": 112,
+      "TSig": 573
+    },
+    {
+      "PRES": 1297.69,
+      "FSig": 55,
+      "BbSig": 113,
+      "TSig": 573
+    },
+    {
+      "PRES": 1199.77,
+      "FSig": 54,
+      "BbSig": 114,
+      "TSig": 572
+    },
+    {
+      "PRES": 1099.52,
+      "FSig": 55,
+      "BbSig": 114,
+      "TSig": 572
+    },
+    {
+      "PRES": 999.67,
+      "FSig": 55,
+      "BbSig": 116,
+      "TSig": 572
+    },
+    {
+      "PRES": 951.16,
+      "FSig": 54,
+      "BbSig": 115,
+      "TSig": 571
+    },
+    {
+      "PRES": 900.91,
+      "FSig": 56,
+      "BbSig": 115,
+      "TSig": 571
+    },
+    {
+      "PRES": 851.04,
+      "FSig": 56,
+      "BbSig": 115,
+      "TSig": 571
+    },
+    {
+      "PRES": 801.62,
+      "FSig": 55,
+      "BbSig": 117,
+      "TSig": 571
+    },
+    {
+      "PRES": 751.59,
+      "FSig": 54,
+      "BbSig": 115,
+      "TSig": 571
+    },
+    {
+      "PRES": 701.48,
+      "FSig": 54,
+      "BbSig": 116,
+      "TSig": 570
+    },
+    {
+      "PRES": 650.91,
+      "FSig": 54,
+      "BbSig": 120,
+      "TSig": 570
+    },
+    {
+      "PRES": 601.84,
+      "FSig": 53,
+      "BbSig": 118,
+      "TSig": 569
+    },
+    {
+      "PRES": 551.08,
+      "FSig": 53,
+      "BbSig": 118,
+      "TSig": 568
+    },
+    {
+      "PRES": 501.85,
+      "FSig": 51,
+      "BbSig": 119,
+      "TSig": 566
+    },
+    {
+      "PRES": 451.45,
+      "FSig": 51,
+      "BbSig": 119,
+      "TSig": 565
+    },
+    {
+      "PRES": 401.56,
+      "FSig": 51,
+      "BbSig": 118,
+      "TSig": 563
+    },
+    {
+      "PRES": 381.31,
+      "FSig": 50,
+      "BbSig": 119,
+      "TSig": 562
+    },
+    {
+      "PRES": 361.17,
+      "FSig": 51,
+      "BbSig": 119,
+      "TSig": 561
+    },
+    {
+      "PRES": 351.3,
+      "FSig": 50,
+      "BbSig": 117,
+      "TSig": 561
+    },
+    {
+      "PRES": 340.87,
+      "FSig": 50,
+      "BbSig": 122,
+      "TSig": 561
+    },
+    {
+      "PRES": 330.99,
+      "FSig": 50,
+      "BbSig": 116,
+      "TSig": 560
+    },
+    {
+      "PRES": 321.63,
+      "FSig": 50,
+      "BbSig": 119,
+      "TSig": 560
+    },
+    {
+      "PRES": 311.26,
+      "FSig": 50,
+      "BbSig": 115,
+      "TSig": 560
+    },
+    {
+      "PRES": 301.4,
+      "FSig": 50,
+      "BbSig": 118,
+      "TSig": 559
+    },
+    {
+      "PRES": 291.22,
+      "FSig": 50,
+      "BbSig": 125,
+      "TSig": 559
+    },
+    {
+      "PRES": 281.89,
+      "FSig": 50,
+      "BbSig": 121,
+      "TSig": 559
+    },
+    {
+      "PRES": 271.4,
+      "FSig": 50,
+      "BbSig": 114,
+      "TSig": 558
+    },
+    {
+      "PRES": 261.4,
+      "FSig": 50,
+      "BbSig": 121,
+      "TSig": 558
+    },
+    {
+      "PRES": 251.6,
+      "FSig": 50,
+      "BbSig": 119,
+      "TSig": 557
+    },
+    {
+      "PRES": 241.55,
+      "FSig": 50,
+      "BbSig": 117,
+      "TSig": 557
+    },
+    {
+      "PRES": 231.76,
+      "FSig": 52,
+      "BbSig": 119,
+      "TSig": 557
+    },
+    {
+      "PRES": 220.88,
+      "FSig": 52,
+      "BbSig": 120,
+      "TSig": 556
+    },
+    {
+      "PRES": 211.51,
+      "FSig": 55,
+      "BbSig": 121,
+      "TSig": 555
+    },
+    {
+      "PRES": 201.39,
+      "FSig": 55,
+      "BbSig": 122,
+      "TSig": 555
+    },
+    {
+      "PRES": 191.64,
+      "FSig": 55,
+      "BbSig": 120,
+      "TSig": 554
+    },
+    {
+      "PRES": 181.76,
+      "FSig": 58,
+      "BbSig": 122,
+      "TSig": 554
+    },
+    {
+      "PRES": 171.46,
+      "FSig": 62,
+      "BbSig": 127,
+      "TSig": 553
+    },
+    {
+      "PRES": 161.52,
+      "FSig": 65,
+      "BbSig": 133,
+      "TSig": 552
+    },
+    {
+      "PRES": 151.61,
+      "FSig": 67,
+      "BbSig": 136,
+      "TSig": 551
+    },
+    {
+      "PRES": 141.25,
+      "FSig": 77,
+      "BbSig": 136,
+      "TSig": 551
+    },
+    {
+      "PRES": 131.84,
+      "FSig": 82,
+      "BbSig": 141,
+      "TSig": 550
+    },
+    {
+      "PRES": 121.9,
+      "FSig": 100,
+      "BbSig": 145,
+      "TSig": 549
+    },
+    {
+      "PRES": 111.32,
+      "FSig": 132,
+      "BbSig": 146,
+      "TSig": 548
+    },
+    {
+      "PRES": 101.87,
+      "FSig": 95,
+      "BbSig": 143,
+      "TSig": 547
+    },
+    {
+      "PRES": 96.57,
+      "FSig": 85,
+      "BbSig": 142,
+      "TSig": 547
+    },
+    {
+      "PRES": 91.66,
+      "FSig": 82,
+      "BbSig": 161,
+      "TSig": 546
+    },
+    {
+      "PRES": 86.82,
+      "FSig": 80,
+      "BbSig": 147,
+      "TSig": 545
+    },
+    {
+      "PRES": 81.49,
+      "FSig": 74,
+      "BbSig": 151,
+      "TSig": 544
+    },
+    {
+      "PRES": 76.74,
+      "FSig": 70,
+      "BbSig": 148,
+      "TSig": 544
+    },
+    {
+      "PRES": 71.66,
+      "FSig": 76,
+      "BbSig": 147,
+      "TSig": 543
+    },
+    {
+      "PRES": 66.99,
+      "FSig": 69,
+      "BbSig": 155,
+      "TSig": 542
+    },
+    {
+      "PRES": 61.6,
+      "FSig": 66,
+      "BbSig": 153,
+      "TSig": 541
+    },
+    {
+      "PRES": 56.96,
+      "FSig": 64,
+      "BbSig": 150,
+      "TSig": 540
+    },
+    {
+      "PRES": 51.57,
+      "FSig": 59,
+      "BbSig": 150,
+      "TSig": 539
+    },
+    {
+      "PRES": 46.77,
+      "FSig": 58,
+      "BbSig": 154,
+      "TSig": 538
+    },
+    {
+      "PRES": 41.5,
+      "FSig": 56,
+      "BbSig": 148,
+      "TSig": 537
+    },
+    {
+      "PRES": 36.59,
+      "FSig": 58,
+      "BbSig": 146,
+      "TSig": 537
+    },
+    {
+      "PRES": 31.65,
+      "FSig": 58,
+      "BbSig": 144,
+      "TSig": 537
+    },
+    {
+      "PRES": 26.78,
+      "FSig": 54,
+      "BbSig": 148,
+      "TSig": 536
+    },
+    {
+      "PRES": 21.85,
+      "FSig": 56,
+      "BbSig": 143,
+      "TSig": 536
+    },
+    {
+      "PRES": 16.36,
+      "FSig": 56,
+      "BbSig": 141,
+      "TSig": 536
+    },
+    {
+      "PRES": 11.65,
+      "FSig": 56,
+      "BbSig": 143,
+      "TSig": 536
+    },
+    {
+      "PRES": 7.39,
+      "FSig": 55,
+      "BbSig": 140,
+      "TSig": 536
+    }
+  ],
+  "ECO_Drift": [
+    {
+      "PRES": 990.36,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -4276,7 +5415,6 @@
     },
     {
       "PRES": 992.45,
-      "TEMP": 3.8649,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 571,
@@ -4284,7 +5422,6 @@
     },
     {
       "PRES": 996.7,
-      "TEMP": 3.8774,
       "FSig": 56,
       "BbSig": 114,
       "TSig": 571,
@@ -4292,7 +5429,6 @@
     },
     {
       "PRES": 999.36,
-      "TEMP": 3.8892,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4300,7 +5436,6 @@
     },
     {
       "PRES": 998.52,
-      "TEMP": 3.877,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4308,7 +5443,6 @@
     },
     {
       "PRES": 999.62,
-      "TEMP": 3.8697,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -4316,7 +5450,6 @@
     },
     {
       "PRES": 998.09,
-      "TEMP": 3.869,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4324,7 +5457,6 @@
     },
     {
       "PRES": 999.91,
-      "TEMP": 3.8742,
       "FSig": 54,
       "BbSig": 115,
       "TSig": 572,
@@ -4332,7 +5464,6 @@
     },
     {
       "PRES": 997.71,
-      "TEMP": 3.882,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 571,
@@ -4340,7 +5471,6 @@
     },
     {
       "PRES": 1004.3,
-      "TEMP": 3.9179,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 571,
@@ -4348,7 +5478,6 @@
     },
     {
       "PRES": 999.87,
-      "TEMP": 3.8803,
       "FSig": 56,
       "BbSig": 116,
       "TSig": 572,
@@ -4356,7 +5485,6 @@
     },
     {
       "PRES": 993.95,
-      "TEMP": 3.8597,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 571,
@@ -4364,7 +5492,6 @@
     },
     {
       "PRES": 991.46,
-      "TEMP": 3.8405,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4372,7 +5499,6 @@
     },
     {
       "PRES": 989.6,
-      "TEMP": 3.8315,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4380,7 +5506,6 @@
     },
     {
       "PRES": 993.53,
-      "TEMP": 3.8319,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4388,7 +5513,6 @@
     },
     {
       "PRES": 998.32,
-      "TEMP": 3.8514,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4396,7 +5520,6 @@
     },
     {
       "PRES": 997.26,
-      "TEMP": 3.8811,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4404,7 +5527,6 @@
     },
     {
       "PRES": 1001.42,
-      "TEMP": 3.8697,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 571,
@@ -4412,7 +5534,6 @@
     },
     {
       "PRES": 1004.57,
-      "TEMP": 3.9088,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -4420,7 +5541,6 @@
     },
     {
       "PRES": 1000.24,
-      "TEMP": 3.9018,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 571,
@@ -4428,7 +5548,6 @@
     },
     {
       "PRES": 1000.3,
-      "TEMP": 3.8884,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4436,7 +5555,6 @@
     },
     {
       "PRES": 1000.83,
-      "TEMP": 3.8704,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4444,7 +5562,6 @@
     },
     {
       "PRES": 997.64,
-      "TEMP": 3.8636,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4452,7 +5569,6 @@
     },
     {
       "PRES": 995.26,
-      "TEMP": 3.8465,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4460,7 +5576,6 @@
     },
     {
       "PRES": 996.97,
-      "TEMP": 3.8596,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -4468,7 +5583,6 @@
     },
     {
       "PRES": 996.2,
-      "TEMP": 3.8484,
       "FSig": 55,
       "BbSig": 116,
       "TSig": 572,
@@ -4476,7 +5590,6 @@
     },
     {
       "PRES": 995.68,
-      "TEMP": 3.8437,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4484,7 +5597,6 @@
     },
     {
       "PRES": 998.98,
-      "TEMP": 3.8593,
       "FSig": 56,
       "BbSig": 113,
       "TSig": 572,
@@ -4492,7 +5604,6 @@
     },
     {
       "PRES": 1001.84,
-      "TEMP": 3.8701,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4500,7 +5611,6 @@
     },
     {
       "PRES": 1003.08,
-      "TEMP": 3.8737,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4508,7 +5618,6 @@
     },
     {
       "PRES": 999.38,
-      "TEMP": 3.8969,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -4516,7 +5625,6 @@
     },
     {
       "PRES": 1002.47,
-      "TEMP": 3.8773,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -4524,7 +5632,6 @@
     },
     {
       "PRES": 1005.43,
-      "TEMP": 3.9086,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 571,
@@ -4532,7 +5639,6 @@
     },
     {
       "PRES": 1002.34,
-      "TEMP": 3.8756,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -4540,7 +5646,6 @@
     },
     {
       "PRES": 1000.33,
-      "TEMP": 3.8792,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4548,7 +5653,6 @@
     },
     {
       "PRES": 1000.79,
-      "TEMP": 3.8582,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4556,7 +5660,6 @@
     },
     {
       "PRES": 994.75,
-      "TEMP": 3.8589,
       "FSig": 54,
       "BbSig": 121,
       "TSig": 572,
@@ -4564,7 +5667,6 @@
     },
     {
       "PRES": 991.75,
-      "TEMP": 3.8241,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4572,7 +5674,6 @@
     },
     {
       "PRES": 993.6,
-      "TEMP": 3.8141,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4580,7 +5681,6 @@
     },
     {
       "PRES": 997.38,
-      "TEMP": 3.8309,
       "FSig": 55,
       "BbSig": 119,
       "TSig": 571,
@@ -4588,7 +5688,6 @@
     },
     {
       "PRES": 995.22,
-      "TEMP": 3.8411,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4596,7 +5695,6 @@
     },
     {
       "PRES": 996.35,
-      "TEMP": 3.8376,
       "FSig": 55,
       "BbSig": 111,
       "TSig": 571,
@@ -4604,7 +5702,6 @@
     },
     {
       "PRES": 1000.23,
-      "TEMP": 3.8689,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 571,
@@ -4612,7 +5709,6 @@
     },
     {
       "PRES": 1001.95,
-      "TEMP": 3.8738,
       "FSig": 54,
       "BbSig": 125,
       "TSig": 572,
@@ -4620,7 +5716,6 @@
     },
     {
       "PRES": 1003.91,
-      "TEMP": 3.9099,
       "FSig": 54,
       "BbSig": 112,
       "TSig": 572,
@@ -4628,7 +5723,6 @@
     },
     {
       "PRES": 1000.21,
-      "TEMP": 3.8987,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4636,7 +5730,6 @@
     },
     {
       "PRES": 998.89,
-      "TEMP": 3.8741,
       "FSig": 54,
       "BbSig": 115,
       "TSig": 572,
@@ -4644,7 +5737,6 @@
     },
     {
       "PRES": 998.94,
-      "TEMP": 3.8637,
       "FSig": 54,
       "BbSig": 118,
       "TSig": 572,
@@ -4652,7 +5744,6 @@
     },
     {
       "PRES": 998.48,
-      "TEMP": 3.8676,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4660,7 +5751,6 @@
     },
     {
       "PRES": 998.24,
-      "TEMP": 3.8649,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4668,7 +5758,6 @@
     },
     {
       "PRES": 999.63,
-      "TEMP": 3.8573,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4676,7 +5765,6 @@
     },
     {
       "PRES": 999.22,
-      "TEMP": 3.8507,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4684,7 +5772,6 @@
     },
     {
       "PRES": 997.84,
-      "TEMP": 3.8434,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4692,7 +5779,6 @@
     },
     {
       "PRES": 999.79,
-      "TEMP": 3.8599,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4700,7 +5786,6 @@
     },
     {
       "PRES": 1003.52,
-      "TEMP": 3.8726,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 571,
@@ -4708,7 +5793,6 @@
     },
     {
       "PRES": 1002.85,
-      "TEMP": 3.886,
       "FSig": 56,
       "BbSig": 113,
       "TSig": 572,
@@ -4716,7 +5800,6 @@
     },
     {
       "PRES": 1004.52,
-      "TEMP": 3.8952,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4724,7 +5807,6 @@
     },
     {
       "PRES": 1003.0,
-      "TEMP": 3.8881,
       "FSig": 56,
       "BbSig": 112,
       "TSig": 572,
@@ -4732,7 +5814,6 @@
     },
     {
       "PRES": 1005.62,
-      "TEMP": 3.8883,
       "FSig": 56,
       "BbSig": 112,
       "TSig": 571,
@@ -4740,7 +5821,6 @@
     },
     {
       "PRES": 1001.08,
-      "TEMP": 3.8725,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4748,7 +5828,6 @@
     },
     {
       "PRES": 1002.31,
-      "TEMP": 3.8731,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -4756,7 +5835,6 @@
     },
     {
       "PRES": 995.36,
-      "TEMP": 3.8353,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4764,7 +5842,6 @@
     },
     {
       "PRES": 994.95,
-      "TEMP": 3.791,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -4772,7 +5849,6 @@
     },
     {
       "PRES": 992.98,
-      "TEMP": 3.792,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4780,7 +5856,6 @@
     },
     {
       "PRES": 995.45,
-      "TEMP": 3.7921,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4788,7 +5863,6 @@
     },
     {
       "PRES": 994.75,
-      "TEMP": 3.8013,
       "FSig": 54,
       "BbSig": 112,
       "TSig": 571,
@@ -4796,7 +5870,6 @@
     },
     {
       "PRES": 995.68,
-      "TEMP": 3.798,
       "FSig": 54,
       "BbSig": 112,
       "TSig": 572,
@@ -4804,7 +5877,6 @@
     },
     {
       "PRES": 1008.68,
-      "TEMP": 3.8662,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 571,
@@ -4812,7 +5884,6 @@
     },
     {
       "PRES": 1004.49,
-      "TEMP": 3.8992,
       "FSig": 54,
       "BbSig": 112,
       "TSig": 572,
@@ -4820,7 +5891,6 @@
     },
     {
       "PRES": 1000.51,
-      "TEMP": 3.8732,
       "FSig": 55,
       "BbSig": 111,
       "TSig": 572,
@@ -4828,7 +5898,6 @@
     },
     {
       "PRES": 996.33,
-      "TEMP": 3.8636,
       "FSig": 56,
       "BbSig": 113,
       "TSig": 572,
@@ -4836,7 +5905,6 @@
     },
     {
       "PRES": 999.78,
-      "TEMP": 3.8612,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4844,7 +5912,6 @@
     },
     {
       "PRES": 1002.81,
-      "TEMP": 3.862,
       "FSig": 55,
       "BbSig": 115,
       "TSig": 572,
@@ -4852,7 +5919,6 @@
     },
     {
       "PRES": 999.24,
-      "TEMP": 3.8621,
       "FSig": 54,
       "BbSig": 112,
       "TSig": 572,
@@ -4860,7 +5926,6 @@
     },
     {
       "PRES": 1002.05,
-      "TEMP": 3.8622,
       "FSig": 56,
       "BbSig": 112,
       "TSig": 572,
@@ -4868,7 +5933,6 @@
     },
     {
       "PRES": 999.7,
-      "TEMP": 3.8627,
       "FSig": 56,
       "BbSig": 111,
       "TSig": 572,
@@ -4876,7 +5940,6 @@
     },
     {
       "PRES": 1000.86,
-      "TEMP": 3.8632,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -4884,7 +5947,6 @@
     },
     {
       "PRES": 1003.93,
-      "TEMP": 3.8641,
       "FSig": 54,
       "BbSig": 115,
       "TSig": 572,
@@ -4892,7 +5954,6 @@
     },
     {
       "PRES": 1002.91,
-      "TEMP": 3.8663,
       "FSig": 56,
       "BbSig": 112,
       "TSig": 571,
@@ -4900,7 +5961,6 @@
     },
     {
       "PRES": 1006.46,
-      "TEMP": 3.8772,
       "FSig": 56,
       "BbSig": 114,
       "TSig": 572,
@@ -4908,7 +5968,6 @@
     },
     {
       "PRES": 1002.11,
-      "TEMP": 3.8791,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -4916,7 +5975,6 @@
     },
     {
       "PRES": 1003.18,
-      "TEMP": 3.8695,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4924,7 +5982,6 @@
     },
     {
       "PRES": 997.62,
-      "TEMP": 3.8646,
       "FSig": 56,
       "BbSig": 113,
       "TSig": 572,
@@ -4932,7 +5989,6 @@
     },
     {
       "PRES": 996.95,
-      "TEMP": 3.8423,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -4940,7 +5996,6 @@
     },
     {
       "PRES": 999.1,
-      "TEMP": 3.8616,
       "FSig": 55,
       "BbSig": 118,
       "TSig": 572,
@@ -4948,7 +6003,6 @@
     },
     {
       "PRES": 999.78,
-      "TEMP": 3.8617,
       "FSig": 54,
       "BbSig": 117,
       "TSig": 572,
@@ -4956,7 +6010,6 @@
     },
     {
       "PRES": 995.95,
-      "TEMP": 3.8412,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -4964,7 +6017,6 @@
     },
     {
       "PRES": 994.22,
-      "TEMP": 3.8357,
       "FSig": 55,
       "BbSig": 116,
       "TSig": 572,
@@ -4972,7 +6024,6 @@
     },
     {
       "PRES": 994.5,
-      "TEMP": 3.8183,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 572,
@@ -4980,7 +6031,6 @@
     },
     {
       "PRES": 998.33,
-      "TEMP": 3.8421,
       "FSig": 54,
       "BbSig": 112,
       "TSig": 572,
@@ -4988,7 +6038,6 @@
     },
     {
       "PRES": 1002.65,
-      "TEMP": 3.8482,
       "FSig": 54,
       "BbSig": 115,
       "TSig": 572,
@@ -4996,7 +6045,6 @@
     },
     {
       "PRES": 1003.25,
-      "TEMP": 3.867,
       "FSig": 56,
       "BbSig": 112,
       "TSig": 572,
@@ -5004,7 +6052,6 @@
     },
     {
       "PRES": 1003.16,
-      "TEMP": 3.8868,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 571,
@@ -5012,7 +6059,6 @@
     },
     {
       "PRES": 1008.21,
-      "TEMP": 3.9034,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 571,
@@ -5020,7 +6066,6 @@
     },
     {
       "PRES": 1003.19,
-      "TEMP": 3.9036,
       "FSig": 55,
       "BbSig": 123,
       "TSig": 572,
@@ -5028,7 +6073,6 @@
     },
     {
       "PRES": 999.22,
-      "TEMP": 3.8599,
       "FSig": 56,
       "BbSig": 114,
       "TSig": 571,
@@ -5036,7 +6080,6 @@
     },
     {
       "PRES": 1000.73,
-      "TEMP": 3.859,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -5044,7 +6087,6 @@
     },
     {
       "PRES": 998.81,
-      "TEMP": 3.848,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -5052,7 +6094,6 @@
     },
     {
       "PRES": 998.97,
-      "TEMP": 3.8468,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -5060,7 +6101,6 @@
     },
     {
       "PRES": 998.88,
-      "TEMP": 3.8507,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
@@ -5068,7 +6108,6 @@
     },
     {
       "PRES": 998.86,
-      "TEMP": 3.8507,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -5076,7 +6115,6 @@
     },
     {
       "PRES": 1002.58,
-      "TEMP": 3.8479,
       "FSig": 56,
       "BbSig": 115,
       "TSig": 572,
@@ -5084,7 +6122,6 @@
     },
     {
       "PRES": 1000.81,
-      "TEMP": 3.8581,
       "FSig": 55,
       "BbSig": 111,
       "TSig": 571,
@@ -5092,7 +6129,6 @@
     },
     {
       "PRES": 1001.69,
-      "TEMP": 3.8547,
       "FSig": 54,
       "BbSig": 111,
       "TSig": 571,
@@ -5100,7 +6136,6 @@
     },
     {
       "PRES": 1005.24,
-      "TEMP": 3.8866,
       "FSig": 55,
       "BbSig": 112,
       "TSig": 572,
@@ -5108,7 +6143,6 @@
     },
     {
       "PRES": 1002.63,
-      "TEMP": 3.8844,
       "FSig": 55,
       "BbSig": 114,
       "TSig": 571,
@@ -5116,7 +6150,6 @@
     },
     {
       "PRES": 1003.55,
-      "TEMP": 3.8824,
       "FSig": 55,
       "BbSig": 113,
       "TSig": 572,
@@ -5124,7 +6157,6 @@
     },
     {
       "PRES": 1004.66,
-      "TEMP": 3.8861,
       "FSig": 55,
       "BbSig": 116,
       "TSig": 572,
@@ -5132,7 +6164,6 @@
     },
     {
       "PRES": 1005.61,
-      "TEMP": 3.8951,
       "FSig": 55,
       "BbSig": 116,
       "TSig": 571,
@@ -5140,7 +6171,6 @@
     },
     {
       "PRES": 998.85,
-      "TEMP": 3.8354,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -5148,7 +6178,6 @@
     },
     {
       "PRES": 999.03,
-      "TEMP": 3.8368,
       "FSig": 54,
       "BbSig": 114,
       "TSig": 572,
@@ -5156,11 +6185,1021 @@
     },
     {
       "PRES": 994.89,
-      "TEMP": 3.8508,
       "FSig": 54,
       "BbSig": 113,
       "TSig": 572,
       "TIME": "2025-10-15T19:11:19Z"
+    }
+  ],
+  "pH_Discrete": [
+    {
+      "PRES": 996.09,
+      "pH_V": null
+    },
+    {
+      "PRES": 1598.98,
+      "pH_V": -0.88458
+    },
+    {
+      "PRES": 1499.91,
+      "pH_V": -0.88464
+    },
+    {
+      "PRES": 1399.45,
+      "pH_V": -0.88464
+    },
+    {
+      "PRES": 1297.69,
+      "pH_V": -0.88462
+    },
+    {
+      "PRES": 1199.77,
+      "pH_V": -0.88422
+    },
+    {
+      "PRES": 1099.52,
+      "pH_V": -0.88463
+    },
+    {
+      "PRES": 999.67,
+      "pH_V": -0.88457
+    },
+    {
+      "PRES": 951.16,
+      "pH_V": -0.88468
+    },
+    {
+      "PRES": 900.91,
+      "pH_V": -0.88478
+    },
+    {
+      "PRES": 851.04,
+      "pH_V": -0.88433
+    },
+    {
+      "PRES": 801.62,
+      "pH_V": -0.88373
+    },
+    {
+      "PRES": 751.59,
+      "pH_V": -0.88239
+    },
+    {
+      "PRES": 701.48,
+      "pH_V": -0.88086
+    },
+    {
+      "PRES": 650.91,
+      "pH_V": -0.87808
+    },
+    {
+      "PRES": 601.84,
+      "pH_V": -0.87419
+    },
+    {
+      "PRES": 551.08,
+      "pH_V": -0.86864
+    },
+    {
+      "PRES": 501.85,
+      "pH_V": -0.86304
+    },
+    {
+      "PRES": 451.45,
+      "pH_V": -0.85808
+    },
+    {
+      "PRES": 401.56,
+      "pH_V": -0.85454
+    },
+    {
+      "PRES": 381.31,
+      "pH_V": -0.8534
+    },
+    {
+      "PRES": 361.17,
+      "pH_V": -0.85227
+    },
+    {
+      "PRES": 351.3,
+      "pH_V": -0.85189
+    },
+    {
+      "PRES": 340.87,
+      "pH_V": -0.85148
+    },
+    {
+      "PRES": 330.99,
+      "pH_V": -0.85094
+    },
+    {
+      "PRES": 321.63,
+      "pH_V": -0.85044
+    },
+    {
+      "PRES": 311.26,
+      "pH_V": -0.85001
+    },
+    {
+      "PRES": 301.4,
+      "pH_V": -0.84923
+    },
+    {
+      "PRES": 291.22,
+      "pH_V": -0.84854
+    },
+    {
+      "PRES": 281.89,
+      "pH_V": -0.84819
+    },
+    {
+      "PRES": 271.4,
+      "pH_V": -0.84771
+    },
+    {
+      "PRES": 261.4,
+      "pH_V": -0.84726
+    },
+    {
+      "PRES": 251.6,
+      "pH_V": -0.84611
+    },
+    {
+      "PRES": 241.55,
+      "pH_V": -0.84534
+    },
+    {
+      "PRES": 231.76,
+      "pH_V": -0.84474
+    },
+    {
+      "PRES": 220.88,
+      "pH_V": -0.84386
+    },
+    {
+      "PRES": 211.51,
+      "pH_V": -0.84266
+    },
+    {
+      "PRES": 201.39,
+      "pH_V": -0.84251
+    },
+    {
+      "PRES": 191.64,
+      "pH_V": -0.84206
+    },
+    {
+      "PRES": 181.76,
+      "pH_V": -0.84132
+    },
+    {
+      "PRES": 171.46,
+      "pH_V": -0.84067
+    },
+    {
+      "PRES": 161.52,
+      "pH_V": -0.84039
+    },
+    {
+      "PRES": 151.61,
+      "pH_V": -0.83991
+    },
+    {
+      "PRES": 141.25,
+      "pH_V": -0.83923
+    },
+    {
+      "PRES": 131.84,
+      "pH_V": -0.83858
+    },
+    {
+      "PRES": 121.9,
+      "pH_V": -0.83737
+    },
+    {
+      "PRES": 111.32,
+      "pH_V": -0.836
+    },
+    {
+      "PRES": 101.87,
+      "pH_V": -0.83458
+    },
+    {
+      "PRES": 96.57,
+      "pH_V": -0.83408
+    },
+    {
+      "PRES": 91.66,
+      "pH_V": -0.83339
+    },
+    {
+      "PRES": 86.82,
+      "pH_V": -0.83265
+    },
+    {
+      "PRES": 81.49,
+      "pH_V": -0.83216
+    },
+    {
+      "PRES": 76.74,
+      "pH_V": -0.83201
+    },
+    {
+      "PRES": 71.66,
+      "pH_V": -0.83161
+    },
+    {
+      "PRES": 66.99,
+      "pH_V": -0.83127
+    },
+    {
+      "PRES": 61.6,
+      "pH_V": -0.83029
+    },
+    {
+      "PRES": 56.96,
+      "pH_V": -0.82967
+    },
+    {
+      "PRES": 51.57,
+      "pH_V": -0.82926
+    },
+    {
+      "PRES": 46.77,
+      "pH_V": -0.82918
+    },
+    {
+      "PRES": 41.5,
+      "pH_V": -0.82882
+    },
+    {
+      "PRES": 36.59,
+      "pH_V": -0.82852
+    },
+    {
+      "PRES": 31.65,
+      "pH_V": -0.82829
+    },
+    {
+      "PRES": 26.78,
+      "pH_V": -0.8282
+    },
+    {
+      "PRES": 21.85,
+      "pH_V": -0.8281
+    },
+    {
+      "PRES": 16.36,
+      "pH_V": -0.82804
+    },
+    {
+      "PRES": 11.65,
+      "pH_V": -0.82796
+    },
+    {
+      "PRES": 7.39,
+      "pH_V": -0.82788
+    }
+  ],
+  "OCR_Discrete": [
+    {
+      "PRES": 996.09,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 1598.98,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 1499.91,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 1399.45,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 1297.69,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 1199.77,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 1099.52,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 999.67,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 951.16,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 900.91,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 851.04,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 801.62,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 751.59,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 701.48,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 650.91,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 601.84,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 551.08,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 501.85,
+      "OCR0": null,
+      "OCR1": null,
+      "OCR2": null,
+      "OCR[3]": null
+    },
+    {
+      "PRES": 451.45,
+      "OCR0": 2147908736,
+      "OCR1": 2147497097,
+      "OCR2": 2148039378,
+      "OCR[3]": 2147467757
+    },
+    {
+      "PRES": 401.56,
+      "OCR0": 2147905572,
+      "OCR1": 2147492470,
+      "OCR2": 2148033645,
+      "OCR[3]": 2147469476
+    },
+    {
+      "PRES": 381.31,
+      "OCR0": 2147904457,
+      "OCR1": 2147495725,
+      "OCR2": 2148030537,
+      "OCR[3]": 2147466596
+    },
+    {
+      "PRES": 361.17,
+      "OCR0": 2147910454,
+      "OCR1": 2147485001,
+      "OCR2": 2148030390,
+      "OCR[3]": 2147467748
+    },
+    {
+      "PRES": 351.3,
+      "OCR0": 2147911881,
+      "OCR1": 2147485677,
+      "OCR2": 2148030226,
+      "OCR[3]": 2147462518
+    },
+    {
+      "PRES": 340.87,
+      "OCR0": 2147905005,
+      "OCR1": 2147484004,
+      "OCR2": 2148031780,
+      "OCR[3]": 2147462976
+    },
+    {
+      "PRES": 330.99,
+      "OCR0": 2147909741,
+      "OCR1": 2147486134,
+      "OCR2": 2148026724,
+      "OCR[3]": 2147462253
+    },
+    {
+      "PRES": 321.63,
+      "OCR0": 2147904402,
+      "OCR1": 2147485915,
+      "OCR2": 2148029430,
+      "OCR[3]": 2147464310
+    },
+    {
+      "PRES": 311.26,
+      "OCR0": 2147907136,
+      "OCR1": 2147483949,
+      "OCR2": 2148029970,
+      "OCR[3]": 2147463844
+    },
+    {
+      "PRES": 301.4,
+      "OCR0": 2147902171,
+      "OCR1": 2147482907,
+      "OCR2": 2148033526,
+      "OCR[3]": 2147461714
+    },
+    {
+      "PRES": 291.22,
+      "OCR0": 2147910619,
+      "OCR1": 2147480621,
+      "OCR2": 2148025865,
+      "OCR[3]": 2147460333
+    },
+    {
+      "PRES": 281.89,
+      "OCR0": 2147896749,
+      "OCR1": 2147484827,
+      "OCR2": 2148026806,
+      "OCR[3]": 2147461906
+    },
+    {
+      "PRES": 271.4,
+      "OCR0": 2147904256,
+      "OCR1": 2147479707,
+      "OCR2": 2148031140,
+      "OCR[3]": 2147456621
+    },
+    {
+      "PRES": 261.4,
+      "OCR0": 2147898130,
+      "OCR1": 2147477933,
+      "OCR2": 2148027053,
+      "OCR[3]": 2147457298
+    },
+    {
+      "PRES": 251.6,
+      "OCR0": 2147898112,
+      "OCR1": 2147475072,
+      "OCR2": 2148021193,
+      "OCR[3]": 2147457929
+    },
+    {
+      "PRES": 241.55,
+      "OCR0": 2147897078,
+      "OCR1": 2147475529,
+      "OCR2": 2148022930,
+      "OCR[3]": 2147450066
+    },
+    {
+      "PRES": 231.76,
+      "OCR0": 2147895341,
+      "OCR1": 2147468836,
+      "OCR2": 2148023506,
+      "OCR[3]": 2147450541
+    },
+    {
+      "PRES": 220.88,
+      "OCR0": 2147896877,
+      "OCR1": 2147473654,
+      "OCR2": 2148024374,
+      "OCR[3]": 2147454573
+    },
+    {
+      "PRES": 211.51,
+      "OCR0": 2147901787,
+      "OCR1": 2147472137,
+      "OCR2": 2148026276,
+      "OCR[3]": 2147451867
+    },
+    {
+      "PRES": 201.39,
+      "OCR0": 2147895771,
+      "OCR1": 2147476662,
+      "OCR2": 2148020772,
+      "OCR[3]": 2147452608
+    },
+    {
+      "PRES": 191.64,
+      "OCR0": 2147894957,
+      "OCR1": 2147464786,
+      "OCR2": 2148017417,
+      "OCR[3]": 2147453924
+    },
+    {
+      "PRES": 181.76,
+      "OCR0": 2147895021,
+      "OCR1": 2147467364,
+      "OCR2": 2148015917,
+      "OCR[3]": 2147450797
+    },
+    {
+      "PRES": 171.46,
+      "OCR0": 2147889362,
+      "OCR1": 2147463634,
+      "OCR2": 2148015963,
+      "OCR[3]": 2147449910
+    },
+    {
+      "PRES": 161.52,
+      "OCR0": 2147890642,
+      "OCR1": 2147463881,
+      "OCR2": 2148014592,
+      "OCR[3]": 2147447424
+    },
+    {
+      "PRES": 151.61,
+      "OCR0": 2147887067,
+      "OCR1": 2147457865,
+      "OCR2": 2148013248,
+      "OCR[3]": 2147443638
+    },
+    {
+      "PRES": 141.25,
+      "OCR0": 2147889664,
+      "OCR1": 2147461430,
+      "OCR2": 2148009408,
+      "OCR[3]": 2147445915
+    },
+    {
+      "PRES": 131.84,
+      "OCR0": 2147885092,
+      "OCR1": 2147454345,
+      "OCR2": 2148012379,
+      "OCR[3]": 2147443364
+    },
+    {
+      "PRES": 121.9,
+      "OCR0": 2147883968,
+      "OCR1": 2147455012,
+      "OCR2": 2148009782,
+      "OCR[3]": 2147442825
+    },
+    {
+      "PRES": 111.32,
+      "OCR0": 2147885394,
+      "OCR1": 2147454701,
+      "OCR2": 2148008905,
+      "OCR[3]": 2147436443
+    },
+    {
+      "PRES": 101.87,
+      "OCR0": 2147881499,
+      "OCR1": 2147445586,
+      "OCR2": 2148007424,
+      "OCR[3]": 2147437577
+    },
+    {
+      "PRES": 96.57,
+      "OCR0": 2147886262,
+      "OCR1": 2147448548,
+      "OCR2": 2148004946,
+      "OCR[3]": 2147432896
+    },
+    {
+      "PRES": 91.66,
+      "OCR0": 2147886966,
+      "OCR1": 2147446089,
+      "OCR2": 2148001737,
+      "OCR[3]": 2147434560
+    },
+    {
+      "PRES": 86.82,
+      "OCR0": 2147880667,
+      "OCR1": 2147442258,
+      "OCR2": 2147999003,
+      "OCR[3]": 2147429321
+    },
+    {
+      "PRES": 81.49,
+      "OCR0": 2147874697,
+      "OCR1": 2147440722,
+      "OCR2": 2148001965,
+      "OCR[3]": 2147428809
+    },
+    {
+      "PRES": 76.74,
+      "OCR0": 2147874971,
+      "OCR1": 2147434770,
+      "OCR2": 2148000365,
+      "OCR[3]": 2147428736
+    },
+    {
+      "PRES": 71.66,
+      "OCR0": 2147878125,
+      "OCR1": 2147434523,
+      "OCR2": 2147997156,
+      "OCR[3]": 2147425837
+    },
+    {
+      "PRES": 66.99,
+      "OCR0": 2147878052,
+      "OCR1": 2147432356,
+      "OCR2": 2147997403,
+      "OCR[3]": 2147422701
+    },
+    {
+      "PRES": 61.6,
+      "OCR0": 2147866724,
+      "OCR1": 2147427629,
+      "OCR2": 2147983177,
+      "OCR[3]": 2147422674
+    },
+    {
+      "PRES": 56.96,
+      "OCR0": 2147866715,
+      "OCR1": 2147427675,
+      "OCR2": 2147986505,
+      "OCR[3]": 2147418386
+    },
+    {
+      "PRES": 51.57,
+      "OCR0": 2147866697,
+      "OCR1": 2147422601,
+      "OCR2": 2147980489,
+      "OCR[3]": 2147417609
+    },
+    {
+      "PRES": 46.77,
+      "OCR0": 2147866825,
+      "OCR1": 2147419044,
+      "OCR2": 2147981723,
+      "OCR[3]": 2147415542
+    },
+    {
+      "PRES": 41.5,
+      "OCR0": 2147871241,
+      "OCR1": 2147422528,
+      "OCR2": 2147982582,
+      "OCR[3]": 2147415533
+    },
+    {
+      "PRES": 36.59,
+      "OCR0": 2147861440,
+      "OCR1": 2147419702,
+      "OCR2": 2147980781,
+      "OCR[3]": 2147415259
+    },
+    {
+      "PRES": 31.65,
+      "OCR0": 2147865261,
+      "OCR1": 2147419748,
+      "OCR2": 2147981458,
+      "OCR[3]": 2147414683
+    },
+    {
+      "PRES": 26.78,
+      "OCR0": 2147861796,
+      "OCR1": 2147417316,
+      "OCR2": 2147979026,
+      "OCR[3]": 2147410358
+    },
+    {
+      "PRES": 21.85,
+      "OCR0": 2147862976,
+      "OCR1": 2147416237,
+      "OCR2": 2147981494,
+      "OCR[3]": 2147415350
+    },
+    {
+      "PRES": 16.36,
+      "OCR0": 2147862518,
+      "OCR1": 2147412928,
+      "OCR2": 2147979949,
+      "OCR[3]": 2147412059
+    },
+    {
+      "PRES": 11.65,
+      "OCR0": 2147863341,
+      "OCR1": 2147413412,
+      "OCR2": 2147978715,
+      "OCR[3]": 2147412251
+    },
+    {
+      "PRES": 7.39,
+      "OCR0": 2147862189,
+      "OCR1": 2147413129,
+      "OCR2": 2147980726,
+      "OCR[3]": 2147414198
+    }
+  ],
+  "NITRATE_Discrete": [
+    {
+      "PRES": 996.09,
+      "NO3": null
+    },
+    {
+      "PRES": 1598.98,
+      "NO3": 41.3
+    },
+    {
+      "PRES": 1499.91,
+      "NO3": 41.6
+    },
+    {
+      "PRES": 1399.45,
+      "NO3": 41.9
+    },
+    {
+      "PRES": 1297.69,
+      "NO3": 42.2
+    },
+    {
+      "PRES": 1199.77,
+      "NO3": 42.4
+    },
+    {
+      "PRES": 1099.52,
+      "NO3": 42.7
+    },
+    {
+      "PRES": 999.67,
+      "NO3": 43.2
+    },
+    {
+      "PRES": 951.16,
+      "NO3": 43.3
+    },
+    {
+      "PRES": 900.91,
+      "NO3": 43.4
+    },
+    {
+      "PRES": 851.04,
+      "NO3": 43.1
+    },
+    {
+      "PRES": 801.62,
+      "NO3": 42.6
+    },
+    {
+      "PRES": 751.59,
+      "NO3": 41.6
+    },
+    {
+      "PRES": 701.48,
+      "NO3": 40.2
+    },
+    {
+      "PRES": 650.91,
+      "NO3": 37.9
+    },
+    {
+      "PRES": 601.84,
+      "NO3": 34.6
+    },
+    {
+      "PRES": 551.08,
+      "NO3": 29.6
+    },
+    {
+      "PRES": 501.85,
+      "NO3": 24.5
+    },
+    {
+      "PRES": 451.45,
+      "NO3": 20.2
+    },
+    {
+      "PRES": 401.56,
+      "NO3": 16.7
+    },
+    {
+      "PRES": 381.31,
+      "NO3": 15.6
+    },
+    {
+      "PRES": 361.17,
+      "NO3": 14.5
+    },
+    {
+      "PRES": 351.3,
+      "NO3": 14.3
+    },
+    {
+      "PRES": 340.87,
+      "NO3": 13.8
+    },
+    {
+      "PRES": 330.99,
+      "NO3": 13.3
+    },
+    {
+      "PRES": 321.63,
+      "NO3": 12.8
+    },
+    {
+      "PRES": 311.26,
+      "NO3": 12.5
+    },
+    {
+      "PRES": 301.4,
+      "NO3": 11.6
+    },
+    {
+      "PRES": 291.22,
+      "NO3": 11.0
+    },
+    {
+      "PRES": 281.89,
+      "NO3": 10.6
+    },
+    {
+      "PRES": 271.4,
+      "NO3": 10.2
+    },
+    {
+      "PRES": 261.4,
+      "NO3": 9.9
+    },
+    {
+      "PRES": 251.6,
+      "NO3": 8.6
+    },
+    {
+      "PRES": 241.55,
+      "NO3": 7.8
+    },
+    {
+      "PRES": 231.76,
+      "NO3": 7.2
+    },
+    {
+      "PRES": 220.88,
+      "NO3": 6.4
+    },
+    {
+      "PRES": 211.51,
+      "NO3": 5.2
+    },
+    {
+      "PRES": 201.39,
+      "NO3": 5.3
+    },
+    {
+      "PRES": 191.64,
+      "NO3": 4.9
+    },
+    {
+      "PRES": 181.76,
+      "NO3": 4.3
+    },
+    {
+      "PRES": 171.46,
+      "NO3": 4.4
+    },
+    {
+      "PRES": 161.52,
+      "NO3": 4.1
+    },
+    {
+      "PRES": 151.61,
+      "NO3": 3.8
+    },
+    {
+      "PRES": 141.25,
+      "NO3": 3.4
+    },
+    {
+      "PRES": 131.84,
+      "NO3": 3.4
+    },
+    {
+      "PRES": 121.9,
+      "NO3": 2.4
+    },
+    {
+      "PRES": 111.32,
+      "NO3": 1.5
+    },
+    {
+      "PRES": 101.87,
+      "NO3": 1.5
+    },
+    {
+      "PRES": 96.57,
+      "NO3": 1.5
+    },
+    {
+      "PRES": 91.66,
+      "NO3": 1.5
+    },
+    {
+      "PRES": 86.82,
+      "NO3": 1.8
+    },
+    {
+      "PRES": 81.49,
+      "NO3": 1.8
+    },
+    {
+      "PRES": 76.74,
+      "NO3": 2.0
+    },
+    {
+      "PRES": 71.66,
+      "NO3": 1.9
+    },
+    {
+      "PRES": 66.99,
+      "NO3": 1.8
+    },
+    {
+      "PRES": 61.6,
+      "NO3": 2.6
+    },
+    {
+      "PRES": 56.96,
+      "NO3": 2.1
+    },
+    {
+      "PRES": 51.57,
+      "NO3": 2.4
+    },
+    {
+      "PRES": 46.77,
+      "NO3": 2.4
+    },
+    {
+      "PRES": 41.5,
+      "NO3": 2.5
+    },
+    {
+      "PRES": 36.59,
+      "NO3": 2.5
+    },
+    {
+      "PRES": 31.65,
+      "NO3": 2.5
+    },
+    {
+      "PRES": 26.78,
+      "NO3": 2.4
+    },
+    {
+      "PRES": 21.85,
+      "NO3": 2.4
+    },
+    {
+      "PRES": 16.36,
+      "NO3": 2.3
+    },
+    {
+      "PRES": 11.65,
+      "NO3": 2.5
+    },
+    {
+      "PRES": 7.39,
+      "NO3": 2.5
     }
   ],
   "optode_air_calibration": [

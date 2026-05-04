@@ -1,5 +1,5 @@
 '''
-Version: 0.3.1
+Version: 0.4.0
 '''
 
 import re, itertools
@@ -9,8 +9,8 @@ from datetime import datetime, UTC
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.3.1",
-  "SCHEMA_VERSION": "0.3.1",
+  "DECODER_VERSION": "0.4.0",
+  "SCHEMA_VERSION": "0.4.0",
   "PI": "RISER, STEVE AND GRAY, ALISON",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
@@ -90,6 +90,25 @@ dura_EOP_rx = re.compile(r"<EOP>\s+:\s+([0-9]+)\.([0-9]+) [A-Z][a-z]{2} (" + mmm
 
 # regex for dura and isus engineering data
 dura_engr_rx = re.compile(r"^H, ([^,]+),(.*)$")
+
+# regex to extract pressure from log during float descant
+log_descent_rx = re.compile(r"\s*Pressure:\s+([0-9]+(?:\.[0-9]+))")
+
+# regex to extract pressure from log before float starts to ascend
+log_go_deep_rx = re.compile(r"\s*Sequence\s+point\s+detected\s+at\s+([0-9]+(?:\.[0-9]+))\s*dbar")
+
+# regex to extract pressure from log during continuous profiling
+log_profile_rx = re.compile(r"\s*Sample [0-9]+ initiated at ([0-9]+(?:\.[0-9]+))\s*dbar")
+
+# regex to extract pressure from log as prefile starts
+log_profileinit_rx = re.compile(r"\s*PrfId:[0-9]+\s+Pressure:([0-9]+(?:\.[0-9]+))dbar")
+
+# regex to extract piston move
+log_pistonmove_rx = re.compile(
+    r"([0-9]+)->[0-9]+ (?:[0-9]+\s+)*([0-9]+)\s+"
+    r"\[([0-9]+)sec, ([0-9]+(?:\.[0-9]+))Volts, ([0-9]+(?:\.[0-9]+))Amps, CPT:([0-9]+)sec\]"
+)
+
 
 #### Utility functions
 
@@ -353,34 +372,72 @@ def parse_discrete(disc_dict, logger=print):
     '''
     Parse discrete CTD samples of the float
     '''
-    out = []
+    out = {}
+    CTD = []
+    Optode = []
+    NO3 = []
+    pH = []
+    FLBB = []
+    OCR = []
 
+    
     if len(disc_dict["headers"]) == 3: # core CTD data only
         for item in disc_dict["park_data"]:
-            out.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
+            CTD.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
         for item in disc_dict["data"]:
-            out.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
+            CTD.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
 
     elif len(disc_dict["headers"]) == 15: # CTD(3) + optode(3) + nitrate(2) + FLBB(3) + OCR(4)
         for item in disc_dict["park_data"]:
-            out.append({
-                "PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"]),
-                "Temp_optode": parseFloat(item["Topt"]), "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"]),
-                "NO3": parseFloat(item["no3"]), "pH_V": parseFloat(item["pH(V)"]),
-                "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), "TSig": parseInt(item["TSig"]),
-                "Ocr": [parseHex(item["Ocr[0]"]), parseHex(item["Ocr[1]"]), parseHex(item["Ocr[2]"]), parseHex(item["Ocr[3]"])]
+            p = parseFloat(item["p"])
+            CTD.append({"PRES": p, "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
+            Optode.append({
+                "PRES": p, "Temp_optode": parseFloat(item["Topt"]), 
+                "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"])
+            })
+            NO3.append({"PRES": p, "NO3": parseFloat(item["no3"])})
+            pH.append({"PRES": p, "pH_V": parseFloat(item["pH(V)"])})
+            FLBB.append({
+                "PRES": p, "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), 
+                "TSig": parseInt(item["TSig"])
+            })
+            OCR.append({
+                "PRES": p, "OCR0": parseHex(item["Ocr[0]"]), "OCR1": parseHex(item["Ocr[1]"]),
+                "OCR2": parseHex(item["Ocr[2]"]), "OCR[3]": parseHex(item["Ocr[3]"])
             })
         for item in disc_dict["data"]:
-            out.append({
-                "PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"]),
-                "Temp_optode": parseFloat(item["Topt"]), "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"]),
-                "NO3": parseFloat(item["no3"]), "pH_V": parseFloat(item["pH(V)"]),
-                "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), "TSig": parseInt(item["TSig"]),
-                "Ocr": [parseHex(item["Ocr[0]"]), parseHex(item["Ocr[1]"]), parseHex(item["Ocr[2]"]), parseHex(item["Ocr[3]"])]
+            p = parseFloat(item["p"])
+            CTD.append({"PRES": p, "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
+            Optode.append({
+                "PRES": p, "Temp_optode": parseFloat(item["Topt"]), 
+                "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"])
+            })
+            NO3.append({"PRES": p, "NO3": parseFloat(item["no3"])})
+            pH.append({"PRES": p, "pH_V": parseFloat(item["pH(V)"])})
+            FLBB.append({
+                "PRES": p, "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), 
+                "TSig": parseInt(item["TSig"])}
+            )
+            OCR.append({
+                "PRES": p, "OCR0": parseHex(item["Ocr[0]"]), "OCR1": parseHex(item["Ocr[1]"]),
+                "OCR2": parseHex(item["Ocr[2]"]), "OCR[3]": parseHex(item["Ocr[3]"])
             })
     else:
         logger("Unknown data fields. No entries returned")
 
+    if CTD:
+        out["CTD"] = CTD
+    if Optode:
+        out["Optodo"] = Optode
+    if NO3:
+        out["NO3"] = NO3
+    if pH:
+        out["pH"] = pH
+    if FLBB:
+        out["FLBB"] = FLBB
+    if OCR:
+        out["OCR"] = OCR
+    
     return out
 
 
@@ -415,32 +472,65 @@ def parse_parked(park_dict, meas_type, logger=print):
     '''
     Parse parked CTD samples of the float
     '''
-    out = []
+    out = {}
+    
+    CTD = []
+    FLBB = []
+    Traj = []
 
     if meas_type == "ParkPt":
 
         for item in park_dict:
-            out.append({
-                "PRES": parseFloat(item["p"]),
-                "TEMP": parseFloat(item["t"]),
-                "TIME": decode_time(item["time"])
+
+            p = parseFloat(item["p"])
+            T = parseFloat(item["t"])
+            t = decode_time(item["time"])
+            
+            CTD.append({
+                "PRES": p,
+                "TEMP": T,
+                "TIME": t
+            })
+            Traj.append({
+                "TIME": t,
+                "PRES": p
             })
 
     elif meas_type == "ParkPtFlbb":
 
         for item in park_dict:
-            out.append({
-                "PRES": parseFloat(item["p"]),
-                "TEMP": parseFloat(item["t"]),
+
+            p = parseFloat(item["p"])
+            T = parseFloat(item["t"])
+            t = decode_time(item["time"])
+
+            CTD.append({
+                "PRES": p,
+                "TEMP": T,
+                "TIME": t
+            })
+            Traj.append({
+                "TIME": t,
+                "PRES": p
+            })
+            FLBB.append({
+                "PRES": p,
                 "FSig": parseInt(item["FSig"]),
                 "BbSig": parseInt(item["BbSig"]),
                 "TSig": parseInt(item["TSig"]),
-                "TIME": decode_time(item["time"])
+                "TIME": t
             })
 
     else:
         logger("Unknown measurement type. No entries returned")
 
+    if CTD:
+        out["CTD"] = CTD
+    if Traj:
+        out["Traj"] = Traj
+    if FLBB:
+        out["FLBB"] = FLBB
+    
     return out
 
 
@@ -1125,6 +1215,65 @@ def dura_tokenizer(file, dura_type, logger=lambda x: print("[DURA] " + x)):
     return out_list[-1]
 
 
+def log_extractor(log):
+
+    fall = []
+    rise = []
+    piston = []
+    
+    for entry in log:
+
+        match entry["call"].strip().lower():
+            
+            case "descent":
+
+                rx_match = log_descent_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    fall.append({"TIME": entry["datetime"], "PRES": pres, "description": "Descent"})
+
+            case "godeep":
+            
+                rx_match = log_go_deep_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    rise.append({"TIME": entry["datetime"], "PRES": pres, "description": "Sequence point"})
+
+            case "profileinit":
+
+                rx_match = log_profileinit_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    rise.append({"TIME": entry["datetime"], "PRES": pres, "description": "Profile Init"})
+            
+            case "profile":
+
+                rx_match = log_profile_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    rise.append({"TIME": entry["datetime"], "PRES": pres, "description": "Profile"})
+
+            case "pistonmoveabswto":
+                
+                rx_match = log_pistonmove_rx.match(entry["message"])
+                if rx_match:
+                    p1 = int(rx_match[1])
+                    p2 = int(rx_match[2])
+                    current = float(rx_match[5])
+                    voltage = float(rx_match[4])
+                    time = int(rx_match[3])
+                    piston.append({
+                        "TIME": entry["datetime"],
+                        "piston_start": p1, 
+                        "piston_end": p2,
+                        "current": current, 
+                        "voltage": voltage, 
+                        "duration": time
+                    })
+                   
+    return {"Fall": fall, "Rise": rise, "Piston": piston}
+
+
 def isus_tokenizer(file, logger=lambda x: print("[ISUS] " + x)):
 
     out_list = []
@@ -1276,20 +1425,68 @@ def L0_parser(
         out_dict["Iridium"] = parse_iridium(msg_dict["Iridium"])
         if consume: del msg_dict["Iridium"]
 
+    # interpret log data
+    if log_dict:
+        log_out = log_extractor(log_dict)
+    else:
+        log_out = {}
+    
     # Interpreting science data
     if "discrete_samples" in msg_dict:
-        out_dict["CTD_Discrete"] = parse_discrete(msg_dict["discrete_samples"])
+        discrete = parse_discrete(msg_dict["discrete_samples"])
         if consume: del msg_dict["discrete_samples"]
-    if "cont_samples" in msg_dict:
-        out_dict["CTD_Binned"] = parse_continuous(msg_dict["cont_samples"])
-        if consume: del msg_dict["cont_samples"]
-    if "ParkPt" in msg_dict:
-        out_dict["CTD_Drift"] = parse_parked(msg_dict["ParkPt"], "ParkPt")
-        if consume: del msg_dict["ParkPt"]
-    if "ParkPtFlbb" in msg_dict:
-        out_dict["CTD_Drift"] = parse_parked(msg_dict["ParkPtFlbb"], "ParkPtFlbb")
-        if consume: del msg_dict["ParkPtFlbb"]
+    else:
+        discrete = {}
 
+    if "cont_samples" in msg_dict:
+        continuous = parse_continuous(msg_dict["cont_samples"])
+        if consume: del msg_dict["cont_samples"]
+    else:
+        continuous = []
+
+    if "ParkPt" in msg_dict:
+        parked = parse_parked(msg_dict["ParkPt"], "ParkPt")
+        if consume: del msg_dict["ParkPt"]
+    elif "ParkPtFlbb" in msg_dict:
+        parked = parse_parked(msg_dict["ParkPtFlbb"], "ParkPtFlbb")
+        if consume: del msg_dict["ParkPtFlbb"]
+    else:
+        parked = {}
+    
+    # write out timestamp of fall, drift, and rise of float
+    if "Rise" in log_out: 
+        out_dict["Fall"] = log_out["Fall"]
+    if "Traj" in parked:
+        out_dict["Drift"] = parked["Traj"]
+    if "Fall" in log_out:
+        out_dict["Rise"] = log_out["Rise"]
+
+    # write out piston adjustments
+    if "Piston" in log_out:
+        out_dict["Piston"] = log_out["Piston"]
+
+    # Write out CTD data
+    if "CTD" in discrete:
+        out_dict["CTD_Discrete"] = discrete["CTD"]
+    if continuous:
+        out_dict["CTD_Binned"] = continuous
+    if "CTD" in parked:
+        out_dict["CTD_Drift"] = parked["CTD"]
+
+    # Write out extra sensor data
+    if "FLBB" in discrete:
+        out_dict["ECO_Discrete"] = discrete["FLBB"]
+    if "FLBB" in parked:
+        out_dict["ECO_Drift"] = parked["FLBB"]
+    if "Optode" in discrete:
+        out_dict["DO_Discrete"] = discrete["Optode"]
+    if "pH" in discrete:
+        out_dict["pH_Discrete"] = discrete["pH"]
+    if "OCR" in discrete:
+        out_dict["OCR_Discrete"] = discrete["OCR"]
+    if "NO3" in discrete:
+        out_dict["NITRATE_Discrete"] = discrete["NO3"]
+    
     # interpret calibration data
     if "OptodeAirCal" in msg_dict:
         out_dict["optode_air_calibration"] = parse_OptodeAirCal(msg_dict["OptodeAirCal"])

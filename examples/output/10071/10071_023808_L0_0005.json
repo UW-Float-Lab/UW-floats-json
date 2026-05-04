@@ -1,8 +1,8 @@
 {
-  "FILE_CREATION_DATE": "2026-04-28T04:28:13Z",
-  "FILE_UPDATE_DATE": "2026-04-28T04:28:13Z",
-  "DECODER_VERSION": "0.3.1",
-  "SCHEMA_VERSION": "0.3.1",
+  "FILE_CREATION_DATE": "2026-05-04T03:40:00Z",
+  "FILE_UPDATE_DATE": "2026-05-04T03:40:00Z",
+  "DECODER_VERSION": "0.4.0",
+  "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23808,
   "TRANSMISSION_ID_NUMBER": 23808,
   "AOML_ID_NUMBER": 10071,
@@ -43,44 +43,304 @@
       "system_time": 3968371552
     }
   ],
+  "Fall": [
+    {
+      "TIME": "2025-09-04T08:02:56Z",
+      "PRES": 100.8,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2025-09-04T08:15:09Z",
+      "PRES": 100.8,
+      "description": "Descent"
+    }
+  ],
+  "Drift": [
+    {
+      "TIME": "2025-09-04T08:15:19Z",
+      "PRES": 100.81
+    },
+    {
+      "TIME": "2025-09-04T08:45:07Z",
+      "PRES": 100.82
+    },
+    {
+      "TIME": "2025-09-04T09:45:07Z",
+      "PRES": 100.82
+    },
+    {
+      "TIME": "2025-09-04T10:45:07Z",
+      "PRES": 100.82
+    },
+    {
+      "TIME": "2025-09-04T11:45:07Z",
+      "PRES": 100.81
+    },
+    {
+      "TIME": "2025-09-04T12:45:07Z",
+      "PRES": 100.8
+    },
+    {
+      "TIME": "2025-09-04T13:45:07Z",
+      "PRES": 100.78
+    },
+    {
+      "TIME": "2025-09-04T14:45:07Z",
+      "PRES": 100.79
+    },
+    {
+      "TIME": "2025-09-04T15:45:07Z",
+      "PRES": 100.78
+    }
+  ],
+  "Rise": [
+    {
+      "TIME": "2025-09-04T16:44:59Z",
+      "PRES": 100.8,
+      "description": "Profile Init"
+    },
+    {
+      "TIME": "2025-09-04T16:47:36Z",
+      "PRES": 100.8,
+      "description": "Profile"
+    }
+  ],
+  "Piston": [
+    {
+      "TIME": "2025-09-04T07:45:12Z",
+      "piston_start": 231,
+      "piston_end": 19,
+      "current": 0.146,
+      "voltage": 14.8,
+      "duration": 1049
+    },
+    {
+      "TIME": "2025-09-04T16:16:21Z",
+      "piston_start": 19,
+      "piston_end": 9,
+      "current": 0.147,
+      "voltage": 15.1,
+      "duration": 49
+    },
+    {
+      "TIME": "2025-09-04T16:47:37Z",
+      "piston_start": 9,
+      "piston_end": 15,
+      "current": 0.159,
+      "voltage": 15.1,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-09-04T16:48:18Z",
+      "piston_start": 15,
+      "piston_end": 21,
+      "current": 0.149,
+      "voltage": 15.0,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-09-04T16:48:59Z",
+      "piston_start": 21,
+      "piston_end": 28,
+      "current": 0.157,
+      "voltage": 14.9,
+      "duration": 30
+    },
+    {
+      "TIME": "2025-09-04T16:49:40Z",
+      "piston_start": 28,
+      "piston_end": 31,
+      "current": 0.152,
+      "voltage": 14.9,
+      "duration": 15
+    },
+    {
+      "TIME": "2025-09-04T17:00:01Z",
+      "piston_start": 31,
+      "piston_end": 36,
+      "current": 0.162,
+      "voltage": 15.0,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T17:05:01Z",
+      "piston_start": 36,
+      "piston_end": 41,
+      "current": 0.152,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:10:12Z",
+      "piston_start": 41,
+      "piston_end": 46,
+      "current": 0.148,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:15:12Z",
+      "piston_start": 46,
+      "piston_end": 51,
+      "current": 0.151,
+      "voltage": 15.0,
+      "duration": 26
+    },
+    {
+      "TIME": "2025-09-04T17:20:13Z",
+      "piston_start": 51,
+      "piston_end": 56,
+      "current": 0.153,
+      "voltage": 15.0,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T17:25:13Z",
+      "piston_start": 56,
+      "piston_end": 61,
+      "current": 0.156,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:30:13Z",
+      "piston_start": 61,
+      "piston_end": 66,
+      "current": 0.147,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:35:13Z",
+      "piston_start": 66,
+      "piston_end": 71,
+      "current": 0.152,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:40:13Z",
+      "piston_start": 71,
+      "piston_end": 76,
+      "current": 0.147,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:45:13Z",
+      "piston_start": 76,
+      "piston_end": 81,
+      "current": 0.147,
+      "voltage": 15.0,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T17:50:13Z",
+      "piston_start": 81,
+      "piston_end": 86,
+      "current": 0.144,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T17:55:13Z",
+      "piston_start": 86,
+      "piston_end": 91,
+      "current": 0.149,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T18:00:13Z",
+      "piston_start": 91,
+      "piston_end": 96,
+      "current": 0.156,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T18:05:19Z",
+      "piston_start": 96,
+      "piston_end": 101,
+      "current": 0.155,
+      "voltage": 15.0,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T18:10:21Z",
+      "piston_start": 101,
+      "piston_end": 106,
+      "current": 0.148,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T18:15:22Z",
+      "piston_start": 106,
+      "piston_end": 111,
+      "current": 0.148,
+      "voltage": 15.0,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T18:20:22Z",
+      "piston_start": 111,
+      "piston_end": 116,
+      "current": 0.148,
+      "voltage": 15.0,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T18:25:23Z",
+      "piston_start": 116,
+      "piston_end": 121,
+      "current": 0.143,
+      "voltage": 15.0,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T18:30:23Z",
+      "piston_start": 121,
+      "piston_end": 126,
+      "current": 0.152,
+      "voltage": 15.1,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T18:35:24Z",
+      "piston_start": 126,
+      "piston_end": 131,
+      "current": 0.154,
+      "voltage": 15.1,
+      "duration": 25
+    },
+    {
+      "TIME": "2025-09-04T18:40:25Z",
+      "piston_start": 131,
+      "piston_end": 136,
+      "current": 0.156,
+      "voltage": 15.1,
+      "duration": 24
+    },
+    {
+      "TIME": "2025-09-04T18:47:06Z",
+      "piston_start": 136,
+      "piston_end": 231,
+      "current": 0.149,
+      "voltage": 14.9,
+      "duration": 465
+    }
+  ],
   "CTD_Discrete": [
     {
       "PRES": 100.79,
       "TEMP": 18.7147,
-      "PSAL": 33.5754,
-      "Temp_optode": 19.181,
-      "TPhase": 31.176,
-      "RPhase": 8.439,
-      "NO3": null,
-      "pH_V": null,
-      "FSig": 800,
-      "BbSig": 2116,
-      "TSig": 549,
-      "Ocr": [
-        2147885449,
-        2147445257,
-        2148023606,
-        2147453787
-      ]
+      "PSAL": 33.5754
     },
     {
       "PRES": 100.81,
       "TEMP": 20.7234,
-      "PSAL": 33.6929,
-      "Temp_optode": 21.422,
-      "TPhase": 30.762,
-      "RPhase": 8.479,
-      "NO3": -12.2,
-      "pH_V": -0.85605,
-      "FSig": 972,
-      "BbSig": 2013,
-      "TSig": 547,
-      "Ocr": [
-        2147886016,
-        2147428306,
-        2148021531,
-        2147442203
-      ]
+      "PSAL": 33.6929
     }
   ],
   "CTD_Binned": [
@@ -95,6 +355,66 @@
     {
       "PRES": 100.81,
       "TEMP": 19.406,
+      "TIME": "2025-09-04T08:15:19Z"
+    },
+    {
+      "PRES": 100.82,
+      "TEMP": 18.5248,
+      "TIME": "2025-09-04T08:45:07Z"
+    },
+    {
+      "PRES": 100.82,
+      "TEMP": 17.4487,
+      "TIME": "2025-09-04T09:45:07Z"
+    },
+    {
+      "PRES": 100.82,
+      "TEMP": 16.9884,
+      "TIME": "2025-09-04T10:45:07Z"
+    },
+    {
+      "PRES": 100.81,
+      "TEMP": 15.6936,
+      "TIME": "2025-09-04T11:45:07Z"
+    },
+    {
+      "PRES": 100.8,
+      "TEMP": 15.2221,
+      "TIME": "2025-09-04T12:45:07Z"
+    },
+    {
+      "PRES": 100.78,
+      "TEMP": 15.2129,
+      "TIME": "2025-09-04T13:45:07Z"
+    },
+    {
+      "PRES": 100.79,
+      "TEMP": 16.2989,
+      "TIME": "2025-09-04T14:45:07Z"
+    },
+    {
+      "PRES": 100.78,
+      "TEMP": 18.3703,
+      "TIME": "2025-09-04T15:45:07Z"
+    }
+  ],
+  "ECO_Discrete": [
+    {
+      "PRES": 100.79,
+      "FSig": 800,
+      "BbSig": 2116,
+      "TSig": 549
+    },
+    {
+      "PRES": 100.81,
+      "FSig": 972,
+      "BbSig": 2013,
+      "TSig": 547
+    }
+  ],
+  "ECO_Drift": [
+    {
+      "PRES": 100.81,
       "FSig": 462,
       "BbSig": 2236,
       "TSig": 548,
@@ -102,7 +422,6 @@
     },
     {
       "PRES": 100.82,
-      "TEMP": 18.5248,
       "FSig": 462,
       "BbSig": 2224,
       "TSig": 548,
@@ -110,7 +429,6 @@
     },
     {
       "PRES": 100.82,
-      "TEMP": 17.4487,
       "FSig": 467,
       "BbSig": 2199,
       "TSig": 550,
@@ -118,7 +436,6 @@
     },
     {
       "PRES": 100.82,
-      "TEMP": 16.9884,
       "FSig": 469,
       "BbSig": 2169,
       "TSig": 551,
@@ -126,7 +443,6 @@
     },
     {
       "PRES": 100.81,
-      "TEMP": 15.6936,
       "FSig": 476,
       "BbSig": 1927,
       "TSig": 553,
@@ -134,7 +450,6 @@
     },
     {
       "PRES": 100.8,
-      "TEMP": 15.2221,
       "FSig": 483,
       "BbSig": 1851,
       "TSig": 554,
@@ -142,7 +457,6 @@
     },
     {
       "PRES": 100.78,
-      "TEMP": 15.2129,
       "FSig": 551,
       "BbSig": 1768,
       "TSig": 554,
@@ -150,7 +464,6 @@
     },
     {
       "PRES": 100.79,
-      "TEMP": 16.2989,
       "FSig": 725,
       "BbSig": 1846,
       "TSig": 553,
@@ -158,11 +471,46 @@
     },
     {
       "PRES": 100.78,
-      "TEMP": 18.3703,
       "FSig": 781,
       "BbSig": 2145,
       "TSig": 551,
       "TIME": "2025-09-04T15:45:07Z"
+    }
+  ],
+  "pH_Discrete": [
+    {
+      "PRES": 100.79,
+      "pH_V": null
+    },
+    {
+      "PRES": 100.81,
+      "pH_V": -0.85605
+    }
+  ],
+  "OCR_Discrete": [
+    {
+      "PRES": 100.79,
+      "OCR0": 2147885449,
+      "OCR1": 2147445257,
+      "OCR2": 2148023606,
+      "OCR[3]": 2147453787
+    },
+    {
+      "PRES": 100.81,
+      "OCR0": 2147886016,
+      "OCR1": 2147428306,
+      "OCR2": 2148021531,
+      "OCR[3]": 2147442203
+    }
+  ],
+  "NITRATE_Discrete": [
+    {
+      "PRES": 100.79,
+      "NO3": null
+    },
+    {
+      "PRES": 100.81,
+      "NO3": -12.2
     }
   ],
   "optode_air_calibration": [

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "UW argo float L0 json",
-  "description": "UW argo float L0 json, version 0.3.2, updated 2026-04-27",
+  "description": "UW argo float L0 json, version 0.4.0, updated 2026-05-03",
   
   "$defs": {
     "ISO8601": {
@@ -211,6 +211,88 @@
       "required": [],
       "additionalProperties": false
     },
+    "Fall": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Time and pressure during the descending phase of a float",
+        "properties": {
+          "TIME": {
+            "$ref": "#/$defs/ISO8601"
+          },
+          "PRES": {
+            "type": "number"
+          }
+        },
+        "required": ["TIME", "PRES"]
+      }
+    },
+    "Drift": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Time and pressure during the drifting phase of a float",
+        "properties": {
+          "TIME": {
+            "$ref": "#/$defs/ISO8601"
+          },
+          "PRES": {
+            "type": "number"
+          }
+        },
+        "required": ["TIME", "PRES"]
+      }
+    },
+    "Rise": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Time and pressure during the ascending phase of a float",
+        "properties": {
+          "TIME": {
+            "$ref": "#/$defs/ISO8601"
+          },
+          "PRES": {
+            "type": "number"
+          }
+        },
+        "required": ["TIME", "PRES"]
+      }
+    },
+    "Piston": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Record of piston adjustments",
+        "properties": {
+          "TIME": {
+            "description": "Time at which adjustment occurs",
+            "$ref": "#/$defs/ISO8601"
+          },
+          "piston_start": {
+            "description": "The starting position of the piston",
+            "type": "integer"
+          },
+          "piston_end": {
+            "description": "The ending position of the piston",
+            "type": "integer"
+          },
+          "current": {
+            "description": "Current during piston adjustment, in ampere",
+            "type": "number"
+          },
+          "voltage": {
+            "description": "Voltage during piston adjustment, in volts",
+            "type": "number"
+          },
+          "duration": {
+            "description": "The duration of the piston adjustment, in seconds",
+            "type": "number"
+          }
+        },
+        "required": ["TIME", "piston_start", "piston_end", "current", "voltage", "duration"]
+      }
+    },
     "CTD_Discrete": {
       "type": "array",
       "items": {
@@ -346,6 +428,48 @@
         "additionalProperties": false
       },
       "minItems": 1
+    },
+    "ECO_Discrete": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Fluorescence and backscatter measurements taken by the float"
+      }
+    },
+    "ECO_Drift": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Fluorescence and backscatter measurements taken by the float during its drift phase"
+      }
+    },
+    "DO_Discrete": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Oxygen measurement, in raw voltage, taken by the float"
+      }
+    },
+    "pH_Discrete": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "pH measurement taken by the float"
+      }
+    },
+    "OCR_Discrete": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "OCR (radiance) data taken by the float, in raw 32-bit ADC values"
+      }
+    },
+    "NITRATE_Discrete": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Nitrate in micromolar units taken by the float"
+      }
     },
     "optode_air_calibration": {
       "description": "Samples collected at the surface just before and just after the pneumatic bladder is inflated. The samples collected just before inflation are intended to collect optode samples in-water very near the surface. The samples collected just after inflation are intended to represent samples collected in-air.", 
