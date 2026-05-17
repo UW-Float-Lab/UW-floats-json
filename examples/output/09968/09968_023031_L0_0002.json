@@ -1,7 +1,7 @@
 {
-  "FILE_CREATION_DATE": "2026-05-04T03:39:57Z",
-  "FILE_UPDATE_DATE": "2026-05-04T03:39:57Z",
-  "DECODER_VERSION": "0.4.0",
+  "FILE_CREATION_DATE": "2026-05-12T21:11:01Z",
+  "FILE_UPDATE_DATE": "2026-05-12T21:11:01Z",
+  "DECODER_VERSION": "0.4.1",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23031,
   "TRANSMISSION_ID_NUMBER": 23031,
@@ -10,8 +10,8 @@
   "INSTRUMENT_TYPE": "UW-APEX-core",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
-  "PI": "RISER, STEVE AND GRAY, ALISON",
-  "PROJECT_NAME": "Core Float",
+  "PI": "Steven RISER",
+  "PROJECT_NAME": "Argo UW",
   "CYCLE_NUMBER": 2,
   "POSITIONING_SYSTEM": "GPS",
   "Timestamps": {
@@ -1111,6 +1111,7 @@
     {
       "TIME": "2024-11-28T06:11:17Z",
       "piston_start": 170,
+      "piston_target": 66,
       "piston_end": 66,
       "current": 0.146,
       "voltage": 14.6,
@@ -1119,6 +1120,7 @@
     {
       "TIME": "2024-11-28T12:11:07Z",
       "piston_start": 66,
+      "piston_target": 67,
       "piston_end": 67,
       "current": 0.44,
       "voltage": 14.9,
@@ -1127,6 +1129,7 @@
     {
       "TIME": "2024-11-28T15:11:07Z",
       "piston_start": 67,
+      "piston_target": 68,
       "piston_end": 68,
       "current": 0.432,
       "voltage": 14.9,
@@ -1135,6 +1138,7 @@
     {
       "TIME": "2024-11-28T18:11:07Z",
       "piston_start": 68,
+      "piston_target": 69,
       "piston_end": 69,
       "current": 0.439,
       "voltage": 14.9,
@@ -1143,6 +1147,7 @@
     {
       "TIME": "2024-11-28T21:11:07Z",
       "piston_start": 69,
+      "piston_target": 70,
       "piston_end": 70,
       "current": 0.432,
       "voltage": 14.9,
@@ -1151,6 +1156,7 @@
     {
       "TIME": "2024-11-29T00:11:07Z",
       "piston_start": 70,
+      "piston_target": 71,
       "piston_end": 71,
       "current": 0.435,
       "voltage": 14.9,
@@ -1159,6 +1165,7 @@
     {
       "TIME": "2024-11-29T03:11:07Z",
       "piston_start": 71,
+      "piston_target": 72,
       "piston_end": 72,
       "current": 0.427,
       "voltage": 14.9,
@@ -1167,6 +1174,7 @@
     {
       "TIME": "2024-11-29T06:11:07Z",
       "piston_start": 72,
+      "piston_target": 73,
       "piston_end": 73,
       "current": 0.422,
       "voltage": 14.9,
@@ -1175,6 +1183,7 @@
     {
       "TIME": "2024-12-03T11:11:07Z",
       "piston_start": 73,
+      "piston_target": 74,
       "piston_end": 74,
       "current": 0.438,
       "voltage": 14.8,
@@ -1183,6 +1192,7 @@
     {
       "TIME": "2024-12-04T02:11:07Z",
       "piston_start": 74,
+      "piston_target": 73,
       "piston_end": 73,
       "current": 0.101,
       "voltage": 15.1,
@@ -1191,6 +1201,7 @@
     {
       "TIME": "2024-12-08T02:11:58Z",
       "piston_start": 73,
+      "piston_target": 15,
       "piston_end": 15,
       "current": 0.064,
       "voltage": 15.0,
@@ -1199,6 +1210,7 @@
     {
       "TIME": "2024-12-08T06:11:06Z",
       "piston_start": 15,
+      "piston_target": 37,
       "piston_end": 20,
       "current": 0.629,
       "voltage": 14.4,
@@ -1207,6 +1219,7 @@
     {
       "TIME": "2024-12-08T06:11:47Z",
       "piston_start": 20,
+      "piston_target": 37,
       "piston_end": 25,
       "current": 0.636,
       "voltage": 14.2,
@@ -1215,6 +1228,7 @@
     {
       "TIME": "2024-12-08T06:12:28Z",
       "piston_start": 25,
+      "piston_target": 37,
       "piston_end": 30,
       "current": 0.62,
       "voltage": 14.1,
@@ -1223,6 +1237,7 @@
     {
       "TIME": "2024-12-08T06:13:09Z",
       "piston_start": 31,
+      "piston_target": 37,
       "piston_end": 36,
       "current": 0.619,
       "voltage": 14.0,
@@ -1231,6 +1246,7 @@
     {
       "TIME": "2024-12-08T06:13:50Z",
       "piston_start": 36,
+      "piston_target": 37,
       "piston_end": 37,
       "current": 0.623,
       "voltage": 14.1,
@@ -1239,6 +1255,7 @@
     {
       "TIME": "2024-12-08T06:14:18Z",
       "piston_start": 36,
+      "piston_target": 37,
       "piston_end": 37,
       "current": 0.623,
       "voltage": 14.2,
@@ -1247,6 +1264,7 @@
     {
       "TIME": "2024-12-08T06:57:16Z",
       "piston_start": 37,
+      "piston_target": 47,
       "piston_end": 42,
       "current": 0.577,
       "voltage": 14.5,
@@ -1255,6 +1273,7 @@
     {
       "TIME": "2024-12-08T06:57:57Z",
       "piston_start": 42,
+      "piston_target": 47,
       "piston_end": 47,
       "current": 0.559,
       "voltage": 14.3,
@@ -1263,6 +1282,7 @@
     {
       "TIME": "2024-12-08T07:02:03Z",
       "piston_start": 46,
+      "piston_target": 47,
       "piston_end": 47,
       "current": 0.593,
       "voltage": 14.5,
@@ -1271,6 +1291,7 @@
     {
       "TIME": "2024-12-08T07:28:08Z",
       "piston_start": 47,
+      "piston_target": 57,
       "piston_end": 52,
       "current": 0.52,
       "voltage": 14.5,
@@ -1279,6 +1300,7 @@
     {
       "TIME": "2024-12-08T07:29:11Z",
       "piston_start": 52,
+      "piston_target": 57,
       "piston_end": 57,
       "current": 0.528,
       "voltage": 14.4,
@@ -1287,6 +1309,7 @@
     {
       "TIME": "2024-12-08T07:53:50Z",
       "piston_start": 57,
+      "piston_target": 67,
       "piston_end": 62,
       "current": 0.492,
       "voltage": 14.5,
@@ -1295,6 +1318,7 @@
     {
       "TIME": "2024-12-08T07:54:31Z",
       "piston_start": 62,
+      "piston_target": 67,
       "piston_end": 67,
       "current": 0.489,
       "voltage": 14.4,
@@ -1303,6 +1327,7 @@
     {
       "TIME": "2024-12-08T08:24:39Z",
       "piston_start": 67,
+      "piston_target": 77,
       "piston_end": 72,
       "current": 0.456,
       "voltage": 14.6,
@@ -1311,6 +1336,7 @@
     {
       "TIME": "2024-12-08T08:25:20Z",
       "piston_start": 72,
+      "piston_target": 77,
       "piston_end": 77,
       "current": 0.452,
       "voltage": 14.5,
@@ -1319,6 +1345,7 @@
     {
       "TIME": "2024-12-08T08:40:04Z",
       "piston_start": 76,
+      "piston_target": 77,
       "piston_end": 77,
       "current": 0.478,
       "voltage": 14.7,
@@ -1327,6 +1354,7 @@
     {
       "TIME": "2024-12-08T08:55:30Z",
       "piston_start": 77,
+      "piston_target": 87,
       "piston_end": 82,
       "current": 0.412,
       "voltage": 14.6,
@@ -1335,6 +1363,7 @@
     {
       "TIME": "2024-12-08T08:56:11Z",
       "piston_start": 82,
+      "piston_target": 87,
       "piston_end": 87,
       "current": 0.411,
       "voltage": 14.5,
@@ -1343,6 +1372,7 @@
     {
       "TIME": "2024-12-08T08:59:52Z",
       "piston_start": 86,
+      "piston_target": 87,
       "piston_end": 87,
       "current": 0.441,
       "voltage": 14.6,
@@ -1351,6 +1381,7 @@
     {
       "TIME": "2024-12-08T09:25:06Z",
       "piston_start": 87,
+      "piston_target": 97,
       "piston_end": 92,
       "current": 0.383,
       "voltage": 14.5,
@@ -1359,6 +1390,7 @@
     {
       "TIME": "2024-12-08T09:25:47Z",
       "piston_start": 92,
+      "piston_target": 97,
       "piston_end": 97,
       "current": 0.374,
       "voltage": 14.4,
@@ -1367,6 +1399,7 @@
     {
       "TIME": "2024-12-08T09:56:24Z",
       "piston_start": 97,
+      "piston_target": 107,
       "piston_end": 102,
       "current": 0.349,
       "voltage": 14.6,
@@ -1375,6 +1408,7 @@
     {
       "TIME": "2024-12-08T09:57:05Z",
       "piston_start": 102,
+      "piston_target": 107,
       "piston_end": 107,
       "current": 0.341,
       "voltage": 14.5,
@@ -1383,6 +1417,7 @@
     {
       "TIME": "2024-12-08T10:27:41Z",
       "piston_start": 107,
+      "piston_target": 117,
       "piston_end": 112,
       "current": 0.3,
       "voltage": 14.6,
@@ -1391,6 +1426,7 @@
     {
       "TIME": "2024-12-08T10:28:22Z",
       "piston_start": 112,
+      "piston_target": 117,
       "piston_end": 117,
       "current": 0.294,
       "voltage": 14.5,
@@ -1399,6 +1435,7 @@
     {
       "TIME": "2024-12-08T11:04:00Z",
       "piston_start": 117,
+      "piston_target": 127,
       "piston_end": 122,
       "current": 0.248,
       "voltage": 14.7,
@@ -1407,6 +1444,7 @@
     {
       "TIME": "2024-12-08T11:04:41Z",
       "piston_start": 122,
+      "piston_target": 127,
       "piston_end": 127,
       "current": 0.247,
       "voltage": 14.6,
@@ -1415,6 +1453,7 @@
     {
       "TIME": "2024-12-08T11:30:14Z",
       "piston_start": 127,
+      "piston_target": 137,
       "piston_end": 132,
       "current": 0.221,
       "voltage": 14.7,
@@ -1423,6 +1462,7 @@
     {
       "TIME": "2024-12-08T11:30:55Z",
       "piston_start": 132,
+      "piston_target": 137,
       "piston_end": 137,
       "current": 0.222,
       "voltage": 14.7,
@@ -1431,6 +1471,7 @@
     {
       "TIME": "2024-12-08T11:51:25Z",
       "piston_start": 137,
+      "piston_target": 147,
       "piston_end": 142,
       "current": 0.187,
       "voltage": 14.8,
@@ -1439,6 +1480,7 @@
     {
       "TIME": "2024-12-08T11:52:06Z",
       "piston_start": 142,
+      "piston_target": 147,
       "piston_end": 147,
       "current": 0.191,
       "voltage": 14.7,
@@ -1447,6 +1489,7 @@
     {
       "TIME": "2024-12-08T12:02:10Z",
       "piston_start": 147,
+      "piston_target": 169,
       "piston_end": 169,
       "current": 0.179,
       "voltage": 14.7,

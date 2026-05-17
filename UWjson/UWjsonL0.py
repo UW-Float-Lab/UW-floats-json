@@ -1,5 +1,5 @@
 '''
-Version: 0.4.0
+Version: 0.4.1
 '''
 
 import re, itertools
@@ -9,12 +9,12 @@ from datetime import datetime, UTC
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.4.0",
+  "DECODER_VERSION": "0.4.1",
   "SCHEMA_VERSION": "0.4.0",
-  "PI": "RISER, STEVE AND GRAY, ALISON",
+  "PI": "Steven RISER",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
-  "PROJECT_NAME": "Core Float"
+  "PROJECT_NAME": "Argo UW"
 }
 
 #### constants
@@ -100,12 +100,12 @@ log_go_deep_rx = re.compile(r"\s*Sequence\s+point\s+detected\s+at\s+([0-9]+(?:\.
 # regex to extract pressure from log during continuous profiling
 log_profile_rx = re.compile(r"\s*Sample [0-9]+ initiated at ([0-9]+(?:\.[0-9]+))\s*dbar")
 
-# regex to extract pressure from log as prefile starts
+# regex to extract pressure from log as profile starts
 log_profileinit_rx = re.compile(r"\s*PrfId:[0-9]+\s+Pressure:([0-9]+(?:\.[0-9]+))dbar")
 
 # regex to extract piston move
 log_pistonmove_rx = re.compile(
-    r"([0-9]+)->[0-9]+ (?:[0-9]+\s+)*([0-9]+)\s+"
+    r"([0-9]+)->([0-9]+) (?:[0-9]+\s+)*([0-9]+)\s+"
     r"\[([0-9]+)sec, ([0-9]+(?:\.[0-9]+))Volts, ([0-9]+(?:\.[0-9]+))Amps, CPT:([0-9]+)sec\]"
 )
 
@@ -380,48 +380,35 @@ def parse_discrete(disc_dict, logger=print):
     FLBB = []
     OCR = []
 
-    
     if len(disc_dict["headers"]) == 3: # core CTD data only
-        for item in disc_dict["park_data"]:
-            CTD.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
-        for item in disc_dict["data"]:
-            CTD.append({"PRES": parseFloat(item["p"]), "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
+        for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
+            CTD.append({
+                "PRES": parseFloat(item["p"]),
+                "TEMP": parseFloat(item["t"]),
+                "PSAL": parseFloat(item["s"])
+            })
 
     elif len(disc_dict["headers"]) == 15: # CTD(3) + optode(3) + nitrate(2) + FLBB(3) + OCR(4)
-        for item in disc_dict["park_data"]:
+        for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
             p = parseFloat(item["p"])
             CTD.append({"PRES": p, "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
             Optode.append({
                 "PRES": p, "Temp_optode": parseFloat(item["Topt"]), 
                 "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"])
             })
-            NO3.append({"PRES": p, "NO3": parseFloat(item["no3"])})
+            NO3.append({"PRES": p, "nitrate_onboard": parseFloat(item["no3"])})
             pH.append({"PRES": p, "pH_V": parseFloat(item["pH(V)"])})
             FLBB.append({
-                "PRES": p, "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), 
-                "TSig": parseInt(item["TSig"])
+                "PRES": p, 
+                "FLUORESCENCE_CHLA": parseInt(item["FSig"]), 
+                "BETA_BACKSCATTERING700": parseInt(item["BbSig"]), 
+                "temp_signal": parseInt(item["TSig"])
             })
             OCR.append({
                 "PRES": p, "OCR0": parseHex(item["Ocr[0]"]), "OCR1": parseHex(item["Ocr[1]"]),
-                "OCR2": parseHex(item["Ocr[2]"]), "OCR[3]": parseHex(item["Ocr[3]"])
+                "OCR2": parseHex(item["Ocr[2]"]), "OCR3": parseHex(item["Ocr[3]"])
             })
-        for item in disc_dict["data"]:
-            p = parseFloat(item["p"])
-            CTD.append({"PRES": p, "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
-            Optode.append({
-                "PRES": p, "Temp_optode": parseFloat(item["Topt"]), 
-                "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"])
-            })
-            NO3.append({"PRES": p, "NO3": parseFloat(item["no3"])})
-            pH.append({"PRES": p, "pH_V": parseFloat(item["pH(V)"])})
-            FLBB.append({
-                "PRES": p, "FSig": parseInt(item["FSig"]), "BbSig": parseInt(item["BbSig"]), 
-                "TSig": parseInt(item["TSig"])}
-            )
-            OCR.append({
-                "PRES": p, "OCR0": parseHex(item["Ocr[0]"]), "OCR1": parseHex(item["Ocr[1]"]),
-                "OCR2": parseHex(item["Ocr[2]"]), "OCR[3]": parseHex(item["Ocr[3]"])
-            })
+
     else:
         logger("Unknown data fields. No entries returned")
 
@@ -1257,15 +1244,17 @@ def log_extractor(log):
                 
                 rx_match = log_pistonmove_rx.match(entry["message"])
                 if rx_match:
-                    p1 = int(rx_match[1])
-                    p2 = int(rx_match[2])
-                    current = float(rx_match[5])
-                    voltage = float(rx_match[4])
-                    time = int(rx_match[3])
+                    pstart = int(rx_match[1])
+                    ptarget = int(rx_match[2])
+                    pend = int(rx_match[3])
+                    current = float(rx_match[6])
+                    voltage = float(rx_match[5])
+                    time = int(rx_match[4])
                     piston.append({
                         "TIME": entry["datetime"],
-                        "piston_start": p1, 
-                        "piston_end": p2,
+                        "piston_start": pstart, 
+                        "piston_target": ptarget, 
+                        "piston_end": pend,
                         "current": current, 
                         "voltage": voltage, 
                         "duration": time
