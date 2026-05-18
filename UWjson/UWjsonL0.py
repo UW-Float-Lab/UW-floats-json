@@ -1,5 +1,5 @@
 '''
-Version: 0.4.2
+Version: 0.4.3
 '''
 
 import re, itertools, operator
@@ -116,13 +116,14 @@ log_pistonmove_rx = re.compile(
 def isFillValue(val, fill_value=None):
 
     return (val is None) if (fill_value is None) else (val == fill_value)
-    
+
 
 def parseNaN(val, fill_value=None):
     '''
     parse a string and convert nan to None
     '''
     return fill_value if (val.strip().lower() == "nan") else val
+
 
 def parseHex(val, fill_value=None):
     '''
@@ -425,7 +426,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value), 
                 "temp_signal": parseInt(item["TSig"], fill_value)
             })
-            
+
             if OCR_map is None:
                 OCR0 = "OCR0"
                 OCR1 = "OCR1"
@@ -462,7 +463,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
         out["FLBB"] = FLBB
     if OCR:
         out["OCR"] = OCR
-    
+
     return out
 
 
@@ -490,14 +491,14 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
     else:
         logger("Unknown hex legnth. No entries returned")
         return out
-    
+
     if sort is None:
         pass
     elif sort.lower().startswith("asc"):
         out.sort(key=lambda x: -x["PRES"])
     elif sort.lower().startswith("desc"):
         out.sort(key=lambda x: x["PRES"])
-        
+
     return out
 
 
@@ -506,7 +507,7 @@ def parse_parked(park_dict, meas_type, fill_value=None, fill_NaT=None, logger=pr
     Parse parked CTD samples of the float
     '''
     out = {}
-    
+
     CTD = []
     FLBB = []
     Traj = []
@@ -563,7 +564,7 @@ def parse_parked(park_dict, meas_type, fill_value=None, fill_NaT=None, logger=pr
         out["Traj"] = Traj
     if FLBB:
         out["FLBB"] = FLBB
-    
+
     return out
 
 
@@ -820,25 +821,28 @@ def align_nitrate(
     fill_value=None, fill_NaT=None, logger=print
 ):
 
+    out = []
+
     if direction.lower().startswith("asc"):
         msg_adv = operator.gt
     elif direction.lower().startswith("desc"):
         msg_adv = operator.lt
-    
-    out = []
+    else:
+        logger("Incorrect specification of direction. No entry is processed.")
+        return out
 
     more_msg = True
     more_isus = True
-    
+
     tol = 1e-3
     spec_len = len(isus_nitrate[0]["packed_data"])
-    
+
     msg_iter = iter(msg_nitrate)
     isus_iter = iter(isus_nitrate)
 
     msg = next(msg_iter)
     isus = next(isus_iter)
-    
+
     while True:
 
         p_msg = msg["PRES"]
@@ -854,13 +858,13 @@ def align_nitrate(
                 "nitrate_onboard": no3_msg,
                 "Spectrum": [fill_value] * spec_len
             })
-            
+
             try:
                 msg = next(msg_iter)
             except StopIteration:
                 more_msg = False
                 break
-        
+
         elif abs(p_msg - p_isus) < tol:
             
             out.append({
@@ -869,7 +873,7 @@ def align_nitrate(
                 "nitrate_onboard": no3_msg,
                 "Spectrum": isus["packed_data"].copy()
             })
-            
+
             try:
                 msg = next(msg_iter)
             except StopIteration:
@@ -882,9 +886,9 @@ def align_nitrate(
 
             if (not more_msg) or (not more_isus):
                 break
-            
+
         elif msg_adv(p_msg, p_isus):
-            
+
             out.append({
                 "PRES": p_msg,
                 "TIME": fill_NaT,
@@ -893,15 +897,15 @@ def align_nitrate(
             })
 
             logger(f"Unmatched msg entry at PRES={p_msg}")
-            
+
             try:
                 msg = next(msg_iter)
             except StopIteration:
                 more_msg = False
                 break
-                
+
         else:
-            
+
             out.append({
                 "PRES": isus["CTD_depth"], 
                 "TIME": isus["datetime"],
@@ -928,7 +932,7 @@ def align_nitrate(
                 "Spectrum": isus["packed_data"].copy()
             })
 
-            logger(f"Unmatched isus entry at PRES={p_isus}")
+            logger(f"Unmatched isus entry at PRES={isus["CTD_depth"]}")
             
             try:
                 isus = next(isus_iter)
@@ -938,22 +942,166 @@ def align_nitrate(
     if more_msg:
 
         while True:
-            
+
             out.append({
-                "PRES": p_msg,
+                "PRES": msg["PRES"],
                 "TIME": fill_NaT,
-                "nitrate_onboard": no3_msg,
+                "nitrate_onboard": msg["nitrate_onboard"],
                 "Spectrum": [fill_value] * spec_len
             })
-            
-            logger(f"Unmatched msg entry at PRES={p_msg}")
-            
+
+            logger(f"Unmatched msg entry at PRES={msg["PRES"]}")
+
             try:
                 msg = next(msg_iter)
             except StopIteration:
                 break
 
     return out
+
+
+def align_pH(
+    msg_pH, dura_pH, direction, 
+    fill_value=None, fill_NaT=None, logger=print
+):
+
+    out = []
+
+    if direction.lower().startswith("asc"):
+        msg_adv = operator.gt
+    elif direction.lower().startswith("desc"):
+        msg_adv = operator.lt
+    else:
+        logger("Incorrect specification of direction. No entry is processed.")
+        return out
+
+    more_msg = True
+    more_dura = True
+    
+    tol = 1e-3
+
+    msg_iter = iter(msg_pH)
+    dura_iter = iter(dura_pH)
+
+    msg = next(msg_iter)
+    dura = next(dura_iter)
+
+    while True:
+
+        p_msg = msg["PRES"]
+        p_dura = dura["CTD_depth"]
+
+        pH_msg = msg["pH_V"]
+
+        if isFillValue(pH_msg, fill_value):
+
+            out.append({
+                "PRES": p_msg,
+                "TIME": fill_NaT,
+                "VRS_PH": pH_msg,
+                "VK_PH": fill_value
+            })
+
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                more_msg = False
+                break
+
+        elif abs(p_msg - p_dura) < tol:
+            
+            out.append({
+                "PRES": p_msg,
+                "TIME": dura["datetime"],
+                "VRS_PH": dura["Vrs_mean"],
+                "VK_PH": dura["Vk_mean"]
+            })
+
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                more_msg = False
+
+            try:
+                dura = next(dura_iter)
+            except StopIteration:
+                more_dura = False
+
+            if (not more_msg) or (not more_dura):
+                break
+
+        elif msg_adv(p_msg, p_dura):
+            
+            out.append({
+                "PRES": p_msg,
+                "TIME": fill_NaT,
+                "VRS_PH": pH_msg,
+                "VK_PH": fill_value
+            })
+
+            logger(f"Unmatched msg entry at PRES={p_msg}")
+            
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                more_msg = False
+                break
+
+        else:
+
+            out.append({
+                "PRES": dura["CTD_depth"],
+                "TIME": dura["datetime"],
+                "VRS_PH": dura["Vrs_mean"],
+                "VK_PH": dura["Vk_mean"]
+            })
+
+            logger(f"Unmatched dura entry at PRES={p_dura}")
+
+            try:
+                dura = next(dura_iter)
+            except StopIteration:
+                more_dura = False
+                break
+
+    if more_dura:
+
+        while True:
+
+            out.append({
+                "PRES": dura["CTD_depth"], 
+                "TIME": dura["datetime"],
+                "VRS_PH": dura["Vrs_mean"],
+                "VK_PH": dura["Vk_mean"]
+            })
+
+            logger(f"Unmatched dura entry at PRES={dura["CTD_depth"]}")
+            
+            try:
+                dura = next(dura_iter)
+            except StopIteration:
+                break
+
+    if more_msg:
+
+        while True:
+
+            out.append({
+                "PRES": msg["PRES"],
+                "TIME": fill_NaT,
+                "VRS_PH": msg["pH_V"],
+                "VK_PH": fill_value
+            })
+
+            logger(f"Unmatched msg entry at PRES={p_msg}")
+
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                break
+
+    return out
+
 
 #### conglomerate functions
 
@@ -1554,11 +1702,11 @@ def L0_parser(
     msg_dict, log_dict, dura_dict, isus_dict, cp_dict, 
     AOML_map, WMO_map, OCR_map,
     supp_dict=None, consume=False, 
-    fill_value=None, logger=print
+    fill_value=None, fill_NaT=None, logger=print
 ):
     '''
     Parser for L0 json
-
+    
     Warning: the input msg_dict and log_dict may be modified in-place. 
     Use defensive copy if needed
     '''
@@ -1595,47 +1743,83 @@ def L0_parser(
     # interpreting mission config data
 
     # interpreting engineering data
-    tmp = parse_engr_time(engr_dict)
+    tmp = parse_engr_time(engr_dict, fill_NaT=fill_NaT)
     if tmp: 
         out_dict["Timestamps"] = tmp
 
     # interpreting GPS and Iridium location data
     if "gps" in msg_dict:
-        out_dict["GPS"] = parse_gps(msg_dict["gps"])
+        out_dict["GPS"] = parse_gps(
+            msg_dict["gps"], fill_value=fill_value, fill_NaT=fill_NaT
+        )
         if consume: del msg_dict["gps"]
     if "Iridium" in msg_dict:
-        out_dict["Iridium"] = parse_iridium(msg_dict["Iridium"])
+        out_dict["Iridium"] = parse_iridium(
+            msg_dict["Iridium"], fill_value=fill_value, fill_NaT=fill_NaT
+        )
         if consume: del msg_dict["Iridium"]
 
     # interpret log data
     if log_dict:
-        log_out = log_extractor(log_dict)
+        log_out = log_extractor(log_dict, fill_value=fill_value)
     else:
         log_out = {}
     
     # Interpreting science data
     OCR_submap = None if (OCR_map is None) else OCR_map[float_id]
     if "discrete_samples" in msg_dict:
-        discrete = parse_discrete(msg_dict["discrete_samples"], OCR_map = OCR_submap, fill_value=fill_value)
+        discrete = parse_discrete(
+            msg_dict["discrete_samples"], OCR_map = OCR_submap, 
+            fill_value=fill_value, logger=logger
+        )
         if consume: del msg_dict["discrete_samples"]
     else:
         discrete = {}
 
     if "cont_samples" in msg_dict:
-        continuous = parse_continuous(msg_dict["cont_samples"], sort="asc")
+        continuous = parse_continuous(
+            msg_dict["cont_samples"], sort="asc", 
+            fill_value=fill_value, logger=logger
+        )
         if consume: del msg_dict["cont_samples"]
     else:
         continuous = []
 
     if "ParkPt" in msg_dict:
-        parked = parse_parked(msg_dict["ParkPt"], "ParkPt")
+        parked = parse_parked(
+            msg_dict["ParkPt"], "ParkPt", 
+            fill_value = fill_value, fill_NaT = fill_NaT,
+            logger = logger
+        )
         if consume: del msg_dict["ParkPt"]
     elif "ParkPtFlbb" in msg_dict:
-        parked = parse_parked(msg_dict["ParkPtFlbb"], "ParkPtFlbb")
+        parked = parse_parked(
+            msg_dict["ParkPtFlbb"], "ParkPtFlbb", 
+            fill_value = fill_value, fill_NaT = fill_NaT,
+            logger = logger
+        )
         if consume: del msg_dict["ParkPtFlbb"]
     else:
         parked = {}
-    
+
+    # merge isus and discrete nitrate data
+    if isus_dict is None:
+        nitrate = None
+    else:
+        nitrate = align_nitrate(
+            discrete["NO3"], isus_dict["science_data"], "asc", 
+            fill_value = fill_value, fill_NaT = fill_NaT, logger = logger
+        )
+
+    # merge dura and discrete pH data
+    if dura_dict is None:
+        pH = None
+    else:
+        pH = align_pH(
+            discrete["pH"], dura_dict["science_data"], "asc",
+            fill_value = fill_value, fill_NaT = fill_NaT, logger = logger
+        )
+
     # write out timestamp of fall, drift, and rise of float
     if "Rise" in log_out: 
         out_dict["Fall"] = log_out["Fall"]
@@ -1663,16 +1847,26 @@ def L0_parser(
         out_dict["ECO_Drift"] = parked["FLBB"]
     if "Optode" in discrete:
         out_dict["DO_Discrete"] = discrete["Optode"]
-    if "pH" in discrete:
+
+    if pH is not None:
+        out_dict["pH_Discrete"] = pH
+    elif "pH" in discrete:
         out_dict["pH_Discrete"] = discrete["pH"]
+
     if "OCR" in discrete:
         out_dict["OCR_Discrete"] = discrete["OCR"]
-    if "NO3" in discrete:
+
+    if nitrate is not None:
+        out_dict["NITRATE_Discrete"] = nitrate
+    elif "NO3" in discrete:
         out_dict["NITRATE_Discrete"] = discrete["NO3"]
-    
+
     # interpret calibration data
     if "OptodeAirCal" in msg_dict:
-        out_dict["optode_air_calibration"] = parse_OptodeAirCal(msg_dict["OptodeAirCal"])
+        out_dict["optode_air_calibration"] = parse_OptodeAirCal(
+            msg_dict["OptodeAirCal"],
+            fill_value = fill_value, fill_NaT = fill_NaT
+        )
         if consume: del msg_dict["OptodeAirCal"]
 
     # Write raw mission config and engineering data
