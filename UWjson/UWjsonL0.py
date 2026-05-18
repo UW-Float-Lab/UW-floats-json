@@ -1,15 +1,16 @@
 '''
-Version: 0.4.1
+Version: 0.4.2
 '''
 
-import re, itertools
+import re, itertools, operator
+import pandas as pd
 from datetime import datetime, UTC
 
 #### Default configurations
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.4.1",
+  "DECODER_VERSION": "0.4.2",
   "SCHEMA_VERSION": "0.4.0",
   "PI": "Steven RISER",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
@@ -112,34 +113,39 @@ log_pistonmove_rx = re.compile(
 
 #### Utility functions
 
-def parseNaN(val):
+def isFillValue(val, fill_value=None):
+
+    return (val is None) if (fill_value is None) else (val == fill_value)
+    
+
+def parseNaN(val, fill_value=None):
     '''
     parse a string and convert nan to None
     '''
-    return None if (val.strip().lower() == "nan") else val
+    return fill_value if (val.strip().lower() == "nan") else val
 
-def parseHex(val):
+def parseHex(val, fill_value=None):
     '''
     Parse a hexadecimal string into integer
     '''
-    return None if (val.strip().lower() == "nan") else int(val, 16)
+    return fill_value if (val.strip().lower() == "nan") else int(val, 16)
 
 
-def parseInt(val):
+def parseInt(val, fill_value=None):
     '''
     Parse an integer string into integer. nan is converted to None
     '''
-    return None if (val.strip().lower() == "nan") else int(val, 10)
+    return fill_value if (val.strip().lower() == "nan") else int(val, 10)
 
 
-def parseFloat(val):
+def parseFloat(val, fill_value=None):
     '''
     Parse a floating-point number string into float. nan is converted to None
     '''
-    return None if (val.strip().lower() == "nan") else float(val)
+    return fill_value if (val.strip().lower() == "nan") else float(val)
 
 
-def parseDimFloat(val):
+def parseDimFloat(val, fill_value=None):
     '''
     Parse a string containing a floating-point value followed by unit into 
     a tuple (number, unit). If nan is encountered None is returned for 
@@ -148,28 +154,28 @@ def parseDimFloat(val):
     '''
     
     if val.strip().lower() == "nan": 
-        return (None, None)
+        return (fill_value, None)
     if (rx_match := dim_num_rx.match(val)):
         return (float(rx_match[1]), rx_match[2])
     else:
         raise ValueError("Input string does not conform to the expected pattern")
 
 
-def parseDimInt(val):
+def parseDimInt(val, fill_value=None):
     '''
     Parse a string containing an integer value followed by unit into a tuple
     (number, unit). If nan is encountered None is returned for both. If the 
     string does not conform to the expected pattern a ValueError is raised.
     '''
     if val.strip() == "nan": 
-        return (None, None)
+        return (fill_value, None)
     if (rx_match := dim_num_rx.match(val)):
         return (int(rx_match[1]), rx_match[2])
     else:
         raise ValueError("Input string does not conform to the expected pattern")
 
 
-def decode_hex(code, jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 0):
+def decode_hex(code, jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 0, fill_value=None):
     '''
     Decode hexadecimal code into floating point values, where the code follows a 
     variation of 2's complement, with an arbitrary cut value that separates the 
@@ -183,7 +189,7 @@ def decode_hex(code, jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 
         
     # out of range or non-finite values
     if cut - 1 <= val <= cut + 1:
-        return None
+        return fill_value
 
     # negative values
     elif val > cut:
@@ -192,13 +198,13 @@ def decode_hex(code, jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 
     return round(scalar * val + offset, dp)
 
 
-def decode_if_number(value):
+def decode_if_number(value, fill_value=None):
     '''
     Decode a string IF it can be parsed as a numerical value. Integer is tried
     first and accepted if agree with the floating point representation
     '''
     if value.strip().lower() == "nan":
-        return None
+        return fill_value
 
     try:
         out1 = int(value)
@@ -222,7 +228,7 @@ def decode_if_number(value):
             return out2
 
 
-def decode_time(value):
+def decode_time(value, fill_value=None):
     '''
     Decode a string that represent calendar date time. Common formats for the 
     datetime code are tried until one that works. The resulting datetime object 
@@ -255,12 +261,15 @@ def decode_time(value):
         except ValueError:
             pass
 
-    return value.isoformat() + "Z"
+    if isinstance(value, str):
+        return fill_value
+    else:
+        return value.isoformat() + "Z"
 
 
-def dict_to_list(in_dict):
+def dict_to_list(in_dict, fill_value=None):
     l = max(in_dict.keys())
-    out = [None] * (l + 1)
+    out = [fill_value] * (l + 1)
     for k, v in in_dict.items():
         out[k] = v
     return out
@@ -292,7 +301,7 @@ def infer_positioning(msg_dict):
         return None
 
 
-def parse_gps(gps_list):
+def parse_gps(gps_list, fill_value=None, fill_NaT=None):
     '''
     Parse GPS information
     '''
@@ -301,17 +310,17 @@ def parse_gps(gps_list):
     for entry in gps_list:
         out_entry = {}
         out_entry["description"] = "GPS_FIX"
-        out_entry["TIME"] = decode_time(entry["time"])
-        out_entry["LATITUDE"] = parseFloat(entry["lat"])
-        out_entry["LONGITUDE"] = parseFloat(entry["lon"])
-        out_entry["sat_cnt"] = parseInt(entry["nsat"])
-        out_entry["time_to_fix"] = parseInt(entry["t_fix"])
+        out_entry["TIME"] = decode_time(entry["time"], fill_NaT)
+        out_entry["LATITUDE"] = parseFloat(entry["lat"], fill_value)
+        out_entry["LONGITUDE"] = parseFloat(entry["lon"], fill_value)
+        out_entry["sat_cnt"] = parseInt(entry["nsat"], fill_value)
+        out_entry["time_to_fix"] = parseInt(entry["t_fix"], fill_value)
         out.append(out_entry)
 
     return out
 
 
-def parse_iridium(irid_list):
+def parse_iridium(irid_list, fill_value=None, fill_NaT=None):
     '''
     Parse Iridium information
     '''
@@ -319,22 +328,22 @@ def parse_iridium(irid_list):
 
     for entry in irid_list:
         out_entry = {}
-        out_entry["LATITUDE"] = parseFloat(entry["lat"])
-        out_entry["LONGITUDE"] = parseFloat(entry["lon"])
-        out_entry["TIME"] = decode_time(entry["time"])
-        out_entry["x"], unit = parseDimFloat(entry["x"])
+        out_entry["LATITUDE"] = parseFloat(entry["lat"], fill_value)
+        out_entry["LONGITUDE"] = parseFloat(entry["lon"], fill_value)
+        out_entry["TIME"] = decode_time(entry["time"], fill_NaT)
+        out_entry["x"], unit = parseDimFloat(entry["x"], fill_value)
         assert unit == "km"
-        out_entry["y"], unit = parseDimFloat(entry["y"])
+        out_entry["y"], unit = parseDimFloat(entry["y"], fill_value)
         assert unit == "km"
-        out_entry["z"], unit = parseDimFloat(entry["z"])
+        out_entry["z"], unit = parseDimFloat(entry["z"], fill_value)
         assert unit == "km"
-        out_entry["system_time"] = parseHex(entry["sys_time"])
+        out_entry["system_time"] = parseHex(entry["sys_time"], fill_value)
         out.append(out_entry)
 
     return out
 
 
-def parse_engr_time(time_dict):
+def parse_engr_time(time_dict, fill_NaT=None):
     '''
     Parse timestamp information in engineering data
     '''
@@ -343,32 +352,32 @@ def parse_engr_time(time_dict):
 
     rx_match = engr_time_rx.match(time_dict.get('TimeStartDescent', ""))
     if rx_match: 
-        out["StartDescent"] = decode_time(rx_match[2])
+        out["StartDescent"] = decode_time(rx_match[2], fill_NaT)
 
     rx_match = engr_time_rx.match(time_dict.get('TimeStartPark', ""))
     if rx_match: 
-        out["StartPark"] = decode_time(rx_match[2])
+        out["StartPark"] = decode_time(rx_match[2], fill_NaT)
 
     rx_match = engr_time_rx.match(time_dict.get('TimeStartProfileDescent', ""))
     if rx_match: 
-        out["StartProfileDescent"] = decode_time(rx_match[2])
+        out["StartProfileDescent"] = decode_time(rx_match[2], fill_NaT)
 
     rx_match = engr_time_rx.match(time_dict.get('TimeStartProfile', ""))
     if rx_match: 
-        out["StartProfile"] = decode_time(rx_match[2])
+        out["StartProfile"] = decode_time(rx_match[2], fill_NaT)
 
     rx_match = engr_time_rx.match(time_dict.get('TimeStopProfile', ""))
     if rx_match: 
-        out["StopProfile"] = decode_time(rx_match[2])
+        out["StopProfile"] = decode_time(rx_match[2], fill_NaT)
 
     rx_match = engr_time_rx.match(time_dict.get('TimeStartTelemetry', ""))
     if rx_match: 
-        out["StartTelemetry"] = decode_time(rx_match[2])
+        out["StartTelemetry"] = decode_time(rx_match[2], fill_NaT)
 
     return out
 
 
-def parse_discrete(disc_dict, logger=print):
+def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     '''
     Parse discrete CTD samples of the float
     '''
@@ -383,30 +392,59 @@ def parse_discrete(disc_dict, logger=print):
     if len(disc_dict["headers"]) == 3: # core CTD data only
         for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
             CTD.append({
-                "PRES": parseFloat(item["p"]),
-                "TEMP": parseFloat(item["t"]),
-                "PSAL": parseFloat(item["s"])
+                "PRES": parseFloat(item["p"], fill_value),
+                "TEMP": parseFloat(item["t"], fill_value),
+                "PSAL": parseFloat(item["s"], fill_value)
             })
 
     elif len(disc_dict["headers"]) == 15: # CTD(3) + optode(3) + nitrate(2) + FLBB(3) + OCR(4)
         for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
-            p = parseFloat(item["p"])
-            CTD.append({"PRES": p, "TEMP": parseFloat(item["t"]), "PSAL": parseFloat(item["s"])})
-            Optode.append({
-                "PRES": p, "Temp_optode": parseFloat(item["Topt"]), 
-                "TPhase": parseFloat(item["TPhase"]), "RPhase": parseFloat(item["RPhase"])
+            p = parseFloat(item["p"], fill_value)
+            CTD.append({
+                "PRES": p, 
+                "TEMP": parseFloat(item["t"], fill_value), 
+                "PSAL": parseFloat(item["s"], fill_value)
             })
-            NO3.append({"PRES": p, "nitrate_onboard": parseFloat(item["no3"])})
-            pH.append({"PRES": p, "pH_V": parseFloat(item["pH(V)"])})
+            Optode.append({
+                "PRES": p, 
+                "Temp_optode": parseFloat(item["Topt"], fill_value), 
+                "TPhase": parseFloat(item["TPhase"], fill_value), 
+                "RPhase": parseFloat(item["RPhase"], fill_value)
+            })
+            NO3.append({
+                "PRES": p, 
+                "nitrate_onboard": parseFloat(item["no3"], fill_value)
+            })
+            pH.append({
+                "PRES": p, 
+                "pH_V": parseFloat(item["pH(V)"], fill_value)
+            })
             FLBB.append({
                 "PRES": p, 
-                "FLUORESCENCE_CHLA": parseInt(item["FSig"]), 
-                "BETA_BACKSCATTERING700": parseInt(item["BbSig"]), 
-                "temp_signal": parseInt(item["TSig"])
+                "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value), 
+                "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value), 
+                "temp_signal": parseInt(item["TSig"], fill_value)
             })
+            
+            if OCR_map is None:
+                OCR0 = "OCR0"
+                OCR1 = "OCR1"
+                OCR2 = "OCR2"
+                OCR3 = "OCR3"
+            else:
+                OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
+                OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
+                OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
+                if OCR_map["OCR3"] == "PAR":
+                    OCR3 = "RAW_DOWNWELLING_IRRADIANCE_PAR"
+                else:
+                    OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
             OCR.append({
-                "PRES": p, "OCR0": parseHex(item["Ocr[0]"]), "OCR1": parseHex(item["Ocr[1]"]),
-                "OCR2": parseHex(item["Ocr[2]"]), "OCR3": parseHex(item["Ocr[3]"])
+                "PRES": p, 
+                OCR0: parseHex(item["Ocr[0]"], fill_value), 
+                OCR1: parseHex(item["Ocr[1]"], fill_value),
+                OCR2: parseHex(item["Ocr[2]"], fill_value), 
+                OCR3: parseHex(item["Ocr[3]"], fill_value)
             })
 
     else:
@@ -428,7 +466,7 @@ def parse_discrete(disc_dict, logger=print):
     return out
 
 
-def parse_continuous(cont_dict, logger=print):
+def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
     '''
     Parse continuous CTD samples of the float
     '''
@@ -442,20 +480,28 @@ def parse_continuous(cont_dict, logger=print):
             if item == "0" * 14: continue
 
             tmp = {}
-            tmp["PRES"] = decode_hex(item[:4], cut = 0xf000, scalar = 0.1, dp = 1)
-            tmp["TEMP"] = decode_hex(item[4:8], cut = 0xf000, scalar = 0.001, dp = 3)
-            tmp["PSAL"] = decode_hex(item[8:12], cut = 0xf000, scalar = 0.001, dp = 3)
-            tmp["n_samp"] = decode_hex(item[12:])
+            tmp["PRES"] = decode_hex(item[:4], cut = 0xf000, scalar = 0.1, dp = 1, fill_value = fill_value)
+            tmp["TEMP"] = decode_hex(item[4:8], cut = 0xf000, scalar = 0.001, dp = 3, fill_value = fill_value)
+            tmp["PSAL"] = decode_hex(item[8:12], cut = 0xf000, scalar = 0.001, dp = 3, fill_value = fill_value)
+            tmp["n_samp"] = decode_hex(item[12:], fill_value = fill_value)
 
             out.append(tmp)
 
     else:
         logger("Unknown hex legnth. No entries returned")
+        return out
     
+    if sort is None:
+        pass
+    elif sort.lower().startswith("asc"):
+        out.sort(key=lambda x: -x["PRES"])
+    elif sort.lower().startswith("desc"):
+        out.sort(key=lambda x: x["PRES"])
+        
     return out
 
 
-def parse_parked(park_dict, meas_type, logger=print):
+def parse_parked(park_dict, meas_type, fill_value=None, fill_NaT=None, logger=print):
     '''
     Parse parked CTD samples of the float
     '''
@@ -469,9 +515,9 @@ def parse_parked(park_dict, meas_type, logger=print):
 
         for item in park_dict:
 
-            p = parseFloat(item["p"])
-            T = parseFloat(item["t"])
-            t = decode_time(item["time"])
+            p = parseFloat(item["p"], fill_value)
+            T = parseFloat(item["t"], fill_value)
+            t = decode_time(item["time"], fill_NaT)
             
             CTD.append({
                 "PRES": p,
@@ -487,9 +533,9 @@ def parse_parked(park_dict, meas_type, logger=print):
 
         for item in park_dict:
 
-            p = parseFloat(item["p"])
-            T = parseFloat(item["t"])
-            t = decode_time(item["time"])
+            p = parseFloat(item["p"], fill_value)
+            T = parseFloat(item["t"], fill_value)
+            t = decode_time(item["time"], fill_NaT)
 
             CTD.append({
                 "PRES": p,
@@ -502,9 +548,9 @@ def parse_parked(park_dict, meas_type, logger=print):
             })
             FLBB.append({
                 "PRES": p,
-                "FSig": parseInt(item["FSig"]),
-                "BbSig": parseInt(item["BbSig"]),
-                "TSig": parseInt(item["TSig"]),
+                "FSig": parseInt(item["FSig"], fill_value),
+                "BbSig": parseInt(item["BbSig"], fill_value),
+                "TSig": parseInt(item["TSig"], fill_value),
                 "TIME": t
             })
 
@@ -521,26 +567,26 @@ def parse_parked(park_dict, meas_type, logger=print):
     return out
 
 
-def parse_OptodeAirCal(optode_list):
+def parse_OptodeAirCal(optode_list, fill_value=None, fill_NaT=None):
 
     out = []
     for item in optode_list:
         out.append({
-            "Pres_air": parseInt(item["AirP"]),
-            "Pres_CTD": parseFloat(item["p"]),
-            "Temp_optode": parseFloat(item["optodeT"]),
-            "TPhase": parseFloat(item["TPhase"]),
-            "RPhase": parseFloat(item["RPhase"]),
-            "FSig": parseInt(item["FSig"]),
-            "BbSig": parseInt(item["BbSig"]),
-            "TSig": parseInt(item["TSig"]),
+            "Pres_air": parseInt(item["AirP"], fill_value),
+            "Pres_CTD": parseFloat(item["p"], fill_value),
+            "Temp_optode": parseFloat(item["optodeT"], fill_value),
+            "TPhase": parseFloat(item["TPhase"], fill_value),
+            "RPhase": parseFloat(item["RPhase"], fill_value),
+            "FSig": parseInt(item["FSig"], fill_value),
+            "BbSig": parseInt(item["BbSig"], fill_value),
+            "TSig": parseInt(item["TSig"], fill_value),
             "Ocr": [
-                parseHex(item["Ocr[0]"]),
-                parseHex(item["Ocr[1]"]),
-                parseHex(item["Ocr[2]"]),
-                parseHex(item["Ocr[3]"]),
+                parseHex(item["Ocr[0]"], fill_value),
+                parseHex(item["Ocr[1]"], fill_value),
+                parseHex(item["Ocr[2]"], fill_value),
+                parseHex(item["Ocr[3]"], fill_value),
             ],
-            "TIME": decode_time(item["time"])
+            "TIME": decode_time(item["time"], fill_NaT)
         })
     return out
 
@@ -575,6 +621,11 @@ def parse_engineering_data(engr_list):
                 engr_dict[k] = dict_to_list(v)
 
     return engr_list
+
+
+def parse_OCR_map(infile):
+    Ocr_map = pd.read_csv(infile, dtype=str).to_dict(orient="records")
+    return {int(_x.pop("FloatId")): _x for _x in Ocr_map}
 
 
 def parse_AOML_ID_map(line_list, logger=print):
@@ -685,7 +736,7 @@ def parse_WMO_ID_map(line_list, logger=print):
     return out_dict
 
 
-def parse_dura_science(line, dura_type, logger=print):
+def parse_dura_science(line, dura_type, fill_value=None, fill_NaT=None, logger=print):
 
     out = {}
 
@@ -694,36 +745,36 @@ def parse_dura_science(line, dura_type, logger=print):
 
     out["CRC"] = vals[0]
     out["ID"] = vals[1]
-    out["datetime"] = decode_time(vals[2])
-    out["CTD_depth"] = parseFloat(vals[4])
-    out["CTD_temp"] = parseFloat(vals[5])
-    out["CTD_salinity"] = parseFloat(vals[6])
-    out["sample_counter"] = parseInt(vals[7])
-    out["power_cycle_counter"] = parseInt(vals[8])
-    out["error_counter"] = parseInt(vals[9])
-    out["housing_temp"] = parseFloat(vals[10])
-    out["housing_humidity"] = parseFloat(vals[11])
-    out["input_voltage"] = parseFloat(vals[12])
-    out["input_current"] = parseFloat(vals[13])
-    out["foobar_pH"] = parseFloat(vals[14])
-    out["backup_battery_V"] = parseFloat(vals[15])
-    out["Vrs_mean"] = parseFloat(vals[16])
-    out["Vrs_stdev"] = parseFloat(vals[17])
-    out["Vk_mean"] = parseFloat(vals[18])
-    out["Vk_stdev"] = parseFloat(vals[19])
+    out["datetime"] = decode_time(vals[2], fill_NaT)
+    out["CTD_depth"] = parseFloat(vals[4], fill_value)
+    out["CTD_temp"] = parseFloat(vals[5], fill_value)
+    out["CTD_salinity"] = parseFloat(vals[6], fill_value)
+    out["sample_counter"] = parseInt(vals[7], fill_value)
+    out["power_cycle_counter"] = parseInt(vals[8], fill_value)
+    out["error_counter"] = parseInt(vals[9], fill_value)
+    out["housing_temp"] = parseFloat(vals[10], fill_value)
+    out["housing_humidity"] = parseFloat(vals[11], fill_value)
+    out["input_voltage"] = parseFloat(vals[12], fill_value)
+    out["input_current"] = parseFloat(vals[13], fill_value)
+    out["foobar_pH"] = parseFloat(vals[14], fill_value)
+    out["backup_battery_V"] = parseFloat(vals[15], fill_value)
+    out["Vrs_mean"] = parseFloat(vals[16], fill_value)
+    out["Vrs_stdev"] = parseFloat(vals[17], fill_value)
+    out["Vk_mean"] = parseFloat(vals[18], fill_value)
+    out["Vk_stdev"] = parseFloat(vals[19], fill_value)
     if dura_type=="MSC3":
-        out["lk"] = 1e-9 * parseFloat(vals[20])
-        out["lb"] = 1e-9 * parseFloat(vals[21])
+        out["lk"] = 1e-9 * parseFloat(vals[20], fill_value)
+        out["lb"] = 1e-9 * parseFloat(vals[21], fill_value)
     elif dura_type=="MSC1":
-        out["lk"] = parseFloat(vals[20])
-        out["lb"] = parseFloat(vals[21])
+        out["lk"] = parseFloat(vals[20], fill_value)
+        out["lb"] = parseFloat(vals[21], fill_value)
     else:
         raise ValueError(f'Unknown dura_type "{dura_type}"')
 
     return out
 
 
-def parse_isus_science(line, logger=print):
+def parse_isus_science(line, fill_value=None, fill_NaT=None, logger=print):
 
     out = {}
 
@@ -732,37 +783,177 @@ def parse_isus_science(line, logger=print):
 
     out["CRC"] = vals[0]
     out["ID"] = vals[1]
-    out["datetime"] = decode_time(vals[2])
-    out["CTD_depth"] = parseFloat(vals[4])
-    out["CTD_temp"] = parseFloat(vals[5])
-    out["CTD_salinity"] = parseFloat(vals[6])
-    out["sample_counter"] = parseInt(vals[7])
-    out["POR_counter"] = parseInt(vals[8])
-    out["isus_error_counter"] = parseInt(vals[9])
-    out["sys_error_counter"] = parseInt(vals[10])
-    out["housing_temp"] = parseFloat(vals[11])
-    out["housing_humidity"] = parseFloat(vals[12])
-    out["input_voltage"] = parseFloat(vals[13])
-    out["input_current"] = parseFloat(vals[14])
-    out["max_lamp_intensity"] = parseFloat(vals[15])
-    out["min_lamp_intensity"] = parseFloat(vals[16])
-    out["DC_mean"] = parseFloat(vals[17])
-    out["DC_stdev"] = parseFloat(vals[18])
-    out["isus_salinity"] = parseFloat(vals[19])
-    out["isus_nitrate"] = parseFloat(vals[20])
-    out["fit_error"] = parseFloat(vals[21])
-    out["data_pixel_begin"] = parseInt(vals[22])
-    out["data_pixel_end"] = parseInt(vals[23])
-    out["DC_sw"] = parseFloat(vals[25])
+    out["datetime"] = decode_time(vals[2], fill_NaT)
+    out["CTD_depth"] = parseFloat(vals[4], fill_value)
+    out["CTD_temp"] = parseFloat(vals[5], fill_value)
+    out["CTD_salinity"] = parseFloat(vals[6], fill_value)
+    out["sample_counter"] = parseInt(vals[7], fill_value)
+    out["POR_counter"] = parseInt(vals[8], fill_value)
+    out["isus_error_counter"] = parseInt(vals[9], fill_value)
+    out["sys_error_counter"] = parseInt(vals[10], fill_value)
+    out["housing_temp"] = parseFloat(vals[11], fill_value)
+    out["housing_humidity"] = parseFloat(vals[12], fill_value)
+    out["input_voltage"] = parseFloat(vals[13], fill_value)
+    out["input_current"] = parseFloat(vals[14], fill_value)
+    out["max_lamp_intensity"] = parseFloat(vals[15], fill_value)
+    out["min_lamp_intensity"] = parseFloat(vals[16], fill_value)
+    out["DC_mean"] = parseFloat(vals[17], fill_value)
+    out["DC_stdev"] = parseFloat(vals[18], fill_value)
+    out["isus_salinity"] = parseFloat(vals[19], fill_value)
+    out["isus_nitrate"] = parseFloat(vals[20], fill_value)
+    out["fit_error"] = parseFloat(vals[21], fill_value)
+    out["data_pixel_begin"] = parseInt(vals[22], fill_value)
+    out["data_pixel_end"] = parseInt(vals[23], fill_value)
+    out["DC_sw"] = parseFloat(vals[25], fill_value)
 
     hex_str = vals[24]
-    packed = [parseHex(hex_str[i:i+4]) for i in range(0, len(hex_str), 4)]
+    packed = [parseHex(hex_str[i:i+4], fill_value) for i in range(0, len(hex_str), 4)]
     assert len(packed) == out["data_pixel_end"] - out["data_pixel_begin"] + 1
 
     out["packed_data"] = packed
 
     return out
 
+
+def align_nitrate(
+    msg_nitrate, isus_nitrate, direction, 
+    fill_value=None, fill_NaT=None, logger=print
+):
+
+    if direction.lower().startswith("asc"):
+        msg_adv = operator.gt
+    elif direction.lower().startswith("desc"):
+        msg_adv = operator.lt
+    
+    out = []
+
+    more_msg = True
+    more_isus = True
+    
+    tol = 1e-3
+    spec_len = len(isus_nitrate[0]["packed_data"])
+    
+    msg_iter = iter(msg_nitrate)
+    isus_iter = iter(isus_nitrate)
+
+    msg = next(msg_iter)
+    isus = next(isus_iter)
+    
+    while True:
+
+        p_msg = msg["PRES"]
+        p_isus = isus["CTD_depth"]
+
+        no3_msg = msg["nitrate_onboard"]
+
+        if isFillValue(no3_msg, fill_value):
+
+            out.append({
+                "PRES": p_msg,
+                "TIME": fill_NaT,
+                "nitrate_onboard": no3_msg,
+                "Spectrum": [fill_value] * spec_len
+            })
+            
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                more_msg = False
+                break
+        
+        elif abs(p_msg - p_isus) < tol:
+            
+            out.append({
+                "PRES": p_msg,
+                "TIME": isus["datetime"],
+                "nitrate_onboard": no3_msg,
+                "Spectrum": isus["packed_data"].copy()
+            })
+            
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                more_msg = False
+
+            try:
+                isus = next(isus_iter)
+            except StopIteration:
+                more_isus = False
+
+            if (not more_msg) or (not more_isus):
+                break
+            
+        elif msg_adv(p_msg, p_isus):
+            
+            out.append({
+                "PRES": p_msg,
+                "TIME": fill_NaT,
+                "nitrate_onboard": no3_msg,
+                "Spectrum": [fill_value] * spec_len
+            })
+
+            logger(f"Unmatched msg entry at PRES={p_msg}")
+            
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                more_msg = False
+                break
+                
+        else:
+            
+            out.append({
+                "PRES": isus["CTD_depth"], 
+                "TIME": isus["datetime"],
+                "nitrate_onboard": fill_value,
+                "Spectrum": isus["packed_data"].copy()
+            })
+
+            logger(f"Unmatched isus entry at PRES={p_isus}")
+
+            try:
+                isus = next(isus_iter)
+            except StopIteration:
+                more_isus = False
+                break
+
+    if more_isus:
+
+        while True:
+
+            out.append({
+                "PRES": isus["CTD_depth"], 
+                "TIME": isus["datetime"],
+                "nitrate_onboard": fill_value,
+                "Spectrum": isus["packed_data"].copy()
+            })
+
+            logger(f"Unmatched isus entry at PRES={p_isus}")
+            
+            try:
+                isus = next(isus_iter)
+            except StopIteration:
+                break
+
+    if more_msg:
+
+        while True:
+            
+            out.append({
+                "PRES": p_msg,
+                "TIME": fill_NaT,
+                "nitrate_onboard": no3_msg,
+                "Spectrum": [fill_value] * spec_len
+            })
+            
+            logger(f"Unmatched msg entry at PRES={p_msg}")
+            
+            try:
+                msg = next(msg_iter)
+            except StopIteration:
+                break
+
+    return out
 
 #### conglomerate functions
 
@@ -1059,7 +1250,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
     return out
 
 
-def log_tokenizer(file, logger=lambda x: print("[LOG] " + x)):
+def log_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print("[LOG] " + x)):
     '''
     "Tokenizer" (actually, data is lightly parsed) for .log file
     Given a filename sans the .log extension, read the file and parse 
@@ -1081,15 +1272,15 @@ def log_tokenizer(file, logger=lambda x: print("[LOG] " + x)):
 
         if (rx_match := log_rx.match(line)):
             
-            cur_mtime = parseInt(rx_match[2])
+            cur_mtime = parseInt(rx_match[2], fill_value)
             entry = {
-                "datetime": decode_time(rx_match[1]), 
+                "datetime": decode_time(rx_match[1], fill_NaT), 
                 "mission_time": cur_mtime, 
                 "call": rx_match[3], 
                 "message": rx_match[4]
             }
 
-            if cur_mtime < prev_mtime:
+            if (not isFillValue(cur_mtime, fill_value)) and (cur_mtime < prev_mtime):
                 cuts.append(len(out))
             prev_mtime = cur_mtime
 
@@ -1104,105 +1295,7 @@ def log_tokenizer(file, logger=lambda x: print("[LOG] " + x)):
     return (out, cuts)
 
 
-def dura_tokenizer(file, dura_type, logger=lambda x: print("[DURA] " + x)):
-
-    out_list = []
-    out = {} # output dictionary
-    stage = 0
-    EOP_cnt = 0
-    EOT_cnt = 0
-    engr_list = []
-    engr_dict = {}
-    sci_data = []
-
-    # read the entire file at once
-    with open(file + ".dura", "r") as infile:
-        lines = infile.readlines()
-    lines_iter = iter(lines)
-
-    try:
-        # parse line by line
-        line = next(lines_iter).rstrip()
-        while True:
-
-            if (rx_match := dura_engr_rx.match(line)):
-
-                key = rx_match[1].strip()
-                val = rx_match[2].strip()
-
-                if stage != 1 and stage != 3:
-                    logger(f'Engineering data at the wrong stage (={stage})')
-                if key in engr_dict:
-                    logger(f'Duplicated engineering data key: "{key}"')
-                engr_dict[key] = val
-
-            elif line.startswith("0x"):
-
-                if stage == 1:
-                    stage = 2
-                if stage != 2:
-                    logger(f'Science data at the wrong stage (={stage})')
-
-                sci_data.append(parse_dura_science(line, dura_type, logger))
-
-            elif (rx_match := dura_header_rx.match(line)):
-
-                if "Id" in engr_dict:
-                    logger('Duplicated key: "Id"')
-                if stage != 0:
-                    logger(f"Header at the wrong stage (={stage})")
-                stage = 1 # advance stage for next line
-                engr_dict["Id"] = parseInt(rx_match[1])
-                engr_dict["ProfileId"] = parseInt(rx_match[2])
-                engr_dict["Timestamp"] = decode_time(rx_match[3])
-
-            elif (rx_match := dura_EOP_rx.match(line)):
-                EOP_cnt += 1
-                engr_list.append(engr_dict)
-                engr_dict = {}
-                engr_dict["Id"] = parseInt(rx_match[1])
-                engr_dict["ProfileId"] = parseInt(rx_match[2])
-                engr_dict["Timestamp"] = decode_time(rx_match[3])
-                stage = 3 # advance stage
-
-            elif line.strip() == "":
-                pass
-
-            elif line.strip() == "# No error records to log.":
-                pass
-
-            elif line.strip() == "<EOT>":
-
-                EOT_cnt += 1
-                stage = 0
-
-                engr_list.append(engr_dict)
-                out["science_data"] = sci_data
-                out["engineering_data"] = engr_list
-                out_list.append(out)
-                out = {}
-                engr_list = []
-                engr_dict = {}
-                sci_data = []
-
-            else:
-                logger('Not decoded: "' + line + '"')
-
-            line = next(lines_iter).rstrip()
-
-    except StopIteration:
-        pass
-
-    # EOT check
-    if EOT_cnt == 0:
-        logger('"<EOT>" missing')
-    elif EOT_cnt > 1:
-        logger('More than 1 "<EOT>" found')
-
-    return out_list[-1]
-
-
-def log_extractor(log):
+def log_extractor(log, fill_value = None):
 
     fall = []
     rise = []
@@ -1263,7 +1356,105 @@ def log_extractor(log):
     return {"Fall": fall, "Rise": rise, "Piston": piston}
 
 
-def isus_tokenizer(file, logger=lambda x: print("[ISUS] " + x)):
+def dura_tokenizer(file, dura_type, fill_value=None, fill_NaT=None, logger=lambda x: print("[DURA] " + x)):
+
+    out_list = []
+    out = {} # output dictionary
+    stage = 0
+    EOP_cnt = 0
+    EOT_cnt = 0
+    engr_list = []
+    engr_dict = {}
+    sci_data = []
+
+    # read the entire file at once
+    with open(file + ".dura", "r") as infile:
+        lines = infile.readlines()
+    lines_iter = iter(lines)
+
+    try:
+        # parse line by line
+        line = next(lines_iter).rstrip()
+        while True:
+
+            if (rx_match := dura_engr_rx.match(line)):
+
+                key = rx_match[1].strip()
+                val = rx_match[2].strip()
+
+                if stage != 1 and stage != 3:
+                    logger(f'Engineering data at the wrong stage (={stage})')
+                if key in engr_dict:
+                    logger(f'Duplicated engineering data key: "{key}"')
+                engr_dict[key] = val
+
+            elif line.startswith("0x"):
+
+                if stage == 1:
+                    stage = 2
+                if stage != 2:
+                    logger(f'Science data at the wrong stage (={stage})')
+
+                sci_data.append(parse_dura_science(line, dura_type, fill_value, fill_NaT, logger))
+
+            elif (rx_match := dura_header_rx.match(line)):
+
+                if "Id" in engr_dict:
+                    logger('Duplicated key: "Id"')
+                if stage != 0:
+                    logger(f"Header at the wrong stage (={stage})")
+                stage = 1 # advance stage for next line
+                engr_dict["Id"] = parseInt(rx_match[1], fill_value)
+                engr_dict["ProfileId"] = parseInt(rx_match[2], fill_value)
+                engr_dict["Timestamp"] = decode_time(rx_match[3], fill_NaT)
+
+            elif (rx_match := dura_EOP_rx.match(line)):
+                EOP_cnt += 1
+                engr_list.append(engr_dict)
+                engr_dict = {}
+                engr_dict["Id"] = parseInt(rx_match[1], fill_value)
+                engr_dict["ProfileId"] = parseInt(rx_match[2], fill_value)
+                engr_dict["Timestamp"] = decode_time(rx_match[3], fill_NaT)
+                stage = 3 # advance stage
+
+            elif line.strip() == "":
+                pass
+
+            elif line.strip() == "# No error records to log.":
+                pass
+
+            elif line.strip() == "<EOT>":
+
+                EOT_cnt += 1
+                stage = 0
+
+                engr_list.append(engr_dict)
+                out["science_data"] = sci_data
+                out["engineering_data"] = engr_list
+                out_list.append(out)
+                out = {}
+                engr_list = []
+                engr_dict = {}
+                sci_data = []
+
+            else:
+                logger('Not decoded: "' + line + '"')
+
+            line = next(lines_iter).rstrip()
+
+    except StopIteration:
+        pass
+
+    # EOT check
+    if EOT_cnt == 0:
+        logger('"<EOT>" missing')
+    elif EOT_cnt > 1:
+        logger('More than 1 "<EOT>" found')
+
+    return out_list[-1]
+
+
+def isus_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print("[ISUS] " + x)):
 
     out_list = []
     out = {} # output dictionary
@@ -1301,7 +1492,7 @@ def isus_tokenizer(file, logger=lambda x: print("[ISUS] " + x)):
                 if stage != 2:
                     logger(f'Science data at the wrong stage (={stage})')
 
-                sci_data.append(parse_isus_science(line, logger))
+                sci_data.append(parse_isus_science(line, fill_value, fill_NaT, logger))
 
             elif (rx_match := dura_header_rx.match(line)):
 
@@ -1310,17 +1501,17 @@ def isus_tokenizer(file, logger=lambda x: print("[ISUS] " + x)):
                 if stage != 0:
                     logger(f"Header at the wrong stage (={stage})")
                 stage = 1 # advance stage for next line
-                engr_dict["Id"] = parseInt(rx_match[1])
-                engr_dict["ProfileId"] = parseInt(rx_match[2])
-                engr_dict["Timestamp"] = decode_time(rx_match[3])
+                engr_dict["Id"] = parseInt(rx_match[1], fill_value)
+                engr_dict["ProfileId"] = parseInt(rx_match[2], fill_value)
+                engr_dict["Timestamp"] = decode_time(rx_match[3], fill_NaT)
 
             elif (rx_match := dura_EOP_rx.match(line)):
                 EOP_cnt += 1
                 engr_list.append(engr_dict)
                 engr_dict = {}
-                engr_dict["Id"] = parseInt(rx_match[1])
-                engr_dict["ProfileId"] = parseInt(rx_match[2])
-                engr_dict["Timestamp"] = decode_time(rx_match[3])
+                engr_dict["Id"] = parseInt(rx_match[1], fill_value)
+                engr_dict["ProfileId"] = parseInt(rx_match[2], fill_value)
+                engr_dict["Timestamp"] = decode_time(rx_match[3], fill_NaT)
                 stage = 3 # advance stage
 
             elif line.strip() == "":
@@ -1361,7 +1552,9 @@ def isus_tokenizer(file, logger=lambda x: print("[ISUS] " + x)):
 
 def L0_parser(
     msg_dict, log_dict, dura_dict, isus_dict, cp_dict, 
-    AOML_map, WMO_map, supp_dict=None, consume=False, logger=print
+    AOML_map, WMO_map, OCR_map,
+    supp_dict=None, consume=False, 
+    fill_value=None, logger=print
 ):
     '''
     Parser for L0 json
@@ -1421,14 +1614,15 @@ def L0_parser(
         log_out = {}
     
     # Interpreting science data
+    OCR_submap = None if (OCR_map is None) else OCR_map[float_id]
     if "discrete_samples" in msg_dict:
-        discrete = parse_discrete(msg_dict["discrete_samples"])
+        discrete = parse_discrete(msg_dict["discrete_samples"], OCR_map = OCR_submap, fill_value=fill_value)
         if consume: del msg_dict["discrete_samples"]
     else:
         discrete = {}
 
     if "cont_samples" in msg_dict:
-        continuous = parse_continuous(msg_dict["cont_samples"])
+        continuous = parse_continuous(msg_dict["cont_samples"], sort="asc")
         if consume: del msg_dict["cont_samples"]
     else:
         continuous = []
