@@ -1,16 +1,17 @@
+#!/usr/bin/env python3
+
 '''
-Version: 0.4.3
+Version: 0.4.4
 '''
 
-import re, itertools, operator
-import pandas as pd
-from datetime import datetime, UTC
+import io, re, csv, itertools, operator
+from datetime import datetime, timezone, UTC
 
 #### Default configurations
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.4.2",
+  "DECODER_VERSION": "0.4.4",
   "SCHEMA_VERSION": "0.4.0",
   "PI": "Steven RISER",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
@@ -176,7 +177,11 @@ def parseDimInt(val, fill_value=None):
         raise ValueError("Input string does not conform to the expected pattern")
 
 
-def decode_hex(code, jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 0, fill_value=None):
+def decode_hex(
+    code, 
+    jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 0, 
+    fill_value=None
+):
     '''
     Decode hexadecimal code into floating point values, where the code follows a 
     variation of 2's complement, with an arbitrary cut value that separates the 
@@ -481,9 +486,18 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
             if item == "0" * 14: continue
 
             tmp = {}
-            tmp["PRES"] = decode_hex(item[:4], cut = 0xf000, scalar = 0.1, dp = 1, fill_value = fill_value)
-            tmp["TEMP"] = decode_hex(item[4:8], cut = 0xf000, scalar = 0.001, dp = 3, fill_value = fill_value)
-            tmp["PSAL"] = decode_hex(item[8:12], cut = 0xf000, scalar = 0.001, dp = 3, fill_value = fill_value)
+            tmp["PRES"] = decode_hex(
+                item[:4], cut = 0xf000, scalar = 0.1, dp = 1, 
+                fill_value = fill_value
+            )
+            tmp["TEMP"] = decode_hex(
+                item[4:8], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            tmp["PSAL"] = decode_hex(
+                item[8:12], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
             tmp["n_samp"] = decode_hex(item[12:], fill_value = fill_value)
 
             out.append(tmp)
@@ -502,7 +516,10 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
     return out
 
 
-def parse_parked(park_dict, meas_type, fill_value=None, fill_NaT=None, logger=print):
+def parse_parked(
+    park_dict, meas_type, 
+    fill_value=None, fill_NaT=None, logger=print
+):
     '''
     Parse parked CTD samples of the float
     '''
@@ -624,12 +641,36 @@ def parse_engineering_data(engr_list):
     return engr_list
 
 
-def parse_OCR_map(infile):
-    Ocr_map = pd.read_csv(infile, dtype=str).to_dict(orient="records")
-    return {int(_x.pop("FloatId")): _x for _x in Ocr_map}
+def parse_OCR_map(file):
+
+    out = {}
+    need_close = False
+
+    if isinstance(file, io.IOBase):
+        infile = file
+        need_close = False
+    else:
+        infile = open(file, "r")
+        need_close = True
+
+    try:
+        csv_reader = csv.reader(infile)
+        top_row = next(csv_reader)
+        header = top_row[1:]
+
+        for row in csv_reader:
+            out[int(row[0])] = {
+                _x : _y for _x, _y 
+                in zip(header, row[1:])
+            }
+
+    finally:
+        if need_close: infile.close()
+
+    return out
 
 
-def parse_AOML_ID_map(line_list, logger=print):
+def parse_AOML_ID_map(file, logger=print):
     '''
     Construct mapping between internal float ID to AOML ID using the 
     AomlIdMap file
@@ -637,6 +678,12 @@ def parse_AOML_ID_map(line_list, logger=print):
     out_dict = {}
     Apf_set = set()
     Aoml_set = set()
+
+    if isinstance(file, io.IOBase):
+        line_list = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            line_list = infile.readlines()
 
     for i, line in enumerate(line_list, 1):
         line = line.strip()
@@ -682,7 +729,7 @@ def parse_AOML_ID_map(line_list, logger=print):
     return out_dict
 
 
-def parse_WMO_ID_map(line_list, logger=print):
+def parse_WMO_ID_map(file, logger=print):
     '''
     Construct mapping between internal float ID to WMO ID using the 
     WmoIdMap file
@@ -690,6 +737,12 @@ def parse_WMO_ID_map(line_list, logger=print):
     out_dict = {}
     Apf_set = set()
     Wmo_set = set()
+
+    if isinstance(file, io.IOBase):
+        line_list = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            line_list = infile.readlines()
 
     for i, line in enumerate(line_list, 1):
         line = line.strip()
@@ -1103,6 +1156,83 @@ def align_pH(
     return out
 
 
+def log_extractor(log, fill_value = None):
+
+    fall = []
+    rise = []
+    piston = []
+    
+    for entry in log:
+
+        match entry["call"].strip().lower():
+            
+            case "descent":
+
+                rx_match = log_descent_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    fall.append({
+                        "TIME": entry["datetime"], 
+                        "PRES": pres, 
+                        "description": "Descent"
+                    })
+
+            case "godeep":
+            
+                rx_match = log_go_deep_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    rise.append({
+                        "TIME": entry["datetime"], 
+                        "PRES": pres, 
+                        "description": "Sequence point"
+                    })
+
+            case "profileinit":
+
+                rx_match = log_profileinit_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    rise.append({
+                        "TIME": entry["datetime"], 
+                        "PRES": pres, 
+                        "description": "Profile Init"
+                    })
+            
+            case "profile":
+
+                rx_match = log_profile_rx.match(entry["message"])
+                if rx_match:
+                    pres = float(rx_match[1])
+                    rise.append({
+                        "TIME": entry["datetime"], 
+                        "PRES": pres, 
+                        "description": "Profile"
+                    })
+
+            case "pistonmoveabswto":
+                
+                rx_match = log_pistonmove_rx.match(entry["message"])
+                if rx_match:
+                    pstart = int(rx_match[1])
+                    ptarget = int(rx_match[2])
+                    pend = int(rx_match[3])
+                    current = float(rx_match[6])
+                    voltage = float(rx_match[5])
+                    time = int(rx_match[4])
+                    piston.append({
+                        "TIME": entry["datetime"],
+                        "piston_start": pstart, 
+                        "piston_target": ptarget, 
+                        "piston_end": pend,
+                        "current": current, 
+                        "voltage": voltage, 
+                        "duration": time
+                    })
+                   
+    return {"Fall": fall, "Rise": rise, "Piston": piston}
+
+
 #### conglomerate functions
 
 def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
@@ -1122,8 +1252,12 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
     iridium_sect = {}
 
     # read the entire file at once
-    with open(file + ".msg", "r") as infile:
-        lines = infile.readlines()
+    if isinstance(file, io.IOBase):
+        lines = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            lines = infile.readlines()
+
     lines_iter = iter(lines)
 
     try:
@@ -1182,7 +1316,11 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 elif (rx_match := profile_terminated_rx.match(line)):
                     if "profile_terminated" in out:
                         logger('Duplicated key: "profile_terminated"')
-                    out["profile_terminated"] = {"FloatId": rx_match[1], "ProfileID": rx_match[2], "time": rx_match[3]}
+                    out["profile_terminated"] = {
+                        "FloatId": rx_match[1], 
+                        "ProfileID": rx_match[2], 
+                        "time": rx_match[3]
+                    }
 
                 elif (rx_match := discrete_sample_rx.match(line)):
                     stage = 2
@@ -1237,7 +1375,11 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     if stage != 2:
                         logger('Science data at wrong stage:' + line)
                         
-                    continuous = {"SerNo": rx_match[1], "NSample": rx_match[2], "NBin": rx_match[3]}
+                    continuous = {
+                        "SerNo": rx_match[1], 
+                        "NSample": rx_match[2], 
+                        "NBin": rx_match[3]
+                    }
                     data = []
 
                     line = next(lines_iter).rstrip()
@@ -1297,7 +1439,10 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     iridium_sect |= geo
 
                 elif (rx_match := irid_fix_rx.match(line)):
-                    fix = {"lon": rx_match[1], "lat": rx_match[2], "epoch": rx_match[3], "time": rx_match[4]}
+                    fix = {
+                        "lon": rx_match[1], "lat": rx_match[2], 
+                        "epoch": rx_match[3], "time": rx_match[4]
+                    }
                     if {"lon", "lat", "time", "epoch"} & iridium_sect.keys():
                         logger('Duplicated key: "Iridium"')
                     iridium_sect |= fix
@@ -1398,7 +1543,10 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
     return out
 
 
-def log_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print("[LOG] " + x)):
+def log_tokenizer(
+    file, fill_value=None, fill_NaT=None, 
+    logger=lambda x: print("[LOG] " + x)
+):
     '''
     "Tokenizer" (actually, data is lightly parsed) for .log file
     Given a filename sans the .log extension, read the file and parse 
@@ -1413,8 +1561,11 @@ def log_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print("
     prev_mtime = -1
 
     # read the entire file at once
-    with open(file + ".log", "r") as infile:
-        lines = infile.readlines()
+    if isinstance(file, io.IOBase):
+        lines = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            lines = infile.readlines()
 
     for line in lines:
 
@@ -1443,68 +1594,10 @@ def log_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print("
     return (out, cuts)
 
 
-def log_extractor(log, fill_value = None):
-
-    fall = []
-    rise = []
-    piston = []
-    
-    for entry in log:
-
-        match entry["call"].strip().lower():
-            
-            case "descent":
-
-                rx_match = log_descent_rx.match(entry["message"])
-                if rx_match:
-                    pres = float(rx_match[1])
-                    fall.append({"TIME": entry["datetime"], "PRES": pres, "description": "Descent"})
-
-            case "godeep":
-            
-                rx_match = log_go_deep_rx.match(entry["message"])
-                if rx_match:
-                    pres = float(rx_match[1])
-                    rise.append({"TIME": entry["datetime"], "PRES": pres, "description": "Sequence point"})
-
-            case "profileinit":
-
-                rx_match = log_profileinit_rx.match(entry["message"])
-                if rx_match:
-                    pres = float(rx_match[1])
-                    rise.append({"TIME": entry["datetime"], "PRES": pres, "description": "Profile Init"})
-            
-            case "profile":
-
-                rx_match = log_profile_rx.match(entry["message"])
-                if rx_match:
-                    pres = float(rx_match[1])
-                    rise.append({"TIME": entry["datetime"], "PRES": pres, "description": "Profile"})
-
-            case "pistonmoveabswto":
-                
-                rx_match = log_pistonmove_rx.match(entry["message"])
-                if rx_match:
-                    pstart = int(rx_match[1])
-                    ptarget = int(rx_match[2])
-                    pend = int(rx_match[3])
-                    current = float(rx_match[6])
-                    voltage = float(rx_match[5])
-                    time = int(rx_match[4])
-                    piston.append({
-                        "TIME": entry["datetime"],
-                        "piston_start": pstart, 
-                        "piston_target": ptarget, 
-                        "piston_end": pend,
-                        "current": current, 
-                        "voltage": voltage, 
-                        "duration": time
-                    })
-                   
-    return {"Fall": fall, "Rise": rise, "Piston": piston}
-
-
-def dura_tokenizer(file, dura_type, fill_value=None, fill_NaT=None, logger=lambda x: print("[DURA] " + x)):
+def dura_tokenizer(
+    file, dura_type, fill_value=None, fill_NaT=None, 
+    logger=lambda x: print("[DURA] " + x)
+):
 
     out_list = []
     out = {} # output dictionary
@@ -1516,8 +1609,12 @@ def dura_tokenizer(file, dura_type, fill_value=None, fill_NaT=None, logger=lambd
     sci_data = []
 
     # read the entire file at once
-    with open(file + ".dura", "r") as infile:
-        lines = infile.readlines()
+    if isinstance(file, io.IOBase):
+        lines = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            lines = infile.readlines()
+
     lines_iter = iter(lines)
 
     try:
@@ -1543,7 +1640,9 @@ def dura_tokenizer(file, dura_type, fill_value=None, fill_NaT=None, logger=lambd
                 if stage != 2:
                     logger(f'Science data at the wrong stage (={stage})')
 
-                sci_data.append(parse_dura_science(line, dura_type, fill_value, fill_NaT, logger))
+                sci_data.append(
+                    parse_dura_science(line, dura_type, fill_value, fill_NaT, logger)
+                )
 
             elif (rx_match := dura_header_rx.match(line)):
 
@@ -1602,7 +1701,10 @@ def dura_tokenizer(file, dura_type, fill_value=None, fill_NaT=None, logger=lambd
     return out_list[-1]
 
 
-def isus_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print("[ISUS] " + x)):
+def isus_tokenizer(
+    file, fill_value=None, fill_NaT=None, 
+    logger=lambda x: print("[ISUS] " + x)
+):
 
     out_list = []
     out = {} # output dictionary
@@ -1614,8 +1716,12 @@ def isus_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print(
     sci_data = []
 
     # read the entire file at once
-    with open(file + ".isus", "r") as infile:
-        lines = infile.readlines()
+    if isinstance(file, io.IOBase):
+        lines = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            lines = infile.readlines()
+
     lines_iter = iter(lines)
 
     try:
@@ -1698,6 +1804,8 @@ def isus_tokenizer(file, fill_value=None, fill_NaT=None, logger=lambda x: print(
     return out_list[-1]
 
 
+#### overall parser
+
 def L0_parser(
     msg_dict, log_dict, dura_dict, isus_dict, cp_dict, 
     AOML_map, WMO_map, OCR_map,
@@ -1766,7 +1874,7 @@ def L0_parser(
         log_out = {}
     
     # Interpreting science data
-    OCR_submap = None if (OCR_map is None) else OCR_map[float_id]
+    OCR_submap = None if (OCR_map is None) else OCR_map.get(float_id, None)
     if "discrete_samples" in msg_dict:
         discrete = parse_discrete(
             msg_dict["discrete_samples"], OCR_map = OCR_submap, 
@@ -1893,3 +2001,337 @@ def L0_parser(
         if consume: isus_dict.clear()
 
     return out_dict
+
+    
+#### script use utilities
+
+def make_outfile_stem(name, AOML_map, nest=False, cycle=None, level=0):
+
+    if isinstance(name, str):
+
+        if "." in name:
+
+            if cycle is None:
+                name, cycle = name.split(".")
+            else:
+                name, _ = name.split(".")
+
+        name = int(name)
+
+    if isinstance(cycle, str):
+        cycle = int(cycle)
+
+    aoml = AOML_map[name]
+
+    if nest:
+        return f"{aoml:05}/{aoml:05}_{name:06}_L{level:01}_{cycle:04}"
+    else:
+        return f"{aoml:05}_{name:06}_L{level:01}_{cycle:04}"
+
+
+#### Script mode
+
+if __name__=="__main__":
+
+    import argparse, pathlib, os, pickle, json
+    import jsonschema
+
+    default_map = "L0_maps.pkl"
+    default_aoml = "AomlIdMap"
+    default_wmo = "WmoIdMap"
+    default_ocr = "OcrMap.csv"
+    dura_type = "MSC3"
+
+    def is_latter_newer(path1, path2):
+        t1 = pathlib.Path(path1).stat().st_mtime
+        t2 = pathlib.Path(path2).stat().st_mtime
+        return t2 > t1
+
+
+    def is_timestamp_newer(tstamp, path):
+        t2 = pathlib.Path(path).stat().st_mtime
+        if isinstance(tstamp, datetime):
+            tstamp = tstamp.timestamp()
+        return tstamp > t2
+
+
+    def iter_subdirectories(root):
+
+        root = pathlib.Path(root)
+
+        for p in root.rglob("*"):
+            if p.is_dir():
+                yield p
+
+
+    def derive_filenames(path):
+
+        path = pathlib.Path(path)
+        
+        suffix = path.suffix
+        if suffix and suffix[1:].isalpha():
+            path = path.with_suffix("")
+
+        float_id, cycle = path.name.split(".")
+
+        log1 = path.with_name(path.name + ".log")
+        log2 = path.with_name(f"{float_id}.{int(cycle) + 1:03d}.log")
+        cp = path.with_name(path.name + ".cp")
+        dura = path.with_name(path.name + ".dura")
+        isus = path.with_name(path.name + ".isus")
+
+        return (log1, log2, cp, dura, isus)
+
+
+    def generate_json(
+        msg_path, aux, partial_log=False,
+        out_root=".", nest=False, update=False,
+        validator=None,
+        logger=print
+    ):
+
+        AOML_map = aux["aoml"]
+        WMO_map = aux["wmo"]
+        OCR_map = aux["ocr"]
+
+        msg = pathlib.Path(msg_path)
+        stem = msg.with_suffix("")
+
+        logger(f"Processing {stem}....")
+
+        out_name = make_outfile_stem(stem.name, AOML_map, nest=nest)
+        out_path = pathlib.Path(out_root).joinpath(out_name + ".json")
+
+        log1, log2, cp, dura, isus = derive_filenames(msg_path)
+
+        out_flag = out_path.is_file()
+        log1_flag = log1.is_file()
+        log2_flag = log2.is_file()
+        cp_flag = cp.is_file()
+        dura_flag = dura.is_file()
+        isus_flag = isus.is_file()
+
+        out_t = out_path.stat().st_mtime if out_flag else 0
+        msg_t = msg.stat().st_mtime
+        log1_t = log1.stat().st_mtime if log1_flag else 0
+        log2_t = log2.stat().st_mtime if log2_flag else 0
+        cp_t = cp.stat().st_mtime if cp_flag else 0
+        dura_t = dura.stat().st_mtime if dura_flag else 0
+        isus_t = isus.stat().st_mtime if isus_flag else 0
+
+        if update and out_t > max(msg_t, log1_t, log2_t, cp_t, dura_t, isus_t):
+            logger("Nothing to do. Bail.")
+            return None
+
+        msg_dict = msg_tokenizer(
+            msg, logger=lambda x: logger("[MSG] " + x)
+        )
+
+        if log1_flag:
+            if log2_flag:
+                log1_list, cuts1 = log_tokenizer(
+                    log1, fill_value=-999,
+                    logger=lambda x: logger("[LOG] " + x)
+                )
+                log2_list, cuts2 = log_tokenizer(
+                    log2, fill_value=-999,
+                    logger=lambda x: logger("[LOG] " + x)
+                )
+                log_list = log1_list[cuts1[0]:] + log2_list[:cuts2[0]]
+            elif partial_log:
+                log_list, cuts1 = log_tokenizer(
+                    log1, fill_value=-999,
+                    logger=lambda x: logger("[LOG] " + x)
+                )
+            else:
+                logger("Incomplete log. Bail.")
+                return None
+        else:
+            log_list = None
+
+        if cp_flag:
+            cp_dict = None
+        else:
+            cp_dict = None
+
+        if dura_flag:
+            dura_dict = dura_tokenizer(
+                dura, dura_type,
+                fill_value=-999,
+                logger=lambda x: logger("[DURA] " + x)
+            )
+        else:
+            dura_dict = None
+
+        if isus_flag:
+            isus_dict = isus_tokenizer(
+                isus,
+                fill_value=-999,
+                logger=lambda x: logger("[ISUS] " + x)
+            )
+        else:
+            isus_dict = None
+
+        out = L0_parser(
+            msg_dict, log_list, dura_dict, isus_dict, cp_dict, 
+            AOML_map, WMO_map, OCR_map,
+            supp_dict=None, consume=False, 
+            fill_value=None, fill_NaT=None, logger=print
+        )
+
+        if validator is not None:
+            try:
+                jsonschema.validate(out, validator)
+            except jsonschema.exceptions.ValidationError as e:
+                logger(f"Schema validation failed: {e.message}. Bail.")
+                return None
+
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(out_path, "w") as outfile:
+            logger(f"Writing output to {out_path}")
+            json.dump(out, outfile)
+
+        return None
+
+
+    def write_mapping(aoml, wmo, ocr, out, update=False, format="pickle", logger=print):
+
+        aoml_p = pathlib.Path(aoml)
+        wmo_p = pathlib.Path(wmo)
+        ocr_p = pathlib.Path(ocr)
+        out_p = pathlib.Path(out)
+
+        if update and pathlib.Path(out).is_file():
+
+            aoml_t = aoml_p.stat().st_mtime if aoml_p.is_file() else 0
+            wmo_t = wmo_p.stat().st_mtime if wmo_p.is_file() else 0
+            ocr_t = ocr_p.stat().st_mtime if ocr_p.is_file() else 0
+            out_t = out_p.stat().st_mtime
+
+            if (out_t > ocr_t) and (out_t > aoml_t) and (out_t > wmo_t):
+                logger("Nothing to do. Exit.")
+                return # nothing to do
+
+            if out_p.suffix == ".json":
+                with open(out, "r") as infile:
+                    data = json.load(infile)
+            else:
+                with open(out, "rb") as infile:
+                    data = pickle.load(infile)
+
+            if (out_t < ocr_t):
+                logger("Parsing OCR file....")
+                data["ocr"] = parse_OCR_map(ocr_p)
+            if (out_t < aoml_t):
+                logger("Parsing AOML ID file....")
+                data["aoml"] = parse_AOML_ID_map(aoml_p, logger=logger)
+            if (out_t < wmo_t):
+                logger("Parsing WMO ID file....")
+                data["wmo"] = parse_WMO_ID_map(wmo_p, logger=logger)
+
+        else:
+            data = {}
+            
+            logger("Parsing OCR file....")
+            data["ocr"] = parse_OCR_map(ocr_p)
+
+            logger("Parsing AOML ID file....")
+            data["aoml"] = parse_AOML_ID_map(aoml_p, logger=logger)
+
+            logger("Parsing WMO ID file....")
+            data["wmo"] = parse_WMO_ID_map(wmo_p, logger=logger)
+
+        if out_p.suffix == ".json":
+            logger(f"Writing output to {out_p}")
+            with open(out_p, "w") as outfile:
+                json.dump(data, outfile, indent=2)
+        else:
+            logger(f"Writing output to {out_p}")
+            with open(out_p, "wb") as outfile:
+                pickle.dump(data, outfile)
+
+
+    parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers(dest="command")
+
+    # build-aux command
+    p_build = subparsers.add_parser("build")
+    p_build.add_argument("-u", "--update", action="store_true")
+    p_build.add_argument("--aoml", default=default_aoml)
+    p_build.add_argument("--wmo", default=default_wmo)
+    p_build.add_argument("--ocr", default=default_ocr)
+    p_build.add_argument("-d", "--in_dir", default=".")
+    p_build.add_argument("-o", "--output", default=default_map)
+
+    # convert command
+    p_conv = subparsers.add_parser("convert")
+    p_conv.add_argument("-m", "--mapping", default=default_map)
+    p_conv.add_argument("-s", "--schema", default=None)
+    p_conv.add_argument("-u", "--update", action="store_true")
+    p_conv.add_argument("-r", "--recursive", action="store_true")
+    p_conv.add_argument("-n", "--nest_output", action="store_true")
+    p_conv.add_argument("-p", "--partial_log", action="store_true")
+    p_conv.add_argument("-i", "--input", default="*.*")
+    p_conv.add_argument("-d", "--in_dir", default=".")
+    p_conv.add_argument("-o", "--out_dir", default=".")
+
+    # validate command
+    p_valid = subparsers.add_parser("validate")
+    p_valid.add_argument("-s", "--schema", default="UW_schema_L0.json")
+    p_valid.add_argument("-r", "--recursive", action="store_true")
+    p_valid.add_argument("-i", "--input", default=None)
+    p_valid.add_argument("-d", "--in_dir", default=".")
+
+    args = parser.parse_args()
+    
+    if args.command == "build":
+
+        root = pathlib.Path(args.in_dir)
+
+        aoml = root.joinpath(args.aoml)
+        wmo = root.joinpath(args.wmo)
+        ocr = root.joinpath(args.ocr)
+        out = pathlib.Path(args.output)
+
+        write_mapping(aoml, wmo, ocr, out, update=args.update)
+
+    elif args.command == "convert":
+
+        # load auxiliary map
+        map_path = pathlib.Path(args.mapping)
+        if map_path.suffix == ".json":
+            with open(map_path, "r") as infile:
+                aux = json.load(infile)
+        else:
+            with open(map_path, "rb") as infile:
+                aux = pickle.load(infile)
+
+        if args.schema is not None:
+            with open(args.schema, "r") as infile:
+                validator = json.load(infile)
+        else:
+            validator = None
+
+        in_glob = args.input + ".msg"
+
+        root = pathlib.Path(args.in_dir)
+
+        if args.recursive:
+            targets = []
+            for _p in iter_subdirectories(root):
+                targets = itertools.chain(targets, _p.glob(in_glob))
+        else:
+            targets = root.glob(in_glob)
+
+        for _x in targets:
+            generate_json(
+                _x, aux, 
+                partial_log=args.partial_log,
+                out_root=args.out_dir, 
+                nest=args.nest_output, 
+                update=args.update,
+                validator=validator
+            )
+
+    elif args.command == "validate":
+        pass
