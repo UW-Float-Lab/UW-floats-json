@@ -2189,7 +2189,7 @@ if __name__=="__main__":
         out_path.parent.mkdir(parents=True, exist_ok=True)
         with open(out_path, "w") as outfile:
             logger(f"Writing output to {out_path}")
-            json.dump(out, outfile)
+            json.dump(out, outfile, indent=2)
 
         return None
 
