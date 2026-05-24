@@ -2097,7 +2097,7 @@ if __name__=="__main__":
         msg = pathlib.Path(msg_path)
         stem = msg.with_suffix("")
 
-        logger(f"Processing {stem}....")
+        logger(f"Processing {stem}...")
 
         out_name = make_outfile_stem(stem.name, AOML_map, nest=nest)
         out_path = pathlib.Path(out_root).joinpath(out_name + ".json")
@@ -2220,25 +2220,25 @@ if __name__=="__main__":
                     data = pickle.load(infile)
 
             if (out_t < ocr_t):
-                logger("Parsing OCR file....")
+                logger("Parsing OCR file...")
                 data["ocr"] = parse_OCR_map(ocr_p)
             if (out_t < aoml_t):
-                logger("Parsing AOML ID file....")
+                logger("Parsing AOML ID file...")
                 data["aoml"] = parse_AOML_ID_map(aoml_p, logger=logger)
             if (out_t < wmo_t):
-                logger("Parsing WMO ID file....")
+                logger("Parsing WMO ID file...")
                 data["wmo"] = parse_WMO_ID_map(wmo_p, logger=logger)
 
         else:
             data = {}
             
-            logger("Parsing OCR file....")
+            logger("Parsing OCR file...")
             data["ocr"] = parse_OCR_map(ocr_p)
 
-            logger("Parsing AOML ID file....")
+            logger("Parsing AOML ID file...")
             data["aoml"] = parse_AOML_ID_map(aoml_p, logger=logger)
 
-            logger("Parsing WMO ID file....")
+            logger("Parsing WMO ID file...")
             data["wmo"] = parse_WMO_ID_map(wmo_p, logger=logger)
 
         if out_p.suffix == ".json":
@@ -2250,7 +2250,7 @@ if __name__=="__main__":
             with open(out_p, "wb") as outfile:
                 pickle.dump(data, outfile)
 
-
+    # create parser; delegate to sub-parsers
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest="command")
 
@@ -2279,11 +2279,13 @@ if __name__=="__main__":
     p_valid = subparsers.add_parser("validate")
     p_valid.add_argument("-s", "--schema", default="UW_schema_L0.json")
     p_valid.add_argument("-r", "--recursive", action="store_true")
-    p_valid.add_argument("-i", "--input", default=None)
+    p_valid.add_argument("-i", "--input", default="*.json")
     p_valid.add_argument("-d", "--in_dir", default=".")
 
+    # parse input arguments
     args = parser.parse_args()
-    
+
+    # build auxiliary data file
     if args.command == "build":
 
         root = pathlib.Path(args.in_dir)
@@ -2295,6 +2297,7 @@ if __name__=="__main__":
 
         write_mapping(aoml, wmo, ocr, out, update=args.update)
 
+    # perform conversion to json
     elif args.command == "convert":
 
         # load auxiliary map
@@ -2333,5 +2336,31 @@ if __name__=="__main__":
                 validator=validator
             )
 
+    # validate output json
     elif args.command == "validate":
-        pass
+
+        with open(args.schema, "r") as infile:
+            validator = json.load(infile)
+
+        root = pathlib.Path(args.in_dir)
+
+        if args.recursive:
+            targets = []
+            for _p in iter_subdirectories(root):
+                targets = itertools.chain(targets, _p.glob(args.input))
+        else:
+            targets = root.glob(args.input)
+
+        for _x in targets:
+
+            print(f"Validating {_x}...")
+
+            with open(_x, "r") as infile:
+                _j = json.load(infile)
+
+            try:
+                jsonschema.validate(_j, validator)
+            except jsonschema.exceptions.ValidationError as e:
+                print(f"[WARNING] Validation failed: {e.message}.")
+            else:
+                print("Validation succeeded.")
