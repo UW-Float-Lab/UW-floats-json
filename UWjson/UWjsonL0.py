@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-'''
-Version: 0.4.4
-'''
+version = "0.4.5"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -11,7 +9,7 @@ from datetime import datetime, timezone, UTC
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": "0.4.4",
+  "DECODER_VERSION": version,
   "SCHEMA_VERSION": "0.4.0",
   "PI": "Steven RISER",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
@@ -2033,7 +2031,7 @@ def make_outfile_stem(name, AOML_map, nest=False, cycle=None, level=0):
 
 if __name__=="__main__":
 
-    import argparse, pathlib, os, pickle, json
+    import argparse, pathlib, os, pickle, json, textwrap
     import jsonschema
 
     default_map = "L0_maps.pkl"
@@ -2194,7 +2192,7 @@ if __name__=="__main__":
         return None
 
 
-    def write_mapping(aoml, wmo, ocr, out, update=False, format="pickle", logger=print):
+    def write_mapping(aoml, wmo, ocr, out, update=False, logger=print):
 
         aoml_p = pathlib.Path(aoml)
         wmo_p = pathlib.Path(wmo)
@@ -2250,37 +2248,107 @@ if __name__=="__main__":
             with open(out_p, "wb") as outfile:
                 pickle.dump(data, outfile)
 
+
     # create parser; delegate to sub-parsers
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='''
+        UW json decoder, Level 0, version {}.
+        Combine .msg, .log, .dura, .isus and .cp files into a single .json file.
+    '''.format(version))
     subparsers = parser.add_subparsers(dest="command")
 
     # build-aux command
-    p_build = subparsers.add_parser("build")
-    p_build.add_argument("-u", "--update", action="store_true")
-    p_build.add_argument("--aoml", default=default_aoml)
-    p_build.add_argument("--wmo", default=default_wmo)
-    p_build.add_argument("--ocr", default=default_ocr)
-    p_build.add_argument("-d", "--in_dir", default=".")
-    p_build.add_argument("-o", "--output", default=default_map)
+    p_build = subparsers.add_parser(
+        "build",
+        help="Build the required auxiliary data for conversion",
+    )
+    p_build.add_argument(
+        "-u", "--update", action="store_true",
+        help="update mode: update packed file only if raw data is newer"
+    )
+    p_build.add_argument(
+        "--aoml", default=default_aoml,
+        help="path of the internal float ID to AOML ID mapping file"
+    )
+    p_build.add_argument(
+        "--wmo", default=default_wmo,
+        help="path of the internal float ID to WMO ID mapping file"
+    )
+    p_build.add_argument(
+        "--ocr", default=default_ocr,
+        help="path of the OCR channel identification file"
+    )
+    p_build.add_argument(
+        "-d", "--in_dir", default=".",
+        help="common root path of the input files"
+    )
+    p_build.add_argument(
+        "-o", "--output", default=default_map,
+        help="output file name. Can be .json or .pkl (pickle)"
+    )
 
     # convert command
-    p_conv = subparsers.add_parser("convert")
-    p_conv.add_argument("-m", "--mapping", default=default_map)
-    p_conv.add_argument("-s", "--schema", default=None)
-    p_conv.add_argument("-u", "--update", action="store_true")
-    p_conv.add_argument("-r", "--recursive", action="store_true")
-    p_conv.add_argument("-n", "--nest_output", action="store_true")
-    p_conv.add_argument("-p", "--partial_log", action="store_true")
-    p_conv.add_argument("-i", "--input", default="*.*")
-    p_conv.add_argument("-d", "--in_dir", default=".")
-    p_conv.add_argument("-o", "--out_dir", default=".")
+    p_conv = subparsers.add_parser(
+        "convert",
+        help="Convert plain text data files into a single parsed .json file"
+    )
+    p_conv.add_argument(
+        "-u", "--update", action="store_true",
+        help="update mode: update output only on newer input(s)"
+    )
+    p_conv.add_argument(
+        "-r", "--recursive", action="store_true",
+        help="whether to descend into subfolders of IN_DIR"
+    )
+    p_conv.add_argument(
+        "-n", "--nest_output", action="store_true",
+        help="whether output should be organized by folders of float ID"
+    )
+    p_conv.add_argument(
+        "-p", "--partial_log", action="store_true",
+        help="if true, process log as is (as opposed to aligning it first)"
+    )
+    p_conv.add_argument(
+        "-m", "--mapping", default=default_map, metavar="MAP",
+        help="location of the auxillary data file, default to 'L0_maps.pkl'"
+    )
+    p_conv.add_argument(
+        "-s", "--schema", default=None,
+        help="path of json schema for validation (omit to skip validation)"
+    )
+    p_conv.add_argument(
+        "-i", "--input", default="*.*",
+        help="input profiles (no file extension). Can be glob pattern. Default to '*.*'"
+    )
+    p_conv.add_argument(
+        "-d", "--in_dir", default=".",
+        help="input directory, default='.'"
+    )
+    p_conv.add_argument(
+        "-o", "--out_dir", default=".", metavar="OUT",
+        help="output directory, default to '.'"
+    )
 
     # validate command
-    p_valid = subparsers.add_parser("validate")
-    p_valid.add_argument("-s", "--schema", default="UW_schema_L0.json")
-    p_valid.add_argument("-r", "--recursive", action="store_true")
-    p_valid.add_argument("-i", "--input", default="*.json")
-    p_valid.add_argument("-d", "--in_dir", default=".")
+    p_valid = subparsers.add_parser(
+        "validate",
+        help="Validate the .json file against a provided schema"
+    )
+    p_valid.add_argument(
+        "-r", "--recursive", action="store_true",
+        help="whether to descend into subfolders of IN_DIR"
+    )
+    p_valid.add_argument(
+        "-s", "--schema", default="UW_schema_L0.json",
+        help="path of json schema for validation"
+    )
+    p_valid.add_argument(
+        "-i", "--input", default="*.json",
+        help="input .json files. Can be glob pattern. Default to '*.json'"
+    )
+    p_valid.add_argument(
+        "-d", "--in_dir", default=".",
+        help="input directory, default to '.'"
+    )
 
     # parse input arguments
     args = parser.parse_args()
