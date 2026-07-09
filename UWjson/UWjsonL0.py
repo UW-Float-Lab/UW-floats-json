@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.4.5"
+version = "0.5.0"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -2031,7 +2031,7 @@ def make_outfile_stem(name, AOML_map, nest=False, cycle=None, level=0):
 
 if __name__=="__main__":
 
-    import argparse, pathlib, os, pickle, json, textwrap
+    import argparse, pathlib, os, pickle, json
     import jsonschema
 
     default_map = "L0_maps.pkl"
@@ -2082,7 +2082,7 @@ if __name__=="__main__":
 
 
     def generate_json(
-        msg_path, aux, partial_log=False,
+        msg_path, aux, align_log=False,
         out_root=".", nest=False, update=False,
         validator=None,
         logger=print
@@ -2126,24 +2126,26 @@ if __name__=="__main__":
         )
 
         if log1_flag:
-            if log2_flag:
-                log1_list, cuts1 = log_tokenizer(
-                    log1, fill_value=-999,
-                    logger=lambda x: logger("[LOG] " + x)
-                )
-                log2_list, cuts2 = log_tokenizer(
-                    log2, fill_value=-999,
-                    logger=lambda x: logger("[LOG] " + x)
-                )
-                log_list = log1_list[cuts1[0]:] + log2_list[:cuts2[0]]
-            elif partial_log:
+            if align_log:
+                if log2_flag:
+                    log1_list, cuts1 = log_tokenizer(
+                        log1, fill_value=-999,
+                        logger=lambda x: logger("[LOG] " + x)
+                    )
+                    log2_list, cuts2 = log_tokenizer(
+                        log2, fill_value=-999,
+                        logger=lambda x: logger("[LOG] " + x)
+                    )
+                    log_list = log1_list[cuts1[0]:] + log2_list[:cuts2[0]]
+                else:
+                    logger("Incomplete log. Bail.")
+                    return None
+            else:
                 log_list, cuts1 = log_tokenizer(
                     log1, fill_value=-999,
                     logger=lambda x: logger("[LOG] " + x)
                 )
-            else:
-                logger("Incomplete log. Bail.")
-                return None
+
         else:
             log_list = None
 
@@ -2279,7 +2281,7 @@ if __name__=="__main__":
     )
     p_build.add_argument(
         "-d", "--in_dir", default=".",
-        help="common root path of the input files"
+        help="common root path of the input files. Default to '.'"
     )
     p_build.add_argument(
         "-o", "--output", default=default_map,
@@ -2292,6 +2294,10 @@ if __name__=="__main__":
         help="Convert plain text data files into a single parsed .json file"
     )
     p_conv.add_argument(
+        "-a", "--align_log", action="store_true",
+        help="if true, process log is aligned first before processing"
+    )
+        p_conv.add_argument(
         "-u", "--update", action="store_true",
         help="update mode: update output only on newer input(s)"
     )
@@ -2302,10 +2308,6 @@ if __name__=="__main__":
     p_conv.add_argument(
         "-n", "--nest_output", action="store_true",
         help="whether output should be organized by folders of float ID"
-    )
-    p_conv.add_argument(
-        "-p", "--partial_log", action="store_true",
-        help="if true, process log as is (as opposed to aligning it first)"
     )
     p_conv.add_argument(
         "-m", "--mapping", default=default_map, metavar="MAP",
@@ -2397,7 +2399,7 @@ if __name__=="__main__":
         for _x in targets:
             generate_json(
                 _x, aux, 
-                partial_log=args.partial_log,
+                align_log=args.align_log,
                 out_root=args.out_dir, 
                 nest=args.nest_output, 
                 update=args.update,
