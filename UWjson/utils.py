@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 version = "0.5.0"
 
 import re, csv, itertools
