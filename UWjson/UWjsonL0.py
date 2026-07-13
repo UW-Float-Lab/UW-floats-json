@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.5.0"
+version = "0.5.1"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -1554,9 +1554,13 @@ def log_tokenizer(
     been parsed
     '''
 
+    out_list = []
+    cuts_list = []
+
     out = [] # output list
     cuts = [] # list of cut points
     prev_mtime = -1
+    EOT_cnt = 0
 
     # read the entire file at once
     if isinstance(file, io.IOBase):
@@ -1584,10 +1588,45 @@ def log_tokenizer(
             out.append(entry)
 
         elif line.strip() == "" or line.strip() == "<EOT>":
-            pass
+            EOT_cnt += 1
+            out_list.append(out)
+            cuts_list.append(cuts)
+            out = []
+            cuts = []
 
         else:
             logger('Not decoded: "' + line + '"')
+
+    # append the last record that possibly has no <EOT>
+    if out:
+        out_list.append(out)
+        cuts_list.append(cuts)
+        logger("Data found after the end of last <EOT>")
+
+    # EOT check
+    if EOT_cnt == 0:
+        logger('"<EOT>" missing')
+    elif EOT_cnt > 1:
+        logger('More than 1 "<EOT>" found')
+
+    num_out = len(out_list)
+    if num_out == 1:
+        out = out_list[0]
+        cuts = cuts_list[0]
+    elif num_out == 0:
+        out = []
+        cuts = []
+    else:
+        # find the longest record
+        out_lens = [len(_x) for _x in out_list]
+        max_len = 0
+        max_idx = 0
+        for (_i, _x) in enumerate(out_lens):
+            if _x > max_len:
+                max_idx = _i
+                max_len = _x
+        out = out_list[max_idx]
+        cuts = out_list[max_idx]
 
     return (out, cuts)
 
@@ -1688,7 +1727,10 @@ def dura_tokenizer(
             line = next(lines_iter).rstrip()
 
     except StopIteration:
-        pass
+        if sci_data:
+            logger('Science data found after the last "<EOT>"')
+        if engr_dict or engr_list:
+            logger('Engineering data found after the last "<EOT>"')
 
     # EOT check
     if EOT_cnt == 0:
@@ -1791,7 +1833,10 @@ def isus_tokenizer(
             line = next(lines_iter).rstrip()
 
     except StopIteration:
-        pass
+        if sci_data:
+            logger('Science data found after the last "<EOT>"')
+        if engr_list or engr_dict:
+            logger('Engineering data found after the last "<EOT>"')
 
     # EOT check
     if EOT_cnt == 0:
