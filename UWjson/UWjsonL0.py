@@ -699,7 +699,7 @@ def parse_AOML_ID_map(file, logger=print):
                 logger(f"Line {i}: WARNING: non-integer value AOML ID '{AOML_Id}'")
 
             if AOML_Id in Aoml_set:
-                logger(f"Line {i}: WARNING: multiple occurrence of AOML ID {AOML_Id}")
+                logger(f"Line {i}: WARNING: multiple occurrence of AOML ID '{AOML_Id}'")
             Aoml_set.add(AOML_Id)
 
             try:
@@ -759,7 +759,7 @@ def parse_WMO_ID_map(file, logger=print):
                 logger(f"Line {i}: WARNING: non-integer value WMO ID '{WMO_Id}'")
 
             if WMO_Id in Wmo_set:
-                logger(f"Line {i}: WARNING: multiple occurrence of WMO ID {WMO_Id}")
+                logger(f"Line {i}: WARNING: multiple occurrence of WMO ID '{WMO_Id}'")
             Wmo_set.add(WMO_Id)
 
             try:
@@ -780,7 +780,7 @@ def parse_WMO_ID_map(file, logger=print):
                 logger(f"Line {i}: WARNING: non-integer value Apf ID '{Apf_Id}'")
 
             if Apf_Id in Apf_set:
-                logger(f"Line {i}: WARNING: multiple occurrence of Apf ID {Apf_Id}")
+                logger(f"Line {i}: WARNING: multiple occurrence of Apf ID '{Apf_Id}'")
             Apf_set.add(Apf_Id)
 
             out_dict[Apf_Id] = WMO_Id
@@ -1126,7 +1126,7 @@ def align_pH(
                 "VK_PH": dura["Vk_mean"]
             })
 
-            logger(f"Unmatched dura entry at PRES={dura["CTD_depth"]}")
+            logger(f"Unmatched dura entry at PRES={dura['CTD_depth']}")
             
             try:
                 dura = next(dura_iter)
