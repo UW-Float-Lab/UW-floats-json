@@ -983,7 +983,7 @@ def align_nitrate(
                 "Spectrum": isus["packed_data"].copy()
             })
 
-            logger(f"Unmatched isus entry at PRES={isus["CTD_depth"]}")
+            logger(f"Unmatched isus entry at PRES={isus['CTD_depth']}")
             
             try:
                 isus = next(isus_iter)
@@ -1001,7 +1001,7 @@ def align_nitrate(
                 "Spectrum": [fill_value] * spec_len
             })
 
-            logger(f"Unmatched msg entry at PRES={msg["PRES"]}")
+            logger(f"Unmatched msg entry at PRES={msg['PRES']}")
 
             try:
                 msg = next(msg_iter)
@@ -2297,7 +2297,7 @@ if __name__=="__main__":
         "-a", "--align_log", action="store_true",
         help="if true, process log is aligned first before processing"
     )
-        p_conv.add_argument(
+    p_conv.add_argument(
         "-u", "--update", action="store_true",
         help="update mode: update output only on newer input(s)"
     )
