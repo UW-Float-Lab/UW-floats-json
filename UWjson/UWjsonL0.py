@@ -1587,12 +1587,15 @@ def log_tokenizer(
 
             out.append(entry)
 
-        elif line.strip() == "" or line.strip() == "<EOT>":
+        elif line.strip() == "<EOT>":
             EOT_cnt += 1
             out_list.append(out)
             cuts_list.append(cuts)
             out = []
             cuts = []
+
+        elif line.strip() == "":
+            pass
 
         else:
             logger('Not decoded: "' + line + '"')
