@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.5.1"
+version = "0.5.3"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -47,7 +47,7 @@ profile_terminated_rx = re.compile(r"\$ Profile ([0-9]+)\.([0-9]+) terminated: .
 discrete_sample_rx = re.compile(r"\$ Discrete samples: ([0-9]+)")
 
 # regex for detecting the start of continuous samples
-cont_header_rx = re.compile(r"#\s+" + mmmdy_hms + r"\s+Sbe41cpSerNo\[([0-9]+)\]\s+NSample\[([0-9]+)\]\s+NBin\[([0-9]+)\]")
+cont_header_rx = re.compile(r"#\s+" + mmmdy_hms + r"\s+\w+SerNo\[([0-9]+)\]\s+NSample\[([0-9]+)\]\s+NBin\[([0-9]+)\]")
 
 # regex for the body of continuous samples
 cont_data_rx = re.compile(r"([A-F0-9]+)(?:\[([0-9]+)\])?")
@@ -68,7 +68,7 @@ parkpt_rx = re.compile(r"ParkPt:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+([\S]+)\s+(
 parkptflbb_rx = re.compile(r"ParkPtFlbb:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
 
 # regex for Optode air-calibration data
-optode_rx = re.compile(r"OptodeAirCal:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+air_cal_rx = re.compile(r"^\s*(\w+)AirCal:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
 
 # regex for engineering parameters
 engr_rx = re.compile(r"^([A-Za-z0-9]+)=(.*?)$")
@@ -463,6 +463,21 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     for key in headers_set:
         logger(f"Unexpected discrete data column '{key}'")
 
+    if is_OCR:
+        if OCR_map is None:
+            OCR0 = "OCR0"
+            OCR1 = "OCR1"
+            OCR2 = "OCR2"
+            OCR3 = "OCR3"
+        else:
+            OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
+            OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
+            OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
+            if OCR_map["OCR3"] == "PAR":
+                OCR3 = "RAW_DOWNWELLING_IRRADIANCE_PAR"
+            else:
+                OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
+
     for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
 
         # pressure: always present
@@ -521,19 +536,6 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
             })
 
         if is_OCR:
-            if OCR_map is None:
-                OCR0 = "OCR0"
-                OCR1 = "OCR1"
-                OCR2 = "OCR2"
-                OCR3 = "OCR3"
-            else:
-                OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
-                OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
-                OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
-                if OCR_map["OCR3"] == "PAR":
-                    OCR3 = "RAW_DOWNWELLING_IRRADIANCE_PAR"
-                else:
-                    OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
             OCR.append({
                 "PRES": p, 
                 OCR0: parseHex(item["Ocr[0]"], fill_value), 
@@ -665,7 +667,7 @@ def parse_parked(
                     "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
                     "temp_signal": parseInt(item["TSig"], fill_value),
                     "TIME": t
-                })     
+                })
 
     else:
         logger("Unknown measurement type. No entries returned")
@@ -680,27 +682,89 @@ def parse_parked(
     return out
 
 
-def parse_OptodeAirCal(optode_list, fill_value=None, fill_NaT=None):
+def parse_AirCal(air_cal_list, OCR_map=None, fill_value=None, fill_NaT=None):
 
-    out = []
-    for item in optode_list:
-        out.append({
-            "Pres_air": parseInt(item["AirP"], fill_value),
-            "Pres_CTD": parseFloat(item["p"], fill_value),
-            "Temp_optode": parseFloat(item["optodeT"], fill_value),
-            "TPhase": parseFloat(item["TPhase"], fill_value),
-            "RPhase": parseFloat(item["RPhase"], fill_value),
-            "FSig": parseInt(item["FSig"], fill_value),
-            "BbSig": parseInt(item["BbSig"], fill_value),
-            "TSig": parseInt(item["TSig"], fill_value),
-            "Ocr": [
-                parseHex(item["Ocr[0]"], fill_value),
-                parseHex(item["Ocr[1]"], fill_value),
-                parseHex(item["Ocr[2]"], fill_value),
-                parseHex(item["Ocr[3]"], fill_value),
-            ],
-            "TIME": decode_time(item["time"], fill_NaT)
-        })
+    out = {}
+    Optode = []
+    FLBB = []
+    OCR = []
+
+    if "Ocr[0]" in air_cal_list[0]:
+        if OCR_map is None:
+            OCR0 = "OCR0"
+            OCR1 = "OCR1"
+            OCR2 = "OCR2"
+            OCR3 = "OCR3"
+        else:
+            OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
+            OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
+            OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
+            if OCR_map["OCR3"] == "PAR":
+                OCR3 = "RAW_DOWNWELLING_IRRADIANCE_PAR"
+            else:
+                OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
+
+    for item in air_cal_list:
+
+        airP = parseInt(item["AirP"], fill_value)
+        p = parseFloat(item["p"], fill_value)
+        t = decode_time(item["time"], fill_NaT)
+
+        if "RPhase" in item: # Aanderaa optode
+            Optode.append({
+                "Pres_air": airP,
+                "Pres_CTD": p,
+                "TIME": t,
+                "Temp_optode": parseFloat(item["optodeT"], fill_value),
+                "TPhase": parseFloat(item["TPhase"], fill_value),
+                "RPhase": parseFloat(item["RPhase"], fill_value)
+            })
+        elif "Phase" in item: # Sbe83 optode
+            Optode.append({
+                "Pres_air": airP,
+                "Pres_CTD": p,
+                "TIME": t,
+                "Temp_optode": parseFloat(item["Sbe83T"], fill_value),
+                "Phase": parseFloat(item["Phase"], fill_value)
+            })
+
+        if "FSig" in item: # FLBB
+            FLBB.append({
+                "Pres_air": airP,
+                "Pres_CTD": p,
+                "TIME": t,
+                "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value),
+                "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                "temp_signal": parseInt(item["TSig"], fill_value)
+            })
+        elif "FSig[0]" in item: # FL2BB
+            FLBB.append({
+                "Pres_air": airP,
+                "Pres_CTD": p,
+                "TIME": t,
+                "FLUORESCENCE_CHLA470": parseInt(item["FSig[0]"], fill_value),
+                "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
+                "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                "temp_signal": parseInt(item["TSig"], fill_value)
+            })
+        if "Ocr[0]" in item: # OCR
+            OCR.append({
+                "Pres_air": airP,
+                "Pres_CTD": p,
+                "TIME": t,
+                OCR0: parseHex(item["Ocr[0]"], fill_value),
+                OCR1: parseHex(item["Ocr[1]"], fill_value),
+                OCR2: parseHex(item["Ocr[2]"], fill_value),
+                OCR3: parseHex(item["Ocr[3]"], fill_value)
+            })
+
+    if Optode:
+        out["Optode"] = Optode
+    if FLBB:
+        out["FLBB"] = FLBB
+    if OCR:
+        out["OCR"] = OCR
+
     return out
 
 
@@ -1577,7 +1641,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 else:
                     logger('Not decoded: "' + line + '"')
 
-            # Parked data
+            # Parked data (Core float)
             elif (rx_match := parkpt_rx.match(line)):
                 parkpt = {
                     "time": rx_match[1], "epoch": rx_match[2], "mtime": rx_match[3], 
@@ -1588,6 +1652,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 else:
                     out["ParkPt"] = [ parkpt ]
 
+            # Parked data (Floats with FLBB)
             elif (rx_match := parkptflbb_rx.match(line)):
                 parkpt = {"time": rx_match[1], "epoch": rx_match[2]}
                 nums = rx_match[3].split()
@@ -1607,19 +1672,48 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 else:
                     out["ParkPtFlbb"] = [ parkpt ]
 
-            elif (rx_match := optode_rx.match(line)):
-                nums = rx_match[3].split()
-                optode = {
-                    "time": rx_match[1], "epoch": rx_match[2], 
-                    "AirP": nums[0], "p": nums[1], "optodeT": nums[2], 
-                    "TPhase": nums[3], "RPhase": nums[4],
-                    "FSig": nums[5], "BbSig": nums[6], "TSig": nums[7],
-                    "Ocr[0]": nums[8], "Ocr[1]": nums[9], "Ocr[2]": nums[10], "Ocr[3]": nums[11]
+            # Optode air calibration (Aanderaa)
+            elif (rx_match := air_cal_rx.match(line)):
+                cal_type = rx_match[1]
+                nums = rx_match[4].split()
+                air_cal = {"type": cal_type,
+                    "time": rx_match[2], "epoch": rx_match[3]
                 }
-                if "OptodeAirCal" in out:
-                    out["OptodeAirCal"].append(optode)
+                match cal_type:
+
+                    case 'Optode':
+                        air_cal |= {
+                            "AirP": nums[0], "p": nums[1], "optodeT": nums[2],
+                            "TPhase": nums[3], "RPhase": nums[4],
+                            "FSig": nums[5], "BbSig": nums[6], "TSig": nums[7],
+                            "Ocr[0]": nums[8], "Ocr[1]": nums[9],
+                            "Ocr[2]": nums[10], "Ocr[3]": nums[11]
+                        }
+
+                    case 'Sbe83':
+                        if len(nums) == 4:
+                            air_cal |= {
+                                "AirP": nums[0], "p": nums[1],
+                                "Sbe83T": nums[2], "Phase": nums[3]
+                            }
+                        elif len(nums) == 8:
+                            air_cal |= {
+                                "AirP": nums[0], "p": nums[1],
+                                "Sbe83T": nums[2], "Phase": nums[3],
+                                "FSig[0]": nums[4], "FSig[1]": nums[5],
+                                "BbSig": nums[6], "TSig": nums[7]
+                            }
+
+                    case _:
+                        logger(f'Unknown calibrate type "{cal_type}"')
+
+                if "AirCal" in out:
+                    out["AirCal"].append(air_cal)
                 else:
-                    out["OptodeAirCal"] = [ optode ]
+                    out["AirCal"] = [ air_cal ]
+
+
+
             elif line.strip() == "":
                 pass # OK to skip line
 
@@ -2092,6 +2186,17 @@ def L0_parser(
             fill_value = fill_value, fill_NaT = fill_NaT, logger = logger
         )
 
+    # interpret calibration data
+    if "AirCal" in msg_dict:
+        air_cal = parse_AirCal(
+            msg_dict["AirCal"],
+            OCR_map = OCR_submap,
+            fill_value = fill_value, fill_NaT = fill_NaT
+        )
+        if consume: del msg_dict["AirCal"]
+    else:
+        air_cal = {}
+
     # write out timestamp of fall, drift, and rise of float
     if "Rise" in log_out: 
         out_dict["Fall"] = log_out["Fall"]
@@ -2117,8 +2222,13 @@ def L0_parser(
         out_dict["ECO_Discrete"] = discrete["FLBB"]
     if "FLBB" in parked:
         out_dict["ECO_Drift"] = parked["FLBB"]
+    if "FLBB" in air_cal:
+        out_dict["ECO_Surface"] = air_cal["FLBB"]
+
     if "Optode" in discrete:
         out_dict["DO_Discrete"] = discrete["Optode"]
+    if "Optode" in air_cal:
+        out_dict["DO_Surface"] = air_cal["Optode"]
 
     if pH is not None:
         out_dict["pH_Discrete"] = pH
@@ -2127,19 +2237,13 @@ def L0_parser(
 
     if "OCR" in discrete:
         out_dict["OCR_Discrete"] = discrete["OCR"]
+    if "OCR" in air_cal:
+        out_dict["OCR_Surface"] = air_cal["OCR"]
 
     if nitrate is not None:
         out_dict["NITRATE_Discrete"] = nitrate
     elif "NO3" in discrete:
         out_dict["NITRATE_Discrete"] = discrete["NO3"]
-
-    # interpret calibration data
-    if "OptodeAirCal" in msg_dict:
-        out_dict["optode_air_calibration"] = parse_OptodeAirCal(
-            msg_dict["OptodeAirCal"],
-            fill_value = fill_value, fill_NaT = fill_NaT
-        )
-        if consume: del msg_dict["OptodeAirCal"]
 
     # Write raw mission config and engineering data
     if config_dict:
@@ -2339,9 +2443,9 @@ if __name__=="__main__":
             isus_dict = None
 
         out = L0_parser(
-            msg_dict, log_list, dura_dict, isus_dict, cp_dict, 
+            msg_dict, log_list, dura_dict, isus_dict, cp_dict,
             AOML_map, WMO_map, OCR_map,
-            supp_dict=None, consume=False, 
+            supp_dict=None, consume=False,
             fill_value=-999, fill_NaT=None, logger=print
         )
 
@@ -2460,6 +2564,10 @@ if __name__=="__main__":
         help="Convert plain text data files into a single parsed .json file"
     )
     p_conv.add_argument(
+        "-p", "--pass_over", action="store_true",
+        help="if true, files that produced error is passed over (as opposed to halt)"
+    )
+    p_conv.add_argument(
         "-a", "--align_log", action="store_true",
         help="if true, process log is aligned first before processing"
     )
@@ -2563,14 +2671,28 @@ if __name__=="__main__":
             targets = root.glob(in_glob)
 
         for _x in targets:
-            generate_json(
-                _x, aux, 
-                align_log=args.align_log,
-                out_root=args.out_dir, 
-                nest=args.nest_output, 
-                update=args.update,
-                validator=validator
-            )
+            if args.pass_over:
+                try:
+                    generate_json(
+                        _x, aux,
+                        align_log=args.align_log,
+                        out_root=args.out_dir,
+                        nest=args.nest_output,
+                        update=args.update,
+                        validator=validator
+                    )
+                except Exception as e:
+                    print(f"[MAIN] Unknown error while processing {_x}. File skipped")
+                    print(f"Error: {e}")
+            else:
+                generate_json(
+                    _x, aux,
+                    align_log=args.align_log,
+                    out_root=args.out_dir,
+                    nest=args.nest_output,
+                    update=args.update,
+                    validator=validator
+                )
 
     # validate output json
     elif args.command == "validate":
