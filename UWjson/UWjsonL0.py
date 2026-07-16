@@ -393,43 +393,134 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     FLBB = []
     OCR = []
 
-    if len(disc_dict["headers"]) == 3: # core CTD data only
-        for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
-            CTD.append({
-                "PRES": parseFloat(item["p"], fill_value),
-                "TEMP": parseFloat(item["t"], fill_value),
-                "PSAL": parseFloat(item["s"], fill_value)
-            })
+    # check available sensors once and for all
+    headers_set = set(disc_dict["headers"])
 
-    elif len(disc_dict["headers"]) == 15: # CTD(3) + optode(3) + nitrate(2) + FLBB(3) + OCR(4)
-        for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
-            p = parseFloat(item["p"], fill_value)
-            CTD.append({
-                "PRES": p, 
-                "TEMP": parseFloat(item["t"], fill_value), 
-                "PSAL": parseFloat(item["s"], fill_value)
-            })
+    is_Aanderaa_optode = False
+    is_Sbe83_optode = False
+    is_NO3 = False
+    is_pH = False
+    is_FLBB = False
+    is_FL2BB = False
+    is_OCR = False
+
+    for key in ["p", "t", "s"]:
+        try:
+            headers_set.remove(key)
+        except KeyError:
+            logger(f"Discrete data column '{key}' expected but not found.")
+
+    if "TPhase" in headers_set:
+        is_Aanderaa_optode = True
+        headers_set.remove("TPhase")
+        for key in ["RPhase", "Topt"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")
+    elif "Phase" in headers_set:
+        is_Sbe83_optode = True
+        headers_set.remove("Phase")
+        try:
+            headers_set.remove("T83")
+        except KeyError:
+            logger("Discrete data column 'T83' expected but not found.")
+
+    if "no3" in headers_set:
+       is_NO3 = True
+       headers_set.remove("no3")
+
+    if "pH(V)" in headers_set:
+        is_pH = True
+        headers_set.remove("pH(V)")
+
+    if "FSig" in headers_set:
+        is_FLBB = True
+        headers_set.remove("FSig")
+        for key in ["BbSig", "TSig"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")
+    elif "FSig[0]" in headers_set:
+        is_FL2BB = True
+        headers_set.remove("FSig[0]")
+        for key in ["FSig[1]", "BbSig", "TSig"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")
+
+    if "Ocr[0]" in headers_set:
+        is_OCR = True
+        headers_set.remove("Ocr[0]")
+        for key in ["Ocr[1]", "Ocr[2]", "Ocr[3]"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")
+
+    for key in headers_set:
+        logger(f"Unexpected discrete data column '{key}'")
+
+    for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
+
+        # pressure: always present
+        p = parseFloat(item.get("p", fill_value), fill_value)
+
+        # CTD data: always present
+        CTD.append({
+            "PRES": p,
+            "TEMP": parseFloat(item.get("t", fill_value), fill_value),
+            "PSAL": parseFloat(item.get("s", fill_value), fill_value)
+        })
+
+        # Aanderaa optode data
+        if is_Aanderaa_optode:
             Optode.append({
                 "PRES": p, 
-                "Temp_optode": parseFloat(item["Topt"], fill_value), 
-                "TPhase": parseFloat(item["TPhase"], fill_value), 
-                "RPhase": parseFloat(item["RPhase"], fill_value)
+                "Temp_optode": parseFloat(item.get("Topt", fill_value), fill_value),
+                "TPhase": parseFloat(item.get("TPhase", fill_value), fill_value),
+                "RPhase": parseFloat(item.get("RPhase", fill_value), fill_value)
             })
+        # Sbe83 optode data
+        elif is_Sbe83_optode:
+            Optode.append({
+                "PRES": p, 
+                "Temp_optode": parseFloat(item.get("T83", fill_value), fill_value),
+                "Phase": parseFloat(item.get("Phase", fill_value), fill_value)
+            })
+
+        # nitrate
+        if is_NO3:
             NO3.append({
                 "PRES": p, 
-                "nitrate_onboard": parseFloat(item["no3"], fill_value)
+                "nitrate_onboard": parseFloat(item.get("no3", fill_value), fill_value)
             })
+
+        if is_pH:
             pH.append({
                 "PRES": p, 
-                "pH_V": parseFloat(item["pH(V)"], fill_value)
+                "pH_V": parseFloat(item.get("pH(V)", fill_value), fill_value)
             })
+
+        if is_FLBB:
             FLBB.append({
                 "PRES": p, 
                 "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value), 
                 "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value), 
                 "temp_signal": parseInt(item["TSig"], fill_value)
             })
+        elif is_FL2BB:
+            FLBB.append({
+                "PRES": p, 
+                "FLUORESCENCE_CHLA470": parseInt(item["FSig[0]"], fill_value),
+                "FLUORESCENCE_CHLA435": parseInt(item["FSig[1]"], fill_value),
+                "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                "temp_signal": parseInt(item["TSig"], fill_value)
+            })
 
+        if is_OCR:
             if OCR_map is None:
                 OCR0 = "OCR0"
                 OCR1 = "OCR1"
@@ -451,11 +542,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 OCR3: parseHex(item["Ocr[3]"], fill_value)
             })
 
-    else:
-        logger("Unknown data fields. No entries returned")
-
-    if CTD:
-        out["CTD"] = CTD
+    out["CTD"] = CTD
     if Optode:
         out["Optodo"] = Optode
     if NO3:
@@ -562,13 +649,23 @@ def parse_parked(
                 "TIME": t,
                 "PRES": p
             })
-            FLBB.append({
-                "PRES": p,
-                "FSig": parseInt(item["FSig"], fill_value),
-                "BbSig": parseInt(item["BbSig"], fill_value),
-                "TSig": parseInt(item["TSig"], fill_value),
-                "TIME": t
-            })
+            if "FSig" in item: # FLBB
+                FLBB.append({
+                    "PRES": p,
+                    "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value),
+                    "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                    "temp_signal": parseInt(item["TSig"], fill_value),
+                    "TIME": t
+                })
+            elif "FSig[0]" in item: # FL2BB
+                FLBB.append({
+                    "PRES": p,
+                    "FLUORESCENCE_CHLA470": parseInt(item["FSig[0]"], fill_value),
+                    "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
+                    "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                    "temp_signal": parseInt(item["TSig"], fill_value),
+                    "TIME": t
+                })     
 
     else:
         logger("Unknown measurement type. No entries returned")
@@ -1282,6 +1379,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
             # mission config lines
             elif line.startswith("$"):
 
+                # bulk of mission configuration
                 if (rx_match := mission_params_rx.match(line)):
                     key = rx_match[1]
                     if key in mission_config:
@@ -1293,6 +1391,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     else:
                         mission_config[key] = { "value": rx_match[2], "unit": rx_match[3] }
 
+                # TOP of mission configuration
                 elif (rx_match := mission_config_rx.match(line)):
                     if "model" in mission_config:
                         logger('Duplicated key: "mission_config"')
@@ -1301,16 +1400,20 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     mission_config["Id"] = { "value": rx_match[2] }
                     mission_config["FwRev"] = { "value": rx_match[3] }
 
+                # skip SBD MSG generator header
                 elif (line.startswith("$ SBD MSG Generator")):
                     pass
 
+                # skip empty revision information
                 elif (line.startswith("$ $Revision$ $Date$")):
                     pass
 
+                # record binary file input and text file output for SBD floats
                 elif (rx_match := msg_gen_rx.match(line)):
                     out["bin_msg_file:"] = rx_match[1]
                     out["msg_file:"] = rx_match[2]
 
+                # profile terminated line for BGC floats
                 elif (rx_match := profile_terminated_rx.match(line)):
                     if "profile_terminated" in out:
                         logger('Duplicated key: "profile_terminated"')
@@ -1320,6 +1423,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         "time": rx_match[3]
                     }
 
+                # discrete sample processing
                 elif (rx_match := discrete_sample_rx.match(line)):
                     stage = 2
                     if "discrete_samples" in out:
@@ -1356,6 +1460,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     # rewind one element
                     lines_iter = itertools.chain([line], lines_iter)
 
+                # The end of missing config section
                 elif line.strip() == "$":
                     if stage == 1:
                         stage = 2 # single '$' indicates that mission parameters record ended
@@ -1364,7 +1469,8 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     logger('Not decoded: "' + line + '"')
 
             elif line.startswith("#"):
-                
+
+                # Start of continuous profile
                 if (rx_match := cont_header_rx.match(line)):
 
                     if "cont_samples" in out:
@@ -1403,6 +1509,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     # rewind one element
                     lines_iter = itertools.chain([line], lines_iter)
 
+                # Start of GPS information
                 elif (rx_match := gps_header_rx.match(line)):
 
                     stage = 3 # gps data marks the start of engineering data section
@@ -1420,11 +1527,13 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         "nsat": values[5], "t_fix": rx_match[1]
                     }
 
+                # Skip error message regarding GPS fix
                 elif line.startswith("# Attempt to get GPS fix failed"):
                     pass
 
                 else:
                     logger('Not decoded: "' + line + '"')
+
 
             elif line.startswith("Iridium"):
 
@@ -1448,6 +1557,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 else:
                      logger('Not decoded: "' + line + '"')
 
+            # Engineering data
             elif "=" in line and stage == 3:
 
                 if (rx_match := engr_rx.match(line)):
@@ -1467,6 +1577,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 else:
                     logger('Not decoded: "' + line + '"')
 
+            # Parked data
             elif (rx_match := parkpt_rx.match(line)):
                 parkpt = {
                     "time": rx_match[1], "epoch": rx_match[2], "mtime": rx_match[3], 
@@ -1478,12 +1589,19 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     out["ParkPt"] = [ parkpt ]
 
             elif (rx_match := parkptflbb_rx.match(line)):
+                parkpt = {"time": rx_match[1], "epoch": rx_match[2]}
                 nums = rx_match[3].split()
-                parkpt = {
-                    "time": rx_match[1], "epoch": rx_match[2], "mtime": nums[0],
-                    "p": nums[1], "t": nums[2], 
-                    "FSig": nums[3], "BbSig": nums[4], "TSig": nums[5]
-                }
+                if len(nums) == 6: # FLBB
+                    parkpt |= {"mtime": nums[0],
+                        "p": nums[1], "t": nums[2], 
+                        "FSig": nums[3], "BbSig": nums[4], "TSig": nums[5]
+                    }
+                elif len(nums) == 7: # FL2BB
+                    parkpt |= {"mtime": nums[0],
+                        "p": nums[1], "t": nums[2], 
+                        "FSig[0]": nums[3], "FSig[1]": nums[4],
+                        "BbSig": nums[5], "TSig": nums[6]
+                    }
                 if "ParkPtFlbb" in out:
                     out["ParkPtFlbb"].append(parkpt)
                 else:
@@ -2025,7 +2143,7 @@ def L0_parser(
 
     # Write raw mission config and engineering data
     if config_dict:
-        out_dict["ARGO_Mission"] = parse_mission_config(config_dict)
+        out_dict["Mission"] = parse_mission_config(config_dict)
         if consume: del msg_dict["mission_config"]
     if any(engr_list):
         out_dict["Engineering_Data"] = parse_engineering_data(engr_list)
@@ -2224,7 +2342,7 @@ if __name__=="__main__":
             msg_dict, log_list, dura_dict, isus_dict, cp_dict, 
             AOML_map, WMO_map, OCR_map,
             supp_dict=None, consume=False, 
-            fill_value=None, fill_NaT=None, logger=print
+            fill_value=-999, fill_NaT=None, logger=print
         )
 
         if validator is not None:
