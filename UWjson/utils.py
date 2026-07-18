@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.5.3"
+version = "0.5.4"
 
 import re, csv, itertools
 from datetime import datetime, timezone, UTC

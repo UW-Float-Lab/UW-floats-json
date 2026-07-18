@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.5.3"
+version = "0.5.4"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -78,6 +78,8 @@ engr_array_rx = re.compile(r"^([A-Za-z0-9]+)\[([0-9]+)\]=(.*?)$")
 
 # regex for a generic log entry
 log_rx = re.compile(r"^\((" + mmmdy_hms + r"),\s+([0-9]+)\s+sec\)\s+([_:A-Za-z0-9]+)\(?\)?\s+(.*?)$")
+
+log_rx2 = re.compile(r"^\((" + mmmdy_hms + r")\)\s+([_:A-Za-z0-9]+)\(?\)?\s+(.*?)$")
 
 # regex for parsing datetime values in engineering datetime information
 engr_time_rx = re.compile(r"([0-9]+)\s+(" + mmmdy_hms + ")")
@@ -1682,30 +1684,46 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 match cal_type:
 
                     case 'Optode':
-                        air_cal |= {
-                            "AirP": nums[0], "p": nums[1], "optodeT": nums[2],
-                            "TPhase": nums[3], "RPhase": nums[4],
-                            "FSig": nums[5], "BbSig": nums[6], "TSig": nums[7],
-                            "Ocr[0]": nums[8], "Ocr[1]": nums[9],
-                            "Ocr[2]": nums[10], "Ocr[3]": nums[11]
-                        }
+
+                        match len(nums):
+                            case 9: # p(2) + Optode (3) + FL2BB (4)
+                                air_cal |= {
+                                    "AirP": nums[0], "p": nums[1], "optodeT": nums[2],
+                                    "TPhase": nums[3], "RPhase": nums[4],
+                                    "FSig[0]": nums[5], "FSig[1]": nums[6],
+                                    "BbSig": nums[7], "TSig": nums[8]
+                                }
+                            case 12: # p(2) + Optode(3) + FLBB(3) + OCR(4)
+                                air_cal |= {
+                                    "AirP": nums[0], "p": nums[1], "optodeT": nums[2],
+                                    "TPhase": nums[3], "RPhase": nums[4],
+                                    "FSig": nums[5], "BbSig": nums[6], "TSig": nums[7],
+                                    "Ocr[0]": nums[8], "Ocr[1]": nums[9],
+                                    "Ocr[2]": nums[10], "Ocr[3]": nums[11]
+                                }
+                            case _:
+                                logger("Unknown in-air calibration data format")
 
                     case 'Sbe83':
-                        if len(nums) == 4:
-                            air_cal |= {
-                                "AirP": nums[0], "p": nums[1],
-                                "Sbe83T": nums[2], "Phase": nums[3]
-                            }
-                        elif len(nums) == 8:
-                            air_cal |= {
-                                "AirP": nums[0], "p": nums[1],
-                                "Sbe83T": nums[2], "Phase": nums[3],
-                                "FSig[0]": nums[4], "FSig[1]": nums[5],
-                                "BbSig": nums[6], "TSig": nums[7]
-                            }
+
+                        match len(nums):
+                            case 4: # p(2) + Sbe83(2)
+                                air_cal |= {
+                                    "AirP": nums[0], "p": nums[1],
+                                    "Sbe83T": nums[2], "Phase": nums[3]
+                                }
+                            case 8: # p(2) + Sbe(2) + OCR(4)
+                                air_cal |= {
+                                    "AirP": nums[0], "p": nums[1],
+                                    "Sbe83T": nums[2], "Phase": nums[3],
+                                    "FSig[0]": nums[4], "FSig[1]": nums[5],
+                                    "BbSig": nums[6], "TSig": nums[7]
+                                }
+                            case _:
+                                logger("Unknown in-air calibration data format")
 
                     case _:
-                        logger(f'Unknown calibrate type "{cal_type}"')
+                        logger(f'Unknown in-air calibrate type "{cal_type}"')
 
                 if "AirCal" in out:
                     out["AirCal"].append(air_cal)
@@ -1797,6 +1815,14 @@ def log_tokenizer(
                 cuts.append(len(out))
             prev_mtime = cur_mtime
 
+            out.append(entry)
+
+        elif (rx_match := log_rx2.match(line)):
+            entry = {
+                "datetime": decode_time(rx_match[1], fill_NaT),
+                "call": rx_match[2],
+                "message": rx_match[3]
+            }
             out.append(entry)
 
         elif line.strip() == "<EOT>":
