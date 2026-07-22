@@ -46,6 +46,9 @@ profile_terminated_rx = re.compile(r"\$ Profile ([0-9]+)\.([0-9]+) terminated: .
 # regex for detecting the start of discrete samples
 discrete_sample_rx = re.compile(r"\$ Discrete samples: ([0-9]+)")
 
+# regex for empty discrete profile
+discrete_empty_rx = re.compile(r"# Empty.*? profile.")
+
 # regex for detecting the start of continuous samples
 cont_header_rx = re.compile(r"#\s+" + mmmdy_hms + r"\s+\w+SerNo\[([0-9]+)\]\s+NSample\[([0-9]+)\]\s+NBin\[([0-9]+)\]")
 
@@ -66,6 +69,8 @@ parkpt_rx = re.compile(r"ParkPt:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+([\S]+)\s+(
 
 # regex for parked PT, Flbb sample
 parkptflbb_rx = re.compile(r"ParkPtFlbb:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+
+parkpt_empty_rx = re.compile(r": Empty set of park-level.*? samples")
 
 # regex for Optode air-calibration data
 air_cal_rx = re.compile(r"^\s*(\w+)AirCal:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
@@ -1501,10 +1506,13 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
 
                     # reading header of discrete samples
                     line = next(lines_iter).rstrip()
-                    headers = line.split()[1:]
+                    if line.startswith("$"):
+                        headers = line.split()[1:]
+                        line = next(lines_iter).rstrip()
+                    else:
+                        headers = []
 
                     # reading discrete samples
-                    line = next(lines_iter).rstrip()
                     while line.startswith("  "):
                         n = len(headers)
                         values = line.split(maxsplit=n)
@@ -1517,11 +1525,12 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                             data.append(entry)
                         line = next(lines_iter).rstrip()
 
-                    # pack the results
-                    discrete["headers"] = headers
-                    discrete["park_data"] = park_data
-                    discrete["data"] = data
-                    out["discrete_samples"] = discrete
+                    if park_data or data:
+                        # pack the results
+                        discrete["headers"] = headers
+                        discrete["park_data"] = park_data
+                        discrete["data"] = data
+                        out["discrete_samples"] = discrete
 
                     # rewind one element
                     lines_iter = itertools.chain([line], lines_iter)
@@ -1596,6 +1605,9 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 # Skip error message regarding GPS fix
                 elif line.startswith("# Attempt to get GPS fix failed"):
                     pass
+
+                elif discrete_empty_rx.match(line.strip()):
+                    pass # OK to skip line
 
                 else:
                     logger('Not decoded: "' + line + '"')
@@ -1730,9 +1742,10 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                 else:
                     out["AirCal"] = [ air_cal ]
 
-
-
             elif line.strip() == "":
+                pass # OK to skip line
+                
+            elif parkpt_empty_rx.search(line.strip()):
                 pass # OK to skip line
 
             else:

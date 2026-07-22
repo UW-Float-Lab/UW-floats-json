@@ -1,0 +1,4449 @@
+{
+  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
+  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
+  "DECODER_VERSION": "0.5.4",
+  "SCHEMA_VERSION": "0.4.0",
+  "INTERNAL_ID_NUMBER": 23050,
+  "TRANSMISSION_ID_NUMBER": 23050,
+  "AOML_ID_NUMBER": 10462,
+  "WMO_ID_NUMBER": 3902729,
+  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "OPERATING_INSTITUTION": "UW, Seattle, WA",
+  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PI": "Steven RISER",
+  "PROJECT_NAME": "Argo UW",
+  "CYCLE_NUMBER": 1,
+  "POSITIONING_SYSTEM": "GPS",
+  "Timestamps": {
+    "StartDescent": "2026-02-07T12:54:15Z",
+    "StartPark": "2026-02-07T16:54:15Z",
+    "StartProfileDescent": "2026-02-07T17:00:18Z",
+    "StartProfile": "2026-02-07T20:59:14Z",
+    "StopProfile": "2026-02-08T02:38:26Z",
+    "StartTelemetry": "2026-02-08T02:40:48Z"
+  },
+  "GPS": [
+    {
+      "description": "GPS_FIX",
+      "TIME": "2026-02-08T02:53:30Z",
+      "LATITUDE": -50.0189,
+      "LONGITUDE": 102.265,
+      "sat_cnt": 7,
+      "time_to_fix": 157
+    }
+  ],
+  "Iridium": [
+    {
+      "LATITUDE": -49.998,
+      "LONGITUDE": 102.262,
+      "TIME": "2015-05-04T09:01:41Z",
+      "x": -872.0,
+      "y": 4012.0,
+      "z": -4860.0,
+      "system_time": 343465183
+    }
+  ],
+  "Fall": [
+    {
+      "TIME": "2026-02-07T13:09:18Z",
+      "PRES": 48.3,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2026-02-07T13:54:14Z",
+      "PRES": 441.3,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2026-02-07T14:54:14Z",
+      "PRES": 812.8,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2026-02-07T15:54:14Z",
+      "PRES": 990.2,
+      "description": "Descent"
+    },
+    {
+      "TIME": "2026-02-07T16:54:14Z",
+      "PRES": 1025.9,
+      "description": "Descent"
+    }
+  ],
+  "Drift": [
+    {
+      "TIME": "2026-02-07T16:54:18Z",
+      "PRES": 1025.9
+    }
+  ],
+  "Rise": [
+    {
+      "TIME": "2026-02-07T20:59:14Z",
+      "PRES": 1915.6,
+      "description": "Profile Init"
+    },
+    {
+      "TIME": "2026-02-07T21:03:05Z",
+      "PRES": 1900.1,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T21:10:03Z",
+      "PRES": 1850.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T21:17:35Z",
+      "PRES": 1801.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T21:25:41Z",
+      "PRES": 1750.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T21:34:19Z",
+      "PRES": 1700.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T21:43:53Z",
+      "PRES": 1651.0,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T21:54:02Z",
+      "PRES": 1599.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:01:46Z",
+      "PRES": 1550.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:10:24Z",
+      "PRES": 1500.6,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:20:09Z",
+      "PRES": 1450.9,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:28:38Z",
+      "PRES": 1400.1,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:37:28Z",
+      "PRES": 1350.5,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:47:54Z",
+      "PRES": 1300.7,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T22:55:41Z",
+      "PRES": 1250.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T23:03:36Z",
+      "PRES": 1200.4,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T23:11:52Z",
+      "PRES": 1150.3,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T23:20:53Z",
+      "PRES": 1100.2,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T23:31:10Z",
+      "PRES": 1050.8,
+      "description": "Profile"
+    },
+    {
+      "TIME": "2026-02-07T23:40:00Z",
+      "PRES": 1000.5,
+      "description": "Profile"
+    }
+  ],
+  "Piston": [
+    {
+      "TIME": "2026-02-07T12:54:27Z",
+      "piston_start": 231,
+      "piston_target": 60,
+      "piston_end": 60,
+      "current": 0.137,
+      "voltage": 14.6,
+      "duration": 887
+    },
+    {
+      "TIME": "2026-02-07T17:00:18Z",
+      "piston_start": 60,
+      "piston_target": 12,
+      "piston_end": 12,
+      "current": 0.056,
+      "voltage": 14.9,
+      "duration": 240
+    },
+    {
+      "TIME": "2026-02-07T20:59:16Z",
+      "piston_start": 12,
+      "piston_target": 34,
+      "piston_end": 17,
+      "current": 0.611,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T20:59:57Z",
+      "piston_start": 17,
+      "piston_target": 34,
+      "piston_end": 22,
+      "current": 0.601,
+      "voltage": 14.2,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T21:00:39Z",
+      "piston_start": 22,
+      "piston_target": 34,
+      "piston_end": 27,
+      "current": 0.591,
+      "voltage": 14.1,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T21:01:21Z",
+      "piston_start": 27,
+      "piston_target": 34,
+      "piston_end": 32,
+      "current": 0.589,
+      "voltage": 14.0,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T21:02:03Z",
+      "piston_start": 32,
+      "piston_target": 34,
+      "piston_end": 34,
+      "current": 0.605,
+      "voltage": 14.1,
+      "duration": 6
+    },
+    {
+      "TIME": "2026-02-07T21:50:20Z",
+      "piston_start": 34,
+      "piston_target": 44,
+      "piston_end": 39,
+      "current": 0.538,
+      "voltage": 14.4,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T21:51:01Z",
+      "piston_start": 39,
+      "piston_target": 44,
+      "piston_end": 44,
+      "current": 0.532,
+      "voltage": 14.2,
+      "duration": 27
+    },
+    {
+      "TIME": "2026-02-07T22:21:05Z",
+      "piston_start": 44,
+      "piston_target": 54,
+      "piston_end": 49,
+      "current": 0.497,
+      "voltage": 14.4,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T22:21:46Z",
+      "piston_start": 49,
+      "piston_target": 54,
+      "piston_end": 54,
+      "current": 0.492,
+      "voltage": 14.3,
+      "duration": 25
+    },
+    {
+      "TIME": "2026-02-07T22:22:22Z",
+      "piston_start": 53,
+      "piston_target": 54,
+      "piston_end": 54,
+      "current": 0.497,
+      "voltage": 14.3,
+      "duration": 1
+    },
+    {
+      "TIME": "2026-02-07T22:46:51Z",
+      "piston_start": 54,
+      "piston_target": 64,
+      "piston_end": 59,
+      "current": 0.465,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T22:47:54Z",
+      "piston_start": 59,
+      "piston_target": 64,
+      "piston_end": 64,
+      "current": 0.464,
+      "voltage": 14.3,
+      "duration": 26
+    },
+    {
+      "TIME": "2026-02-07T23:28:04Z",
+      "piston_start": 64,
+      "piston_target": 74,
+      "piston_end": 69,
+      "current": 0.409,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T23:28:45Z",
+      "piston_start": 69,
+      "piston_target": 74,
+      "piston_end": 74,
+      "current": 0.419,
+      "voltage": 14.4,
+      "duration": 24
+    },
+    {
+      "TIME": "2026-02-07T23:49:06Z",
+      "piston_start": 74,
+      "piston_target": 84,
+      "piston_end": 79,
+      "current": 0.378,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-07T23:49:47Z",
+      "piston_start": 79,
+      "piston_target": 84,
+      "piston_end": 84,
+      "current": 0.376,
+      "voltage": 14.3,
+      "duration": 26
+    },
+    {
+      "TIME": "2026-02-08T00:20:22Z",
+      "piston_start": 84,
+      "piston_target": 94,
+      "piston_end": 89,
+      "current": 0.342,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-08T00:21:03Z",
+      "piston_start": 89,
+      "piston_target": 94,
+      "piston_end": 94,
+      "current": 0.335,
+      "voltage": 14.4,
+      "duration": 26
+    },
+    {
+      "TIME": "2026-02-08T00:46:34Z",
+      "piston_start": 94,
+      "piston_target": 104,
+      "piston_end": 99,
+      "current": 0.31,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-08T00:47:15Z",
+      "piston_start": 99,
+      "piston_target": 104,
+      "piston_end": 104,
+      "current": 0.303,
+      "voltage": 14.4,
+      "duration": 24
+    },
+    {
+      "TIME": "2026-02-08T01:07:45Z",
+      "piston_start": 104,
+      "piston_target": 114,
+      "piston_end": 109,
+      "current": 0.282,
+      "voltage": 14.5,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-08T01:08:26Z",
+      "piston_start": 109,
+      "piston_target": 114,
+      "piston_end": 114,
+      "current": 0.283,
+      "voltage": 14.5,
+      "duration": 24
+    },
+    {
+      "TIME": "2026-02-08T01:43:58Z",
+      "piston_start": 114,
+      "piston_target": 124,
+      "piston_end": 119,
+      "current": 0.232,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-08T01:44:38Z",
+      "piston_start": 119,
+      "piston_target": 124,
+      "piston_end": 124,
+      "current": 0.23,
+      "voltage": 14.5,
+      "duration": 24
+    },
+    {
+      "TIME": "2026-02-08T02:10:07Z",
+      "piston_start": 124,
+      "piston_target": 134,
+      "piston_end": 129,
+      "current": 0.196,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-08T02:10:47Z",
+      "piston_start": 129,
+      "piston_target": 134,
+      "piston_end": 134,
+      "current": 0.199,
+      "voltage": 14.6,
+      "duration": 22
+    },
+    {
+      "TIME": "2026-02-08T02:21:12Z",
+      "piston_start": 134,
+      "piston_target": 144,
+      "piston_end": 139,
+      "current": 0.184,
+      "voltage": 14.6,
+      "duration": 30
+    },
+    {
+      "TIME": "2026-02-08T02:21:52Z",
+      "piston_start": 139,
+      "piston_target": 144,
+      "piston_end": 144,
+      "current": 0.187,
+      "voltage": 14.6,
+      "duration": 23
+    },
+    {
+      "TIME": "2026-02-08T02:36:33Z",
+      "piston_start": 144,
+      "piston_target": 166,
+      "piston_end": 166,
+      "current": 0.158,
+      "voltage": 14.6,
+      "duration": 113
+    }
+  ],
+  "CTD_Discrete": [
+    {
+      "PRES": 1026.09,
+      "TEMP": 2.5888,
+      "PSAL": 34.5334
+    },
+    {
+      "PRES": 1897.51,
+      "TEMP": 2.0189,
+      "PSAL": 34.7442
+    },
+    {
+      "PRES": 1848.39,
+      "TEMP": 2.0766,
+      "PSAL": 34.7425
+    },
+    {
+      "PRES": 1798.78,
+      "TEMP": 2.1211,
+      "PSAL": 34.7398
+    },
+    {
+      "PRES": 1748.58,
+      "TEMP": 2.1525,
+      "PSAL": 34.7357
+    },
+    {
+      "PRES": 1698.73,
+      "TEMP": 2.1948,
+      "PSAL": 34.7322
+    },
+    {
+      "PRES": 1649.34,
+      "TEMP": 2.2382,
+      "PSAL": 34.727
+    },
+    {
+      "PRES": 1597.6,
+      "TEMP": 2.2446,
+      "PSAL": 34.715
+    },
+    {
+      "PRES": 1548.42,
+      "TEMP": 2.3273,
+      "PSAL": 34.7129
+    },
+    {
+      "PRES": 1498.76,
+      "TEMP": 2.3425,
+      "PSAL": 34.703
+    },
+    {
+      "PRES": 1449.35,
+      "TEMP": 2.3697,
+      "PSAL": 34.6929
+    },
+    {
+      "PRES": 1398.02,
+      "TEMP": 2.3986,
+      "PSAL": 34.6817
+    },
+    {
+      "PRES": 1348.73,
+      "TEMP": 2.4409,
+      "PSAL": 34.6692
+    },
+    {
+      "PRES": 1298.68,
+      "TEMP": 2.4741,
+      "PSAL": 34.6513
+    },
+    {
+      "PRES": 1248.13,
+      "TEMP": 2.4864,
+      "PSAL": 34.631
+    },
+    {
+      "PRES": 1198.28,
+      "TEMP": 2.535,
+      "PSAL": 34.6136
+    },
+    {
+      "PRES": 1148.27,
+      "TEMP": 2.577,
+      "PSAL": 34.6012
+    },
+    {
+      "PRES": 1098.48,
+      "TEMP": 2.5608,
+      "PSAL": 34.5788
+    },
+    {
+      "PRES": 1048.62,
+      "TEMP": 2.6312,
+      "PSAL": 34.5574
+    },
+    {
+      "PRES": 998.78,
+      "TEMP": 2.6493,
+      "PSAL": 34.5212
+    }
+  ],
+  "CTD_Binned": [
+    {
+      "PRES": 977.6,
+      "TEMP": 2.656,
+      "PSAL": 34.506,
+      "n_samp": 16
+    },
+    {
+      "PRES": 976.0,
+      "TEMP": 2.659,
+      "PSAL": 34.506,
+      "n_samp": 25
+    },
+    {
+      "PRES": 974.0,
+      "TEMP": 2.676,
+      "PSAL": 34.506,
+      "n_samp": 25
+    },
+    {
+      "PRES": 972.0,
+      "TEMP": 2.669,
+      "PSAL": 34.501,
+      "n_samp": 27
+    },
+    {
+      "PRES": 970.0,
+      "TEMP": 2.673,
+      "PSAL": 34.5,
+      "n_samp": 26
+    },
+    {
+      "PRES": 968.0,
+      "TEMP": 2.669,
+      "PSAL": 34.499,
+      "n_samp": 26
+    },
+    {
+      "PRES": 966.0,
+      "TEMP": 2.672,
+      "PSAL": 34.498,
+      "n_samp": 27
+    },
+    {
+      "PRES": 964.0,
+      "TEMP": 2.678,
+      "PSAL": 34.498,
+      "n_samp": 26
+    },
+    {
+      "PRES": 962.0,
+      "TEMP": 2.68,
+      "PSAL": 34.497,
+      "n_samp": 27
+    },
+    {
+      "PRES": 960.0,
+      "TEMP": 2.689,
+      "PSAL": 34.497,
+      "n_samp": 27
+    },
+    {
+      "PRES": 958.0,
+      "TEMP": 2.701,
+      "PSAL": 34.496,
+      "n_samp": 27
+    },
+    {
+      "PRES": 956.0,
+      "TEMP": 2.703,
+      "PSAL": 34.496,
+      "n_samp": 27
+    },
+    {
+      "PRES": 954.0,
+      "TEMP": 2.707,
+      "PSAL": 34.496,
+      "n_samp": 27
+    },
+    {
+      "PRES": 952.0,
+      "TEMP": 2.703,
+      "PSAL": 34.493,
+      "n_samp": 22
+    },
+    {
+      "PRES": 950.0,
+      "TEMP": 2.695,
+      "PSAL": 34.491,
+      "n_samp": 21
+    },
+    {
+      "PRES": 948.0,
+      "TEMP": 2.701,
+      "PSAL": 34.49,
+      "n_samp": 18
+    },
+    {
+      "PRES": 946.0,
+      "TEMP": 2.714,
+      "PSAL": 34.49,
+      "n_samp": 18
+    },
+    {
+      "PRES": 944.0,
+      "TEMP": 2.718,
+      "PSAL": 34.49,
+      "n_samp": 18
+    },
+    {
+      "PRES": 942.0,
+      "TEMP": 2.724,
+      "PSAL": 34.489,
+      "n_samp": 17
+    },
+    {
+      "PRES": 940.0,
+      "TEMP": 2.726,
+      "PSAL": 34.487,
+      "n_samp": 18
+    },
+    {
+      "PRES": 938.0,
+      "TEMP": 2.724,
+      "PSAL": 34.485,
+      "n_samp": 18
+    },
+    {
+      "PRES": 936.0,
+      "TEMP": 2.724,
+      "PSAL": 34.483,
+      "n_samp": 18
+    },
+    {
+      "PRES": 934.0,
+      "TEMP": 2.72,
+      "PSAL": 34.482,
+      "n_samp": 18
+    },
+    {
+      "PRES": 932.0,
+      "TEMP": 2.731,
+      "PSAL": 34.48,
+      "n_samp": 18
+    },
+    {
+      "PRES": 930.0,
+      "TEMP": 2.734,
+      "PSAL": 34.479,
+      "n_samp": 18
+    },
+    {
+      "PRES": 928.0,
+      "TEMP": 2.737,
+      "PSAL": 34.479,
+      "n_samp": 18
+    },
+    {
+      "PRES": 926.0,
+      "TEMP": 2.741,
+      "PSAL": 34.479,
+      "n_samp": 18
+    },
+    {
+      "PRES": 924.0,
+      "TEMP": 2.741,
+      "PSAL": 34.478,
+      "n_samp": 18
+    },
+    {
+      "PRES": 922.0,
+      "TEMP": 2.744,
+      "PSAL": 34.478,
+      "n_samp": 19
+    },
+    {
+      "PRES": 920.0,
+      "TEMP": 2.748,
+      "PSAL": 34.476,
+      "n_samp": 18
+    },
+    {
+      "PRES": 918.0,
+      "TEMP": 2.756,
+      "PSAL": 34.475,
+      "n_samp": 18
+    },
+    {
+      "PRES": 916.0,
+      "TEMP": 2.76,
+      "PSAL": 34.474,
+      "n_samp": 18
+    },
+    {
+      "PRES": 914.0,
+      "TEMP": 2.77,
+      "PSAL": 34.471,
+      "n_samp": 19
+    },
+    {
+      "PRES": 912.0,
+      "TEMP": 2.763,
+      "PSAL": 34.469,
+      "n_samp": 19
+    },
+    {
+      "PRES": 910.0,
+      "TEMP": 2.765,
+      "PSAL": 34.469,
+      "n_samp": 18
+    },
+    {
+      "PRES": 908.0,
+      "TEMP": 2.764,
+      "PSAL": 34.468,
+      "n_samp": 18
+    },
+    {
+      "PRES": 906.0,
+      "TEMP": 2.765,
+      "PSAL": 34.467,
+      "n_samp": 19
+    },
+    {
+      "PRES": 904.0,
+      "TEMP": 2.765,
+      "PSAL": 34.467,
+      "n_samp": 18
+    },
+    {
+      "PRES": 902.0,
+      "TEMP": 2.768,
+      "PSAL": 34.467,
+      "n_samp": 19
+    },
+    {
+      "PRES": 900.0,
+      "TEMP": 2.769,
+      "PSAL": 34.465,
+      "n_samp": 19
+    },
+    {
+      "PRES": 898.0,
+      "TEMP": 2.767,
+      "PSAL": 34.464,
+      "n_samp": 18
+    },
+    {
+      "PRES": 896.0,
+      "TEMP": 2.769,
+      "PSAL": 34.463,
+      "n_samp": 19
+    },
+    {
+      "PRES": 894.0,
+      "TEMP": 2.767,
+      "PSAL": 34.462,
+      "n_samp": 19
+    },
+    {
+      "PRES": 892.0,
+      "TEMP": 2.771,
+      "PSAL": 34.461,
+      "n_samp": 19
+    },
+    {
+      "PRES": 890.0,
+      "TEMP": 2.773,
+      "PSAL": 34.461,
+      "n_samp": 18
+    },
+    {
+      "PRES": 888.0,
+      "TEMP": 2.774,
+      "PSAL": 34.46,
+      "n_samp": 19
+    },
+    {
+      "PRES": 886.0,
+      "TEMP": 2.774,
+      "PSAL": 34.46,
+      "n_samp": 18
+    },
+    {
+      "PRES": 884.0,
+      "TEMP": 2.773,
+      "PSAL": 34.46,
+      "n_samp": 19
+    },
+    {
+      "PRES": 882.0,
+      "TEMP": 2.772,
+      "PSAL": 34.459,
+      "n_samp": 18
+    },
+    {
+      "PRES": 880.0,
+      "TEMP": 2.772,
+      "PSAL": 34.458,
+      "n_samp": 19
+    },
+    {
+      "PRES": 878.0,
+      "TEMP": 2.773,
+      "PSAL": 34.457,
+      "n_samp": 18
+    },
+    {
+      "PRES": 876.0,
+      "TEMP": 2.773,
+      "PSAL": 34.457,
+      "n_samp": 18
+    },
+    {
+      "PRES": 874.0,
+      "TEMP": 2.775,
+      "PSAL": 34.457,
+      "n_samp": 19
+    },
+    {
+      "PRES": 872.0,
+      "TEMP": 2.78,
+      "PSAL": 34.456,
+      "n_samp": 18
+    },
+    {
+      "PRES": 870.0,
+      "TEMP": 2.783,
+      "PSAL": 34.456,
+      "n_samp": 19
+    },
+    {
+      "PRES": 868.0,
+      "TEMP": 2.788,
+      "PSAL": 34.456,
+      "n_samp": 18
+    },
+    {
+      "PRES": 866.0,
+      "TEMP": 2.797,
+      "PSAL": 34.456,
+      "n_samp": 19
+    },
+    {
+      "PRES": 864.0,
+      "TEMP": 2.826,
+      "PSAL": 34.457,
+      "n_samp": 19
+    },
+    {
+      "PRES": 862.0,
+      "TEMP": 2.84,
+      "PSAL": 34.458,
+      "n_samp": 19
+    },
+    {
+      "PRES": 860.0,
+      "TEMP": 2.842,
+      "PSAL": 34.457,
+      "n_samp": 19
+    },
+    {
+      "PRES": 858.0,
+      "TEMP": 2.837,
+      "PSAL": 34.456,
+      "n_samp": 19
+    },
+    {
+      "PRES": 856.0,
+      "TEMP": 2.835,
+      "PSAL": 34.455,
+      "n_samp": 19
+    },
+    {
+      "PRES": 854.0,
+      "TEMP": 2.833,
+      "PSAL": 34.452,
+      "n_samp": 19
+    },
+    {
+      "PRES": 852.0,
+      "TEMP": 2.84,
+      "PSAL": 34.451,
+      "n_samp": 19
+    },
+    {
+      "PRES": 850.0,
+      "TEMP": 2.832,
+      "PSAL": 34.447,
+      "n_samp": 20
+    },
+    {
+      "PRES": 848.0,
+      "TEMP": 2.826,
+      "PSAL": 34.445,
+      "n_samp": 19
+    },
+    {
+      "PRES": 846.0,
+      "TEMP": 2.827,
+      "PSAL": 34.444,
+      "n_samp": 20
+    },
+    {
+      "PRES": 844.0,
+      "TEMP": 2.831,
+      "PSAL": 34.443,
+      "n_samp": 19
+    },
+    {
+      "PRES": 842.0,
+      "TEMP": 2.836,
+      "PSAL": 34.441,
+      "n_samp": 20
+    },
+    {
+      "PRES": 840.0,
+      "TEMP": 2.844,
+      "PSAL": 34.44,
+      "n_samp": 20
+    },
+    {
+      "PRES": 838.0,
+      "TEMP": 2.844,
+      "PSAL": 34.439,
+      "n_samp": 20
+    },
+    {
+      "PRES": 836.0,
+      "TEMP": 2.844,
+      "PSAL": 34.439,
+      "n_samp": 20
+    },
+    {
+      "PRES": 834.0,
+      "TEMP": 2.848,
+      "PSAL": 34.439,
+      "n_samp": 20
+    },
+    {
+      "PRES": 832.0,
+      "TEMP": 2.851,
+      "PSAL": 34.438,
+      "n_samp": 20
+    },
+    {
+      "PRES": 830.0,
+      "TEMP": 2.861,
+      "PSAL": 34.438,
+      "n_samp": 21
+    },
+    {
+      "PRES": 828.0,
+      "TEMP": 2.872,
+      "PSAL": 34.437,
+      "n_samp": 20
+    },
+    {
+      "PRES": 826.0,
+      "TEMP": 2.874,
+      "PSAL": 34.437,
+      "n_samp": 21
+    },
+    {
+      "PRES": 824.0,
+      "TEMP": 2.876,
+      "PSAL": 34.436,
+      "n_samp": 21
+    },
+    {
+      "PRES": 822.0,
+      "TEMP": 2.88,
+      "PSAL": 34.435,
+      "n_samp": 21
+    },
+    {
+      "PRES": 820.0,
+      "TEMP": 2.89,
+      "PSAL": 34.433,
+      "n_samp": 21
+    },
+    {
+      "PRES": 818.0,
+      "TEMP": 2.896,
+      "PSAL": 34.432,
+      "n_samp": 22
+    },
+    {
+      "PRES": 816.0,
+      "TEMP": 2.898,
+      "PSAL": 34.432,
+      "n_samp": 21
+    },
+    {
+      "PRES": 814.0,
+      "TEMP": 2.9,
+      "PSAL": 34.431,
+      "n_samp": 22
+    },
+    {
+      "PRES": 812.0,
+      "TEMP": 2.903,
+      "PSAL": 34.431,
+      "n_samp": 22
+    },
+    {
+      "PRES": 810.0,
+      "TEMP": 2.903,
+      "PSAL": 34.431,
+      "n_samp": 23
+    },
+    {
+      "PRES": 808.0,
+      "TEMP": 2.905,
+      "PSAL": 34.43,
+      "n_samp": 22
+    },
+    {
+      "PRES": 806.0,
+      "TEMP": 2.907,
+      "PSAL": 34.429,
+      "n_samp": 23
+    },
+    {
+      "PRES": 804.0,
+      "TEMP": 2.908,
+      "PSAL": 34.428,
+      "n_samp": 22
+    },
+    {
+      "PRES": 802.0,
+      "TEMP": 2.912,
+      "PSAL": 34.427,
+      "n_samp": 23
+    },
+    {
+      "PRES": 800.0,
+      "TEMP": 2.913,
+      "PSAL": 34.427,
+      "n_samp": 23
+    },
+    {
+      "PRES": 798.0,
+      "TEMP": 2.916,
+      "PSAL": 34.426,
+      "n_samp": 24
+    },
+    {
+      "PRES": 796.0,
+      "TEMP": 2.918,
+      "PSAL": 34.426,
+      "n_samp": 23
+    },
+    {
+      "PRES": 794.0,
+      "TEMP": 2.922,
+      "PSAL": 34.425,
+      "n_samp": 24
+    },
+    {
+      "PRES": 792.0,
+      "TEMP": 2.922,
+      "PSAL": 34.424,
+      "n_samp": 24
+    },
+    {
+      "PRES": 790.0,
+      "TEMP": 2.92,
+      "PSAL": 34.423,
+      "n_samp": 24
+    },
+    {
+      "PRES": 788.0,
+      "TEMP": 2.915,
+      "PSAL": 34.421,
+      "n_samp": 25
+    },
+    {
+      "PRES": 786.0,
+      "TEMP": 2.913,
+      "PSAL": 34.419,
+      "n_samp": 25
+    },
+    {
+      "PRES": 784.0,
+      "TEMP": 2.918,
+      "PSAL": 34.418,
+      "n_samp": 26
+    },
+    {
+      "PRES": 782.0,
+      "TEMP": 2.926,
+      "PSAL": 34.415,
+      "n_samp": 26
+    },
+    {
+      "PRES": 780.0,
+      "TEMP": 2.928,
+      "PSAL": 34.411,
+      "n_samp": 26
+    },
+    {
+      "PRES": 778.0,
+      "TEMP": 2.931,
+      "PSAL": 34.407,
+      "n_samp": 27
+    },
+    {
+      "PRES": 776.0,
+      "TEMP": 2.931,
+      "PSAL": 34.406,
+      "n_samp": 28
+    },
+    {
+      "PRES": 774.0,
+      "TEMP": 2.938,
+      "PSAL": 34.405,
+      "n_samp": 28
+    },
+    {
+      "PRES": 772.0,
+      "TEMP": 2.942,
+      "PSAL": 34.404,
+      "n_samp": 27
+    },
+    {
+      "PRES": 770.0,
+      "TEMP": 2.94,
+      "PSAL": 34.403,
+      "n_samp": 27
+    },
+    {
+      "PRES": 768.0,
+      "TEMP": 2.947,
+      "PSAL": 34.403,
+      "n_samp": 24
+    },
+    {
+      "PRES": 766.0,
+      "TEMP": 2.951,
+      "PSAL": 34.401,
+      "n_samp": 21
+    },
+    {
+      "PRES": 764.0,
+      "TEMP": 2.948,
+      "PSAL": 34.399,
+      "n_samp": 18
+    },
+    {
+      "PRES": 762.0,
+      "TEMP": 2.949,
+      "PSAL": 34.397,
+      "n_samp": 18
+    },
+    {
+      "PRES": 760.0,
+      "TEMP": 2.949,
+      "PSAL": 34.397,
+      "n_samp": 18
+    },
+    {
+      "PRES": 758.0,
+      "TEMP": 2.955,
+      "PSAL": 34.397,
+      "n_samp": 17
+    },
+    {
+      "PRES": 756.0,
+      "TEMP": 2.959,
+      "PSAL": 34.395,
+      "n_samp": 18
+    },
+    {
+      "PRES": 754.0,
+      "TEMP": 2.96,
+      "PSAL": 34.392,
+      "n_samp": 18
+    },
+    {
+      "PRES": 752.0,
+      "TEMP": 2.963,
+      "PSAL": 34.39,
+      "n_samp": 18
+    },
+    {
+      "PRES": 750.0,
+      "TEMP": 2.964,
+      "PSAL": 34.387,
+      "n_samp": 18
+    },
+    {
+      "PRES": 748.0,
+      "TEMP": 2.969,
+      "PSAL": 34.386,
+      "n_samp": 19
+    },
+    {
+      "PRES": 746.0,
+      "TEMP": 2.973,
+      "PSAL": 34.384,
+      "n_samp": 18
+    },
+    {
+      "PRES": 744.0,
+      "TEMP": 2.975,
+      "PSAL": 34.383,
+      "n_samp": 18
+    },
+    {
+      "PRES": 742.0,
+      "TEMP": 2.98,
+      "PSAL": 34.382,
+      "n_samp": 19
+    },
+    {
+      "PRES": 740.0,
+      "TEMP": 2.987,
+      "PSAL": 34.382,
+      "n_samp": 19
+    },
+    {
+      "PRES": 738.0,
+      "TEMP": 2.988,
+      "PSAL": 34.38,
+      "n_samp": 18
+    },
+    {
+      "PRES": 736.0,
+      "TEMP": 2.988,
+      "PSAL": 34.38,
+      "n_samp": 18
+    },
+    {
+      "PRES": 734.0,
+      "TEMP": 2.991,
+      "PSAL": 34.38,
+      "n_samp": 19
+    },
+    {
+      "PRES": 732.0,
+      "TEMP": 2.998,
+      "PSAL": 34.377,
+      "n_samp": 19
+    },
+    {
+      "PRES": 730.0,
+      "TEMP": 2.995,
+      "PSAL": 34.375,
+      "n_samp": 18
+    },
+    {
+      "PRES": 728.0,
+      "TEMP": 2.995,
+      "PSAL": 34.373,
+      "n_samp": 19
+    },
+    {
+      "PRES": 726.0,
+      "TEMP": 3.003,
+      "PSAL": 34.372,
+      "n_samp": 19
+    },
+    {
+      "PRES": 724.0,
+      "TEMP": 3.013,
+      "PSAL": 34.372,
+      "n_samp": 19
+    },
+    {
+      "PRES": 722.0,
+      "TEMP": 3.026,
+      "PSAL": 34.37,
+      "n_samp": 19
+    },
+    {
+      "PRES": 720.0,
+      "TEMP": 3.032,
+      "PSAL": 34.369,
+      "n_samp": 19
+    },
+    {
+      "PRES": 718.0,
+      "TEMP": 3.04,
+      "PSAL": 34.367,
+      "n_samp": 20
+    },
+    {
+      "PRES": 715.9,
+      "TEMP": 3.042,
+      "PSAL": 34.366,
+      "n_samp": 20
+    },
+    {
+      "PRES": 714.0,
+      "TEMP": 3.044,
+      "PSAL": 34.366,
+      "n_samp": 19
+    },
+    {
+      "PRES": 712.0,
+      "TEMP": 3.045,
+      "PSAL": 34.366,
+      "n_samp": 20
+    },
+    {
+      "PRES": 710.0,
+      "TEMP": 3.047,
+      "PSAL": 34.366,
+      "n_samp": 20
+    },
+    {
+      "PRES": 708.0,
+      "TEMP": 3.051,
+      "PSAL": 34.365,
+      "n_samp": 21
+    },
+    {
+      "PRES": 706.0,
+      "TEMP": 3.053,
+      "PSAL": 34.365,
+      "n_samp": 20
+    },
+    {
+      "PRES": 704.0,
+      "TEMP": 3.064,
+      "PSAL": 34.364,
+      "n_samp": 20
+    },
+    {
+      "PRES": 702.0,
+      "TEMP": 3.071,
+      "PSAL": 34.363,
+      "n_samp": 20
+    },
+    {
+      "PRES": 700.0,
+      "TEMP": 3.071,
+      "PSAL": 34.362,
+      "n_samp": 21
+    },
+    {
+      "PRES": 698.0,
+      "TEMP": 3.079,
+      "PSAL": 34.362,
+      "n_samp": 21
+    },
+    {
+      "PRES": 696.0,
+      "TEMP": 3.09,
+      "PSAL": 34.361,
+      "n_samp": 21
+    },
+    {
+      "PRES": 694.0,
+      "TEMP": 3.095,
+      "PSAL": 34.36,
+      "n_samp": 21
+    },
+    {
+      "PRES": 692.0,
+      "TEMP": 3.1,
+      "PSAL": 34.36,
+      "n_samp": 20
+    },
+    {
+      "PRES": 690.0,
+      "TEMP": 3.105,
+      "PSAL": 34.36,
+      "n_samp": 21
+    },
+    {
+      "PRES": 688.0,
+      "TEMP": 3.113,
+      "PSAL": 34.359,
+      "n_samp": 22
+    },
+    {
+      "PRES": 686.0,
+      "TEMP": 3.121,
+      "PSAL": 34.358,
+      "n_samp": 21
+    },
+    {
+      "PRES": 684.0,
+      "TEMP": 3.129,
+      "PSAL": 34.357,
+      "n_samp": 21
+    },
+    {
+      "PRES": 682.0,
+      "TEMP": 3.135,
+      "PSAL": 34.357,
+      "n_samp": 22
+    },
+    {
+      "PRES": 680.0,
+      "TEMP": 3.139,
+      "PSAL": 34.356,
+      "n_samp": 21
+    },
+    {
+      "PRES": 678.0,
+      "TEMP": 3.15,
+      "PSAL": 34.354,
+      "n_samp": 22
+    },
+    {
+      "PRES": 676.0,
+      "TEMP": 3.16,
+      "PSAL": 34.352,
+      "n_samp": 22
+    },
+    {
+      "PRES": 674.0,
+      "TEMP": 3.163,
+      "PSAL": 34.349,
+      "n_samp": 22
+    },
+    {
+      "PRES": 672.0,
+      "TEMP": 3.171,
+      "PSAL": 34.348,
+      "n_samp": 22
+    },
+    {
+      "PRES": 670.0,
+      "TEMP": 3.178,
+      "PSAL": 34.347,
+      "n_samp": 22
+    },
+    {
+      "PRES": 668.0,
+      "TEMP": 3.18,
+      "PSAL": 34.346,
+      "n_samp": 22
+    },
+    {
+      "PRES": 666.0,
+      "TEMP": 3.181,
+      "PSAL": 34.346,
+      "n_samp": 23
+    },
+    {
+      "PRES": 664.0,
+      "TEMP": 3.182,
+      "PSAL": 34.345,
+      "n_samp": 23
+    },
+    {
+      "PRES": 662.0,
+      "TEMP": 3.188,
+      "PSAL": 34.343,
+      "n_samp": 22
+    },
+    {
+      "PRES": 660.0,
+      "TEMP": 3.193,
+      "PSAL": 34.342,
+      "n_samp": 23
+    },
+    {
+      "PRES": 658.0,
+      "TEMP": 3.2,
+      "PSAL": 34.341,
+      "n_samp": 23
+    },
+    {
+      "PRES": 656.0,
+      "TEMP": 3.2,
+      "PSAL": 34.34,
+      "n_samp": 23
+    },
+    {
+      "PRES": 654.0,
+      "TEMP": 3.194,
+      "PSAL": 34.338,
+      "n_samp": 23
+    },
+    {
+      "PRES": 652.0,
+      "TEMP": 3.191,
+      "PSAL": 34.335,
+      "n_samp": 24
+    },
+    {
+      "PRES": 650.0,
+      "TEMP": 3.193,
+      "PSAL": 34.334,
+      "n_samp": 24
+    },
+    {
+      "PRES": 648.0,
+      "TEMP": 3.19,
+      "PSAL": 34.33,
+      "n_samp": 24
+    },
+    {
+      "PRES": 646.0,
+      "TEMP": 3.179,
+      "PSAL": 34.326,
+      "n_samp": 25
+    },
+    {
+      "PRES": 644.0,
+      "TEMP": 3.188,
+      "PSAL": 34.325,
+      "n_samp": 24
+    },
+    {
+      "PRES": 642.0,
+      "TEMP": 3.179,
+      "PSAL": 34.322,
+      "n_samp": 25
+    },
+    {
+      "PRES": 640.0,
+      "TEMP": 3.188,
+      "PSAL": 34.321,
+      "n_samp": 25
+    },
+    {
+      "PRES": 638.0,
+      "TEMP": 3.199,
+      "PSAL": 34.318,
+      "n_samp": 25
+    },
+    {
+      "PRES": 636.0,
+      "TEMP": 3.199,
+      "PSAL": 34.316,
+      "n_samp": 26
+    },
+    {
+      "PRES": 634.0,
+      "TEMP": 3.208,
+      "PSAL": 34.315,
+      "n_samp": 26
+    },
+    {
+      "PRES": 632.0,
+      "TEMP": 3.209,
+      "PSAL": 34.314,
+      "n_samp": 26
+    },
+    {
+      "PRES": 630.0,
+      "TEMP": 3.206,
+      "PSAL": 34.312,
+      "n_samp": 27
+    },
+    {
+      "PRES": 628.0,
+      "TEMP": 3.19,
+      "PSAL": 34.306,
+      "n_samp": 26
+    },
+    {
+      "PRES": 626.0,
+      "TEMP": 3.187,
+      "PSAL": 34.304,
+      "n_samp": 27
+    },
+    {
+      "PRES": 624.0,
+      "TEMP": 3.208,
+      "PSAL": 34.305,
+      "n_samp": 28
+    },
+    {
+      "PRES": 622.0,
+      "TEMP": 3.216,
+      "PSAL": 34.305,
+      "n_samp": 25
+    },
+    {
+      "PRES": 620.0,
+      "TEMP": 3.223,
+      "PSAL": 34.306,
+      "n_samp": 23
+    },
+    {
+      "PRES": 618.0,
+      "TEMP": 3.233,
+      "PSAL": 34.304,
+      "n_samp": 19
+    },
+    {
+      "PRES": 616.0,
+      "TEMP": 3.233,
+      "PSAL": 34.299,
+      "n_samp": 19
+    },
+    {
+      "PRES": 614.0,
+      "TEMP": 3.219,
+      "PSAL": 34.296,
+      "n_samp": 17
+    },
+    {
+      "PRES": 612.0,
+      "TEMP": 3.214,
+      "PSAL": 34.295,
+      "n_samp": 18
+    },
+    {
+      "PRES": 610.0,
+      "TEMP": 3.233,
+      "PSAL": 34.295,
+      "n_samp": 18
+    },
+    {
+      "PRES": 608.0,
+      "TEMP": 3.212,
+      "PSAL": 34.286,
+      "n_samp": 18
+    },
+    {
+      "PRES": 606.0,
+      "TEMP": 3.2,
+      "PSAL": 34.285,
+      "n_samp": 18
+    },
+    {
+      "PRES": 604.0,
+      "TEMP": 3.199,
+      "PSAL": 34.283,
+      "n_samp": 18
+    },
+    {
+      "PRES": 602.0,
+      "TEMP": 3.187,
+      "PSAL": 34.279,
+      "n_samp": 18
+    },
+    {
+      "PRES": 600.0,
+      "TEMP": 3.184,
+      "PSAL": 34.278,
+      "n_samp": 18
+    },
+    {
+      "PRES": 598.0,
+      "TEMP": 3.165,
+      "PSAL": 34.272,
+      "n_samp": 18
+    },
+    {
+      "PRES": 596.0,
+      "TEMP": 3.149,
+      "PSAL": 34.266,
+      "n_samp": 18
+    },
+    {
+      "PRES": 594.0,
+      "TEMP": 3.148,
+      "PSAL": 34.262,
+      "n_samp": 19
+    },
+    {
+      "PRES": 592.0,
+      "TEMP": 3.149,
+      "PSAL": 34.26,
+      "n_samp": 18
+    },
+    {
+      "PRES": 590.0,
+      "TEMP": 3.151,
+      "PSAL": 34.259,
+      "n_samp": 19
+    },
+    {
+      "PRES": 588.0,
+      "TEMP": 3.151,
+      "PSAL": 34.257,
+      "n_samp": 18
+    },
+    {
+      "PRES": 586.0,
+      "TEMP": 3.146,
+      "PSAL": 34.254,
+      "n_samp": 19
+    },
+    {
+      "PRES": 584.0,
+      "TEMP": 3.148,
+      "PSAL": 34.253,
+      "n_samp": 19
+    },
+    {
+      "PRES": 582.0,
+      "TEMP": 3.147,
+      "PSAL": 34.25,
+      "n_samp": 19
+    },
+    {
+      "PRES": 580.0,
+      "TEMP": 3.15,
+      "PSAL": 34.249,
+      "n_samp": 19
+    },
+    {
+      "PRES": 578.0,
+      "TEMP": 3.149,
+      "PSAL": 34.248,
+      "n_samp": 19
+    },
+    {
+      "PRES": 576.0,
+      "TEMP": 3.147,
+      "PSAL": 34.247,
+      "n_samp": 19
+    },
+    {
+      "PRES": 574.0,
+      "TEMP": 3.145,
+      "PSAL": 34.245,
+      "n_samp": 19
+    },
+    {
+      "PRES": 572.0,
+      "TEMP": 3.159,
+      "PSAL": 34.245,
+      "n_samp": 19
+    },
+    {
+      "PRES": 570.0,
+      "TEMP": 3.156,
+      "PSAL": 34.242,
+      "n_samp": 19
+    },
+    {
+      "PRES": 568.0,
+      "TEMP": 3.148,
+      "PSAL": 34.239,
+      "n_samp": 20
+    },
+    {
+      "PRES": 566.0,
+      "TEMP": 3.144,
+      "PSAL": 34.236,
+      "n_samp": 19
+    },
+    {
+      "PRES": 564.0,
+      "TEMP": 3.134,
+      "PSAL": 34.232,
+      "n_samp": 20
+    },
+    {
+      "PRES": 562.0,
+      "TEMP": 3.125,
+      "PSAL": 34.228,
+      "n_samp": 20
+    },
+    {
+      "PRES": 560.0,
+      "TEMP": 3.119,
+      "PSAL": 34.225,
+      "n_samp": 21
+    },
+    {
+      "PRES": 558.0,
+      "TEMP": 3.122,
+      "PSAL": 34.221,
+      "n_samp": 20
+    },
+    {
+      "PRES": 556.0,
+      "TEMP": 3.143,
+      "PSAL": 34.224,
+      "n_samp": 20
+    },
+    {
+      "PRES": 554.0,
+      "TEMP": 3.223,
+      "PSAL": 34.227,
+      "n_samp": 21
+    },
+    {
+      "PRES": 552.0,
+      "TEMP": 3.28,
+      "PSAL": 34.231,
+      "n_samp": 21
+    },
+    {
+      "PRES": 550.0,
+      "TEMP": 3.305,
+      "PSAL": 34.233,
+      "n_samp": 21
+    },
+    {
+      "PRES": 548.0,
+      "TEMP": 3.34,
+      "PSAL": 34.233,
+      "n_samp": 21
+    },
+    {
+      "PRES": 546.0,
+      "TEMP": 3.352,
+      "PSAL": 34.231,
+      "n_samp": 22
+    },
+    {
+      "PRES": 544.0,
+      "TEMP": 3.342,
+      "PSAL": 34.226,
+      "n_samp": 21
+    },
+    {
+      "PRES": 542.0,
+      "TEMP": 3.342,
+      "PSAL": 34.226,
+      "n_samp": 22
+    },
+    {
+      "PRES": 540.0,
+      "TEMP": 3.346,
+      "PSAL": 34.226,
+      "n_samp": 22
+    },
+    {
+      "PRES": 538.0,
+      "TEMP": 3.365,
+      "PSAL": 34.229,
+      "n_samp": 22
+    },
+    {
+      "PRES": 536.0,
+      "TEMP": 3.379,
+      "PSAL": 34.228,
+      "n_samp": 22
+    },
+    {
+      "PRES": 534.0,
+      "TEMP": 3.367,
+      "PSAL": 34.226,
+      "n_samp": 23
+    },
+    {
+      "PRES": 532.0,
+      "TEMP": 3.336,
+      "PSAL": 34.219,
+      "n_samp": 23
+    },
+    {
+      "PRES": 530.0,
+      "TEMP": 3.316,
+      "PSAL": 34.214,
+      "n_samp": 23
+    },
+    {
+      "PRES": 528.0,
+      "TEMP": 3.252,
+      "PSAL": 34.201,
+      "n_samp": 23
+    },
+    {
+      "PRES": 526.0,
+      "TEMP": 3.225,
+      "PSAL": 34.197,
+      "n_samp": 23
+    },
+    {
+      "PRES": 524.0,
+      "TEMP": 3.209,
+      "PSAL": 34.193,
+      "n_samp": 24
+    },
+    {
+      "PRES": 522.0,
+      "TEMP": 3.289,
+      "PSAL": 34.197,
+      "n_samp": 24
+    },
+    {
+      "PRES": 520.0,
+      "TEMP": 3.355,
+      "PSAL": 34.2,
+      "n_samp": 24
+    },
+    {
+      "PRES": 518.0,
+      "TEMP": 3.376,
+      "PSAL": 34.202,
+      "n_samp": 25
+    },
+    {
+      "PRES": 516.0,
+      "TEMP": 3.374,
+      "PSAL": 34.201,
+      "n_samp": 25
+    },
+    {
+      "PRES": 514.0,
+      "TEMP": 3.372,
+      "PSAL": 34.199,
+      "n_samp": 25
+    },
+    {
+      "PRES": 512.0,
+      "TEMP": 3.388,
+      "PSAL": 34.198,
+      "n_samp": 25
+    },
+    {
+      "PRES": 510.0,
+      "TEMP": 3.401,
+      "PSAL": 34.198,
+      "n_samp": 26
+    },
+    {
+      "PRES": 508.0,
+      "TEMP": 3.405,
+      "PSAL": 34.198,
+      "n_samp": 26
+    },
+    {
+      "PRES": 506.0,
+      "TEMP": 3.418,
+      "PSAL": 34.198,
+      "n_samp": 27
+    },
+    {
+      "PRES": 504.0,
+      "TEMP": 3.457,
+      "PSAL": 34.199,
+      "n_samp": 26
+    },
+    {
+      "PRES": 502.0,
+      "TEMP": 3.465,
+      "PSAL": 34.199,
+      "n_samp": 27
+    },
+    {
+      "PRES": 500.0,
+      "TEMP": 3.48,
+      "PSAL": 34.2,
+      "n_samp": 23
+    },
+    {
+      "PRES": 498.0,
+      "TEMP": 3.488,
+      "PSAL": 34.199,
+      "n_samp": 21
+    },
+    {
+      "PRES": 496.0,
+      "TEMP": 3.539,
+      "PSAL": 34.203,
+      "n_samp": 18
+    },
+    {
+      "PRES": 494.0,
+      "TEMP": 3.574,
+      "PSAL": 34.205,
+      "n_samp": 18
+    },
+    {
+      "PRES": 492.0,
+      "TEMP": 3.577,
+      "PSAL": 34.207,
+      "n_samp": 17
+    },
+    {
+      "PRES": 490.0,
+      "TEMP": 3.585,
+      "PSAL": 34.208,
+      "n_samp": 18
+    },
+    {
+      "PRES": 488.0,
+      "TEMP": 3.612,
+      "PSAL": 34.208,
+      "n_samp": 17
+    },
+    {
+      "PRES": 486.0,
+      "TEMP": 3.6,
+      "PSAL": 34.206,
+      "n_samp": 18
+    },
+    {
+      "PRES": 484.0,
+      "TEMP": 3.594,
+      "PSAL": 34.205,
+      "n_samp": 17
+    },
+    {
+      "PRES": 482.0,
+      "TEMP": 3.624,
+      "PSAL": 34.207,
+      "n_samp": 17
+    },
+    {
+      "PRES": 480.0,
+      "TEMP": 3.662,
+      "PSAL": 34.208,
+      "n_samp": 18
+    },
+    {
+      "PRES": 478.0,
+      "TEMP": 3.699,
+      "PSAL": 34.209,
+      "n_samp": 18
+    },
+    {
+      "PRES": 476.0,
+      "TEMP": 3.715,
+      "PSAL": 34.209,
+      "n_samp": 18
+    },
+    {
+      "PRES": 473.9,
+      "TEMP": 3.733,
+      "PSAL": 34.211,
+      "n_samp": 18
+    },
+    {
+      "PRES": 472.0,
+      "TEMP": 3.775,
+      "PSAL": 34.213,
+      "n_samp": 17
+    },
+    {
+      "PRES": 470.0,
+      "TEMP": 3.802,
+      "PSAL": 34.215,
+      "n_samp": 18
+    },
+    {
+      "PRES": 468.0,
+      "TEMP": 3.803,
+      "PSAL": 34.214,
+      "n_samp": 18
+    },
+    {
+      "PRES": 466.0,
+      "TEMP": 3.797,
+      "PSAL": 34.211,
+      "n_samp": 18
+    },
+    {
+      "PRES": 464.0,
+      "TEMP": 3.798,
+      "PSAL": 34.208,
+      "n_samp": 18
+    },
+    {
+      "PRES": 462.0,
+      "TEMP": 3.76,
+      "PSAL": 34.2,
+      "n_samp": 18
+    },
+    {
+      "PRES": 460.0,
+      "TEMP": 3.752,
+      "PSAL": 34.197,
+      "n_samp": 19
+    },
+    {
+      "PRES": 458.0,
+      "TEMP": 3.776,
+      "PSAL": 34.196,
+      "n_samp": 18
+    },
+    {
+      "PRES": 456.0,
+      "TEMP": 3.804,
+      "PSAL": 34.198,
+      "n_samp": 18
+    },
+    {
+      "PRES": 454.0,
+      "TEMP": 3.823,
+      "PSAL": 34.198,
+      "n_samp": 19
+    },
+    {
+      "PRES": 452.0,
+      "TEMP": 3.847,
+      "PSAL": 34.197,
+      "n_samp": 19
+    },
+    {
+      "PRES": 450.0,
+      "TEMP": 3.901,
+      "PSAL": 34.204,
+      "n_samp": 18
+    },
+    {
+      "PRES": 448.0,
+      "TEMP": 3.924,
+      "PSAL": 34.202,
+      "n_samp": 19
+    },
+    {
+      "PRES": 446.0,
+      "TEMP": 3.869,
+      "PSAL": 34.189,
+      "n_samp": 19
+    },
+    {
+      "PRES": 444.0,
+      "TEMP": 3.807,
+      "PSAL": 34.181,
+      "n_samp": 19
+    },
+    {
+      "PRES": 442.0,
+      "TEMP": 3.824,
+      "PSAL": 34.182,
+      "n_samp": 19
+    },
+    {
+      "PRES": 440.0,
+      "TEMP": 3.89,
+      "PSAL": 34.188,
+      "n_samp": 20
+    },
+    {
+      "PRES": 438.0,
+      "TEMP": 3.909,
+      "PSAL": 34.189,
+      "n_samp": 19
+    },
+    {
+      "PRES": 436.0,
+      "TEMP": 3.908,
+      "PSAL": 34.184,
+      "n_samp": 20
+    },
+    {
+      "PRES": 434.0,
+      "TEMP": 3.901,
+      "PSAL": 34.183,
+      "n_samp": 19
+    },
+    {
+      "PRES": 432.0,
+      "TEMP": 3.924,
+      "PSAL": 34.185,
+      "n_samp": 20
+    },
+    {
+      "PRES": 430.0,
+      "TEMP": 3.947,
+      "PSAL": 34.185,
+      "n_samp": 20
+    },
+    {
+      "PRES": 428.0,
+      "TEMP": 3.957,
+      "PSAL": 34.184,
+      "n_samp": 19
+    },
+    {
+      "PRES": 426.0,
+      "TEMP": 3.888,
+      "PSAL": 34.168,
+      "n_samp": 20
+    },
+    {
+      "PRES": 424.0,
+      "TEMP": 3.779,
+      "PSAL": 34.148,
+      "n_samp": 20
+    },
+    {
+      "PRES": 422.0,
+      "TEMP": 3.705,
+      "PSAL": 34.139,
+      "n_samp": 20
+    },
+    {
+      "PRES": 420.0,
+      "TEMP": 3.633,
+      "PSAL": 34.122,
+      "n_samp": 20
+    },
+    {
+      "PRES": 418.0,
+      "TEMP": 3.563,
+      "PSAL": 34.111,
+      "n_samp": 20
+    },
+    {
+      "PRES": 416.0,
+      "TEMP": 3.532,
+      "PSAL": 34.104,
+      "n_samp": 21
+    },
+    {
+      "PRES": 414.0,
+      "TEMP": 3.556,
+      "PSAL": 34.105,
+      "n_samp": 21
+    },
+    {
+      "PRES": 412.0,
+      "TEMP": 3.59,
+      "PSAL": 34.105,
+      "n_samp": 20
+    },
+    {
+      "PRES": 410.0,
+      "TEMP": 3.6,
+      "PSAL": 34.105,
+      "n_samp": 21
+    },
+    {
+      "PRES": 407.9,
+      "TEMP": 3.604,
+      "PSAL": 34.105,
+      "n_samp": 21
+    },
+    {
+      "PRES": 406.0,
+      "TEMP": 3.604,
+      "PSAL": 34.104,
+      "n_samp": 20
+    },
+    {
+      "PRES": 404.0,
+      "TEMP": 3.603,
+      "PSAL": 34.101,
+      "n_samp": 21
+    },
+    {
+      "PRES": 402.0,
+      "TEMP": 3.579,
+      "PSAL": 34.096,
+      "n_samp": 21
+    },
+    {
+      "PRES": 400.0,
+      "TEMP": 3.597,
+      "PSAL": 34.097,
+      "n_samp": 22
+    },
+    {
+      "PRES": 398.0,
+      "TEMP": 3.618,
+      "PSAL": 34.093,
+      "n_samp": 21
+    },
+    {
+      "PRES": 396.0,
+      "TEMP": 3.621,
+      "PSAL": 34.089,
+      "n_samp": 21
+    },
+    {
+      "PRES": 394.0,
+      "TEMP": 3.629,
+      "PSAL": 34.09,
+      "n_samp": 21
+    },
+    {
+      "PRES": 392.0,
+      "TEMP": 3.666,
+      "PSAL": 34.096,
+      "n_samp": 22
+    },
+    {
+      "PRES": 390.0,
+      "TEMP": 3.744,
+      "PSAL": 34.102,
+      "n_samp": 21
+    },
+    {
+      "PRES": 388.0,
+      "TEMP": 3.766,
+      "PSAL": 34.103,
+      "n_samp": 21
+    },
+    {
+      "PRES": 386.0,
+      "TEMP": 3.76,
+      "PSAL": 34.101,
+      "n_samp": 22
+    },
+    {
+      "PRES": 384.0,
+      "TEMP": 3.775,
+      "PSAL": 34.103,
+      "n_samp": 21
+    },
+    {
+      "PRES": 382.0,
+      "TEMP": 3.788,
+      "PSAL": 34.101,
+      "n_samp": 22
+    },
+    {
+      "PRES": 380.0,
+      "TEMP": 3.773,
+      "PSAL": 34.098,
+      "n_samp": 21
+    },
+    {
+      "PRES": 378.0,
+      "TEMP": 3.776,
+      "PSAL": 34.099,
+      "n_samp": 22
+    },
+    {
+      "PRES": 376.0,
+      "TEMP": 3.788,
+      "PSAL": 34.099,
+      "n_samp": 21
+    },
+    {
+      "PRES": 374.0,
+      "TEMP": 3.8,
+      "PSAL": 34.101,
+      "n_samp": 21
+    },
+    {
+      "PRES": 372.0,
+      "TEMP": 3.823,
+      "PSAL": 34.102,
+      "n_samp": 22
+    },
+    {
+      "PRES": 370.0,
+      "TEMP": 3.84,
+      "PSAL": 34.106,
+      "n_samp": 21
+    },
+    {
+      "PRES": 368.0,
+      "TEMP": 4.019,
+      "PSAL": 34.124,
+      "n_samp": 22
+    },
+    {
+      "PRES": 366.0,
+      "TEMP": 4.219,
+      "PSAL": 34.145,
+      "n_samp": 22
+    },
+    {
+      "PRES": 364.0,
+      "TEMP": 4.255,
+      "PSAL": 34.149,
+      "n_samp": 21
+    },
+    {
+      "PRES": 362.0,
+      "TEMP": 4.292,
+      "PSAL": 34.154,
+      "n_samp": 22
+    },
+    {
+      "PRES": 360.0,
+      "TEMP": 4.288,
+      "PSAL": 34.152,
+      "n_samp": 21
+    },
+    {
+      "PRES": 358.0,
+      "TEMP": 4.243,
+      "PSAL": 34.145,
+      "n_samp": 23
+    },
+    {
+      "PRES": 356.0,
+      "TEMP": 4.353,
+      "PSAL": 34.154,
+      "n_samp": 22
+    },
+    {
+      "PRES": 354.0,
+      "TEMP": 4.396,
+      "PSAL": 34.158,
+      "n_samp": 22
+    },
+    {
+      "PRES": 352.0,
+      "TEMP": 4.411,
+      "PSAL": 34.159,
+      "n_samp": 22
+    },
+    {
+      "PRES": 350.0,
+      "TEMP": 4.432,
+      "PSAL": 34.162,
+      "n_samp": 22
+    },
+    {
+      "PRES": 348.0,
+      "TEMP": 4.435,
+      "PSAL": 34.161,
+      "n_samp": 22
+    },
+    {
+      "PRES": 346.0,
+      "TEMP": 4.43,
+      "PSAL": 34.16,
+      "n_samp": 22
+    },
+    {
+      "PRES": 344.0,
+      "TEMP": 4.4,
+      "PSAL": 34.154,
+      "n_samp": 22
+    },
+    {
+      "PRES": 342.0,
+      "TEMP": 4.401,
+      "PSAL": 34.153,
+      "n_samp": 23
+    },
+    {
+      "PRES": 340.0,
+      "TEMP": 4.394,
+      "PSAL": 34.151,
+      "n_samp": 22
+    },
+    {
+      "PRES": 338.0,
+      "TEMP": 4.391,
+      "PSAL": 34.151,
+      "n_samp": 22
+    },
+    {
+      "PRES": 336.0,
+      "TEMP": 4.361,
+      "PSAL": 34.144,
+      "n_samp": 23
+    },
+    {
+      "PRES": 334.0,
+      "TEMP": 4.241,
+      "PSAL": 34.12,
+      "n_samp": 23
+    },
+    {
+      "PRES": 332.0,
+      "TEMP": 4.161,
+      "PSAL": 34.11,
+      "n_samp": 23
+    },
+    {
+      "PRES": 330.0,
+      "TEMP": 4.203,
+      "PSAL": 34.111,
+      "n_samp": 24
+    },
+    {
+      "PRES": 328.0,
+      "TEMP": 4.23,
+      "PSAL": 34.111,
+      "n_samp": 23
+    },
+    {
+      "PRES": 326.0,
+      "TEMP": 4.259,
+      "PSAL": 34.112,
+      "n_samp": 25
+    },
+    {
+      "PRES": 324.0,
+      "TEMP": 4.296,
+      "PSAL": 34.114,
+      "n_samp": 24
+    },
+    {
+      "PRES": 322.0,
+      "TEMP": 4.329,
+      "PSAL": 34.116,
+      "n_samp": 25
+    },
+    {
+      "PRES": 320.0,
+      "TEMP": 4.354,
+      "PSAL": 34.119,
+      "n_samp": 24
+    },
+    {
+      "PRES": 318.0,
+      "TEMP": 4.372,
+      "PSAL": 34.12,
+      "n_samp": 25
+    },
+    {
+      "PRES": 316.0,
+      "TEMP": 4.373,
+      "PSAL": 34.118,
+      "n_samp": 25
+    },
+    {
+      "PRES": 314.0,
+      "TEMP": 4.373,
+      "PSAL": 34.117,
+      "n_samp": 25
+    },
+    {
+      "PRES": 312.0,
+      "TEMP": 4.4,
+      "PSAL": 34.117,
+      "n_samp": 25
+    },
+    {
+      "PRES": 310.0,
+      "TEMP": 4.425,
+      "PSAL": 34.116,
+      "n_samp": 25
+    },
+    {
+      "PRES": 308.0,
+      "TEMP": 4.434,
+      "PSAL": 34.116,
+      "n_samp": 26
+    },
+    {
+      "PRES": 306.0,
+      "TEMP": 4.445,
+      "PSAL": 34.115,
+      "n_samp": 26
+    },
+    {
+      "PRES": 304.0,
+      "TEMP": 4.458,
+      "PSAL": 34.114,
+      "n_samp": 27
+    },
+    {
+      "PRES": 302.0,
+      "TEMP": 4.469,
+      "PSAL": 34.113,
+      "n_samp": 26
+    },
+    {
+      "PRES": 300.0,
+      "TEMP": 4.48,
+      "PSAL": 34.11,
+      "n_samp": 27
+    },
+    {
+      "PRES": 298.0,
+      "TEMP": 4.481,
+      "PSAL": 34.11,
+      "n_samp": 28
+    },
+    {
+      "PRES": 296.0,
+      "TEMP": 4.496,
+      "PSAL": 34.111,
+      "n_samp": 27
+    },
+    {
+      "PRES": 294.0,
+      "TEMP": 4.523,
+      "PSAL": 34.113,
+      "n_samp": 24
+    },
+    {
+      "PRES": 292.0,
+      "TEMP": 4.549,
+      "PSAL": 34.115,
+      "n_samp": 21
+    },
+    {
+      "PRES": 290.0,
+      "TEMP": 4.596,
+      "PSAL": 34.118,
+      "n_samp": 19
+    },
+    {
+      "PRES": 288.0,
+      "TEMP": 4.61,
+      "PSAL": 34.119,
+      "n_samp": 18
+    },
+    {
+      "PRES": 286.0,
+      "TEMP": 4.623,
+      "PSAL": 34.119,
+      "n_samp": 17
+    },
+    {
+      "PRES": 284.0,
+      "TEMP": 4.648,
+      "PSAL": 34.117,
+      "n_samp": 18
+    },
+    {
+      "PRES": 282.0,
+      "TEMP": 4.716,
+      "PSAL": 34.118,
+      "n_samp": 18
+    },
+    {
+      "PRES": 280.0,
+      "TEMP": 4.718,
+      "PSAL": 34.109,
+      "n_samp": 18
+    },
+    {
+      "PRES": 278.0,
+      "TEMP": 4.705,
+      "PSAL": 34.107,
+      "n_samp": 18
+    },
+    {
+      "PRES": 276.0,
+      "TEMP": 4.683,
+      "PSAL": 34.104,
+      "n_samp": 18
+    },
+    {
+      "PRES": 274.0,
+      "TEMP": 4.642,
+      "PSAL": 34.092,
+      "n_samp": 18
+    },
+    {
+      "PRES": 272.0,
+      "TEMP": 4.649,
+      "PSAL": 34.091,
+      "n_samp": 19
+    },
+    {
+      "PRES": 270.0,
+      "TEMP": 4.697,
+      "PSAL": 34.095,
+      "n_samp": 19
+    },
+    {
+      "PRES": 268.0,
+      "TEMP": 4.757,
+      "PSAL": 34.102,
+      "n_samp": 18
+    },
+    {
+      "PRES": 266.0,
+      "TEMP": 4.878,
+      "PSAL": 34.115,
+      "n_samp": 19
+    },
+    {
+      "PRES": 264.0,
+      "TEMP": 4.961,
+      "PSAL": 34.12,
+      "n_samp": 19
+    },
+    {
+      "PRES": 262.0,
+      "TEMP": 4.968,
+      "PSAL": 34.12,
+      "n_samp": 19
+    },
+    {
+      "PRES": 260.0,
+      "TEMP": 4.971,
+      "PSAL": 34.118,
+      "n_samp": 19
+    },
+    {
+      "PRES": 258.0,
+      "TEMP": 4.96,
+      "PSAL": 34.113,
+      "n_samp": 19
+    },
+    {
+      "PRES": 256.0,
+      "TEMP": 4.926,
+      "PSAL": 34.105,
+      "n_samp": 19
+    },
+    {
+      "PRES": 254.0,
+      "TEMP": 4.919,
+      "PSAL": 34.103,
+      "n_samp": 18
+    },
+    {
+      "PRES": 252.0,
+      "TEMP": 4.896,
+      "PSAL": 34.097,
+      "n_samp": 19
+    },
+    {
+      "PRES": 250.0,
+      "TEMP": 4.896,
+      "PSAL": 34.097,
+      "n_samp": 20
+    },
+    {
+      "PRES": 248.0,
+      "TEMP": 4.908,
+      "PSAL": 34.095,
+      "n_samp": 19
+    },
+    {
+      "PRES": 246.0,
+      "TEMP": 4.942,
+      "PSAL": 34.092,
+      "n_samp": 19
+    },
+    {
+      "PRES": 244.0,
+      "TEMP": 4.936,
+      "PSAL": 34.088,
+      "n_samp": 20
+    },
+    {
+      "PRES": 242.0,
+      "TEMP": 4.93,
+      "PSAL": 34.084,
+      "n_samp": 20
+    },
+    {
+      "PRES": 240.0,
+      "TEMP": 4.93,
+      "PSAL": 34.082,
+      "n_samp": 20
+    },
+    {
+      "PRES": 238.0,
+      "TEMP": 4.932,
+      "PSAL": 34.081,
+      "n_samp": 20
+    },
+    {
+      "PRES": 236.0,
+      "TEMP": 4.896,
+      "PSAL": 34.072,
+      "n_samp": 20
+    },
+    {
+      "PRES": 234.0,
+      "TEMP": 4.88,
+      "PSAL": 34.068,
+      "n_samp": 21
+    },
+    {
+      "PRES": 232.0,
+      "TEMP": 4.883,
+      "PSAL": 34.065,
+      "n_samp": 21
+    },
+    {
+      "PRES": 230.0,
+      "TEMP": 4.896,
+      "PSAL": 34.063,
+      "n_samp": 21
+    },
+    {
+      "PRES": 228.0,
+      "TEMP": 4.908,
+      "PSAL": 34.061,
+      "n_samp": 21
+    },
+    {
+      "PRES": 226.0,
+      "TEMP": 4.93,
+      "PSAL": 34.063,
+      "n_samp": 20
+    },
+    {
+      "PRES": 224.0,
+      "TEMP": 4.982,
+      "PSAL": 34.064,
+      "n_samp": 22
+    },
+    {
+      "PRES": 222.0,
+      "TEMP": 4.987,
+      "PSAL": 34.065,
+      "n_samp": 21
+    },
+    {
+      "PRES": 220.0,
+      "TEMP": 4.99,
+      "PSAL": 34.066,
+      "n_samp": 22
+    },
+    {
+      "PRES": 218.0,
+      "TEMP": 5.003,
+      "PSAL": 34.065,
+      "n_samp": 21
+    },
+    {
+      "PRES": 216.0,
+      "TEMP": 5.0,
+      "PSAL": 34.056,
+      "n_samp": 22
+    },
+    {
+      "PRES": 214.0,
+      "TEMP": 5.021,
+      "PSAL": 34.057,
+      "n_samp": 22
+    },
+    {
+      "PRES": 212.0,
+      "TEMP": 5.074,
+      "PSAL": 34.06,
+      "n_samp": 22
+    },
+    {
+      "PRES": 210.0,
+      "TEMP": 5.105,
+      "PSAL": 34.061,
+      "n_samp": 23
+    },
+    {
+      "PRES": 208.0,
+      "TEMP": 5.105,
+      "PSAL": 34.061,
+      "n_samp": 22
+    },
+    {
+      "PRES": 206.0,
+      "TEMP": 5.089,
+      "PSAL": 34.055,
+      "n_samp": 23
+    },
+    {
+      "PRES": 204.0,
+      "TEMP": 4.956,
+      "PSAL": 34.024,
+      "n_samp": 23
+    },
+    {
+      "PRES": 202.0,
+      "TEMP": 4.967,
+      "PSAL": 34.024,
+      "n_samp": 24
+    },
+    {
+      "PRES": 200.0,
+      "TEMP": 4.967,
+      "PSAL": 34.017,
+      "n_samp": 23
+    },
+    {
+      "PRES": 198.0,
+      "TEMP": 4.988,
+      "PSAL": 34.018,
+      "n_samp": 24
+    },
+    {
+      "PRES": 196.0,
+      "TEMP": 5.033,
+      "PSAL": 34.019,
+      "n_samp": 24
+    },
+    {
+      "PRES": 194.0,
+      "TEMP": 5.048,
+      "PSAL": 34.02,
+      "n_samp": 24
+    },
+    {
+      "PRES": 192.0,
+      "TEMP": 5.051,
+      "PSAL": 34.02,
+      "n_samp": 25
+    },
+    {
+      "PRES": 190.0,
+      "TEMP": 5.034,
+      "PSAL": 34.014,
+      "n_samp": 24
+    },
+    {
+      "PRES": 188.0,
+      "TEMP": 4.975,
+      "PSAL": 34.001,
+      "n_samp": 24
+    },
+    {
+      "PRES": 186.0,
+      "TEMP": 4.984,
+      "PSAL": 34.0,
+      "n_samp": 25
+    },
+    {
+      "PRES": 184.0,
+      "TEMP": 5.004,
+      "PSAL": 33.999,
+      "n_samp": 25
+    },
+    {
+      "PRES": 182.0,
+      "TEMP": 5.012,
+      "PSAL": 33.998,
+      "n_samp": 25
+    },
+    {
+      "PRES": 180.0,
+      "TEMP": 5.031,
+      "PSAL": 33.999,
+      "n_samp": 26
+    },
+    {
+      "PRES": 178.0,
+      "TEMP": 5.062,
+      "PSAL": 34.0,
+      "n_samp": 25
+    },
+    {
+      "PRES": 176.0,
+      "TEMP": 5.091,
+      "PSAL": 34.001,
+      "n_samp": 25
+    },
+    {
+      "PRES": 174.0,
+      "TEMP": 5.116,
+      "PSAL": 34.002,
+      "n_samp": 27
+    },
+    {
+      "PRES": 172.0,
+      "TEMP": 5.145,
+      "PSAL": 34.004,
+      "n_samp": 26
+    },
+    {
+      "PRES": 170.0,
+      "TEMP": 5.161,
+      "PSAL": 34.004,
+      "n_samp": 27
+    },
+    {
+      "PRES": 168.0,
+      "TEMP": 5.172,
+      "PSAL": 34.004,
+      "n_samp": 28
+    },
+    {
+      "PRES": 166.0,
+      "TEMP": 5.234,
+      "PSAL": 34.013,
+      "n_samp": 27
+    },
+    {
+      "PRES": 164.0,
+      "TEMP": 5.36,
+      "PSAL": 34.022,
+      "n_samp": 28
+    },
+    {
+      "PRES": 162.0,
+      "TEMP": 5.45,
+      "PSAL": 34.031,
+      "n_samp": 28
+    },
+    {
+      "PRES": 160.0,
+      "TEMP": 5.51,
+      "PSAL": 34.038,
+      "n_samp": 28
+    },
+    {
+      "PRES": 158.0,
+      "TEMP": 5.577,
+      "PSAL": 34.046,
+      "n_samp": 29
+    },
+    {
+      "PRES": 156.0,
+      "TEMP": 5.617,
+      "PSAL": 34.05,
+      "n_samp": 28
+    },
+    {
+      "PRES": 154.0,
+      "TEMP": 5.617,
+      "PSAL": 34.047,
+      "n_samp": 28
+    },
+    {
+      "PRES": 152.0,
+      "TEMP": 5.61,
+      "PSAL": 34.044,
+      "n_samp": 25
+    },
+    {
+      "PRES": 150.0,
+      "TEMP": 5.596,
+      "PSAL": 34.037,
+      "n_samp": 21
+    },
+    {
+      "PRES": 148.0,
+      "TEMP": 5.555,
+      "PSAL": 34.029,
+      "n_samp": 19
+    },
+    {
+      "PRES": 146.0,
+      "TEMP": 5.561,
+      "PSAL": 34.028,
+      "n_samp": 18
+    },
+    {
+      "PRES": 144.0,
+      "TEMP": 5.629,
+      "PSAL": 34.029,
+      "n_samp": 18
+    },
+    {
+      "PRES": 142.0,
+      "TEMP": 5.646,
+      "PSAL": 34.027,
+      "n_samp": 18
+    },
+    {
+      "PRES": 140.0,
+      "TEMP": 5.623,
+      "PSAL": 34.019,
+      "n_samp": 18
+    },
+    {
+      "PRES": 138.0,
+      "TEMP": 5.627,
+      "PSAL": 34.018,
+      "n_samp": 19
+    },
+    {
+      "PRES": 136.0,
+      "TEMP": 5.607,
+      "PSAL": 34.002,
+      "n_samp": 18
+    },
+    {
+      "PRES": 134.0,
+      "TEMP": 5.593,
+      "PSAL": 33.994,
+      "n_samp": 19
+    },
+    {
+      "PRES": 132.0,
+      "TEMP": 5.645,
+      "PSAL": 33.994,
+      "n_samp": 19
+    },
+    {
+      "PRES": 130.0,
+      "TEMP": 5.684,
+      "PSAL": 33.989,
+      "n_samp": 20
+    },
+    {
+      "PRES": 128.0,
+      "TEMP": 5.705,
+      "PSAL": 33.984,
+      "n_samp": 19
+    },
+    {
+      "PRES": 126.0,
+      "TEMP": 5.734,
+      "PSAL": 33.968,
+      "n_samp": 21
+    },
+    {
+      "PRES": 124.0,
+      "TEMP": 5.779,
+      "PSAL": 33.951,
+      "n_samp": 21
+    },
+    {
+      "PRES": 122.0,
+      "TEMP": 5.846,
+      "PSAL": 33.935,
+      "n_samp": 21
+    },
+    {
+      "PRES": 120.0,
+      "TEMP": 6.009,
+      "PSAL": 33.914,
+      "n_samp": 22
+    },
+    {
+      "PRES": 118.0,
+      "TEMP": 6.113,
+      "PSAL": 33.901,
+      "n_samp": 24
+    },
+    {
+      "PRES": 116.0,
+      "TEMP": 6.271,
+      "PSAL": 33.886,
+      "n_samp": 24
+    },
+    {
+      "PRES": 114.0,
+      "TEMP": 6.358,
+      "PSAL": 33.877,
+      "n_samp": 25
+    },
+    {
+      "PRES": 112.0,
+      "TEMP": 6.402,
+      "PSAL": 33.873,
+      "n_samp": 25
+    },
+    {
+      "PRES": 110.0,
+      "TEMP": 6.448,
+      "PSAL": 33.868,
+      "n_samp": 26
+    },
+    {
+      "PRES": 108.0,
+      "TEMP": 6.507,
+      "PSAL": 33.862,
+      "n_samp": 27
+    },
+    {
+      "PRES": 106.0,
+      "TEMP": 6.56,
+      "PSAL": 33.859,
+      "n_samp": 27
+    },
+    {
+      "PRES": 104.0,
+      "TEMP": 6.608,
+      "PSAL": 33.863,
+      "n_samp": 26
+    },
+    {
+      "PRES": 102.0,
+      "TEMP": 6.664,
+      "PSAL": 33.863,
+      "n_samp": 27
+    },
+    {
+      "PRES": 100.0,
+      "TEMP": 6.728,
+      "PSAL": 33.86,
+      "n_samp": 27
+    },
+    {
+      "PRES": 98.0,
+      "TEMP": 6.805,
+      "PSAL": 33.854,
+      "n_samp": 27
+    },
+    {
+      "PRES": 96.0,
+      "TEMP": 6.966,
+      "PSAL": 33.847,
+      "n_samp": 30
+    },
+    {
+      "PRES": 94.0,
+      "TEMP": 6.992,
+      "PSAL": 33.849,
+      "n_samp": 28
+    },
+    {
+      "PRES": 92.1,
+      "TEMP": 7.021,
+      "PSAL": 33.85,
+      "n_samp": 24
+    },
+    {
+      "PRES": 90.0,
+      "TEMP": 7.105,
+      "PSAL": 33.848,
+      "n_samp": 22
+    },
+    {
+      "PRES": 88.0,
+      "TEMP": 7.208,
+      "PSAL": 33.846,
+      "n_samp": 20
+    },
+    {
+      "PRES": 86.0,
+      "TEMP": 7.266,
+      "PSAL": 33.844,
+      "n_samp": 21
+    },
+    {
+      "PRES": 84.0,
+      "TEMP": 7.308,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 82.0,
+      "TEMP": 7.348,
+      "PSAL": 33.843,
+      "n_samp": 21
+    },
+    {
+      "PRES": 80.0,
+      "TEMP": 7.35,
+      "PSAL": 33.843,
+      "n_samp": 21
+    },
+    {
+      "PRES": 78.0,
+      "TEMP": 7.352,
+      "PSAL": 33.843,
+      "n_samp": 20
+    },
+    {
+      "PRES": 76.0,
+      "TEMP": 7.353,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 74.0,
+      "TEMP": 7.355,
+      "PSAL": 33.844,
+      "n_samp": 21
+    },
+    {
+      "PRES": 72.0,
+      "TEMP": 7.355,
+      "PSAL": 33.844,
+      "n_samp": 21
+    },
+    {
+      "PRES": 70.0,
+      "TEMP": 7.357,
+      "PSAL": 33.844,
+      "n_samp": 22
+    },
+    {
+      "PRES": 68.0,
+      "TEMP": 7.358,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 66.0,
+      "TEMP": 7.357,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 64.0,
+      "TEMP": 7.359,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 62.0,
+      "TEMP": 7.36,
+      "PSAL": 33.844,
+      "n_samp": 19
+    },
+    {
+      "PRES": 60.0,
+      "TEMP": 7.363,
+      "PSAL": 33.843,
+      "n_samp": 18
+    },
+    {
+      "PRES": 58.0,
+      "TEMP": 7.362,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 56.0,
+      "TEMP": 7.36,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 54.0,
+      "TEMP": 7.361,
+      "PSAL": 33.844,
+      "n_samp": 21
+    },
+    {
+      "PRES": 52.0,
+      "TEMP": 7.362,
+      "PSAL": 33.843,
+      "n_samp": 20
+    },
+    {
+      "PRES": 50.0,
+      "TEMP": 7.363,
+      "PSAL": 33.843,
+      "n_samp": 21
+    },
+    {
+      "PRES": 48.0,
+      "TEMP": 7.362,
+      "PSAL": 33.844,
+      "n_samp": 19
+    },
+    {
+      "PRES": 46.0,
+      "TEMP": 7.362,
+      "PSAL": 33.844,
+      "n_samp": 21
+    },
+    {
+      "PRES": 44.0,
+      "TEMP": 7.362,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 42.0,
+      "TEMP": 7.362,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 40.0,
+      "TEMP": 7.362,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 38.0,
+      "TEMP": 7.362,
+      "PSAL": 33.843,
+      "n_samp": 20
+    },
+    {
+      "PRES": 36.0,
+      "TEMP": 7.361,
+      "PSAL": 33.844,
+      "n_samp": 19
+    },
+    {
+      "PRES": 34.0,
+      "TEMP": 7.361,
+      "PSAL": 33.844,
+      "n_samp": 19
+    },
+    {
+      "PRES": 32.0,
+      "TEMP": 7.361,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 30.0,
+      "TEMP": 7.361,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 28.0,
+      "TEMP": 7.362,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 26.0,
+      "TEMP": 7.361,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 24.0,
+      "TEMP": 7.361,
+      "PSAL": 33.844,
+      "n_samp": 18
+    },
+    {
+      "PRES": 22.0,
+      "TEMP": 7.363,
+      "PSAL": 33.843,
+      "n_samp": 18
+    },
+    {
+      "PRES": 20.0,
+      "TEMP": 7.361,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 18.0,
+      "TEMP": 7.36,
+      "PSAL": 33.843,
+      "n_samp": 18
+    },
+    {
+      "PRES": 16.0,
+      "TEMP": 7.36,
+      "PSAL": 33.844,
+      "n_samp": 18
+    },
+    {
+      "PRES": 14.0,
+      "TEMP": 7.36,
+      "PSAL": 33.843,
+      "n_samp": 18
+    },
+    {
+      "PRES": 12.0,
+      "TEMP": 7.359,
+      "PSAL": 33.843,
+      "n_samp": 19
+    },
+    {
+      "PRES": 10.0,
+      "TEMP": 7.36,
+      "PSAL": 33.844,
+      "n_samp": 19
+    },
+    {
+      "PRES": 8.0,
+      "TEMP": 7.367,
+      "PSAL": 33.844,
+      "n_samp": 20
+    },
+    {
+      "PRES": 6.0,
+      "TEMP": 7.367,
+      "PSAL": 33.843,
+      "n_samp": 20
+    },
+    {
+      "PRES": 4.1,
+      "TEMP": 7.365,
+      "PSAL": 33.843,
+      "n_samp": 20
+    }
+  ],
+  "CTD_Drift": [
+    {
+      "PRES": 1025.9,
+      "TEMP": 2.5932,
+      "TIME": "2026-02-07T16:54:18Z"
+    }
+  ],
+  "Mission": {
+    "model": {
+      "value": "Apf11"
+    },
+    "Id": {
+      "value": "23050"
+    },
+    "FwRev": {
+      "value": "022725"
+    },
+    "AscentTimeOut": {
+      "value": "500",
+      "unit": "min"
+    },
+    "AtDialCmd": {
+      "value": "AT+CBST=71,0,1;DT00881600005496"
+    },
+    "AltDialCmd": {
+      "value": "ATDT0012066163256"
+    },
+    "BuoyancyNudge": {
+      "value": "10",
+      "unit": "count"
+    },
+    "CompensatorHyperRetraction": {
+      "value": "0",
+      "unit": "count"
+    },
+    "ConnectTimeOut": {
+      "value": "60",
+      "unit": "sec"
+    },
+    "CpActivationP": {
+      "value": "985",
+      "unit": "dbar"
+    },
+    "DeepProfileDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "DeepProfilePistonPos": {
+      "value": "12",
+      "unit": "count"
+    },
+    "DeepProfilePressure": {
+      "value": "2020",
+      "unit": "dbar"
+    },
+    "DownTime": {
+      "value": "14400",
+      "unit": "min"
+    },
+    "FatFsEnable": {
+      "value": "1"
+    },
+    "FloatId": {
+      "value": "23050"
+    },
+    "FullExtension": {
+      "value": "231",
+      "unit": "count"
+    },
+    "FullRetraction": {
+      "value": "9",
+      "unit": "count"
+    },
+    "InitialBuoyancyNudge": {
+      "value": "22",
+      "unit": "count"
+    },
+    "MaxAirBladder": {
+      "value": "154",
+      "unit": "count"
+    },
+    "MaxLogKb": {
+      "value": "50",
+      "unit": "KByte"
+    },
+    "MissionPrelude": {
+      "value": "360",
+      "unit": "min"
+    },
+    "OkVacuum": {
+      "value": "237",
+      "unit": "count"
+    },
+    "PActivationPistonPosition": {
+      "value": "16",
+      "unit": "count"
+    },
+    "ParkDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "ParkPistonPos": {
+      "value": "60",
+      "unit": "count"
+    },
+    "ParkPressure": {
+      "value": "1000",
+      "unit": "dbar"
+    },
+    "PnPCycleLen": {
+      "value": "1"
+    },
+    "TelemetryRetry": {
+      "value": "15",
+      "unit": "min"
+    },
+    "TimeOfDay": {
+      "value": "DISABLED",
+      "unit": "min"
+    },
+    "UpTime": {
+      "value": "660",
+      "unit": "min"
+    },
+    "ZModemTimeOut": {
+      "value": "80",
+      "unit": "sec"
+    },
+    "Verbosity": {
+      "value": "2"
+    },
+    "DebugBits": {
+      "value": "0x0002"
+    }
+  },
+  "Engineering_Data": [
+    {
+      "Apf11FwRev": "022725",
+      "ActiveBallastAdjustments": "0",
+      "AirBladderPressure": "157",
+      "AirPumpAmps": "33",
+      "AirPumpVolts": "209",
+      "BuoyancyPumpOnTime": "1968",
+      "BuoyancyPumpAmps": "155",
+      "BuoyancyPumpVolts": "200",
+      "ConnectionAttempts": "2",
+      "Connections": "2",
+      "Coulombs": "3.5kC",
+      "CoulombsDescent": "2.8kC",
+      "CoulombsPark": "3.0kC",
+      "CoulombsPrfDescent": "3.0kC",
+      "CoulombsProfile": "3.0kC",
+      "CoulombsSleep": "0.1kC",
+      "CoulombsTelemetry": "3.5kC",
+      "CoulombsWake": "2.4kC",
+      "CurrentPistonPosition": "166",
+      "DeepProfilePistonPosition": "11",
+      "FloatId": "23050",
+      "GpsFixTime": "157",
+      "HumidityAd12Park": "1002 (5.3%)",
+      "HumidityAd12Pneumatic": "1056 (6.9%)",
+      "HumidityAd12PneumaticRef": "1010 (5.6%)",
+      "LeakSensor": "{state:0, count:0, ad12:3835cnt, v:2.34V, index:0.0%, epoch:1770469758sec, mtime:904sec}",
+      "ObsIndex": "19",
+      "ParkDescentPCnt": "5",
+      "ParkDescentP": [
+        "5",
+        "44",
+        "81",
+        "99",
+        "103"
+      ],
+      "ParkPistonPosition": "60",
+      "ParkObs": "{ 1026.1dbar, 2.589C, 34.5334PSU }",
+      "ProfileId": "001",
+      "QuiescentAmps": "2",
+      "QuiescentVolts": "219",
+      "RtcSkew": "3",
+      "Sbe41cpAmps": "3",
+      "Sbe41cpStatus": "0x00000000",
+      "Sbe41cpVolts": "217",
+      "SleepSec": "46257",
+      "StandbySec": "7505651",
+      "status": "0x00000001",
+      "SurfacePistonPosition": "144",
+      "SurfacePressure": "-0.38",
+      "TimeStartDescent": "1770468855         Feb 07 2026 12:54:15",
+      "TimeStartPark": "1770483255            Feb 07 2026 16:54:15",
+      "TimeStartProfileDescent": "1770483618  Feb 07 2026 17:00:18",
+      "TimeStartProfile": "1770497954         Feb 07 2026 20:59:14",
+      "TimeStopProfile": "1770518306          Feb 08 2026 02:38:26",
+      "TimeStartTelemetry": "1770518448       Feb 08 2026 02:40:48",
+      "Vacuum": "193",
+      "WakeCycles": "2142",
+      "WakeSec": "3919"
+    }
+  ],
+  "Log": [
+    {
+      "datetime": "2026-02-07T12:47:49Z",
+      "mission_time": 21613,
+      "call": "TelemetryInit",
+      "message": "Profile 0. (Apf11 FwRev: 022725)"
+    },
+    {
+      "datetime": "2026-02-07T12:47:49Z",
+      "mission_time": 21613,
+      "call": "TelemetryInit",
+      "message": "Charge consumption model: OCV:15.3V Wake-Cycles:1206 Standby:86.3days Wake:1.9kC Sensors:0.0kC"
+    },
+    {
+      "datetime": "2026-02-07T12:48:40Z",
+      "mission_time": 21664,
+      "call": "AirSystem",
+      "message": "Battery [213cnt, 15.0V]  Current [30cnt, 115.4mA]  Pneumometer [155cnt, 18.2psi]  Run-Time [25s]"
+    },
+    {
+      "datetime": "2026-02-07T12:49:11Z",
+      "mission_time": 21695,
+      "call": "GpsServices",
+      "message": "GPS almanac is current."
+    },
+    {
+      "datetime": "2026-02-07T12:49:11Z",
+      "mission_time": 21695,
+      "call": "GpsServices",
+      "message": "Initiating GPS fix acquisition."
+    },
+    {
+      "datetime": "2026-02-07T12:49:14Z",
+      "mission_time": 21698,
+      "call": "gga",
+      "message": "$GPGGA,124910,5000.2494,S,10215.8382,E,0,00,,,M,,M,,*47"
+    },
+    {
+      "datetime": "2026-02-07T12:49:35Z",
+      "mission_time": 21719,
+      "call": "gga",
+      "message": "$GPGGA,124930,5000.1011,S,10216.0602,E,1,04,2.7,9.6,M,-3.2,M,,*44"
+    },
+    {
+      "datetime": "2026-02-07T12:49:35Z",
+      "mission_time": 21719,
+      "call": "GpsServices",
+      "message": "Profile 0 GPS fix obtained in 24 seconds."
+    },
+    {
+      "datetime": "2026-02-07T12:49:35Z",
+      "mission_time": 21719,
+      "call": "GpsServices",
+      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
+    },
+    {
+      "datetime": "2026-02-07T12:49:35Z",
+      "mission_time": 21719,
+      "call": "GpsServices",
+      "message": "Fix:  102.2677 -50.0017 02/07/2026 124930    4"
+    },
+    {
+      "datetime": "2026-02-07T12:49:45Z",
+      "mission_time": 21729,
+      "call": "gga",
+      "message": "$GPGGA,124940,5000.0991,S,10216.0588,E,1,04,2.7,4.3,M,-3.2,M,,*4A"
+    },
+    {
+      "datetime": "2026-02-07T12:49:54Z",
+      "mission_time": 21738,
+      "call": "gga",
+      "message": "$GPGGA,124950,5000.0985,S,10216.0591,E,1,04,2.7,3.3,M,-3.2,M,,*41"
+    },
+    {
+      "datetime": "2026-02-07T12:49:54Z",
+      "mission_time": 21738,
+      "call": "GpsServices",
+      "message": "APF11 RTC skew (4s) OK."
+    },
+    {
+      "datetime": "2026-02-07T12:49:54Z",
+      "mission_time": 21738,
+      "call": "GpsServices",
+      "message": "GPS services complete."
+    },
+    {
+      "datetime": "2026-02-07T12:50:29Z",
+      "mission_time": 21773,
+      "call": "IrGeoLoc",
+      "message": "<x,y,z>=<-872km,4012km,-4860km> lat=-49.998 lon=102.262 IrSysTime=0x1478ad57"
+    },
+    {
+      "datetime": "2026-02-07T12:50:32Z",
+      "mission_time": 21776,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "datetime": "2026-02-07T12:50:49Z",
+      "mission_time": 21793,
+      "call": "CLogin",
+      "message": "Connection 1 established in 17 seconds."
+    },
+    {
+      "datetime": "2026-02-07T12:51:22Z",
+      "mission_time": 21826,
+      "call": "expect",
+      "message": "Attempt to read prompt string [Last login:] failed."
+    },
+    {
+      "datetime": "2026-02-07T12:51:22Z",
+      "mission_time": 21826,
+      "call": "login",
+      "message": "Login failed."
+    },
+    {
+      "datetime": "2026-02-07T12:51:52Z",
+      "mission_time": 21856,
+      "call": "expect",
+      "message": "Attempt to read prompt string [login:] failed."
+    },
+    {
+      "datetime": "2026-02-07T12:51:52Z",
+      "mission_time": 21856,
+      "call": "login",
+      "message": "Login prompt not received."
+    },
+    {
+      "datetime": "2026-02-07T12:52:12Z",
+      "mission_time": 21876,
+      "call": "CLogin",
+      "message": "Connection 2 established in 100 seconds."
+    },
+    {
+      "datetime": "2026-02-07T12:52:27Z",
+      "mission_time": 21891,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "datetime": "2026-02-07T12:52:34Z",
+      "mission_time": 21898,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 22 seconds]"
+    },
+    {
+      "datetime": "2026-02-07T12:52:40Z",
+      "mission_time": 21904,
+      "call": "RxConfig",
+      "message": "Downloading \"mission.cfg\" from host."
+    },
+    {
+      "datetime": "2026-02-07T12:52:53Z",
+      "mission_time": 21917,
+      "call": "RxConfig",
+      "message": "Download successful: [bytes:33, sec:10.5, bps:3]"
+    },
+    {
+      "datetime": "2026-02-07T12:52:56Z",
+      "mission_time": 21920,
+      "call": "WriteVitals_",
+      "message": "Writing vitals to \"23050.000.msg\"."
+    },
+    {
+      "datetime": "2026-02-07T12:53:02Z",
+      "mission_time": 21926,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23050.000.msg\" to host."
+    },
+    {
+      "datetime": "2026-02-07T12:53:23Z",
+      "mission_time": 21947,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:2454, sec:20.6, bps:119]"
+    },
+    {
+      "datetime": "2026-02-07T12:53:24Z",
+      "mission_time": 21948,
+      "call": "fmove",
+      "message": "Moved: 23050.000.msg -> archive/23050.000.msg"
+    },
+    {
+      "datetime": "2026-02-07T12:53:28Z",
+      "mission_time": 21952,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23050.2602071223.log\" to host."
+    },
+    {
+      "datetime": "2026-02-07T12:54:02Z",
+      "mission_time": 21986,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:6597, sec:34.1, bps:194]"
+    },
+    {
+      "datetime": "2026-02-07T12:54:03Z",
+      "mission_time": 21987,
+      "call": "fmove",
+      "message": "Moved: 23050.2602071223.log -> archive/23050.2602071223.log"
+    },
+    {
+      "datetime": "2026-02-07T12:54:04Z",
+      "mission_time": 21988,
+      "call": "UpLoad",
+      "message": "Files successfully uploaded: 2"
+    },
+    {
+      "datetime": "2026-02-07T12:54:04Z",
+      "mission_time": 21988,
+      "call": "UpLoad",
+      "message": "Upload complete."
+    },
+    {
+      "datetime": "2026-02-07T12:54:12Z",
+      "mission_time": 21996,
+      "call": "chat",
+      "message": "Expected string [logout] not received."
+    },
+    {
+      "datetime": "2026-02-07T12:54:12Z",
+      "mission_time": 21996,
+      "call": "logout",
+      "message": "Attempt to log-out failed."
+    },
+    {
+      "datetime": "2026-02-07T12:54:12Z",
+      "mission_time": 21996,
+      "call": "logout",
+      "message": "No carrier detected."
+    },
+    {
+      "datetime": "2026-02-07T12:54:12Z",
+      "mission_time": 21996,
+      "call": "Telemetry",
+      "message": "Telemetry cycle complete: PrfId=0 ConnectionAttempts=2  Connections=2"
+    },
+    {
+      "datetime": "2026-02-07T12:54:14Z",
+      "mission_time": 0,
+      "call": "DescentInit",
+      "message": "Deep profile 1 initiated at mission-time 21998sec."
+    },
+    {
+      "datetime": "2026-02-07T12:54:15Z",
+      "mission_time": 1,
+      "call": "DescentInit",
+      "message": "Surface pressure: -0.4dbars."
+    },
+    {
+      "datetime": "2026-02-07T12:54:15Z",
+      "mission_time": 1,
+      "call": "DescentInit",
+      "message": "Charge consumption model: OCV:14.8V Wake-Cycles:1206 Standby:86.3days Wake:1.9kC Sleep:0.0kC"
+    },
+    {
+      "datetime": "2026-02-07T12:54:27Z",
+      "mission_time": 13,
+      "call": "DescentInit",
+      "message": "Pneumatic humidity: 1010(5.6%) -> 1056(6.9%)"
+    },
+    {
+      "datetime": "2026-02-07T12:54:27Z",
+      "mission_time": 13,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->060 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 [887sec, 14.6Volts, 0.137Amps, CPT:887sec]"
+    },
+    {
+      "datetime": "2026-02-07T13:09:17Z",
+      "mission_time": 903,
+      "call": "DescentInit",
+      "message": "Air solenoid open: Barometer [196cnt,  11.5psi]  Pneumometer [ 99cnt,  11.6psi]"
+    },
+    {
+      "datetime": "2026-02-07T13:09:18Z",
+      "mission_time": 904,
+      "call": "Descent",
+      "message": "Pressure: 48.3"
+    },
+    {
+      "datetime": "2026-02-07T13:54:14Z",
+      "mission_time": 3600,
+      "call": "Descent",
+      "message": "Pressure: 441.3"
+    },
+    {
+      "datetime": "2026-02-07T14:54:14Z",
+      "mission_time": 7200,
+      "call": "Descent",
+      "message": "Pressure: 812.8"
+    },
+    {
+      "datetime": "2026-02-07T15:54:14Z",
+      "mission_time": 10800,
+      "call": "Descent",
+      "message": "Pressure: 990.2"
+    },
+    {
+      "datetime": "2026-02-07T16:54:14Z",
+      "mission_time": 14400,
+      "call": "Descent",
+      "message": "Pressure: 1025.9"
+    },
+    {
+      "datetime": "2026-02-07T16:54:15Z",
+      "mission_time": 14401,
+      "call": "ParkInit",
+      "message": "Charge consumption model: OCV:15.4V Wake-Cycles:1210 Standby:86.5days Wake:2.1kC Sensors:0.0kC"
+    },
+    {
+      "datetime": "2026-02-07T16:59:56Z",
+      "mission_time": 14742,
+      "call": "CtdPower",
+      "message": "[ 1026.09,  2.5879, 34.5357]"
+    },
+    {
+      "datetime": "2026-02-07T16:59:56Z",
+      "mission_time": 14742,
+      "call": "CtdPower",
+      "message": "CTD Power consumption [217VCnt 3ACnt]: 15.249Volts * 0.014Amps = 0.21Watts."
+    },
+    {
+      "datetime": "2026-02-07T16:59:56Z",
+      "mission_time": 14742,
+      "call": "ParkTerminate",
+      "message": "Piston Position:60 Vacuum:193 HumidityAd12:1002(5.3%) Vq:219 Aq:2 Vsbe:217 Asbe:3"
+    },
+    {
+      "datetime": "2026-02-07T17:00:18Z",
+      "mission_time": 14764,
+      "call": "ParkTerminate",
+      "message": "PTS: 1026.1dbars 2.5888C 34.5334PSU"
+    },
+    {
+      "datetime": "2026-02-07T17:00:18Z",
+      "mission_time": 14764,
+      "call": "GoDeepInit",
+      "message": "Charge consumption model: OCV:15.3V Wake-Cycles:1211 Standby:86.5days Wake:2.1kC Sensors:0.0kC"
+    },
+    {
+      "datetime": "2026-02-07T17:00:18Z",
+      "mission_time": 14764,
+      "call": "GoDeepInit",
+      "message": "Moving piston."
+    },
+    {
+      "datetime": "2026-02-07T17:00:18Z",
+      "mission_time": 14764,
+      "call": "PistonMoveAbsWTO",
+      "message": "060->012 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 015 014 013 012 [240sec, 14.9Volts, 0.056Amps, CPT:1127sec]"
+    },
+    {
+      "datetime": "2026-02-07T20:59:14Z",
+      "mission_time": 29100,
+      "call": "ProfileInit",
+      "message": "Charge consumption model: OCV:15.4V Wake-Cycles:1258 Standby:86.7days Wake:2.1kC Sensors:0.0kC"
+    },
+    {
+      "datetime": "2026-02-07T20:59:14Z",
+      "mission_time": 29100,
+      "call": "ProfileInit",
+      "message": "PrfId:001  Pressure:1915.6dbar  pTable[2]:1900dbar"
+    },
+    {
+      "datetime": "2026-02-07T20:59:16Z",
+      "mission_time": 29102,
+      "call": "PistonMoveAbsWTO",
+      "message": "012->034 013 014 015 016 017 [30sec, 14.5Volts, 0.611Amps, CPT:1157sec]"
+    },
+    {
+      "datetime": "2026-02-07T20:59:57Z",
+      "mission_time": 29143,
+      "call": "PistonMoveAbsWTO",
+      "message": "017->034 018 019 020 021 022 [30sec, 14.2Volts, 0.601Amps, CPT:1187sec]"
+    },
+    {
+      "datetime": "2026-02-07T21:00:39Z",
+      "mission_time": 29185,
+      "call": "PistonMoveAbsWTO",
+      "message": "022->034 023 024 025 026 027 [30sec, 14.1Volts, 0.591Amps, CPT:1217sec]"
+    },
+    {
+      "datetime": "2026-02-07T21:01:21Z",
+      "mission_time": 29227,
+      "call": "PistonMoveAbsWTO",
+      "message": "027->034 028 029 030 031 032 [30sec, 14.0Volts, 0.589Amps, CPT:1247sec]"
+    },
+    {
+      "datetime": "2026-02-07T21:02:03Z",
+      "mission_time": 29269,
+      "call": "PistonMoveAbsWTO",
+      "message": "032->034 033 034 [6sec, 14.1Volts, 0.605Amps, CPT:1253sec]"
+    },
+    {
+      "datetime": "2026-02-07T21:03:05Z",
+      "mission_time": 29331,
+      "call": "Profile",
+      "message": "Sample 0 initiated at 1900.1dbars for bin 2 [1900dbars].  PTS: 1897.5dbars 2.0189C 34.7442PSU"
+    },
+    {
+      "datetime": "2026-02-07T21:10:03Z",
+      "mission_time": 29749,
+      "call": "Profile",
+      "message": "Sample 1 initiated at 1850.8dbars for bin 3 [1850dbars].  PTS: 1848.4dbars 2.0766C 34.7425PSU"
+    },
+    {
+      "datetime": "2026-02-07T21:17:35Z",
+      "mission_time": 30201,
+      "call": "Profile",
+      "message": "Sample 2 initiated at 1801.0dbars for bin 4 [1800dbars].  PTS: 1798.8dbars 2.1211C 34.7398PSU"
+    },
+    {
+      "datetime": "2026-02-07T21:25:41Z",
+      "mission_time": 30687,
+      "call": "Profile",
+      "message": "Sample 3 initiated at 1750.7dbars for bin 5 [1750dbars].  PTS: 1748.6dbars 2.1525C 34.7357PSU"
+    },
+    {
+      "datetime": "2026-02-07T21:34:19Z",
+      "mission_time": 31205,
+      "call": "Profile",
+      "message": "Sample 4 initiated at 1700.6dbars for bin 6 [1700dbars].  PTS: 1698.7dbars 2.1948C 34.7322PSU"
+    },
+    {
+      "datetime": "2026-02-07T21:43:53Z",
+      "mission_time": 31779,
+      "call": "Profile",
+      "message": "Sample 5 initiated at 1651.0dbars for bin 7 [1650dbars].  PTS: 1649.3dbars 2.2382C 34.7270PSU"
+    },
+    {
+      "datetime": "2026-02-07T21:50:19Z",
+      "mission_time": 32165,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 44 (v=0.074dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-07T21:50:20Z",
+      "mission_time": 32166,
+      "call": "PistonMoveAbsWTO",
+      "message": "034->044 035 036 037 038 039 [30sec, 14.4Volts, 0.538Amps, CPT:1283sec]"
+    },
+    {
+      "datetime": "2026-02-07T21:51:01Z",
+      "mission_time": 32207,
+      "call": "PistonMoveAbsWTO",
+      "message": "039->044 040 041 042 043 044 [27sec, 14.2Volts, 0.532Amps, CPT:1310sec]"
+    },
+    {
+      "datetime": "2026-02-07T21:54:02Z",
+      "mission_time": 32388,
+      "call": "Profile",
+      "message": "Sample 6 initiated at 1599.9dbars for bin 8 [1600dbars].  PTS: 1597.6dbars 2.2446C 34.7150PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:01:46Z",
+      "mission_time": 32852,
+      "call": "Profile",
+      "message": "Sample 7 initiated at 1550.5dbars for bin 9 [1550dbars].  PTS: 1548.4dbars 2.3273C 34.7129PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:10:24Z",
+      "mission_time": 33370,
+      "call": "Profile",
+      "message": "Sample 8 initiated at 1500.6dbars for bin 10 [1500dbars].  PTS: 1498.8dbars 2.3425C 34.7030PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:20:09Z",
+      "mission_time": 33955,
+      "call": "Profile",
+      "message": "Sample 9 initiated at 1450.9dbars for bin 11 [1450dbars].  PTS: 1449.3dbars 2.3697C 34.6929PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:21:04Z",
+      "mission_time": 34010,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 54 (v=0.079dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-07T22:21:05Z",
+      "mission_time": 34011,
+      "call": "PistonMoveAbsWTO",
+      "message": "044->054 045 046 047 048 049 [30sec, 14.4Volts, 0.497Amps, CPT:1340sec]"
+    },
+    {
+      "datetime": "2026-02-07T22:21:46Z",
+      "mission_time": 34052,
+      "call": "PistonMoveAbsWTO",
+      "message": "049->054 050 051 052 053 054 [25sec, 14.3Volts, 0.492Amps, CPT:1365sec]"
+    },
+    {
+      "datetime": "2026-02-07T22:22:22Z",
+      "mission_time": 34088,
+      "call": "PistonMoveAbsWTO",
+      "message": "053->054 054 [1sec, 14.3Volts, 0.497Amps, CPT:1366sec]"
+    },
+    {
+      "datetime": "2026-02-07T22:28:38Z",
+      "mission_time": 34464,
+      "call": "Profile",
+      "message": "Sample 10 initiated at 1400.1dbars for bin 12 [1400dbars].  PTS: 1398.0dbars 2.3986C 34.6817PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:37:28Z",
+      "mission_time": 34994,
+      "call": "Profile",
+      "message": "Sample 11 initiated at 1350.5dbars for bin 13 [1350dbars].  PTS: 1348.7dbars 2.4409C 34.6692PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:46:50Z",
+      "mission_time": 35556,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 64 (v=0.077dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-07T22:46:51Z",
+      "mission_time": 35557,
+      "call": "PistonMoveAbsWTO",
+      "message": "054->064 055 056 057 058 059 [30sec, 14.5Volts, 0.465Amps, CPT:1396sec]"
+    },
+    {
+      "datetime": "2026-02-07T22:47:54Z",
+      "mission_time": 35620,
+      "call": "Profile",
+      "message": "Sample 12 initiated at 1300.7dbars for bin 14 [1300dbars].  PTS: 1298.7dbars 2.4741C 34.6513PSU"
+    },
+    {
+      "datetime": "2026-02-07T22:47:54Z",
+      "mission_time": 35620,
+      "call": "PistonMoveAbsWTO",
+      "message": "059->064 060 061 062 063 064 [26sec, 14.3Volts, 0.464Amps, CPT:1422sec]"
+    },
+    {
+      "datetime": "2026-02-07T22:55:41Z",
+      "mission_time": 36087,
+      "call": "Profile",
+      "message": "Sample 13 initiated at 1250.3dbars for bin 15 [1250dbars].  PTS: 1248.1dbars 2.4864C 34.6310PSU"
+    },
+    {
+      "datetime": "2026-02-07T23:03:36Z",
+      "mission_time": 36562,
+      "call": "Profile",
+      "message": "Sample 14 initiated at 1200.4dbars for bin 16 [1200dbars].  PTS: 1198.3dbars 2.5350C 34.6136PSU"
+    },
+    {
+      "datetime": "2026-02-07T23:11:52Z",
+      "mission_time": 37058,
+      "call": "Profile",
+      "message": "Sample 15 initiated at 1150.3dbars for bin 17 [1150dbars].  PTS: 1148.3dbars 2.5770C 34.6012PSU"
+    },
+    {
+      "datetime": "2026-02-07T23:20:53Z",
+      "mission_time": 37599,
+      "call": "Profile",
+      "message": "Sample 16 initiated at 1100.2dbars for bin 18 [1100dbars].  PTS: 1098.5dbars 2.5608C 34.5788PSU"
+    },
+    {
+      "datetime": "2026-02-07T23:28:03Z",
+      "mission_time": 38029,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 74 (v=0.071dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-07T23:28:04Z",
+      "mission_time": 38030,
+      "call": "PistonMoveAbsWTO",
+      "message": "064->074 065 066 067 068 069 [30sec, 14.6Volts, 0.409Amps, CPT:1452sec]"
+    },
+    {
+      "datetime": "2026-02-07T23:28:45Z",
+      "mission_time": 38071,
+      "call": "PistonMoveAbsWTO",
+      "message": "069->074 070 071 072 073 074 [24sec, 14.4Volts, 0.419Amps, CPT:1476sec]"
+    },
+    {
+      "datetime": "2026-02-07T23:31:10Z",
+      "mission_time": 38216,
+      "call": "Profile",
+      "message": "Sample 17 initiated at 1050.8dbars for bin 19 [1050dbars].  PTS: 1048.6dbars 2.6312C 34.5574PSU"
+    },
+    {
+      "datetime": "2026-02-07T23:40:00Z",
+      "mission_time": 38746,
+      "call": "Profile",
+      "message": "Sample 18 initiated at 1000.5dbars for bin 20 [1000dbars].  PTS: 998.8dbars 2.6493C 34.5212PSU"
+    },
+    {
+      "datetime": "2026-02-07T23:44:04Z",
+      "mission_time": 38990,
+      "call": "Sbe41cpStartCP",
+      "message": "Continuous profile started."
+    },
+    {
+      "datetime": "2026-02-07T23:49:06Z",
+      "mission_time": 39292,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 84 (v=0.076dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-07T23:49:06Z",
+      "mission_time": 39292,
+      "call": "PistonMoveAbsWTO",
+      "message": "074->084 075 076 077 078 079 [30sec, 14.5Volts, 0.378Amps, CPT:1506sec]"
+    },
+    {
+      "datetime": "2026-02-07T23:49:47Z",
+      "mission_time": 39333,
+      "call": "PistonMoveAbsWTO",
+      "message": "079->084 080 081 082 083 084 [26sec, 14.3Volts, 0.376Amps, CPT:1532sec]"
+    },
+    {
+      "datetime": "2026-02-08T00:20:22Z",
+      "mission_time": 41168,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 94 (v=0.077dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-08T00:20:22Z",
+      "mission_time": 41168,
+      "call": "PistonMoveAbsWTO",
+      "message": "084->094 085 086 087 088 089 [30sec, 14.5Volts, 0.342Amps, CPT:1562sec]"
+    },
+    {
+      "datetime": "2026-02-08T00:21:03Z",
+      "mission_time": 41209,
+      "call": "PistonMoveAbsWTO",
+      "message": "089->094 090 091 092 093 094 [26sec, 14.4Volts, 0.335Amps, CPT:1588sec]"
+    },
+    {
+      "datetime": "2026-02-08T00:46:34Z",
+      "mission_time": 42740,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 104 (v=0.077dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-08T00:46:34Z",
+      "mission_time": 42740,
+      "call": "PistonMoveAbsWTO",
+      "message": "094->104 095 096 097 098 099 [30sec, 14.5Volts, 0.310Amps, CPT:1618sec]"
+    },
+    {
+      "datetime": "2026-02-08T00:47:15Z",
+      "mission_time": 42781,
+      "call": "PistonMoveAbsWTO",
+      "message": "099->104 100 101 102 103 104 [24sec, 14.4Volts, 0.303Amps, CPT:1642sec]"
+    },
+    {
+      "datetime": "2026-02-08T01:07:45Z",
+      "mission_time": 44011,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 114 (v=0.080dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-08T01:07:45Z",
+      "mission_time": 44011,
+      "call": "PistonMoveAbsWTO",
+      "message": "104->114 105 106 107 108 109 [30sec, 14.5Volts, 0.282Amps, CPT:1672sec]"
+    },
+    {
+      "datetime": "2026-02-08T01:08:26Z",
+      "mission_time": 44052,
+      "call": "PistonMoveAbsWTO",
+      "message": "109->114 110 111 112 113 114 [24sec, 14.5Volts, 0.283Amps, CPT:1696sec]"
+    },
+    {
+      "datetime": "2026-02-08T01:43:58Z",
+      "mission_time": 46184,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 124 (v=0.077dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-08T01:43:58Z",
+      "mission_time": 46184,
+      "call": "PistonMoveAbsWTO",
+      "message": "114->124 115 116 117 118 119 [30sec, 14.6Volts, 0.232Amps, CPT:1726sec]"
+    },
+    {
+      "datetime": "2026-02-08T01:44:38Z",
+      "mission_time": 46224,
+      "call": "PistonMoveAbsWTO",
+      "message": "119->124 120 121 122 123 124 [24sec, 14.5Volts, 0.230Amps, CPT:1750sec]"
+    },
+    {
+      "datetime": "2026-02-08T02:10:07Z",
+      "mission_time": 47753,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 134 (v=0.073dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-08T02:10:07Z",
+      "mission_time": 47753,
+      "call": "PistonMoveAbsWTO",
+      "message": "124->134 125 126 127 128 129 [30sec, 14.6Volts, 0.196Amps, CPT:1780sec]"
+    },
+    {
+      "datetime": "2026-02-08T02:10:47Z",
+      "mission_time": 47793,
+      "call": "PistonMoveAbsWTO",
+      "message": "129->134 130 131 132 133 134 [22sec, 14.6Volts, 0.199Amps, CPT:1802sec]"
+    },
+    {
+      "datetime": "2026-02-08T02:21:12Z",
+      "mission_time": 48418,
+      "call": "AscentControlAgent",
+      "message": "Bouyancy nudge to 144 (v=0.076dbar/sec)."
+    },
+    {
+      "datetime": "2026-02-08T02:21:12Z",
+      "mission_time": 48418,
+      "call": "PistonMoveAbsWTO",
+      "message": "134->144 135 136 137 138 139 [30sec, 14.6Volts, 0.184Amps, CPT:1832sec]"
+    },
+    {
+      "datetime": "2026-02-08T02:21:52Z",
+      "mission_time": 48458,
+      "call": "PistonMoveAbsWTO",
+      "message": "139->144 140 141 142 143 144 [23sec, 14.6Volts, 0.187Amps, CPT:1855sec]"
+    },
+    {
+      "datetime": "2026-02-08T02:36:29Z",
+      "mission_time": 49335,
+      "call": "SurfaceDetect",
+      "message": "SurfacePressure:-0.4dbars Pressure:3.3dbars PistonPosition:144"
+    },
+    {
+      "datetime": "2026-02-08T02:36:29Z",
+      "mission_time": 49335,
+      "call": "Sbe41cpStopCP",
+      "message": "Continuous profile stopped."
+    },
+    {
+      "datetime": "2026-02-08T02:36:33Z",
+      "mission_time": 49339,
+      "call": "PistonMoveAbsWTO",
+      "message": "144->166 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 [113sec, 14.6Volts, 0.158Amps, CPT:1968sec]"
+    },
+    {
+      "datetime": "2026-02-08T02:38:31Z",
+      "mission_time": 49457,
+      "call": "chat",
+      "message": "Expected string [S>] not received."
+    },
+    {
+      "datetime": "2026-02-08T02:40:09Z",
+      "mission_time": 49555,
+      "call": "Sbe41cpBinAverage",
+      "message": "Finished averaging 10357 samples in 93 seconds."
+    },
+    {
+      "datetime": "2026-02-08T02:40:14Z",
+      "mission_time": 49560,
+      "call": "Sbe41cpUploadCP_",
+      "message": "Sbe41cpSerNo[18724] NSample[10357] NBin[493]"
+    },
+    {
+      "datetime": "2026-02-08T02:40:45Z",
+      "mission_time": 49591,
+      "call": "Sbe41cpUploadCP_",
+      "message": "Continuous profile uploaded [493 lines]."
+    }
+  ]
+}

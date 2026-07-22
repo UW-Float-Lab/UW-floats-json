@@ -1,0 +1,534 @@
+(Mar 24 2026 22:35:26,    2945 sec) SelfTest()           Executing self-test for ApfId 23394. [FwRev 102725]
+(Mar 24 2026 22:35:26,    2945 sec) SelfTest()           Initiating MSC power-up.
+(Mar 24 2026 22:35:33,    2952 sec) SelfTest()           Apf11 Family:0x36 Group:0x0000 SerNo:0x037ca52a Crc:0x5c SeqNo:394
+(Mar 24 2026 22:35:34,    2953 sec) SelfTest()           Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]
+(Mar 24 2026 22:35:34,    2953 sec) SelfTest()           Passed: FatFs volume: size(7438MB) sector-size(512B) block-size(512B)
+(Mar 24 2026 22:35:35,    2954 sec) SelfTest()           Passed: FatFs volume reconditioned.
+(Mar 24 2026 22:35:35,    2954 sec) PistonMoveAbsWTO()    231->227 230 229 228 227 [18sec, 15.1Volts, 0.140Amps, CPT:18sec]
+(Mar 24 2026 22:35:53,    2972 sec) PistonMoveAbsWTO()    227->231 228 229 230 231 [16sec, 15.1Volts, 0.152Amps, CPT:34sec]
+(Mar 24 2026 22:36:09,    2988 sec) SelfTest()           Passed: Timed piston movements from 231 to 227 counts and back.
+(Mar 24 2026 22:36:10,    2989 sec) SelfTest()           Passed: Internal pressure [211, 12.4psi] less than threshold [237, 13.9psi].
+(Mar 24 2026 22:36:11,    2990 sec) SelfTest()           Passed: Response received from SBE41cp.
+(Mar 24 2026 22:36:18,    2997 sec) SelfTest()           Passed: Sbe41cp SerNo: 20389
+(Mar 24 2026 22:36:29,    3008 sec) SelfTest()           Passed: SBE41cp (SerNo 20389) FwRev accepted: [7.2.5]
+(Mar 24 2026 22:36:29,    3008 sec) SelfTest()           Passed: SBE41cp (SerNo 20389) firmware build-date accepted: [Oct 14 2015 20:03:56]
+(Mar 24 2026 22:36:29,    3008 sec) SelfTest()           Passed: SBE41cp (SerNo 20389) firmware variant accepted: [CP UW]
+(Mar 24 2026 22:36:37,    3016 sec) Sbe41cpConfig()      Configuration successful.
+(Mar 24 2026 22:36:46,    3025 sec) Sbe41cpEnablePts()   PTS output enabled during CP mode.
+(Mar 24 2026 22:36:55,    3034 sec) Sbe41cpTsWait()      Configuration successful.
+(Mar 24 2026 22:36:58,    3037 sec) SelfTest()           Passed: SBE41cp configuration was successful.
+(Mar 24 2026 22:37:17,    3056 sec) Sbe41cpPOffSet()     Configuration successful: POffset(0.0).
+(Mar 24 2026 22:37:17,    3056 sec) SelfTest()           Passed: SBE41cp pressure-offset initialized to zero.
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()      SBE 41CP V 7.2.5  SERIAL NO. 20389
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()      temperature: 30-Jul-25
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          TA0 = -8.216114e-04
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          TA1 = 2.920837e-04
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          TA2 = -3.752597e-06
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          TA3 = 1.488226e-07
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()      conductivity: 30-Jul-25
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          G = -1.021987e+00
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          H = 1.571363e-01
+(Mar 24 2026 22:37:24,    3063 sec) Sbe41cpLogCal()          I = -3.131421e-04
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          J = 4.689995e-05
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          CTCOR = 3.250000e-06
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          CPCOR = -9.570000e-08
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          WBOTC = 3.588313e-07
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()      pressure S/N = 12462759, range = 2900 psia:  17-Jul-25
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          PA0 = -5.425776e-02
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          PA1 = 3.931778e-04
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          PA2 = -3.220255e-13
+(Mar 24 2026 22:37:25,    3064 sec) Sbe41cpLogCal()          PTCA0 = 3.573086e+02
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTCA1 = 6.102344e+00
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTCA2 = -5.168784e-01
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTCB0 = 3.103388e+05
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTCB1 = 1.080204e+01
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTCB2 = 1.106152e-01
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTHA0 = 2.893180e+02
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTHA1 = -6.180763e-05
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          PTHA2 = -8.078656e-13
+(Mar 24 2026 22:37:26,    3065 sec) Sbe41cpLogCal()          POFFSET = 0.000000e+00
+(Mar 24 2026 22:37:36,    3075 sec) SelfTest()           Passed: LBT model: 9523N
+(Mar 24 2026 22:37:37,    3076 sec) SelfTest()           Warning: Unexpected LBT firmare: [DB20004] != [DB23001] (expected).
+(Mar 24 2026 22:37:38,    3077 sec) IrModemConfigure()   Modem configured for fixed (19200) baud rate.
+(Mar 24 2026 22:37:38,    3077 sec) IrModemConfigure()   Configuration saved to modem's NVRAM.
+(Mar 24 2026 22:37:38,    3077 sec) IrModemConfigure()   Modem configuration successful.
+(Mar 24 2026 22:37:38,    3077 sec) SelfTest()           Passed: LBT configuration was successful.
+(Mar 24 2026 22:37:39,    3078 sec) SelfTest()           Passed: LBT IMEI: 300125062455480
+(Mar 24 2026 22:37:45,    3084 sec) SelfTest()           Passed: SIM card ICCID: 8988169234006245658
+(Mar 24 2026 22:37:46,    3085 sec) ConfigGarmin15()     Garmin GPS15 configuration initiated.
+(Mar 24 2026 22:37:55,    3094 sec) ConfigGarmin15()     Garmin GPS15 successfully configured.
+(Mar 24 2026 22:38:01,    3100 sec) SelfTest()           Passed: Optode FwRev accepted: [4.9.1]
+(Mar 24 2026 22:38:04,    3103 sec) SelfTest()           Passed: Optode SerNo: 4369
+(Mar 24 2026 22:38:18,    3117 sec) OptodeConfig()       Configuration successful.
+(Mar 24 2026 22:38:18,    3117 sec) SelfTest()           Passed: Optode configuration was successful.
+(Mar 24 2026 22:38:23,    3122 sec) OptodeLogConfig()    
+(Mar 24 2026 22:38:23,    3122 sec) OptodeLogConfig()    Product Name 4330 4369 Oxygen Optode
+(Mar 24 2026 22:38:23,    3122 sec) OptodeLogConfig()    Product Number 4330 4369 4330
+(Mar 24 2026 22:38:24,    3123 sec) OptodeLogConfig()    Serial Number 4330 4369 4369
+(Mar 24 2026 22:38:24,    3123 sec) OptodeLogConfig()    SW ID 4330 4369 1940006
+(Mar 24 2026 22:38:24,    3123 sec) OptodeLogConfig()    SW Version 4330 4369 4 9 1
+(Mar 24 2026 22:38:24,    3123 sec) OptodeLogConfig()    HW ID 1 4330 4369 3969525B
+(Mar 24 2026 22:38:24,    3123 sec) OptodeLogConfig()    HW Version 1 4330 4369 Rev2
+(Mar 24 2026 22:38:25,    3124 sec) OptodeLogConfig()    HW ID 2 4330 4369 3969524
+(Mar 24 2026 22:38:25,    3124 sec) OptodeLogConfig()    HW Version 2 4330 4369 Rev4
+(Mar 24 2026 22:38:25,    3124 sec) OptodeLogConfig()    HW ID 3 4330 4369 3969543
+(Mar 24 2026 22:38:25,    3124 sec) OptodeLogConfig()    HW Version 3 4330 4369 Rev4
+(Mar 24 2026 22:38:25,    3124 sec) OptodeLogConfig()    System Control 4330 4369 0 0 0
+(Mar 24 2026 22:38:25,    3124 sec) OptodeLogConfig()    Production Date 4330 4369 2023-10-13
+(Mar 24 2026 22:38:26,    3125 sec) OptodeLogConfig()    Last Service 4330 4369 
+(Mar 24 2026 22:38:26,    3125 sec) OptodeLogConfig()    Last Calibration 4330 4369 
+(Mar 24 2026 22:38:26,    3125 sec) OptodeLogConfig()    Calibration Interval[Days] 4330 4369 0
+(Mar 24 2026 22:38:26,    3125 sec) OptodeLogConfig()    Node Description 4330 4369 Oxygen Optode #4369
+(Mar 24 2026 22:38:26,    3125 sec) OptodeLogConfig()    Owner 4330 4369 
+(Mar 24 2026 22:38:26,    3125 sec) OptodeLogConfig()    Baudrate 4330 4369 9600
+(Mar 24 2026 22:38:27,    3126 sec) OptodeLogConfig()    Flow Control 4330 4369 None
+(Mar 24 2026 22:38:27,    3126 sec) OptodeLogConfig()    Enable Comm Indicator 4330 4369 Yes
+(Mar 24 2026 22:38:27,    3126 sec) OptodeLogConfig()    Comm Timeout 4330 4369 1 min
+(Mar 24 2026 22:38:27,    3126 sec) OptodeLogConfig()    Salinity[PSU] 4330 4369 0.000000E+00
+(Mar 24 2026 22:38:27,    3126 sec) OptodeLogConfig()    TempCoef 4330 4369 2.432635E+01 -3.102697E-02 2.897128E-06 -4.263637E-09 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:28,    3127 sec) OptodeLogConfig()    PTC0Coef 4330 4369 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:28,    3127 sec) OptodeLogConfig()    PTC1Coef 4330 4369 1.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:28,    3127 sec) OptodeLogConfig()    PhaseCoef 4330 4369 -1.588000E+00 1.000000E+00 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:28,    3127 sec) OptodeLogConfig()    FoilID 4330 4369 2310M
+(Mar 24 2026 22:38:28,    3127 sec) OptodeLogConfig()    FoilCoefA 4330 4369 -4.429471E-06 -9.934120E-06 2.539297E-03 -2.623883E-01 9.495663E-04 -1.385170E-06 1.384506E+01 -7.820107E-02 2.077827E-04 1.951742E-07 -3.815226E+02 2.968714E+00 -4.551691E-03 -3.449760E-04
+(Mar 24 2026 22:38:29,    3128 sec) OptodeLogConfig()    FoilCoefB 4330 4369 5.200052E-06 4.547302E+03 -4.453296E+01 -1.936771E-01 2.230949E-02 -4.134188E-04 1.497347E-06 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:30,    3129 sec) OptodeLogConfig()    FoilPolyDegT 4330 4369 1 0 0 0 1 2 0 1 2 3 0 1 2 3 4 0 1 2 3 4 5 0 0 0 0 0 0 0
+(Mar 24 2026 22:38:30,    3129 sec) OptodeLogConfig()    FoilPolyDegO 4330 4369 4 5 4 3 3 3 2 2 2 2 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+(Mar 24 2026 22:38:30,    3129 sec) OptodeLogConfig()    SVUFoilCoef 4330 4369 2.842072E-03 1.198359E-04 2.306889E-06 1.945593E+02 -2.272694E-01 -4.354879E+01 3.884244E+00
+(Mar 24 2026 22:38:30,    3129 sec) OptodeLogConfig()    ConcCoef 4330 4369 0.000000E+00 1.000000E+00
+(Mar 24 2026 22:38:31,    3130 sec) OptodeLogConfig()    NomAirPress[hPa] 4330 4369 1.013250E+03
+(Mar 24 2026 22:38:31,    3130 sec) OptodeLogConfig()    NomAirMix 4330 4369 2.094600E-01
+(Mar 24 2026 22:38:31,    3130 sec) OptodeLogConfig()    CalDataSat[Deg] 4330 4369 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:31,    3130 sec) OptodeLogConfig()    CalDataAPress[hPa] 4330 4369 1.013250E+03
+(Mar 24 2026 22:38:31,    3130 sec) OptodeLogConfig()    CalDataZero[Deg] 4330 4369 0.000000E+00 0.000000E+00
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    Enable RedReference 4330 4369 Yes
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    RedReference Interval 4330 4369 1
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    Mode 4330 4369 Smart Sensor Terminal
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    Enable Sleep 4330 4369 Yes
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    Enable Polled Mode 4330 4369 No
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    Enable Text 4330 4369 Yes
+(Mar 24 2026 22:38:32,    3131 sec) OptodeLogConfig()    Enable Decimalformat 4330 4369 No
+(Mar 24 2026 22:38:33,    3132 sec) OptodeLogConfig()    Analog TempLimit[Deg.C] 4330 4369 -5.000000E+00 3.500000E+01
+(Mar 24 2026 22:38:33,    3132 sec) OptodeLogConfig()    Analog ConcLimit[uM] 4330 4369 0.000000E+00 8.000000E+02
+(Mar 24 2026 22:38:33,    3132 sec) OptodeLogConfig()    Analog SatLimit[%] 4330 4369 0.000000E+00 2.000000E+02
+(Mar 24 2026 22:38:33,    3132 sec) OptodeLogConfig()    Analog PhaseLimit[Deg.] 4330 4369 1.000000E+01 7.000000E+01
+(Mar 24 2026 22:38:33,    3132 sec) OptodeLogConfig()    Analog Output 4330 4369 O2Concentration
+(Mar 24 2026 22:38:34,    3133 sec) OptodeLogConfig()    Analog1 Coef 4330 4369 0.000000E+00 1.000000E+00
+(Mar 24 2026 22:38:34,    3133 sec) OptodeLogConfig()    Analog2 Coef 4330 4369 0.000000E+00 1.000000E+00
+(Mar 24 2026 22:38:34,    3133 sec) OptodeLogConfig()    Enable AirSaturation 4330 4369 Yes
+(Mar 24 2026 22:38:34,    3133 sec) OptodeLogConfig()    Enable Rawdata 4330 4369 Yes
+(Mar 24 2026 22:38:34,    3133 sec) OptodeLogConfig()    Enable Temperature 4330 4369 Yes
+(Mar 24 2026 22:38:34,    3133 sec) OptodeLogConfig()    Enable HumidityComp 4330 4369 Yes
+(Mar 24 2026 22:38:35,    3134 sec) OptodeLogConfig()    Enable SVUformula 4330 4369 Yes
+(Mar 24 2026 22:38:35,    3134 sec) OptodeLogConfig()    Enable Burn-In Mode 4330 4369 No
+(Mar 24 2026 22:38:35,    3134 sec) OptodeLogConfig()    Interval[s] 4330 4369 3.000000E+00
+(Mar 24 2026 22:38:35,    3134 sec) OptodeLogConfig()    Location 4330 4369 
+(Mar 24 2026 22:38:35,    3134 sec) OptodeLogConfig()    Geographic Position 4330 4369 60.323605,5.37225
+(Mar 24 2026 22:38:35,    3134 sec) OptodeLogConfig()    Vertical Position 4330 4369 
+(Mar 24 2026 22:38:36,    3135 sec) OptodeLogConfig()    Reference 4330 4369 
+(Mar 24 2026 22:38:36,    3135 sec) SelfTest()           Passed: Optode configuration was successfully logged.
+(Mar 24 2026 22:38:41,    3140 sec) SelfTest()           Passed: MSC configured for ISUS and DURA sensors.
+(Mar 24 2026 22:38:44,    3143 sec) SelfTest()           Passed: MSC initialization successful.
+(Mar 24 2026 22:38:45,    3144 sec) SelfTest()           Passed: MSC RTC initialized.
+(Mar 24 2026 22:38:47,    3146 sec) DuraConfigLog_()     H, Datalogger Serial Num , SN:3025
+(Mar 24 2026 22:38:47,    3146 sec) DuraConfigLog_()     H, Application      Name , MoSoS v5.1.7 MSC3 1290 revB
+(Mar 24 2026 22:38:47,    3146 sec) DuraConfigLog_()     H, App Build        Date , Jun  6 2025, 20:24:34
+(Mar 24 2026 22:38:47,    3146 sec) DuraConfigLog_()     H, Power Up Time   (GMT) , 03/24/2026 22:38:37
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, Current  Time   (GMT) , 03/24/2026 22:38:46
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, Serial Inactive Sleep , 30 sec
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, MSC3 Info             , Tiva 1290 running MoSoS v5
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, Storage          Size , 973504
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, Storage          Left , 99.84%
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, WatchDog      Counter , 0
+(Mar 24 2026 22:38:48,    3147 sec) DuraConfigLog_()     H, System Reset  Counter , 0
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, System Error  Counter , 0
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, Last System     Error , 0
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, Last System ErrorTime , 03/24/2026 22:38:46
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, DURA  Error   Counter , 0
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, Last DURA       Error , 0
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, Last DURA Error  Time , 01/01/1900 06:00:00
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, DURA Sample   Counter , 0
+(Mar 24 2026 22:38:49,    3148 sec) DuraConfigLog_()     H, Last Sample Rec. Time , 01/01/1900 06:00:00
+(Mar 24 2026 22:38:53,    3152 sec) SelfTest()           Passed: Query for DURA configuration.
+(Mar 24 2026 22:38:55,    3154 sec) SelfTest()           Passed: DURA serial number accepted: [3025]
+(Mar 24 2026 22:38:59,    3158 sec) SelfTest()           Passed: DURA FwRev accepted: [Jun  6 2025, 20:24:34]
+(Mar 24 2026 22:39:01,    3160 sec) MscCalFile_()        sensor_SN = 2099
+(Mar 24 2026 22:39:01,    3160 sec) MscCalFile_()        pH_CalFile = ae gdf2099_calibration_20251229.txt
+(Mar 24 2026 22:39:01,    3160 sec) MscCalFile_()        PT_Cal_date = 12/02/2025
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        k0_Cal_date = 12/24/2025
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        k0_SW=-1.495760
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        k2[0]=-9.11341e-04
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        k2[1]=-4.91417e-08
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        k2[2]=5.68553e-11
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        k2[3]=-2.32626e-14
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        fp[0]=-1.49560e+00
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        fp[1]=-7.03498e-06
+(Mar 24 2026 22:39:02,    3161 sec) MscCalFile_()        fp[2]=1.34115e-08
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[3]=-2.56549e-11
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[4]=2.06337e-14
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[5]=-7.45437e-18
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[6]=1.02317e-21
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[7]=0.00000e+00
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[8]=0.00000e+00
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        fp[9]=0.00000e+00
+(Mar 24 2026 22:39:03,    3162 sec) MscCalFile_()        CRC(0x4df0) for DURA calibration file confirmed.
+(Mar 24 2026 22:39:04,    3163 sec) SelfTest()           Passed: Upload of DURA calibration file successful.
+(Mar 24 2026 22:39:06,    3165 sec) SelfTest()           Passed: DURA sample successful.
+(Mar 24 2026 22:39:08,    3167 sec) IsusConfigLog_()     H, Datalogger Serial Num , SN:3025
+(Mar 24 2026 22:39:09,    3168 sec) IsusConfigLog_()     H, Application      Name , MoSoS v5.1.7 MSC3 1290 revB
+(Mar 24 2026 22:39:09,    3168 sec) IsusConfigLog_()     H, App Build        Date , Jun  6 2025, 20:24:34
+(Mar 24 2026 22:39:09,    3168 sec) IsusConfigLog_()     H, Power Up Time   (GMT) , 03/24/2026 22:38:37
+(Mar 24 2026 22:39:09,    3168 sec) IsusConfigLog_()     H, Current  Time   (GMT) , 03/24/2026 22:39:08
+(Mar 24 2026 22:39:09,    3168 sec) IsusConfigLog_()     H, Serial Inactive Sleep , 30 sec
+(Mar 24 2026 22:39:09,    3168 sec) IsusConfigLog_()     H, MSC3 Info             , Tiva 1290 running MoSoS v5
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, Storage          Size , 973504
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, Storage          Left , 99.84%
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, WatchDog      Counter , 0
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, System Reset  Counter , 0
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, System Error  Counter , 0
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, Last System     Error , 0
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, Last System ErrorTime , 03/24/2026 22:39:08
+(Mar 24 2026 22:39:10,    3169 sec) IsusConfigLog_()     H, ISUS  Error   Counter , 0
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Last ISUS       Error , 0
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Last ISUS Error  Time , 01/01/1900 06:00:00
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, ISUS Sample   Counter , 0
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Last Sample Rec. Time , 01/01/1900 06:00:00
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Fiberlite    Odometer , 00:19:15
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Fiberlite      Cycles , 283
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Spec Intensity LampON , 5000
+(Mar 24 2026 22:39:11,    3170 sec) IsusConfigLog_()     H, Spec Integration Time , 450
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Spec Pre  scans taken , 2
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Spec Lite scans taken , 3
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Spec Dark scans taken , 1
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Calibration      Date , 12/10/2025
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Sw Calibration   Temp , 19.74
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Wavelength Fit  Range , 217.281 <-> 240.333
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Pixel Fit       Range , 34 <-> 63
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Fitted Concentrations , 2
+(Mar 24 2026 22:39:12,    3171 sec) IsusConfigLog_()     H, Baseline        Model , (ax + b)
+(Mar 24 2026 22:39:13,    3172 sec) IsusConfigLog_()     H, Br Temp  Compensation , ENABLED
+(Mar 24 2026 22:39:13,    3172 sec) IsusConfigLog_()     H, Bromide Term in Model , will be FIXED (to external CTD value)
+(Mar 24 2026 22:39:13,    3172 sec) IsusConfigLog_()     H, Zeiss Coefficient Vals, 1.896680e+02,7.850170e-01,1.225970e-04,-2.996740e-07,0.000000e+00
+(Mar 24 2026 22:39:16,    3175 sec) SelfTest()           Passed: Query for ISUS configuration.
+(Mar 24 2026 22:39:19,    3178 sec) SelfTest()           Passed: ISUS serial number accepted: [3025]
+(Mar 24 2026 22:39:22,    3181 sec) SelfTest()           Passed: ISUS FwRev accepted: [Jun  6 2025, 20:24:34]
+(Mar 24 2026 22:39:25,    3184 sec) MscCalFile_()        H,12/10/2025,,,,
+(Mar 24 2026 22:39:25,    3184 sec) MscCalFile_()        H,CalTemp,19.74,,,
+(Mar 24 2026 22:39:25,    3184 sec) MscCalFile_()        H,Lamp#D24.A20.222853 Spec#162557 Ti probe #2410392-035  ARGO float#3025  DF#GDF2099  CTD#20389,,,,
+(Mar 24 2026 22:39:25,    3184 sec) MscCalFile_()        H,E's prepared from PROF0001.log  odometer= 00:04:37,,,,
+(Mar 24 2026 22:39:25,    3184 sec) MscCalFile_()        H,Salinity PSS,,,,
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        H,Nitrate uM,,,,
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        H,HS- uM,,,,
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        H,DIW T=20 ISUS T=11.3  Int=450 SW T=20 NO3 T=20  DC=709 Ref=NA,,,,
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        H,WaveLen,New ESW,New ENO3,EHS,DI DC Corr
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        E,190.45314,0.000000000,0.000000000,0.000000000,11569.25
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        E,191.23852,0.000000000,0.000000000,0.000000000,13490.25
+(Mar 24 2026 22:39:26,    3185 sec) MscCalFile_()        E,192.02415,0.000000000,0.000000000,0.000000000,15298.58
+(Mar 24 2026 22:39:27,    3186 sec) MscCalFile_()        E,192.81001,0.000000000,0.000000000,0.000000000,17033.58
+(Mar 24 2026 22:39:27,    3186 sec) MscCalFile_()        E,193.59611,0.000000000,0.000000000,0.000000000,18937.25
+(Mar 24 2026 22:39:27,    3186 sec) MscCalFile_()        E,194.38245,0.000000000,0.000000000,0.000000000,20971.91
+(Mar 24 2026 22:39:27,    3186 sec) MscCalFile_()        E,195.16902,0.000000000,0.000000000,0.000000000,23080.91
+(Mar 24 2026 22:39:27,    3186 sec) MscCalFile_()        E,195.95583,0.000000000,0.000000000,0.000000000,25206.91
+(Mar 24 2026 22:39:28,    3187 sec) MscCalFile_()        E,196.74286,0.000000000,0.000000000,0.000000000,27223.91
+(Mar 24 2026 22:39:28,    3187 sec) MscCalFile_()        E,197.53013,0.000000000,0.000000000,0.000000000,28945.58
+(Mar 24 2026 22:39:28,    3187 sec) MscCalFile_()        E,198.31762,0.000000000,0.000000000,0.000000000,30202.25
+(Mar 24 2026 22:39:28,    3187 sec) MscCalFile_()        E,199.10534,0.000000000,0.000000000,0.000000000,30891.25
+(Mar 24 2026 22:39:28,    3187 sec) MscCalFile_()        E,199.89328,0.000000000,0.000000000,0.000000000,30911.58
+(Mar 24 2026 22:39:28,    3187 sec) MscCalFile_()        E,200.68144,0.000000000,0.000000000,0.000000000,30402.58
+(Mar 24 2026 22:39:29,    3188 sec) MscCalFile_()        E,201.46983,0.000000000,0.000000000,0.000000000,29464.58
+(Mar 24 2026 22:39:29,    3188 sec) MscCalFile_()        E,202.25843,0.000000000,0.000000000,0.000000000,28340.25
+(Mar 24 2026 22:39:29,    3188 sec) MscCalFile_()        E,203.04725,0.000000000,0.000000000,0.000000000,27192.25
+(Mar 24 2026 22:39:29,    3188 sec) MscCalFile_()        E,203.83628,0.000000000,0.000000000,0.000000000,26185.58
+(Mar 24 2026 22:39:29,    3188 sec) MscCalFile_()        E,204.62553,0.000000000,0.000000000,0.000000000,25456.25
+(Mar 24 2026 22:39:29,    3188 sec) MscCalFile_()        E,205.41498,0.000000000,0.000000000,0.000000000,25003.58
+(Mar 24 2026 22:39:30,    3189 sec) MscCalFile_()        E,206.20465,0.000000000,0.000000000,0.000000000,24893.25
+(Mar 24 2026 22:39:30,    3189 sec) MscCalFile_()        E,206.99452,0.000000000,0.000000000,0.000000000,25127.25
+(Mar 24 2026 22:39:30,    3189 sec) MscCalFile_()        E,207.78460,0.000000000,0.000000000,0.000000000,25670.58
+(Mar 24 2026 22:39:30,    3189 sec) MscCalFile_()        E,208.57488,0.000000000,0.000000000,0.000000000,26541.58
+(Mar 24 2026 22:39:30,    3189 sec) MscCalFile_()        E,209.36537,0.000000000,0.000000000,0.000000000,27760.91
+(Mar 24 2026 22:39:31,    3190 sec) MscCalFile_()        E,210.15605,0.039963440,0.006836083,0.000000000,29274.91
+(Mar 24 2026 22:39:31,    3190 sec) MscCalFile_()        E,210.94693,0.033580792,0.006937661,0.000000000,31059.25
+(Mar 24 2026 22:39:31,    3190 sec) MscCalFile_()        E,211.73801,0.028038880,0.006788399,0.000000000,33051.25
+(Mar 24 2026 22:39:31,    3190 sec) MscCalFile_()        E,212.52929,0.023205607,0.006610809,0.000000000,35165.91
+(Mar 24 2026 22:39:31,    3190 sec) MscCalFile_()        E,213.32076,0.019095417,0.006328590,0.000000000,37279.58
+(Mar 24 2026 22:39:31,    3190 sec) MscCalFile_()        E,214.11242,0.015605573,0.006043480,0.000000000,39209.25
+(Mar 24 2026 22:39:32,    3191 sec) MscCalFile_()        E,214.90426,0.012688198,0.005737358,0.000000000,40823.91
+(Mar 24 2026 22:39:32,    3191 sec) MscCalFile_()        E,215.69630,0.010250399,0.005424178,0.000000000,41969.91
+(Mar 24 2026 22:39:32,    3191 sec) MscCalFile_()        E,216.48852,0.008236768,0.005101022,0.000000000,42505.58
+(Mar 24 2026 22:39:32,    3191 sec) MscCalFile_()        E,217.28093,0.006582378,0.004758161,0.000000000,42410.91
+(Mar 24 2026 22:39:32,    3191 sec) MscCalFile_()        E,218.07352,0.005226309,0.004430496,0.000000000,41711.91
+(Mar 24 2026 22:39:32,    3191 sec) MscCalFile_()        E,218.86628,0.004132780,0.004095209,0.000000000,40483.25
+(Mar 24 2026 22:39:33,    3192 sec) MscCalFile_()        E,219.65923,0.003251857,0.003764260,0.000000000,38877.58
+(Mar 24 2026 22:39:33,    3192 sec) MscCalFile_()        E,220.45236,0.002549991,0.003440546,0.000000000,37145.25
+(Mar 24 2026 22:39:33,    3192 sec) MscCalFile_()        E,221.24566,0.001994706,0.003126769,0.000000000,35362.58
+(Mar 24 2026 22:39:33,    3192 sec) MscCalFile_()        E,222.03913,0.001560246,0.002826754,0.000000000,33717.25
+(Mar 24 2026 22:39:33,    3192 sec) MscCalFile_()        E,222.83277,0.001220880,0.002544775,0.000000000,32297.25
+(Mar 24 2026 22:39:34,    3193 sec) MscCalFile_()        E,223.62659,0.000958389,0.002273238,0.000000000,31108.25
+(Mar 24 2026 22:39:34,    3193 sec) MscCalFile_()        E,224.42057,0.000756570,0.002024868,0.000000000,30198.25
+(Mar 24 2026 22:39:34,    3193 sec) MscCalFile_()        E,225.21472,0.000603068,0.001793733,0.000000000,29601.91
+(Mar 24 2026 22:39:34,    3193 sec) MscCalFile_()        E,226.00903,0.000481356,0.001581752,0.000000000,29249.58
+(Mar 24 2026 22:39:34,    3193 sec) MscCalFile_()        E,226.80350,0.000391093,0.001386035,0.000000000,29193.58
+(Mar 24 2026 22:39:34,    3193 sec) MscCalFile_()        E,227.59814,0.000317954,0.001208733,0.000000000,29403.25
+(Mar 24 2026 22:39:35,    3194 sec) MscCalFile_()        E,228.39293,0.000263076,0.001051233,0.000000000,29863.91
+(Mar 24 2026 22:39:35,    3194 sec) MscCalFile_()        E,229.18788,0.000221365,0.000907766,0.000000000,30566.91
+(Mar 24 2026 22:39:35,    3194 sec) MscCalFile_()        E,229.98299,0.000186348,0.000779464,0.000000000,31517.91
+(Mar 24 2026 22:39:35,    3194 sec) MscCalFile_()        E,230.77825,0.000156720,0.000670540,0.000000000,32651.25
+(Mar 24 2026 22:39:35,    3194 sec) MscCalFile_()        E,231.57366,0.000130943,0.000574691,0.000000000,33987.91
+(Mar 24 2026 22:39:36,    3195 sec) MscCalFile_()        E,232.36922,0.000113227,0.000489500,0.000000000,35485.58
+(Mar 24 2026 22:39:36,    3195 sec) MscCalFile_()        E,233.16493,0.000096030,0.000417554,0.000000000,37055.58
+(Mar 24 2026 22:39:36,    3195 sec) MscCalFile_()        E,233.96079,0.000079359,0.000356297,0.000000000,38683.58
+(Mar 24 2026 22:39:36,    3195 sec) MscCalFile_()        E,234.75679,0.000066758,0.000301334,0.000000000,40256.91
+(Mar 24 2026 22:39:36,    3195 sec) MscCalFile_()        E,235.55293,0.000057244,0.000254190,0.000000000,41725.91
+(Mar 24 2026 22:39:36,    3195 sec) MscCalFile_()        E,236.34922,0.000044514,0.000214260,0.000000000,42964.58
+(Mar 24 2026 22:39:37,    3196 sec) MscCalFile_()        E,237.14564,0.000035906,0.000179207,0.000000000,43932.25
+(Mar 24 2026 22:39:37,    3196 sec) MscCalFile_()        E,237.94220,0.000031114,0.000150098,0.000000000,44487.25
+(Mar 24 2026 22:39:37,    3196 sec) MscCalFile_()        E,238.73890,0.000024383,0.000125877,0.000000000,44648.25
+(Mar 24 2026 22:39:37,    3196 sec) MscCalFile_()        E,239.53573,0.000017950,0.000103265,0.000000000,44323.25
+(Mar 24 2026 22:39:37,    3196 sec) MscCalFile_()        E,240.33269,0.000000000,0.000085842,0.000000000,43563.25
+(Mar 24 2026 22:39:37,    3196 sec) MscCalFile_()        E,241.12978,0.000000000,0.000069994,0.000000000,42375.91
+(Mar 24 2026 22:39:38,    3197 sec) MscCalFile_()        E,241.92700,0.000000000,0.000057428,0.000000000,40863.58
+(Mar 24 2026 22:39:38,    3197 sec) MscCalFile_()        E,242.72435,0.000000000,0.000050135,0.000000000,39107.58
+(Mar 24 2026 22:39:38,    3197 sec) MscCalFile_()        E,243.52182,0.000000000,0.000041177,0.000000000,37225.91
+(Mar 24 2026 22:39:38,    3197 sec) MscCalFile_()        E,244.31941,0.000000000,0.000033155,0.000000000,35279.91
+(Mar 24 2026 22:39:38,    3197 sec) MscCalFile_()        E,245.11713,0.000000000,0.000027100,0.000000000,33374.25
+(Mar 24 2026 22:39:39,    3198 sec) MscCalFile_()        E,245.91496,0.000000000,0.000022982,0.000000000,31574.25
+(Mar 24 2026 22:39:39,    3198 sec) MscCalFile_()        E,246.71291,0.000000000,0.000017270,0.000000000,29915.58
+(Mar 24 2026 22:39:39,    3198 sec) MscCalFile_()        E,247.51098,0.000000000,0.000016268,0.000000000,28389.91
+(Mar 24 2026 22:39:39,    3198 sec) MscCalFile_()        E,248.30916,0.000000000,0.000011779,0.000000000,27035.91
+(Mar 24 2026 22:39:39,    3198 sec) MscCalFile_()        E,249.10746,0.000000000,0.000007975,0.000000000,25830.58
+(Mar 24 2026 22:39:39,    3198 sec) MscCalFile_()        E,249.90586,0.000000000,0.000007199,0.000000000,24788.25
+(Mar 24 2026 22:39:40,    3199 sec) MscCalFile_()        E,250.70438,0.000000000,0.000003974,0.000000000,23883.58
+(Mar 24 2026 22:39:40,    3199 sec) MscCalFile_()        E,251.50300,0.000000000,0.000006526,0.000000000,23126.91
+(Mar 24 2026 22:39:40,    3199 sec) MscCalFile_()        E,252.30172,0.000000000,0.000004944,0.000000000,22510.58
+(Mar 24 2026 22:39:40,    3199 sec) MscCalFile_()        E,253.10055,0.000000000,0.000000000,0.000000000,22034.91
+(Mar 24 2026 22:39:40,    3199 sec) MscCalFile_()        E,253.89948,0.000000000,0.000000000,0.000000000,21660.25
+(Mar 24 2026 22:39:40,    3199 sec) MscCalFile_()        E,254.69851,0.000000000,0.000000000,0.000000000,21412.91
+(Mar 24 2026 22:39:41,    3200 sec) MscCalFile_()        E,255.49763,0.000000000,0.000000000,0.000000000,21260.25
+(Mar 24 2026 22:39:41,    3200 sec) MscCalFile_()        E,256.29685,0.000000000,0.000000000,0.000000000,21218.91
+(Mar 24 2026 22:39:41,    3200 sec) MscCalFile_()        E,257.09617,0.000000000,0.000000000,0.000000000,21277.91
+(Mar 24 2026 22:39:41,    3200 sec) MscCalFile_()        E,257.89558,0.000000000,0.000000000,0.000000000,21416.25
+(Mar 24 2026 22:39:41,    3200 sec) MscCalFile_()        E,258.69508,0.000000000,0.000000000,0.000000000,21629.91
+(Mar 24 2026 22:39:42,    3201 sec) MscCalFile_()        E,259.49467,0.000000000,0.000000000,0.000000000,21944.58
+(Mar 24 2026 22:39:42,    3201 sec) MscCalFile_()        E,260.29434,0.000000000,0.000000000,0.000000000,22300.25
+(Mar 24 2026 22:39:42,    3201 sec) MscCalFile_()        E,261.09410,0.000000000,0.000000000,0.000000000,22710.25
+(Mar 24 2026 22:39:42,    3201 sec) MscCalFile_()        E,261.89395,0.000000000,0.000000000,0.000000000,23163.91
+(Mar 24 2026 22:39:42,    3201 sec) MscCalFile_()        E,262.69387,0.000000000,0.000000000,0.000000000,23623.25
+(Mar 24 2026 22:39:42,    3201 sec) MscCalFile_()        E,263.49388,0.000000000,0.000000000,0.000000000,24060.25
+(Mar 24 2026 22:39:43,    3202 sec) MscCalFile_()        E,264.29396,0.000000000,0.000000000,0.000000000,24440.25
+(Mar 24 2026 22:39:43,    3202 sec) MscCalFile_()        E,265.09412,0.000000000,0.000000000,0.000000000,24734.25
+(Mar 24 2026 22:39:43,    3202 sec) MscCalFile_()        E,265.89435,0.000000000,0.000000000,0.000000000,24913.58
+(Mar 24 2026 22:39:43,    3202 sec) MscCalFile_()        E,266.69466,0.000000000,0.000000000,0.000000000,24955.91
+(Mar 24 2026 22:39:43,    3202 sec) MscCalFile_()        E,267.49504,0.000000000,0.000000000,0.000000000,24827.58
+(Mar 24 2026 22:39:43,    3202 sec) MscCalFile_()        E,268.29548,0.000000000,0.000000000,0.000000000,24538.25
+(Mar 24 2026 22:39:44,    3203 sec) MscCalFile_()        E,269.09600,0.000000000,0.000000000,0.000000000,24068.58
+(Mar 24 2026 22:39:44,    3203 sec) MscCalFile_()        E,269.89657,0.000000000,0.000000000,0.000000000,23452.91
+(Mar 24 2026 22:39:44,    3203 sec) MscCalFile_()        E,270.69722,0.000000000,0.000000000,0.000000000,22679.58
+(Mar 24 2026 22:39:44,    3203 sec) MscCalFile_()        E,271.49792,0.000000000,0.000000000,0.000000000,21834.91
+(Mar 24 2026 22:39:44,    3203 sec) MscCalFile_()        E,272.29868,0.000000000,0.000000000,0.000000000,20925.58
+(Mar 24 2026 22:39:45,    3204 sec) MscCalFile_()        E,273.09951,0.000000000,0.000000000,0.000000000,19980.58
+(Mar 24 2026 22:39:45,    3204 sec) MscCalFile_()        E,273.90039,0.000000000,0.000000000,0.000000000,19068.91
+(Mar 24 2026 22:39:45,    3204 sec) MscCalFile_()        E,274.70132,0.000000000,0.000000000,0.000000000,18156.25
+(Mar 24 2026 22:39:45,    3204 sec) MscCalFile_()        E,275.50230,0.000000000,0.000000000,0.000000000,17328.58
+(Mar 24 2026 22:39:45,    3204 sec) MscCalFile_()        E,276.30334,0.000000000,0.000000000,0.000000000,16564.58
+(Mar 24 2026 22:39:45,    3204 sec) MscCalFile_()        E,277.10443,0.000000000,0.000000000,0.000000000,15863.25
+(Mar 24 2026 22:39:46,    3205 sec) MscCalFile_()        E,277.90556,0.000000000,0.000000000,0.000000000,15237.91
+(Mar 24 2026 22:39:46,    3205 sec) MscCalFile_()        E,278.70674,0.000000000,0.000000000,0.000000000,14690.58
+(Mar 24 2026 22:39:46,    3205 sec) MscCalFile_()        E,279.50796,0.000000000,0.000000000,0.000000000,14219.25
+(Mar 24 2026 22:39:46,    3205 sec) MscCalFile_()        E,280.30923,0.000000000,0.000000000,0.000000000,13811.91
+(Mar 24 2026 22:39:46,    3205 sec) MscCalFile_()        E,281.11053,0.000000000,0.000000000,0.000000000,13478.25
+(Mar 24 2026 22:39:47,    3206 sec) MscCalFile_()        E,281.91188,0.000000000,0.000000000,0.000000000,13214.58
+(Mar 24 2026 22:39:47,    3206 sec) MscCalFile_()        E,282.71326,0.000000000,0.000000000,0.000000000,12995.91
+(Mar 24 2026 22:39:47,    3206 sec) MscCalFile_()        E,283.51467,0.000000000,0.000000000,0.000000000,12836.91
+(Mar 24 2026 22:39:47,    3206 sec) MscCalFile_()        E,284.31612,0.000000000,0.000000000,0.000000000,12734.91
+(Mar 24 2026 22:39:47,    3206 sec) MscCalFile_()        E,285.11760,0.000000000,0.000000000,0.000000000,12685.58
+(Mar 24 2026 22:39:47,    3206 sec) MscCalFile_()        E,285.91911,0.000000000,0.000000000,0.000000000,12682.25
+(Mar 24 2026 22:39:48,    3207 sec) MscCalFile_()        E,286.72065,0.000000000,0.000000000,0.000000000,12736.58
+(Mar 24 2026 22:39:48,    3207 sec) MscCalFile_()        E,287.52221,0.000000000,0.000000000,0.000000000,12851.25
+(Mar 24 2026 22:39:48,    3207 sec) MscCalFile_()        E,288.32379,0.000000000,0.000000000,0.000000000,13006.58
+(Mar 24 2026 22:39:48,    3207 sec) MscCalFile_()        E,289.12540,0.000000000,0.000000000,0.000000000,13218.91
+(Mar 24 2026 22:39:48,    3207 sec) MscCalFile_()        E,289.92703,0.000000000,0.000000000,0.000000000,13468.91
+(Mar 24 2026 22:39:48,    3207 sec) MscCalFile_()        E,290.72868,0.000000000,0.000000000,0.000000000,13771.91
+(Mar 24 2026 22:39:49,    3208 sec) MscCalFile_()        E,291.53034,0.000000000,0.000000000,0.000000000,14115.58
+(Mar 24 2026 22:39:49,    3208 sec) MscCalFile_()        E,292.33202,0.000000000,0.000000000,0.000000000,14499.91
+(Mar 24 2026 22:39:49,    3208 sec) MscCalFile_()        E,293.13372,0.000000000,0.000000000,0.000000000,14913.58
+(Mar 24 2026 22:39:49,    3208 sec) MscCalFile_()        E,293.93542,0.000000000,0.000000000,0.000000000,15351.25
+(Mar 24 2026 22:39:49,    3208 sec) MscCalFile_()        E,294.73713,0.000000000,0.000000000,0.000000000,15812.91
+(Mar 24 2026 22:39:50,    3209 sec) MscCalFile_()        E,295.53886,0.000000000,0.000000000,0.000000000,16272.25
+(Mar 24 2026 22:39:50,    3209 sec) MscCalFile_()        E,296.34058,0.000000000,0.000000000,0.000000000,16744.58
+(Mar 24 2026 22:39:50,    3209 sec) MscCalFile_()        E,297.14231,0.000000000,0.000000000,0.000000000,17212.58
+(Mar 24 2026 22:39:50,    3209 sec) MscCalFile_()        E,297.94405,0.000000000,0.000000000,0.000000000,17638.58
+(Mar 24 2026 22:39:50,    3209 sec) MscCalFile_()        E,298.74578,0.000000000,0.000000000,0.000000000,18061.91
+(Mar 24 2026 22:39:50,    3209 sec) MscCalFile_()        E,299.54752,0.000000000,0.000000000,0.000000000,18454.58
+(Mar 24 2026 22:39:51,    3210 sec) MscCalFile_()        E,300.34925,0.000000000,0.000000000,0.000000000,18782.58
+(Mar 24 2026 22:39:51,    3210 sec) MscCalFile_()        E,301.15098,0.000000000,0.000000000,0.000000000,19062.91
+(Mar 24 2026 22:39:51,    3210 sec) MscCalFile_()        E,301.95270,0.000000000,0.000000000,0.000000000,19274.91
+(Mar 24 2026 22:39:51,    3210 sec) MscCalFile_()        E,302.75441,0.000000000,0.000000000,0.000000000,19408.58
+(Mar 24 2026 22:39:51,    3210 sec) MscCalFile_()        E,303.55611,0.000000000,0.000000000,0.000000000,19454.58
+(Mar 24 2026 22:39:51,    3210 sec) MscCalFile_()        E,304.35780,0.000000000,0.000000000,0.000000000,19435.91
+(Mar 24 2026 22:39:52,    3211 sec) MscCalFile_()        E,305.15947,0.000000000,0.000000000,0.000000000,19324.58
+(Mar 24 2026 22:39:52,    3211 sec) MscCalFile_()        E,305.96113,0.000000000,0.000000000,0.000000000,19133.25
+(Mar 24 2026 22:39:52,    3211 sec) MscCalFile_()        E,306.76278,0.000000000,0.000000000,0.000000000,18890.25
+(Mar 24 2026 22:39:52,    3211 sec) MscCalFile_()        E,307.56440,0.000000000,0.000000000,0.000000000,18571.91
+(Mar 24 2026 22:39:52,    3211 sec) MscCalFile_()        E,308.36600,0.000000000,0.000000000,0.000000000,18195.58
+(Mar 24 2026 22:39:53,    3212 sec) MscCalFile_()        E,309.16758,0.000000000,0.000000000,0.000000000,17797.58
+(Mar 24 2026 22:39:53,    3212 sec) MscCalFile_()        E,309.96914,0.000000000,0.000000000,0.000000000,17337.25
+(Mar 24 2026 22:39:53,    3212 sec) MscCalFile_()        E,310.77067,0.000000000,0.000000000,0.000000000,16863.91
+(Mar 24 2026 22:39:53,    3212 sec) MscCalFile_()        E,311.57217,0.000000000,0.000000000,0.000000000,16377.25
+(Mar 24 2026 22:39:53,    3212 sec) MscCalFile_()        E,312.37364,0.000000000,0.000000000,0.000000000,15885.91
+(Mar 24 2026 22:39:53,    3212 sec) MscCalFile_()        E,313.17508,0.000000000,0.000000000,0.000000000,15401.25
+(Mar 24 2026 22:39:54,    3213 sec) MscCalFile_()        E,313.97649,0.000000000,0.000000000,0.000000000,14923.25
+(Mar 24 2026 22:39:54,    3213 sec) MscCalFile_()        E,314.77786,0.000000000,0.000000000,0.000000000,14456.25
+(Mar 24 2026 22:39:54,    3213 sec) MscCalFile_()        E,315.57919,0.000000000,0.000000000,0.000000000,14019.58
+(Mar 24 2026 22:39:54,    3213 sec) MscCalFile_()        E,316.38048,0.000000000,0.000000000,0.000000000,13594.25
+(Mar 24 2026 22:39:54,    3213 sec) MscCalFile_()        E,317.18174,0.000000000,0.000000000,0.000000000,13206.58
+(Mar 24 2026 22:39:54,    3213 sec) MscCalFile_()        E,317.98295,0.000000000,0.000000000,0.000000000,12856.25
+(Mar 24 2026 22:39:55,    3214 sec) MscCalFile_()        E,318.78412,0.000000000,0.000000000,0.000000000,12519.58
+(Mar 24 2026 22:39:55,    3214 sec) MscCalFile_()        E,319.58524,0.000000000,0.000000000,0.000000000,12207.25
+(Mar 24 2026 22:39:55,    3214 sec) MscCalFile_()        E,320.38631,0.000000000,0.000000000,0.000000000,11920.58
+(Mar 24 2026 22:39:55,    3214 sec) MscCalFile_()        E,321.18734,0.000000000,0.000000000,0.000000000,11638.91
+(Mar 24 2026 22:39:55,    3214 sec) MscCalFile_()        E,321.98831,0.000000000,0.000000000,0.000000000,11358.25
+(Mar 24 2026 22:39:56,    3215 sec) MscCalFile_()        E,322.78923,0.000000000,0.000000000,0.000000000,11081.25
+(Mar 24 2026 22:39:56,    3215 sec) MscCalFile_()        E,323.59009,0.000000000,0.000000000,0.000000000,10805.91
+(Mar 24 2026 22:39:56,    3215 sec) MscCalFile_()        E,324.39090,0.000000000,0.000000000,0.000000000,10540.58
+(Mar 24 2026 22:39:56,    3215 sec) MscCalFile_()        E,325.19164,0.000000000,0.000000000,0.000000000,10292.25
+(Mar 24 2026 22:39:56,    3215 sec) MscCalFile_()        E,325.99233,0.000000000,0.000000000,0.000000000,10051.25
+(Mar 24 2026 22:39:56,    3215 sec) MscCalFile_()        E,326.79296,0.000000000,0.000000000,0.000000000,9825.25
+(Mar 24 2026 22:39:57,    3216 sec) MscCalFile_()        E,327.59352,0.000000000,0.000000000,0.000000000,9618.58
+(Mar 24 2026 22:39:57,    3216 sec) MscCalFile_()        E,328.39401,0.000000000,0.000000000,0.000000000,9438.25
+(Mar 24 2026 22:39:57,    3216 sec) MscCalFile_()        E,329.19444,0.000000000,0.000000000,0.000000000,9286.58
+(Mar 24 2026 22:39:57,    3216 sec) MscCalFile_()        E,329.99480,0.000000000,0.000000000,0.000000000,9156.25
+(Mar 24 2026 22:39:57,    3216 sec) MscCalFile_()        E,330.79509,0.000000000,0.000000000,0.000000000,9037.58
+(Mar 24 2026 22:39:57,    3216 sec) MscCalFile_()        E,331.59530,0.000000000,0.000000000,0.000000000,8941.25
+(Mar 24 2026 22:39:58,    3217 sec) MscCalFile_()        E,332.39544,0.000000000,0.000000000,0.000000000,8861.91
+(Mar 24 2026 22:39:58,    3217 sec) MscCalFile_()        E,333.19550,0.000000000,0.000000000,0.000000000,8799.25
+(Mar 24 2026 22:39:58,    3217 sec) MscCalFile_()        E,333.99549,0.000000000,0.000000000,0.000000000,8738.91
+(Mar 24 2026 22:39:58,    3217 sec) MscCalFile_()        E,334.79539,0.000000000,0.000000000,0.000000000,8698.91
+(Mar 24 2026 22:39:58,    3217 sec) MscCalFile_()        E,335.59521,0.000000000,0.000000000,0.000000000,8663.25
+(Mar 24 2026 22:39:59,    3218 sec) MscCalFile_()        E,336.39495,0.000000000,0.000000000,0.000000000,8635.91
+(Mar 24 2026 22:39:59,    3218 sec) MscCalFile_()        E,337.19460,0.000000000,0.000000000,0.000000000,8618.25
+(Mar 24 2026 22:39:59,    3218 sec) MscCalFile_()        E,337.99417,0.000000000,0.000000000,0.000000000,8596.91
+(Mar 24 2026 22:39:59,    3218 sec) MscCalFile_()        E,338.79364,0.000000000,0.000000000,0.000000000,8581.58
+(Mar 24 2026 22:39:59,    3218 sec) MscCalFile_()        E,339.59303,0.000000000,0.000000000,0.000000000,8575.91
+(Mar 24 2026 22:39:59,    3218 sec) MscCalFile_()        E,340.39232,0.000000000,0.000000000,0.000000000,8554.91
+(Mar 24 2026 22:40:00,    3219 sec) MscCalFile_()        E,341.19152,0.000000000,0.000000000,0.000000000,8548.58
+(Mar 24 2026 22:40:00,    3219 sec) MscCalFile_()        E,341.99062,0.000000000,0.000000000,0.000000000,8538.58
+(Mar 24 2026 22:40:00,    3219 sec) MscCalFile_()        E,342.78962,0.000000000,0.000000000,0.000000000,8519.91
+(Mar 24 2026 22:40:00,    3219 sec) MscCalFile_()        E,343.58852,0.000000000,0.000000000,0.000000000,8509.25
+(Mar 24 2026 22:40:00,    3219 sec) MscCalFile_()        E,344.38732,0.000000000,0.000000000,0.000000000,8495.25
+(Mar 24 2026 22:40:00,    3219 sec) MscCalFile_()        E,345.18602,0.000000000,0.000000000,0.000000000,8476.58
+(Mar 24 2026 22:40:01,    3220 sec) MscCalFile_()        E,345.98461,0.000000000,0.000000000,0.000000000,8464.25
+(Mar 24 2026 22:40:01,    3220 sec) MscCalFile_()        E,346.78310,0.000000000,0.000000000,0.000000000,8455.91
+(Mar 24 2026 22:40:01,    3220 sec) MscCalFile_()        E,347.58147,0.000000000,0.000000000,0.000000000,8437.91
+(Mar 24 2026 22:40:01,    3220 sec) MscCalFile_()        E,348.37974,0.000000000,0.000000000,0.000000000,8409.25
+(Mar 24 2026 22:40:01,    3220 sec) MscCalFile_()        E,349.17789,0.000000000,0.000000000,0.000000000,8374.91
+(Mar 24 2026 22:40:02,    3221 sec) MscCalFile_()        E,349.97593,0.000000000,0.000000000,0.000000000,8339.91
+(Mar 24 2026 22:40:02,    3221 sec) MscCalFile_()        E,350.77385,0.000000000,0.000000000,0.000000000,8303.25
+(Mar 24 2026 22:40:02,    3221 sec) MscCalFile_()        E,351.57165,0.000000000,0.000000000,0.000000000,8261.91
+(Mar 24 2026 22:40:02,    3221 sec) MscCalFile_()        E,352.36933,0.000000000,0.000000000,0.000000000,8210.91
+(Mar 24 2026 22:40:02,    3221 sec) MscCalFile_()        E,353.16689,0.000000000,0.000000000,0.000000000,8145.25
+(Mar 24 2026 22:40:02,    3221 sec) MscCalFile_()        E,353.96433,0.000000000,0.000000000,0.000000000,8070.58
+(Mar 24 2026 22:40:03,    3222 sec) MscCalFile_()        E,354.76165,0.000000000,0.000000000,0.000000000,7991.25
+(Mar 24 2026 22:40:03,    3222 sec) MscCalFile_()        E,355.55883,0.000000000,0.000000000,0.000000000,7902.58
+(Mar 24 2026 22:40:03,    3222 sec) MscCalFile_()        E,356.35589,0.000000000,0.000000000,0.000000000,7797.25
+(Mar 24 2026 22:40:03,    3222 sec) MscCalFile_()        E,357.15282,0.000000000,0.000000000,0.000000000,7687.58
+(Mar 24 2026 22:40:03,    3222 sec) MscCalFile_()        E,357.94961,0.000000000,0.000000000,0.000000000,7567.58
+(Mar 24 2026 22:40:03,    3222 sec) MscCalFile_()        E,358.74627,0.000000000,0.000000000,0.000000000,7443.58
+(Mar 24 2026 22:40:04,    3223 sec) MscCalFile_()        E,359.54280,0.000000000,0.000000000,0.000000000,7295.58
+(Mar 24 2026 22:40:04,    3223 sec) MscCalFile_()        E,360.33918,0.000000000,0.000000000,0.000000000,7155.25
+(Mar 24 2026 22:40:04,    3223 sec) MscCalFile_()        E,361.13543,0.000000000,0.000000000,0.000000000,6998.58
+(Mar 24 2026 22:40:04,    3223 sec) MscCalFile_()        E,361.93153,0.000000000,0.000000000,0.000000000,6842.91
+(Mar 24 2026 22:40:04,    3223 sec) MscCalFile_()        E,362.72750,0.000000000,0.000000000,0.000000000,6674.91
+(Mar 24 2026 22:40:05,    3224 sec) MscCalFile_()        E,363.52331,0.000000000,0.000000000,0.000000000,6506.25
+(Mar 24 2026 22:40:05,    3224 sec) MscCalFile_()        E,364.31898,0.000000000,0.000000000,0.000000000,6340.25
+(Mar 24 2026 22:40:05,    3224 sec) MscCalFile_()        E,365.11451,0.000000000,0.000000000,0.000000000,6187.58
+(Mar 24 2026 22:40:05,    3224 sec) MscCalFile_()        E,365.90988,0.000000000,0.000000000,0.000000000,6034.91
+(Mar 24 2026 22:40:05,    3224 sec) MscCalFile_()        E,366.70510,0.000000000,0.000000000,0.000000000,5890.91
+(Mar 24 2026 22:40:05,    3224 sec) MscCalFile_()        E,367.50016,0.000000000,0.000000000,0.000000000,5752.25
+(Mar 24 2026 22:40:06,    3225 sec) MscCalFile_()        E,368.29507,0.000000000,0.000000000,0.000000000,5592.58
+(Mar 24 2026 22:40:06,    3225 sec) MscCalFile_()        E,369.08982,0.000000000,0.000000000,0.000000000,5432.58
+(Mar 24 2026 22:40:06,    3225 sec) MscCalFile_()        E,369.88442,0.000000000,0.000000000,0.000000000,5271.91
+(Mar 24 2026 22:40:06,    3225 sec) MscCalFile_()        E,370.67885,0.000000000,0.000000000,0.000000000,5124.58
+(Mar 24 2026 22:40:06,    3225 sec) MscCalFile_()        E,371.47312,0.000000000,0.000000000,0.000000000,4994.25
+(Mar 24 2026 22:40:06,    3225 sec) MscCalFile_()        E,372.26722,0.000000000,0.000000000,0.000000000,4887.58
+(Mar 24 2026 22:40:07,    3226 sec) MscCalFile_()        E,373.06116,0.000000000,0.000000000,0.000000000,4785.58
+(Mar 24 2026 22:40:07,    3226 sec) MscCalFile_()        E,373.85493,0.000000000,0.000000000,0.000000000,4719.25
+(Mar 24 2026 22:40:07,    3226 sec) MscCalFile_()        E,374.64853,0.000000000,0.000000000,0.000000000,4655.25
+(Mar 24 2026 22:40:07,    3226 sec) MscCalFile_()        E,375.44195,0.000000000,0.000000000,0.000000000,4597.91
+(Mar 24 2026 22:40:07,    3226 sec) MscCalFile_()        E,376.23521,0.000000000,0.000000000,0.000000000,4553.58
+(Mar 24 2026 22:40:07,    3226 sec) MscCalFile_()        E,377.02828,0.000000000,0.000000000,0.000000000,4506.91
+(Mar 24 2026 22:40:08,    3227 sec) MscCalFile_()        E,377.82118,0.000000000,0.000000000,0.000000000,4484.58
+(Mar 24 2026 22:40:08,    3227 sec) MscCalFile_()        E,378.61390,0.000000000,0.000000000,0.000000000,4473.91
+(Mar 24 2026 22:40:08,    3227 sec) MscCalFile_()        E,379.40644,0.000000000,0.000000000,0.000000000,4443.25
+(Mar 24 2026 22:40:08,    3227 sec) MscCalFile_()        E,380.19880,0.000000000,0.000000000,0.000000000,4393.58
+(Mar 24 2026 22:40:08,    3227 sec) MscCalFile_()        E,380.99097,0.000000000,0.000000000,0.000000000,4327.91
+(Mar 24 2026 22:40:09,    3228 sec) MscCalFile_()        E,381.78296,0.000000000,0.000000000,0.000000000,4266.25
+(Mar 24 2026 22:40:09,    3228 sec) MscCalFile_()        E,382.57476,0.000000000,0.000000000,0.000000000,4213.25
+(Mar 24 2026 22:40:09,    3228 sec) MscCalFile_()        E,383.36637,0.000000000,0.000000000,0.000000000,4171.25
+(Mar 24 2026 22:40:09,    3228 sec) MscCalFile_()        E,384.15778,0.000000000,0.000000000,0.000000000,4118.25
+(Mar 24 2026 22:40:09,    3228 sec) MscCalFile_()        E,384.94901,0.000000000,0.000000000,0.000000000,4077.91
+(Mar 24 2026 22:40:09,    3228 sec) MscCalFile_()        E,385.74003,0.000000000,0.000000000,0.000000000,4040.25
+(Mar 24 2026 22:40:10,    3229 sec) MscCalFile_()        E,386.53087,0.000000000,0.000000000,0.000000000,4023.58
+(Mar 24 2026 22:40:10,    3229 sec) MscCalFile_()        E,387.32150,0.000000000,0.000000000,0.000000000,4012.58
+(Mar 24 2026 22:40:10,    3229 sec) MscCalFile_()        E,388.11193,0.000000000,0.000000000,0.000000000,3997.58
+(Mar 24 2026 22:40:10,    3229 sec) MscCalFile_()        E,388.90216,0.000000000,0.000000000,0.000000000,3993.25
+(Mar 24 2026 22:40:10,    3229 sec) MscCalFile_()        E,389.69218,0.000000000,0.000000000,0.000000000,3980.25
+(Mar 24 2026 22:40:10,    3229 sec) MscCalFile_()        E,390.48200,0.000000000,0.000000000,0.000000000,3982.58
+(Mar 24 2026 22:40:11,    3230 sec) MscCalFile_()        E,391.27161,0.000000000,0.000000000,0.000000000,3988.58
+(Mar 24 2026 22:40:11,    3230 sec) MscCalFile_()        E,392.06101,0.000000000,0.000000000,0.000000000,4003.91
+(Mar 24 2026 22:40:11,    3230 sec) MscCalFile_()        E,392.85020,0.000000000,0.000000000,0.000000000,3935.58
+(Mar 24 2026 22:40:11,    3230 sec) MscCalFile_()        E,393.63917,0.000000000,0.000000000,0.000000000,0.00
+(Mar 24 2026 22:40:11,    3230 sec) MscCalFile_()        CRC(0xeec1) for ISUS calibration file confirmed.
+(Mar 24 2026 22:40:11,    3230 sec) SelfTest()           Passed: Upload of ISUS calibration file successful.
+(Mar 24 2026 22:40:18,    3237 sec) SelfTest()           Passed: ISUS sample successful.
+(Mar 24 2026 22:40:27,    3246 sec) SelfTest()           Passed: FLBB SerNo: 8976
+(Mar 24 2026 22:40:30,    3249 sec) SelfTest()           Passed: FLBB FwRev accepted: [TripletDv5.14]
+(Mar 24 2026 22:40:33,    3252 sec) FlbbConfig()         FLBB configuration successful.
+(Mar 24 2026 22:40:34,    3253 sec) SelfTest()           Passed: FLBB configuration was successful.
+(Mar 24 2026 22:40:38,    3257 sec) SelfTest()           Passed: FLBB wavelengths: Fl[470,435] Bb[700].
+(Mar 24 2026 22:40:39,    3258 sec) PActivateInit()      Self-test passed.
+(Mar 24 2026 22:40:39,    3258 sec) PActivateInit()      Pressure activation mode initiated. [itime=3258]
+(Mar 24 2026 22:40:39,       0 sec) PistonMoveAbsWTO()    231->016 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 [1059sec, 15.0Volts, 0.135Amps, CPT:1093sec]
+(Apr 05 2026 00:40:45,       0 sec) PreludeInit()        Mission restarted. [pid=0, itime=957606]
+(Apr 05 2026 00:40:45,       0 sec) PistonMoveAbsWTO()    016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1105sec, 14.7Volts, 0.214Amps, CPT:1105sec]
+(Apr 05 2026 00:59:20,    1115 sec) Prelude()            Logging configuration and initiating telemetry.
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()   Mission configuration for Apf11 FwRev 102725:
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      AscentTimeOut(540) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      AltDialCmd(ATDT0012066163256) [alternate]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      BuoyancyNudge(10) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      BuoyancyNudgeInitial(22) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      CompensatorHyperRetraction(0) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      ConnectTimeOut(60) [sec]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      CpActivationP(985) [dbar]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DeepProfileDescentTime(240) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DeepProfilePistonPos(16) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DeepProfilePressure(2020) [dbar]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DownTime(14400) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DuraRefWarmUpHrs(255)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DuraInit(-1) [Enable<0, Disable=0, Enable&Init>0]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      FatFsEnable(1)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      FlbbMode(1)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      FloatId(23394)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      FullExtension(231) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      FullRetraction(9) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      MaxAirBladder(154) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      MaxLogKb(60) [KByte]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      MissionPrelude(360) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      OkVacuum(237) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      OptodeMode(1)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      PActivationPistonPosition(16) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      ParkDescentTime(240) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      ParkPistonPos(66) [count]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      ParkPressure(1000) [dbar]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      PnPCycleLen(1)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      Pwd(0xafb3)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      TelemetryRetry(15) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      TimeOfDay(DISABLED) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      UpTime(660) [min]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      User(f23394)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      ZModemTimeOut(80) [sec]
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      Verbosity(2)
+(Apr 05 2026 00:59:20,    1115 sec) LogConfiguration()      DebugBits(0x0002)
+
+<EOT>

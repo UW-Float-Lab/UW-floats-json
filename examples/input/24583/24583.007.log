@@ -1,0 +1,227 @@
+(May 25 2026 01:34:22,  886066 sec) TelemetryInit()      Profile 6. (Apf11 FwRev: 070325)
+(May 25 2026 01:34:22,  886066 sec) TelemetryInit()      Charge consumption model: OCV:15.2V Wake-Cycles:10780 Standby:61.5days Wake:8.5kC Sensors:0.7kC
+(May 25 2026 01:39:38,  886382 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 6.258mL/L 18.271C 17.709 0.679 / 52,43,107
+(May 25 2026 01:40:10,  886414 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 6.259mL/L 18.271C 17.708 0.679 / 50,48,106
+(May 25 2026 01:40:43,  886447 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 6.261mL/L 18.268C 17.706 0.679 / 51,49,106
+(May 25 2026 01:41:15,  886479 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 6.268mL/L 18.272C 17.698 0.679 / 53,48,105
+(May 25 2026 01:44:50,  886694 sec) AirSystem()          Battery [214cnt, 15.1V]  Current [23cnt, 91.2mA]  Pneumometer [155cnt, 18.2psi]  Run-Time [102s]
+(May 25 2026 01:45:02,  886706 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 6.272mL/L 17.681C 17.840 0.692 / 51,44,103
+(May 25 2026 01:45:34,  886738 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.1dbars / 6.268mL/L 17.619C 17.860 0.693 / 50,48,106
+(May 25 2026 01:46:07,  886771 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 6.280mL/L 17.597C 17.852 0.693 / 52,47,105
+(May 25 2026 01:46:39,  886803 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 6.251mL/L 17.617C 17.880 0.693 / 50,50,104
+(May 25 2026 01:47:12,  886836 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 6.362mL/L 17.126C 17.877 0.704 / 50,56,104
+(May 25 2026 01:47:44,  886868 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 6.293mL/L 17.406C 17.885 0.698 / 53,47,103
+(May 25 2026 01:48:17,  886901 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 6.325mL/L 17.233C 17.892 0.701 / 51,45,103
+(May 25 2026 01:48:49,  886933 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: 0.1dbars / 6.301mL/L 17.286C 17.906 0.700 / 53,50,104
+(May 25 2026 01:49:12,  886956 sec) AirSystem()          Battery [215cnt, 15.1V]  Current [24cnt, 93.0mA]  Pneumometer [157cnt, 18.5psi]  Run-Time [9s]
+(May 25 2026 01:49:46,  886990 sec) GetSurfaceObs()      P/O2,T83,Phase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 6.347mL/L 17.100C 17.901 0.704 / 52,48,105
+(May 25 2026 01:49:49,  886993 sec) GpsServices()        Replacing aged (95 days) almanac.
+(May 25 2026 01:49:49,  886993 sec) GpsAlmanacUpLoad()   Pausing for 15 minutes to upload GPS almanac.
+(May 25 2026 02:04:49,  887893 sec) GpsAlmanacUpLoad()   Pause complete.
+(May 25 2026 02:04:49,  887893 sec) GpsServices()        New almanac acquired.
+(May 25 2026 02:04:49,  887893 sec) GpsServices()        Initiating GPS fix acquisition.
+(May 25 2026 02:04:56,  887900 sec) gga()                $GPGGA,020520,3101.6624,N,13116.5497,W,1,11,0.8,5.0,M,-40.0,M,,*7F
+(May 25 2026 02:04:56,  887900 sec) GpsServices()        Profile 6 GPS fix obtained in 7 seconds.
+(May 25 2026 02:04:56,  887900 sec) GpsServices()                   lon      lat mm/dd/yyyy hhmmss nsat
+(May 25 2026 02:04:56,  887900 sec) GpsServices()        Fix: -131.2758  31.0277 05/25/2026 020520   11
+(May 25 2026 02:05:06,  887910 sec) gga()                $GPGGA,020530,3101.6615,N,13116.5501,W,1,11,0.8,5.8,M,-40.0,M,,*7A
+(May 25 2026 02:05:15,  887919 sec) gga()                $GPGGA,020540,3101.6610,N,13116.5511,W,1,11,0.8,6.1,M,-40.0,M,,*73
+(May 25 2026 02:05:15,  887919 sec) GpsServices()        APF11 RTC skew (-25s) OK.
+(May 25 2026 02:05:15,  887919 sec) GpsServices()        GPS services complete.
+(May 25 2026 02:05:50,  887954 sec) IrGeoLoc()           <x,y,z>=<-3584km,-4120km,3276km> lat=31.130 lon=-131.020 IrSysTime=0x19fb0edf
+(May 25 2026 02:05:54,  887958 sec) CLogin()             Connecting to primary host.
+(May 25 2026 02:06:02,  887966 sec) CLogin()             Connection 1 established in 8 seconds.
+(May 25 2026 02:06:12,  887976 sec) login()              Login successful.
+(May 25 2026 02:06:21,  887985 sec) CLogin()             Logged in to host.  [Login required 19 seconds]
+(May 25 2026 02:06:28,  887992 sec) RxConfig()           Downloading "mission.cfg" from host.
+(May 25 2026 02:06:43,  888007 sec) RxConfig()           Download successful: [bytes:33, sec:12.8, bps:3]
+(May 25 2026 02:06:48,  888012 sec) WriteVitals_()       Writing vitals to "24583.006.msg".
+(May 25 2026 02:06:55,  888019 sec) UpLoadFile()         Uploading "24583.006.log" to host.
+(May 25 2026 02:10:04,  888208 sec) UpLoadFile()         Upload successful: [bytes:43855, sec:188.9, bps:232]
+(May 25 2026 02:10:05,  888209 sec) fmove()              Moved: 24583.006.log -> archive/24583.006.log
+(May 25 2026 02:10:09,  888213 sec) UpLoadFile()         Uploading "24583.006.msg" to host.
+(May 25 2026 02:12:29,  888353 sec) UpLoadFile()         Upload successful: [bytes:41228, sec:140.1, bps:294]
+(May 25 2026 02:12:31,  888355 sec) fmove()              Moved: 24583.006.msg -> archive/24583.006.msg
+(May 25 2026 02:12:37,  888361 sec) UpLoadFile()         Uploading "24583.006.isus" to host.
+(May 25 2026 02:14:00,  888444 sec) UpLoadFile()         Upload successful: [bytes:25007, sec:82.8, bps:302]
+(May 25 2026 02:14:01,  888445 sec) Stm32f103SdBlockRead Block transfer from Rx fifo of SD periperal failed. [sdio->STA=0x00000002]
+(May 25 2026 02:14:01,  888445 sec) Stm32f103SdBlockRead Read failed for 1 blocks starting at address 0x00002113. [status=0,state=-1,msTimer=18msec]
+(May 25 2026 02:14:11,  888455 sec) fmove()              Failed: 24583.006.isus -> archive/24583.006.isus [FatErr=1]
+(May 25 2026 02:14:20,  888464 sec) UpLoadFile()         Uploading "24583.006.dura" to host.
+(May 25 2026 02:15:11,  888515 sec) UpLoadFile()         Upload successful: [bytes:12405, sec:51.0, bps:243]
+(May 25 2026 02:15:12,  888516 sec) fmove()              Moved: 24583.006.dura -> archive/24583.006.dura
+(May 25 2026 02:15:13,  888517 sec) UpLoad()             Files successfully uploaded: 4
+(May 25 2026 02:15:13,  888517 sec) UpLoad()             Upload complete.
+(May 25 2026 02:15:23,  888527 sec) chat()               Expected string [logout] not received.
+(May 25 2026 02:15:23,  888527 sec) logout()             Attempt to log-out failed.
+(May 25 2026 02:15:23,  888527 sec) logout()             No carrier detected.
+(May 25 2026 02:15:23,  888527 sec) Telemetry()          Telemetry cycle complete: PrfId=6 ConnectionAttempts=1  Connections=1
+(May 25 2026 02:15:23,  888527 sec) TelemetryTerminate() Parsing new mission configuration.
+(May 25 2026 02:15:24,  888528 sec) configure()          Parsing configurators in "mission.cfg".
+(May 25 2026 02:15:24,  888528 sec) configure()             TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)].
+(May 25 2026 02:15:25,  888529 sec) configure()          Configuration CRCs and syntax OK.
+(May 25 2026 02:15:25,  888529 sec) ConfigSupervisor()   Configuration accepted.
+(May 25 2026 02:15:25,  888529 sec) TelemetryTerminate() Reconditioning the file system.
+(May 25 2026 02:15:28,       0 sec) DescentInit()        Deep profile 7 initiated at mission-time 888532sec.
+(May 25 2026 02:15:29,       1 sec) DescentInit()        Surface pressure: 0.1dbars.
+(May 25 2026 02:15:29,       1 sec) DescentInit()        Charge consumption model: OCV:15.0V Wake-Cycles:10781 Standby:61.6days Wake:8.5kC Sleep:0.7kC
+(May 25 2026 02:15:41,      13 sec) DescentInit()        Pneumatic humidity: 996(5.1%) -> 1119(8.7%)
+(May 25 2026 02:15:42,      14 sec) PistonMoveAbsWTO()    170->041 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 [656sec, 14.9Volts, 0.134Amps, CPT:656sec]
+(May 25 2026 02:26:42,     674 sec) DescentInit()        Air solenoid open: Barometer [204cnt,  11.9psi]  Pneumometer [102cnt,  11.9psi]
+(May 25 2026 02:26:52,     684 sec) Descent()            Pressure: 55.0
+(May 25 2026 03:15:28,    3600 sec) Descent()            Pressure: 463.9
+(May 25 2026 04:15:28,    7200 sec) Descent()            Pressure: 759.8
+(May 25 2026 05:15:28,   10800 sec) Descent()            Pressure: 915.5
+(May 25 2026 06:15:28,   14400 sec) Descent()            Pressure: 960.8
+(May 25 2026 06:15:29,   14401 sec) ParkInit()           Charge consumption model: OCV:15.5V Wake-Cycles:10786 Standby:61.7days Wake:8.8kC Sensors:0.7kC
+(May 25 2026 08:15:35,   21607 sec) Park()               ParkPOutOfBand[-3, 971.9 dbars]: retract piston.
+(May 25 2026 08:15:36,   21608 sec) PistonMoveAbsWTO()    041->040 040 [5sec, 15.3Volts, 0.075Amps, CPT:661sec]
+(May 26 2026 03:15:35,   90007 sec) Park()               ParkPOutOfBand[3, 1013.9 dbars]: extend piston.
+(May 26 2026 03:15:36,   90008 sec) PistonMoveAbsWTO()    040->041 041 [2sec, 14.9Volts, 0.405Amps, CPT:663sec]
+(May 27 2026 04:15:35,  180007 sec) Park()               ParkPOutOfBand[3, 1010.3 dbars]: extend piston.
+(May 27 2026 04:15:36,  180008 sec) PistonMoveAbsWTO()    041->042 042 [5sec, 14.9Volts, 0.395Amps, CPT:668sec]
+(May 27 2026 08:15:35,  194407 sec) Park()               ParkPOutOfBand[-3, 982.3 dbars]: retract piston.
+(May 27 2026 08:15:36,  194408 sec) PistonMoveAbsWTO()    042->041 041 [2sec, 15.2Volts, 0.085Amps, CPT:670sec]
+(Jun 01 2026 23:15:35,  680407 sec) Park()               ParkPOutOfBand[3, 1012.8 dbars]: extend piston.
+(Jun 01 2026 23:15:36,  680408 sec) PistonMoveAbsWTO()    041->042 042 [2sec, 14.8Volts, 0.404Amps, CPT:672sec]
+(Jun 03 2026 22:16:00,  849632 sec) CtdPower()           [ 1003.12,  3.7918, 34.4598]
+(Jun 03 2026 22:16:00,  849632 sec) CtdPower()           CTD Power consumption [218VCnt 3ACnt]: 15.302Volts * 0.012Amps = 0.19Watts.
+(Jun 03 2026 22:16:07,  849639 sec) ParkTerminate()      Piston Position:42 Vacuum:192 HumidityAd12:1012(5.6%) Vq:219 Aq:2 Vsbe:218 Asbe:3 Vflbb:213 Aflbb:12 V83:215 A83:3 MuxTemp:3.833C MuxHumidity:4.2%
+(Jun 03 2026 22:16:40,  849672 sec) ParkTerminate()      PTS/O2,T83,Phase,RawTemp: 1003.1dbars 3.7917C 34.4593PSU / 0.661mL/L 3.792C 37.400 1.060
+(Jun 03 2026 22:16:40,  849672 sec) ParkTerminate()      FLBB FSig{}, BbSig, TSig: {54, 65} 85, 568
+(Jun 03 2026 22:16:41,  849673 sec) GoDeepInit()         Charge consumption model: OCV:15.4V Wake-Cycles:11018 Standby:71.4days Wake:9.1kC Sensors:0.7kC
+(Jun 03 2026 22:16:41,  849673 sec) GoDeepInit()         Moving piston.
+(Jun 03 2026 22:16:41,  849673 sec) PistonMoveAbsWTO()    042->010 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 015 014 013 012 011 010 [163sec, 15.1Volts, 0.044Amps, CPT:835sec]
+(Jun 04 2026 02:15:28,  864000 sec) ProfileInit()        Charge consumption model: OCV:15.4V Wake-Cycles:11066 Standby:71.5days Wake:9.1kC Sensors:0.7kC
+(Jun 04 2026 02:15:28,  864000 sec) ProfileInit()        PrfId:007  Pressure:1797.1dbar  pTable[3]:1700dbar
+(Jun 04 2026 02:15:30,  864002 sec) ProfileInit()        Muxer PPIs K{1,2} quiescent: 15.32V, 0.3mA, 4.6mW
+(Jun 04 2026 02:15:34,  864006 sec) ProfileInit()        ISUS powered up.
+(Jun 04 2026 02:15:37,  864009 sec) ProfileInit()        Muxer PPIs K{1,2} w/ ISUS awake: 15.06V, 48.0mA, 722.7mW
+(Jun 04 2026 02:15:44,  864016 sec) MscErrorLog_()       No error records to log.
+(Jun 04 2026 02:15:51,  864023 sec) ProfileInit()        DURA powered up.
+(Jun 04 2026 02:15:54,  864026 sec) ProfileInit()        Muxer PPIs K{1,2} w/ DURA awake: 15.07V, 48.9mA, 737.0mW
+(Jun 04 2026 02:16:00,  864032 sec) MscErrorLog_()       No error records to log.
+(Jun 04 2026 02:16:05,  864037 sec) PistonMoveAbsWTO()    010->032 011 012 013 014 015 [30sec, 14.4Volts, 0.549Amps, CPT:865sec]
+(Jun 04 2026 02:16:46,  864078 sec) PistonMoveAbsWTO()    015->032 016 017 018 019 020 [30sec, 14.3Volts, 0.562Amps, CPT:895sec]
+(Jun 04 2026 02:17:27,  864119 sec) PistonMoveAbsWTO()    020->032 021 022 023 024 025 [30sec, 14.2Volts, 0.556Amps, CPT:925sec]
+(Jun 04 2026 02:18:08,  864160 sec) PistonMoveAbsWTO()    025->032 026 027 028 029 [30sec, 14.1Volts, 0.551Amps, CPT:955sec]
+(Jun 04 2026 02:18:49,  864201 sec) PistonMoveAbsWTO()    029->032 030 031 032 [13sec, 14.1Volts, 0.547Amps, CPT:968sec]
+(Jun 04 2026 02:32:20,  865012 sec) Profile()            Sample 0 initiated at 1701.8dbars for bin 3 [1700dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1699.5dbars 2.4588C 34.5828PSU / 1.516mL/L 2.456C 33.349 1.102 / 42.7uM / -0.856572V / {  52   60}   83  571
+(Jun 04 2026 02:48:59,  866011 sec) Profile()            Sample 1 initiated at 1601.1dbars for bin 4 [1600dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1599.2dbars 2.5911C 34.5726PSU / 1.419mL/L 2.586C 33.727 1.098 / 43.0uM / -0.856633V / {  52   62}   84  570
+(Jun 04 2026 03:01:19,  866751 sec) AscentControlAgent() Bouyancy nudge to 42 (v=0.076dbar/sec).
+(Jun 04 2026 03:01:19,  866751 sec) PistonMoveAbsWTO()    032->042 033 034 035 036 037 [30sec, 14.6Volts, 0.508Amps, CPT:998sec]
+(Jun 04 2026 03:02:00,  866792 sec) PistonMoveAbsWTO()    037->042 038 039 040 041 042 [29sec, 14.4Volts, 0.491Amps, CPT:1027sec]
+(Jun 04 2026 03:08:16,  867168 sec) Profile()            Sample 2 initiated at 1501.4dbars for bin 5 [1500dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1499.4dbars 2.7845C 34.5584PSU / 1.308mL/L 2.780C 34.170 1.092 / 43.3uM / -0.856645V / {  54   63}   83  570
+(Jun 04 2026 03:25:49,  868221 sec) Profile()            Sample 3 initiated at 1401.2dbars for bin 6 [1400dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1399.2dbars 2.9734C 34.5436PSU / 1.188mL/L 2.965C 34.681 1.086 / 43.7uM / -0.856462V / {  53   62}   84  570
+(Jun 04 2026 03:44:08,  869320 sec) Profile()            Sample 4 initiated at 1301.7dbars for bin 7 [1300dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1299.9dbars 3.1515C 34.5280PSU / 1.091mL/L 3.146C 35.115 1.080 / 43.8uM / -0.855866V / {  55   65}   83  570
+(Jun 04 2026 03:52:26,  869818 sec) AscentControlAgent() Bouyancy nudge to 52 (v=0.076dbar/sec).
+(Jun 04 2026 03:52:26,  869818 sec) PistonMoveAbsWTO()    042->052 043 044 045 046 047 [30sec, 14.6Volts, 0.428Amps, CPT:1057sec]
+(Jun 04 2026 03:53:07,  869859 sec) PistonMoveAbsWTO()    047->052 048 049 050 051 052 [28sec, 14.5Volts, 0.433Amps, CPT:1085sec]
+(Jun 04 2026 04:03:13,  870465 sec) Profile()            Sample 5 initiated at 1201.3dbars for bin 8 [1200dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1199.3dbars 3.3582C 34.5089PSU / 0.991mL/L 3.353C 35.581 1.073 / 44.1uM / -0.855364V / {  53   64}   84  569
+(Jun 04 2026 04:20:58,  871530 sec) Profile()            Sample 6 initiated at 1101.4dbars for bin 9 [1100dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 1099.5dbars 3.5862C 34.4862PSU / 0.838mL/L 3.580C 36.375 1.066 / 44.3uM / -0.855342V / {  54   63}   85  569
+(Jun 04 2026 04:39:12,  872624 sec) AscentControlAgent() Bouyancy nudge to 62 (v=0.075dbar/sec).
+(Jun 04 2026 04:39:12,  872624 sec) PistonMoveAbsWTO()    052->062 053 054 055 056 057 [30sec, 14.7Volts, 0.368Amps, CPT:1115sec]
+(Jun 04 2026 04:39:53,  872665 sec) PistonMoveAbsWTO()    057->062 058 059 060 061 062 [25sec, 14.6Volts, 0.378Amps, CPT:1140sec]
+(Jun 04 2026 04:41:30,  872762 sec) Profile()            Sample 7 initiated at 999.4dbars for bin 10 [1000dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 997.2dbars 3.8217C 34.4521PSU / 0.671mL/L 3.814C 37.329 1.059 / 44.7uM / -0.855534V / {  54   67}   85  568
+(Jun 04 2026 04:44:17,  872929 sec) Sbe41cpStartCP()     Continuous profile started.
+(Jun 04 2026 04:49:22,  873234 sec) Profile()            Sample 8 initiated at 951.8dbars for bin 11 [950dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 951.7dbars 3.9332C 34.4392PSU / 0.603mL/L 3.932C 37.747 1.055 / 44.8uM / -0.855486V / {  54   68}   83  568
+(Jun 04 2026 04:58:51,  873803 sec) Profile()            Sample 9 initiated at 901.2dbars for bin 12 [900dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 901.1dbars 4.0846C 34.4159PSU / 0.520mL/L 4.084C 38.275 1.050 / 44.8uM / -0.855696V / {  54   67}   83  568
+(Jun 04 2026 05:08:42,  874394 sec) Profile()            Sample 10 initiated at 851.5dbars for bin 13 [850dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 851.4dbars 4.2198C 34.3913PSU / 0.451mL/L 4.218C 38.743 1.046 / 44.7uM / -0.855822V / {  52   68}   85  568
+(Jun 04 2026 05:19:06,  875018 sec) Profile()            Sample 11 initiated at 801.5dbars for bin 14 [800dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 801.4dbars 4.3720C 34.3569PSU / 0.386mL/L 4.371C 39.195 1.042 / 44.6uM / -0.856071V / {  54   71}   84  568
+(Jun 04 2026 05:20:01,  875073 sec) AscentControlAgent() Bouyancy nudge to 72 (v=0.079dbar/sec).
+(Jun 04 2026 05:20:02,  875074 sec) PistonMoveAbsWTO()    062->072 063 064 065 066 067 [30sec, 14.6Volts, 0.320Amps, CPT:1170sec]
+(Jun 04 2026 05:20:43,  875115 sec) PistonMoveAbsWTO()    067->072 068 069 070 071 072 [25sec, 14.5Volts, 0.324Amps, CPT:1195sec]
+(Jun 04 2026 05:27:40,  875532 sec) Profile()            Sample 12 initiated at 751.0dbars for bin 15 [750dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 750.9dbars 4.4445C 34.3163PSU / 0.374mL/L 4.443C 39.278 1.039 / 44.7uM / -0.856226V / {  54   68}   84  568
+(Jun 04 2026 05:36:58,  876090 sec) Profile()            Sample 13 initiated at 701.8dbars for bin 16 [700dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 701.7dbars 4.5947C 34.2828PSU / 0.382mL/L 4.592C 39.190 1.035 / 44.3uM / -0.856155V / {  55   69}   86  567
+(Jun 04 2026 05:40:27,  876299 sec) AscentControlAgent() Bouyancy nudge to 82 (v=0.077dbar/sec).
+(Jun 04 2026 05:40:28,  876300 sec) PistonMoveAbsWTO()    072->082 073 074 075 076 077 [30sec, 14.6Volts, 0.304Amps, CPT:1225sec]
+(Jun 04 2026 05:41:09,  876341 sec) PistonMoveAbsWTO()    077->082 078 079 080 081 082 [25sec, 14.5Volts, 0.297Amps, CPT:1250sec]
+(Jun 04 2026 05:46:27,  876659 sec) Profile()            Sample 14 initiated at 651.1dbars for bin 17 [650dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 651.0dbars 4.7867C 34.2264PSU / 0.452mL/L 4.782C 38.621 1.029 / 43.9uM / -0.855501V / {  55   68}   86  567
+(Jun 04 2026 05:54:58,  877170 sec) Profile()            Sample 15 initiated at 601.8dbars for bin 18 [600dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 601.7dbars 5.0414C 34.1816PSU / 0.572mL/L 5.042C 37.711 1.021 / 43.0uM / -0.854980V / {  54   68}   86  567
+(Jun 04 2026 06:04:25,  877737 sec) Profile()            Sample 16 initiated at 551.7dbars for bin 19 [550dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 551.6dbars 5.2711C 34.1292PSU / 0.818mL/L 5.267C 36.068 1.014 / 42.1uM / -0.853897V / {  54   67}   85  566
+(Jun 04 2026 06:14:47,  878359 sec) Profile()            Sample 17 initiated at 502.0dbars for bin 20 [500dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 501.9dbars 5.5218C 34.0839PSU / 1.121mL/L 5.519C 34.302 1.007 / 40.7uM / -0.852285V / {  54   67}   87  566
+(Jun 04 2026 06:16:05,  878437 sec) AscentControlAgent() Bouyancy nudge to 92 (v=0.076dbar/sec).
+(Jun 04 2026 06:16:05,  878437 sec) PistonMoveAbsWTO()    082->092 083 084 085 086 087 [30sec, 14.7Volts, 0.254Amps, CPT:1280sec]
+(Jun 04 2026 06:16:46,  878478 sec) PistonMoveAbsWTO()    087->092 088 089 090 091 092 [24sec, 14.6Volts, 0.255Amps, CPT:1304sec]
+(Jun 04 2026 06:23:41,  878893 sec) Profile()            Sample 18 initiated at 451.6dbars for bin 21 [450dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 451.5dbars 5.9966C 34.0426PSU / 1.504mL/L 5.991C 32.323 0.992 / 38.7uM / -0.850165V / {  53   66}   85  566
+(Jun 04 2026 06:33:30,  879482 sec) Profile()            Sample 19 initiated at 401.7dbars for bin 22 [400dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 401.6dbars 6.5290C 34.0054PSU / 2.067mL/L 6.523C 29.907 0.977 / 35.7uM / -0.846855V / {  51   64}   87  565
+(Jun 04 2026 06:36:27,  879659 sec) AscentControlAgent() Bouyancy nudge to 102 (v=0.069dbar/sec).
+(Jun 04 2026 06:36:27,  879659 sec) PistonMoveAbsWTO()    092->102 093 094 095 096 097 [30sec, 14.7Volts, 0.234Amps, CPT:1334sec]
+(Jun 04 2026 06:37:08,  879700 sec) PistonMoveAbsWTO()    097->102 098 099 100 101 102 [24sec, 14.6Volts, 0.235Amps, CPT:1358sec]
+(Jun 04 2026 06:38:21,  879773 sec) Profile()            Sample 20 initiated at 380.8dbars for bin 23 [380dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 380.7dbars 6.7112C 33.9831PSU / 2.390mL/L 6.701C 28.751 0.972 / 34.2uM / -0.844950V / {  52   63}   85  564
+(Jun 04 2026 06:41:34,  879966 sec) Profile()            Sample 21 initiated at 361.7dbars for bin 24 [360dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 361.6dbars 6.9558C 33.9539PSU / 2.858mL/L 6.949C 27.269 0.964 / 32.2uM / -0.842290V / {  51   62}   84  564
+(Jun 04 2026 06:43:19,  880071 sec) Profile()            Sample 22 initiated at 351.1dbars for bin 25 [350dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 351.0dbars 7.1133C 33.9513PSU / 3.101mL/L 7.102C 26.566 0.960 / 31.1uM / -0.841097V / {  52   61}   86  564
+(Jun 04 2026 06:44:53,  880165 sec) Profile()            Sample 23 initiated at 341.5dbars for bin 26 [340dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 341.5dbars 7.2949C 33.9453PSU / 3.314mL/L 7.279C 25.969 0.955 / 30.3uM / -0.839971V / {  51   59}   88  564
+(Jun 04 2026 06:46:38,  880270 sec) Profile()            Sample 24 initiated at 331.1dbars for bin 27 [330dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 331.0dbars 7.5021C 33.9490PSU / 3.421mL/L 7.493C 25.641 0.949 / 30.0uM / -0.839737V / {  51   60}   85  563
+(Jun 04 2026 06:48:23,  880375 sec) Profile()            Sample 25 initiated at 321.1dbars for bin 28 [320dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 321.0dbars 7.6943C 33.9587PSU / 3.288mL/L 7.682C 25.899 0.943 / 29.8uM / -0.839917V / {  50   61}   86  563
+(Jun 04 2026 06:50:08,  880480 sec) Profile()            Sample 26 initiated at 311.5dbars for bin 29 [310dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 311.4dbars 7.8400C 33.9536PSU / 3.399mL/L 7.830C 25.579 0.939 / 28.7uM / -0.838812V / {  50   59}   86  563
+(Jun 04 2026 06:52:04,  880596 sec) Profile()            Sample 27 initiated at 301.5dbars for bin 30 [300dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 301.5dbars 7.9975C 33.9499PSU / 3.553mL/L 7.988C 25.168 0.934 / 27.0uM / -0.836535V / {  51   60}   88  563
+(Jun 04 2026 06:54:11,  880723 sec) Profile()            Sample 28 initiated at 291.6dbars for bin 31 [290dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 291.5dbars 8.1992C 33.9445PSU / 4.068mL/L 8.186C 23.999 0.929 / 25.8uM / -0.834979V / {  51   57}   89  562
+(Jun 04 2026 06:56:29,  880861 sec) Profile()            Sample 29 initiated at 281.7dbars for bin 32 [280dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 281.6dbars 8.3335C 33.9398PSU / 4.267mL/L 8.327C 23.563 0.925 / 25.1uM / -0.834147V / {  50   56}   86  562
+(Jun 04 2026 06:57:16,  880908 sec) AscentControlAgent() Bouyancy nudge to 112 (v=0.072dbar/sec).
+(Jun 04 2026 06:57:16,  880908 sec) PistonMoveAbsWTO()    102->112 103 104 105 106 107 [30sec, 14.7Volts, 0.216Amps, CPT:1388sec]
+(Jun 04 2026 06:57:57,  880949 sec) PistonMoveAbsWTO()    107->112 108 109 110 111 112 [24sec, 14.6Volts, 0.210Amps, CPT:1412sec]
+(Jun 04 2026 06:59:11,  881023 sec) Profile()            Sample 30 initiated at 269.5dbars for bin 33 [270dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 269.4dbars 8.5387C 33.9352PSU / 4.245mL/L 8.530C 23.537 0.919 / 25.0uM / -0.834473V / {  50   56}   88  562
+(Jun 04 2026 07:00:36,  881108 sec) Profile()            Sample 31 initiated at 261.2dbars for bin 34 [260dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 261.1dbars 8.7879C 33.9216PSU / 4.270mL/L 8.773C 23.411 0.912 / 23.9uM / -0.833169V / {  50   53}   93  562
+(Jun 04 2026 07:02:22,  881214 sec) Profile()            Sample 32 initiated at 251.0dbars for bin 35 [250dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 250.9dbars 9.0148C 33.9119PSU / 4.425mL/L 8.996C 23.048 0.906 / 22.5uM / -0.831814V / {  50   54}   85  561
+(Jun 04 2026 07:04:07,  881319 sec) Profile()            Sample 33 initiated at 241.5dbars for bin 36 [240dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 241.4dbars 9.4457C 33.8906PSU / 4.791mL/L 9.429C 22.266 0.894 / 20.5uM / -0.829863V / {  49   51}   86  561
+(Jun 04 2026 07:05:53,  881425 sec) Profile()            Sample 34 initiated at 231.8dbars for bin 37 [230dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 231.8dbars 9.7772C 33.8623PSU / 4.875mL/L 9.743C 22.025 0.886 / 19.4uM / -0.829076V / {  50   51}   90  561
+(Jun 04 2026 07:08:01,  881553 sec) Profile()            Sample 35 initiated at 221.1dbars for bin 38 [220dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 221.1dbars 10.0655C 33.8166PSU / 4.909mL/L 10.049C 21.873 0.877 / 18.5uM / -0.828491V / {  50   53}   91  560
+(Jun 04 2026 07:10:20,  881692 sec) Profile()            Sample 36 initiated at 211.5dbars for bin 39 [210dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 211.4dbars 10.6356C 33.7540PSU / 5.155mL/L 10.606C 21.308 0.863 / 15.2uM / -0.825994V / {  53   55}   88  560
+(Jun 04 2026 07:13:34,  881886 sec) Profile()            Sample 37 initiated at 201.6dbars for bin 40 [200dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 201.6dbars 11.2510C 33.7936PSU / 5.461mL/L 11.226C 20.665 0.846 / 12.8uM / -0.823659V / {  52   54}   94  559
+(Jun 04 2026 07:13:35,  881887 sec) AscentControlAgent() Bouyancy nudge to 122 (v=0.055dbar/sec).
+(Jun 04 2026 07:13:35,  881887 sec) PistonMoveAbsWTO()    112->122 113 114 115 116 117 [30sec, 14.7Volts, 0.195Amps, CPT:1442sec]
+(Jun 04 2026 07:14:16,  881928 sec) PistonMoveAbsWTO()    117->122 118 119 120 121 122 [23sec, 14.7Volts, 0.195Amps, CPT:1465sec]
+(Jun 04 2026 07:16:24,  882056 sec) Profile()            Sample 38 initiated at 191.4dbars for bin 41 [190dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 191.3dbars 11.8276C 33.7706PSU / 5.386mL/L 11.794C 20.602 0.832 / 11.1uM / -0.822491V / {  56   61}   96  558
+(Jun 04 2026 07:18:32,  882184 sec) Profile()            Sample 39 initiated at 181.9dbars for bin 42 [180dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 181.9dbars 12.0333C 33.7156PSU / 5.585mL/L 12.021C 20.251 0.826 / 9.7uM / -0.821254V / {  66   72}   97  558
+(Jun 04 2026 07:20:52,  882324 sec) Profile()            Sample 40 initiated at 171.8dbars for bin 43 [170dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 171.8dbars 12.4912C 33.6638PSU / 5.793mL/L 12.467C 19.839 0.814 / 7.6uM / -0.819803V / {  79   86}  100  557
+(Jun 04 2026 07:23:33,  882485 sec) Profile()            Sample 41 initiated at 161.5dbars for bin 44 [160dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 161.4dbars 13.2275C 33.6869PSU / 5.849mL/L 13.181C 19.560 0.796 / 5.9uM / -0.818047V / {  86   92}  103  556
+(Jun 04 2026 07:27:10,  882702 sec) Profile()            Sample 42 initiated at 151.9dbars for bin 45 [150dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 151.8dbars 13.6819C 33.7613PSU / 5.869mL/L 13.659C 19.398 0.785 / 5.3uM / -0.817181V / {  86  102}  104  555
+(Jun 04 2026 07:28:51,  882803 sec) AscentControlAgent() Bouyancy nudge to 132 (v=0.038dbar/sec).
+(Jun 04 2026 07:28:51,  882803 sec) PistonMoveAbsWTO()    122->132 123 124 125 126 127 [30sec, 14.8Volts, 0.193Amps, CPT:1495sec]
+(Jun 04 2026 07:29:32,  882844 sec) PistonMoveAbsWTO()    127->132 128 129 130 131 132 [22sec, 14.7Volts, 0.190Amps, CPT:1517sec]
+(Jun 04 2026 07:31:18,  882950 sec) Profile()            Sample 43 initiated at 141.9dbars for bin 46 [140dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 141.9dbars 14.9618C 33.9335PSU / 5.858mL/L 14.903C 19.068 0.755 / 3.5uM / -0.815113V / {  94  110}  104  554
+(Jun 04 2026 07:33:37,  883089 sec) Profile()            Sample 44 initiated at 131.9dbars for bin 47 [130dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 131.8dbars 15.6363C 34.0187PSU / 5.919mL/L 15.614C 18.799 0.738 / 2.2uM / -0.813876V / { 134  136}  114  553
+(Jun 04 2026 07:36:08,  883240 sec) Profile()            Sample 45 initiated at 121.8dbars for bin 48 [120dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 121.7dbars 16.2606C 34.0726PSU / 6.050mL/L 16.232C 18.473 0.724 / 1.8uM / -0.812471V / { 119  148}  103  552
+(Jun 04 2026 07:39:21,  883433 sec) Profile()            Sample 46 initiated at 111.8dbars for bin 49 [110dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 111.8dbars 17.0801C 34.1897PSU / 6.167mL/L 17.048C 18.122 0.706 / 1.7uM / -0.810872V / {  95  110}  111  551
+(Jun 04 2026 07:43:41,  883693 sec) Profile()            Sample 47 initiated at 101.8dbars for bin 50 [100dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 101.8dbars 17.6786C 34.2670PSU / 6.206mL/L 17.665C 17.920 0.692 / 1.6uM / -0.810041V / {  74   87}  103  550
+(Jun 04 2026 07:44:26,  883738 sec) AscentControlAgent() Bouyancy nudge to 137 (v=0.037dbar/sec).
+(Jun 04 2026 07:44:26,  883738 sec) PistonMoveAbsWTO()    132->137 133 134 135 136 137 [26sec, 14.8Volts, 0.183Amps, CPT:1543sec]
+(Jun 04 2026 07:45:53,  883825 sec) Profile()            Sample 48 initiated at 96.6dbars for bin 51 [95dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 96.5dbars 17.6972C 34.2423PSU / 6.222mL/L 17.690C 17.896 0.691 / 1.7uM / -0.809808V / {  74   85}  100  549
+(Jun 04 2026 07:47:16,  883908 sec) Profile()            Sample 49 initiated at 91.6dbars for bin 52 [90dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 91.5dbars 17.8581C 34.2415PSU / 6.255mL/L 17.842C 17.819 0.688 / 1.9uM / -0.809532V / {  69   79}  101  548
+(Jun 04 2026 07:48:39,  883991 sec) Profile()            Sample 50 initiated at 86.8dbars for bin 53 [85dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 86.8dbars 18.0148C 34.2458PSU / 6.267mL/L 18.004C 17.765 0.685 / 1.6uM / -0.809276V / {  68   87}  106  548
+(Jun 04 2026 07:50:13,  884085 sec) Profile()            Sample 51 initiated at 81.8dbars for bin 54 [80dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 81.8dbars 18.5313C 34.3065PSU / 6.215mL/L 18.490C 17.704 0.674 / 2.0uM / -0.808873V / {  64   76}  102  547
+(Jun 04 2026 07:52:10,  884202 sec) Profile()            Sample 52 initiated at 77.0dbars for bin 55 [75dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 76.9dbars 18.7616C 34.3553PSU / 6.192mL/L 18.749C 17.668 0.669 / 1.7uM / -0.808558V / {  65   96}  102  547
+(Jun 04 2026 07:54:06,  884318 sec) Profile()            Sample 53 initiated at 72.0dbars for bin 56 [70dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 72.0dbars 18.7795C 34.3528PSU / 6.200mL/L 18.774C 17.652 0.668 / 1.8uM / -0.808372V / {  74   63}  109  547
+(Jun 04 2026 07:56:02,  884434 sec) Profile()            Sample 54 initiated at 66.7dbars for bin 57 [65dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 66.6dbars 18.8073C 34.3528PSU / 6.206mL/L 18.803C 17.638 0.667 / 1.7uM / -0.808226V / {  62   58}  113  546
+(Jun 04 2026 07:57:48,  884540 sec) Profile()            Sample 55 initiated at 61.5dbars for bin 58 [60dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 61.5dbars 18.8110C 34.3302PSU / 6.212mL/L 18.809C 17.630 0.667 / 1.8uM / -0.808123V / {  60   58}  103  546
+(Jun 04 2026 07:59:33,  884645 sec) Profile()            Sample 56 initiated at 56.6dbars for bin 59 [55dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 56.5dbars 18.7700C 34.3010PSU / 6.222mL/L 18.771C 17.628 0.668 / 1.7uM / -0.808107V / {  64   58}  113  546
+(Jun 04 2026 08:01:18,  884750 sec) Profile()            Sample 57 initiated at 51.8dbars for bin 60 [50dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 51.8dbars 18.7196C 34.2692PSU / 6.244mL/L 18.721C 17.614 0.669 / 1.8uM / -0.807965V / {  55   57}  103  545
+(Jun 04 2026 08:03:15,  884867 sec) Profile()            Sample 58 initiated at 46.5dbars for bin 61 [45dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 46.5dbars 18.7140C 34.2614PSU / 6.242mL/L 18.714C 17.619 0.669 / 1.7uM / -0.807818V / {  58   58}  104  545
+(Jun 04 2026 08:04:49,  884961 sec) Profile()            Sample 59 initiated at 42.0dbars for bin 62 [40dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 41.9dbars 18.7150C 34.2498PSU / 6.235mL/L 18.717C 17.626 0.669 / 1.7uM / -0.807814V / {  59   58}  104  545
+(Jun 04 2026 08:06:45,  885077 sec) Profile()            Sample 60 initiated at 36.5dbars for bin 63 [35dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 36.5dbars 18.6410C 34.2056PSU / 6.245mL/L 18.643C 17.632 0.671 / 1.8uM / -0.807750V / {  54   55}  109  545
+(Jun 04 2026 08:08:53,  885205 sec) Profile()            Sample 61 initiated at 31.9dbars for bin 64 [30dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 31.9dbars 18.5429C 34.1453PSU / 6.251mL/L 18.546C 17.650 0.673 / 1.5uM / -0.807830V / {  54   54}  123  545
+(Jun 04 2026 08:11:49,  885381 sec) AscentControlAgent() Bouyancy nudge to 142 (v=0.025dbar/sec).
+(Jun 04 2026 08:11:50,  885382 sec) PistonMoveAbsWTO()    137->142 138 139 140 141 142 [24sec, 14.9Volts, 0.165Amps, CPT:1567sec]
+(Jun 04 2026 08:13:04,  885456 sec) Profile()            Sample 62 initiated at 26.6dbars for bin 65 [25dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 26.6dbars 18.1105C 33.8786PSU / 6.314mL/L 18.107C 17.687 0.682 / 1.4uM / -0.808434V / {  53   54}  108  545
+(Jun 04 2026 08:13:48,  885500 sec) PistonMoveAbsWTO()    142->142 [0sec, 0.0Volts, 0.000Amps, CPT:1567sec]
+(Jun 04 2026 08:14:33,  885545 sec) PistonMoveAbsWTO()    142->142 [0sec, 0.0Volts, 0.000Amps, CPT:1567sec]
+(Jun 04 2026 08:15:24,  885596 sec) Profile()            Sample 63 initiated at 22.0dbars for bin 66 [20dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 22.0dbars 18.1111C 33.7818PSU / 6.288mL/L 18.110C 17.715 0.682 / 1.7uM / -0.808345V / {  55   52}  107  545
+(Jun 04 2026 08:15:46,  885618 sec) PistonMoveAbsWTO()    142->142 [0sec, 0.0Volts, 0.000Amps, CPT:1567sec]
+(Jun 04 2026 08:16:53,  885685 sec) AscentControlAgent() Bouyancy nudge to 147 (v=0.031dbar/sec).
+(Jun 04 2026 08:16:54,  885686 sec) PistonMoveAbsWTO()    142->147 143 144 [15sec, 14.9Volts, 0.170Amps, CPT:1582sec]
+(Jun 04 2026 08:17:59,  885751 sec) Profile()            Sample 64 initiated at 16.6dbars for bin 67 [15dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 16.5dbars 18.1389C 33.7812PSU / 6.281mL/L 18.138C 17.716 0.682 / 1.7uM / -0.808177V / {  54   53}  105  545
+(Jun 04 2026 08:17:59,  885751 sec) PistonMoveAbsWTO()    144->147 145 146 147 [12sec, 14.9Volts, 0.171Amps, CPT:1594sec]
+(Jun 04 2026 08:19:23,  885835 sec) Profile()            Sample 65 initiated at 11.8dbars for bin 68 [10dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 11.7dbars 18.1387C 33.7810PSU / 6.285mL/L 18.139C 17.711 0.682 / 1.8uM / -0.807976V / {  56   55}  106  545
+(Jun 04 2026 08:20:24,  885896 sec) Profile()            Sample 66 initiated at 7.9dbars for bin 69 [6dbars].  PTS/O2,T83,Phase,RawTemp/NO3/pH/FSig{},BbSig,TSig: 7.8dbars 18.1378C 33.7804PSU / 6.282mL/L 18.138C 17.715 0.682 / 1.8uM / -0.807906V / {  53   51}  101  545
+(Jun 04 2026 08:20:48,  885920 sec) SurfaceDetect()      SurfacePressure:0.1dbars Pressure:3.9dbars PistonPosition:147
+(Jun 04 2026 08:20:48,  885920 sec) Sbe41cpStopCP()      Continuous profile stopped.
+(Jun 04 2026 08:20:51,  885923 sec) PistonMoveAbsWTO()    147->169 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 [112sec, 14.8Volts, 0.168Amps, CPT:1706sec]
+(Jun 04 2026 08:22:49,  886041 sec) chat()               Expected string [S>] not received.
+(Jun 04 2026 08:24:38,  886150 sec) Sbe41cpBinAverage()  Finished averaging 13003 samples in 104 seconds.
+(Jun 04 2026 08:24:43,  886155 sec) Sbe41cpUploadCP_()   Sbe41cpSerNo[21418] NSample[13003] NBin[493]
+(Jun 04 2026 08:25:14,  886186 sec) Sbe41cpUploadCP_()   Continuous profile uploaded [493 lines].
+(Jun 04 2026 08:25:28,  886200 sec) MscErrorLog_()       No error records to log.
+(Jun 04 2026 08:25:38,  886210 sec) MscErrorLog_()       No error records to log.
+
+<EOT>

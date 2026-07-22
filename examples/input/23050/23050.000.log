@@ -1,0 +1,101 @@
+(Nov 13 2025 02:15:10,    4830 sec) SelfTest()           Executing self-test for ApfId 23050. [FwRev 022725]
+(Nov 13 2025 02:15:10,    4830 sec) SelfTest()           Apf11 Family:0x36 Group:0x0000 SerNo:0x037a7d0a Crc:0x83 SeqNo:050
+(Nov 13 2025 02:15:11,    4831 sec) SelfTest()           Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]
+(Nov 13 2025 02:15:11,    4831 sec) SelfTest()           Passed: FatFs volume: size(7454MB) sector-size(512B) block-size(512B)
+(Nov 13 2025 02:15:15,    4835 sec) SelfTest()           Passed: FatFs volume reconditioned.
+(Nov 13 2025 02:15:16,    4836 sec) PistonMoveAbsWTO()    231->227 230 229 228 227 [18sec, 14.9Volts, 0.142Amps, CPT:18sec]
+(Nov 13 2025 02:15:34,    4854 sec) PistonMoveAbsWTO()    227->231 228 229 230 231 [18sec, 14.8Volts, 0.141Amps, CPT:36sec]
+(Nov 13 2025 02:15:52,    4872 sec) SelfTest()           Passed: Timed piston movements from 231 to 227 counts and back.
+(Nov 13 2025 02:15:53,    4873 sec) SelfTest()           Passed: Internal pressure [200, 11.7psi] less than threshold [237, 13.9psi].
+(Nov 13 2025 02:15:54,    4874 sec) SelfTest()           Passed: Response received from SBE41cp.
+(Nov 13 2025 02:16:01,    4881 sec) SelfTest()           Passed: Sbe41cp SerNo: 18724
+(Nov 13 2025 02:16:12,    4892 sec) SelfTest()           Passed: SBE41cp (SerNo 18724) FwRev accepted: [7.2.5]
+(Nov 13 2025 02:16:12,    4892 sec) SelfTest()           Passed: SBE41cp (SerNo 18724) firmware build-date accepted: [Oct 14 2015 20:03:56]
+(Nov 13 2025 02:16:12,    4892 sec) SelfTest()           Passed: SBE41cp (SerNo 18724) firmware variant accepted: [CP UW]
+(Nov 13 2025 02:16:20,    4900 sec) Sbe41cpConfig()      Configuration successful.
+(Nov 13 2025 02:16:28,    4908 sec) Sbe41cpTsWait()      Configuration successful.
+(Nov 13 2025 02:16:31,    4911 sec) SelfTest()           Passed: SBE41cp configuration was successful.
+(Nov 13 2025 02:16:50,    4930 sec) Sbe41cpPOffSet()     Configuration successful: POffset(0.0).
+(Nov 13 2025 02:16:50,    4930 sec) SelfTest()           Passed: SBE41cp pressure-offset initialized to zero.
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()      SBE 41CP V 7.2.5  SERIAL NO. 18724
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()      temperature: 03-Feb-23
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          TA0 = -9.840644e-04
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          TA1 = 2.985803e-04
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          TA2 = -3.668724e-06
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          TA3 = 1.543179e-07
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()      conductivity: 03-Feb-23
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          G = -1.018744e+00
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          H = 1.530807e-01
+(Nov 13 2025 02:16:58,    4938 sec) Sbe41cpLogCal()          I = -4.083648e-04
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          J = 5.387232e-05
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          CTCOR = 3.250000e-06
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          CPCOR = -9.570000e-08
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          WBOTC = 3.867208e-07
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()      pressure S/N = 12137823, range = 2900 psia:  26-Jan-23
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          PA0 = 2.120589e-01
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          PA1 = 3.906383e-04
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          PA2 = -2.776522e-13
+(Nov 13 2025 02:16:59,    4939 sec) Sbe41cpLogCal()          PTCA0 = -1.161773e+03
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTCA1 = 6.359618e+01
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTCA2 = -1.828437e+00
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTCB0 = 3.188660e+05
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTCB1 = 1.284773e+01
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTCB2 = -1.502630e-01
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTHA0 = 2.977863e+02
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTHA1 = -6.175893e-05
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          PTHA2 = -9.619779e-13
+(Nov 13 2025 02:17:00,    4940 sec) Sbe41cpLogCal()          POFFSET = 0.000000e+00
+(Nov 13 2025 02:17:09,    4949 sec) SelfTest()           Passed: LBT model: 9523N
+(Nov 13 2025 02:17:10,    4950 sec) SelfTest()           Passed: LBT firmware revision: DB20004
+(Nov 13 2025 02:17:12,    4952 sec) IrModemConfigure()   Modem configured for fixed (19200) baud rate.
+(Nov 13 2025 02:17:12,    4952 sec) IrModemConfigure()   Configuration saved to modem's NVRAM.
+(Nov 13 2025 02:17:12,    4952 sec) IrModemConfigure()   Modem configuration successful.
+(Nov 13 2025 02:17:12,    4952 sec) SelfTest()           Passed: LBT configuration was successful.
+(Nov 13 2025 02:17:13,    4953 sec) SelfTest()           Passed: LBT IMEI: 300125062558730
+(Nov 13 2025 02:17:19,    4959 sec) SelfTest()           Passed: SIM card ICCID: 8988169234005978028
+(Nov 13 2025 02:17:20,    4960 sec) ConfigGarmin15()     Garmin GPS15 configuration initiated.
+(Nov 13 2025 02:17:29,    4969 sec) ConfigGarmin15()     Garmin GPS15 successfully configured.
+(Nov 13 2025 02:17:30,    4970 sec) PActivateInit()      Self-test passed.
+(Nov 13 2025 02:17:30,    4970 sec) PActivateInit()      Pressure activation mode initiated. [itime=4970]
+(Nov 13 2025 02:17:30,       0 sec) PistonMoveAbsWTO()    231->016 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 [1087sec, 14.8Volts, 0.142Amps, CPT:1123sec]
+(Nov 13 2025 02:40:56,    1406 sec) Apf11Init()          Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal).
+(Nov 13 2025 02:40:57,    1407 sec) Apf11Init()          Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal).
+(Feb 07 2026 06:47:36,       0 sec) PreludeInit()        Mission restarted. [pid=0, itime=7446606]
+(Feb 07 2026 06:47:36,       0 sec) PistonMoveAbsWTO()    016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1143sec, 14.4Volts, 0.234Amps, CPT:1143sec]
+(Feb 07 2026 07:06:49,    1153 sec) Prelude()            Logging configuration and initiating telemetry.
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()   Mission configuration for Apf11 FwRev 022725:
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      AscentTimeOut(500) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      AltDialCmd(ATDT0012066163256) [alternate]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      BuoyancyNudge(10) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      BuoyancyNudgeInitial(22) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      CompensatorHyperRetraction(0) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      ConnectTimeOut(60) [sec]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      CpActivationP(985) [dbar]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      DeepProfileDescentTime(240) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      DeepProfilePistonPos(12) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      DeepProfilePressure(2020) [dbar]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      DownTime(14400) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      FatFsEnable(1)
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      FloatId(23050)
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      FullExtension(231) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      FullRetraction(9) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      MaxAirBladder(154) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      MaxLogKb(50) [KByte]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      MissionPrelude(360) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      OkVacuum(237) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      PActivationPistonPosition(16) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      ParkDescentTime(240) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      ParkPistonPos(60) [count]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      ParkPressure(1000) [dbar]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      PnPCycleLen(1)
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      Pwd(0xafb3)
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      TelemetryRetry(15) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      TimeOfDay(DISABLED) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      UpTime(660) [min]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      User(f23050)
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      ZModemTimeOut(80) [sec]
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      Verbosity(2)
+(Feb 07 2026 07:06:49,    1153 sec) LogConfiguration()      DebugBits(0x0002)
+
+<EOT>

@@ -1,0 +1,228 @@
+(May 29 2025 03:51:04, 1312280 sec) SelfTest()           Executing self-test for ApfId 21878. [FwRev 031524]
+(May 29 2025 03:51:04, 1312280 sec) SelfTest()           Initiating MSC power-up.
+(May 29 2025 03:51:11, 1312287 sec) SelfTest()           Apf11 Family:0x36 Group:0x0000 SerNo:0x03769846 Crc:0x91 SeqNo:878
+(May 29 2025 03:51:12, 1312288 sec) SelfTest()           Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]
+(May 29 2025 03:51:12, 1312288 sec) SelfTest()           Passed: FatFs volume: size(7438MB) sector-size(512B) block-size(512B)
+(May 29 2025 03:51:13, 1312289 sec) SelfTest()           Passed: FatFs volume reconditioned.
+(May 29 2025 03:51:14, 1312290 sec) PistonMoveAbsWTO()    016->020 017 018 019 020 [18sec, 14.9Volts, 0.163Amps, CPT:18sec]
+(May 29 2025 03:51:32, 1312308 sec) PistonMoveAbsWTO()    020->016 019 018 017 016 [18sec, 14.9Volts, 0.168Amps, CPT:36sec]
+(May 29 2025 03:51:50, 1312326 sec) SelfTest()           Passed: Timed piston movements from 16 to 20 counts and back.
+(May 29 2025 03:51:51, 1312327 sec) SelfTest()           Passed: Internal pressure [210, 12.3psi] less than threshold [237, 13.9psi].
+(May 29 2025 03:51:52, 1312328 sec) SelfTest()           Passed: Response received from SBE41cp.
+(May 29 2025 03:51:59, 1312335 sec) SelfTest()           Passed: Sbe41cp SerNo: 17090
+(May 29 2025 03:52:10, 1312346 sec) SelfTest()           Passed: SBE41cp (SerNo 17090) FwRev accepted: [7.2.5]
+(May 29 2025 03:52:10, 1312346 sec) SelfTest()           Passed: SBE41cp (SerNo 17090) firmware build-date accepted: [Oct 14 2015 20:03:56]
+(May 29 2025 03:52:10, 1312346 sec) SelfTest()           Passed: SBE41cp (SerNo 17090) firmware variant accepted: [CP UW]
+(May 29 2025 03:52:18, 1312354 sec) Sbe41cpConfig()      Configuration successful.
+(May 29 2025 03:52:27, 1312363 sec) Sbe41cpEnablePts()   PTS output enabled during CP mode.
+(May 29 2025 03:52:36, 1312372 sec) Sbe41cpTsWait()      Configuration successful.
+(May 29 2025 03:52:39, 1312375 sec) SelfTest()           Passed: SBE41cp configuration was successful.
+(May 29 2025 03:52:58, 1312394 sec) Sbe41cpPOffSet()     Configuration successful: POffset(0.0).
+(May 29 2025 03:52:58, 1312394 sec) SelfTest()           Passed: SBE41cp pressure-offset initialized to zero.
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()      SBE 41CP V 7.2.5  SERIAL NO. 17090
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()      temperature: 02-Jun-24
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          TA0 = -7.864169e-04
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          TA1 = 2.809835e-04
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          TA2 = -3.062709e-06
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          TA3 = 1.336606e-07
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()      conductivity: 02-Jun-24
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          G = -1.016652e+00
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          H = 1.572199e-01
+(May 29 2025 03:53:05, 1312401 sec) Sbe41cpLogCal()          I = -4.851750e-04
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          J = 6.015892e-05
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          CTCOR = 3.250000e-06
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          CPCOR = -9.570000e-08
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          WBOTC = 1.307161e-07
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()      pressure S/N = 12060364, range = 2900 psia:  06-May-24
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          PA0 = 1.417510e-01
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          PA1 = 3.916733e-04
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          PA2 = -2.688088e-13
+(May 29 2025 03:53:06, 1312402 sec) Sbe41cpLogCal()          PTCA0 = -7.128311e+03
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTCA1 = 1.659924e+01
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTCA2 = -1.621558e-02
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTCB0 = 3.241478e+05
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTCB1 = 1.919480e+01
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTCB2 = -1.019015e-01
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTHA0 = 3.277537e+02
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTHA1 = -6.343540e-05
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          PTHA2 = -1.244259e-12
+(May 29 2025 03:53:07, 1312403 sec) Sbe41cpLogCal()          POFFSET = 0.000000e+00
+(May 29 2025 03:53:17, 1312413 sec) SelfTest()           Passed: LBT model: 9523N
+(May 29 2025 03:53:18, 1312414 sec) SelfTest()           Passed: LBT firmware revision: DB20004
+(May 29 2025 03:53:19, 1312415 sec) IrModemConfigure()   Modem configured for fixed (19200) baud rate.
+(May 29 2025 03:53:19, 1312415 sec) IrModemConfigure()   Configuration saved to modem's NVRAM.
+(May 29 2025 03:53:19, 1312415 sec) IrModemConfigure()   Modem configuration successful.
+(May 29 2025 03:53:19, 1312415 sec) SelfTest()           Passed: LBT configuration was successful.
+(May 29 2025 03:53:20, 1312416 sec) SelfTest()           Passed: LBT IMEI: 300125061290570
+(May 29 2025 03:53:26, 1312422 sec) SelfTest()           Passed: SIM card ICCID: 8988169234006246334
+(May 29 2025 03:53:27, 1312423 sec) ConfigGarmin15()     Garmin GPS15 configuration initiated.
+(May 29 2025 03:53:36, 1312432 sec) ConfigGarmin15()     Garmin GPS15 successfully configured.
+(May 29 2025 03:53:45, 1312441 sec) SelfTest()           Passed: Ocr504 SerNo: 2343
+(May 29 2025 03:53:48, 1312444 sec) SelfTest()           Passed: Ocr504 FwRev accepted: [5.1.0]
+(May 29 2025 03:54:28, 1312484 sec) Ocr504Config()       Configuration successful. [status=1]
+(May 29 2025 03:54:28, 1312484 sec) SelfTest()           Passed: Ocr504 configuration was successful.
+(May 29 2025 03:54:29, 1312485 sec) Ocr504LogConfig()    OCR-504 configuration:
+(May 29 2025 03:54:29, 1312485 sec) Ocr504LogConfig()       sensor type: irradiance
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       serial number: 2343
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       frame type: short
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       header: satai4
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       telemetry baud rate: 9600 bps
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       maximum frame rate: 1 hz
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       initialize silent mode: off
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       initialize power down: off
+(May 29 2025 03:54:30, 1312486 sec) Ocr504LogConfig()       initialize automatic telemetry: on
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       network mode: off
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       network address: 001
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       network baud rate: 19200 bps
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       averaging: on
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       immersed: on
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       calibrated output: off
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       sensor latency: 0
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()       cal coefficients: 
+(May 29 2025 03:54:31, 1312487 sec) Ocr504LogConfig()        optical channel 1: 
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	a0:2146614250.1 [2146614250]
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	a1:1.64736084942e-007 [1.64736e-07]
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	im:1.161 [1.161]
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()        optical channel 2: 
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	a0:2147222026.3 [2147222026]
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	a1:1.99042477545e-007 [1.99042e-07]
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	im:1.410 [1.41]
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()        optical channel 3: 
+(May 29 2025 03:54:32, 1312488 sec) Ocr504LogConfig()       	a0:214507885.9 [214507885]
+(May 29 2025 03:54:33, 1312489 sec) Ocr504LogConfig()       	a1:2.17438635367e-007 [2.17438e-07]
+(May 29 2025 03:54:33, 1312489 sec) Ocr504LogConfig()       	im:1.365 [1.365]
+(May 29 2025 03:54:33, 1312489 sec) Ocr504LogConfig()        optical channel 4: 
+(May 29 2025 03:54:33, 1312489 sec) Ocr504LogConfig()       	a0:2147690783.5 [2147690783]
+(May 29 2025 03:54:33, 1312489 sec) Ocr504LogConfig()       	a1:3.48228524159e-006 [3.48228e-06]
+(May 29 2025 03:54:33, 1312489 sec) Ocr504LogConfig()       	im:1.359 [1.359]
+(May 29 2025 03:54:35, 1312491 sec) SelfTest()           Passed: Ocr504 configuration logged.
+(May 29 2025 03:54:40, 1312496 sec) SelfTest()           Passed: Optode FwRev accepted: [4.9.1]
+(May 29 2025 03:54:44, 1312500 sec) SelfTest()           Passed: Optode SerNo: 3853
+(May 29 2025 03:54:57, 1312513 sec) OptodeConfig()       Configuration successful.
+(May 29 2025 03:54:57, 1312513 sec) SelfTest()           Passed: Optode configuration was successful.
+(May 29 2025 03:55:13, 1312529 sec) SelfTest()           Passed: MSC configured for ISUS and DURA sensors.
+(May 29 2025 03:55:16, 1312532 sec) SelfTest()           Passed: MSC initialization successful.
+(May 29 2025 03:55:17, 1312533 sec) SelfTest()           Passed: MSC RTC initialized.
+(May 29 2025 03:55:20, 1312536 sec) DuraConfigLog()      H, Datalogger Serial Num , SN:1146
+(May 29 2025 03:55:20, 1312536 sec) DuraConfigLog()      H, Application      Name , APF_MAIN.C
+(May 29 2025 03:55:20, 1312536 sec) DuraConfigLog()      H, App Build        Date , Oct 20 2020, 10:40:18
+(May 29 2025 03:55:20, 1312536 sec) DuraConfigLog()      H, Power Up Time   (GMT) , 05/29/2025 03:55:00
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Current  Time   (GMT) , 05/29/2025 03:55:19
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Alarm    Time   (GMT) , 05/29/2025 13:55:17
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Power Active  Timeout , 10
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Persistor CF2-1M Info , S/N:17509 - BIOS:4.03 - PicoDOS:4.03
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Compact FLASH    Size , 256614400
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Compact FLASH    Left , 99.42%
+(May 29 2025 03:55:21, 1312537 sec) DuraConfigLog()      H, Power Cycle   Counter , 0
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, System Reset  Counter , 0
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, System Error  Counter , 0
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, Last System     Error , 0
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, Last System ErrorTime , 01/01/1970 00:00:00
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, DURA  Error   Counter , 0
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, Last DURA       Error , 0
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, Last DURA Error  Time , 01/01/1970 00:00:00
+(May 29 2025 03:55:22, 1312538 sec) DuraConfigLog()      H, DURA Sample   Counter , 0
+(May 29 2025 03:55:23, 1312539 sec) DuraConfigLog()      H, Last Sample Rec. Time , 01/01/1970 00:00:00
+(May 29 2025 03:55:23, 1312539 sec) DuraConfigLog()      H, AtoD Reads per Sample , 10
+(May 29 2025 03:55:23, 1312539 sec) DuraConfigLog()      H, AtoD Reading    Delay , 100
+(May 29 2025 03:55:23, 1312539 sec) DuraConfigLog()      H, Samps per AtoD  Recal , 250
+(May 29 2025 03:55:26, 1312542 sec) SelfTest()           Passed: Query for DURA configuration.
+(May 29 2025 03:55:29, 1312545 sec) SelfTest()           Passed: DURA serial number accepted: [1146]
+(May 29 2025 03:55:32, 1312548 sec) SelfTest()           Passed: DURA FwRev accepted: [Oct 20 2020, 10:40:18]
+(May 29 2025 03:55:36, 1312552 sec) SelfTest()           Passed: DURA TimeOut(10Hr) accepted.
+(May 29 2025 03:55:42, 1312558 sec) SelfTest()           Passed: DURA sample successful.
+(May 29 2025 03:55:45, 1312561 sec) IsusConfigLog_()     H, Datalogger Serial Num , SN:1146
+(May 29 2025 03:55:45, 1312561 sec) IsusConfigLog_()     H, Application      Name , APF_MAIN.C
+(May 29 2025 03:55:45, 1312561 sec) IsusConfigLog_()     H, App Build        Date , Oct 20 2020, 10:40:18
+(May 29 2025 03:55:45, 1312561 sec) IsusConfigLog_()     H, Power Up Time   (GMT) , 05/29/2025 03:55:00
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Current  Time   (GMT) , 05/29/2025 03:55:44
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Alarm    Time   (GMT) , 05/29/2025 13:55:17
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Power Active  Timeout , 10
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Persistor CF2-1M Info , S/N:17509 - BIOS:4.03 - PicoDOS:4.03
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Compact FLASH    Size , 256614400
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Compact FLASH    Left , 99.42%
+(May 29 2025 03:55:46, 1312562 sec) IsusConfigLog_()     H, Power Cycle   Counter , 0
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, System Reset  Counter , 0
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, System Error  Counter , 0
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, Last System     Error , 0
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, Last System ErrorTime , 01/01/1970 00:00:00
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, ISUS  Error   Counter , 0
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, Last ISUS       Error , 0
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, Last ISUS Error  Time , 01/01/1970 00:00:00
+(May 29 2025 03:55:47, 1312563 sec) IsusConfigLog_()     H, ISUS Sample   Counter , 0
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Last Sample Rec. Time , 01/01/1970 00:00:00
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Fiberlite    Odometer , 00:10:01
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Fiberlite      Cycles , 200
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Spec Intensity LampON , 5000
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Spec Integration Time , 475
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Spec Pre  scans taken , 2
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Spec Lite scans taken , 3
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Spec Dark scans taken , 1
+(May 29 2025 03:55:48, 1312564 sec) IsusConfigLog_()     H, Calibration      Date , 09/19/2024
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Sw Calibration   Temp , 19.85
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Wavelength Fit  Range , 217.124 <-> 240.167
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Pixel Fit       Range , 35 <-> 64
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Fitted Concentrations , 2
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Baseline        Model , (ax + b)
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Br Temp  Compensation , ENABLED
+(May 29 2025 03:55:49, 1312565 sec) IsusConfigLog_()     H, Bromide Term in Model , will be FIXED (to external CTD value)
+(May 29 2025 03:55:50, 1312566 sec) IsusConfigLog_()     H, Zeiss Coefficient Vals, 1.895220e+02,7.847140e-01,1.224910e-04,-2.993320e-07,0.000000e+00
+(May 29 2025 03:55:53, 1312569 sec) SelfTest()           Passed: Query for ISUS configuration.
+(May 29 2025 03:55:56, 1312572 sec) SelfTest()           Passed: ISUS serial number accepted: [1146]
+(May 29 2025 03:55:59, 1312575 sec) SelfTest()           Passed: ISUS FwRev accepted: [Oct 20 2020, 10:40:18]
+(May 29 2025 03:56:02, 1312578 sec) SelfTest()           Passed: ISUS TimeOut(10Hr) accepted.
+(May 29 2025 03:56:09, 1312585 sec) SelfTest()           Passed: ISUS sample successful.
+(May 29 2025 03:56:19, 1312595 sec) SelfTest()           Passed: FLBB SerNo: 7444
+(May 29 2025 03:56:23, 1312599 sec) SelfTest()           Passed: FLBB FwRev accepted: [FLNTUAPX 4.04]
+(May 29 2025 03:56:29, 1312605 sec) FlbbConfig()         FLBB configuration successful.
+(May 29 2025 03:56:29, 1312605 sec) SelfTest()           Passed: FLBB configuration was successful.
+(May 29 2025 03:56:33, 1312609 sec) SelfTest()           Passed: FLBB wavelengths: Fl[470] Bb[700].
+(May 29 2025 03:56:35, 1312611 sec) PActivateInit()      Self-test passed.
+(May 29 2025 03:56:35, 1312611 sec) PActivateInit()      Pressure activation mode initiated. [itime=1312611]
+(May 29 2025 03:56:35,       0 sec) PistonMoveAbsWTO()    016->016 [0sec, 0.0Volts, 0.000Amps, CPT:36sec]
+(May 29 2025 03:59:08,     153 sec) Apf11Init()          Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal).
+(Aug 04 2025 21:41:41,       0 sec) PreludeInit()        Mission restarted. [pid=14, itime=5852706]
+(Aug 04 2025 21:41:41,       0 sec) PistonMoveAbsWTO()    016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1197sec, 14.6Volts, 0.244Amps, CPT:1197sec]
+(Aug 04 2025 22:01:48,    1207 sec) Prelude()            Logging configuration and initiating telemetry.
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()   Mission configuration for Apf11 FwRev 031524:
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      AscentTimeOut(540) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      AltDialCmd(ATDT0012066163256) [alternate]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      BuoyancyNudge(10) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      BuoyancyNudgeInitial(22) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      CompensatorHyperRetraction(0) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      ConnectTimeOut(60) [sec]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      CpActivationP(985) [dbar]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DeepProfileDescentTime(240) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DeepProfilePistonPos(16) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DeepProfilePressure(2020) [dbar]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DownTime(14400) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DuraRefWarmUpHrs(255)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DuraInit(-1) [Enable<0, Disable=0, Enable&Init>0]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      FatFsEnable(1)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      FlbbMode(1)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      FloatId(21878)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      FullExtension(231) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      FullRetraction(9) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      MaxAirBladder(154) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      MaxLogKb(50) [KByte]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      MissionPrelude(360) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      OcrInit(-500) [dbar]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      OkVacuum(237) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      OptodeMode(1)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      PActivationPistonPosition(16) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      ParkDescentTime(240) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      ParkPistonPos(66) [count]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      ParkPressure(1000) [dbar]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      PnPCycleLen(1)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      Pwd(0xafb3)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      TelemetryRetry(15) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      TimeOfDay(DISABLED) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      UpTime(660) [min]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      User(f21878)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      ZModemTimeOut(80) [sec]
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      Verbosity(2)
+(Aug 04 2025 22:01:48,    1207 sec) LogConfiguration()      DebugBits(0x0002)
+
+<EOT>

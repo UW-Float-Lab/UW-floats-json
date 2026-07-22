@@ -1,13 +1,13 @@
 {
-  "FILE_CREATION_DATE": "2026-05-23T05:25:14Z",
-  "FILE_UPDATE_DATE": "2026-05-23T05:25:14Z",
-  "DECODER_VERSION": "0.4.4",
+  "FILE_CREATION_DATE": "2026-07-22T05:40:58Z",
+  "FILE_UPDATE_DATE": "2026-07-22T05:40:58Z",
+  "DECODER_VERSION": "0.5.4",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23808,
   "TRANSMISSION_ID_NUMBER": 23808,
   "AOML_ID_NUMBER": 10071,
   "WMO_ID_NUMBER": 7902266,
-  "INSTRUMENT_TYPE": "UW-APEX-BGC",
+  "INSTRUMENT_TYPE": "UW-APEX-core",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
   "PI": "Steven RISER",
@@ -4861,263 +4861,459 @@
   "ECO_Drift": [
     {
       "PRES": 800.48,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 570,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 570,
       "TIME": "2025-10-04T20:52:03Z"
     },
     {
       "PRES": 798.02,
-      "FSig": 55,
-      "BbSig": 122,
-      "TSig": 570,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 122,
+      "temp_signal": 570,
       "TIME": "2025-10-04T21:52:01Z"
     },
     {
       "PRES": 799.05,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-04T22:52:01Z"
     },
     {
       "PRES": 808.48,
-      "FSig": 54,
-      "BbSig": 116,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 116,
+      "temp_signal": 571,
       "TIME": "2025-10-04T23:52:01Z"
     },
     {
       "PRES": 810.77,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T00:52:01Z"
     },
     {
       "PRES": 813.34,
-      "FSig": 54,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-05T01:52:01Z"
     },
     {
       "PRES": 825.95,
-      "FSig": 56,
-      "BbSig": 115,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 115,
+      "temp_signal": 571,
       "TIME": "2025-10-05T02:52:01Z"
     },
     {
       "PRES": 821.71,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T03:52:01Z"
     },
     {
       "PRES": 822.41,
-      "FSig": 54,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T04:52:01Z"
     },
     {
       "PRES": 831.88,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T05:52:01Z"
     },
     {
       "PRES": 835.33,
-      "FSig": 55,
-      "BbSig": 111,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 111,
+      "temp_signal": 571,
       "TIME": "2025-10-05T06:52:01Z"
     },
     {
       "PRES": 834.7,
-      "FSig": 55,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-05T07:52:01Z"
     },
     {
       "PRES": 845.61,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T08:52:01Z"
     },
     {
       "PRES": 849.41,
-      "FSig": 54,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-05T09:52:01Z"
     },
     {
       "PRES": 846.25,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T10:52:01Z"
     },
     {
       "PRES": 858.85,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T11:52:01Z"
     },
     {
       "PRES": 857.58,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T12:52:01Z"
     },
     {
       "PRES": 858.88,
-      "FSig": 54,
-      "BbSig": 111,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 111,
+      "temp_signal": 571,
       "TIME": "2025-10-05T13:52:01Z"
     },
     {
       "PRES": 869.47,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T14:52:01Z"
     },
     {
       "PRES": 871.37,
-      "FSig": 54,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T15:52:01Z"
     },
     {
       "PRES": 870.88,
-      "FSig": 56,
-      "BbSig": 115,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 115,
+      "temp_signal": 571,
       "TIME": "2025-10-05T16:52:01Z"
     },
     {
       "PRES": 881.47,
-      "FSig": 56,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-05T17:52:01Z"
     },
     {
       "PRES": 879.6,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T18:52:01Z"
     },
     {
       "PRES": 886.05,
-      "FSig": 56,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T19:52:01Z"
     },
     {
       "PRES": 898.65,
-      "FSig": 55,
-      "BbSig": 113,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 113,
+      "temp_signal": 571,
       "TIME": "2025-10-05T20:52:01Z"
     },
     {
       "PRES": 895.37,
-      "FSig": 56,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T21:52:01Z"
     },
     {
       "PRES": 896.74,
-      "FSig": 55,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-05T22:52:01Z"
     },
     {
       "PRES": 908.1,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-05T23:52:01Z"
     },
     {
       "PRES": 909.21,
-      "FSig": 55,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-06T00:52:01Z"
     },
     {
       "PRES": 909.14,
-      "FSig": 54,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-06T01:52:01Z"
     },
     {
       "PRES": 919.38,
-      "FSig": 55,
-      "BbSig": 112,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 112,
+      "temp_signal": 571,
       "TIME": "2025-10-06T02:52:01Z"
     },
     {
       "PRES": 918.49,
-      "FSig": 55,
-      "BbSig": 115,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 115,
+      "temp_signal": 571,
       "TIME": "2025-10-06T03:52:01Z"
     },
     {
       "PRES": 921.69,
-      "FSig": 56,
-      "BbSig": 114,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 114,
+      "temp_signal": 571,
       "TIME": "2025-10-06T04:52:01Z"
     },
     {
       "PRES": 934.28,
-      "FSig": 55,
-      "BbSig": 115,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 115,
+      "temp_signal": 571,
       "TIME": "2025-10-06T05:52:01Z"
     },
     {
       "PRES": 934.22,
-      "FSig": 54,
-      "BbSig": 118,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 118,
+      "temp_signal": 571,
       "TIME": "2025-10-06T06:52:01Z"
     },
     {
       "PRES": 934.7,
-      "FSig": 56,
-      "BbSig": 116,
-      "TSig": 571,
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 116,
+      "temp_signal": 571,
       "TIME": "2025-10-06T07:52:01Z"
+    }
+  ],
+  "ECO_Surface": [
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.41,
+      "TIME": "2025-10-06T18:54:29Z",
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 141,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.47,
+      "TIME": "2025-10-06T18:55:02Z",
+      "FLUORESCENCE_CHLA": 53,
+      "BETA_BACKSCATTERING700": 143,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.28,
+      "TIME": "2025-10-06T18:55:35Z",
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 139,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.69,
+      "TIME": "2025-10-06T18:56:09Z",
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 141,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.09,
+      "TIME": "2025-10-06T18:59:39Z",
+      "FLUORESCENCE_CHLA": 62,
+      "BETA_BACKSCATTERING700": 39,
+      "temp_signal": 536
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.08,
+      "TIME": "2025-10-06T19:00:12Z",
+      "FLUORESCENCE_CHLA": 55,
+      "BETA_BACKSCATTERING700": 141,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": -0.07,
+      "TIME": "2025-10-06T19:00:45Z",
+      "FLUORESCENCE_CHLA": 53,
+      "BETA_BACKSCATTERING700": 137,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.02,
+      "TIME": "2025-10-06T19:01:18Z",
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 139,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.02,
+      "TIME": "2025-10-06T19:01:52Z",
+      "FLUORESCENCE_CHLA": 54,
+      "BETA_BACKSCATTERING700": 140,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.03,
+      "TIME": "2025-10-06T19:02:25Z",
+      "FLUORESCENCE_CHLA": 53,
+      "BETA_BACKSCATTERING700": 152,
+      "temp_signal": 535
+    },
+    {
+      "Pres_air": 157,
+      "Pres_CTD": -0.08,
+      "TIME": "2025-10-06T19:02:58Z",
+      "FLUORESCENCE_CHLA": 56,
+      "BETA_BACKSCATTERING700": 139,
+      "temp_signal": 534
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.1,
+      "TIME": "2025-10-06T19:03:31Z",
+      "FLUORESCENCE_CHLA": 44,
+      "BETA_BACKSCATTERING700": 146,
+      "temp_signal": 535
+    }
+  ],
+  "DO_Surface": [
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.41,
+      "TIME": "2025-10-06T18:54:29Z",
+      "Temp_optode": 26.948,
+      "TPhase": 29.602,
+      "RPhase": 8.589
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.47,
+      "TIME": "2025-10-06T18:55:02Z",
+      "Temp_optode": 26.964,
+      "TPhase": 29.565,
+      "RPhase": 8.568
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.28,
+      "TIME": "2025-10-06T18:55:35Z",
+      "Temp_optode": 26.961,
+      "TPhase": 29.591,
+      "RPhase": 8.57
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.69,
+      "TIME": "2025-10-06T18:56:09Z",
+      "Temp_optode": 26.957,
+      "TPhase": 29.587,
+      "RPhase": 8.56
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.09,
+      "TIME": "2025-10-06T18:59:39Z",
+      "Temp_optode": 26.705,
+      "TPhase": 29.782,
+      "RPhase": 8.579
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.08,
+      "TIME": "2025-10-06T19:00:12Z",
+      "Temp_optode": 26.11,
+      "TPhase": 29.821,
+      "RPhase": 8.572
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": -0.07,
+      "TIME": "2025-10-06T19:00:45Z",
+      "Temp_optode": 25.715,
+      "TPhase": 29.746,
+      "RPhase": 8.568
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.02,
+      "TIME": "2025-10-06T19:01:18Z",
+      "Temp_optode": 25.658,
+      "TPhase": 29.8,
+      "RPhase": 8.565
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.02,
+      "TIME": "2025-10-06T19:01:52Z",
+      "Temp_optode": 25.404,
+      "TPhase": 29.765,
+      "RPhase": 8.567
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.03,
+      "TIME": "2025-10-06T19:02:25Z",
+      "Temp_optode": 25.463,
+      "TPhase": 29.703,
+      "RPhase": 8.566
+    },
+    {
+      "Pres_air": 157,
+      "Pres_CTD": -0.08,
+      "TIME": "2025-10-06T19:02:58Z",
+      "Temp_optode": 25.922,
+      "TPhase": 29.81,
+      "RPhase": 8.561
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.1,
+      "TIME": "2025-10-06T19:03:31Z",
+      "Temp_optode": 25.979,
+      "TPhase": 29.732,
+      "RPhase": 8.563
     }
   ],
   "pH_Discrete": [
     {
       "PRES": 941.92,
       "TIME": null,
-      "VRS_PH": null,
-      "VK_PH": null
+      "VRS_PH": -999,
+      "VK_PH": -999
     },
     {
       "PRES": 1598.65,
@@ -5519,129 +5715,129 @@
   "OCR_Discrete": [
     {
       "PRES": 941.92,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 1598.65,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 1500.18,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 1399.35,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 1299.84,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 1199.8,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 1099.46,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 998.6,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 951.2,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 901.86,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 851.35,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 801.73,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 751.37,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 701.8,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 651.34,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 601.7,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 551.55,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 501.86,
-      "RAW_DOWNWELLING_IRRADIANCE380": null,
-      "RAW_DOWNWELLING_IRRADIANCE443": null,
-      "RAW_DOWNWELLING_IRRADIANCE490": null,
-      "RAW_DOWNWELLING_IRRADIANCE555": null
+      "RAW_DOWNWELLING_IRRADIANCE380": -999,
+      "RAW_DOWNWELLING_IRRADIANCE443": -999,
+      "RAW_DOWNWELLING_IRRADIANCE490": -999,
+      "RAW_DOWNWELLING_IRRADIANCE555": -999
     },
     {
       "PRES": 451.67,
@@ -5987,54 +6183,164 @@
       "RAW_DOWNWELLING_IRRADIANCE555": 2202761819
     }
   ],
+  "OCR_Surface": [
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.41,
+      "TIME": "2025-10-06T18:54:29Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2354727122,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2469320365,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2464263862,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2470290496
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.47,
+      "TIME": "2025-10-06T18:55:02Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2357064795,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2468762505,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2450974665,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2499102189
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.28,
+      "TIME": "2025-10-06T18:55:35Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2303035803,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2348305106,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2315100406,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2335471625
+    },
+    {
+      "Pres_air": 126,
+      "Pres_CTD": 0.69,
+      "TIME": "2025-10-06T18:56:09Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2366366829,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2450682185,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2457228315,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2478106496
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.09,
+      "TIME": "2025-10-06T18:59:39Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2306412388,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2345870893,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2298937078,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2355098614
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.08,
+      "TIME": "2025-10-06T19:00:12Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2293560045,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2340212086,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2325453449,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2331410148
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": -0.07,
+      "TIME": "2025-10-06T19:00:45Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2452306011,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2638343817,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2591896164,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2669242550
+    },
+    {
+      "Pres_air": 155,
+      "Pres_CTD": -0.02,
+      "TIME": "2025-10-06T19:01:18Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2399496923,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2526561984,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2506580205,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2533634057
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.02,
+      "TIME": "2025-10-06T19:01:52Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2332831981,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2385542006,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2367938596,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2372216466
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.03,
+      "TIME": "2025-10-06T19:02:25Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2317748242,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2371296868,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2378997074,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2366215058
+    },
+    {
+      "Pres_air": 157,
+      "Pres_CTD": -0.08,
+      "TIME": "2025-10-06T19:02:58Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2398298678,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2524172608,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2489940937,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2527992905
+    },
+    {
+      "Pres_air": 156,
+      "Pres_CTD": 0.1,
+      "TIME": "2025-10-06T19:03:31Z",
+      "RAW_DOWNWELLING_IRRADIANCE380": 2346579483,
+      "RAW_DOWNWELLING_IRRADIANCE443": 2455636269,
+      "RAW_DOWNWELLING_IRRADIANCE490": 2409681216,
+      "RAW_DOWNWELLING_IRRADIANCE555": 2427687689
+    }
+  ],
   "NITRATE_Discrete": [
     {
       "PRES": 941.92,
       "TIME": null,
-      "nitrate_onboard": null,
+      "nitrate_onboard": -999,
       "Spectrum": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999,
+        -999
       ]
     },
     {
@@ -9272,213 +9578,7 @@
       ]
     }
   ],
-  "optode_air_calibration": [
-    {
-      "Pres_air": 126,
-      "Pres_CTD": 0.41,
-      "Temp_optode": 26.948,
-      "TPhase": 29.602,
-      "RPhase": 8.589,
-      "FSig": 54,
-      "BbSig": 141,
-      "TSig": 535,
-      "Ocr": [
-        2354727122,
-        2469320365,
-        2464263862,
-        2470290496
-      ],
-      "TIME": "2025-10-06T18:54:29Z"
-    },
-    {
-      "Pres_air": 126,
-      "Pres_CTD": 0.47,
-      "Temp_optode": 26.964,
-      "TPhase": 29.565,
-      "RPhase": 8.568,
-      "FSig": 53,
-      "BbSig": 143,
-      "TSig": 535,
-      "Ocr": [
-        2357064795,
-        2468762505,
-        2450974665,
-        2499102189
-      ],
-      "TIME": "2025-10-06T18:55:02Z"
-    },
-    {
-      "Pres_air": 126,
-      "Pres_CTD": 0.28,
-      "Temp_optode": 26.961,
-      "TPhase": 29.591,
-      "RPhase": 8.57,
-      "FSig": 55,
-      "BbSig": 139,
-      "TSig": 535,
-      "Ocr": [
-        2303035803,
-        2348305106,
-        2315100406,
-        2335471625
-      ],
-      "TIME": "2025-10-06T18:55:35Z"
-    },
-    {
-      "Pres_air": 126,
-      "Pres_CTD": 0.69,
-      "Temp_optode": 26.957,
-      "TPhase": 29.587,
-      "RPhase": 8.56,
-      "FSig": 56,
-      "BbSig": 141,
-      "TSig": 535,
-      "Ocr": [
-        2366366829,
-        2450682185,
-        2457228315,
-        2478106496
-      ],
-      "TIME": "2025-10-06T18:56:09Z"
-    },
-    {
-      "Pres_air": 155,
-      "Pres_CTD": -0.09,
-      "Temp_optode": 26.705,
-      "TPhase": 29.782,
-      "RPhase": 8.579,
-      "FSig": 62,
-      "BbSig": 39,
-      "TSig": 536,
-      "Ocr": [
-        2306412388,
-        2345870893,
-        2298937078,
-        2355098614
-      ],
-      "TIME": "2025-10-06T18:59:39Z"
-    },
-    {
-      "Pres_air": 155,
-      "Pres_CTD": -0.08,
-      "Temp_optode": 26.11,
-      "TPhase": 29.821,
-      "RPhase": 8.572,
-      "FSig": 55,
-      "BbSig": 141,
-      "TSig": 535,
-      "Ocr": [
-        2293560045,
-        2340212086,
-        2325453449,
-        2331410148
-      ],
-      "TIME": "2025-10-06T19:00:12Z"
-    },
-    {
-      "Pres_air": 156,
-      "Pres_CTD": -0.07,
-      "Temp_optode": 25.715,
-      "TPhase": 29.746,
-      "RPhase": 8.568,
-      "FSig": 53,
-      "BbSig": 137,
-      "TSig": 535,
-      "Ocr": [
-        2452306011,
-        2638343817,
-        2591896164,
-        2669242550
-      ],
-      "TIME": "2025-10-06T19:00:45Z"
-    },
-    {
-      "Pres_air": 155,
-      "Pres_CTD": -0.02,
-      "Temp_optode": 25.658,
-      "TPhase": 29.8,
-      "RPhase": 8.565,
-      "FSig": 54,
-      "BbSig": 139,
-      "TSig": 535,
-      "Ocr": [
-        2399496923,
-        2526561984,
-        2506580205,
-        2533634057
-      ],
-      "TIME": "2025-10-06T19:01:18Z"
-    },
-    {
-      "Pres_air": 156,
-      "Pres_CTD": 0.02,
-      "Temp_optode": 25.404,
-      "TPhase": 29.765,
-      "RPhase": 8.567,
-      "FSig": 54,
-      "BbSig": 140,
-      "TSig": 535,
-      "Ocr": [
-        2332831981,
-        2385542006,
-        2367938596,
-        2372216466
-      ],
-      "TIME": "2025-10-06T19:01:52Z"
-    },
-    {
-      "Pres_air": 156,
-      "Pres_CTD": 0.03,
-      "Temp_optode": 25.463,
-      "TPhase": 29.703,
-      "RPhase": 8.566,
-      "FSig": 53,
-      "BbSig": 152,
-      "TSig": 535,
-      "Ocr": [
-        2317748242,
-        2371296868,
-        2378997074,
-        2366215058
-      ],
-      "TIME": "2025-10-06T19:02:25Z"
-    },
-    {
-      "Pres_air": 157,
-      "Pres_CTD": -0.08,
-      "Temp_optode": 25.922,
-      "TPhase": 29.81,
-      "RPhase": 8.561,
-      "FSig": 56,
-      "BbSig": 139,
-      "TSig": 534,
-      "Ocr": [
-        2398298678,
-        2524172608,
-        2489940937,
-        2527992905
-      ],
-      "TIME": "2025-10-06T19:02:58Z"
-    },
-    {
-      "Pres_air": 156,
-      "Pres_CTD": 0.1,
-      "Temp_optode": 25.979,
-      "TPhase": 29.732,
-      "RPhase": 8.563,
-      "FSig": 44,
-      "BbSig": 146,
-      "TSig": 535,
-      "Ocr": [
-        2346579483,
-        2455636269,
-        2409681216,
-        2427687689
-      ],
-      "TIME": "2025-10-06T19:03:31Z"
-    }
-  ],
-  "ARGO_Mission": {
+  "Mission": {
     "model": {
       "value": "Apf11"
     },
@@ -9718,6 +9818,744 @@
     }
   ],
   "Log": [
+    {
+      "datetime": "2025-10-04T16:26:39Z",
+      "mission_time": 53036,
+      "call": "TelemetryInit",
+      "message": "Profile 15. (Apf11 FwRev: 061125)"
+    },
+    {
+      "datetime": "2025-10-04T16:26:39Z",
+      "mission_time": 53036,
+      "call": "TelemetryInit",
+      "message": "Charge consumption model: OCV:15.2V Wake-Cycles:21689 Standby:12.4days Wake:16.0kC Sensors:1.7kC"
+    },
+    {
+      "datetime": "2025-10-04T16:31:54Z",
+      "mission_time": 53351,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.3dbars / 242.8uM 26.891C 29.644 8.545 -82.210 / 55,133,535"
+    },
+    {
+      "datetime": "2025-10-04T16:31:54Z",
+      "mission_time": 53351,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.3dbars / 0x801144c9 0x800f7340 0x801645ed 0x80113852"
+    },
+    {
+      "datetime": "2025-10-04T16:32:27Z",
+      "mission_time": 53384,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.3dbars / 242.7uM 26.896C 29.647 8.544 -82.370 / 55,135,535"
+    },
+    {
+      "datetime": "2025-10-04T16:32:27Z",
+      "mission_time": 53384,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.3dbars / 0x80114776 0x800ea0ad 0x80173a92 0x80114436"
+    },
+    {
+      "datetime": "2025-10-04T16:33:01Z",
+      "mission_time": 53418,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 243.2uM 26.867C 29.634 8.543 -81.445 / 56,134,535"
+    },
+    {
+      "datetime": "2025-10-04T16:33:01Z",
+      "mission_time": 53418,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.2dbars / 0x801352f6 0x8011e39b 0x801b525b 0x80170ce4"
+    },
+    {
+      "datetime": "2025-10-04T16:33:34Z",
+      "mission_time": 53451,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 242.9uM 26.895C 29.640 8.541 -82.336 / 55,138,535"
+    },
+    {
+      "datetime": "2025-10-04T16:33:34Z",
+      "mission_time": 53451,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.2dbars / 0x8014c176 0x80135e92 0x801c4700 0x8017879b"
+    },
+    {
+      "datetime": "2025-10-04T16:36:42Z",
+      "mission_time": 53639,
+      "call": "AirSystem",
+      "message": "Battery [216cnt, 15.2V]  Current [20cnt, 78.9mA]  Pneumometer [155cnt, 18.2psi]  Run-Time [90s]"
+    },
+    {
+      "datetime": "2025-10-04T16:36:55Z",
+      "mission_time": 53652,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 251.0uM 25.444C 29.829 8.540 -36.043 / 54,137,535"
+    },
+    {
+      "datetime": "2025-10-04T16:36:55Z",
+      "mission_time": 53652,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.0dbars / 0x8026c589 0x802f68db 0x8039e989 0x80465d49"
+    },
+    {
+      "datetime": "2025-10-04T16:37:29Z",
+      "mission_time": 53686,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 248.0uM 25.673C 29.875 8.540 -43.383 / 54,133,535"
+    },
+    {
+      "datetime": "2025-10-04T16:37:29Z",
+      "mission_time": 53686,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.1dbars / 0x80284724 0x8032af2d 0x803e8489 0x8047412d"
+    },
+    {
+      "datetime": "2025-10-04T16:38:02Z",
+      "mission_time": 53719,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 248.4uM 25.605C 29.885 8.537 -41.225 / 55,133,534"
+    },
+    {
+      "datetime": "2025-10-04T16:38:02Z",
+      "mission_time": 53719,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x8028b176 0x803286c0 0x803e6200 0x80452412"
+    },
+    {
+      "datetime": "2025-10-04T16:38:35Z",
+      "mission_time": 53752,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 252.8uM 25.015C 29.916 8.537 -22.280 / 55,135,535"
+    },
+    {
+      "datetime": "2025-10-04T16:38:35Z",
+      "mission_time": 53752,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x8029bc92 0x803796b6 0x8043bded 0x8049e009"
+    },
+    {
+      "datetime": "2025-10-04T16:39:08Z",
+      "mission_time": 53785,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 252.0uM 25.010C 29.955 8.536 -22.101 / 56,136,535"
+    },
+    {
+      "datetime": "2025-10-04T16:39:08Z",
+      "mission_time": 53785,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x80294e64 0x80357af6 0x8040efed 0x80464b00"
+    },
+    {
+      "datetime": "2025-10-04T16:39:41Z",
+      "mission_time": 53818,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 252.3uM 24.935C 29.969 8.534 -19.689 / 54,135,534"
+    },
+    {
+      "datetime": "2025-10-04T16:39:41Z",
+      "mission_time": 53818,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.0dbars / 0x8028ed40 0x8037131b 0x80439a2d 0x80469524"
+    },
+    {
+      "datetime": "2025-10-04T16:40:15Z",
+      "mission_time": 53852,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 251.6uM 24.988C 29.981 8.535 -21.395 / 54,133,534"
+    },
+    {
+      "datetime": "2025-10-04T16:40:15Z",
+      "mission_time": 53852,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: 0.0dbars / 0x802ad2d2 0x8037b580 0x80460ad2 0x8053a252"
+    },
+    {
+      "datetime": "2025-10-04T16:40:48Z",
+      "mission_time": 53885,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 252.9uM 24.807C 29.996 8.532 -15.584 / 55,135,534"
+    },
+    {
+      "datetime": "2025-10-04T16:40:48Z",
+      "mission_time": 53885,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.0dbars / 0x802d2149 0x803a32a4 0x804a1a24 0x80564b12"
+    },
+    {
+      "datetime": "2025-10-04T16:41:11Z",
+      "mission_time": 53908,
+      "call": "AirSystem",
+      "message": "Battery [217cnt, 15.2V]  Current [20cnt, 79.9mA]  Pneumometer [159cnt, 18.7psi]  Run-Time [9s]"
+    },
+    {
+      "datetime": "2025-10-04T16:41:45Z",
+      "mission_time": 53942,
+      "call": "GetSurfaceObs",
+      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 245.1uM 25.929C 29.905 8.532 -51.586 / 54,135,534"
+    },
+    {
+      "datetime": "2025-10-04T16:41:45Z",
+      "mission_time": 53942,
+      "call": "GetSurfaceObs",
+      "message": "P/Ocr: -0.1dbars / 0x802a392d 0x803c1a36 0x804c88c9 0x805429c9"
+    },
+    {
+      "datetime": "2025-10-04T16:41:48Z",
+      "mission_time": 53945,
+      "call": "GpsServices",
+      "message": "GPS almanac is current."
+    },
+    {
+      "datetime": "2025-10-04T16:41:48Z",
+      "mission_time": 53945,
+      "call": "GpsServices",
+      "message": "Initiating GPS fix acquisition."
+    },
+    {
+      "datetime": "2025-10-04T16:41:52Z",
+      "mission_time": 53949,
+      "call": "gga",
+      "message": "$GPGGA,164220,2737.7669,N,15756.0791,W,0,00,,,M,,M,,*4C"
+    },
+    {
+      "datetime": "2025-10-04T16:42:11Z",
+      "mission_time": 53968,
+      "call": "gga",
+      "message": "$GPGGA,164240,2737.7669,N,15756.0791,W,0,00,,,M,,M,,*4A"
+    },
+    {
+      "datetime": "2025-10-04T16:42:21Z",
+      "mission_time": 53978,
+      "call": "gga",
+      "message": "$GPGGA,164250,2737.7669,N,15756.0791,W,0,00,,,M,,M,,*4B"
+    },
+    {
+      "datetime": "2025-10-04T16:42:31Z",
+      "mission_time": 53988,
+      "call": "gga",
+      "message": "$GPGGA,164300,2737.7669,N,15756.0791,W,0,00,,,M,,M,,*4F"
+    },
+    {
+      "datetime": "2025-10-04T16:42:32Z",
+      "mission_time": 53989,
+      "call": "gga",
+      "message": "$GPGGA,164300,2737.7669,N,15756.0791,W,0,00,,,M,,M,,*4F"
+    },
+    {
+      "datetime": "2025-10-04T16:42:41Z",
+      "mission_time": 53998,
+      "call": "gga",
+      "message": "$GPGGA,164310,2737.7669,N,15756.0791,W,0,00,,,M,,M,,*4E"
+    },
+    {
+      "datetime": "2025-10-04T16:42:52Z",
+      "mission_time": 54009,
+      "call": "gga",
+      "message": "$GPGGA,164320,2738.7256,N,15756.3689,W,1,09,0.9,0.7,M,-5.8,M,,*49"
+    },
+    {
+      "datetime": "2025-10-04T16:42:52Z",
+      "mission_time": 54009,
+      "call": "GpsServices",
+      "message": "Profile 15 GPS fix obtained in 64 seconds."
+    },
+    {
+      "datetime": "2025-10-04T16:42:52Z",
+      "mission_time": 54009,
+      "call": "GpsServices",
+      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
+    },
+    {
+      "datetime": "2025-10-04T16:42:52Z",
+      "mission_time": 54009,
+      "call": "GpsServices",
+      "message": "Fix: -157.9395  27.6454 10/04/2025 164320    9"
+    },
+    {
+      "datetime": "2025-10-04T16:43:02Z",
+      "mission_time": 54019,
+      "call": "gga",
+      "message": "$GPGGA,164330,2738.7261,N,15756.3690,W,1,09,0.9,0.1,M,-5.8,M,,*42"
+    },
+    {
+      "datetime": "2025-10-04T16:43:11Z",
+      "mission_time": 54028,
+      "call": "gga",
+      "message": "$GPGGA,164340,2738.7266,N,15756.3687,W,1,09,0.9,0.4,M,-5.8,M,,*41"
+    },
+    {
+      "datetime": "2025-10-04T16:43:11Z",
+      "mission_time": 54028,
+      "call": "GpsServices",
+      "message": "APF11 RTC skew (-29s) OK."
+    },
+    {
+      "datetime": "2025-10-04T16:43:11Z",
+      "mission_time": 54028,
+      "call": "GpsServices",
+      "message": "GPS services complete."
+    },
+    {
+      "datetime": "2025-10-04T16:43:46Z",
+      "mission_time": 54063,
+      "call": "IrGeoLoc",
+      "message": "<x,y,z>=<-5240km,-2124km,2936km> lat=27.599 lon=-157.935 IrSysTime=0xee3c42ad"
+    },
+    {
+      "datetime": "2025-10-04T16:43:49Z",
+      "mission_time": 54066,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "datetime": "2025-10-04T16:43:58Z",
+      "mission_time": 54075,
+      "call": "CLogin",
+      "message": "Connection 1 established in 9 seconds."
+    },
+    {
+      "datetime": "2025-10-04T16:44:04Z",
+      "mission_time": 54081,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "datetime": "2025-10-04T16:44:08Z",
+      "mission_time": 54085,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 10 seconds]"
+    },
+    {
+      "datetime": "2025-10-04T16:44:09Z",
+      "mission_time": 54086,
+      "call": "RxConfig",
+      "message": "Downloading \"mission.cfg\" from host."
+    },
+    {
+      "datetime": "2025-10-04T16:44:18Z",
+      "mission_time": 54095,
+      "call": "RxConfig",
+      "message": "Download successful: [bytes:145, sec:7.5, bps:19]"
+    },
+    {
+      "datetime": "2025-10-04T16:44:22Z",
+      "mission_time": 54099,
+      "call": "WriteVitals_",
+      "message": "Writing vitals to \"23808.015.msg\"."
+    },
+    {
+      "datetime": "2025-10-04T16:44:27Z",
+      "mission_time": 54104,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.015.log\" to host."
+    },
+    {
+      "datetime": "2025-10-04T16:47:25Z",
+      "mission_time": 54282,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:43048, sec:177.9, bps:242]"
+    },
+    {
+      "datetime": "2025-10-04T16:47:26Z",
+      "mission_time": 54283,
+      "call": "fmove",
+      "message": "Moved: 23808.015.log -> archive/23808.015.log"
+    },
+    {
+      "datetime": "2025-10-04T16:47:30Z",
+      "mission_time": 54287,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.015.msg\" to host."
+    },
+    {
+      "datetime": "2025-10-04T16:48:45Z",
+      "mission_time": 54362,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:22181, sec:75.5, bps:294]"
+    },
+    {
+      "datetime": "2025-10-04T16:48:47Z",
+      "mission_time": 54364,
+      "call": "fmove",
+      "message": "Moved: 23808.015.msg -> archive/23808.015.msg"
+    },
+    {
+      "datetime": "2025-10-04T16:48:50Z",
+      "mission_time": 54367,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.015.isus\" to host."
+    },
+    {
+      "datetime": "2025-10-04T16:50:32Z",
+      "mission_time": 54469,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:24396, sec:101.8, bps:240]"
+    },
+    {
+      "datetime": "2025-10-04T16:50:33Z",
+      "mission_time": 54470,
+      "call": "fmove",
+      "message": "Moved: 23808.015.isus -> archive/23808.015.isus"
+    },
+    {
+      "datetime": "2025-10-04T16:50:36Z",
+      "mission_time": 54473,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23808.015.dura\" to host."
+    },
+    {
+      "datetime": "2025-10-04T16:51:39Z",
+      "mission_time": 54536,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:11981, sec:62.2, bps:193]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:40Z",
+      "mission_time": 54537,
+      "call": "fmove",
+      "message": "Moved: 23808.015.dura -> archive/23808.015.dura"
+    },
+    {
+      "datetime": "2025-10-04T16:51:41Z",
+      "mission_time": 54538,
+      "call": "UpLoad",
+      "message": "Files successfully uploaded: 4"
+    },
+    {
+      "datetime": "2025-10-04T16:51:41Z",
+      "mission_time": 54538,
+      "call": "UpLoad",
+      "message": "Upload complete."
+    },
+    {
+      "datetime": "2025-10-04T16:51:48Z",
+      "mission_time": 54545,
+      "call": "chat",
+      "message": "Expected string [logout] not received."
+    },
+    {
+      "datetime": "2025-10-04T16:51:48Z",
+      "mission_time": 54545,
+      "call": "logout",
+      "message": "Attempt to log-out failed."
+    },
+    {
+      "datetime": "2025-10-04T16:51:48Z",
+      "mission_time": 54545,
+      "call": "logout",
+      "message": "No carrier detected."
+    },
+    {
+      "datetime": "2025-10-04T16:51:48Z",
+      "mission_time": 54545,
+      "call": "Telemetry",
+      "message": "Telemetry cycle complete: PrfId=15 ConnectionAttempts=1  Connections=1"
+    },
+    {
+      "datetime": "2025-10-04T16:51:48Z",
+      "mission_time": 54545,
+      "call": "TelemetryTerminate",
+      "message": "Parsing new mission configuration."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "Parsing configurators in \"mission.cfg\"."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)]."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "DownTime(2640) [CRC=0x8919] [DownTime(2640)]."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "DeepProfilePressure(2025) [CRC=0x5FF2] [ProfilePressure(2025)]."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "DeepProfilePistonPos(9) [CRC=0xFF37] [DeepProfilePistonPos(9)]."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "DeepProfileDescentTime(240) [CRC=0x0059] [DeepProfileDescentTime(240)]."
+    },
+    {
+      "datetime": "2025-10-04T16:51:49Z",
+      "mission_time": 54546,
+      "call": "configure",
+      "message": "ParkPressure(1000) [CRC=0x899C] [ParkPressure(1000)]."
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "configure",
+      "message": "Configuration CRCs and syntax OK."
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "ConfigSupervisor",
+      "message": "Configuration accepted."
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "Mission configuration for Apf11 FwRev 061125:"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "AscentTimeOut(540) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "AltDialCmd(ATDT0012066163256) [alternate]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudge(10) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudgeInitial(22) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "CompensatorHyperRetraction(0) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "ConnectTimeOut(60) [sec]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "CpActivationP(985) [dbar]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DeepProfileDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePistonPos(9) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePressure(2025) [dbar]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DownTime(2640) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DuraRefWarmUpHrs(255)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DuraInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "FatFsEnable(1)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "FlbbMode(1)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "FloatId(23808)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "FullExtension(231) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "FullRetraction(9) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "MaxAirBladder(154) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "MaxLogKb(60) [KByte]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "MissionPrelude(360) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "OcrInit(-500) [dbar]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "OkVacuum(230) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "OptodeMode(1)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "PActivationPistonPosition(16) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "ParkDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "ParkPistonPos(69) [count]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "ParkPressure(1000) [dbar]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "PnPCycleLen(1)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "Pwd(0xafb3)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "TelemetryRetry(15) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "TimeOfDay(DISABLED) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "UpTime(660) [min]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "User(f23808)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "ZModemTimeOut(80) [sec]"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "Verbosity(2)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "LogConfiguration",
+      "message": "DebugBits(0x0002)"
+    },
+    {
+      "datetime": "2025-10-04T16:51:50Z",
+      "mission_time": 54547,
+      "call": "TelemetryTerminate",
+      "message": "Reconditioning the file system."
+    },
     {
       "datetime": "2025-10-04T16:51:53Z",
       "mission_time": 0,
@@ -10827,594 +11665,6 @@
       "mission_time": 179845,
       "call": "MscErrorLog_",
       "message": "No error records to log."
-    },
-    {
-      "datetime": "2025-10-06T18:49:27Z",
-      "mission_time": 179854,
-      "call": "TelemetryInit",
-      "message": "Profile 16. (Apf11 FwRev: 061125)"
-    },
-    {
-      "datetime": "2025-10-06T18:49:27Z",
-      "mission_time": 179854,
-      "call": "TelemetryInit",
-      "message": "Charge consumption model: OCV:15.2V Wake-Cycles:23354 Standby:14.4days Wake:17.0kC Sensors:1.8kC"
-    },
-    {
-      "datetime": "2025-10-06T18:54:42Z",
-      "mission_time": 180169,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.4dbars / 243.3uM 26.948C 29.602 8.589 -84.016 / 54,141,535"
-    },
-    {
-      "datetime": "2025-10-06T18:54:42Z",
-      "mission_time": 180169,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.4dbars / 0x8c5a48d2 0x932ed6ad 0x92e1aeb6 0x933da440"
-    },
-    {
-      "datetime": "2025-10-06T18:55:15Z",
-      "mission_time": 180202,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.5dbars / 244.0uM 26.964C 29.565 8.568 -84.523 / 53,143,535"
-    },
-    {
-      "datetime": "2025-10-06T18:55:15Z",
-      "mission_time": 180202,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.5dbars / 0x8c7df45b 0x93265389 0x9216e7c9 0x94f545ed"
-    },
-    {
-      "datetime": "2025-10-06T18:55:48Z",
-      "mission_time": 180235,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.3dbars / 243.4uM 26.961C 29.591 8.570 -84.425 / 55,139,535"
-    },
-    {
-      "datetime": "2025-10-06T18:55:48Z",
-      "mission_time": 180235,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.3dbars / 0x8945899b 0x8bf84ad2 0x89fda0f6 0x8b347809"
-    },
-    {
-      "datetime": "2025-10-06T18:56:22Z",
-      "mission_time": 180269,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.7dbars / 243.5uM 26.957C 29.587 8.560 -84.308 / 56,141,535"
-    },
-    {
-      "datetime": "2025-10-06T18:56:22Z",
-      "mission_time": 180269,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.7dbars / 0x8d0be46d 0x92127149 0x9276541b 0x93b4e780"
-    },
-    {
-      "datetime": "2025-10-06T18:59:39Z",
-      "mission_time": 180466,
-      "call": "AirSystem",
-      "message": "Battery [216cnt, 15.2V]  Current [20cnt, 78.1mA]  Pneumometer [155cnt, 18.2psi]  Run-Time [94s]"
-    },
-    {
-      "datetime": "2025-10-06T18:59:52Z",
-      "mission_time": 180479,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 241.3uM 26.705C 29.782 8.579 -76.321 / 62,39,536"
-    },
-    {
-      "datetime": "2025-10-06T18:59:52Z",
-      "mission_time": 180479,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: -0.1dbars / 0x89790f64 0x8bd3262d 0x8906fef6 0x8c5ff3f6"
-    },
-    {
-      "datetime": "2025-10-06T19:00:25Z",
-      "mission_time": 180512,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 245.5uM 26.110C 29.821 8.572 -57.351 / 55,141,535"
-    },
-    {
-      "datetime": "2025-10-06T19:00:25Z",
-      "mission_time": 180512,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: -0.1dbars / 0x88b4f2ed 0x8b7ccd76 0x8a9b9a89 0x8af67ee4"
-    },
-    {
-      "datetime": "2025-10-06T19:00:58Z",
-      "mission_time": 180545,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 250.6uM 25.715C 29.746 8.568 -44.733 / 53,137,535"
-    },
-    {
-      "datetime": "2025-10-06T19:00:58Z",
-      "mission_time": 180545,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: -0.1dbars / 0x922b385b 0x9d41ee89 0x9a7d3264 0x9f1968b6"
-    },
-    {
-      "datetime": "2025-10-06T19:01:31Z",
-      "mission_time": 180578,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.0dbars / 249.8uM 25.658C 29.800 8.565 -42.914 / 54,139,535"
-    },
-    {
-      "datetime": "2025-10-06T19:01:31Z",
-      "mission_time": 180578,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: -0.0dbars / 0x8f056adb 0x969846c0 0x956760ed 0x97043009"
-    },
-    {
-      "datetime": "2025-10-06T19:02:05Z",
-      "mission_time": 180612,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 252.9uM 25.404C 29.765 8.567 -34.767 / 54,140,535"
-    },
-    {
-      "datetime": "2025-10-06T19:02:05Z",
-      "mission_time": 180612,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.0dbars / 0x8b0c30ed 0x8e307b76 0x8d23e024 0x8d652692"
-    },
-    {
-      "datetime": "2025-10-06T19:02:38Z",
-      "mission_time": 180645,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.0dbars / 253.8uM 25.463C 29.703 8.566 -36.664 / 53,152,535"
-    },
-    {
-      "datetime": "2025-10-06T19:02:38Z",
-      "mission_time": 180645,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.0dbars / 0x8a260812 0x8d571e64 0x8dcc9d52 0x8d099392"
-    },
-    {
-      "datetime": "2025-10-06T19:03:11Z",
-      "mission_time": 180678,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: -0.1dbars / 247.3uM 25.922C 29.810 8.561 -51.355 / 56,139,534"
-    },
-    {
-      "datetime": "2025-10-06T19:03:11Z",
-      "mission_time": 180678,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: -0.1dbars / 0x8ef32236 0x9673d140 0x94697bc9 0x96ae1c49"
-    },
-    {
-      "datetime": "2025-10-06T19:03:44Z",
-      "mission_time": 180711,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.1dbars / 248.6uM 25.979C 29.732 8.563 -53.171 / 44,146,535"
-    },
-    {
-      "datetime": "2025-10-06T19:03:44Z",
-      "mission_time": 180711,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.1dbars / 0x8bddf61b 0x925e092d 0x8fa0d140 0x90b39309"
-    },
-    {
-      "datetime": "2025-10-06T19:03:52Z",
-      "mission_time": 180719,
-      "call": "AirSystem",
-      "message": "Air-bladder inflation by-passed. Pneumatic Pressure: [157cnt, 18.5psi]."
-    },
-    {
-      "datetime": "2025-10-06T19:04:26Z",
-      "mission_time": 180753,
-      "call": "GetSurfaceObs",
-      "message": "P/O2,T2,TPhase,RPhase,RawTemp/FSig,BbSig,TSig: 0.2dbars / 249.1uM 26.051C 29.683 8.562 -55.463 / 48,144,535"
-    },
-    {
-      "datetime": "2025-10-06T19:04:26Z",
-      "mission_time": 180753,
-      "call": "GetSurfaceObs",
-      "message": "P/Ocr: 0.2dbars / 0x8ff0c612 0x9a379bb6 0x994df3e4 0x9bcb17c0"
-    },
-    {
-      "datetime": "2025-10-06T19:04:29Z",
-      "mission_time": 180756,
-      "call": "GpsServices",
-      "message": "GPS almanac is current."
-    },
-    {
-      "datetime": "2025-10-06T19:04:29Z",
-      "mission_time": 180756,
-      "call": "GpsServices",
-      "message": "Initiating GPS fix acquisition."
-    },
-    {
-      "datetime": "2025-10-06T19:04:32Z",
-      "mission_time": 180759,
-      "call": "gga",
-      "message": "$GPGGA,190500,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*42"
-    },
-    {
-      "datetime": "2025-10-06T19:04:41Z",
-      "mission_time": 180768,
-      "call": "gga",
-      "message": "$GPGGA,190510,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*43"
-    },
-    {
-      "datetime": "2025-10-06T19:04:42Z",
-      "mission_time": 180769,
-      "call": "gga",
-      "message": "$GPGGA,190510,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*43"
-    },
-    {
-      "datetime": "2025-10-06T19:04:50Z",
-      "mission_time": 180777,
-      "call": "gga",
-      "message": "$GPGGA,190520,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*40"
-    },
-    {
-      "datetime": "2025-10-06T19:05:00Z",
-      "mission_time": 180787,
-      "call": "gga",
-      "message": "$GPGGA,190530,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*41"
-    },
-    {
-      "datetime": "2025-10-06T19:05:00Z",
-      "mission_time": 180787,
-      "call": "gga",
-      "message": "$GPGGA,190530,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*41"
-    },
-    {
-      "datetime": "2025-10-06T19:05:10Z",
-      "mission_time": 180797,
-      "call": "gga",
-      "message": "$GPGGA,190540,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*46"
-    },
-    {
-      "datetime": "2025-10-06T19:05:20Z",
-      "mission_time": 180807,
-      "call": "gga",
-      "message": "$GPGGA,190550,2738.7253,N,15756.3691,W,0,00,,,M,,M,,*47"
-    },
-    {
-      "datetime": "2025-10-06T19:05:31Z",
-      "mission_time": 180818,
-      "call": "gga",
-      "message": "$GPGGA,190600,2740.0469,N,15758.0273,W,1,07,1.1,-9.6,M,-5.8,M,,*69"
-    },
-    {
-      "datetime": "2025-10-06T19:05:31Z",
-      "mission_time": 180818,
-      "call": "GpsServices",
-      "message": "Profile 16 GPS fix obtained in 62 seconds."
-    },
-    {
-      "datetime": "2025-10-06T19:05:31Z",
-      "mission_time": 180818,
-      "call": "GpsServices",
-      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
-    },
-    {
-      "datetime": "2025-10-06T19:05:31Z",
-      "mission_time": 180818,
-      "call": "GpsServices",
-      "message": "Fix: -157.9671  27.6674 10/06/2025 190600    7"
-    },
-    {
-      "datetime": "2025-10-06T19:05:40Z",
-      "mission_time": 180827,
-      "call": "gga",
-      "message": "$GPGGA,190610,2740.0485,N,15758.0282,W,1,07,1.1,-9.8,M,-5.8,M,,*6A"
-    },
-    {
-      "datetime": "2025-10-06T19:05:50Z",
-      "mission_time": 180837,
-      "call": "gga",
-      "message": "$GPGGA,190620,2740.0504,N,15758.0281,W,1,07,1.1,-13.3,M,-5.8,M,,*52"
-    },
-    {
-      "datetime": "2025-10-06T19:05:50Z",
-      "mission_time": 180837,
-      "call": "GpsServices",
-      "message": "APF11 RTC skew (-30s) OK."
-    },
-    {
-      "datetime": "2025-10-06T19:05:50Z",
-      "mission_time": 180837,
-      "call": "GpsServices",
-      "message": "GPS services complete."
-    },
-    {
-      "datetime": "2025-10-06T19:06:17Z",
-      "mission_time": 180864,
-      "call": "IrGeoLoc",
-      "message": "<x,y,z>=<-5236km,-2120km,2940km> lat=27.652 lon=-157.958 IrSysTime=0xee4585e9"
-    },
-    {
-      "datetime": "2025-10-06T19:06:21Z",
-      "mission_time": 180868,
-      "call": "CLogin",
-      "message": "Connecting to primary host."
-    },
-    {
-      "datetime": "2025-10-06T19:06:36Z",
-      "mission_time": 180883,
-      "call": "CLogin",
-      "message": "Connection 1 established in 15 seconds."
-    },
-    {
-      "datetime": "2025-10-06T19:06:55Z",
-      "mission_time": 180902,
-      "call": "login",
-      "message": "Login successful."
-    },
-    {
-      "datetime": "2025-10-06T19:07:03Z",
-      "mission_time": 180910,
-      "call": "CLogin",
-      "message": "Logged in to host.  [Login required 27 seconds]"
-    },
-    {
-      "datetime": "2025-10-06T19:07:07Z",
-      "mission_time": 180914,
-      "call": "RxConfig",
-      "message": "Downloading \"mission.cfg\" from host."
-    },
-    {
-      "datetime": "2025-10-06T19:08:34Z",
-      "mission_time": 181001,
-      "call": "readline",
-      "message": "Time-out expired, aborting ZMODEM transfer."
-    },
-    {
-      "datetime": "2025-10-06T19:08:34Z",
-      "mission_time": 181001,
-      "call": "RxConfig",
-      "message": "Download failed."
-    },
-    {
-      "datetime": "2025-10-06T19:10:25Z",
-      "mission_time": 181112,
-      "call": "chat",
-      "message": "Expected string [sz mission.cfg] not received."
-    },
-    {
-      "datetime": "2025-10-06T19:10:25Z",
-      "mission_time": 181112,
-      "call": "RxConfig",
-      "message": "Failed attempt to execute \"sz mission.cfg\" on the host."
-    },
-    {
-      "datetime": "2025-10-06T19:10:25Z",
-      "mission_time": 181112,
-      "call": "DownLoadMissionCfg",
-      "message": "Keeping previous version of \"mission.cfg\"."
-    },
-    {
-      "datetime": "2025-10-06T19:10:29Z",
-      "mission_time": 181116,
-      "call": "CLogin",
-      "message": "Connecting to primary host."
-    },
-    {
-      "datetime": "2025-10-06T19:10:34Z",
-      "mission_time": 181121,
-      "call": "chat",
-      "message": "Expected string [OK] not received."
-    },
-    {
-      "datetime": "2025-10-06T19:11:04Z",
-      "mission_time": 181151,
-      "call": "CLogin",
-      "message": "Connection 2 established in 35 seconds."
-    },
-    {
-      "datetime": "2025-10-06T19:11:34Z",
-      "mission_time": 181181,
-      "call": "expect",
-      "message": "Attempt to read prompt string [login:] failed."
-    },
-    {
-      "datetime": "2025-10-06T19:11:34Z",
-      "mission_time": 181181,
-      "call": "login",
-      "message": "Login prompt not received."
-    },
-    {
-      "datetime": "2025-10-06T19:11:57Z",
-      "mission_time": 181204,
-      "call": "login",
-      "message": "Login successful."
-    },
-    {
-      "datetime": "2025-10-06T19:12:11Z",
-      "mission_time": 181218,
-      "call": "CLogin",
-      "message": "Logged in to host.  [Login required 67 seconds]"
-    },
-    {
-      "datetime": "2025-10-06T19:12:14Z",
-      "mission_time": 181221,
-      "call": "RxConfig",
-      "message": "Downloading \"mission.cfg\" from host."
-    },
-    {
-      "datetime": "2025-10-06T19:12:29Z",
-      "mission_time": 181236,
-      "call": "RxConfig",
-      "message": "Download successful: [bytes:145, sec:12.9, bps:11]"
-    },
-    {
-      "datetime": "2025-10-06T19:12:33Z",
-      "mission_time": 181240,
-      "call": "WriteVitals_",
-      "message": "Writing vitals to \"23808.016.msg\"."
-    },
-    {
-      "datetime": "2025-10-06T19:12:43Z",
-      "mission_time": 181250,
-      "call": "UpLoadFile",
-      "message": "Uploading \"23808.016.log\" to host."
-    },
-    {
-      "datetime": "2025-10-06T19:16:48Z",
-      "mission_time": 181495,
-      "call": "UpLoadFile",
-      "message": "Upload successful: [bytes:48458, sec:245.0, bps:198]"
-    },
-    {
-      "datetime": "2025-10-06T19:16:49Z",
-      "mission_time": 181496,
-      "call": "fmove",
-      "message": "Moved: 23808.016.log -> archive/23808.016.log"
-    },
-    {
-      "datetime": "2025-10-06T19:16:55Z",
-      "mission_time": 181502,
-      "call": "UpLoadFile",
-      "message": "Uploading \"23808.016.msg\" to host."
-    },
-    {
-      "datetime": "2025-10-06T19:19:17Z",
-      "mission_time": 181644,
-      "call": "UpLoadFile",
-      "message": "Upload successful: [bytes:25320, sec:141.6, bps:179]"
-    },
-    {
-      "datetime": "2025-10-06T19:19:18Z",
-      "mission_time": 181645,
-      "call": "fmove",
-      "message": "Moved: 23808.016.msg -> archive/23808.016.msg"
-    },
-    {
-      "datetime": "2025-10-06T19:19:22Z",
-      "mission_time": 181649,
-      "call": "UpLoadFile",
-      "message": "Uploading \"23808.016.isus\" to host."
-    },
-    {
-      "datetime": "2025-10-06T19:21:52Z",
-      "mission_time": 181799,
-      "call": "UpLoadFile",
-      "message": "Upload successful: [bytes:24763, sec:150.4, bps:165]"
-    },
-    {
-      "datetime": "2025-10-06T19:21:53Z",
-      "mission_time": 181800,
-      "call": "fmove",
-      "message": "Moved: 23808.016.isus -> archive/23808.016.isus"
-    },
-    {
-      "datetime": "2025-10-06T19:21:59Z",
-      "mission_time": 181806,
-      "call": "UpLoadFile",
-      "message": "Uploading \"23808.016.dura\" to host."
-    },
-    {
-      "datetime": "2025-10-06T19:23:54Z",
-      "mission_time": 181921,
-      "call": "UpLoadFile",
-      "message": "Upload successful: [bytes:12181, sec:114.8, bps:106]"
-    },
-    {
-      "datetime": "2025-10-06T19:23:55Z",
-      "mission_time": 181922,
-      "call": "fmove",
-      "message": "Moved: 23808.016.dura -> archive/23808.016.dura"
-    },
-    {
-      "datetime": "2025-10-06T19:23:56Z",
-      "mission_time": 181923,
-      "call": "UpLoad",
-      "message": "Files successfully uploaded: 4"
-    },
-    {
-      "datetime": "2025-10-06T19:23:56Z",
-      "mission_time": 181923,
-      "call": "UpLoad",
-      "message": "Upload complete."
-    },
-    {
-      "datetime": "2025-10-06T19:24:04Z",
-      "mission_time": 181931,
-      "call": "chat",
-      "message": "Expected string [logout] not received."
-    },
-    {
-      "datetime": "2025-10-06T19:24:04Z",
-      "mission_time": 181931,
-      "call": "logout",
-      "message": "Attempt to log-out failed."
-    },
-    {
-      "datetime": "2025-10-06T19:24:04Z",
-      "mission_time": 181931,
-      "call": "logout",
-      "message": "No carrier detected."
-    },
-    {
-      "datetime": "2025-10-06T19:24:04Z",
-      "mission_time": 181931,
-      "call": "Telemetry",
-      "message": "Telemetry cycle complete: PrfId=16 ConnectionAttempts=2  Connections=2"
-    },
-    {
-      "datetime": "2025-10-06T19:24:04Z",
-      "mission_time": 181931,
-      "call": "TelemetryTerminate",
-      "message": "Parsing new mission configuration."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "Parsing configurators in \"mission.cfg\"."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)]."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "DownTime(2640) [CRC=0x8919] [DownTime(2640)]."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "DeepProfilePressure(2025) [CRC=0x5FF2] [ProfilePressure(2025)]."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "DeepProfilePistonPos(9) [CRC=0xFF37] [DeepProfilePistonPos(9)]."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "DeepProfileDescentTime(240) [CRC=0x0059] [DeepProfileDescentTime(240)]."
-    },
-    {
-      "datetime": "2025-10-06T19:24:05Z",
-      "mission_time": 181932,
-      "call": "configure",
-      "message": "ParkPressure(1000) [CRC=0x899C] [ParkPressure(1000)]."
-    },
-    {
-      "datetime": "2025-10-06T19:24:06Z",
-      "mission_time": 181933,
-      "call": "configure",
-      "message": "Configuration CRCs and syntax OK."
-    },
-    {
-      "datetime": "2025-10-06T19:24:06Z",
-      "mission_time": 181933,
-      "call": "ConfigSupervisor",
-      "message": "Configuration accepted."
-    },
-    {
-      "datetime": "2025-10-06T19:24:06Z",
-      "mission_time": 181933,
-      "call": "TelemetryTerminate",
-      "message": "Reconditioning the file system."
     }
   ],
   "dura": {

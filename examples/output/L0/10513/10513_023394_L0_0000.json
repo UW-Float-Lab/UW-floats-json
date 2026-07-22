@@ -1,0 +1,3500 @@
+{
+  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
+  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
+  "DECODER_VERSION": "0.5.4",
+  "SCHEMA_VERSION": "0.4.0",
+  "INTERNAL_ID_NUMBER": 23394,
+  "TRANSMISSION_ID_NUMBER": 23394,
+  "AOML_ID_NUMBER": 10513,
+  "WMO_ID_NUMBER": 1902749,
+  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "OPERATING_INSTITUTION": "UW, Seattle, WA",
+  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PI": "Steven RISER",
+  "PROJECT_NAME": "Argo UW",
+  "CYCLE_NUMBER": 0,
+  "POSITIONING_SYSTEM": "GPS",
+  "Timestamps": {
+    "StartTelemetry": "2026-04-05T06:40:58Z"
+  },
+  "GPS": [
+    {
+      "description": "GPS_FIX",
+      "TIME": "2026-04-05T06:42:20Z",
+      "LATITUDE": 32.8894,
+      "LONGITUDE": -140.0845,
+      "sat_cnt": 6,
+      "time_to_fix": 10
+    }
+  ],
+  "Iridium": [
+    {
+      "LATITUDE": 32.861,
+      "LONGITUDE": -140.085,
+      "TIME": "2015-06-30T02:42:20Z",
+      "x": -4112.0,
+      "y": -3440.0,
+      "z": 3440.0,
+      "system_time": 397932283
+    }
+  ],
+  "Fall": [],
+  "Rise": [],
+  "Piston": [
+    {
+      "TIME": "2026-03-24T22:35:35Z",
+      "piston_start": 231,
+      "piston_target": 227,
+      "piston_end": 227,
+      "current": 0.14,
+      "voltage": 15.1,
+      "duration": 18
+    },
+    {
+      "TIME": "2026-03-24T22:35:53Z",
+      "piston_start": 227,
+      "piston_target": 231,
+      "piston_end": 231,
+      "current": 0.152,
+      "voltage": 15.1,
+      "duration": 16
+    },
+    {
+      "TIME": "2026-03-24T22:40:39Z",
+      "piston_start": 231,
+      "piston_target": 16,
+      "piston_end": 16,
+      "current": 0.135,
+      "voltage": 15.0,
+      "duration": 1059
+    },
+    {
+      "TIME": "2026-04-05T00:40:45Z",
+      "piston_start": 16,
+      "piston_target": 231,
+      "piston_end": 231,
+      "current": 0.214,
+      "voltage": 14.7,
+      "duration": 1105
+    }
+  ],
+  "Mission": {
+    "model": {
+      "value": "Apf11"
+    },
+    "Id": {
+      "value": "23394"
+    },
+    "FwRev": {
+      "value": "102725"
+    },
+    "AscentTimeOut": {
+      "value": "540",
+      "unit": "min"
+    },
+    "AtDialCmd": {
+      "value": "AT+CBST=71,0,1;DT00881600005496"
+    },
+    "AltDialCmd": {
+      "value": "ATDT0012066163256"
+    },
+    "BuoyancyNudge": {
+      "value": "10",
+      "unit": "count"
+    },
+    "CompensatorHyperRetraction": {
+      "value": "0",
+      "unit": "count"
+    },
+    "ConnectTimeOut": {
+      "value": "60",
+      "unit": "sec"
+    },
+    "CpActivationP": {
+      "value": "985",
+      "unit": "dbar"
+    },
+    "DeepProfileDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "DeepProfilePistonPos": {
+      "value": "16",
+      "unit": "count"
+    },
+    "DeepProfilePressure": {
+      "value": "2020",
+      "unit": "dbar"
+    },
+    "DownTime": {
+      "value": "14400",
+      "unit": "min"
+    },
+    "DuraRefWarmUpHrs": {
+      "value": "255"
+    },
+    "DuraInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "FatFsEnable": {
+      "value": "1"
+    },
+    "FlbbMode": {
+      "value": "1"
+    },
+    "FloatId": {
+      "value": "23394"
+    },
+    "FullExtension": {
+      "value": "231",
+      "unit": "count"
+    },
+    "FullRetraction": {
+      "value": "9",
+      "unit": "count"
+    },
+    "InitialBuoyancyNudge": {
+      "value": "22",
+      "unit": "count"
+    },
+    "IsusInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "MaxAirBladder": {
+      "value": "154",
+      "unit": "count"
+    },
+    "MaxLogKb": {
+      "value": "60",
+      "unit": "KByte"
+    },
+    "MissionPrelude": {
+      "value": "360",
+      "unit": "min"
+    },
+    "OkVacuum": {
+      "value": "237",
+      "unit": "count"
+    },
+    "OptodeMode": {
+      "value": "1"
+    },
+    "PActivationPistonPosition": {
+      "value": "16",
+      "unit": "count"
+    },
+    "ParkDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "ParkPistonPos": {
+      "value": "66",
+      "unit": "count"
+    },
+    "ParkPressure": {
+      "value": "1000",
+      "unit": "dbar"
+    },
+    "PnPCycleLen": {
+      "value": "1"
+    },
+    "TelemetryRetry": {
+      "value": "15",
+      "unit": "min"
+    },
+    "TimeOfDay": {
+      "value": "DISABLED",
+      "unit": "min"
+    },
+    "UpTime": {
+      "value": "660",
+      "unit": "min"
+    },
+    "ZModemTimeOut": {
+      "value": "80",
+      "unit": "sec"
+    },
+    "Verbosity": {
+      "value": "2"
+    },
+    "DebugBits": {
+      "value": "0x0002"
+    }
+  },
+  "Engineering_Data": [
+    {
+      "Apf11FwRev": "102725",
+      "ActiveBallastAdjustments": "0",
+      "AirBladderPressure": "157",
+      "AirPumpAmps": "26",
+      "AirPumpVolts": "215",
+      "BuoyancyPumpOnTime": "1105",
+      "BuoyancyPumpAmps": "0",
+      "BuoyancyPumpVolts": "0",
+      "ConnectionAttempts": "2",
+      "Connections": "2",
+      "Coulombs": "1.8kC",
+      "CoulombsDescent": "0.0kC",
+      "CoulombsPark": "0.0kC",
+      "CoulombsPrfDescent": "0.0kC",
+      "CoulombsProfile": "0.0kC",
+      "CoulombsSleep": "0.0kC",
+      "CoulombsTelemetry": "1.8kC",
+      "CoulombsWake": "1.7kC",
+      "CurrentPistonPosition": "231",
+      "DeepProfilePistonPosition": "16",
+      "DuraPowerCycleCounter": "0",
+      "DuraWakeCurrent": "0.0mA",
+      "DuraWakePower": "0.0mW",
+      "DuraWakeVolts": "0.0V",
+      "FlbbAmps": "0",
+      "FlbbStatus": "0x00",
+      "FlbbVolts": "0",
+      "FloatId": "23394",
+      "GpsFixTime": "10",
+      "HumidityAd12Park": "0 (-23.8%)",
+      "HumidityAd12Pneumatic": "0 (-23.8%)",
+      "HumidityAd12PneumaticRef": "0 (-23.8%)",
+      "IsusPowerCycleCounter": "0",
+      "IsusWakeCurrent": "0.0mA",
+      "IsusWakePower": "0.0mW",
+      "IsusWakeVolts": "0.0V",
+      "LeakDetectorChan": [
+        "{sample:0xe state:1 count:0 epoch:1775350764 mtime:1119}",
+        "{sample:0xe state:0 count:0 epoch:1775350764 mtime:1119}",
+        "{sample:0xe state:0 count:0 epoch:1775350764 mtime:1119}",
+        "{sample:0xe state:0 count:0 epoch:1775350764 mtime:1119}"
+      ],
+      "LeakSensor": "{state:0, count:0, ad12:3837cnt, v:2.34V, index:0.0%, epoch:1775350764sec, mtime:1119sec}",
+      "MuxerTemperature": "0.00C",
+      "MuxerHumidity": "0.0%",
+      "MuxerWakeCurrent": "0.0mA",
+      "MuxerWakePower": "0.0mW",
+      "MuxerWakeVolts": "0.0V",
+      "ObsIndex": "0",
+      "OptodeAmps": "0",
+      "OptodeVolts": "0",
+      "ParkDescentPCnt": "0",
+      "ParkPistonPosition": "66",
+      "ParkObs": "{ 0.0dbar, 0.000C, 0.0000PSU / nan / 0.000C 0.000 0.000 / {0, 0}, 0, 0}",
+      "ProfileId": "000",
+      "QuiescentAmps": "0",
+      "QuiescentVolts": "0",
+      "RtcSkew": "-2",
+      "Sbe41cpAmps": "0",
+      "Sbe41cpStatus": "0x00000000",
+      "Sbe41cpVolts": "0",
+      "SleepSec": "14895",
+      "StandbySec": "971138",
+      "status": "0x00000000",
+      "SurfaceObs": "{ 0.2dbar, nan, nan / nan / 17.694C 31.579 7.895 / {50, 49}, 115, 546}",
+      "SurfacePistonPosition": "0",
+      "SurfacePressure": "0.00",
+      "TimeStartDescent": "0",
+      "TimeStartPark": "0",
+      "TimeStartProfileDescent": "0",
+      "TimeStartProfile": "0",
+      "TimeStopProfile": "0",
+      "TimeStartTelemetry": "1775371258       Apr 05 2026 06:40:58",
+      "Vacuum": "211",
+      "WakeCycles": "173",
+      "WakeSec": "6731"
+    }
+  ],
+  "Log": [
+    {
+      "datetime": "2026-03-24T22:35:26Z",
+      "mission_time": 2945,
+      "call": "SelfTest",
+      "message": "Executing self-test for ApfId 23394. [FwRev 102725]"
+    },
+    {
+      "datetime": "2026-03-24T22:35:26Z",
+      "mission_time": 2945,
+      "call": "SelfTest",
+      "message": "Initiating MSC power-up."
+    },
+    {
+      "datetime": "2026-03-24T22:35:33Z",
+      "mission_time": 2952,
+      "call": "SelfTest",
+      "message": "Apf11 Family:0x36 Group:0x0000 SerNo:0x037ca52a Crc:0x5c SeqNo:394"
+    },
+    {
+      "datetime": "2026-03-24T22:35:34Z",
+      "mission_time": 2953,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]"
+    },
+    {
+      "datetime": "2026-03-24T22:35:34Z",
+      "mission_time": 2953,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume: size(7438MB) sector-size(512B) block-size(512B)"
+    },
+    {
+      "datetime": "2026-03-24T22:35:35Z",
+      "mission_time": 2954,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume reconditioned."
+    },
+    {
+      "datetime": "2026-03-24T22:35:35Z",
+      "mission_time": 2954,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->227 230 229 228 227 [18sec, 15.1Volts, 0.140Amps, CPT:18sec]"
+    },
+    {
+      "datetime": "2026-03-24T22:35:53Z",
+      "mission_time": 2972,
+      "call": "PistonMoveAbsWTO",
+      "message": "227->231 228 229 230 231 [16sec, 15.1Volts, 0.152Amps, CPT:34sec]"
+    },
+    {
+      "datetime": "2026-03-24T22:36:09Z",
+      "mission_time": 2988,
+      "call": "SelfTest",
+      "message": "Passed: Timed piston movements from 231 to 227 counts and back."
+    },
+    {
+      "datetime": "2026-03-24T22:36:10Z",
+      "mission_time": 2989,
+      "call": "SelfTest",
+      "message": "Passed: Internal pressure [211, 12.4psi] less than threshold [237, 13.9psi]."
+    },
+    {
+      "datetime": "2026-03-24T22:36:11Z",
+      "mission_time": 2990,
+      "call": "SelfTest",
+      "message": "Passed: Response received from SBE41cp."
+    },
+    {
+      "datetime": "2026-03-24T22:36:18Z",
+      "mission_time": 2997,
+      "call": "SelfTest",
+      "message": "Passed: Sbe41cp SerNo: 20389"
+    },
+    {
+      "datetime": "2026-03-24T22:36:29Z",
+      "mission_time": 3008,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 20389) FwRev accepted: [7.2.5]"
+    },
+    {
+      "datetime": "2026-03-24T22:36:29Z",
+      "mission_time": 3008,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 20389) firmware build-date accepted: [Oct 14 2015 20:03:56]"
+    },
+    {
+      "datetime": "2026-03-24T22:36:29Z",
+      "mission_time": 3008,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 20389) firmware variant accepted: [CP UW]"
+    },
+    {
+      "datetime": "2026-03-24T22:36:37Z",
+      "mission_time": 3016,
+      "call": "Sbe41cpConfig",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2026-03-24T22:36:46Z",
+      "mission_time": 3025,
+      "call": "Sbe41cpEnablePts",
+      "message": "PTS output enabled during CP mode."
+    },
+    {
+      "datetime": "2026-03-24T22:36:55Z",
+      "mission_time": 3034,
+      "call": "Sbe41cpTsWait",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2026-03-24T22:36:58Z",
+      "mission_time": 3037,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp configuration was successful."
+    },
+    {
+      "datetime": "2026-03-24T22:37:17Z",
+      "mission_time": 3056,
+      "call": "Sbe41cpPOffSet",
+      "message": "Configuration successful: POffset(0.0)."
+    },
+    {
+      "datetime": "2026-03-24T22:37:17Z",
+      "mission_time": 3056,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp pressure-offset initialized to zero."
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "SBE 41CP V 7.2.5  SERIAL NO. 20389"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "temperature: 30-Jul-25"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "TA0 = -8.216114e-04"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "TA1 = 2.920837e-04"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "TA2 = -3.752597e-06"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "TA3 = 1.488226e-07"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "conductivity: 30-Jul-25"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "G = -1.021987e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "H = 1.571363e-01"
+    },
+    {
+      "datetime": "2026-03-24T22:37:24Z",
+      "mission_time": 3063,
+      "call": "Sbe41cpLogCal",
+      "message": "I = -3.131421e-04"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "J = 4.689995e-05"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "CTCOR = 3.250000e-06"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "CPCOR = -9.570000e-08"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "WBOTC = 3.588313e-07"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "pressure S/N = 12462759, range = 2900 psia:  17-Jul-25"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "PA0 = -5.425776e-02"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "PA1 = 3.931778e-04"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "PA2 = -3.220255e-13"
+    },
+    {
+      "datetime": "2026-03-24T22:37:25Z",
+      "mission_time": 3064,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA0 = 3.573086e+02"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA1 = 6.102344e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA2 = -5.168784e-01"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB0 = 3.103388e+05"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB1 = 1.080204e+01"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB2 = 1.106152e-01"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA0 = 2.893180e+02"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA1 = -6.180763e-05"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA2 = -8.078656e-13"
+    },
+    {
+      "datetime": "2026-03-24T22:37:26Z",
+      "mission_time": 3065,
+      "call": "Sbe41cpLogCal",
+      "message": "POFFSET = 0.000000e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:37:36Z",
+      "mission_time": 3075,
+      "call": "SelfTest",
+      "message": "Passed: LBT model: 9523N"
+    },
+    {
+      "datetime": "2026-03-24T22:37:37Z",
+      "mission_time": 3076,
+      "call": "SelfTest",
+      "message": "Warning: Unexpected LBT firmare: [DB20004] != [DB23001] (expected)."
+    },
+    {
+      "datetime": "2026-03-24T22:37:38Z",
+      "mission_time": 3077,
+      "call": "IrModemConfigure",
+      "message": "Modem configured for fixed (19200) baud rate."
+    },
+    {
+      "datetime": "2026-03-24T22:37:38Z",
+      "mission_time": 3077,
+      "call": "IrModemConfigure",
+      "message": "Configuration saved to modem's NVRAM."
+    },
+    {
+      "datetime": "2026-03-24T22:37:38Z",
+      "mission_time": 3077,
+      "call": "IrModemConfigure",
+      "message": "Modem configuration successful."
+    },
+    {
+      "datetime": "2026-03-24T22:37:38Z",
+      "mission_time": 3077,
+      "call": "SelfTest",
+      "message": "Passed: LBT configuration was successful."
+    },
+    {
+      "datetime": "2026-03-24T22:37:39Z",
+      "mission_time": 3078,
+      "call": "SelfTest",
+      "message": "Passed: LBT IMEI: 300125062455480"
+    },
+    {
+      "datetime": "2026-03-24T22:37:45Z",
+      "mission_time": 3084,
+      "call": "SelfTest",
+      "message": "Passed: SIM card ICCID: 8988169234006245658"
+    },
+    {
+      "datetime": "2026-03-24T22:37:46Z",
+      "mission_time": 3085,
+      "call": "ConfigGarmin15",
+      "message": "Garmin GPS15 configuration initiated."
+    },
+    {
+      "datetime": "2026-03-24T22:37:55Z",
+      "mission_time": 3094,
+      "call": "ConfigGarmin15",
+      "message": "Garmin GPS15 successfully configured."
+    },
+    {
+      "datetime": "2026-03-24T22:38:01Z",
+      "mission_time": 3100,
+      "call": "SelfTest",
+      "message": "Passed: Optode FwRev accepted: [4.9.1]"
+    },
+    {
+      "datetime": "2026-03-24T22:38:04Z",
+      "mission_time": 3103,
+      "call": "SelfTest",
+      "message": "Passed: Optode SerNo: 4369"
+    },
+    {
+      "datetime": "2026-03-24T22:38:18Z",
+      "mission_time": 3117,
+      "call": "OptodeConfig",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2026-03-24T22:38:18Z",
+      "mission_time": 3117,
+      "call": "SelfTest",
+      "message": "Passed: Optode configuration was successful."
+    },
+    {
+      "datetime": "2026-03-24T22:38:23Z",
+      "mission_time": 3122,
+      "call": "OptodeLogConfig",
+      "message": ""
+    },
+    {
+      "datetime": "2026-03-24T22:38:23Z",
+      "mission_time": 3122,
+      "call": "OptodeLogConfig",
+      "message": "Product Name 4330 4369 Oxygen Optode"
+    },
+    {
+      "datetime": "2026-03-24T22:38:23Z",
+      "mission_time": 3122,
+      "call": "OptodeLogConfig",
+      "message": "Product Number 4330 4369 4330"
+    },
+    {
+      "datetime": "2026-03-24T22:38:24Z",
+      "mission_time": 3123,
+      "call": "OptodeLogConfig",
+      "message": "Serial Number 4330 4369 4369"
+    },
+    {
+      "datetime": "2026-03-24T22:38:24Z",
+      "mission_time": 3123,
+      "call": "OptodeLogConfig",
+      "message": "SW ID 4330 4369 1940006"
+    },
+    {
+      "datetime": "2026-03-24T22:38:24Z",
+      "mission_time": 3123,
+      "call": "OptodeLogConfig",
+      "message": "SW Version 4330 4369 4 9 1"
+    },
+    {
+      "datetime": "2026-03-24T22:38:24Z",
+      "mission_time": 3123,
+      "call": "OptodeLogConfig",
+      "message": "HW ID 1 4330 4369 3969525B"
+    },
+    {
+      "datetime": "2026-03-24T22:38:24Z",
+      "mission_time": 3123,
+      "call": "OptodeLogConfig",
+      "message": "HW Version 1 4330 4369 Rev2"
+    },
+    {
+      "datetime": "2026-03-24T22:38:25Z",
+      "mission_time": 3124,
+      "call": "OptodeLogConfig",
+      "message": "HW ID 2 4330 4369 3969524"
+    },
+    {
+      "datetime": "2026-03-24T22:38:25Z",
+      "mission_time": 3124,
+      "call": "OptodeLogConfig",
+      "message": "HW Version 2 4330 4369 Rev4"
+    },
+    {
+      "datetime": "2026-03-24T22:38:25Z",
+      "mission_time": 3124,
+      "call": "OptodeLogConfig",
+      "message": "HW ID 3 4330 4369 3969543"
+    },
+    {
+      "datetime": "2026-03-24T22:38:25Z",
+      "mission_time": 3124,
+      "call": "OptodeLogConfig",
+      "message": "HW Version 3 4330 4369 Rev4"
+    },
+    {
+      "datetime": "2026-03-24T22:38:25Z",
+      "mission_time": 3124,
+      "call": "OptodeLogConfig",
+      "message": "System Control 4330 4369 0 0 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:25Z",
+      "mission_time": 3124,
+      "call": "OptodeLogConfig",
+      "message": "Production Date 4330 4369 2023-10-13"
+    },
+    {
+      "datetime": "2026-03-24T22:38:26Z",
+      "mission_time": 3125,
+      "call": "OptodeLogConfig",
+      "message": "Last Service 4330 4369 "
+    },
+    {
+      "datetime": "2026-03-24T22:38:26Z",
+      "mission_time": 3125,
+      "call": "OptodeLogConfig",
+      "message": "Last Calibration 4330 4369 "
+    },
+    {
+      "datetime": "2026-03-24T22:38:26Z",
+      "mission_time": 3125,
+      "call": "OptodeLogConfig",
+      "message": "Calibration Interval[Days] 4330 4369 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:26Z",
+      "mission_time": 3125,
+      "call": "OptodeLogConfig",
+      "message": "Node Description 4330 4369 Oxygen Optode #4369"
+    },
+    {
+      "datetime": "2026-03-24T22:38:26Z",
+      "mission_time": 3125,
+      "call": "OptodeLogConfig",
+      "message": "Owner 4330 4369 "
+    },
+    {
+      "datetime": "2026-03-24T22:38:26Z",
+      "mission_time": 3125,
+      "call": "OptodeLogConfig",
+      "message": "Baudrate 4330 4369 9600"
+    },
+    {
+      "datetime": "2026-03-24T22:38:27Z",
+      "mission_time": 3126,
+      "call": "OptodeLogConfig",
+      "message": "Flow Control 4330 4369 None"
+    },
+    {
+      "datetime": "2026-03-24T22:38:27Z",
+      "mission_time": 3126,
+      "call": "OptodeLogConfig",
+      "message": "Enable Comm Indicator 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:27Z",
+      "mission_time": 3126,
+      "call": "OptodeLogConfig",
+      "message": "Comm Timeout 4330 4369 1 min"
+    },
+    {
+      "datetime": "2026-03-24T22:38:27Z",
+      "mission_time": 3126,
+      "call": "OptodeLogConfig",
+      "message": "Salinity[PSU] 4330 4369 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:27Z",
+      "mission_time": 3126,
+      "call": "OptodeLogConfig",
+      "message": "TempCoef 4330 4369 2.432635E+01 -3.102697E-02 2.897128E-06 -4.263637E-09 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:28Z",
+      "mission_time": 3127,
+      "call": "OptodeLogConfig",
+      "message": "PTC0Coef 4330 4369 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:28Z",
+      "mission_time": 3127,
+      "call": "OptodeLogConfig",
+      "message": "PTC1Coef 4330 4369 1.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:28Z",
+      "mission_time": 3127,
+      "call": "OptodeLogConfig",
+      "message": "PhaseCoef 4330 4369 -1.588000E+00 1.000000E+00 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:28Z",
+      "mission_time": 3127,
+      "call": "OptodeLogConfig",
+      "message": "FoilID 4330 4369 2310M"
+    },
+    {
+      "datetime": "2026-03-24T22:38:28Z",
+      "mission_time": 3127,
+      "call": "OptodeLogConfig",
+      "message": "FoilCoefA 4330 4369 -4.429471E-06 -9.934120E-06 2.539297E-03 -2.623883E-01 9.495663E-04 -1.385170E-06 1.384506E+01 -7.820107E-02 2.077827E-04 1.951742E-07 -3.815226E+02 2.968714E+00 -4.551691E-03 -3.449760E-04"
+    },
+    {
+      "datetime": "2026-03-24T22:38:29Z",
+      "mission_time": 3128,
+      "call": "OptodeLogConfig",
+      "message": "FoilCoefB 4330 4369 5.200052E-06 4.547302E+03 -4.453296E+01 -1.936771E-01 2.230949E-02 -4.134188E-04 1.497347E-06 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:30Z",
+      "mission_time": 3129,
+      "call": "OptodeLogConfig",
+      "message": "FoilPolyDegT 4330 4369 1 0 0 0 1 2 0 1 2 3 0 1 2 3 4 0 1 2 3 4 5 0 0 0 0 0 0 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:30Z",
+      "mission_time": 3129,
+      "call": "OptodeLogConfig",
+      "message": "FoilPolyDegO 4330 4369 4 5 4 3 3 3 2 2 2 2 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:30Z",
+      "mission_time": 3129,
+      "call": "OptodeLogConfig",
+      "message": "SVUFoilCoef 4330 4369 2.842072E-03 1.198359E-04 2.306889E-06 1.945593E+02 -2.272694E-01 -4.354879E+01 3.884244E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:30Z",
+      "mission_time": 3129,
+      "call": "OptodeLogConfig",
+      "message": "ConcCoef 4330 4369 0.000000E+00 1.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:31Z",
+      "mission_time": 3130,
+      "call": "OptodeLogConfig",
+      "message": "NomAirPress[hPa] 4330 4369 1.013250E+03"
+    },
+    {
+      "datetime": "2026-03-24T22:38:31Z",
+      "mission_time": 3130,
+      "call": "OptodeLogConfig",
+      "message": "NomAirMix 4330 4369 2.094600E-01"
+    },
+    {
+      "datetime": "2026-03-24T22:38:31Z",
+      "mission_time": 3130,
+      "call": "OptodeLogConfig",
+      "message": "CalDataSat[Deg] 4330 4369 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:31Z",
+      "mission_time": 3130,
+      "call": "OptodeLogConfig",
+      "message": "CalDataAPress[hPa] 4330 4369 1.013250E+03"
+    },
+    {
+      "datetime": "2026-03-24T22:38:31Z",
+      "mission_time": 3130,
+      "call": "OptodeLogConfig",
+      "message": "CalDataZero[Deg] 4330 4369 0.000000E+00 0.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "Enable RedReference 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "RedReference Interval 4330 4369 1"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "Mode 4330 4369 Smart Sensor Terminal"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "Enable Sleep 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "Enable Polled Mode 4330 4369 No"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "Enable Text 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:32Z",
+      "mission_time": 3131,
+      "call": "OptodeLogConfig",
+      "message": "Enable Decimalformat 4330 4369 No"
+    },
+    {
+      "datetime": "2026-03-24T22:38:33Z",
+      "mission_time": 3132,
+      "call": "OptodeLogConfig",
+      "message": "Analog TempLimit[Deg.C] 4330 4369 -5.000000E+00 3.500000E+01"
+    },
+    {
+      "datetime": "2026-03-24T22:38:33Z",
+      "mission_time": 3132,
+      "call": "OptodeLogConfig",
+      "message": "Analog ConcLimit[uM] 4330 4369 0.000000E+00 8.000000E+02"
+    },
+    {
+      "datetime": "2026-03-24T22:38:33Z",
+      "mission_time": 3132,
+      "call": "OptodeLogConfig",
+      "message": "Analog SatLimit[%] 4330 4369 0.000000E+00 2.000000E+02"
+    },
+    {
+      "datetime": "2026-03-24T22:38:33Z",
+      "mission_time": 3132,
+      "call": "OptodeLogConfig",
+      "message": "Analog PhaseLimit[Deg.] 4330 4369 1.000000E+01 7.000000E+01"
+    },
+    {
+      "datetime": "2026-03-24T22:38:33Z",
+      "mission_time": 3132,
+      "call": "OptodeLogConfig",
+      "message": "Analog Output 4330 4369 O2Concentration"
+    },
+    {
+      "datetime": "2026-03-24T22:38:34Z",
+      "mission_time": 3133,
+      "call": "OptodeLogConfig",
+      "message": "Analog1 Coef 4330 4369 0.000000E+00 1.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:34Z",
+      "mission_time": 3133,
+      "call": "OptodeLogConfig",
+      "message": "Analog2 Coef 4330 4369 0.000000E+00 1.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:34Z",
+      "mission_time": 3133,
+      "call": "OptodeLogConfig",
+      "message": "Enable AirSaturation 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:34Z",
+      "mission_time": 3133,
+      "call": "OptodeLogConfig",
+      "message": "Enable Rawdata 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:34Z",
+      "mission_time": 3133,
+      "call": "OptodeLogConfig",
+      "message": "Enable Temperature 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:34Z",
+      "mission_time": 3133,
+      "call": "OptodeLogConfig",
+      "message": "Enable HumidityComp 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:35Z",
+      "mission_time": 3134,
+      "call": "OptodeLogConfig",
+      "message": "Enable SVUformula 4330 4369 Yes"
+    },
+    {
+      "datetime": "2026-03-24T22:38:35Z",
+      "mission_time": 3134,
+      "call": "OptodeLogConfig",
+      "message": "Enable Burn-In Mode 4330 4369 No"
+    },
+    {
+      "datetime": "2026-03-24T22:38:35Z",
+      "mission_time": 3134,
+      "call": "OptodeLogConfig",
+      "message": "Interval[s] 4330 4369 3.000000E+00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:35Z",
+      "mission_time": 3134,
+      "call": "OptodeLogConfig",
+      "message": "Location 4330 4369 "
+    },
+    {
+      "datetime": "2026-03-24T22:38:35Z",
+      "mission_time": 3134,
+      "call": "OptodeLogConfig",
+      "message": "Geographic Position 4330 4369 60.323605,5.37225"
+    },
+    {
+      "datetime": "2026-03-24T22:38:35Z",
+      "mission_time": 3134,
+      "call": "OptodeLogConfig",
+      "message": "Vertical Position 4330 4369 "
+    },
+    {
+      "datetime": "2026-03-24T22:38:36Z",
+      "mission_time": 3135,
+      "call": "OptodeLogConfig",
+      "message": "Reference 4330 4369 "
+    },
+    {
+      "datetime": "2026-03-24T22:38:36Z",
+      "mission_time": 3135,
+      "call": "SelfTest",
+      "message": "Passed: Optode configuration was successfully logged."
+    },
+    {
+      "datetime": "2026-03-24T22:38:41Z",
+      "mission_time": 3140,
+      "call": "SelfTest",
+      "message": "Passed: MSC configured for ISUS and DURA sensors."
+    },
+    {
+      "datetime": "2026-03-24T22:38:44Z",
+      "mission_time": 3143,
+      "call": "SelfTest",
+      "message": "Passed: MSC initialization successful."
+    },
+    {
+      "datetime": "2026-03-24T22:38:45Z",
+      "mission_time": 3144,
+      "call": "SelfTest",
+      "message": "Passed: MSC RTC initialized."
+    },
+    {
+      "datetime": "2026-03-24T22:38:47Z",
+      "mission_time": 3146,
+      "call": "DuraConfigLog_",
+      "message": "H, Datalogger Serial Num , SN:3025"
+    },
+    {
+      "datetime": "2026-03-24T22:38:47Z",
+      "mission_time": 3146,
+      "call": "DuraConfigLog_",
+      "message": "H, Application      Name , MoSoS v5.1.7 MSC3 1290 revB"
+    },
+    {
+      "datetime": "2026-03-24T22:38:47Z",
+      "mission_time": 3146,
+      "call": "DuraConfigLog_",
+      "message": "H, App Build        Date , Jun  6 2025, 20:24:34"
+    },
+    {
+      "datetime": "2026-03-24T22:38:47Z",
+      "mission_time": 3146,
+      "call": "DuraConfigLog_",
+      "message": "H, Power Up Time   (GMT) , 03/24/2026 22:38:37"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, Current  Time   (GMT) , 03/24/2026 22:38:46"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, Serial Inactive Sleep , 30 sec"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, MSC3 Info             , Tiva 1290 running MoSoS v5"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, Storage          Size , 973504"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, Storage          Left , 99.84%"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, WatchDog      Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:48Z",
+      "mission_time": 3147,
+      "call": "DuraConfigLog_",
+      "message": "H, System Reset  Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, System Error  Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, Last System     Error , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, Last System ErrorTime , 03/24/2026 22:38:46"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, DURA  Error   Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, Last DURA       Error , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, Last DURA Error  Time , 01/01/1900 06:00:00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, DURA Sample   Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:38:49Z",
+      "mission_time": 3148,
+      "call": "DuraConfigLog_",
+      "message": "H, Last Sample Rec. Time , 01/01/1900 06:00:00"
+    },
+    {
+      "datetime": "2026-03-24T22:38:53Z",
+      "mission_time": 3152,
+      "call": "SelfTest",
+      "message": "Passed: Query for DURA configuration."
+    },
+    {
+      "datetime": "2026-03-24T22:38:55Z",
+      "mission_time": 3154,
+      "call": "SelfTest",
+      "message": "Passed: DURA serial number accepted: [3025]"
+    },
+    {
+      "datetime": "2026-03-24T22:38:59Z",
+      "mission_time": 3158,
+      "call": "SelfTest",
+      "message": "Passed: DURA FwRev accepted: [Jun  6 2025, 20:24:34]"
+    },
+    {
+      "datetime": "2026-03-24T22:39:01Z",
+      "mission_time": 3160,
+      "call": "MscCalFile_",
+      "message": "sensor_SN = 2099"
+    },
+    {
+      "datetime": "2026-03-24T22:39:01Z",
+      "mission_time": 3160,
+      "call": "MscCalFile_",
+      "message": "pH_CalFile = ae gdf2099_calibration_20251229.txt"
+    },
+    {
+      "datetime": "2026-03-24T22:39:01Z",
+      "mission_time": 3160,
+      "call": "MscCalFile_",
+      "message": "PT_Cal_date = 12/02/2025"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "k0_Cal_date = 12/24/2025"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "k0_SW=-1.495760"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "k2[0]=-9.11341e-04"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "k2[1]=-4.91417e-08"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "k2[2]=5.68553e-11"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "k2[3]=-2.32626e-14"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "fp[0]=-1.49560e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "fp[1]=-7.03498e-06"
+    },
+    {
+      "datetime": "2026-03-24T22:39:02Z",
+      "mission_time": 3161,
+      "call": "MscCalFile_",
+      "message": "fp[2]=1.34115e-08"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[3]=-2.56549e-11"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[4]=2.06337e-14"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[5]=-7.45437e-18"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[6]=1.02317e-21"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[7]=0.00000e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[8]=0.00000e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "fp[9]=0.00000e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:03Z",
+      "mission_time": 3162,
+      "call": "MscCalFile_",
+      "message": "CRC(0x4df0) for DURA calibration file confirmed."
+    },
+    {
+      "datetime": "2026-03-24T22:39:04Z",
+      "mission_time": 3163,
+      "call": "SelfTest",
+      "message": "Passed: Upload of DURA calibration file successful."
+    },
+    {
+      "datetime": "2026-03-24T22:39:06Z",
+      "mission_time": 3165,
+      "call": "SelfTest",
+      "message": "Passed: DURA sample successful."
+    },
+    {
+      "datetime": "2026-03-24T22:39:08Z",
+      "mission_time": 3167,
+      "call": "IsusConfigLog_",
+      "message": "H, Datalogger Serial Num , SN:3025"
+    },
+    {
+      "datetime": "2026-03-24T22:39:09Z",
+      "mission_time": 3168,
+      "call": "IsusConfigLog_",
+      "message": "H, Application      Name , MoSoS v5.1.7 MSC3 1290 revB"
+    },
+    {
+      "datetime": "2026-03-24T22:39:09Z",
+      "mission_time": 3168,
+      "call": "IsusConfigLog_",
+      "message": "H, App Build        Date , Jun  6 2025, 20:24:34"
+    },
+    {
+      "datetime": "2026-03-24T22:39:09Z",
+      "mission_time": 3168,
+      "call": "IsusConfigLog_",
+      "message": "H, Power Up Time   (GMT) , 03/24/2026 22:38:37"
+    },
+    {
+      "datetime": "2026-03-24T22:39:09Z",
+      "mission_time": 3168,
+      "call": "IsusConfigLog_",
+      "message": "H, Current  Time   (GMT) , 03/24/2026 22:39:08"
+    },
+    {
+      "datetime": "2026-03-24T22:39:09Z",
+      "mission_time": 3168,
+      "call": "IsusConfigLog_",
+      "message": "H, Serial Inactive Sleep , 30 sec"
+    },
+    {
+      "datetime": "2026-03-24T22:39:09Z",
+      "mission_time": 3168,
+      "call": "IsusConfigLog_",
+      "message": "H, MSC3 Info             , Tiva 1290 running MoSoS v5"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, Storage          Size , 973504"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, Storage          Left , 99.84%"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, WatchDog      Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, System Reset  Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, System Error  Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, Last System     Error , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, Last System ErrorTime , 03/24/2026 22:39:08"
+    },
+    {
+      "datetime": "2026-03-24T22:39:10Z",
+      "mission_time": 3169,
+      "call": "IsusConfigLog_",
+      "message": "H, ISUS  Error   Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Last ISUS       Error , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Last ISUS Error  Time , 01/01/1900 06:00:00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, ISUS Sample   Counter , 0"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Last Sample Rec. Time , 01/01/1900 06:00:00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Fiberlite    Odometer , 00:19:15"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Fiberlite      Cycles , 283"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Intensity LampON , 5000"
+    },
+    {
+      "datetime": "2026-03-24T22:39:11Z",
+      "mission_time": 3170,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Integration Time , 450"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Pre  scans taken , 2"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Lite scans taken , 3"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Dark scans taken , 1"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Calibration      Date , 12/10/2025"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Sw Calibration   Temp , 19.74"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Wavelength Fit  Range , 217.281 <-> 240.333"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Pixel Fit       Range , 34 <-> 63"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Fitted Concentrations , 2"
+    },
+    {
+      "datetime": "2026-03-24T22:39:12Z",
+      "mission_time": 3171,
+      "call": "IsusConfigLog_",
+      "message": "H, Baseline        Model , (ax + b)"
+    },
+    {
+      "datetime": "2026-03-24T22:39:13Z",
+      "mission_time": 3172,
+      "call": "IsusConfigLog_",
+      "message": "H, Br Temp  Compensation , ENABLED"
+    },
+    {
+      "datetime": "2026-03-24T22:39:13Z",
+      "mission_time": 3172,
+      "call": "IsusConfigLog_",
+      "message": "H, Bromide Term in Model , will be FIXED (to external CTD value)"
+    },
+    {
+      "datetime": "2026-03-24T22:39:13Z",
+      "mission_time": 3172,
+      "call": "IsusConfigLog_",
+      "message": "H, Zeiss Coefficient Vals, 1.896680e+02,7.850170e-01,1.225970e-04,-2.996740e-07,0.000000e+00"
+    },
+    {
+      "datetime": "2026-03-24T22:39:16Z",
+      "mission_time": 3175,
+      "call": "SelfTest",
+      "message": "Passed: Query for ISUS configuration."
+    },
+    {
+      "datetime": "2026-03-24T22:39:19Z",
+      "mission_time": 3178,
+      "call": "SelfTest",
+      "message": "Passed: ISUS serial number accepted: [3025]"
+    },
+    {
+      "datetime": "2026-03-24T22:39:22Z",
+      "mission_time": 3181,
+      "call": "SelfTest",
+      "message": "Passed: ISUS FwRev accepted: [Jun  6 2025, 20:24:34]"
+    },
+    {
+      "datetime": "2026-03-24T22:39:25Z",
+      "mission_time": 3184,
+      "call": "MscCalFile_",
+      "message": "H,12/10/2025,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:25Z",
+      "mission_time": 3184,
+      "call": "MscCalFile_",
+      "message": "H,CalTemp,19.74,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:25Z",
+      "mission_time": 3184,
+      "call": "MscCalFile_",
+      "message": "H,Lamp#D24.A20.222853 Spec#162557 Ti probe #2410392-035  ARGO float#3025  DF#GDF2099  CTD#20389,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:25Z",
+      "mission_time": 3184,
+      "call": "MscCalFile_",
+      "message": "H,E's prepared from PROF0001.log  odometer= 00:04:37,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:25Z",
+      "mission_time": 3184,
+      "call": "MscCalFile_",
+      "message": "H,Salinity PSS,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "H,Nitrate uM,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "H,HS- uM,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "H,DIW T=20 ISUS T=11.3  Int=450 SW T=20 NO3 T=20  DC=709 Ref=NA,,,,"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "H,WaveLen,New ESW,New ENO3,EHS,DI DC Corr"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "E,190.45314,0.000000000,0.000000000,0.000000000,11569.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "E,191.23852,0.000000000,0.000000000,0.000000000,13490.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:26Z",
+      "mission_time": 3185,
+      "call": "MscCalFile_",
+      "message": "E,192.02415,0.000000000,0.000000000,0.000000000,15298.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:27Z",
+      "mission_time": 3186,
+      "call": "MscCalFile_",
+      "message": "E,192.81001,0.000000000,0.000000000,0.000000000,17033.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:27Z",
+      "mission_time": 3186,
+      "call": "MscCalFile_",
+      "message": "E,193.59611,0.000000000,0.000000000,0.000000000,18937.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:27Z",
+      "mission_time": 3186,
+      "call": "MscCalFile_",
+      "message": "E,194.38245,0.000000000,0.000000000,0.000000000,20971.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:27Z",
+      "mission_time": 3186,
+      "call": "MscCalFile_",
+      "message": "E,195.16902,0.000000000,0.000000000,0.000000000,23080.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:27Z",
+      "mission_time": 3186,
+      "call": "MscCalFile_",
+      "message": "E,195.95583,0.000000000,0.000000000,0.000000000,25206.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:28Z",
+      "mission_time": 3187,
+      "call": "MscCalFile_",
+      "message": "E,196.74286,0.000000000,0.000000000,0.000000000,27223.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:28Z",
+      "mission_time": 3187,
+      "call": "MscCalFile_",
+      "message": "E,197.53013,0.000000000,0.000000000,0.000000000,28945.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:28Z",
+      "mission_time": 3187,
+      "call": "MscCalFile_",
+      "message": "E,198.31762,0.000000000,0.000000000,0.000000000,30202.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:28Z",
+      "mission_time": 3187,
+      "call": "MscCalFile_",
+      "message": "E,199.10534,0.000000000,0.000000000,0.000000000,30891.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:28Z",
+      "mission_time": 3187,
+      "call": "MscCalFile_",
+      "message": "E,199.89328,0.000000000,0.000000000,0.000000000,30911.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:28Z",
+      "mission_time": 3187,
+      "call": "MscCalFile_",
+      "message": "E,200.68144,0.000000000,0.000000000,0.000000000,30402.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:29Z",
+      "mission_time": 3188,
+      "call": "MscCalFile_",
+      "message": "E,201.46983,0.000000000,0.000000000,0.000000000,29464.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:29Z",
+      "mission_time": 3188,
+      "call": "MscCalFile_",
+      "message": "E,202.25843,0.000000000,0.000000000,0.000000000,28340.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:29Z",
+      "mission_time": 3188,
+      "call": "MscCalFile_",
+      "message": "E,203.04725,0.000000000,0.000000000,0.000000000,27192.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:29Z",
+      "mission_time": 3188,
+      "call": "MscCalFile_",
+      "message": "E,203.83628,0.000000000,0.000000000,0.000000000,26185.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:29Z",
+      "mission_time": 3188,
+      "call": "MscCalFile_",
+      "message": "E,204.62553,0.000000000,0.000000000,0.000000000,25456.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:29Z",
+      "mission_time": 3188,
+      "call": "MscCalFile_",
+      "message": "E,205.41498,0.000000000,0.000000000,0.000000000,25003.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:30Z",
+      "mission_time": 3189,
+      "call": "MscCalFile_",
+      "message": "E,206.20465,0.000000000,0.000000000,0.000000000,24893.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:30Z",
+      "mission_time": 3189,
+      "call": "MscCalFile_",
+      "message": "E,206.99452,0.000000000,0.000000000,0.000000000,25127.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:30Z",
+      "mission_time": 3189,
+      "call": "MscCalFile_",
+      "message": "E,207.78460,0.000000000,0.000000000,0.000000000,25670.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:30Z",
+      "mission_time": 3189,
+      "call": "MscCalFile_",
+      "message": "E,208.57488,0.000000000,0.000000000,0.000000000,26541.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:30Z",
+      "mission_time": 3189,
+      "call": "MscCalFile_",
+      "message": "E,209.36537,0.000000000,0.000000000,0.000000000,27760.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:31Z",
+      "mission_time": 3190,
+      "call": "MscCalFile_",
+      "message": "E,210.15605,0.039963440,0.006836083,0.000000000,29274.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:31Z",
+      "mission_time": 3190,
+      "call": "MscCalFile_",
+      "message": "E,210.94693,0.033580792,0.006937661,0.000000000,31059.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:31Z",
+      "mission_time": 3190,
+      "call": "MscCalFile_",
+      "message": "E,211.73801,0.028038880,0.006788399,0.000000000,33051.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:31Z",
+      "mission_time": 3190,
+      "call": "MscCalFile_",
+      "message": "E,212.52929,0.023205607,0.006610809,0.000000000,35165.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:31Z",
+      "mission_time": 3190,
+      "call": "MscCalFile_",
+      "message": "E,213.32076,0.019095417,0.006328590,0.000000000,37279.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:31Z",
+      "mission_time": 3190,
+      "call": "MscCalFile_",
+      "message": "E,214.11242,0.015605573,0.006043480,0.000000000,39209.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:32Z",
+      "mission_time": 3191,
+      "call": "MscCalFile_",
+      "message": "E,214.90426,0.012688198,0.005737358,0.000000000,40823.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:32Z",
+      "mission_time": 3191,
+      "call": "MscCalFile_",
+      "message": "E,215.69630,0.010250399,0.005424178,0.000000000,41969.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:32Z",
+      "mission_time": 3191,
+      "call": "MscCalFile_",
+      "message": "E,216.48852,0.008236768,0.005101022,0.000000000,42505.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:32Z",
+      "mission_time": 3191,
+      "call": "MscCalFile_",
+      "message": "E,217.28093,0.006582378,0.004758161,0.000000000,42410.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:32Z",
+      "mission_time": 3191,
+      "call": "MscCalFile_",
+      "message": "E,218.07352,0.005226309,0.004430496,0.000000000,41711.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:32Z",
+      "mission_time": 3191,
+      "call": "MscCalFile_",
+      "message": "E,218.86628,0.004132780,0.004095209,0.000000000,40483.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:33Z",
+      "mission_time": 3192,
+      "call": "MscCalFile_",
+      "message": "E,219.65923,0.003251857,0.003764260,0.000000000,38877.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:33Z",
+      "mission_time": 3192,
+      "call": "MscCalFile_",
+      "message": "E,220.45236,0.002549991,0.003440546,0.000000000,37145.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:33Z",
+      "mission_time": 3192,
+      "call": "MscCalFile_",
+      "message": "E,221.24566,0.001994706,0.003126769,0.000000000,35362.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:33Z",
+      "mission_time": 3192,
+      "call": "MscCalFile_",
+      "message": "E,222.03913,0.001560246,0.002826754,0.000000000,33717.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:33Z",
+      "mission_time": 3192,
+      "call": "MscCalFile_",
+      "message": "E,222.83277,0.001220880,0.002544775,0.000000000,32297.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:34Z",
+      "mission_time": 3193,
+      "call": "MscCalFile_",
+      "message": "E,223.62659,0.000958389,0.002273238,0.000000000,31108.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:34Z",
+      "mission_time": 3193,
+      "call": "MscCalFile_",
+      "message": "E,224.42057,0.000756570,0.002024868,0.000000000,30198.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:34Z",
+      "mission_time": 3193,
+      "call": "MscCalFile_",
+      "message": "E,225.21472,0.000603068,0.001793733,0.000000000,29601.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:34Z",
+      "mission_time": 3193,
+      "call": "MscCalFile_",
+      "message": "E,226.00903,0.000481356,0.001581752,0.000000000,29249.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:34Z",
+      "mission_time": 3193,
+      "call": "MscCalFile_",
+      "message": "E,226.80350,0.000391093,0.001386035,0.000000000,29193.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:34Z",
+      "mission_time": 3193,
+      "call": "MscCalFile_",
+      "message": "E,227.59814,0.000317954,0.001208733,0.000000000,29403.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:35Z",
+      "mission_time": 3194,
+      "call": "MscCalFile_",
+      "message": "E,228.39293,0.000263076,0.001051233,0.000000000,29863.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:35Z",
+      "mission_time": 3194,
+      "call": "MscCalFile_",
+      "message": "E,229.18788,0.000221365,0.000907766,0.000000000,30566.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:35Z",
+      "mission_time": 3194,
+      "call": "MscCalFile_",
+      "message": "E,229.98299,0.000186348,0.000779464,0.000000000,31517.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:35Z",
+      "mission_time": 3194,
+      "call": "MscCalFile_",
+      "message": "E,230.77825,0.000156720,0.000670540,0.000000000,32651.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:35Z",
+      "mission_time": 3194,
+      "call": "MscCalFile_",
+      "message": "E,231.57366,0.000130943,0.000574691,0.000000000,33987.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:36Z",
+      "mission_time": 3195,
+      "call": "MscCalFile_",
+      "message": "E,232.36922,0.000113227,0.000489500,0.000000000,35485.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:36Z",
+      "mission_time": 3195,
+      "call": "MscCalFile_",
+      "message": "E,233.16493,0.000096030,0.000417554,0.000000000,37055.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:36Z",
+      "mission_time": 3195,
+      "call": "MscCalFile_",
+      "message": "E,233.96079,0.000079359,0.000356297,0.000000000,38683.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:36Z",
+      "mission_time": 3195,
+      "call": "MscCalFile_",
+      "message": "E,234.75679,0.000066758,0.000301334,0.000000000,40256.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:36Z",
+      "mission_time": 3195,
+      "call": "MscCalFile_",
+      "message": "E,235.55293,0.000057244,0.000254190,0.000000000,41725.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:36Z",
+      "mission_time": 3195,
+      "call": "MscCalFile_",
+      "message": "E,236.34922,0.000044514,0.000214260,0.000000000,42964.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:37Z",
+      "mission_time": 3196,
+      "call": "MscCalFile_",
+      "message": "E,237.14564,0.000035906,0.000179207,0.000000000,43932.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:37Z",
+      "mission_time": 3196,
+      "call": "MscCalFile_",
+      "message": "E,237.94220,0.000031114,0.000150098,0.000000000,44487.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:37Z",
+      "mission_time": 3196,
+      "call": "MscCalFile_",
+      "message": "E,238.73890,0.000024383,0.000125877,0.000000000,44648.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:37Z",
+      "mission_time": 3196,
+      "call": "MscCalFile_",
+      "message": "E,239.53573,0.000017950,0.000103265,0.000000000,44323.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:37Z",
+      "mission_time": 3196,
+      "call": "MscCalFile_",
+      "message": "E,240.33269,0.000000000,0.000085842,0.000000000,43563.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:37Z",
+      "mission_time": 3196,
+      "call": "MscCalFile_",
+      "message": "E,241.12978,0.000000000,0.000069994,0.000000000,42375.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:38Z",
+      "mission_time": 3197,
+      "call": "MscCalFile_",
+      "message": "E,241.92700,0.000000000,0.000057428,0.000000000,40863.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:38Z",
+      "mission_time": 3197,
+      "call": "MscCalFile_",
+      "message": "E,242.72435,0.000000000,0.000050135,0.000000000,39107.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:38Z",
+      "mission_time": 3197,
+      "call": "MscCalFile_",
+      "message": "E,243.52182,0.000000000,0.000041177,0.000000000,37225.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:38Z",
+      "mission_time": 3197,
+      "call": "MscCalFile_",
+      "message": "E,244.31941,0.000000000,0.000033155,0.000000000,35279.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:38Z",
+      "mission_time": 3197,
+      "call": "MscCalFile_",
+      "message": "E,245.11713,0.000000000,0.000027100,0.000000000,33374.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:39Z",
+      "mission_time": 3198,
+      "call": "MscCalFile_",
+      "message": "E,245.91496,0.000000000,0.000022982,0.000000000,31574.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:39Z",
+      "mission_time": 3198,
+      "call": "MscCalFile_",
+      "message": "E,246.71291,0.000000000,0.000017270,0.000000000,29915.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:39Z",
+      "mission_time": 3198,
+      "call": "MscCalFile_",
+      "message": "E,247.51098,0.000000000,0.000016268,0.000000000,28389.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:39Z",
+      "mission_time": 3198,
+      "call": "MscCalFile_",
+      "message": "E,248.30916,0.000000000,0.000011779,0.000000000,27035.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:39Z",
+      "mission_time": 3198,
+      "call": "MscCalFile_",
+      "message": "E,249.10746,0.000000000,0.000007975,0.000000000,25830.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:39Z",
+      "mission_time": 3198,
+      "call": "MscCalFile_",
+      "message": "E,249.90586,0.000000000,0.000007199,0.000000000,24788.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:40Z",
+      "mission_time": 3199,
+      "call": "MscCalFile_",
+      "message": "E,250.70438,0.000000000,0.000003974,0.000000000,23883.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:40Z",
+      "mission_time": 3199,
+      "call": "MscCalFile_",
+      "message": "E,251.50300,0.000000000,0.000006526,0.000000000,23126.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:40Z",
+      "mission_time": 3199,
+      "call": "MscCalFile_",
+      "message": "E,252.30172,0.000000000,0.000004944,0.000000000,22510.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:40Z",
+      "mission_time": 3199,
+      "call": "MscCalFile_",
+      "message": "E,253.10055,0.000000000,0.000000000,0.000000000,22034.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:40Z",
+      "mission_time": 3199,
+      "call": "MscCalFile_",
+      "message": "E,253.89948,0.000000000,0.000000000,0.000000000,21660.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:40Z",
+      "mission_time": 3199,
+      "call": "MscCalFile_",
+      "message": "E,254.69851,0.000000000,0.000000000,0.000000000,21412.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:41Z",
+      "mission_time": 3200,
+      "call": "MscCalFile_",
+      "message": "E,255.49763,0.000000000,0.000000000,0.000000000,21260.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:41Z",
+      "mission_time": 3200,
+      "call": "MscCalFile_",
+      "message": "E,256.29685,0.000000000,0.000000000,0.000000000,21218.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:41Z",
+      "mission_time": 3200,
+      "call": "MscCalFile_",
+      "message": "E,257.09617,0.000000000,0.000000000,0.000000000,21277.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:41Z",
+      "mission_time": 3200,
+      "call": "MscCalFile_",
+      "message": "E,257.89558,0.000000000,0.000000000,0.000000000,21416.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:41Z",
+      "mission_time": 3200,
+      "call": "MscCalFile_",
+      "message": "E,258.69508,0.000000000,0.000000000,0.000000000,21629.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:42Z",
+      "mission_time": 3201,
+      "call": "MscCalFile_",
+      "message": "E,259.49467,0.000000000,0.000000000,0.000000000,21944.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:42Z",
+      "mission_time": 3201,
+      "call": "MscCalFile_",
+      "message": "E,260.29434,0.000000000,0.000000000,0.000000000,22300.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:42Z",
+      "mission_time": 3201,
+      "call": "MscCalFile_",
+      "message": "E,261.09410,0.000000000,0.000000000,0.000000000,22710.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:42Z",
+      "mission_time": 3201,
+      "call": "MscCalFile_",
+      "message": "E,261.89395,0.000000000,0.000000000,0.000000000,23163.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:42Z",
+      "mission_time": 3201,
+      "call": "MscCalFile_",
+      "message": "E,262.69387,0.000000000,0.000000000,0.000000000,23623.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:42Z",
+      "mission_time": 3201,
+      "call": "MscCalFile_",
+      "message": "E,263.49388,0.000000000,0.000000000,0.000000000,24060.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:43Z",
+      "mission_time": 3202,
+      "call": "MscCalFile_",
+      "message": "E,264.29396,0.000000000,0.000000000,0.000000000,24440.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:43Z",
+      "mission_time": 3202,
+      "call": "MscCalFile_",
+      "message": "E,265.09412,0.000000000,0.000000000,0.000000000,24734.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:43Z",
+      "mission_time": 3202,
+      "call": "MscCalFile_",
+      "message": "E,265.89435,0.000000000,0.000000000,0.000000000,24913.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:43Z",
+      "mission_time": 3202,
+      "call": "MscCalFile_",
+      "message": "E,266.69466,0.000000000,0.000000000,0.000000000,24955.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:43Z",
+      "mission_time": 3202,
+      "call": "MscCalFile_",
+      "message": "E,267.49504,0.000000000,0.000000000,0.000000000,24827.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:43Z",
+      "mission_time": 3202,
+      "call": "MscCalFile_",
+      "message": "E,268.29548,0.000000000,0.000000000,0.000000000,24538.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:44Z",
+      "mission_time": 3203,
+      "call": "MscCalFile_",
+      "message": "E,269.09600,0.000000000,0.000000000,0.000000000,24068.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:44Z",
+      "mission_time": 3203,
+      "call": "MscCalFile_",
+      "message": "E,269.89657,0.000000000,0.000000000,0.000000000,23452.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:44Z",
+      "mission_time": 3203,
+      "call": "MscCalFile_",
+      "message": "E,270.69722,0.000000000,0.000000000,0.000000000,22679.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:44Z",
+      "mission_time": 3203,
+      "call": "MscCalFile_",
+      "message": "E,271.49792,0.000000000,0.000000000,0.000000000,21834.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:44Z",
+      "mission_time": 3203,
+      "call": "MscCalFile_",
+      "message": "E,272.29868,0.000000000,0.000000000,0.000000000,20925.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:45Z",
+      "mission_time": 3204,
+      "call": "MscCalFile_",
+      "message": "E,273.09951,0.000000000,0.000000000,0.000000000,19980.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:45Z",
+      "mission_time": 3204,
+      "call": "MscCalFile_",
+      "message": "E,273.90039,0.000000000,0.000000000,0.000000000,19068.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:45Z",
+      "mission_time": 3204,
+      "call": "MscCalFile_",
+      "message": "E,274.70132,0.000000000,0.000000000,0.000000000,18156.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:45Z",
+      "mission_time": 3204,
+      "call": "MscCalFile_",
+      "message": "E,275.50230,0.000000000,0.000000000,0.000000000,17328.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:45Z",
+      "mission_time": 3204,
+      "call": "MscCalFile_",
+      "message": "E,276.30334,0.000000000,0.000000000,0.000000000,16564.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:45Z",
+      "mission_time": 3204,
+      "call": "MscCalFile_",
+      "message": "E,277.10443,0.000000000,0.000000000,0.000000000,15863.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:46Z",
+      "mission_time": 3205,
+      "call": "MscCalFile_",
+      "message": "E,277.90556,0.000000000,0.000000000,0.000000000,15237.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:46Z",
+      "mission_time": 3205,
+      "call": "MscCalFile_",
+      "message": "E,278.70674,0.000000000,0.000000000,0.000000000,14690.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:46Z",
+      "mission_time": 3205,
+      "call": "MscCalFile_",
+      "message": "E,279.50796,0.000000000,0.000000000,0.000000000,14219.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:46Z",
+      "mission_time": 3205,
+      "call": "MscCalFile_",
+      "message": "E,280.30923,0.000000000,0.000000000,0.000000000,13811.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:46Z",
+      "mission_time": 3205,
+      "call": "MscCalFile_",
+      "message": "E,281.11053,0.000000000,0.000000000,0.000000000,13478.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:47Z",
+      "mission_time": 3206,
+      "call": "MscCalFile_",
+      "message": "E,281.91188,0.000000000,0.000000000,0.000000000,13214.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:47Z",
+      "mission_time": 3206,
+      "call": "MscCalFile_",
+      "message": "E,282.71326,0.000000000,0.000000000,0.000000000,12995.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:47Z",
+      "mission_time": 3206,
+      "call": "MscCalFile_",
+      "message": "E,283.51467,0.000000000,0.000000000,0.000000000,12836.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:47Z",
+      "mission_time": 3206,
+      "call": "MscCalFile_",
+      "message": "E,284.31612,0.000000000,0.000000000,0.000000000,12734.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:47Z",
+      "mission_time": 3206,
+      "call": "MscCalFile_",
+      "message": "E,285.11760,0.000000000,0.000000000,0.000000000,12685.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:47Z",
+      "mission_time": 3206,
+      "call": "MscCalFile_",
+      "message": "E,285.91911,0.000000000,0.000000000,0.000000000,12682.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:48Z",
+      "mission_time": 3207,
+      "call": "MscCalFile_",
+      "message": "E,286.72065,0.000000000,0.000000000,0.000000000,12736.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:48Z",
+      "mission_time": 3207,
+      "call": "MscCalFile_",
+      "message": "E,287.52221,0.000000000,0.000000000,0.000000000,12851.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:48Z",
+      "mission_time": 3207,
+      "call": "MscCalFile_",
+      "message": "E,288.32379,0.000000000,0.000000000,0.000000000,13006.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:48Z",
+      "mission_time": 3207,
+      "call": "MscCalFile_",
+      "message": "E,289.12540,0.000000000,0.000000000,0.000000000,13218.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:48Z",
+      "mission_time": 3207,
+      "call": "MscCalFile_",
+      "message": "E,289.92703,0.000000000,0.000000000,0.000000000,13468.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:48Z",
+      "mission_time": 3207,
+      "call": "MscCalFile_",
+      "message": "E,290.72868,0.000000000,0.000000000,0.000000000,13771.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:49Z",
+      "mission_time": 3208,
+      "call": "MscCalFile_",
+      "message": "E,291.53034,0.000000000,0.000000000,0.000000000,14115.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:49Z",
+      "mission_time": 3208,
+      "call": "MscCalFile_",
+      "message": "E,292.33202,0.000000000,0.000000000,0.000000000,14499.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:49Z",
+      "mission_time": 3208,
+      "call": "MscCalFile_",
+      "message": "E,293.13372,0.000000000,0.000000000,0.000000000,14913.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:49Z",
+      "mission_time": 3208,
+      "call": "MscCalFile_",
+      "message": "E,293.93542,0.000000000,0.000000000,0.000000000,15351.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:49Z",
+      "mission_time": 3208,
+      "call": "MscCalFile_",
+      "message": "E,294.73713,0.000000000,0.000000000,0.000000000,15812.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:50Z",
+      "mission_time": 3209,
+      "call": "MscCalFile_",
+      "message": "E,295.53886,0.000000000,0.000000000,0.000000000,16272.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:50Z",
+      "mission_time": 3209,
+      "call": "MscCalFile_",
+      "message": "E,296.34058,0.000000000,0.000000000,0.000000000,16744.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:50Z",
+      "mission_time": 3209,
+      "call": "MscCalFile_",
+      "message": "E,297.14231,0.000000000,0.000000000,0.000000000,17212.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:50Z",
+      "mission_time": 3209,
+      "call": "MscCalFile_",
+      "message": "E,297.94405,0.000000000,0.000000000,0.000000000,17638.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:50Z",
+      "mission_time": 3209,
+      "call": "MscCalFile_",
+      "message": "E,298.74578,0.000000000,0.000000000,0.000000000,18061.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:50Z",
+      "mission_time": 3209,
+      "call": "MscCalFile_",
+      "message": "E,299.54752,0.000000000,0.000000000,0.000000000,18454.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:51Z",
+      "mission_time": 3210,
+      "call": "MscCalFile_",
+      "message": "E,300.34925,0.000000000,0.000000000,0.000000000,18782.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:51Z",
+      "mission_time": 3210,
+      "call": "MscCalFile_",
+      "message": "E,301.15098,0.000000000,0.000000000,0.000000000,19062.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:51Z",
+      "mission_time": 3210,
+      "call": "MscCalFile_",
+      "message": "E,301.95270,0.000000000,0.000000000,0.000000000,19274.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:51Z",
+      "mission_time": 3210,
+      "call": "MscCalFile_",
+      "message": "E,302.75441,0.000000000,0.000000000,0.000000000,19408.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:51Z",
+      "mission_time": 3210,
+      "call": "MscCalFile_",
+      "message": "E,303.55611,0.000000000,0.000000000,0.000000000,19454.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:51Z",
+      "mission_time": 3210,
+      "call": "MscCalFile_",
+      "message": "E,304.35780,0.000000000,0.000000000,0.000000000,19435.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:52Z",
+      "mission_time": 3211,
+      "call": "MscCalFile_",
+      "message": "E,305.15947,0.000000000,0.000000000,0.000000000,19324.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:52Z",
+      "mission_time": 3211,
+      "call": "MscCalFile_",
+      "message": "E,305.96113,0.000000000,0.000000000,0.000000000,19133.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:52Z",
+      "mission_time": 3211,
+      "call": "MscCalFile_",
+      "message": "E,306.76278,0.000000000,0.000000000,0.000000000,18890.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:52Z",
+      "mission_time": 3211,
+      "call": "MscCalFile_",
+      "message": "E,307.56440,0.000000000,0.000000000,0.000000000,18571.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:52Z",
+      "mission_time": 3211,
+      "call": "MscCalFile_",
+      "message": "E,308.36600,0.000000000,0.000000000,0.000000000,18195.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:53Z",
+      "mission_time": 3212,
+      "call": "MscCalFile_",
+      "message": "E,309.16758,0.000000000,0.000000000,0.000000000,17797.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:53Z",
+      "mission_time": 3212,
+      "call": "MscCalFile_",
+      "message": "E,309.96914,0.000000000,0.000000000,0.000000000,17337.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:53Z",
+      "mission_time": 3212,
+      "call": "MscCalFile_",
+      "message": "E,310.77067,0.000000000,0.000000000,0.000000000,16863.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:53Z",
+      "mission_time": 3212,
+      "call": "MscCalFile_",
+      "message": "E,311.57217,0.000000000,0.000000000,0.000000000,16377.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:53Z",
+      "mission_time": 3212,
+      "call": "MscCalFile_",
+      "message": "E,312.37364,0.000000000,0.000000000,0.000000000,15885.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:53Z",
+      "mission_time": 3212,
+      "call": "MscCalFile_",
+      "message": "E,313.17508,0.000000000,0.000000000,0.000000000,15401.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:54Z",
+      "mission_time": 3213,
+      "call": "MscCalFile_",
+      "message": "E,313.97649,0.000000000,0.000000000,0.000000000,14923.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:54Z",
+      "mission_time": 3213,
+      "call": "MscCalFile_",
+      "message": "E,314.77786,0.000000000,0.000000000,0.000000000,14456.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:54Z",
+      "mission_time": 3213,
+      "call": "MscCalFile_",
+      "message": "E,315.57919,0.000000000,0.000000000,0.000000000,14019.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:54Z",
+      "mission_time": 3213,
+      "call": "MscCalFile_",
+      "message": "E,316.38048,0.000000000,0.000000000,0.000000000,13594.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:54Z",
+      "mission_time": 3213,
+      "call": "MscCalFile_",
+      "message": "E,317.18174,0.000000000,0.000000000,0.000000000,13206.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:54Z",
+      "mission_time": 3213,
+      "call": "MscCalFile_",
+      "message": "E,317.98295,0.000000000,0.000000000,0.000000000,12856.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:55Z",
+      "mission_time": 3214,
+      "call": "MscCalFile_",
+      "message": "E,318.78412,0.000000000,0.000000000,0.000000000,12519.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:55Z",
+      "mission_time": 3214,
+      "call": "MscCalFile_",
+      "message": "E,319.58524,0.000000000,0.000000000,0.000000000,12207.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:55Z",
+      "mission_time": 3214,
+      "call": "MscCalFile_",
+      "message": "E,320.38631,0.000000000,0.000000000,0.000000000,11920.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:55Z",
+      "mission_time": 3214,
+      "call": "MscCalFile_",
+      "message": "E,321.18734,0.000000000,0.000000000,0.000000000,11638.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:55Z",
+      "mission_time": 3214,
+      "call": "MscCalFile_",
+      "message": "E,321.98831,0.000000000,0.000000000,0.000000000,11358.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:56Z",
+      "mission_time": 3215,
+      "call": "MscCalFile_",
+      "message": "E,322.78923,0.000000000,0.000000000,0.000000000,11081.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:56Z",
+      "mission_time": 3215,
+      "call": "MscCalFile_",
+      "message": "E,323.59009,0.000000000,0.000000000,0.000000000,10805.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:56Z",
+      "mission_time": 3215,
+      "call": "MscCalFile_",
+      "message": "E,324.39090,0.000000000,0.000000000,0.000000000,10540.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:56Z",
+      "mission_time": 3215,
+      "call": "MscCalFile_",
+      "message": "E,325.19164,0.000000000,0.000000000,0.000000000,10292.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:56Z",
+      "mission_time": 3215,
+      "call": "MscCalFile_",
+      "message": "E,325.99233,0.000000000,0.000000000,0.000000000,10051.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:56Z",
+      "mission_time": 3215,
+      "call": "MscCalFile_",
+      "message": "E,326.79296,0.000000000,0.000000000,0.000000000,9825.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:57Z",
+      "mission_time": 3216,
+      "call": "MscCalFile_",
+      "message": "E,327.59352,0.000000000,0.000000000,0.000000000,9618.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:57Z",
+      "mission_time": 3216,
+      "call": "MscCalFile_",
+      "message": "E,328.39401,0.000000000,0.000000000,0.000000000,9438.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:57Z",
+      "mission_time": 3216,
+      "call": "MscCalFile_",
+      "message": "E,329.19444,0.000000000,0.000000000,0.000000000,9286.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:57Z",
+      "mission_time": 3216,
+      "call": "MscCalFile_",
+      "message": "E,329.99480,0.000000000,0.000000000,0.000000000,9156.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:57Z",
+      "mission_time": 3216,
+      "call": "MscCalFile_",
+      "message": "E,330.79509,0.000000000,0.000000000,0.000000000,9037.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:57Z",
+      "mission_time": 3216,
+      "call": "MscCalFile_",
+      "message": "E,331.59530,0.000000000,0.000000000,0.000000000,8941.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:58Z",
+      "mission_time": 3217,
+      "call": "MscCalFile_",
+      "message": "E,332.39544,0.000000000,0.000000000,0.000000000,8861.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:58Z",
+      "mission_time": 3217,
+      "call": "MscCalFile_",
+      "message": "E,333.19550,0.000000000,0.000000000,0.000000000,8799.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:58Z",
+      "mission_time": 3217,
+      "call": "MscCalFile_",
+      "message": "E,333.99549,0.000000000,0.000000000,0.000000000,8738.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:58Z",
+      "mission_time": 3217,
+      "call": "MscCalFile_",
+      "message": "E,334.79539,0.000000000,0.000000000,0.000000000,8698.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:58Z",
+      "mission_time": 3217,
+      "call": "MscCalFile_",
+      "message": "E,335.59521,0.000000000,0.000000000,0.000000000,8663.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:59Z",
+      "mission_time": 3218,
+      "call": "MscCalFile_",
+      "message": "E,336.39495,0.000000000,0.000000000,0.000000000,8635.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:59Z",
+      "mission_time": 3218,
+      "call": "MscCalFile_",
+      "message": "E,337.19460,0.000000000,0.000000000,0.000000000,8618.25"
+    },
+    {
+      "datetime": "2026-03-24T22:39:59Z",
+      "mission_time": 3218,
+      "call": "MscCalFile_",
+      "message": "E,337.99417,0.000000000,0.000000000,0.000000000,8596.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:59Z",
+      "mission_time": 3218,
+      "call": "MscCalFile_",
+      "message": "E,338.79364,0.000000000,0.000000000,0.000000000,8581.58"
+    },
+    {
+      "datetime": "2026-03-24T22:39:59Z",
+      "mission_time": 3218,
+      "call": "MscCalFile_",
+      "message": "E,339.59303,0.000000000,0.000000000,0.000000000,8575.91"
+    },
+    {
+      "datetime": "2026-03-24T22:39:59Z",
+      "mission_time": 3218,
+      "call": "MscCalFile_",
+      "message": "E,340.39232,0.000000000,0.000000000,0.000000000,8554.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:00Z",
+      "mission_time": 3219,
+      "call": "MscCalFile_",
+      "message": "E,341.19152,0.000000000,0.000000000,0.000000000,8548.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:00Z",
+      "mission_time": 3219,
+      "call": "MscCalFile_",
+      "message": "E,341.99062,0.000000000,0.000000000,0.000000000,8538.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:00Z",
+      "mission_time": 3219,
+      "call": "MscCalFile_",
+      "message": "E,342.78962,0.000000000,0.000000000,0.000000000,8519.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:00Z",
+      "mission_time": 3219,
+      "call": "MscCalFile_",
+      "message": "E,343.58852,0.000000000,0.000000000,0.000000000,8509.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:00Z",
+      "mission_time": 3219,
+      "call": "MscCalFile_",
+      "message": "E,344.38732,0.000000000,0.000000000,0.000000000,8495.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:00Z",
+      "mission_time": 3219,
+      "call": "MscCalFile_",
+      "message": "E,345.18602,0.000000000,0.000000000,0.000000000,8476.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:01Z",
+      "mission_time": 3220,
+      "call": "MscCalFile_",
+      "message": "E,345.98461,0.000000000,0.000000000,0.000000000,8464.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:01Z",
+      "mission_time": 3220,
+      "call": "MscCalFile_",
+      "message": "E,346.78310,0.000000000,0.000000000,0.000000000,8455.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:01Z",
+      "mission_time": 3220,
+      "call": "MscCalFile_",
+      "message": "E,347.58147,0.000000000,0.000000000,0.000000000,8437.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:01Z",
+      "mission_time": 3220,
+      "call": "MscCalFile_",
+      "message": "E,348.37974,0.000000000,0.000000000,0.000000000,8409.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:01Z",
+      "mission_time": 3220,
+      "call": "MscCalFile_",
+      "message": "E,349.17789,0.000000000,0.000000000,0.000000000,8374.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:02Z",
+      "mission_time": 3221,
+      "call": "MscCalFile_",
+      "message": "E,349.97593,0.000000000,0.000000000,0.000000000,8339.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:02Z",
+      "mission_time": 3221,
+      "call": "MscCalFile_",
+      "message": "E,350.77385,0.000000000,0.000000000,0.000000000,8303.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:02Z",
+      "mission_time": 3221,
+      "call": "MscCalFile_",
+      "message": "E,351.57165,0.000000000,0.000000000,0.000000000,8261.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:02Z",
+      "mission_time": 3221,
+      "call": "MscCalFile_",
+      "message": "E,352.36933,0.000000000,0.000000000,0.000000000,8210.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:02Z",
+      "mission_time": 3221,
+      "call": "MscCalFile_",
+      "message": "E,353.16689,0.000000000,0.000000000,0.000000000,8145.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:02Z",
+      "mission_time": 3221,
+      "call": "MscCalFile_",
+      "message": "E,353.96433,0.000000000,0.000000000,0.000000000,8070.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:03Z",
+      "mission_time": 3222,
+      "call": "MscCalFile_",
+      "message": "E,354.76165,0.000000000,0.000000000,0.000000000,7991.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:03Z",
+      "mission_time": 3222,
+      "call": "MscCalFile_",
+      "message": "E,355.55883,0.000000000,0.000000000,0.000000000,7902.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:03Z",
+      "mission_time": 3222,
+      "call": "MscCalFile_",
+      "message": "E,356.35589,0.000000000,0.000000000,0.000000000,7797.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:03Z",
+      "mission_time": 3222,
+      "call": "MscCalFile_",
+      "message": "E,357.15282,0.000000000,0.000000000,0.000000000,7687.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:03Z",
+      "mission_time": 3222,
+      "call": "MscCalFile_",
+      "message": "E,357.94961,0.000000000,0.000000000,0.000000000,7567.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:03Z",
+      "mission_time": 3222,
+      "call": "MscCalFile_",
+      "message": "E,358.74627,0.000000000,0.000000000,0.000000000,7443.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:04Z",
+      "mission_time": 3223,
+      "call": "MscCalFile_",
+      "message": "E,359.54280,0.000000000,0.000000000,0.000000000,7295.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:04Z",
+      "mission_time": 3223,
+      "call": "MscCalFile_",
+      "message": "E,360.33918,0.000000000,0.000000000,0.000000000,7155.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:04Z",
+      "mission_time": 3223,
+      "call": "MscCalFile_",
+      "message": "E,361.13543,0.000000000,0.000000000,0.000000000,6998.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:04Z",
+      "mission_time": 3223,
+      "call": "MscCalFile_",
+      "message": "E,361.93153,0.000000000,0.000000000,0.000000000,6842.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:04Z",
+      "mission_time": 3223,
+      "call": "MscCalFile_",
+      "message": "E,362.72750,0.000000000,0.000000000,0.000000000,6674.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:05Z",
+      "mission_time": 3224,
+      "call": "MscCalFile_",
+      "message": "E,363.52331,0.000000000,0.000000000,0.000000000,6506.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:05Z",
+      "mission_time": 3224,
+      "call": "MscCalFile_",
+      "message": "E,364.31898,0.000000000,0.000000000,0.000000000,6340.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:05Z",
+      "mission_time": 3224,
+      "call": "MscCalFile_",
+      "message": "E,365.11451,0.000000000,0.000000000,0.000000000,6187.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:05Z",
+      "mission_time": 3224,
+      "call": "MscCalFile_",
+      "message": "E,365.90988,0.000000000,0.000000000,0.000000000,6034.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:05Z",
+      "mission_time": 3224,
+      "call": "MscCalFile_",
+      "message": "E,366.70510,0.000000000,0.000000000,0.000000000,5890.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:05Z",
+      "mission_time": 3224,
+      "call": "MscCalFile_",
+      "message": "E,367.50016,0.000000000,0.000000000,0.000000000,5752.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:06Z",
+      "mission_time": 3225,
+      "call": "MscCalFile_",
+      "message": "E,368.29507,0.000000000,0.000000000,0.000000000,5592.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:06Z",
+      "mission_time": 3225,
+      "call": "MscCalFile_",
+      "message": "E,369.08982,0.000000000,0.000000000,0.000000000,5432.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:06Z",
+      "mission_time": 3225,
+      "call": "MscCalFile_",
+      "message": "E,369.88442,0.000000000,0.000000000,0.000000000,5271.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:06Z",
+      "mission_time": 3225,
+      "call": "MscCalFile_",
+      "message": "E,370.67885,0.000000000,0.000000000,0.000000000,5124.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:06Z",
+      "mission_time": 3225,
+      "call": "MscCalFile_",
+      "message": "E,371.47312,0.000000000,0.000000000,0.000000000,4994.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:06Z",
+      "mission_time": 3225,
+      "call": "MscCalFile_",
+      "message": "E,372.26722,0.000000000,0.000000000,0.000000000,4887.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:07Z",
+      "mission_time": 3226,
+      "call": "MscCalFile_",
+      "message": "E,373.06116,0.000000000,0.000000000,0.000000000,4785.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:07Z",
+      "mission_time": 3226,
+      "call": "MscCalFile_",
+      "message": "E,373.85493,0.000000000,0.000000000,0.000000000,4719.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:07Z",
+      "mission_time": 3226,
+      "call": "MscCalFile_",
+      "message": "E,374.64853,0.000000000,0.000000000,0.000000000,4655.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:07Z",
+      "mission_time": 3226,
+      "call": "MscCalFile_",
+      "message": "E,375.44195,0.000000000,0.000000000,0.000000000,4597.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:07Z",
+      "mission_time": 3226,
+      "call": "MscCalFile_",
+      "message": "E,376.23521,0.000000000,0.000000000,0.000000000,4553.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:07Z",
+      "mission_time": 3226,
+      "call": "MscCalFile_",
+      "message": "E,377.02828,0.000000000,0.000000000,0.000000000,4506.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:08Z",
+      "mission_time": 3227,
+      "call": "MscCalFile_",
+      "message": "E,377.82118,0.000000000,0.000000000,0.000000000,4484.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:08Z",
+      "mission_time": 3227,
+      "call": "MscCalFile_",
+      "message": "E,378.61390,0.000000000,0.000000000,0.000000000,4473.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:08Z",
+      "mission_time": 3227,
+      "call": "MscCalFile_",
+      "message": "E,379.40644,0.000000000,0.000000000,0.000000000,4443.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:08Z",
+      "mission_time": 3227,
+      "call": "MscCalFile_",
+      "message": "E,380.19880,0.000000000,0.000000000,0.000000000,4393.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:08Z",
+      "mission_time": 3227,
+      "call": "MscCalFile_",
+      "message": "E,380.99097,0.000000000,0.000000000,0.000000000,4327.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:09Z",
+      "mission_time": 3228,
+      "call": "MscCalFile_",
+      "message": "E,381.78296,0.000000000,0.000000000,0.000000000,4266.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:09Z",
+      "mission_time": 3228,
+      "call": "MscCalFile_",
+      "message": "E,382.57476,0.000000000,0.000000000,0.000000000,4213.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:09Z",
+      "mission_time": 3228,
+      "call": "MscCalFile_",
+      "message": "E,383.36637,0.000000000,0.000000000,0.000000000,4171.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:09Z",
+      "mission_time": 3228,
+      "call": "MscCalFile_",
+      "message": "E,384.15778,0.000000000,0.000000000,0.000000000,4118.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:09Z",
+      "mission_time": 3228,
+      "call": "MscCalFile_",
+      "message": "E,384.94901,0.000000000,0.000000000,0.000000000,4077.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:09Z",
+      "mission_time": 3228,
+      "call": "MscCalFile_",
+      "message": "E,385.74003,0.000000000,0.000000000,0.000000000,4040.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:10Z",
+      "mission_time": 3229,
+      "call": "MscCalFile_",
+      "message": "E,386.53087,0.000000000,0.000000000,0.000000000,4023.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:10Z",
+      "mission_time": 3229,
+      "call": "MscCalFile_",
+      "message": "E,387.32150,0.000000000,0.000000000,0.000000000,4012.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:10Z",
+      "mission_time": 3229,
+      "call": "MscCalFile_",
+      "message": "E,388.11193,0.000000000,0.000000000,0.000000000,3997.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:10Z",
+      "mission_time": 3229,
+      "call": "MscCalFile_",
+      "message": "E,388.90216,0.000000000,0.000000000,0.000000000,3993.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:10Z",
+      "mission_time": 3229,
+      "call": "MscCalFile_",
+      "message": "E,389.69218,0.000000000,0.000000000,0.000000000,3980.25"
+    },
+    {
+      "datetime": "2026-03-24T22:40:10Z",
+      "mission_time": 3229,
+      "call": "MscCalFile_",
+      "message": "E,390.48200,0.000000000,0.000000000,0.000000000,3982.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:11Z",
+      "mission_time": 3230,
+      "call": "MscCalFile_",
+      "message": "E,391.27161,0.000000000,0.000000000,0.000000000,3988.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:11Z",
+      "mission_time": 3230,
+      "call": "MscCalFile_",
+      "message": "E,392.06101,0.000000000,0.000000000,0.000000000,4003.91"
+    },
+    {
+      "datetime": "2026-03-24T22:40:11Z",
+      "mission_time": 3230,
+      "call": "MscCalFile_",
+      "message": "E,392.85020,0.000000000,0.000000000,0.000000000,3935.58"
+    },
+    {
+      "datetime": "2026-03-24T22:40:11Z",
+      "mission_time": 3230,
+      "call": "MscCalFile_",
+      "message": "E,393.63917,0.000000000,0.000000000,0.000000000,0.00"
+    },
+    {
+      "datetime": "2026-03-24T22:40:11Z",
+      "mission_time": 3230,
+      "call": "MscCalFile_",
+      "message": "CRC(0xeec1) for ISUS calibration file confirmed."
+    },
+    {
+      "datetime": "2026-03-24T22:40:11Z",
+      "mission_time": 3230,
+      "call": "SelfTest",
+      "message": "Passed: Upload of ISUS calibration file successful."
+    },
+    {
+      "datetime": "2026-03-24T22:40:18Z",
+      "mission_time": 3237,
+      "call": "SelfTest",
+      "message": "Passed: ISUS sample successful."
+    },
+    {
+      "datetime": "2026-03-24T22:40:27Z",
+      "mission_time": 3246,
+      "call": "SelfTest",
+      "message": "Passed: FLBB SerNo: 8976"
+    },
+    {
+      "datetime": "2026-03-24T22:40:30Z",
+      "mission_time": 3249,
+      "call": "SelfTest",
+      "message": "Passed: FLBB FwRev accepted: [TripletDv5.14]"
+    },
+    {
+      "datetime": "2026-03-24T22:40:33Z",
+      "mission_time": 3252,
+      "call": "FlbbConfig",
+      "message": "FLBB configuration successful."
+    },
+    {
+      "datetime": "2026-03-24T22:40:34Z",
+      "mission_time": 3253,
+      "call": "SelfTest",
+      "message": "Passed: FLBB configuration was successful."
+    },
+    {
+      "datetime": "2026-03-24T22:40:38Z",
+      "mission_time": 3257,
+      "call": "SelfTest",
+      "message": "Passed: FLBB wavelengths: Fl[470,435] Bb[700]."
+    },
+    {
+      "datetime": "2026-03-24T22:40:39Z",
+      "mission_time": 3258,
+      "call": "PActivateInit",
+      "message": "Self-test passed."
+    },
+    {
+      "datetime": "2026-03-24T22:40:39Z",
+      "mission_time": 3258,
+      "call": "PActivateInit",
+      "message": "Pressure activation mode initiated. [itime=3258]"
+    },
+    {
+      "datetime": "2026-03-24T22:40:39Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->016 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 [1059sec, 15.0Volts, 0.135Amps, CPT:1093sec]"
+    },
+    {
+      "datetime": "2026-04-05T00:40:45Z",
+      "mission_time": 0,
+      "call": "PreludeInit",
+      "message": "Mission restarted. [pid=0, itime=957606]"
+    },
+    {
+      "datetime": "2026-04-05T00:40:45Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1105sec, 14.7Volts, 0.214Amps, CPT:1105sec]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "Prelude",
+      "message": "Logging configuration and initiating telemetry."
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "Mission configuration for Apf11 FwRev 102725:"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "AscentTimeOut(540) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "AltDialCmd(ATDT0012066163256) [alternate]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudge(10) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudgeInitial(22) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "CompensatorHyperRetraction(0) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "ConnectTimeOut(60) [sec]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "CpActivationP(985) [dbar]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DeepProfileDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePistonPos(16) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePressure(2020) [dbar]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DownTime(14400) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DuraRefWarmUpHrs(255)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DuraInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "FatFsEnable(1)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "FlbbMode(1)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "FloatId(23394)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "FullExtension(231) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "FullRetraction(9) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "MaxAirBladder(154) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "MaxLogKb(60) [KByte]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "MissionPrelude(360) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "OkVacuum(237) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "OptodeMode(1)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "PActivationPistonPosition(16) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "ParkDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "ParkPistonPos(66) [count]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "ParkPressure(1000) [dbar]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "PnPCycleLen(1)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "Pwd(0xafb3)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "TelemetryRetry(15) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "TimeOfDay(DISABLED) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "UpTime(660) [min]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "User(f23394)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "ZModemTimeOut(80) [sec]"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "Verbosity(2)"
+    },
+    {
+      "datetime": "2026-04-05T00:59:20Z",
+      "mission_time": 1115,
+      "call": "LogConfiguration",
+      "message": "DebugBits(0x0002)"
+    }
+  ]
+}

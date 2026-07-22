@@ -1,0 +1,147 @@
+(Apr 10 2026 17:17:46,  885650 sec) TelemetryInit()      Profile 7. (Apf11 FwRev: 022725)
+(Apr 10 2026 17:17:46,  885650 sec) TelemetryInit()      Charge consumption model: OCV:15.0V Wake-Cycles:9502 Standby:148.1days Wake:6.1kC Sensors:1.1kC
+(Apr 10 2026 17:27:15,  886219 sec) AirSystem()          Battery [209cnt, 14.7V]  Current [26cnt, 102.7mA]  Pneumometer [157cnt, 18.5psi]  Run-Time [127s]
+(Apr 10 2026 17:27:53,  886257 sec) GpsServices()        GPS almanac is current.
+(Apr 10 2026 17:27:53,  886257 sec) GpsServices()        Initiating GPS fix acquisition.
+(Apr 10 2026 17:27:59,  886263 sec) gga()                $GPGGA,172750,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*45
+(Apr 10 2026 17:28:09,  886273 sec) gga()                $GPGGA,172800,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4F
+(Apr 10 2026 17:28:14,  886278 sec) gga()                $GPGGA,172810,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4E
+(Apr 10 2026 17:28:24,  886288 sec) gga()                $GPGGA,172820,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4D
+(Apr 10 2026 17:28:34,  886298 sec) gga()                $GPGGA,172830,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4C
+(Apr 10 2026 17:28:44,  886308 sec) gga()                $GPGGA,172840,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4B
+(Apr 10 2026 17:28:54,  886318 sec) gga()                $GPGGA,172850,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4A
+(Apr 10 2026 17:29:04,  886328 sec) gga()                $GPGGA,172900,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4E
+(Apr 10 2026 17:29:05,  886329 sec) gga()                $GPGGA,172900,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4E
+(Apr 10 2026 17:29:14,  886338 sec) gga()                $GPGGA,172910,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4F
+(Apr 10 2026 17:29:24,  886348 sec) gga()                $GPGGA,172920,4948.2634,S,10605.0517,E,0,00,,,M,,M,,*4C
+(Apr 10 2026 17:29:35,  886359 sec) gga()                $GPGGA,172930,4957.0370,S,10618.5611,E,1,08,1.1,6.3,M,-8.9,M,,*46
+(Apr 10 2026 17:29:35,  886359 sec) GpsServices()        Profile 7 GPS fix obtained in 102 seconds.
+(Apr 10 2026 17:29:35,  886359 sec) GpsServices()                   lon      lat mm/dd/yyyy hhmmss nsat
+(Apr 10 2026 17:29:35,  886359 sec) GpsServices()        Fix:  106.3093 -49.9506 04/10/2026 172930    8
+(Apr 10 2026 17:29:45,  886369 sec) gga()                $GPGGA,172940,4957.0406,S,10618.5604,E,1,08,1.1,5.1,M,-8.9,M,,*42
+(Apr 10 2026 17:29:54,  886378 sec) gga()                $GPGGA,172950,4957.0431,S,10618.5593,E,1,08,1.1,3.1,M,-8.9,M,,*4C
+(Apr 10 2026 17:29:54,  886378 sec) GpsServices()        APF11 RTC skew (4s) OK.
+(Apr 10 2026 17:29:54,  886378 sec) GpsServices()        GPS services complete.
+(Apr 10 2026 17:30:29,  886413 sec) IrGeoLoc()           <x,y,z>=<-1140km,3960km,-4848km> lat=-49.824 lon=106.060 IrSysTime=0x17718e29
+(Apr 10 2026 17:30:33,  886417 sec) CLogin()             Connecting to primary host.
+(Apr 10 2026 17:31:04,  886448 sec) CLogin()             Connection 1 established in 31 seconds.
+(Apr 10 2026 17:31:19,  886463 sec) login()              Login successful.
+(Apr 10 2026 17:31:24,  886468 sec) chat()               Expected string [cmd>] not received.
+(Apr 10 2026 17:31:24,  886468 sec) login()              Attempt to set the command prompt failed.
+(Apr 10 2026 17:31:33,  886477 sec) CLogin()             Logged in to host.  [Login required 29 seconds]
+(Apr 10 2026 17:31:37,  886481 sec) RxConfig()           Downloading "mission.cfg" from host.
+(Apr 10 2026 17:32:02,  886506 sec) RxConfig()           Download successful: [bytes:33, sec:22.8, bps:1]
+(Apr 10 2026 17:32:06,  886510 sec) WriteVitals_()       Writing vitals to "23050.007.msg".
+(Apr 10 2026 17:32:11,  886515 sec) UpLoadFile()         Uploading "23050.007.log" to host.
+(Apr 10 2026 17:33:33,  886597 sec) UpLoadFile()         Upload successful: [bytes:17089, sec:82.3, bps:208]
+(Apr 10 2026 17:33:34,  886598 sec) fmove()              Moved: 23050.007.log -> archive/23050.007.log
+(Apr 10 2026 17:33:43,  886607 sec) UpLoadFile()         Uploading "23050.007.msg" to host.
+(Apr 10 2026 17:35:26,  886710 sec) UpLoadFile()         Upload successful: [bytes:26578, sec:103.3, bps:257]
+(Apr 10 2026 17:35:27,  886711 sec) fmove()              Moved: 23050.007.msg -> archive/23050.007.msg
+(Apr 10 2026 17:35:28,  886712 sec) UpLoad()             Files successfully uploaded: 2
+(Apr 10 2026 17:35:28,  886712 sec) UpLoad()             Upload complete.
+(Apr 10 2026 17:35:35,  886719 sec) chat()               Expected string [logout] not received.
+(Apr 10 2026 17:35:35,  886719 sec) logout()             Attempt to log-out failed.
+(Apr 10 2026 17:35:35,  886719 sec) logout()             No carrier detected.
+(Apr 10 2026 17:35:35,  886719 sec) Telemetry()          Telemetry cycle complete: PrfId=7 ConnectionAttempts=1  Connections=1
+(Apr 10 2026 17:35:35,  886719 sec) TelemetryTerminate() Parsing new mission configuration.
+(Apr 10 2026 17:35:36,  886720 sec) configure()          Parsing configurators in "mission.cfg".
+(Apr 10 2026 17:35:36,  886720 sec) configure()             TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)].
+(Apr 10 2026 17:35:36,  886720 sec) configure()          Configuration CRCs and syntax OK.
+(Apr 10 2026 17:35:36,  886720 sec) ConfigSupervisor()   Configuration accepted.
+(Apr 10 2026 17:35:36,  886720 sec) TelemetryTerminate() Reconditioning the file system.
+(Apr 10 2026 17:35:39,       0 sec) DescentInit()        Deep profile 8 initiated at mission-time 886723sec.
+(Apr 10 2026 17:35:40,       1 sec) DescentInit()        Surface pressure: -0.5dbars.
+(Apr 10 2026 17:35:40,       1 sec) DescentInit()        Charge consumption model: OCV:14.7V Wake-Cycles:9503 Standby:148.1days Wake:6.1kC Sleep:1.1kC
+(Apr 10 2026 17:35:52,      13 sec) DescentInit()        Pneumatic humidity: 1005(5.4%) -> 1033(6.2%)
+(Apr 10 2026 17:35:52,      13 sec) PistonMoveAbsWTO()    163->061 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 147 146 145 144 143 142 141 140 139 138 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 [532sec, 14.5Volts, 0.145Amps, CPT:532sec]
+(Apr 10 2026 17:44:47,     548 sec) DescentInit()        Air solenoid open: Barometer [194cnt,  11.4psi]  Pneumometer [ 98cnt,  11.5psi]
+(Apr 10 2026 17:44:57,     558 sec) Descent()            Pressure: 33.8
+(Apr 10 2026 18:35:39,    3600 sec) Descent()            Pressure: 462.7
+(Apr 10 2026 19:35:39,    7200 sec) Descent()            Pressure: 796.1
+(Apr 10 2026 20:35:39,   10800 sec) Descent()            Pressure: 972.5
+(Apr 10 2026 21:35:39,   14400 sec) Descent()            Pressure: 988.6
+(Apr 10 2026 21:35:40,   14401 sec) ParkInit()           Charge consumption model: OCV:15.4V Wake-Cycles:9508 Standby:148.3days Wake:6.3kC Sensors:1.1kC
+(Apr 20 2026 13:36:11,  849632 sec) CtdPower()           [  997.52,  2.3850, 34.6706]
+(Apr 20 2026 13:36:11,  849632 sec) CtdPower()           CTD Power consumption [209VCnt 4ACnt]: 14.678Volts * 0.014Amps = 0.20Watts.
+(Apr 20 2026 13:36:11,  849632 sec) ParkTerminate()      Piston Position:61 Vacuum:192 HumidityAd12:1011(5.6%) Vq:214 Aq:2 Vsbe:209 Asbe:4
+(Apr 20 2026 13:36:33,  849654 sec) ParkTerminate()      PTS: 997.6dbars 2.3850C 34.6705PSU
+(Apr 20 2026 13:36:33,  849654 sec) GoDeepInit()         Charge consumption model: OCV:15.1V Wake-Cycles:9740 Standby:157.9days Wake:6.3kC Sensors:1.1kC
+(Apr 20 2026 13:36:33,  849654 sec) GoDeepInit()         Moving piston.
+(Apr 20 2026 13:36:33,  849654 sec) PistonMoveAbsWTO()    061->009 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 015 014 013 012 011 010 009 [262sec, 14.9Volts, 0.055Amps, CPT:794sec]
+(Apr 20 2026 17:35:39,  864000 sec) ProfileInit()        Charge consumption model: OCV:15.2V Wake-Cycles:9787 Standby:158.1days Wake:6.3kC Sensors:1.1kC
+(Apr 20 2026 17:35:39,  864000 sec) ProfileInit()        PrfId:008  Pressure:2003.5dbar  pTable[0]:2000dbar
+(Apr 20 2026 17:35:41,  864002 sec) PistonMoveAbsWTO()    009->031 010 011 012 013 014 [30sec, 14.4Volts, 0.625Amps, CPT:824sec]
+(Apr 20 2026 17:36:22,  864043 sec) PistonMoveAbsWTO()    014->031 015 016 017 018 019 [30sec, 14.1Volts, 0.617Amps, CPT:854sec]
+(Apr 20 2026 17:37:26,  864107 sec) Profile()            Sample 0 initiated at 2000.7dbars for bin 0 [2000dbars].  PTS: 1999.0dbars 1.5689C 34.7418PSU
+(Apr 20 2026 17:37:26,  864107 sec) PistonMoveAbsWTO()    019->031 020 021 022 023 024 [30sec, 14.1Volts, 0.619Amps, CPT:884sec]
+(Apr 20 2026 17:38:07,  864148 sec) PistonMoveAbsWTO()    024->031 025 026 027 028 029 [30sec, 14.0Volts, 0.620Amps, CPT:914sec]
+(Apr 20 2026 17:38:49,  864190 sec) PistonMoveAbsWTO()    029->031 030 031 [7sec, 14.0Volts, 0.627Amps, CPT:921sec]
+(Apr 20 2026 17:43:53,  864494 sec) PistonMoveAbsWTO()    030->031 031 [1sec, 14.4Volts, 0.642Amps, CPT:922sec]
+(Apr 20 2026 17:44:27,  864528 sec) Profile()            Sample 1 initiated at 1950.5dbars for bin 1 [1950dbars].  PTS: 1947.9dbars 1.6253C 34.7430PSU
+(Apr 20 2026 17:51:15,  864936 sec) Profile()            Sample 2 initiated at 1900.6dbars for bin 2 [1900dbars].  PTS: 1898.1dbars 1.6621C 34.7443PSU
+(Apr 20 2026 17:58:25,  865366 sec) Profile()            Sample 3 initiated at 1850.9dbars for bin 3 [1850dbars].  PTS: 1848.5dbars 1.6956C 34.7447PSU
+(Apr 20 2026 18:06:08,  865829 sec) Profile()            Sample 4 initiated at 1801.0dbars for bin 4 [1800dbars].  PTS: 1798.8dbars 1.7303C 34.7447PSU
+(Apr 20 2026 18:14:58,  866359 sec) Profile()            Sample 5 initiated at 1750.7dbars for bin 5 [1750dbars].  PTS: 1748.8dbars 1.7768C 34.7453PSU
+(Apr 20 2026 18:25:16,  866977 sec) Profile()            Sample 6 initiated at 1700.3dbars for bin 6 [1700dbars].  PTS: 1698.8dbars 1.8247C 34.7456PSU
+(Apr 20 2026 18:26:44,  867065 sec) AscentControlAgent() Bouyancy nudge to 41 (v=0.076dbar/sec).
+(Apr 20 2026 18:26:45,  867066 sec) PistonMoveAbsWTO()    031->041 032 033 034 035 036 [30sec, 14.4Volts, 0.543Amps, CPT:952sec]
+(Apr 20 2026 18:27:26,  867107 sec) PistonMoveAbsWTO()    036->041 037 038 039 040 041 [26sec, 14.3Volts, 0.559Amps, CPT:978sec]
+(Apr 20 2026 18:33:35,  867476 sec) Profile()            Sample 7 initiated at 1650.9dbars for bin 7 [1650dbars].  PTS: 1648.7dbars 1.8823C 34.7459PSU
+(Apr 20 2026 18:41:51,  867972 sec) Profile()            Sample 8 initiated at 1600.8dbars for bin 8 [1600dbars].  PTS: 1598.9dbars 1.9232C 34.7452PSU
+(Apr 20 2026 18:51:36,  868557 sec) Profile()            Sample 9 initiated at 1550.7dbars for bin 9 [1550dbars].  PTS: 1549.2dbars 1.9751C 34.7451PSU
+(Apr 20 2026 18:52:20,  868601 sec) AscentControlAgent() Bouyancy nudge to 51 (v=0.079dbar/sec).
+(Apr 20 2026 18:52:21,  868602 sec) PistonMoveAbsWTO()    041->051 042 043 044 045 046 [30sec, 14.4Volts, 0.515Amps, CPT:1008sec]
+(Apr 20 2026 18:53:02,  868643 sec) PistonMoveAbsWTO()    046->051 047 048 049 050 051 [26sec, 14.3Volts, 0.520Amps, CPT:1034sec]
+(Apr 20 2026 18:59:54,  869055 sec) Profile()            Sample 10 initiated at 1500.4dbars for bin 10 [1500dbars].  PTS: 1498.3dbars 2.0204C 34.7425PSU
+(Apr 20 2026 19:08:22,  869563 sec) Profile()            Sample 11 initiated at 1450.6dbars for bin 11 [1450dbars].  PTS: 1448.7dbars 2.0532C 34.7384PSU
+(Apr 20 2026 19:17:55,  870136 sec) Profile()            Sample 12 initiated at 1400.2dbars for bin 12 [1400dbars].  PTS: 1398.5dbars 2.1057C 34.7335PSU
+(Apr 20 2026 19:27:51,  870732 sec) Profile()            Sample 13 initiated at 1350.4dbars for bin 13 [1350dbars].  PTS: 1348.7dbars 2.1536C 34.7294PSU
+(Apr 20 2026 19:33:33,  871074 sec) AscentControlAgent() Bouyancy nudge to 61 (v=0.078dbar/sec).
+(Apr 20 2026 19:33:34,  871075 sec) PistonMoveAbsWTO()    051->061 052 053 054 055 056 [30sec, 14.5Volts, 0.464Amps, CPT:1064sec]
+(Apr 20 2026 19:34:15,  871116 sec) PistonMoveAbsWTO()    056->061 057 058 059 060 061 [26sec, 14.4Volts, 0.466Amps, CPT:1090sec]
+(Apr 20 2026 19:37:15,  871296 sec) Profile()            Sample 14 initiated at 1300.1dbars for bin 14 [1300dbars].  PTS: 1297.6dbars 2.1827C 34.7249PSU
+(Apr 20 2026 19:44:37,  871738 sec) Profile()            Sample 15 initiated at 1250.3dbars for bin 15 [1250dbars].  PTS: 1248.0dbars 2.2174C 34.7212PSU
+(Apr 20 2026 19:53:04,  872245 sec) Profile()            Sample 16 initiated at 1200.4dbars for bin 16 [1200dbars].  PTS: 1198.6dbars 2.2441C 34.7131PSU
+(Apr 20 2026 20:03:11,  872852 sec) Profile()            Sample 17 initiated at 1150.8dbars for bin 17 [1150dbars].  PTS: 1149.3dbars 2.2743C 34.7046PSU
+(Apr 20 2026 20:04:28,  872929 sec) AscentControlAgent() Bouyancy nudge to 71 (v=0.074dbar/sec).
+(Apr 20 2026 20:04:29,  872930 sec) PistonMoveAbsWTO()    061->071 062 063 064 065 066 [30sec, 14.6Volts, 0.422Amps, CPT:1120sec]
+(Apr 20 2026 20:05:10,  872971 sec) PistonMoveAbsWTO()    066->071 067 068 069 070 071 [24sec, 14.4Volts, 0.419Amps, CPT:1144sec]
+(Apr 20 2026 20:11:50,  873371 sec) Profile()            Sample 18 initiated at 1100.0dbars for bin 18 [1100dbars].  PTS: 1097.8dbars 2.3395C 34.6959PSU
+(Apr 20 2026 20:19:55,  873856 sec) Profile()            Sample 19 initiated at 1050.8dbars for bin 19 [1050dbars].  PTS: 1048.8dbars 2.3942C 34.6882PSU
+(Apr 20 2026 20:29:29,  874430 sec) Profile()            Sample 20 initiated at 1000.5dbars for bin 20 [1000dbars].  PTS: 998.8dbars 2.4085C 34.6714PSU
+(Apr 20 2026 20:33:45,  874686 sec) Sbe41cpStartCP()     Continuous profile started.
+(Apr 20 2026 20:38:46,  874987 sec) AscentControlAgent() Bouyancy nudge to 81 (v=0.079dbar/sec).
+(Apr 20 2026 20:38:47,  874988 sec) PistonMoveAbsWTO()    071->081 072 073 074 075 076 [30sec, 14.5Volts, 0.383Amps, CPT:1174sec]
+(Apr 20 2026 20:39:28,  875029 sec) PistonMoveAbsWTO()    076->081 077 078 079 080 081 [24sec, 14.4Volts, 0.378Amps, CPT:1198sec]
+(Apr 20 2026 21:10:04,  876865 sec) AscentControlAgent() Bouyancy nudge to 91 (v=0.073dbar/sec).
+(Apr 20 2026 21:10:05,  876866 sec) PistonMoveAbsWTO()    081->091 082 083 084 085 086 [30sec, 14.5Volts, 0.338Amps, CPT:1228sec]
+(Apr 20 2026 21:10:46,  876907 sec) PistonMoveAbsWTO()    086->091 087 088 089 090 091 [23sec, 14.4Volts, 0.335Amps, CPT:1251sec]
+(Apr 20 2026 21:16:10,  877231 sec) PistonMoveAbsWTO()    090->091 091 [1sec, 14.5Volts, 0.375Amps, CPT:1252sec]
+(Apr 20 2026 21:36:19,  878440 sec) AscentControlAgent() Bouyancy nudge to 101 (v=0.079dbar/sec).
+(Apr 20 2026 21:36:20,  878441 sec) PistonMoveAbsWTO()    091->101 092 093 094 095 096 [30sec, 14.5Volts, 0.311Amps, CPT:1282sec]
+(Apr 20 2026 21:37:01,  878482 sec) PistonMoveAbsWTO()    096->101 097 098 099 100 101 [23sec, 14.4Volts, 0.305Amps, CPT:1305sec]
+(Apr 20 2026 22:02:33,  880014 sec) AscentControlAgent() Bouyancy nudge to 111 (v=0.079dbar/sec).
+(Apr 20 2026 22:02:33,  880014 sec) PistonMoveAbsWTO()    101->111 102 103 104 105 106 [30sec, 14.6Volts, 0.271Amps, CPT:1335sec]
+(Apr 20 2026 22:03:14,  880055 sec) PistonMoveAbsWTO()    106->111 107 108 109 110 111 [24sec, 14.5Volts, 0.270Amps, CPT:1359sec]
+(Apr 20 2026 22:28:48,  881589 sec) AscentControlAgent() Bouyancy nudge to 121 (v=0.077dbar/sec).
+(Apr 20 2026 22:28:48,  881589 sec) PistonMoveAbsWTO()    111->121 112 113 114 115 116 [30sec, 14.6Volts, 0.238Amps, CPT:1389sec]
+(Apr 20 2026 22:29:29,  881630 sec) PistonMoveAbsWTO()    116->121 117 118 119 120 121 [24sec, 14.5Volts, 0.235Amps, CPT:1413sec]
+(Apr 20 2026 22:50:00,  882861 sec) AscentControlAgent() Bouyancy nudge to 131 (v=0.070dbar/sec).
+(Apr 20 2026 22:50:00,  882861 sec) PistonMoveAbsWTO()    121->131 122 123 124 125 126 [30sec, 14.6Volts, 0.210Amps, CPT:1443sec]
+(Apr 20 2026 22:50:41,  882902 sec) PistonMoveAbsWTO()    126->131 127 128 129 130 131 [23sec, 14.6Volts, 0.214Amps, CPT:1466sec]
+(Apr 20 2026 23:11:11,  884132 sec) AscentControlAgent() Bouyancy nudge to 141 (v=0.072dbar/sec).
+(Apr 20 2026 23:11:11,  884132 sec) PistonMoveAbsWTO()    131->141 132 133 134 135 136 [30sec, 14.7Volts, 0.196Amps, CPT:1496sec]
+(Apr 20 2026 23:11:53,  884174 sec) PistonMoveAbsWTO()    136->141 137 138 139 140 141 [22sec, 14.6Volts, 0.182Amps, CPT:1518sec]
+(Apr 20 2026 23:27:27,  885108 sec) AscentControlAgent() Bouyancy nudge to 151 (v=0.061dbar/sec).
+(Apr 20 2026 23:27:27,  885108 sec) PistonMoveAbsWTO()    141->151 142 143 144 145 146 [30sec, 14.7Volts, 0.177Amps, CPT:1548sec]
+(Apr 20 2026 23:28:08,  885149 sec) PistonMoveAbsWTO()    146->151 147 148 149 150 151 [22sec, 14.6Volts, 0.171Amps, CPT:1570sec]
+(Apr 20 2026 23:30:21,  885282 sec) SurfaceDetect()      SurfacePressure:-0.5dbars Pressure:2.8dbars PistonPosition:151
+(Apr 20 2026 23:30:21,  885282 sec) Sbe41cpStopCP()      Continuous profile stopped.
+(Apr 20 2026 23:30:25,  885286 sec) PistonMoveAbsWTO()    151->173 152 153 154 155 156 157 158 159 160 161 162 161 162 163 164 165 166 167 166 167 168 169 170 171 172 173 [114sec, 14.6Volts, 0.164Amps, CPT:1684sec]
+(Apr 20 2026 23:32:24,  885405 sec) chat()               Expected string [S>] not received.
+(Apr 20 2026 23:34:03,  885504 sec) Sbe41cpBinAverage()  Finished averaging 10608 samples in 94 seconds.
+(Apr 20 2026 23:34:08,  885509 sec) Sbe41cpUploadCP_()   Sbe41cpSerNo[18724] NSample[10608] NBin[493]
+(Apr 20 2026 23:34:39,  885540 sec) Sbe41cpUploadCP_()   Continuous profile uploaded [493 lines].
+
+<EOT>

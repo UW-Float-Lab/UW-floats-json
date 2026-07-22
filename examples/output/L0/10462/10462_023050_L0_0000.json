@@ -1,0 +1,860 @@
+{
+  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
+  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
+  "DECODER_VERSION": "0.5.4",
+  "SCHEMA_VERSION": "0.4.0",
+  "INTERNAL_ID_NUMBER": 23050,
+  "TRANSMISSION_ID_NUMBER": 23050,
+  "AOML_ID_NUMBER": 10462,
+  "WMO_ID_NUMBER": 3902729,
+  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "OPERATING_INSTITUTION": "UW, Seattle, WA",
+  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PI": "Steven RISER",
+  "PROJECT_NAME": "Argo UW",
+  "CYCLE_NUMBER": 0,
+  "POSITIONING_SYSTEM": "GPS",
+  "Timestamps": {
+    "StartTelemetry": "2026-02-07T12:47:49Z"
+  },
+  "GPS": [
+    {
+      "description": "GPS_FIX",
+      "TIME": "2026-02-07T12:49:30Z",
+      "LATITUDE": -50.0017,
+      "LONGITUDE": 102.2677,
+      "sat_cnt": 4,
+      "time_to_fix": 24
+    }
+  ],
+  "Iridium": [
+    {
+      "LATITUDE": -49.998,
+      "LONGITUDE": 102.262,
+      "TIME": "2015-05-04T08:43:26Z",
+      "x": -872.0,
+      "y": 4012.0,
+      "z": -4860.0,
+      "system_time": 343453015
+    }
+  ],
+  "Fall": [],
+  "Rise": [],
+  "Piston": [
+    {
+      "TIME": "2025-11-13T02:15:16Z",
+      "piston_start": 231,
+      "piston_target": 227,
+      "piston_end": 227,
+      "current": 0.142,
+      "voltage": 14.9,
+      "duration": 18
+    },
+    {
+      "TIME": "2025-11-13T02:15:34Z",
+      "piston_start": 227,
+      "piston_target": 231,
+      "piston_end": 231,
+      "current": 0.141,
+      "voltage": 14.8,
+      "duration": 18
+    },
+    {
+      "TIME": "2025-11-13T02:17:30Z",
+      "piston_start": 231,
+      "piston_target": 16,
+      "piston_end": 16,
+      "current": 0.142,
+      "voltage": 14.8,
+      "duration": 1087
+    },
+    {
+      "TIME": "2026-02-07T06:47:36Z",
+      "piston_start": 16,
+      "piston_target": 231,
+      "piston_end": 231,
+      "current": 0.234,
+      "voltage": 14.4,
+      "duration": 1143
+    }
+  ],
+  "Mission": {
+    "model": {
+      "value": "Apf11"
+    },
+    "Id": {
+      "value": "23050"
+    },
+    "FwRev": {
+      "value": "022725"
+    },
+    "AscentTimeOut": {
+      "value": "500",
+      "unit": "min"
+    },
+    "AtDialCmd": {
+      "value": "AT+CBST=71,0,1;DT00881600005496"
+    },
+    "AltDialCmd": {
+      "value": "ATDT0012066163256"
+    },
+    "BuoyancyNudge": {
+      "value": "10",
+      "unit": "count"
+    },
+    "CompensatorHyperRetraction": {
+      "value": "0",
+      "unit": "count"
+    },
+    "ConnectTimeOut": {
+      "value": "60",
+      "unit": "sec"
+    },
+    "CpActivationP": {
+      "value": "985",
+      "unit": "dbar"
+    },
+    "DeepProfileDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "DeepProfilePistonPos": {
+      "value": "12",
+      "unit": "count"
+    },
+    "DeepProfilePressure": {
+      "value": "2020",
+      "unit": "dbar"
+    },
+    "DownTime": {
+      "value": "14400",
+      "unit": "min"
+    },
+    "FatFsEnable": {
+      "value": "1"
+    },
+    "FloatId": {
+      "value": "23050"
+    },
+    "FullExtension": {
+      "value": "231",
+      "unit": "count"
+    },
+    "FullRetraction": {
+      "value": "9",
+      "unit": "count"
+    },
+    "InitialBuoyancyNudge": {
+      "value": "22",
+      "unit": "count"
+    },
+    "MaxAirBladder": {
+      "value": "154",
+      "unit": "count"
+    },
+    "MaxLogKb": {
+      "value": "50",
+      "unit": "KByte"
+    },
+    "MissionPrelude": {
+      "value": "360",
+      "unit": "min"
+    },
+    "OkVacuum": {
+      "value": "237",
+      "unit": "count"
+    },
+    "PActivationPistonPosition": {
+      "value": "16",
+      "unit": "count"
+    },
+    "ParkDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "ParkPistonPos": {
+      "value": "60",
+      "unit": "count"
+    },
+    "ParkPressure": {
+      "value": "1000",
+      "unit": "dbar"
+    },
+    "PnPCycleLen": {
+      "value": "1"
+    },
+    "TelemetryRetry": {
+      "value": "15",
+      "unit": "min"
+    },
+    "TimeOfDay": {
+      "value": "DISABLED",
+      "unit": "min"
+    },
+    "UpTime": {
+      "value": "660",
+      "unit": "min"
+    },
+    "ZModemTimeOut": {
+      "value": "80",
+      "unit": "sec"
+    },
+    "Verbosity": {
+      "value": "2"
+    },
+    "DebugBits": {
+      "value": "0x0002"
+    }
+  },
+  "Engineering_Data": [
+    {
+      "Apf11FwRev": "022725",
+      "ActiveBallastAdjustments": "0",
+      "AirBladderPressure": "155",
+      "AirPumpAmps": "36",
+      "AirPumpVolts": "213",
+      "BuoyancyPumpOnTime": "1144",
+      "BuoyancyPumpAmps": "0",
+      "BuoyancyPumpVolts": "0",
+      "ConnectionAttempts": "2",
+      "Connections": "2",
+      "Coulombs": "2.8kC",
+      "CoulombsDescent": "0.0kC",
+      "CoulombsPark": "0.0kC",
+      "CoulombsPrfDescent": "0.0kC",
+      "CoulombsProfile": "0.0kC",
+      "CoulombsSleep": "0.0kC",
+      "CoulombsTelemetry": "2.8kC",
+      "CoulombsWake": "1.9kC",
+      "CurrentPistonPosition": "231",
+      "DeepProfilePistonPosition": "12",
+      "FloatId": "23050",
+      "GpsFixTime": "24",
+      "HumidityAd12Park": "0 (-23.8%)",
+      "HumidityAd12Pneumatic": "0 (-23.8%)",
+      "HumidityAd12PneumaticRef": "0 (-23.8%)",
+      "LeakSensor": "{state:0, count:0, ad12:3830cnt, v:2.34V, index:0.0%, epoch:1770448013sec, mtime:1157sec}",
+      "ObsIndex": "0",
+      "ParkDescentPCnt": "0",
+      "ParkPistonPosition": "60",
+      "ParkObs": "{ 0.0dbar, 0.000C, 0.0000PSU }",
+      "ProfileId": "000",
+      "QuiescentAmps": "0",
+      "QuiescentVolts": "0",
+      "RtcSkew": "4",
+      "Sbe41cpAmps": "0",
+      "Sbe41cpStatus": "0x00000000",
+      "Sbe41cpVolts": "0",
+      "SleepSec": "13489",
+      "StandbySec": "7459394",
+      "status": "0x00000000",
+      "SurfacePistonPosition": "0",
+      "SurfacePressure": "0.00",
+      "TimeStartDescent": "0",
+      "TimeStartPark": "0",
+      "TimeStartProfileDescent": "0",
+      "TimeStartProfile": "0",
+      "TimeStopProfile": "0",
+      "TimeStartTelemetry": "1770468469       Feb 07 2026 12:47:49",
+      "Vacuum": "200",
+      "WakeCycles": "1206",
+      "WakeSec": "8133"
+    }
+  ],
+  "Log": [
+    {
+      "datetime": "2025-11-13T02:15:10Z",
+      "mission_time": 4830,
+      "call": "SelfTest",
+      "message": "Executing self-test for ApfId 23050. [FwRev 022725]"
+    },
+    {
+      "datetime": "2025-11-13T02:15:10Z",
+      "mission_time": 4830,
+      "call": "SelfTest",
+      "message": "Apf11 Family:0x36 Group:0x0000 SerNo:0x037a7d0a Crc:0x83 SeqNo:050"
+    },
+    {
+      "datetime": "2025-11-13T02:15:11Z",
+      "mission_time": 4831,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]"
+    },
+    {
+      "datetime": "2025-11-13T02:15:11Z",
+      "mission_time": 4831,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume: size(7454MB) sector-size(512B) block-size(512B)"
+    },
+    {
+      "datetime": "2025-11-13T02:15:15Z",
+      "mission_time": 4835,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume reconditioned."
+    },
+    {
+      "datetime": "2025-11-13T02:15:16Z",
+      "mission_time": 4836,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->227 230 229 228 227 [18sec, 14.9Volts, 0.142Amps, CPT:18sec]"
+    },
+    {
+      "datetime": "2025-11-13T02:15:34Z",
+      "mission_time": 4854,
+      "call": "PistonMoveAbsWTO",
+      "message": "227->231 228 229 230 231 [18sec, 14.8Volts, 0.141Amps, CPT:36sec]"
+    },
+    {
+      "datetime": "2025-11-13T02:15:52Z",
+      "mission_time": 4872,
+      "call": "SelfTest",
+      "message": "Passed: Timed piston movements from 231 to 227 counts and back."
+    },
+    {
+      "datetime": "2025-11-13T02:15:53Z",
+      "mission_time": 4873,
+      "call": "SelfTest",
+      "message": "Passed: Internal pressure [200, 11.7psi] less than threshold [237, 13.9psi]."
+    },
+    {
+      "datetime": "2025-11-13T02:15:54Z",
+      "mission_time": 4874,
+      "call": "SelfTest",
+      "message": "Passed: Response received from SBE41cp."
+    },
+    {
+      "datetime": "2025-11-13T02:16:01Z",
+      "mission_time": 4881,
+      "call": "SelfTest",
+      "message": "Passed: Sbe41cp SerNo: 18724"
+    },
+    {
+      "datetime": "2025-11-13T02:16:12Z",
+      "mission_time": 4892,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 18724) FwRev accepted: [7.2.5]"
+    },
+    {
+      "datetime": "2025-11-13T02:16:12Z",
+      "mission_time": 4892,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 18724) firmware build-date accepted: [Oct 14 2015 20:03:56]"
+    },
+    {
+      "datetime": "2025-11-13T02:16:12Z",
+      "mission_time": 4892,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 18724) firmware variant accepted: [CP UW]"
+    },
+    {
+      "datetime": "2025-11-13T02:16:20Z",
+      "mission_time": 4900,
+      "call": "Sbe41cpConfig",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2025-11-13T02:16:28Z",
+      "mission_time": 4908,
+      "call": "Sbe41cpTsWait",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2025-11-13T02:16:31Z",
+      "mission_time": 4911,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp configuration was successful."
+    },
+    {
+      "datetime": "2025-11-13T02:16:50Z",
+      "mission_time": 4930,
+      "call": "Sbe41cpPOffSet",
+      "message": "Configuration successful: POffset(0.0)."
+    },
+    {
+      "datetime": "2025-11-13T02:16:50Z",
+      "mission_time": 4930,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp pressure-offset initialized to zero."
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "SBE 41CP V 7.2.5  SERIAL NO. 18724"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "temperature: 03-Feb-23"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "TA0 = -9.840644e-04"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "TA1 = 2.985803e-04"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "TA2 = -3.668724e-06"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "TA3 = 1.543179e-07"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "conductivity: 03-Feb-23"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "G = -1.018744e+00"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "H = 1.530807e-01"
+    },
+    {
+      "datetime": "2025-11-13T02:16:58Z",
+      "mission_time": 4938,
+      "call": "Sbe41cpLogCal",
+      "message": "I = -4.083648e-04"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "J = 5.387232e-05"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "CTCOR = 3.250000e-06"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "CPCOR = -9.570000e-08"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "WBOTC = 3.867208e-07"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "pressure S/N = 12137823, range = 2900 psia:  26-Jan-23"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "PA0 = 2.120589e-01"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "PA1 = 3.906383e-04"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "PA2 = -2.776522e-13"
+    },
+    {
+      "datetime": "2025-11-13T02:16:59Z",
+      "mission_time": 4939,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA0 = -1.161773e+03"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA1 = 6.359618e+01"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA2 = -1.828437e+00"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB0 = 3.188660e+05"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB1 = 1.284773e+01"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB2 = -1.502630e-01"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA0 = 2.977863e+02"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA1 = -6.175893e-05"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA2 = -9.619779e-13"
+    },
+    {
+      "datetime": "2025-11-13T02:17:00Z",
+      "mission_time": 4940,
+      "call": "Sbe41cpLogCal",
+      "message": "POFFSET = 0.000000e+00"
+    },
+    {
+      "datetime": "2025-11-13T02:17:09Z",
+      "mission_time": 4949,
+      "call": "SelfTest",
+      "message": "Passed: LBT model: 9523N"
+    },
+    {
+      "datetime": "2025-11-13T02:17:10Z",
+      "mission_time": 4950,
+      "call": "SelfTest",
+      "message": "Passed: LBT firmware revision: DB20004"
+    },
+    {
+      "datetime": "2025-11-13T02:17:12Z",
+      "mission_time": 4952,
+      "call": "IrModemConfigure",
+      "message": "Modem configured for fixed (19200) baud rate."
+    },
+    {
+      "datetime": "2025-11-13T02:17:12Z",
+      "mission_time": 4952,
+      "call": "IrModemConfigure",
+      "message": "Configuration saved to modem's NVRAM."
+    },
+    {
+      "datetime": "2025-11-13T02:17:12Z",
+      "mission_time": 4952,
+      "call": "IrModemConfigure",
+      "message": "Modem configuration successful."
+    },
+    {
+      "datetime": "2025-11-13T02:17:12Z",
+      "mission_time": 4952,
+      "call": "SelfTest",
+      "message": "Passed: LBT configuration was successful."
+    },
+    {
+      "datetime": "2025-11-13T02:17:13Z",
+      "mission_time": 4953,
+      "call": "SelfTest",
+      "message": "Passed: LBT IMEI: 300125062558730"
+    },
+    {
+      "datetime": "2025-11-13T02:17:19Z",
+      "mission_time": 4959,
+      "call": "SelfTest",
+      "message": "Passed: SIM card ICCID: 8988169234005978028"
+    },
+    {
+      "datetime": "2025-11-13T02:17:20Z",
+      "mission_time": 4960,
+      "call": "ConfigGarmin15",
+      "message": "Garmin GPS15 configuration initiated."
+    },
+    {
+      "datetime": "2025-11-13T02:17:29Z",
+      "mission_time": 4969,
+      "call": "ConfigGarmin15",
+      "message": "Garmin GPS15 successfully configured."
+    },
+    {
+      "datetime": "2025-11-13T02:17:30Z",
+      "mission_time": 4970,
+      "call": "PActivateInit",
+      "message": "Self-test passed."
+    },
+    {
+      "datetime": "2025-11-13T02:17:30Z",
+      "mission_time": 4970,
+      "call": "PActivateInit",
+      "message": "Pressure activation mode initiated. [itime=4970]"
+    },
+    {
+      "datetime": "2025-11-13T02:17:30Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "231->016 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 099 098 097 096 095 094 093 092 091 090 089 088 087 086 085 084 083 082 081 080 079 078 077 076 075 074 073 072 071 070 069 068 067 066 065 064 063 062 061 060 059 058 057 056 055 054 053 052 051 050 049 048 047 046 045 044 043 042 041 040 039 038 037 036 035 034 033 032 031 030 029 028 027 026 025 024 023 022 021 020 019 018 017 016 [1087sec, 14.8Volts, 0.142Amps, CPT:1123sec]"
+    },
+    {
+      "datetime": "2025-11-13T02:40:56Z",
+      "mission_time": 1406,
+      "call": "Apf11Init",
+      "message": "Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal)."
+    },
+    {
+      "datetime": "2025-11-13T02:40:57Z",
+      "mission_time": 1407,
+      "call": "Apf11Init",
+      "message": "Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal)."
+    },
+    {
+      "datetime": "2026-02-07T06:47:36Z",
+      "mission_time": 0,
+      "call": "PreludeInit",
+      "message": "Mission restarted. [pid=0, itime=7446606]"
+    },
+    {
+      "datetime": "2026-02-07T06:47:36Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1143sec, 14.4Volts, 0.234Amps, CPT:1143sec]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "Prelude",
+      "message": "Logging configuration and initiating telemetry."
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "Mission configuration for Apf11 FwRev 022725:"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "AscentTimeOut(500) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "AltDialCmd(ATDT0012066163256) [alternate]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudge(10) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudgeInitial(22) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "CompensatorHyperRetraction(0) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "ConnectTimeOut(60) [sec]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "CpActivationP(985) [dbar]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "DeepProfileDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePistonPos(12) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePressure(2020) [dbar]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "DownTime(14400) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "FatFsEnable(1)"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "FloatId(23050)"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "FullExtension(231) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "FullRetraction(9) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "MaxAirBladder(154) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "MaxLogKb(50) [KByte]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "MissionPrelude(360) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "OkVacuum(237) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "PActivationPistonPosition(16) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "ParkDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "ParkPistonPos(60) [count]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "ParkPressure(1000) [dbar]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "PnPCycleLen(1)"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "Pwd(0xafb3)"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "TelemetryRetry(15) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "TimeOfDay(DISABLED) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "UpTime(660) [min]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "User(f23050)"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "ZModemTimeOut(80) [sec]"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "Verbosity(2)"
+    },
+    {
+      "datetime": "2026-02-07T07:06:49Z",
+      "mission_time": 1153,
+      "call": "LogConfiguration",
+      "message": "DebugBits(0x0002)"
+    }
+  ]
+}

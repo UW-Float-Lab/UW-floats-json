@@ -1,0 +1,1655 @@
+{
+  "FILE_CREATION_DATE": "2026-07-22T05:40:56Z",
+  "FILE_UPDATE_DATE": "2026-07-22T05:40:56Z",
+  "DECODER_VERSION": "0.5.4",
+  "SCHEMA_VERSION": "0.4.0",
+  "INTERNAL_ID_NUMBER": 21878,
+  "TRANSMISSION_ID_NUMBER": 21878,
+  "AOML_ID_NUMBER": 10052,
+  "WMO_ID_NUMBER": 5907150,
+  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "OPERATING_INSTITUTION": "UW, Seattle, WA",
+  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PI": "Steven RISER",
+  "PROJECT_NAME": "Argo UW",
+  "CYCLE_NUMBER": 0,
+  "POSITIONING_SYSTEM": "GPS",
+  "Timestamps": {
+    "StartTelemetry": "2025-08-05T03:41:55Z"
+  },
+  "GPS": [
+    {
+      "description": "GPS_FIX",
+      "TIME": "2025-08-05T03:43:30Z",
+      "LATITUDE": 15.0651,
+      "LONGITUDE": 141.8021,
+      "sat_cnt": 8,
+      "time_to_fix": 23
+    }
+  ],
+  "Iridium": [
+    {
+      "LATITUDE": 15.042,
+      "LONGITUDE": 141.805,
+      "TIME": "2025-08-05T03:31:48Z",
+      "x": -4840.0,
+      "y": 3808.0,
+      "z": 1644.0,
+      "system_time": 3939405259
+    }
+  ],
+  "Fall": [],
+  "Rise": [],
+  "Piston": [
+    {
+      "TIME": "2025-05-29T03:51:14Z",
+      "piston_start": 16,
+      "piston_target": 20,
+      "piston_end": 20,
+      "current": 0.163,
+      "voltage": 14.9,
+      "duration": 18
+    },
+    {
+      "TIME": "2025-05-29T03:51:32Z",
+      "piston_start": 20,
+      "piston_target": 16,
+      "piston_end": 16,
+      "current": 0.168,
+      "voltage": 14.9,
+      "duration": 18
+    },
+    {
+      "TIME": "2025-08-04T21:41:41Z",
+      "piston_start": 16,
+      "piston_target": 231,
+      "piston_end": 231,
+      "current": 0.244,
+      "voltage": 14.6,
+      "duration": 1197
+    }
+  ],
+  "Mission": {
+    "model": {
+      "value": "Apf11"
+    },
+    "Id": {
+      "value": "21878"
+    },
+    "FwRev": {
+      "value": "031524"
+    },
+    "AscentTimeOut": {
+      "value": "540",
+      "unit": "min"
+    },
+    "AtDialCmd": {
+      "value": "AT+CBST=71,0,1;DT00881600005496"
+    },
+    "AltDialCmd": {
+      "value": "ATDT0012066163256"
+    },
+    "BuoyancyNudge": {
+      "value": "10",
+      "unit": "count"
+    },
+    "CompensatorHyperRetraction": {
+      "value": "0",
+      "unit": "count"
+    },
+    "ConnectTimeOut": {
+      "value": "60",
+      "unit": "sec"
+    },
+    "CpActivationP": {
+      "value": "985",
+      "unit": "dbar"
+    },
+    "DeepProfileDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "DeepProfilePistonPos": {
+      "value": "16",
+      "unit": "count"
+    },
+    "DeepProfilePressure": {
+      "value": "2020",
+      "unit": "dbar"
+    },
+    "DownTime": {
+      "value": "14400",
+      "unit": "min"
+    },
+    "DuraRefWarmUpHrs": {
+      "value": "255"
+    },
+    "DuraInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "FatFsEnable": {
+      "value": "1"
+    },
+    "FlbbMode": {
+      "value": "1"
+    },
+    "FloatId": {
+      "value": "21878"
+    },
+    "FullExtension": {
+      "value": "231",
+      "unit": "count"
+    },
+    "FullRetraction": {
+      "value": "9",
+      "unit": "count"
+    },
+    "InitialBuoyancyNudge": {
+      "value": "22",
+      "unit": "count"
+    },
+    "IsusInit": {
+      "value": "-1",
+      "unit": "Enable<0, Disable=0, Enable&Init>0"
+    },
+    "MaxAirBladder": {
+      "value": "154",
+      "unit": "count"
+    },
+    "MaxLogKb": {
+      "value": "50",
+      "unit": "KByte"
+    },
+    "MissionPrelude": {
+      "value": "360",
+      "unit": "min"
+    },
+    "OcrInit": {
+      "value": "-500",
+      "unit": "dbar"
+    },
+    "OkVacuum": {
+      "value": "237",
+      "unit": "count"
+    },
+    "OptodeMode": {
+      "value": "1"
+    },
+    "PActivationPistonPosition": {
+      "value": "16",
+      "unit": "count"
+    },
+    "ParkDescentTime": {
+      "value": "240",
+      "unit": "min"
+    },
+    "ParkPistonPos": {
+      "value": "66",
+      "unit": "count"
+    },
+    "ParkPressure": {
+      "value": "1000",
+      "unit": "dbar"
+    },
+    "PnPCycleLen": {
+      "value": "1"
+    },
+    "TelemetryRetry": {
+      "value": "15",
+      "unit": "min"
+    },
+    "TimeOfDay": {
+      "value": "DISABLED",
+      "unit": "min"
+    },
+    "UpTime": {
+      "value": "660",
+      "unit": "min"
+    },
+    "ZModemTimeOut": {
+      "value": "80",
+      "unit": "sec"
+    },
+    "Verbosity": {
+      "value": "2"
+    },
+    "DebugBits": {
+      "value": "0x0002"
+    }
+  },
+  "Engineering_Data": [
+    {
+      "Apf11FwRev": "031524",
+      "ActiveBallastAdjustments": "0",
+      "AirBladderPressure": "156",
+      "AirPumpAmps": "23",
+      "AirPumpVolts": "218",
+      "BuoyancyPumpOnTime": "1197",
+      "BuoyancyPumpAmps": "0",
+      "BuoyancyPumpVolts": "0",
+      "ConnectionAttempts": "1",
+      "Connections": "1",
+      "Coulombs": "11.2kC",
+      "CoulombsDescent": "0.0kC",
+      "CoulombsPark": "0.0kC",
+      "CoulombsPrfDescent": "0.0kC",
+      "CoulombsProfile": "0.0kC",
+      "CoulombsSleep": "0.7kC",
+      "CoulombsTelemetry": "11.2kC",
+      "CoulombsWake": "9.3kC",
+      "CurrentPistonPosition": "231",
+      "DeepProfilePistonPosition": "16",
+      "DuraPowerCycleCounter": "0",
+      "DuraWakeCurrent": "0.0mA",
+      "DuraWakePower": "0.0mW",
+      "DuraWakeVolts": "0.0V",
+      "FlbbAmps": "0",
+      "FlbbStatus": "0x00",
+      "FlbbVolts": "0",
+      "FloatId": "21878",
+      "GpsFixTime": "23",
+      "HumidityAd12Park": "0 (-23.8%)",
+      "HumidityAd12Pneumatic": "0 (-23.8%)",
+      "HumidityAd12PneumaticRef": "0 (-23.8%)",
+      "IsusPowerCycleCounter": "0",
+      "IsusWakeCurrent": "0.0mA",
+      "IsusWakePower": "0.0mW",
+      "IsusWakeVolts": "0.0V",
+      "MuxerTemperature": "0.00C",
+      "MuxerHumidity": "0.0%",
+      "MuxerWakeCurrent": "0.0mA",
+      "MuxerWakePower": "0.0mW",
+      "MuxerWakeVolts": "0.0V",
+      "ObsIndex": "0",
+      "OcrAmps": "0",
+      "OcrStatuss": "0x00",
+      "OcrVolts": "0",
+      "OptodeAmps": "0",
+      "OptodeVolts": "0",
+      "ParkDescentPCnt": "0",
+      "ParkPistonPosition": "66",
+      "ParkObs": "{ 0.0dbar, 0.000C, 0.0000PSU / nan / 0.000C 0.000 0.000 / 0, 0, 0}",
+      "ProfileId": "000",
+      "QuiescentAmps": "0",
+      "QuiescentVolts": "0",
+      "RtcSkew": "-1",
+      "Sbe41cpAmps": "0",
+      "Sbe41cpStatus": "0x00000000",
+      "Sbe41cpVolts": "0",
+      "SleepSec": "14091",
+      "StandbySec": "7723529",
+      "status": "0x00000000",
+      "SurfaceObs": "{ -0.2dbar, nan, nan / nan / 29.783C 29.036 7.504 / 50, 118, 528}",
+      "SurfacePistonPosition": "0",
+      "SurfacePressure": "0.00",
+      "TimeStartDescent": "0",
+      "TimeStartPark": "0",
+      "TimeStartProfileDescent": "0",
+      "TimeStartProfile": "0",
+      "TimeStopProfile": "0",
+      "TimeStartTelemetry": "1754365315       Aug 05 2025 03:41:55",
+      "Vacuum": "210",
+      "WakeCycles": "7271",
+      "WakeSec": "7530"
+    }
+  ],
+  "Log": [
+    {
+      "datetime": "2025-05-29T03:51:04Z",
+      "mission_time": 1312280,
+      "call": "SelfTest",
+      "message": "Executing self-test for ApfId 21878. [FwRev 031524]"
+    },
+    {
+      "datetime": "2025-05-29T03:51:04Z",
+      "mission_time": 1312280,
+      "call": "SelfTest",
+      "message": "Initiating MSC power-up."
+    },
+    {
+      "datetime": "2025-05-29T03:51:11Z",
+      "mission_time": 1312287,
+      "call": "SelfTest",
+      "message": "Apf11 Family:0x36 Group:0x0000 SerNo:0x03769846 Crc:0x91 SeqNo:878"
+    },
+    {
+      "datetime": "2025-05-29T03:51:12Z",
+      "mission_time": 1312288,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]"
+    },
+    {
+      "datetime": "2025-05-29T03:51:12Z",
+      "mission_time": 1312288,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume: size(7438MB) sector-size(512B) block-size(512B)"
+    },
+    {
+      "datetime": "2025-05-29T03:51:13Z",
+      "mission_time": 1312289,
+      "call": "SelfTest",
+      "message": "Passed: FatFs volume reconditioned."
+    },
+    {
+      "datetime": "2025-05-29T03:51:14Z",
+      "mission_time": 1312290,
+      "call": "PistonMoveAbsWTO",
+      "message": "016->020 017 018 019 020 [18sec, 14.9Volts, 0.163Amps, CPT:18sec]"
+    },
+    {
+      "datetime": "2025-05-29T03:51:32Z",
+      "mission_time": 1312308,
+      "call": "PistonMoveAbsWTO",
+      "message": "020->016 019 018 017 016 [18sec, 14.9Volts, 0.168Amps, CPT:36sec]"
+    },
+    {
+      "datetime": "2025-05-29T03:51:50Z",
+      "mission_time": 1312326,
+      "call": "SelfTest",
+      "message": "Passed: Timed piston movements from 16 to 20 counts and back."
+    },
+    {
+      "datetime": "2025-05-29T03:51:51Z",
+      "mission_time": 1312327,
+      "call": "SelfTest",
+      "message": "Passed: Internal pressure [210, 12.3psi] less than threshold [237, 13.9psi]."
+    },
+    {
+      "datetime": "2025-05-29T03:51:52Z",
+      "mission_time": 1312328,
+      "call": "SelfTest",
+      "message": "Passed: Response received from SBE41cp."
+    },
+    {
+      "datetime": "2025-05-29T03:51:59Z",
+      "mission_time": 1312335,
+      "call": "SelfTest",
+      "message": "Passed: Sbe41cp SerNo: 17090"
+    },
+    {
+      "datetime": "2025-05-29T03:52:10Z",
+      "mission_time": 1312346,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 17090) FwRev accepted: [7.2.5]"
+    },
+    {
+      "datetime": "2025-05-29T03:52:10Z",
+      "mission_time": 1312346,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 17090) firmware build-date accepted: [Oct 14 2015 20:03:56]"
+    },
+    {
+      "datetime": "2025-05-29T03:52:10Z",
+      "mission_time": 1312346,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp (SerNo 17090) firmware variant accepted: [CP UW]"
+    },
+    {
+      "datetime": "2025-05-29T03:52:18Z",
+      "mission_time": 1312354,
+      "call": "Sbe41cpConfig",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2025-05-29T03:52:27Z",
+      "mission_time": 1312363,
+      "call": "Sbe41cpEnablePts",
+      "message": "PTS output enabled during CP mode."
+    },
+    {
+      "datetime": "2025-05-29T03:52:36Z",
+      "mission_time": 1312372,
+      "call": "Sbe41cpTsWait",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2025-05-29T03:52:39Z",
+      "mission_time": 1312375,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp configuration was successful."
+    },
+    {
+      "datetime": "2025-05-29T03:52:58Z",
+      "mission_time": 1312394,
+      "call": "Sbe41cpPOffSet",
+      "message": "Configuration successful: POffset(0.0)."
+    },
+    {
+      "datetime": "2025-05-29T03:52:58Z",
+      "mission_time": 1312394,
+      "call": "SelfTest",
+      "message": "Passed: SBE41cp pressure-offset initialized to zero."
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "SBE 41CP V 7.2.5  SERIAL NO. 17090"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "temperature: 02-Jun-24"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "TA0 = -7.864169e-04"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "TA1 = 2.809835e-04"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "TA2 = -3.062709e-06"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "TA3 = 1.336606e-07"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "conductivity: 02-Jun-24"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "G = -1.016652e+00"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "H = 1.572199e-01"
+    },
+    {
+      "datetime": "2025-05-29T03:53:05Z",
+      "mission_time": 1312401,
+      "call": "Sbe41cpLogCal",
+      "message": "I = -4.851750e-04"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "J = 6.015892e-05"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "CTCOR = 3.250000e-06"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "CPCOR = -9.570000e-08"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "WBOTC = 1.307161e-07"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "pressure S/N = 12060364, range = 2900 psia:  06-May-24"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "PA0 = 1.417510e-01"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "PA1 = 3.916733e-04"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "PA2 = -2.688088e-13"
+    },
+    {
+      "datetime": "2025-05-29T03:53:06Z",
+      "mission_time": 1312402,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA0 = -7.128311e+03"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA1 = 1.659924e+01"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCA2 = -1.621558e-02"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB0 = 3.241478e+05"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB1 = 1.919480e+01"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTCB2 = -1.019015e-01"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA0 = 3.277537e+02"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA1 = -6.343540e-05"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "PTHA2 = -1.244259e-12"
+    },
+    {
+      "datetime": "2025-05-29T03:53:07Z",
+      "mission_time": 1312403,
+      "call": "Sbe41cpLogCal",
+      "message": "POFFSET = 0.000000e+00"
+    },
+    {
+      "datetime": "2025-05-29T03:53:17Z",
+      "mission_time": 1312413,
+      "call": "SelfTest",
+      "message": "Passed: LBT model: 9523N"
+    },
+    {
+      "datetime": "2025-05-29T03:53:18Z",
+      "mission_time": 1312414,
+      "call": "SelfTest",
+      "message": "Passed: LBT firmware revision: DB20004"
+    },
+    {
+      "datetime": "2025-05-29T03:53:19Z",
+      "mission_time": 1312415,
+      "call": "IrModemConfigure",
+      "message": "Modem configured for fixed (19200) baud rate."
+    },
+    {
+      "datetime": "2025-05-29T03:53:19Z",
+      "mission_time": 1312415,
+      "call": "IrModemConfigure",
+      "message": "Configuration saved to modem's NVRAM."
+    },
+    {
+      "datetime": "2025-05-29T03:53:19Z",
+      "mission_time": 1312415,
+      "call": "IrModemConfigure",
+      "message": "Modem configuration successful."
+    },
+    {
+      "datetime": "2025-05-29T03:53:19Z",
+      "mission_time": 1312415,
+      "call": "SelfTest",
+      "message": "Passed: LBT configuration was successful."
+    },
+    {
+      "datetime": "2025-05-29T03:53:20Z",
+      "mission_time": 1312416,
+      "call": "SelfTest",
+      "message": "Passed: LBT IMEI: 300125061290570"
+    },
+    {
+      "datetime": "2025-05-29T03:53:26Z",
+      "mission_time": 1312422,
+      "call": "SelfTest",
+      "message": "Passed: SIM card ICCID: 8988169234006246334"
+    },
+    {
+      "datetime": "2025-05-29T03:53:27Z",
+      "mission_time": 1312423,
+      "call": "ConfigGarmin15",
+      "message": "Garmin GPS15 configuration initiated."
+    },
+    {
+      "datetime": "2025-05-29T03:53:36Z",
+      "mission_time": 1312432,
+      "call": "ConfigGarmin15",
+      "message": "Garmin GPS15 successfully configured."
+    },
+    {
+      "datetime": "2025-05-29T03:53:45Z",
+      "mission_time": 1312441,
+      "call": "SelfTest",
+      "message": "Passed: Ocr504 SerNo: 2343"
+    },
+    {
+      "datetime": "2025-05-29T03:53:48Z",
+      "mission_time": 1312444,
+      "call": "SelfTest",
+      "message": "Passed: Ocr504 FwRev accepted: [5.1.0]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:28Z",
+      "mission_time": 1312484,
+      "call": "Ocr504Config",
+      "message": "Configuration successful. [status=1]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:28Z",
+      "mission_time": 1312484,
+      "call": "SelfTest",
+      "message": "Passed: Ocr504 configuration was successful."
+    },
+    {
+      "datetime": "2025-05-29T03:54:29Z",
+      "mission_time": 1312485,
+      "call": "Ocr504LogConfig",
+      "message": "OCR-504 configuration:"
+    },
+    {
+      "datetime": "2025-05-29T03:54:29Z",
+      "mission_time": 1312485,
+      "call": "Ocr504LogConfig",
+      "message": "sensor type: irradiance"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "serial number: 2343"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "frame type: short"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "header: satai4"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "telemetry baud rate: 9600 bps"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "maximum frame rate: 1 hz"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "initialize silent mode: off"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "initialize power down: off"
+    },
+    {
+      "datetime": "2025-05-29T03:54:30Z",
+      "mission_time": 1312486,
+      "call": "Ocr504LogConfig",
+      "message": "initialize automatic telemetry: on"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "network mode: off"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "network address: 001"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "network baud rate: 19200 bps"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "averaging: on"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "immersed: on"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "calibrated output: off"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "sensor latency: 0"
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "cal coefficients: "
+    },
+    {
+      "datetime": "2025-05-29T03:54:31Z",
+      "mission_time": 1312487,
+      "call": "Ocr504LogConfig",
+      "message": "optical channel 1: "
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "a0:2146614250.1 [2146614250]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "a1:1.64736084942e-007 [1.64736e-07]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "im:1.161 [1.161]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "optical channel 2: "
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "a0:2147222026.3 [2147222026]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "a1:1.99042477545e-007 [1.99042e-07]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "im:1.410 [1.41]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "optical channel 3: "
+    },
+    {
+      "datetime": "2025-05-29T03:54:32Z",
+      "mission_time": 1312488,
+      "call": "Ocr504LogConfig",
+      "message": "a0:214507885.9 [214507885]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:33Z",
+      "mission_time": 1312489,
+      "call": "Ocr504LogConfig",
+      "message": "a1:2.17438635367e-007 [2.17438e-07]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:33Z",
+      "mission_time": 1312489,
+      "call": "Ocr504LogConfig",
+      "message": "im:1.365 [1.365]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:33Z",
+      "mission_time": 1312489,
+      "call": "Ocr504LogConfig",
+      "message": "optical channel 4: "
+    },
+    {
+      "datetime": "2025-05-29T03:54:33Z",
+      "mission_time": 1312489,
+      "call": "Ocr504LogConfig",
+      "message": "a0:2147690783.5 [2147690783]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:33Z",
+      "mission_time": 1312489,
+      "call": "Ocr504LogConfig",
+      "message": "a1:3.48228524159e-006 [3.48228e-06]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:33Z",
+      "mission_time": 1312489,
+      "call": "Ocr504LogConfig",
+      "message": "im:1.359 [1.359]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:35Z",
+      "mission_time": 1312491,
+      "call": "SelfTest",
+      "message": "Passed: Ocr504 configuration logged."
+    },
+    {
+      "datetime": "2025-05-29T03:54:40Z",
+      "mission_time": 1312496,
+      "call": "SelfTest",
+      "message": "Passed: Optode FwRev accepted: [4.9.1]"
+    },
+    {
+      "datetime": "2025-05-29T03:54:44Z",
+      "mission_time": 1312500,
+      "call": "SelfTest",
+      "message": "Passed: Optode SerNo: 3853"
+    },
+    {
+      "datetime": "2025-05-29T03:54:57Z",
+      "mission_time": 1312513,
+      "call": "OptodeConfig",
+      "message": "Configuration successful."
+    },
+    {
+      "datetime": "2025-05-29T03:54:57Z",
+      "mission_time": 1312513,
+      "call": "SelfTest",
+      "message": "Passed: Optode configuration was successful."
+    },
+    {
+      "datetime": "2025-05-29T03:55:13Z",
+      "mission_time": 1312529,
+      "call": "SelfTest",
+      "message": "Passed: MSC configured for ISUS and DURA sensors."
+    },
+    {
+      "datetime": "2025-05-29T03:55:16Z",
+      "mission_time": 1312532,
+      "call": "SelfTest",
+      "message": "Passed: MSC initialization successful."
+    },
+    {
+      "datetime": "2025-05-29T03:55:17Z",
+      "mission_time": 1312533,
+      "call": "SelfTest",
+      "message": "Passed: MSC RTC initialized."
+    },
+    {
+      "datetime": "2025-05-29T03:55:20Z",
+      "mission_time": 1312536,
+      "call": "DuraConfigLog",
+      "message": "H, Datalogger Serial Num , SN:1146"
+    },
+    {
+      "datetime": "2025-05-29T03:55:20Z",
+      "mission_time": 1312536,
+      "call": "DuraConfigLog",
+      "message": "H, Application      Name , APF_MAIN.C"
+    },
+    {
+      "datetime": "2025-05-29T03:55:20Z",
+      "mission_time": 1312536,
+      "call": "DuraConfigLog",
+      "message": "H, App Build        Date , Oct 20 2020, 10:40:18"
+    },
+    {
+      "datetime": "2025-05-29T03:55:20Z",
+      "mission_time": 1312536,
+      "call": "DuraConfigLog",
+      "message": "H, Power Up Time   (GMT) , 05/29/2025 03:55:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Current  Time   (GMT) , 05/29/2025 03:55:19"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Alarm    Time   (GMT) , 05/29/2025 13:55:17"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Power Active  Timeout , 10"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Persistor CF2-1M Info , S/N:17509 - BIOS:4.03 - PicoDOS:4.03"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Compact FLASH    Size , 256614400"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Compact FLASH    Left , 99.42%"
+    },
+    {
+      "datetime": "2025-05-29T03:55:21Z",
+      "mission_time": 1312537,
+      "call": "DuraConfigLog",
+      "message": "H, Power Cycle   Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, System Reset  Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, System Error  Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, Last System     Error , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, Last System ErrorTime , 01/01/1970 00:00:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, DURA  Error   Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, Last DURA       Error , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, Last DURA Error  Time , 01/01/1970 00:00:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:22Z",
+      "mission_time": 1312538,
+      "call": "DuraConfigLog",
+      "message": "H, DURA Sample   Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:23Z",
+      "mission_time": 1312539,
+      "call": "DuraConfigLog",
+      "message": "H, Last Sample Rec. Time , 01/01/1970 00:00:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:23Z",
+      "mission_time": 1312539,
+      "call": "DuraConfigLog",
+      "message": "H, AtoD Reads per Sample , 10"
+    },
+    {
+      "datetime": "2025-05-29T03:55:23Z",
+      "mission_time": 1312539,
+      "call": "DuraConfigLog",
+      "message": "H, AtoD Reading    Delay , 100"
+    },
+    {
+      "datetime": "2025-05-29T03:55:23Z",
+      "mission_time": 1312539,
+      "call": "DuraConfigLog",
+      "message": "H, Samps per AtoD  Recal , 250"
+    },
+    {
+      "datetime": "2025-05-29T03:55:26Z",
+      "mission_time": 1312542,
+      "call": "SelfTest",
+      "message": "Passed: Query for DURA configuration."
+    },
+    {
+      "datetime": "2025-05-29T03:55:29Z",
+      "mission_time": 1312545,
+      "call": "SelfTest",
+      "message": "Passed: DURA serial number accepted: [1146]"
+    },
+    {
+      "datetime": "2025-05-29T03:55:32Z",
+      "mission_time": 1312548,
+      "call": "SelfTest",
+      "message": "Passed: DURA FwRev accepted: [Oct 20 2020, 10:40:18]"
+    },
+    {
+      "datetime": "2025-05-29T03:55:36Z",
+      "mission_time": 1312552,
+      "call": "SelfTest",
+      "message": "Passed: DURA TimeOut(10Hr) accepted."
+    },
+    {
+      "datetime": "2025-05-29T03:55:42Z",
+      "mission_time": 1312558,
+      "call": "SelfTest",
+      "message": "Passed: DURA sample successful."
+    },
+    {
+      "datetime": "2025-05-29T03:55:45Z",
+      "mission_time": 1312561,
+      "call": "IsusConfigLog_",
+      "message": "H, Datalogger Serial Num , SN:1146"
+    },
+    {
+      "datetime": "2025-05-29T03:55:45Z",
+      "mission_time": 1312561,
+      "call": "IsusConfigLog_",
+      "message": "H, Application      Name , APF_MAIN.C"
+    },
+    {
+      "datetime": "2025-05-29T03:55:45Z",
+      "mission_time": 1312561,
+      "call": "IsusConfigLog_",
+      "message": "H, App Build        Date , Oct 20 2020, 10:40:18"
+    },
+    {
+      "datetime": "2025-05-29T03:55:45Z",
+      "mission_time": 1312561,
+      "call": "IsusConfigLog_",
+      "message": "H, Power Up Time   (GMT) , 05/29/2025 03:55:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Current  Time   (GMT) , 05/29/2025 03:55:44"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Alarm    Time   (GMT) , 05/29/2025 13:55:17"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Power Active  Timeout , 10"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Persistor CF2-1M Info , S/N:17509 - BIOS:4.03 - PicoDOS:4.03"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Compact FLASH    Size , 256614400"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Compact FLASH    Left , 99.42%"
+    },
+    {
+      "datetime": "2025-05-29T03:55:46Z",
+      "mission_time": 1312562,
+      "call": "IsusConfigLog_",
+      "message": "H, Power Cycle   Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, System Reset  Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, System Error  Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, Last System     Error , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, Last System ErrorTime , 01/01/1970 00:00:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, ISUS  Error   Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, Last ISUS       Error , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, Last ISUS Error  Time , 01/01/1970 00:00:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:47Z",
+      "mission_time": 1312563,
+      "call": "IsusConfigLog_",
+      "message": "H, ISUS Sample   Counter , 0"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Last Sample Rec. Time , 01/01/1970 00:00:00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Fiberlite    Odometer , 00:10:01"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Fiberlite      Cycles , 200"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Intensity LampON , 5000"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Integration Time , 475"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Pre  scans taken , 2"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Lite scans taken , 3"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Spec Dark scans taken , 1"
+    },
+    {
+      "datetime": "2025-05-29T03:55:48Z",
+      "mission_time": 1312564,
+      "call": "IsusConfigLog_",
+      "message": "H, Calibration      Date , 09/19/2024"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Sw Calibration   Temp , 19.85"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Wavelength Fit  Range , 217.124 <-> 240.167"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Pixel Fit       Range , 35 <-> 64"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Fitted Concentrations , 2"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Baseline        Model , (ax + b)"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Br Temp  Compensation , ENABLED"
+    },
+    {
+      "datetime": "2025-05-29T03:55:49Z",
+      "mission_time": 1312565,
+      "call": "IsusConfigLog_",
+      "message": "H, Bromide Term in Model , will be FIXED (to external CTD value)"
+    },
+    {
+      "datetime": "2025-05-29T03:55:50Z",
+      "mission_time": 1312566,
+      "call": "IsusConfigLog_",
+      "message": "H, Zeiss Coefficient Vals, 1.895220e+02,7.847140e-01,1.224910e-04,-2.993320e-07,0.000000e+00"
+    },
+    {
+      "datetime": "2025-05-29T03:55:53Z",
+      "mission_time": 1312569,
+      "call": "SelfTest",
+      "message": "Passed: Query for ISUS configuration."
+    },
+    {
+      "datetime": "2025-05-29T03:55:56Z",
+      "mission_time": 1312572,
+      "call": "SelfTest",
+      "message": "Passed: ISUS serial number accepted: [1146]"
+    },
+    {
+      "datetime": "2025-05-29T03:55:59Z",
+      "mission_time": 1312575,
+      "call": "SelfTest",
+      "message": "Passed: ISUS FwRev accepted: [Oct 20 2020, 10:40:18]"
+    },
+    {
+      "datetime": "2025-05-29T03:56:02Z",
+      "mission_time": 1312578,
+      "call": "SelfTest",
+      "message": "Passed: ISUS TimeOut(10Hr) accepted."
+    },
+    {
+      "datetime": "2025-05-29T03:56:09Z",
+      "mission_time": 1312585,
+      "call": "SelfTest",
+      "message": "Passed: ISUS sample successful."
+    },
+    {
+      "datetime": "2025-05-29T03:56:19Z",
+      "mission_time": 1312595,
+      "call": "SelfTest",
+      "message": "Passed: FLBB SerNo: 7444"
+    },
+    {
+      "datetime": "2025-05-29T03:56:23Z",
+      "mission_time": 1312599,
+      "call": "SelfTest",
+      "message": "Passed: FLBB FwRev accepted: [FLNTUAPX 4.04]"
+    },
+    {
+      "datetime": "2025-05-29T03:56:29Z",
+      "mission_time": 1312605,
+      "call": "FlbbConfig",
+      "message": "FLBB configuration successful."
+    },
+    {
+      "datetime": "2025-05-29T03:56:29Z",
+      "mission_time": 1312605,
+      "call": "SelfTest",
+      "message": "Passed: FLBB configuration was successful."
+    },
+    {
+      "datetime": "2025-05-29T03:56:33Z",
+      "mission_time": 1312609,
+      "call": "SelfTest",
+      "message": "Passed: FLBB wavelengths: Fl[470] Bb[700]."
+    },
+    {
+      "datetime": "2025-05-29T03:56:35Z",
+      "mission_time": 1312611,
+      "call": "PActivateInit",
+      "message": "Self-test passed."
+    },
+    {
+      "datetime": "2025-05-29T03:56:35Z",
+      "mission_time": 1312611,
+      "call": "PActivateInit",
+      "message": "Pressure activation mode initiated. [itime=1312611]"
+    },
+    {
+      "datetime": "2025-05-29T03:56:35Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "016->016 [0sec, 0.0Volts, 0.000Amps, CPT:36sec]"
+    },
+    {
+      "datetime": "2025-05-29T03:59:08Z",
+      "mission_time": 153,
+      "call": "Apf11Init",
+      "message": "Asynchronous wake-up detected (ie., wake-up not initiated by alarm signal)."
+    },
+    {
+      "datetime": "2025-08-04T21:41:41Z",
+      "mission_time": 0,
+      "call": "PreludeInit",
+      "message": "Mission restarted. [pid=14, itime=5852706]"
+    },
+    {
+      "datetime": "2025-08-04T21:41:41Z",
+      "mission_time": 0,
+      "call": "PistonMoveAbsWTO",
+      "message": "016->231 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 [1197sec, 14.6Volts, 0.244Amps, CPT:1197sec]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "Prelude",
+      "message": "Logging configuration and initiating telemetry."
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "Mission configuration for Apf11 FwRev 031524:"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "AscentTimeOut(540) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "AltDialCmd(ATDT0012066163256) [alternate]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudge(10) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "BuoyancyNudgeInitial(22) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "CompensatorHyperRetraction(0) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "ConnectTimeOut(60) [sec]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "CpActivationP(985) [dbar]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DeepProfileDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePistonPos(16) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DeepProfilePressure(2020) [dbar]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DownTime(14400) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DuraRefWarmUpHrs(255)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DuraInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "FatFsEnable(1)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "FlbbMode(1)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "FloatId(21878)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "FullExtension(231) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "FullRetraction(9) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "MaxAirBladder(154) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "MaxLogKb(50) [KByte]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "MissionPrelude(360) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "OcrInit(-500) [dbar]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "OkVacuum(237) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "OptodeMode(1)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "PActivationPistonPosition(16) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "ParkDescentTime(240) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "ParkPistonPos(66) [count]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "ParkPressure(1000) [dbar]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "PnPCycleLen(1)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "Pwd(0xafb3)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "TelemetryRetry(15) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "TimeOfDay(DISABLED) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "UpTime(660) [min]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "User(f21878)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "ZModemTimeOut(80) [sec]"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "Verbosity(2)"
+    },
+    {
+      "datetime": "2025-08-04T22:01:48Z",
+      "mission_time": 1207,
+      "call": "LogConfiguration",
+      "message": "DebugBits(0x0002)"
+    }
+  ]
+}

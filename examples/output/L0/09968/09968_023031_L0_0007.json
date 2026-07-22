@@ -1,7 +1,7 @@
 {
-  "FILE_CREATION_DATE": "2026-05-23T05:25:11Z",
-  "FILE_UPDATE_DATE": "2026-05-23T05:25:11Z",
-  "DECODER_VERSION": "0.4.4",
+  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
+  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
+  "DECODER_VERSION": "0.5.4",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23031,
   "TRANSMISSION_ID_NUMBER": 23031,
@@ -5605,7 +5605,7 @@
       "TIME": "2025-01-28T07:43:10Z"
     }
   ],
-  "ARGO_Mission": {
+  "Mission": {
     "model": {
       "value": "Apf11"
     },
@@ -5795,6 +5795,330 @@
     }
   ],
   "Log": [
+    {
+      "datetime": "2025-01-18T12:24:55Z",
+      "mission_time": 885565,
+      "call": "TelemetryInit",
+      "message": "Profile 6. (Apf11 FwRev: 121123)"
+    },
+    {
+      "datetime": "2025-01-18T12:24:55Z",
+      "mission_time": 885565,
+      "call": "TelemetryInit",
+      "message": "Charge consumption model: OCV:15.0V Wake-Cycles:7778 Standby:85.0days Wake:4.8kC Sensors:0.7kC"
+    },
+    {
+      "datetime": "2025-01-18T12:34:50Z",
+      "mission_time": 886160,
+      "call": "AirSystem",
+      "message": "Battery [212cnt, 14.9V]  Current [21cnt, 80.2mA]  Pneumometer [156cnt, 18.3psi]  Run-Time [139s]"
+    },
+    {
+      "datetime": "2025-01-18T12:35:13Z",
+      "mission_time": 886183,
+      "call": "GpsServices",
+      "message": "GPS almanac is current."
+    },
+    {
+      "datetime": "2025-01-18T12:35:13Z",
+      "mission_time": 886183,
+      "call": "GpsServices",
+      "message": "Initiating GPS fix acquisition."
+    },
+    {
+      "datetime": "2025-01-18T12:35:22Z",
+      "mission_time": 886192,
+      "call": "gga",
+      "message": "$GPGGA,123520,4728.0047,S,10252.8126,W,0,00,,,M,,M,,*56"
+    },
+    {
+      "datetime": "2025-01-18T12:35:38Z",
+      "mission_time": 886208,
+      "call": "gga",
+      "message": "$GPGGA,123540,4728.0047,S,10252.8126,W,0,00,,,M,,M,,*50"
+    },
+    {
+      "datetime": "2025-01-18T12:35:47Z",
+      "mission_time": 886217,
+      "call": "gga",
+      "message": "$GPGGA,123550,4728.0047,S,10252.8126,W,0,00,,,M,,M,,*51"
+    },
+    {
+      "datetime": "2025-01-18T12:35:58Z",
+      "mission_time": 886228,
+      "call": "gga",
+      "message": "$GPGGA,123600,4721.9811,S,10310.3559,W,1,10,0.8,8.9,M,-8.3,M,,*5D"
+    },
+    {
+      "datetime": "2025-01-18T12:35:58Z",
+      "mission_time": 886228,
+      "call": "GpsServices",
+      "message": "Profile 6 GPS fix obtained in 45 seconds."
+    },
+    {
+      "datetime": "2025-01-18T12:35:58Z",
+      "mission_time": 886228,
+      "call": "GpsServices",
+      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
+    },
+    {
+      "datetime": "2025-01-18T12:35:58Z",
+      "mission_time": 886228,
+      "call": "GpsServices",
+      "message": "Fix: -103.1726 -47.3664 01/18/2025 123600   10"
+    },
+    {
+      "datetime": "2025-01-18T12:36:08Z",
+      "mission_time": 886238,
+      "call": "gga",
+      "message": "$GPGGA,123610,4721.9815,S,10310.3535,W,1,10,0.8,7.1,M,-8.3,M,,*55"
+    },
+    {
+      "datetime": "2025-01-18T12:36:17Z",
+      "mission_time": 886247,
+      "call": "gga",
+      "message": "$GPGGA,123620,4721.9816,S,10310.3520,W,1,10,0.8,3.2,M,-8.3,M,,*56"
+    },
+    {
+      "datetime": "2025-01-18T12:36:17Z",
+      "mission_time": 886247,
+      "call": "GpsServices",
+      "message": "APF11 RTC skew (-3s) OK."
+    },
+    {
+      "datetime": "2025-01-18T12:36:17Z",
+      "mission_time": 886247,
+      "call": "GpsServices",
+      "message": "GPS services complete."
+    },
+    {
+      "datetime": "2025-01-18T12:36:45Z",
+      "mission_time": 886275,
+      "call": "IrGeoLoc",
+      "message": "<x,y,z>=<-972km,-4204km,-4676km> lat=-47.491 lon=-103.019 IrSysTime=0xdedac281"
+    },
+    {
+      "datetime": "2025-01-18T12:36:49Z",
+      "mission_time": 886279,
+      "call": "CLogin",
+      "message": "Connecting to primary host."
+    },
+    {
+      "datetime": "2025-01-18T12:37:02Z",
+      "mission_time": 886292,
+      "call": "CLogin",
+      "message": "Connection 1 established in 13 seconds."
+    },
+    {
+      "datetime": "2025-01-18T12:37:36Z",
+      "mission_time": 886326,
+      "call": "expect",
+      "message": "Attempt to read prompt string [Last login:] failed."
+    },
+    {
+      "datetime": "2025-01-18T12:37:36Z",
+      "mission_time": 886326,
+      "call": "login",
+      "message": "Login failed."
+    },
+    {
+      "datetime": "2025-01-18T12:38:06Z",
+      "mission_time": 886356,
+      "call": "expect",
+      "message": "Attempt to read prompt string [login:] failed."
+    },
+    {
+      "datetime": "2025-01-18T12:38:06Z",
+      "mission_time": 886356,
+      "call": "login",
+      "message": "Login prompt not received."
+    },
+    {
+      "datetime": "2025-01-18T12:39:08Z",
+      "mission_time": 886418,
+      "call": "chat",
+      "message": "Expected string [CONNECT] not received."
+    },
+    {
+      "datetime": "2025-01-18T12:39:08Z",
+      "mission_time": 886418,
+      "call": "modem_connect",
+      "message": "Modem command [AT+CBST=71,0,1;DT00881600005496] failed."
+    },
+    {
+      "datetime": "2025-01-18T12:39:08Z",
+      "mission_time": 886418,
+      "call": "connect",
+      "message": "Connection attempt failed."
+    },
+    {
+      "datetime": "2025-01-18T12:39:08Z",
+      "mission_time": 886418,
+      "call": "CLogin",
+      "message": "Attempt to connect to primary host failed after 2 tries.  Connecting to alternate host."
+    },
+    {
+      "datetime": "2025-01-18T12:39:31Z",
+      "mission_time": 886441,
+      "call": "CLogin",
+      "message": "Connection 2 established in 162 seconds."
+    },
+    {
+      "datetime": "2025-01-18T12:39:41Z",
+      "mission_time": 886451,
+      "call": "login",
+      "message": "Login successful."
+    },
+    {
+      "datetime": "2025-01-18T12:39:46Z",
+      "mission_time": 886456,
+      "call": "chat",
+      "message": "Expected string [cmd>] not received."
+    },
+    {
+      "datetime": "2025-01-18T12:39:46Z",
+      "mission_time": 886456,
+      "call": "login",
+      "message": "Attempt to set the command prompt failed."
+    },
+    {
+      "datetime": "2025-01-18T12:39:51Z",
+      "mission_time": 886461,
+      "call": "chat",
+      "message": "Expected string [cmd>] not received."
+    },
+    {
+      "datetime": "2025-01-18T12:39:51Z",
+      "mission_time": 886461,
+      "call": "login",
+      "message": "Attempt to set the command prompt failed."
+    },
+    {
+      "datetime": "2025-01-18T12:39:55Z",
+      "mission_time": 886465,
+      "call": "CLogin",
+      "message": "Logged in to host.  [Login required 24 seconds]"
+    },
+    {
+      "datetime": "2025-01-18T12:39:57Z",
+      "mission_time": 886467,
+      "call": "RxConfig",
+      "message": "Downloading \"mission.cfg\" from host."
+    },
+    {
+      "datetime": "2025-01-18T12:40:07Z",
+      "mission_time": 886477,
+      "call": "RxConfig",
+      "message": "Download successful: [bytes:49, sec:8.0, bps:6]"
+    },
+    {
+      "datetime": "2025-01-18T12:40:11Z",
+      "mission_time": 886481,
+      "call": "WriteVitals_",
+      "message": "Writing vitals to \"23031.006.msg\"."
+    },
+    {
+      "datetime": "2025-01-18T12:40:15Z",
+      "mission_time": 886485,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23031.006.log\" to host."
+    },
+    {
+      "datetime": "2025-01-18T12:41:26Z",
+      "mission_time": 886556,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:17661, sec:70.9, bps:249]"
+    },
+    {
+      "datetime": "2025-01-18T12:41:27Z",
+      "mission_time": 886557,
+      "call": "fmove",
+      "message": "Moved: 23031.006.log -> archive/23031.006.log"
+    },
+    {
+      "datetime": "2025-01-18T12:41:31Z",
+      "mission_time": 886561,
+      "call": "UpLoadFile",
+      "message": "Uploading \"23031.006.msg\" to host."
+    },
+    {
+      "datetime": "2025-01-18T12:42:56Z",
+      "mission_time": 886646,
+      "call": "UpLoadFile",
+      "message": "Upload successful: [bytes:26507, sec:85.1, bps:311]"
+    },
+    {
+      "datetime": "2025-01-18T12:42:57Z",
+      "mission_time": 886647,
+      "call": "fmove",
+      "message": "Moved: 23031.006.msg -> archive/23031.006.msg"
+    },
+    {
+      "datetime": "2025-01-18T12:42:58Z",
+      "mission_time": 886648,
+      "call": "UpLoad",
+      "message": "Files successfully uploaded: 2"
+    },
+    {
+      "datetime": "2025-01-18T12:42:58Z",
+      "mission_time": 886648,
+      "call": "UpLoad",
+      "message": "Upload complete."
+    },
+    {
+      "datetime": "2025-01-18T12:43:02Z",
+      "mission_time": 886652,
+      "call": "logout",
+      "message": "Log-out successful."
+    },
+    {
+      "datetime": "2025-01-18T12:43:03Z",
+      "mission_time": 886653,
+      "call": "Telemetry",
+      "message": "Telemetry cycle complete: PrfId=6 ConnectionAttempts=3  Connections=2"
+    },
+    {
+      "datetime": "2025-01-18T12:43:03Z",
+      "mission_time": 886653,
+      "call": "TelemetryTerminate",
+      "message": "Parsing new mission configuration."
+    },
+    {
+      "datetime": "2025-01-18T12:43:04Z",
+      "mission_time": 886654,
+      "call": "configure",
+      "message": "Parsing configurators in \"mission.cfg\"."
+    },
+    {
+      "datetime": "2025-01-18T12:43:04Z",
+      "mission_time": 886654,
+      "call": "configure",
+      "message": "TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)]."
+    },
+    {
+      "datetime": "2025-01-18T12:43:04Z",
+      "mission_time": 886654,
+      "call": "configure",
+      "message": "DownTime(14400) [CRC=0x9F62] [DownTime(14400)]."
+    },
+    {
+      "datetime": "2025-01-18T12:43:05Z",
+      "mission_time": 886655,
+      "call": "configure",
+      "message": "Configuration CRCs and syntax OK."
+    },
+    {
+      "datetime": "2025-01-18T12:43:05Z",
+      "mission_time": 886655,
+      "call": "ConfigSupervisor",
+      "message": "Configuration accepted."
+    },
+    {
+      "datetime": "2025-01-18T12:43:05Z",
+      "mission_time": 886655,
+      "call": "TelemetryTerminate",
+      "message": "Reconditioning the file system."
+    },
     {
       "datetime": "2025-01-18T12:43:07Z",
       "mission_time": 0,
@@ -6346,264 +6670,6 @@
       "mission_time": 885631,
       "call": "Sbe41cpUploadCP_",
       "message": "Continuous profile uploaded [493 lines]."
-    },
-    {
-      "datetime": "2025-01-28T18:43:41Z",
-      "mission_time": 885634,
-      "call": "TelemetryInit",
-      "message": "Profile 7. (Apf11 FwRev: 121123)"
-    },
-    {
-      "datetime": "2025-01-28T18:43:41Z",
-      "mission_time": 885634,
-      "call": "TelemetryInit",
-      "message": "Charge consumption model: OCV:15.0V Wake-Cycles:9018 Standby:95.2days Wake:5.4kC Sensors:0.8kC"
-    },
-    {
-      "datetime": "2025-01-28T18:53:38Z",
-      "mission_time": 886231,
-      "call": "AirSystem",
-      "message": "Battery [212cnt, 14.9V]  Current [21cnt, 81.0mA]  Pneumometer [155cnt, 18.2psi]  Run-Time [140s]"
-    },
-    {
-      "datetime": "2025-01-28T18:54:01Z",
-      "mission_time": 886254,
-      "call": "GpsServices",
-      "message": "Replacing aged (95 days) almanac."
-    },
-    {
-      "datetime": "2025-01-28T18:54:01Z",
-      "mission_time": 886254,
-      "call": "GpsAlmanacUpLoad",
-      "message": "Pausing for 15 minutes to upload GPS almanac."
-    },
-    {
-      "datetime": "2025-01-28T19:09:01Z",
-      "mission_time": 887154,
-      "call": "GpsAlmanacUpLoad",
-      "message": "Pause complete."
-    },
-    {
-      "datetime": "2025-01-28T19:09:02Z",
-      "mission_time": 887155,
-      "call": "GpsServices",
-      "message": "New almanac acquired."
-    },
-    {
-      "datetime": "2025-01-28T19:09:02Z",
-      "mission_time": 887155,
-      "call": "GpsServices",
-      "message": "Initiating GPS fix acquisition."
-    },
-    {
-      "datetime": "2025-01-28T19:09:08Z",
-      "mission_time": 887161,
-      "call": "gga",
-      "message": "$GPGGA,190910,4728.9549,S,10331.6518,W,1,10,0.8,3.9,M,-8.4,M,,*5D"
-    },
-    {
-      "datetime": "2025-01-28T19:09:08Z",
-      "mission_time": 887161,
-      "call": "GpsServices",
-      "message": "Profile 7 GPS fix obtained in 6 seconds."
-    },
-    {
-      "datetime": "2025-01-28T19:09:08Z",
-      "mission_time": 887161,
-      "call": "GpsServices",
-      "message": "lon      lat mm/dd/yyyy hhmmss nsat"
-    },
-    {
-      "datetime": "2025-01-28T19:09:08Z",
-      "mission_time": 887161,
-      "call": "GpsServices",
-      "message": "Fix: -103.5275 -47.4826 01/28/2025 190910   10"
-    },
-    {
-      "datetime": "2025-01-28T19:09:18Z",
-      "mission_time": 887171,
-      "call": "gga",
-      "message": "$GPGGA,190920,4728.9536,S,10331.6501,W,1,10,0.8,3.8,M,-8.4,M,,*5F"
-    },
-    {
-      "datetime": "2025-01-28T19:09:27Z",
-      "mission_time": 887180,
-      "call": "gga",
-      "message": "$GPGGA,190930,4728.9527,S,10331.6517,W,1,10,0.8,3.5,M,-8.4,M,,*54"
-    },
-    {
-      "datetime": "2025-01-28T19:09:27Z",
-      "mission_time": 887180,
-      "call": "GpsServices",
-      "message": "APF11 RTC skew (-3s) OK."
-    },
-    {
-      "datetime": "2025-01-28T19:09:27Z",
-      "mission_time": 887180,
-      "call": "GpsServices",
-      "message": "GPS services complete."
-    },
-    {
-      "datetime": "2025-01-28T19:10:02Z",
-      "mission_time": 887215,
-      "call": "IrGeoLoc",
-      "message": "<x,y,z>=<-976km,-4212km,-4668km> lat=-47.385 lon=-103.046 IrSysTime=0xdf71158c"
-    },
-    {
-      "datetime": "2025-01-28T19:10:05Z",
-      "mission_time": 887218,
-      "call": "CLogin",
-      "message": "Connecting to primary host."
-    },
-    {
-      "datetime": "2025-01-28T19:10:14Z",
-      "mission_time": 887227,
-      "call": "CLogin",
-      "message": "Connection 1 established in 9 seconds."
-    },
-    {
-      "datetime": "2025-01-28T19:10:26Z",
-      "mission_time": 887239,
-      "call": "login",
-      "message": "Login successful."
-    },
-    {
-      "datetime": "2025-01-28T19:10:37Z",
-      "mission_time": 887250,
-      "call": "CLogin",
-      "message": "Logged in to host.  [Login required 23 seconds]"
-    },
-    {
-      "datetime": "2025-01-28T19:10:38Z",
-      "mission_time": 887251,
-      "call": "RxConfig",
-      "message": "Downloading \"mission.cfg\" from host."
-    },
-    {
-      "datetime": "2025-01-28T19:10:55Z",
-      "mission_time": 887268,
-      "call": "RxConfig",
-      "message": "Download successful: [bytes:49, sec:15.1, bps:3]"
-    },
-    {
-      "datetime": "2025-01-28T19:10:59Z",
-      "mission_time": 887272,
-      "call": "WriteVitals_",
-      "message": "Writing vitals to \"23031.007.msg\"."
-    },
-    {
-      "datetime": "2025-01-28T19:11:04Z",
-      "mission_time": 887277,
-      "call": "UpLoadFile",
-      "message": "Uploading \"23031.007.log\" to host."
-    },
-    {
-      "datetime": "2025-01-28T19:13:02Z",
-      "mission_time": 887395,
-      "call": "UpLoadFile",
-      "message": "Upload successful: [bytes:17418, sec:117.3, bps:148]"
-    },
-    {
-      "datetime": "2025-01-28T19:13:03Z",
-      "mission_time": 887396,
-      "call": "fmove",
-      "message": "Moved: 23031.007.log -> archive/23031.007.log"
-    },
-    {
-      "datetime": "2025-01-28T19:13:06Z",
-      "mission_time": 887399,
-      "call": "UpLoadFile",
-      "message": "Uploading \"23031.007.msg\" to host."
-    },
-    {
-      "datetime": "2025-01-28T19:14:46Z",
-      "mission_time": 887499,
-      "call": "UpLoadFile",
-      "message": "Upload successful: [bytes:26476, sec:100.1, bps:264]"
-    },
-    {
-      "datetime": "2025-01-28T19:14:47Z",
-      "mission_time": 887500,
-      "call": "fmove",
-      "message": "Moved: 23031.007.msg -> archive/23031.007.msg"
-    },
-    {
-      "datetime": "2025-01-28T19:14:48Z",
-      "mission_time": 887501,
-      "call": "UpLoad",
-      "message": "Files successfully uploaded: 2"
-    },
-    {
-      "datetime": "2025-01-28T19:14:48Z",
-      "mission_time": 887501,
-      "call": "UpLoad",
-      "message": "Upload complete."
-    },
-    {
-      "datetime": "2025-01-28T19:14:55Z",
-      "mission_time": 887508,
-      "call": "chat",
-      "message": "Expected string [logout] not received."
-    },
-    {
-      "datetime": "2025-01-28T19:14:55Z",
-      "mission_time": 887508,
-      "call": "logout",
-      "message": "Attempt to log-out failed."
-    },
-    {
-      "datetime": "2025-01-28T19:14:55Z",
-      "mission_time": 887508,
-      "call": "logout",
-      "message": "No carrier detected."
-    },
-    {
-      "datetime": "2025-01-28T19:14:55Z",
-      "mission_time": 887508,
-      "call": "Telemetry",
-      "message": "Telemetry cycle complete: PrfId=7 ConnectionAttempts=1  Connections=1"
-    },
-    {
-      "datetime": "2025-01-28T19:14:55Z",
-      "mission_time": 887508,
-      "call": "TelemetryTerminate",
-      "message": "Parsing new mission configuration."
-    },
-    {
-      "datetime": "2025-01-28T19:14:56Z",
-      "mission_time": 887509,
-      "call": "configure",
-      "message": "Parsing configurators in \"mission.cfg\"."
-    },
-    {
-      "datetime": "2025-01-28T19:14:56Z",
-      "mission_time": 887509,
-      "call": "configure",
-      "message": "TelemetryRetry(15)      [0x7BBC] [TelemetryRetry(15)]."
-    },
-    {
-      "datetime": "2025-01-28T19:14:56Z",
-      "mission_time": 887509,
-      "call": "configure",
-      "message": "DownTime(14400) [CRC=0x9F62] [DownTime(14400)]."
-    },
-    {
-      "datetime": "2025-01-28T19:14:56Z",
-      "mission_time": 887509,
-      "call": "configure",
-      "message": "Configuration CRCs and syntax OK."
-    },
-    {
-      "datetime": "2025-01-28T19:14:57Z",
-      "mission_time": 887510,
-      "call": "ConfigSupervisor",
-      "message": "Configuration accepted."
-    },
-    {
-      "datetime": "2025-01-28T19:14:57Z",
-      "mission_time": 887510,
-      "call": "TelemetryTerminate",
-      "message": "Reconditioning the file system."
     }
   ]
 }
