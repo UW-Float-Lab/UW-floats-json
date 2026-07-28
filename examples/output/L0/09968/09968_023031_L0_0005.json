@@ -1,7 +1,7 @@
 {
-  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
-  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
-  "DECODER_VERSION": "0.5.4",
+  "FILE_CREATION_DATE": "2026-07-28T23:14:48Z",
+  "FILE_UPDATE_DATE": "2026-07-28T23:14:48Z",
+  "DECODER_VERSION": "0.6.0",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23031,
   "TRANSMISSION_ID_NUMBER": 23031,
@@ -1393,11 +1393,23 @@
       "duration": 111
     }
   ],
+  "profile_terminated": "2025-01-08T05:47:15Z",
+  "metadata_Discrete": {
+    "NSample": 22
+  },
+  "metadata_Binned": {
+    "datetime": "2025-01-08T05:49:35Z",
+    "instrument": "Sbe41cp",
+    "Serial_Number": "18560",
+    "NSample": 10627,
+    "NBin": 493
+  },
   "CTD_Discrete": [
     {
       "PRES": 1005.87,
       "TEMP": 4.2135,
-      "PSAL": 34.2904
+      "PSAL": 34.2904,
+      "remark": "parked sample"
     },
     {
       "PRES": 1998.33,

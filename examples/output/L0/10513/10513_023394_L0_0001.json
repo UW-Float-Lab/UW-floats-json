@@ -1,7 +1,7 @@
 {
-  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
-  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
-  "DECODER_VERSION": "0.5.4",
+  "FILE_CREATION_DATE": "2026-07-28T23:14:48Z",
+  "FILE_UPDATE_DATE": "2026-07-28T23:14:48Z",
+  "DECODER_VERSION": "0.6.0",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 23394,
   "TRANSMISSION_ID_NUMBER": 23394,
@@ -661,11 +661,23 @@
       "duration": 113
     }
   ],
+  "profile_terminated": "2026-04-05T19:22:40Z",
+  "metadata_Discrete": {
+    "NSample": 64
+  },
+  "metadata_Binned": {
+    "datetime": "2026-04-05T19:25:07Z",
+    "instrument": "Sbe41cp",
+    "Serial_Number": "20389",
+    "NSample": 12103,
+    "NBin": 493
+  },
   "CTD_Discrete": [
     {
       "PRES": 668.69,
       "TEMP": 4.7711,
-      "PSAL": 34.1365
+      "PSAL": 34.1365,
+      "remark": "parked sample"
     },
     {
       "PRES": 1299.23,
@@ -3920,7 +3932,8 @@
       "FLUORESCENCE_CHLA470": 54,
       "FLUORESCENCE_CHLA435": 67,
       "BETA_BACKSCATTERING700": 89,
-      "temp_signal": 566
+      "temp_signal": 566,
+      "remark": "parked sample"
     },
     {
       "PRES": 1299.23,
@@ -4367,7 +4380,7 @@
   "ECO_Drift": [
     {
       "PRES": 666.34,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 567,

@@ -1,7 +1,7 @@
 {
-  "FILE_CREATION_DATE": "2026-07-22T05:40:57Z",
-  "FILE_UPDATE_DATE": "2026-07-22T05:40:57Z",
-  "DECODER_VERSION": "0.5.4",
+  "FILE_CREATION_DATE": "2026-07-28T23:14:48Z",
+  "FILE_UPDATE_DATE": "2026-07-28T23:14:48Z",
+  "DECODER_VERSION": "0.6.0",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 21878,
   "TRANSMISSION_ID_NUMBER": 21878,
@@ -1007,11 +1007,23 @@
       "PRES": 991.09
     }
   ],
+  "profile_terminated": "2025-10-27T06:10:08Z",
+  "metadata_Discrete": {
+    "NSample": 70
+  },
+  "metadata_Binned": {
+    "datetime": "2025-10-27T06:12:44Z",
+    "instrument": "Sbe41cp",
+    "Serial_Number": "17090",
+    "NSample": 14097,
+    "NBin": 493
+  },
   "CTD_Discrete": [
     {
       "PRES": 991.89,
       "TEMP": 4.5468,
-      "PSAL": 34.5246
+      "PSAL": 34.5246,
+      "remark": "parked sample"
     },
     {
       "PRES": 1898.49,
@@ -5462,7 +5474,8 @@
       "PRES": 991.89,
       "FLUORESCENCE_CHLA": 52,
       "BETA_BACKSCATTERING700": 106,
-      "temp_signal": 568
+      "temp_signal": 568,
+      "remark": "parked sample"
     },
     {
       "PRES": 1898.49,
@@ -8129,7 +8142,8 @@
       "RAW_DOWNWELLING_IRRADIANCE380": -999,
       "RAW_DOWNWELLING_IRRADIANCE443": -999,
       "RAW_DOWNWELLING_IRRADIANCE490": -999,
-      "RAW_DOWNWELLING_IRRADIANCE_PAR": -999
+      "RAW_DOWNWELLING_IRRADIANCE_PAR": -999,
+      "remark": "parked sample"
     },
     {
       "PRES": 1898.49,

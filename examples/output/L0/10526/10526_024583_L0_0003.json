@@ -1,7 +1,7 @@
 {
-  "FILE_CREATION_DATE": "2026-07-22T05:40:58Z",
-  "FILE_UPDATE_DATE": "2026-07-22T05:40:58Z",
-  "DECODER_VERSION": "0.5.4",
+  "FILE_CREATION_DATE": "2026-07-28T23:14:48Z",
+  "FILE_UPDATE_DATE": "2026-07-28T23:14:48Z",
+  "DECODER_VERSION": "0.6.0",
   "SCHEMA_VERSION": "0.4.0",
   "INTERNAL_ID_NUMBER": 24583,
   "TRANSMISSION_ID_NUMBER": 24583,
@@ -1681,11 +1681,23 @@
       "duration": 112
     }
   ],
+  "profile_terminated": "2026-04-24T05:40:56Z",
+  "metadata_Discrete": {
+    "NSample": 67
+  },
+  "metadata_Binned": {
+    "datetime": "2026-04-24T05:43:27Z",
+    "instrument": "Sbe41cp",
+    "Serial_Number": "21418",
+    "NSample": 12784,
+    "NBin": 493
+  },
   "CTD_Discrete": [
     {
       "PRES": 1001.83,
       "TEMP": 3.8367,
-      "PSAL": 34.4526
+      "PSAL": 34.4526,
+      "remark": "parked sample"
     },
     {
       "PRES": 1598.88,
@@ -6122,7 +6134,8 @@
       "FLUORESCENCE_CHLA470": 55,
       "FLUORESCENCE_CHLA435": 66,
       "BETA_BACKSCATTERING700": 91,
-      "temp_signal": 568
+      "temp_signal": 568,
+      "remark": "parked sample"
     },
     {
       "PRES": 1598.88,
@@ -6590,7 +6603,7 @@
   "ECO_Drift": [
     {
       "PRES": 972.96,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -6598,7 +6611,7 @@
     },
     {
       "PRES": 976.44,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6606,7 +6619,7 @@
     },
     {
       "PRES": 976.4,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6614,7 +6627,7 @@
     },
     {
       "PRES": 1001.56,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6622,7 +6635,7 @@
     },
     {
       "PRES": 1005.37,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -6630,7 +6643,7 @@
     },
     {
       "PRES": 1006.61,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -6638,7 +6651,7 @@
     },
     {
       "PRES": 1002.33,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6646,7 +6659,7 @@
     },
     {
       "PRES": 1006.29,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -6654,7 +6667,7 @@
     },
     {
       "PRES": 1008.87,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6662,7 +6675,7 @@
     },
     {
       "PRES": 1009.56,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6670,7 +6683,7 @@
     },
     {
       "PRES": 1014.78,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6678,7 +6691,7 @@
     },
     {
       "PRES": 1015.1,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6686,7 +6699,7 @@
     },
     {
       "PRES": 1010.77,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6694,7 +6707,7 @@
     },
     {
       "PRES": 1000.48,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -6702,7 +6715,7 @@
     },
     {
       "PRES": 1000.92,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6710,7 +6723,7 @@
     },
     {
       "PRES": 993.59,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6718,7 +6731,7 @@
     },
     {
       "PRES": 1002.44,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -6726,7 +6739,7 @@
     },
     {
       "PRES": 1004.2,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6734,7 +6747,7 @@
     },
     {
       "PRES": 1005.24,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6742,7 +6755,7 @@
     },
     {
       "PRES": 1009.09,
-      "FLUORESCENCE_CHLA470": 51,
+      "FLUORESCENCE_CHLA": 51,
       "FLUORESCENCE_CHLA435": 51,
       "BETA_BACKSCATTERING700": 97,
       "temp_signal": 568,
@@ -6750,7 +6763,7 @@
     },
     {
       "PRES": 1011.68,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6758,7 +6771,7 @@
     },
     {
       "PRES": 1007.23,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6766,7 +6779,7 @@
     },
     {
       "PRES": 1010.03,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6774,7 +6787,7 @@
     },
     {
       "PRES": 1010.52,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6782,7 +6795,7 @@
     },
     {
       "PRES": 1003.47,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6790,7 +6803,7 @@
     },
     {
       "PRES": 1003.34,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6798,7 +6811,7 @@
     },
     {
       "PRES": 1003.66,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -6806,7 +6819,7 @@
     },
     {
       "PRES": 1002.21,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6814,7 +6827,7 @@
     },
     {
       "PRES": 1006.66,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 81,
       "temp_signal": 568,
@@ -6822,7 +6835,7 @@
     },
     {
       "PRES": 1007.75,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -6830,7 +6843,7 @@
     },
     {
       "PRES": 1008.82,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6838,7 +6851,7 @@
     },
     {
       "PRES": 1011.1,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -6846,7 +6859,7 @@
     },
     {
       "PRES": 1011.55,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6854,7 +6867,7 @@
     },
     {
       "PRES": 1013.59,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6862,7 +6875,7 @@
     },
     {
       "PRES": 992.16,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6870,7 +6883,7 @@
     },
     {
       "PRES": 991.99,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6878,7 +6891,7 @@
     },
     {
       "PRES": 989.55,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6886,7 +6899,7 @@
     },
     {
       "PRES": 986.96,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6894,7 +6907,7 @@
     },
     {
       "PRES": 984.67,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -6902,7 +6915,7 @@
     },
     {
       "PRES": 993.88,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6910,7 +6923,7 @@
     },
     {
       "PRES": 997.91,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6918,7 +6931,7 @@
     },
     {
       "PRES": 996.6,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6926,7 +6939,7 @@
     },
     {
       "PRES": 1002.24,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -6934,7 +6947,7 @@
     },
     {
       "PRES": 998.06,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -6942,7 +6955,7 @@
     },
     {
       "PRES": 1009.93,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -6950,7 +6963,7 @@
     },
     {
       "PRES": 1003.07,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6958,7 +6971,7 @@
     },
     {
       "PRES": 1000.4,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6966,7 +6979,7 @@
     },
     {
       "PRES": 998.5,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -6974,7 +6987,7 @@
     },
     {
       "PRES": 1005.35,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6982,7 +6995,7 @@
     },
     {
       "PRES": 1005.17,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -6990,7 +7003,7 @@
     },
     {
       "PRES": 1000.69,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -6998,7 +7011,7 @@
     },
     {
       "PRES": 998.4,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7006,7 +7019,7 @@
     },
     {
       "PRES": 995.86,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7014,7 +7027,7 @@
     },
     {
       "PRES": 1003.88,
-      "FLUORESCENCE_CHLA470": 56,
+      "FLUORESCENCE_CHLA": 56,
       "FLUORESCENCE_CHLA435": 56,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7022,7 +7035,7 @@
     },
     {
       "PRES": 1000.83,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7030,7 +7043,7 @@
     },
     {
       "PRES": 1003.33,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7038,7 +7051,7 @@
     },
     {
       "PRES": 1004.72,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7046,7 +7059,7 @@
     },
     {
       "PRES": 1006.11,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 91,
       "temp_signal": 568,
@@ -7054,7 +7067,7 @@
     },
     {
       "PRES": 1004.04,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 90,
       "temp_signal": 568,
@@ -7062,7 +7075,7 @@
     },
     {
       "PRES": 1010.86,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7070,7 +7083,7 @@
     },
     {
       "PRES": 1010.0,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 91,
       "temp_signal": 568,
@@ -7078,7 +7091,7 @@
     },
     {
       "PRES": 1009.59,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7086,7 +7099,7 @@
     },
     {
       "PRES": 1002.69,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7094,7 +7107,7 @@
     },
     {
       "PRES": 1001.49,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7102,7 +7115,7 @@
     },
     {
       "PRES": 1002.32,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7110,7 +7123,7 @@
     },
     {
       "PRES": 996.08,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -7118,7 +7131,7 @@
     },
     {
       "PRES": 1004.3,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7126,7 +7139,7 @@
     },
     {
       "PRES": 1003.8,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7134,7 +7147,7 @@
     },
     {
       "PRES": 1004.17,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7142,7 +7155,7 @@
     },
     {
       "PRES": 1011.11,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7150,7 +7163,7 @@
     },
     {
       "PRES": 1010.67,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7158,7 +7171,7 @@
     },
     {
       "PRES": 1012.33,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 89,
       "temp_signal": 568,
@@ -7166,7 +7179,7 @@
     },
     {
       "PRES": 1000.59,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7174,7 +7187,7 @@
     },
     {
       "PRES": 997.44,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7182,7 +7195,7 @@
     },
     {
       "PRES": 996.77,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 91,
       "temp_signal": 568,
@@ -7190,7 +7203,7 @@
     },
     {
       "PRES": 997.61,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7198,7 +7211,7 @@
     },
     {
       "PRES": 993.73,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7206,7 +7219,7 @@
     },
     {
       "PRES": 994.39,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7214,7 +7227,7 @@
     },
     {
       "PRES": 996.75,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7222,7 +7235,7 @@
     },
     {
       "PRES": 994.31,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7230,7 +7243,7 @@
     },
     {
       "PRES": 1002.69,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7238,7 +7251,7 @@
     },
     {
       "PRES": 1002.26,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -7246,7 +7259,7 @@
     },
     {
       "PRES": 1001.11,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7254,7 +7267,7 @@
     },
     {
       "PRES": 1003.08,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7262,7 +7275,7 @@
     },
     {
       "PRES": 993.88,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7270,7 +7283,7 @@
     },
     {
       "PRES": 992.54,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 89,
       "temp_signal": 568,
@@ -7278,7 +7291,7 @@
     },
     {
       "PRES": 993.89,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7286,7 +7299,7 @@
     },
     {
       "PRES": 1002.27,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7294,7 +7307,7 @@
     },
     {
       "PRES": 996.82,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7302,7 +7315,7 @@
     },
     {
       "PRES": 995.22,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7310,7 +7323,7 @@
     },
     {
       "PRES": 996.02,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7318,7 +7331,7 @@
     },
     {
       "PRES": 997.17,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7326,7 +7339,7 @@
     },
     {
       "PRES": 1005.46,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7334,7 +7347,7 @@
     },
     {
       "PRES": 1006.02,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7342,7 +7355,7 @@
     },
     {
       "PRES": 1004.8,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7350,7 +7363,7 @@
     },
     {
       "PRES": 1000.03,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7358,7 +7371,7 @@
     },
     {
       "PRES": 999.62,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -7366,7 +7379,7 @@
     },
     {
       "PRES": 999.94,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7374,7 +7387,7 @@
     },
     {
       "PRES": 1003.19,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7382,7 +7395,7 @@
     },
     {
       "PRES": 1002.04,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7390,7 +7403,7 @@
     },
     {
       "PRES": 992.13,
-      "FLUORESCENCE_CHLA470": 51,
+      "FLUORESCENCE_CHLA": 51,
       "FLUORESCENCE_CHLA435": 51,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7398,7 +7411,7 @@
     },
     {
       "PRES": 992.88,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7406,7 +7419,7 @@
     },
     {
       "PRES": 998.94,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7414,7 +7427,7 @@
     },
     {
       "PRES": 1002.21,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7422,7 +7435,7 @@
     },
     {
       "PRES": 1005.68,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7430,7 +7443,7 @@
     },
     {
       "PRES": 1001.87,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7438,7 +7451,7 @@
     },
     {
       "PRES": 999.4,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -7446,7 +7459,7 @@
     },
     {
       "PRES": 1004.7,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7454,7 +7467,7 @@
     },
     {
       "PRES": 1005.82,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7462,7 +7475,7 @@
     },
     {
       "PRES": 1005.42,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7470,7 +7483,7 @@
     },
     {
       "PRES": 1008.33,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7478,7 +7491,7 @@
     },
     {
       "PRES": 1003.71,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 81,
       "temp_signal": 568,
@@ -7486,7 +7499,7 @@
     },
     {
       "PRES": 994.58,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7494,7 +7507,7 @@
     },
     {
       "PRES": 1001.39,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7502,7 +7515,7 @@
     },
     {
       "PRES": 996.91,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7510,7 +7523,7 @@
     },
     {
       "PRES": 1004.54,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7518,7 +7531,7 @@
     },
     {
       "PRES": 1007.24,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7526,7 +7539,7 @@
     },
     {
       "PRES": 1003.15,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7534,7 +7547,7 @@
     },
     {
       "PRES": 1003.75,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7542,7 +7555,7 @@
     },
     {
       "PRES": 1003.74,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7550,7 +7563,7 @@
     },
     {
       "PRES": 1003.08,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7558,7 +7571,7 @@
     },
     {
       "PRES": 1005.78,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 90,
       "temp_signal": 568,
@@ -7566,7 +7579,7 @@
     },
     {
       "PRES": 1007.05,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7574,7 +7587,7 @@
     },
     {
       "PRES": 1003.52,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7582,7 +7595,7 @@
     },
     {
       "PRES": 999.97,
-      "FLUORESCENCE_CHLA470": 56,
+      "FLUORESCENCE_CHLA": 56,
       "FLUORESCENCE_CHLA435": 56,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7590,7 +7603,7 @@
     },
     {
       "PRES": 999.91,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7598,7 +7611,7 @@
     },
     {
       "PRES": 1000.78,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7606,7 +7619,7 @@
     },
     {
       "PRES": 998.7,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7614,7 +7627,7 @@
     },
     {
       "PRES": 997.88,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7622,7 +7635,7 @@
     },
     {
       "PRES": 1005.16,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7630,7 +7643,7 @@
     },
     {
       "PRES": 1003.36,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7638,7 +7651,7 @@
     },
     {
       "PRES": 1008.86,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7646,7 +7659,7 @@
     },
     {
       "PRES": 1009.99,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7654,7 +7667,7 @@
     },
     {
       "PRES": 1014.91,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7662,7 +7675,7 @@
     },
     {
       "PRES": 1010.34,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7670,7 +7683,7 @@
     },
     {
       "PRES": 1007.54,
-      "FLUORESCENCE_CHLA470": 51,
+      "FLUORESCENCE_CHLA": 51,
       "FLUORESCENCE_CHLA435": 51,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -7678,7 +7691,7 @@
     },
     {
       "PRES": 999.81,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7686,7 +7699,7 @@
     },
     {
       "PRES": 1003.92,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 90,
       "temp_signal": 568,
@@ -7694,7 +7707,7 @@
     },
     {
       "PRES": 1004.03,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7702,7 +7715,7 @@
     },
     {
       "PRES": 1004.43,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7710,7 +7723,7 @@
     },
     {
       "PRES": 1007.33,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7718,7 +7731,7 @@
     },
     {
       "PRES": 1004.06,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7726,7 +7739,7 @@
     },
     {
       "PRES": 999.76,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7734,7 +7747,7 @@
     },
     {
       "PRES": 1004.09,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -7742,7 +7755,7 @@
     },
     {
       "PRES": 1003.75,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7750,7 +7763,7 @@
     },
     {
       "PRES": 1010.06,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7758,7 +7771,7 @@
     },
     {
       "PRES": 1009.86,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7766,7 +7779,7 @@
     },
     {
       "PRES": 1006.78,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7774,7 +7787,7 @@
     },
     {
       "PRES": 1003.33,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7782,7 +7795,7 @@
     },
     {
       "PRES": 1005.02,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7790,7 +7803,7 @@
     },
     {
       "PRES": 1000.89,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -7798,7 +7811,7 @@
     },
     {
       "PRES": 1007.08,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7806,7 +7819,7 @@
     },
     {
       "PRES": 1005.88,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -7814,7 +7827,7 @@
     },
     {
       "PRES": 1007.61,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7822,7 +7835,7 @@
     },
     {
       "PRES": 1005.64,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 81,
       "temp_signal": 568,
@@ -7830,7 +7843,7 @@
     },
     {
       "PRES": 1009.96,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7838,7 +7851,7 @@
     },
     {
       "PRES": 1007.82,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7846,7 +7859,7 @@
     },
     {
       "PRES": 1011.63,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7854,7 +7867,7 @@
     },
     {
       "PRES": 1012.18,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7862,7 +7875,7 @@
     },
     {
       "PRES": 1008.15,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7870,7 +7883,7 @@
     },
     {
       "PRES": 1011.02,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -7878,7 +7891,7 @@
     },
     {
       "PRES": 1008.42,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7886,7 +7899,7 @@
     },
     {
       "PRES": 1008.05,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7894,7 +7907,7 @@
     },
     {
       "PRES": 1005.46,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 81,
       "temp_signal": 568,
@@ -7902,7 +7915,7 @@
     },
     {
       "PRES": 1000.7,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 569,
@@ -7910,7 +7923,7 @@
     },
     {
       "PRES": 1009.49,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7918,7 +7931,7 @@
     },
     {
       "PRES": 1001.53,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 569,
@@ -7926,7 +7939,7 @@
     },
     {
       "PRES": 1005.42,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7934,7 +7947,7 @@
     },
     {
       "PRES": 1007.04,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7942,7 +7955,7 @@
     },
     {
       "PRES": 1011.26,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7950,7 +7963,7 @@
     },
     {
       "PRES": 1014.64,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7958,7 +7971,7 @@
     },
     {
       "PRES": 1009.7,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7966,7 +7979,7 @@
     },
     {
       "PRES": 1009.78,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -7974,7 +7987,7 @@
     },
     {
       "PRES": 1011.39,
-      "FLUORESCENCE_CHLA470": 56,
+      "FLUORESCENCE_CHLA": 56,
       "FLUORESCENCE_CHLA435": 56,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -7982,7 +7995,7 @@
     },
     {
       "PRES": 1009.97,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -7990,7 +8003,7 @@
     },
     {
       "PRES": 1011.28,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -7998,7 +8011,7 @@
     },
     {
       "PRES": 1008.02,
-      "FLUORESCENCE_CHLA470": 51,
+      "FLUORESCENCE_CHLA": 51,
       "FLUORESCENCE_CHLA435": 51,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -8006,7 +8019,7 @@
     },
     {
       "PRES": 1007.62,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8014,7 +8027,7 @@
     },
     {
       "PRES": 1012.83,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8022,7 +8035,7 @@
     },
     {
       "PRES": 1006.67,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8030,7 +8043,7 @@
     },
     {
       "PRES": 1004.37,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8038,7 +8051,7 @@
     },
     {
       "PRES": 1006.29,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -8046,7 +8059,7 @@
     },
     {
       "PRES": 1003.57,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8054,7 +8067,7 @@
     },
     {
       "PRES": 1010.01,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8062,7 +8075,7 @@
     },
     {
       "PRES": 1009.03,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8070,7 +8083,7 @@
     },
     {
       "PRES": 1010.39,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8078,7 +8091,7 @@
     },
     {
       "PRES": 1011.9,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -8086,7 +8099,7 @@
     },
     {
       "PRES": 1012.22,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8094,7 +8107,7 @@
     },
     {
       "PRES": 985.92,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8102,7 +8115,7 @@
     },
     {
       "PRES": 986.35,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8110,7 +8123,7 @@
     },
     {
       "PRES": 983.86,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8118,7 +8131,7 @@
     },
     {
       "PRES": 995.36,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 81,
       "temp_signal": 568,
@@ -8126,7 +8139,7 @@
     },
     {
       "PRES": 998.95,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8134,7 +8147,7 @@
     },
     {
       "PRES": 997.86,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -8142,7 +8155,7 @@
     },
     {
       "PRES": 999.14,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 94,
       "temp_signal": 568,
@@ -8150,7 +8163,7 @@
     },
     {
       "PRES": 997.17,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -8158,7 +8171,7 @@
     },
     {
       "PRES": 998.92,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -8166,7 +8179,7 @@
     },
     {
       "PRES": 996.22,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8174,7 +8187,7 @@
     },
     {
       "PRES": 992.41,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8182,7 +8195,7 @@
     },
     {
       "PRES": 999.57,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8190,7 +8203,7 @@
     },
     {
       "PRES": 997.03,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8198,7 +8211,7 @@
     },
     {
       "PRES": 992.29,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8206,7 +8219,7 @@
     },
     {
       "PRES": 989.2,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8214,7 +8227,7 @@
     },
     {
       "PRES": 990.62,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -8222,7 +8235,7 @@
     },
     {
       "PRES": 992.81,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8230,7 +8243,7 @@
     },
     {
       "PRES": 999.53,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8238,7 +8251,7 @@
     },
     {
       "PRES": 1000.11,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8246,7 +8259,7 @@
     },
     {
       "PRES": 995.91,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8254,7 +8267,7 @@
     },
     {
       "PRES": 994.61,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8262,7 +8275,7 @@
     },
     {
       "PRES": 994.25,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8270,7 +8283,7 @@
     },
     {
       "PRES": 995.77,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 88,
       "temp_signal": 568,
@@ -8278,7 +8291,7 @@
     },
     {
       "PRES": 996.19,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8286,7 +8299,7 @@
     },
     {
       "PRES": 996.49,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8294,7 +8307,7 @@
     },
     {
       "PRES": 997.69,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8302,7 +8315,7 @@
     },
     {
       "PRES": 997.32,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8310,7 +8323,7 @@
     },
     {
       "PRES": 996.24,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8318,7 +8331,7 @@
     },
     {
       "PRES": 1000.18,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8326,7 +8339,7 @@
     },
     {
       "PRES": 1000.02,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -8334,7 +8347,7 @@
     },
     {
       "PRES": 1008.12,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 82,
       "temp_signal": 568,
@@ -8342,7 +8355,7 @@
     },
     {
       "PRES": 1003.55,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8350,7 +8363,7 @@
     },
     {
       "PRES": 995.9,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8358,7 +8371,7 @@
     },
     {
       "PRES": 995.75,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8366,7 +8379,7 @@
     },
     {
       "PRES": 994.86,
-      "FLUORESCENCE_CHLA470": 55,
+      "FLUORESCENCE_CHLA": 55,
       "FLUORESCENCE_CHLA435": 55,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8374,7 +8387,7 @@
     },
     {
       "PRES": 994.27,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 85,
       "temp_signal": 568,
@@ -8382,7 +8395,7 @@
     },
     {
       "PRES": 991.92,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 84,
       "temp_signal": 568,
@@ -8390,7 +8403,7 @@
     },
     {
       "PRES": 995.06,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8398,7 +8411,7 @@
     },
     {
       "PRES": 996.55,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8406,7 +8419,7 @@
     },
     {
       "PRES": 996.9,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 86,
       "temp_signal": 568,
@@ -8414,7 +8427,7 @@
     },
     {
       "PRES": 999.66,
-      "FLUORESCENCE_CHLA470": 54,
+      "FLUORESCENCE_CHLA": 54,
       "FLUORESCENCE_CHLA435": 54,
       "BETA_BACKSCATTERING700": 87,
       "temp_signal": 568,
@@ -8422,7 +8435,7 @@
     },
     {
       "PRES": 998.91,
-      "FLUORESCENCE_CHLA470": 53,
+      "FLUORESCENCE_CHLA": 53,
       "FLUORESCENCE_CHLA435": 53,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8430,7 +8443,7 @@
     },
     {
       "PRES": 998.67,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 83,
       "temp_signal": 568,
@@ -8438,7 +8451,7 @@
     },
     {
       "PRES": 1005.98,
-      "FLUORESCENCE_CHLA470": 52,
+      "FLUORESCENCE_CHLA": 52,
       "FLUORESCENCE_CHLA435": 52,
       "BETA_BACKSCATTERING700": 81,
       "temp_signal": 568,

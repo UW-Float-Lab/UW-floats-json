@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.5.5"
+version = "0.6.0"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -414,6 +414,8 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     FLBB = []
     OCR = []
 
+    meta = { "NSample": parseInt(disc_dict.get("N", fill_value), fill_value) }
+
     # check available sensors once and for all
     headers_set = set(disc_dict["headers"])
 
@@ -597,6 +599,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
             if is_OCR:
                 OCR[-1]["remark"] = "parked sample"
 
+    out["meta"] = meta
     out["CTD"] = CTD
     if Optode:
         out["Optodo"] = Optode
@@ -612,10 +615,19 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     return out
 
 
-def parse_discrete_hires(hires_dict, sort=None, fill_value=None, logger=print):
+def parse_discrete_hires(hires_dict, sort=None, fill_value=None, fill_NaT=None, logger=print):
     '''
     Parse high-resolution CTD samples of the float
     '''
+
+    meta = {}
+    trigger = parseDimFloat(hires_dict["trigger"], fill_value)
+    meta["trigger"] = { "value": trigger[0], "unit": trigger[1] }
+    meta["datetime"] = decode_time(hires_dict["datetime"], fill_NaT)
+    meta["instrument"] = hires_dict["instrument"]
+    meta["Serial_Number"] = hires_dict["SerNo"]
+    meta["NSample"] = parseInt(hires_dict["NSample"], fill_value)
+
     out = []
 
     if hires_dict["hex_len"] == 16: # P(4) + T(4) + s(4) + ct(4)
@@ -646,13 +658,25 @@ def parse_discrete_hires(hires_dict, sort=None, fill_value=None, logger=print):
     else:
         logger("Unknown hex legnth. No entries returned")
 
-    return out
+    return out, meta
 
 
-def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
+def parse_continuous(cont_dict, sort=None, fill_value=None, fill_NaT=None, logger=print):
     '''
     Parse continuous CTD samples of the float
     '''
+
+    # metadata
+    meta = {}
+
+    meta["datetime"] = decode_time(cont_dict["datetime"], fill_NaT)
+    meta["instrument"] = cont_dict["instrument"]
+    meta["Serial_Number"] = cont_dict["SerNo"]
+    meta["NSample"] = parseInt(cont_dict["NSample"], fill_value)
+    meta["NBin"] = parseInt(cont_dict["NBin"], fill_value)
+    if "assimilation_model" in cont_dict:
+        meta["assimilation_model"] = cont_dict["assimilation_model"]
+
 
     out = []
 
@@ -708,7 +732,7 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
 
     else:
         logger("Unknown hex legnth. No entries returned")
-        return out
+        return out, meta
 
     if not sort:
         pass
@@ -717,7 +741,7 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
     elif sort.lower().startswith("desc"):
         out.sort(key=lambda x: x["PRES"])
 
-    return out
+    return out, meta
 
 
 def parse_parked(
@@ -1691,7 +1715,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         
                     continuous = {
                         "datetime": rx_match[1],
-                        "model": rx_match[2],
+                        "instrument": rx_match[2],
                         "SerNo": rx_match[3], 
                         "NSample": rx_match[4], 
                         "NBin": rx_match[5]
@@ -1742,7 +1766,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
 
                         discrete_hires |= {
                             "datetime": rx_match[1],
-                            "model": rx_match[2],
+                            "instrument": rx_match[2],
                             "SerNo": rx_match[3], 
                             "NSample": rx_match[4]
                         }
@@ -2396,23 +2420,26 @@ def L0_parser(
         discrete = {}
 
     if "hires_discrete_samples" in msg_dict:
-        hires_discrete = parse_discrete_hires(
+        hires_discrete, hires_meta = parse_discrete_hires(
             msg_dict["hires_discrete_samples"],
-            fill_value=fill_value, logger=logger
+            fill_value=fill_value, fill_NaT=fill_NaT, 
+            logger=logger
         )
         if consume: del msg_dict["hires_discrete_samples"]
     else:
         hires_discrete = []
-
+        hires_meta = {}
 
     if "cont_samples" in msg_dict:
-        continuous = parse_continuous(
+        continuous, meta_continuous = parse_continuous(
             msg_dict["cont_samples"], sort="asc", 
-            fill_value=fill_value, logger=logger
+            fill_value=fill_value, fill_NaT=fill_NaT,
+            logger=logger
         )
         if consume: del msg_dict["cont_samples"]
     else:
         continuous = []
+        meta_continuous = {}
 
     if "ParkPt" in msg_dict:
         parked = parse_parked(
@@ -2478,6 +2505,16 @@ def L0_parser(
     # write out piston adjustments
     if "Piston" in log_out:
         out_dict["Piston"] = log_out["Piston"]
+
+    if "profile_terminated" in msg_dict:
+        out_dict["profile_terminated"] = decode_time(msg_dict["profile_terminated"]["time"], fill_NaT)
+
+    if "meta" in discrete:
+        out_dict["metadata_Discrete"] = discrete["meta"]
+    if hires_meta:
+        out_dict["metadata_Discrete_HiRes"] = hires_meta
+    if meta_continuous:
+        out_dict["metadata_Binned"] = meta_continuous
 
     # Write out CTD data
     if "CTD" in discrete:
