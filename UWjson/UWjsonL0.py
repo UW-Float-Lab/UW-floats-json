@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-version = "0.5.4"
+version = "0.5.5"
 
 import io, re, csv, itertools, operator
 from datetime import datetime, timezone, UTC
@@ -24,7 +24,9 @@ nan = float("nan")
 #### Regular expressions
 
 # regex for parsing dimensionful numbers
-dim_num_rx = re.compile(r"([+-.0-9]+)\s*([a-zA-Z]+)")
+num_str = r"([+-.0-9]+)"
+dim_num_str = r"([+-.0-9]+)\s*([a-zA-Z]+)"
+dim_num_rx = re.compile(dim_num_str)
 
 # regex for various date-time formats
 mmmd_hms_y = r"[A-Z][a-z]{2}\s+[0-9]+\s+[0-9]+:[0-9]+:[0-9]+\s+[0-9]+"
@@ -46,11 +48,20 @@ profile_terminated_rx = re.compile(r"\$ Profile ([0-9]+)\.([0-9]+) terminated: .
 # regex for detecting the start of discrete samples
 discrete_sample_rx = re.compile(r"\$ Discrete samples: ([0-9]+)")
 
+# regex for high resolution discrete samples
+discrete_hires_rx = re.compile(r"# Trigger for high-resolution profile:\s*(.*)$")
+
+# regex for detecting the start of continuous samples
+discrete_hires_rx2 = re.compile(r"#\s+(" + mmmdy_hms + r")\s+(\w+)SerNo\[([0-9]+)\]\s+NSample\[([0-9]+)\]")
+
 # regex for empty discrete profile
 discrete_empty_rx = re.compile(r"# Empty.*? profile.")
 
+# regex for assimilation model
+cont_assim_rx = re.compile(r"# Bin-averaging assimilation model:\s+(.*)$")
+
 # regex for detecting the start of continuous samples
-cont_header_rx = re.compile(r"#\s+" + mmmdy_hms + r"\s+\w+SerNo\[([0-9]+)\]\s+NSample\[([0-9]+)\]\s+NBin\[([0-9]+)\]")
+cont_header_rx = re.compile(r"#\s+(" + mmmdy_hms + r")\s+(\w+)SerNo\[([0-9]+)\]\s+NSample\[([0-9]+)\]\s+NBin\[([0-9]+)\]")
 
 # regex for the body of continuous samples
 cont_data_rx = re.compile(r"([A-F0-9]+)(?:\[([0-9]+)\])?")
@@ -65,7 +76,10 @@ irid_geo_rx = re.compile(r"IridiumGeo: <x,y,z>:\s*([\S]+)\s+([\S]+)\s+([\S]+)\s*
 irid_fix_rx = re.compile(r"IridiumFix: <lon,lat>:\s*([\S]+)\s+([\S]+)\s*IrEpoch:\s*([0-9]+)sec\s*(" + mmdy_hms + ")")
 
 # regex for parked sample
-parkpt_rx = re.compile(r"ParkPt:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+([\S]+)\s+([\S]+)\s+([\S]+)")
+parkpt_rx = re.compile(r"ParkPt:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+
+# regex for parked sample
+parkpts_rx = re.compile(r"ParkPts:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
 
 # regex for parked PT, Flbb sample
 parkptflbb_rx = re.compile(r"ParkPtFlbb:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
@@ -403,6 +417,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     # check available sensors once and for all
     headers_set = set(disc_dict["headers"])
 
+    is_conductivity = False
     is_Aanderaa_optode = False
     is_Sbe83_optode = False
     is_NO3 = False
@@ -416,6 +431,14 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
             headers_set.remove(key)
         except KeyError:
             logger(f"Discrete data column '{key}' expected but not found.")
+
+    if "c" in headers_set:
+        is_conductivity = True
+        headers_set.remove("c")
+        try:
+            headers_set.remove("ct")
+        except KeyError:
+            logger(f"Discrete data column 'ct' expected but not found")
 
     if "TPhase" in headers_set:
         is_Aanderaa_optode = True
@@ -485,17 +508,26 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
             else:
                 OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
 
-    for item in itertools.chain(disc_dict["park_data"], disc_dict["data"]):
+    for item in disc_dict["data"]:
 
         # pressure: always present
         p = parseFloat(item.get("p", fill_value), fill_value)
 
         # CTD data: always present
-        CTD.append({
+        CTD_val = {
             "PRES": p,
             "TEMP": parseFloat(item.get("t", fill_value), fill_value),
             "PSAL": parseFloat(item.get("s", fill_value), fill_value)
-        })
+        }
+
+        # Rbr sensor also reads conductivity and conductivity-temperature
+        if is_conductivity:
+            CTD_val |= {
+                "conductivity": parseFloat(item.get("c", fill_value), fill_value),
+                "conducivitiy_temp": parseFloat(item.get("ct", fill_value), fill_value)
+            }
+
+        CTD.append(CTD_val)
 
         # Aanderaa optode data
         if is_Aanderaa_optode:
@@ -551,6 +583,20 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 OCR3: parseHex(item["Ocr[3]"], fill_value)
             })
 
+        # add remarks to the single park-phase data
+        if "parked" in item:
+            CTD[-1]["remark"] = "parked sample"
+            if is_Aanderaa_optode or is_Sbe83_optode:
+                Optode[-1]["remark"] = "parked sample"
+            if is_NO3:
+                NO3[-1]["remark"] = "parked sample"
+            if is_pH:
+                pH[-1]["remark"] = "parked sample"
+            if is_FLBB or is_FL2BB:
+                FLBB[-1]["remark"] = "parked sample"
+            if is_OCR:
+                OCR[-1]["remark"] = "parked sample"
+
     out["CTD"] = CTD
     if Optode:
         out["Optodo"] = Optode
@@ -566,6 +612,43 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     return out
 
 
+def parse_discrete_hires(hires_dict, sort=None, fill_value=None, logger=print):
+    '''
+    Parse high-resolution CTD samples of the float
+    '''
+    out = []
+
+    if hires_dict["hex_len"] == 16: # P(4) + T(4) + s(4) + ct(4)
+
+        for item in hires_dict["data"]:
+
+            if item == "0" * 16: continue
+
+            tmp = {}
+            tmp["PRES"] = decode_hex(
+                item[:4], cut = 0x8000, scalar = 0.1, dp = 1, 
+                fill_value = fill_value
+            )
+            tmp["TEMP"] = decode_hex(
+                item[4:8], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            tmp["PSAL"] = decode_hex(
+                item[8:12], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            tmp["conductivity_temp"] = decode_hex(
+                item[12:16], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            out.append(tmp)
+
+    else:
+        logger("Unknown hex legnth. No entries returned")
+
+    return out
+
+
 def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
     '''
     Parse continuous CTD samples of the float
@@ -573,7 +656,7 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
 
     out = []
 
-    if cont_dict["hex_len"] == 14:
+    if cont_dict["hex_len"] == 14: # P(4) + T(4) + s(4) + N(2)
 
         for item in cont_dict["data"]:
 
@@ -581,7 +664,7 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
 
             tmp = {}
             tmp["PRES"] = decode_hex(
-                item[:4], cut = 0xf000, scalar = 0.1, dp = 1, 
+                item[:4], cut = 0x8000, scalar = 0.1, dp = 1, 
                 fill_value = fill_value
             )
             tmp["TEMP"] = decode_hex(
@@ -596,11 +679,38 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, logger=print):
 
             out.append(tmp)
 
+    elif cont_dict["hex_len"] == 18: # P(4) + T(4) + s(4) + ct(4) + N(2)
+
+        for item in cont_dict["data"]:
+
+            if item == "0" * 18: continue
+
+            tmp = {}
+            tmp["PRES"] = decode_hex(
+                item[:4], cut = 0x8000, scalar = 0.1, dp = 1, 
+                fill_value = fill_value
+            )
+            tmp["TEMP"] = decode_hex(
+                item[4:8], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            tmp["PSAL"] = decode_hex(
+                item[8:12], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            tmp["conductivity_temp"] = decode_hex(
+                item[12:16], cut = 0xf000, scalar = 0.001, dp = 3, 
+                fill_value = fill_value
+            )
+            tmp["n_samp"] = decode_hex(item[16:], fill_value = fill_value)
+
+            out.append(tmp)
+
     else:
         logger("Unknown hex legnth. No entries returned")
         return out
 
-    if sort is None:
+    if not sort:
         pass
     elif sort.lower().startswith("asc"):
         out.sort(key=lambda x: -x["PRES"])
@@ -630,10 +740,30 @@ def parse_parked(
             p = parseFloat(item["p"], fill_value)
             T = parseFloat(item["t"], fill_value)
             t = decode_time(item["time"], fill_NaT)
-            
+
             CTD.append({
                 "PRES": p,
                 "TEMP": T,
+                "TIME": t
+            })
+            Traj.append({
+                "TIME": t,
+                "PRES": p
+            })
+
+    elif meas_type == "ParkPts":
+
+        for item in park_dict:
+
+            p = parseFloat(item["p"], fill_value)
+            T = parseFloat(item["t"], fill_value)
+            s = parseFloat(item["s"], fill_value)
+            t = decode_time(item["time"], fill_NaT)
+
+            CTD.append({
+                "PRES": p,
+                "TEMP": T,
+                "PSAL": s,
                 "TIME": t
             })
             Traj.append({
@@ -669,7 +799,7 @@ def parse_parked(
             elif "FSig[0]" in item: # FL2BB
                 FLBB.append({
                     "PRES": p,
-                    "FLUORESCENCE_CHLA470": parseInt(item["FSig[0]"], fill_value),
+                    "FLUORESCENCE_CHLA": parseInt(item["FSig[0]"], fill_value),
                     "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
                     "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
                     "temp_signal": parseInt(item["TSig"], fill_value),
@@ -1501,7 +1631,6 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         logger('Duplicated key: "discrete_samples"')
                     
                     discrete = {"N": rx_match[1]}
-                    park_data = []
                     data = []
 
                     # reading header of discrete samples
@@ -1520,15 +1649,13 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         for _i, _name in enumerate(headers):
                             entry[_name] = values[_i]
                         if line.strip().endswith("(Park Sample)"):
-                            park_data.append(entry)
-                        else:
-                            data.append(entry)
+                            entry["parked"] = True
+                        data.append(entry)
                         line = next(lines_iter).rstrip()
 
-                    if park_data or data:
+                    if data:
                         # pack the results
                         discrete["headers"] = headers
-                        discrete["park_data"] = park_data
                         discrete["data"] = data
                         out["discrete_samples"] = discrete
 
@@ -1545,19 +1672,29 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
 
             elif line.startswith("#"):
 
-                # Start of continuous profile
-                if (rx_match := cont_header_rx.match(line)):
+                # alternative start of continuous profile
+                if (rx_match := cont_assim_rx.match(line)):
 
                     if "cont_samples" in out:
+                        out["cont_samples"] |= {"assimilation_model": rx_match[1]}
+                    else:
+                        out["cont_samples"] = {"assimilation_model": rx_match[1]}
+
+                # Start of continuous profile
+                elif (rx_match := cont_header_rx.match(line)):
+
+                    if ("cont_samples" in out) and ("data" in out["cont_samples"]):
                         logger('Duplicated key: "cont_samples"')
 
                     if stage != 2:
                         logger('Science data at wrong stage:' + line)
                         
                     continuous = {
-                        "SerNo": rx_match[1], 
-                        "NSample": rx_match[2], 
-                        "NBin": rx_match[3]
+                        "datetime": rx_match[1],
+                        "model": rx_match[2],
+                        "SerNo": rx_match[3], 
+                        "NSample": rx_match[4], 
+                        "NBin": rx_match[5]
                     }
                     data = []
 
@@ -1579,10 +1716,65 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
 
                     # pack the result
                     continuous["data"] = data
-                    out["cont_samples"] = continuous
+
+                    if "cont_samples" in out:
+                        out["cont_samples"] |= continuous
+                    else:
+                        out["cont_samples"] = continuous
 
                     # rewind one element
                     lines_iter = itertools.chain([line], lines_iter)
+
+                # start of hi-res discrete sample
+                elif (rx_match := discrete_hires_rx.match(line)):
+
+                    if "hires_discrete_samples" in out:
+                        logger('Duplicated key: "hires_discrete_samples"')
+
+                    if stage != 2:
+                        logger('Science data at wrong stage:' + line)
+
+                    discrete_hires = {"trigger": rx_match[1]}
+
+                    # next line: Datetime, Nsample, and NBin
+                    line = next(lines_iter).rstrip()
+                    if (rx_match := discrete_hires_rx2.match(line)):
+
+                        discrete_hires |= {
+                            "datetime": rx_match[1],
+                            "model": rx_match[2],
+                            "SerNo": rx_match[3], 
+                            "NSample": rx_match[4]
+                        }
+
+                        data = []
+
+                        line = next(lines_iter).rstrip()
+
+                        # detect the length of hex data
+                        rx_match = cont_data_rx.match(line)
+                        discrete_hires["hex_len"] = len(rx_match[1])
+                    
+                        while (rx_match := cont_data_rx.match(line)):
+
+                            if (k := rx_match[2]) is not None:
+                                for _i in range(int(k)):
+                                    data.append(rx_match[1])
+                            else:
+                                data.append(rx_match[1])
+                        
+                            line = next(lines_iter).rstrip()
+                        
+                        # pack the result
+                        discrete_hires["data"] = data
+
+                        if "hires_discrete_samples" in out:
+                            out["hires_discrete_samples"] |= discrete_hires
+                        else:
+                            out["hires_discrete_samples"] = discrete_hires
+
+                    lines_iter = itertools.chain([line], lines_iter)
+
 
                 # Start of GPS information
                 elif (rx_match := gps_header_rx.match(line)):
@@ -1657,14 +1849,33 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
 
             # Parked data (Core float)
             elif (rx_match := parkpt_rx.match(line)):
-                parkpt = {
-                    "time": rx_match[1], "epoch": rx_match[2], "mtime": rx_match[3], 
-                    "p": rx_match[4], "t": rx_match[5]
-                }
+                parkpt = {"time": rx_match[1], "epoch": rx_match[2]}
+                nums = rx_match[3].split()
+                if len(nums) == 3: # mtime + p + t
+                    parkpt |= { "mtime": nums[0],
+                        "p": nums[1], "t": nums[2]
+                    }
+                else:
+                    logger("Unrecognized entry length in 'ParkPt' entry")
                 if "ParkPt" in out:
                     out["ParkPt"].append(parkpt)
                 else:
                     out["ParkPt"] = [ parkpt ]
+
+            # Parked data (Core float; PTS variant)
+            elif (rx_match := parkpts_rx.match(line)):
+                parkpts = {"time": rx_match[1], "epoch": rx_match[2]}
+                nums = rx_match[3].split()
+                if len(nums) == 4: # mtime + p + t + s
+                    parkpts |= { "mtime": nums[0],
+                        "p": nums[1], "t": nums[2], "s": nums[3]
+                    }
+                else:
+                    logger("Unrecognized entry length in 'ParkPts' entry")
+                if "ParkPts" in out:
+                    out["ParkPts"].append(parkpts)
+                else:
+                    out["ParkPts"] = [ parkpts ]
 
             # Parked data (Floats with FLBB)
             elif (rx_match := parkptflbb_rx.match(line)):
@@ -1681,6 +1892,8 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         "FSig[0]": nums[3], "FSig[1]": nums[4],
                         "BbSig": nums[5], "TSig": nums[6]
                     }
+                else:
+                    logger("Unrecongized entry length in 'ParkPtFlbb' entry")
                 if "ParkPtFlbb" in out:
                     out["ParkPtFlbb"].append(parkpt)
                 else:
@@ -2107,7 +2320,8 @@ def L0_parser(
     msg_dict, log_dict, dura_dict, isus_dict, cp_dict, 
     AOML_map, WMO_map, OCR_map,
     supp_dict=None, consume=False, 
-    fill_value=None, fill_NaT=None, logger=print
+    fill_value=None, fill_NaT=None, 
+    logger=lambda x: print("[L0 parser] " + x)
 ):
     '''
     Parser for L0 json
@@ -2181,6 +2395,16 @@ def L0_parser(
     else:
         discrete = {}
 
+    if "hires_discrete_samples" in msg_dict:
+        hires_discrete = parse_discrete_hires(
+            msg_dict["hires_discrete_samples"],
+            fill_value=fill_value, logger=logger
+        )
+        if consume: del msg_dict["hires_discrete_samples"]
+    else:
+        hires_discrete = []
+
+
     if "cont_samples" in msg_dict:
         continuous = parse_continuous(
             msg_dict["cont_samples"], sort="asc", 
@@ -2197,6 +2421,13 @@ def L0_parser(
             logger = logger
         )
         if consume: del msg_dict["ParkPt"]
+    elif "ParkPts" in msg_dict:
+        parked = parse_parked(
+            msg_dict["ParkPts"], "ParkPts", 
+            fill_value = fill_value, fill_NaT = fill_NaT,
+            logger = logger
+        )
+        if consume: del msg_dict["ParkPts"]
     elif "ParkPtFlbb" in msg_dict:
         parked = parse_parked(
             msg_dict["ParkPtFlbb"], "ParkPtFlbb", 
@@ -2251,6 +2482,8 @@ def L0_parser(
     # Write out CTD data
     if "CTD" in discrete:
         out_dict["CTD_Discrete"] = discrete["CTD"]
+    if hires_discrete:
+        out_dict["CTD_Discrete_HiRes"] = hires_discrete
     if continuous:
         out_dict["CTD_Binned"] = continuous
     if "CTD" in parked:
@@ -2485,7 +2718,8 @@ if __name__=="__main__":
             msg_dict, log_list, dura_dict, isus_dict, cp_dict,
             AOML_map, WMO_map, OCR_map,
             supp_dict=None, consume=False,
-            fill_value=-999, fill_NaT=None, logger=print
+            fill_value=-999, fill_NaT=None, 
+            logger=lambda x: print("[L0 parser] " + x)
         )
 
         if validator is not None:
