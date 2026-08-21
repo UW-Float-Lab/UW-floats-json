@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-version = "0.6.0"
+version = "0.7.0"
 
-import io, re, csv, itertools, operator
+import io, re, csv, itertools
 from datetime import datetime, timezone, UTC
 
 #### Default configurations
@@ -506,7 +506,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
             OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
             OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
             if OCR_map["OCR3"] == "PAR":
-                OCR3 = "RAW_DOWNWELLING_IRRADIANCE_PAR"
+                OCR3 = "RAW_DOWNWELLING_PAR"
             else:
                 OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
 
@@ -535,7 +535,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
         if is_Aanderaa_optode:
             Optode.append({
                 "PRES": p, 
-                "Temp_optode": parseFloat(item.get("Topt", fill_value), fill_value),
+                "TEMP_DOXY": parseFloat(item.get("Topt", fill_value), fill_value),
                 "TPhase": parseFloat(item.get("TPhase", fill_value), fill_value),
                 "RPhase": parseFloat(item.get("RPhase", fill_value), fill_value)
             })
@@ -543,7 +543,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
         elif is_Sbe83_optode:
             Optode.append({
                 "PRES": p, 
-                "Temp_optode": parseFloat(item.get("T83", fill_value), fill_value),
+                "TEMP_DOXY": parseFloat(item.get("T83", fill_value), fill_value),
                 "Phase": parseFloat(item.get("Phase", fill_value), fill_value)
             })
 
@@ -570,7 +570,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
         elif is_FL2BB:
             FLBB.append({
                 "PRES": p, 
-                "FLUORESCENCE_CHLA470": parseInt(item["FSig[0]"], fill_value),
+                "FLUORESCENCE_CHLA": parseInt(item["FSig[0]"], fill_value),
                 "FLUORESCENCE_CHLA435": parseInt(item["FSig[1]"], fill_value),
                 "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
                 "temp_signal": parseInt(item["TSig"], fill_value)
@@ -602,7 +602,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     out["meta"] = meta
     out["CTD"] = CTD
     if Optode:
-        out["Optodo"] = Optode
+        out["Optode"] = Optode
     if NO3:
         out["NO3"] = NO3
     if pH:
@@ -861,7 +861,7 @@ def parse_AirCal(air_cal_list, OCR_map=None, fill_value=None, fill_NaT=None):
             OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
             OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
             if OCR_map["OCR3"] == "PAR":
-                OCR3 = "RAW_DOWNWELLING_IRRADIANCE_PAR"
+                OCR3 = "RAW_DOWNWELLING_PAR"
             else:
                 OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
 
@@ -874,25 +874,25 @@ def parse_AirCal(air_cal_list, OCR_map=None, fill_value=None, fill_NaT=None):
         if "RPhase" in item: # Aanderaa optode
             Optode.append({
                 "Pres_air": airP,
-                "Pres_CTD": p,
+                "PRES": p,
                 "TIME": t,
-                "Temp_optode": parseFloat(item["optodeT"], fill_value),
+                "TEMP_DOXY": parseFloat(item["optodeT"], fill_value),
                 "TPhase": parseFloat(item["TPhase"], fill_value),
                 "RPhase": parseFloat(item["RPhase"], fill_value)
             })
         elif "Phase" in item: # Sbe83 optode
             Optode.append({
                 "Pres_air": airP,
-                "Pres_CTD": p,
+                "PRES": p,
                 "TIME": t,
-                "Temp_optode": parseFloat(item["Sbe83T"], fill_value),
+                "TEMP_DOXY": parseFloat(item["Sbe83T"], fill_value),
                 "Phase": parseFloat(item["Phase"], fill_value)
             })
 
         if "FSig" in item: # FLBB
             FLBB.append({
                 "Pres_air": airP,
-                "Pres_CTD": p,
+                "PRES": p,
                 "TIME": t,
                 "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value),
                 "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
@@ -901,9 +901,9 @@ def parse_AirCal(air_cal_list, OCR_map=None, fill_value=None, fill_NaT=None):
         elif "FSig[0]" in item: # FL2BB
             FLBB.append({
                 "Pres_air": airP,
-                "Pres_CTD": p,
+                "PRES": p,
                 "TIME": t,
-                "FLUORESCENCE_CHLA470": parseInt(item["FSig[0]"], fill_value),
+                "FLUORESCENCE_CHLA": parseInt(item["FSig[0]"], fill_value),
                 "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
                 "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
                 "temp_signal": parseInt(item["TSig"], fill_value)
@@ -911,7 +911,7 @@ def parse_AirCal(air_cal_list, OCR_map=None, fill_value=None, fill_NaT=None):
         if "Ocr[0]" in item: # OCR
             OCR.append({
                 "Pres_air": airP,
-                "Pres_CTD": p,
+                "PRES": p,
                 "TIME": t,
                 OCR0: parseHex(item["Ocr[0]"], fill_value),
                 OCR1: parseHex(item["Ocr[1]"], fill_value),
@@ -1185,293 +1185,6 @@ def parse_isus_science(line, fill_value=None, fill_NaT=None, logger=print):
     assert len(packed) == out["data_pixel_end"] - out["data_pixel_begin"] + 1
 
     out["packed_data"] = packed
-
-    return out
-
-
-def align_nitrate(
-    msg_nitrate, isus_nitrate, direction, 
-    fill_value=None, fill_NaT=None, logger=print
-):
-
-    out = []
-
-    if direction.lower().startswith("asc"):
-        msg_adv = operator.gt
-    elif direction.lower().startswith("desc"):
-        msg_adv = operator.lt
-    else:
-        logger("Incorrect specification of direction. No entry is processed.")
-        return out
-
-    more_msg = True
-    more_isus = True
-
-    tol = 1e-3
-    spec_len = len(isus_nitrate[0]["packed_data"])
-
-    msg_iter = iter(msg_nitrate)
-    isus_iter = iter(isus_nitrate)
-
-    msg = next(msg_iter)
-    isus = next(isus_iter)
-
-    while True:
-
-        p_msg = msg["PRES"]
-        p_isus = isus["CTD_depth"]
-
-        no3_msg = msg["nitrate_onboard"]
-
-        if isFillValue(no3_msg, fill_value):
-
-            out.append({
-                "PRES": p_msg,
-                "TIME": fill_NaT,
-                "nitrate_onboard": no3_msg,
-                "Spectrum": [fill_value] * spec_len
-            })
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                more_msg = False
-                break
-
-        elif abs(p_msg - p_isus) < tol:
-            
-            out.append({
-                "PRES": p_msg,
-                "TIME": isus["datetime"],
-                "nitrate_onboard": no3_msg,
-                "Spectrum": isus["packed_data"].copy()
-            })
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                more_msg = False
-
-            try:
-                isus = next(isus_iter)
-            except StopIteration:
-                more_isus = False
-
-            if (not more_msg) or (not more_isus):
-                break
-
-        elif msg_adv(p_msg, p_isus):
-
-            out.append({
-                "PRES": p_msg,
-                "TIME": fill_NaT,
-                "nitrate_onboard": no3_msg,
-                "Spectrum": [fill_value] * spec_len
-            })
-
-            logger(f"Unmatched msg entry at PRES={p_msg}")
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                more_msg = False
-                break
-
-        else:
-
-            out.append({
-                "PRES": isus["CTD_depth"], 
-                "TIME": isus["datetime"],
-                "nitrate_onboard": fill_value,
-                "Spectrum": isus["packed_data"].copy()
-            })
-
-            logger(f"Unmatched isus entry at PRES={p_isus}")
-
-            try:
-                isus = next(isus_iter)
-            except StopIteration:
-                more_isus = False
-                break
-
-    if more_isus:
-
-        while True:
-
-            out.append({
-                "PRES": isus["CTD_depth"], 
-                "TIME": isus["datetime"],
-                "nitrate_onboard": fill_value,
-                "Spectrum": isus["packed_data"].copy()
-            })
-
-            logger(f"Unmatched isus entry at PRES={isus['CTD_depth']}")
-            
-            try:
-                isus = next(isus_iter)
-            except StopIteration:
-                break
-
-    if more_msg:
-
-        while True:
-
-            out.append({
-                "PRES": msg["PRES"],
-                "TIME": fill_NaT,
-                "nitrate_onboard": msg["nitrate_onboard"],
-                "Spectrum": [fill_value] * spec_len
-            })
-
-            logger(f"Unmatched msg entry at PRES={msg['PRES']}")
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                break
-
-    return out
-
-
-def align_pH(
-    msg_pH, dura_pH, direction, 
-    fill_value=None, fill_NaT=None, logger=print
-):
-
-    out = []
-
-    if direction.lower().startswith("asc"):
-        msg_adv = operator.gt
-    elif direction.lower().startswith("desc"):
-        msg_adv = operator.lt
-    else:
-        logger("Incorrect specification of direction. No entry is processed.")
-        return out
-
-    more_msg = True
-    more_dura = True
-    
-    tol = 1e-3
-
-    msg_iter = iter(msg_pH)
-    dura_iter = iter(dura_pH)
-
-    msg = next(msg_iter)
-    dura = next(dura_iter)
-
-    while True:
-
-        p_msg = msg["PRES"]
-        p_dura = dura["CTD_depth"]
-
-        pH_msg = msg["pH_V"]
-
-        if isFillValue(pH_msg, fill_value):
-
-            out.append({
-                "PRES": p_msg,
-                "TIME": fill_NaT,
-                "VRS_PH": pH_msg,
-                "VK_PH": fill_value
-            })
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                more_msg = False
-                break
-
-        elif abs(p_msg - p_dura) < tol:
-            
-            out.append({
-                "PRES": p_msg,
-                "TIME": dura["datetime"],
-                "VRS_PH": dura["Vrs_mean"],
-                "VK_PH": dura["Vk_mean"]
-            })
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                more_msg = False
-
-            try:
-                dura = next(dura_iter)
-            except StopIteration:
-                more_dura = False
-
-            if (not more_msg) or (not more_dura):
-                break
-
-        elif msg_adv(p_msg, p_dura):
-            
-            out.append({
-                "PRES": p_msg,
-                "TIME": fill_NaT,
-                "VRS_PH": pH_msg,
-                "VK_PH": fill_value
-            })
-
-            logger(f"Unmatched msg entry at PRES={p_msg}")
-            
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                more_msg = False
-                break
-
-        else:
-
-            out.append({
-                "PRES": dura["CTD_depth"],
-                "TIME": dura["datetime"],
-                "VRS_PH": dura["Vrs_mean"],
-                "VK_PH": dura["Vk_mean"]
-            })
-
-            logger(f"Unmatched dura entry at PRES={p_dura}")
-
-            try:
-                dura = next(dura_iter)
-            except StopIteration:
-                more_dura = False
-                break
-
-    if more_dura:
-
-        while True:
-
-            out.append({
-                "PRES": dura["CTD_depth"], 
-                "TIME": dura["datetime"],
-                "VRS_PH": dura["Vrs_mean"],
-                "VK_PH": dura["Vk_mean"]
-            })
-
-            logger(f"Unmatched dura entry at PRES={dura['CTD_depth']}")
-            
-            try:
-                dura = next(dura_iter)
-            except StopIteration:
-                break
-
-    if more_msg:
-
-        while True:
-
-            out.append({
-                "PRES": msg["PRES"],
-                "TIME": fill_NaT,
-                "VRS_PH": msg["pH_V"],
-                "VK_PH": fill_value
-            })
-
-            logger(f"Unmatched msg entry at PRES={p_msg}")
-
-            try:
-                msg = next(msg_iter)
-            except StopIteration:
-                break
 
     return out
 
@@ -2035,11 +1748,8 @@ def log_tokenizer(
     '''
 
     out_list = []
-    cuts_list = []
 
     out = [] # output list
-    cuts = [] # list of cut points
-    prev_mtime = -1
     EOT_cnt = 0
 
     # read the entire file at once
@@ -2052,18 +1762,13 @@ def log_tokenizer(
     for line in lines:
 
         if (rx_match := log_rx.match(line)):
-            
-            cur_mtime = parseInt(rx_match[2], fill_value)
+
             entry = {
                 "datetime": decode_time(rx_match[1], fill_NaT), 
-                "mission_time": cur_mtime, 
+                "mission_time": parseInt(rx_match[2], fill_value), 
                 "call": rx_match[3], 
                 "message": rx_match[4]
             }
-
-            if (not isFillValue(cur_mtime, fill_value)) and (cur_mtime < prev_mtime):
-                cuts.append(len(out))
-            prev_mtime = cur_mtime
 
             out.append(entry)
 
@@ -2078,9 +1783,7 @@ def log_tokenizer(
         elif line.strip() == "<EOT>":
             EOT_cnt += 1
             out_list.append(out)
-            cuts_list.append(cuts)
             out = []
-            cuts = []
 
         elif line.strip() == "":
             pass
@@ -2091,7 +1794,6 @@ def log_tokenizer(
     # append the last record that possibly has no <EOT>
     if out:
         out_list.append(out)
-        cuts_list.append(cuts)
         logger("Data found after the end of last <EOT>")
 
     # EOT check
@@ -2103,10 +1805,8 @@ def log_tokenizer(
     num_out = len(out_list)
     if num_out == 1:
         out = out_list[0]
-        cuts = cuts_list[0]
     elif num_out == 0:
         out = []
-        cuts = []
     else:
         # find the longest record
         out_lens = [len(_x) for _x in out_list]
@@ -2117,9 +1817,8 @@ def log_tokenizer(
                 max_idx = _i
                 max_len = _x
         out = out_list[max_idx]
-        cuts = out_list[max_idx]
 
-    return (out, cuts)
+    return out
 
 
 def dura_tokenizer(
@@ -2465,24 +2164,6 @@ def L0_parser(
     else:
         parked = {}
 
-    # merge isus and discrete nitrate data
-    if isus_dict is None:
-        nitrate = None
-    else:
-        nitrate = align_nitrate(
-            discrete["NO3"], isus_dict["science_data"], "asc", 
-            fill_value = fill_value, fill_NaT = fill_NaT, logger = logger
-        )
-
-    # merge dura and discrete pH data
-    if dura_dict is None:
-        pH = None
-    else:
-        pH = align_pH(
-            discrete["pH"], dura_dict["science_data"], "asc",
-            fill_value = fill_value, fill_NaT = fill_NaT, logger = logger
-        )
-
     # interpret calibration data
     if "AirCal" in msg_dict:
         air_cal = parse_AirCal(
@@ -2539,9 +2220,7 @@ def L0_parser(
     if "Optode" in air_cal:
         out_dict["DO_Surface"] = air_cal["Optode"]
 
-    if pH is not None:
-        out_dict["pH_Discrete"] = pH
-    elif "pH" in discrete:
+    if "pH" in discrete:
         out_dict["pH_Discrete"] = discrete["pH"]
 
     if "OCR" in discrete:
@@ -2549,9 +2228,7 @@ def L0_parser(
     if "OCR" in air_cal:
         out_dict["OCR_Surface"] = air_cal["OCR"]
 
-    if nitrate is not None:
-        out_dict["NITRATE_Discrete"] = nitrate
-    elif "NO3" in discrete:
+    if "NO3" in discrete:
         out_dict["NITRATE_Discrete"] = discrete["NO3"]
 
     # Write raw mission config and engineering data
@@ -2649,22 +2326,18 @@ if __name__=="__main__":
         if suffix and suffix[1:].isalpha():
             path = path.with_suffix("")
 
-        float_id, cycle = path.name.split(".")
-
-        log1 = path.with_name(path.name + ".log")
-        log2 = path.with_name(f"{float_id}.{int(cycle) + 1:03d}.log")
+        log = path.with_name(path.name + ".log")
         cp = path.with_name(path.name + ".cp")
         dura = path.with_name(path.name + ".dura")
         isus = path.with_name(path.name + ".isus")
 
-        return (log1, log2, cp, dura, isus)
+        return (log, cp, dura, isus)
 
 
     def generate_json(
-        msg_path, aux, align_log=False,
-        out_root=".", nest=False, update=False,
-        validator=None,
-        logger=print
+        msg_path, aux, out_root=".", 
+        nest=False, update=False,
+        validator=None, logger=print
     ):
 
         AOML_map = aux["aoml"]
@@ -2679,24 +2352,22 @@ if __name__=="__main__":
         out_name = make_outfile_stem(stem.name, AOML_map, nest=nest)
         out_path = pathlib.Path(out_root).joinpath(out_name + ".json")
 
-        log1, log2, cp, dura, isus = derive_filenames(msg_path)
+        log, cp, dura, isus = derive_filenames(msg_path)
 
         out_flag = out_path.is_file()
-        log1_flag = log1.is_file()
-        log2_flag = log2.is_file()
+        log_flag = log.is_file()
         cp_flag = cp.is_file()
         dura_flag = dura.is_file()
         isus_flag = isus.is_file()
 
         out_t = out_path.stat().st_mtime if out_flag else 0
         msg_t = msg.stat().st_mtime
-        log1_t = log1.stat().st_mtime if log1_flag else 0
-        log2_t = log2.stat().st_mtime if log2_flag else 0
+        log_t = log.stat().st_mtime if log_flag else 0
         cp_t = cp.stat().st_mtime if cp_flag else 0
         dura_t = dura.stat().st_mtime if dura_flag else 0
         isus_t = isus.stat().st_mtime if isus_flag else 0
 
-        if update and out_t > max(msg_t, log1_t, log2_t, cp_t, dura_t, isus_t):
+        if update and out_t > max(msg_t, log_t, cp_t, dura_t, isus_t):
             logger("Nothing to do. Bail.")
             return None
 
@@ -2704,26 +2375,11 @@ if __name__=="__main__":
             msg, logger=lambda x: logger("[MSG] " + x)
         )
 
-        if log1_flag:
-            if align_log:
-                if log2_flag:
-                    log1_list, cuts1 = log_tokenizer(
-                        log1, fill_value=-999,
-                        logger=lambda x: logger("[LOG] " + x)
-                    )
-                    log2_list, cuts2 = log_tokenizer(
-                        log2, fill_value=-999,
-                        logger=lambda x: logger("[LOG] " + x)
-                    )
-                    log_list = log1_list[cuts1[0]:] + log2_list[:cuts2[0]]
-                else:
-                    logger("Incomplete log. Bail.")
-                    return None
-            else:
-                log_list, cuts1 = log_tokenizer(
-                    log1, fill_value=-999,
-                    logger=lambda x: logger("[LOG] " + x)
-                )
+        if log_flag:
+           log_list = log_tokenizer(
+                log, fill_value=-999,
+                logger=lambda x: logger("[LOG] " + x)
+            )
 
         else:
             log_list = None
@@ -2878,10 +2534,6 @@ if __name__=="__main__":
         help="if true, files that produced error is passed over (as opposed to halt)"
     )
     p_conv.add_argument(
-        "-a", "--align_log", action="store_true",
-        help="if true, process log is aligned first before processing"
-    )
-    p_conv.add_argument(
         "-u", "--update", action="store_true",
         help="update mode: update output only on newer input(s)"
     )
@@ -2985,7 +2637,6 @@ if __name__=="__main__":
                 try:
                     generate_json(
                         _x, aux,
-                        align_log=args.align_log,
                         out_root=args.out_dir,
                         nest=args.nest_output,
                         update=args.update,
@@ -2997,7 +2648,6 @@ if __name__=="__main__":
             else:
                 generate_json(
                     _x, aux,
-                    align_log=args.align_log,
                     out_root=args.out_dir,
                     nest=args.nest_output,
                     update=args.update,
