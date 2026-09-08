@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
-version = "0.7.0"
+version = "0.7.1"
 
 import io, re, csv, itertools
 from datetime import datetime, timezone, UTC
+from decimal import Decimal
 
 #### Default configurations
 
@@ -133,6 +134,34 @@ log_pistonmove_rx = re.compile(
 
 #### Utility functions
 
+
+def count_sigfig(s):
+    '''
+    count the number of significant figures in a standardized string
+    representing a floating-point value
+    '''
+
+    s = s.strip().lower()
+
+    if "e" in s:
+        s = s.split("e")[0]
+
+    if "." in s:
+        digits = s.replace(".", "").lstrip("0")
+        return len(digits)
+
+    digits = s.lstrip("0")
+    digits = digits.rstrip("0")
+    return len(digits)
+
+
+def round_to_sigfig(x, sig):
+    '''
+    Round a number to given number of sig. fig.
+    '''
+    return float(f"{x:.{sig}g}")
+
+
 def isFillValue(val, fill_value=None):
 
     return (val is None) if (fill_value is None) else (val == fill_value)
@@ -164,6 +193,13 @@ def parseFloat(val, fill_value=None):
     Parse a floating-point number string into float. nan is converted to None
     '''
     return fill_value if (val.strip().lower() == "nan") else float(val)
+
+
+def parseDecimal(val, fill_value=None):
+    '''
+    Parse a floating-point number string into Decimal. nan is converted to None
+    '''
+    return fill_value if (val.strip().lower() == "nan") else Decimal(val)
 
 
 def parseDimFloat(val, fill_value=None):
@@ -1137,11 +1173,21 @@ def parse_dura_science(line, dura_type, fill_value=None, fill_NaT=None, logger=p
     out["Vk_mean"] = parseFloat(vals[18], fill_value)
     out["Vk_stdev"] = parseFloat(vals[19], fill_value)
     if dura_type=="MSC3":
-        out["lk"] = 1e-9 * parseFloat(vals[20], fill_value)
-        out["lb"] = 1e-9 * parseFloat(vals[21], fill_value)
+        Ik = parseDecimal(vals[20], None)
+        if Ik is None:
+            out["Ik"] = fill_value
+        else:
+            Ik_s = count_sigfig(vals[20])
+            out["Ik"] = round_to_sigfig(Decimal(1e-9) * Ik, Ik_s)
+        Ib = parseDecimal(vals[21], None)
+        if Ib is None:
+            out["Ib"] = fill_value
+        else:
+            Ib_s = count_sigfig(vals[21])
+            out["Ib"] = round_to_sigfig(Decimal(1e-9) * Ib, Ib_s)
     elif dura_type=="MSC1":
-        out["lk"] = parseFloat(vals[20], fill_value)
-        out["lb"] = parseFloat(vals[21], fill_value)
+        out["Ik"] = parseFloat(vals[20], fill_value)
+        out["Ib"] = parseFloat(vals[21], fill_value)
     else:
         raise ValueError(f'Unknown dura_type "{dura_type}"')
 
