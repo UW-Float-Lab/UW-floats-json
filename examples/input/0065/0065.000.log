@@ -1,0 +1,252 @@
+(Jun 04 2024 17:15:08,    1798 sec) SelfTest()           Executing self-test for NpfId 0065. [FwRev 240319]
+(Jun 04 2024 17:15:08,    1799 sec) SelfTest()           Passed: FatFs volume mounted. [ChaN/ELM Rev 86604]
+(Jun 04 2024 17:15:08,    1799 sec) SelfTest()           Passed: FatFs volume: size(908MB) sector-size(512B) block-size(127B)
+(Jun 04 2024 17:15:09,    1799 sec) SelfTest()           Passed: FatFs volume reconditioned.
+(Jun 04 2024 17:15:09,    1800 sec) BuoyancyAdjustAbsWTO  0920->0912 0919 0918 0917 0916 0915 0914 0913 0912 [48sec, 11.5Volts, 0.012Amps, CPT:0sec]
+(Jun 04 2024 17:15:57,    1848 sec) BuoyancyAdjustAbsWTO  0912->0920 0913 0914 0915 0916 0917 0918 0919 0920 [19sec, 11.2Volts, 0.174Amps, CPT:19sec]
+(Jun 04 2024 17:16:17,    1867 sec) SelfTest()           Passed: Timed buoyancy position movements from 920 to 912 counts and back.
+(Jun 04 2024 17:16:17,    1868 sec) SelfTest()           Initiating ISUS power-up.
+(Jun 04 2024 17:16:18,    1869 sec) SelfTest()           Passed: internal pressure [82, -6.3"Hg] less than threshold [96, -2.2"Hg].
+(Jun 04 2024 17:16:19,    1870 sec) SelfTest()           Hull relative humidity, temperature, VacPerK: [ 0.01%, 22.08C, 0.278]
+(Jun 04 2024 17:16:19,    1870 sec) SelfTest()           Passed: internal VacPerK [0.278] less than threshold [0.325].
+(Jun 04 2024 17:16:21,    1872 sec) SelfTest()           Passed: Response received from SBE41cp.
+(Jun 04 2024 17:16:37,    1887 sec) SelfTest()           Passed: Sbe41cp SerNo: 20156
+(Jun 04 2024 17:16:54,    1904 sec) SelfTest()           Passed: SBE41cp (SerNo 20156) FwRev accepted: [5.5.1]
+(Jun 04 2024 17:18:52,    2023 sec) Sbe41cpConfig()      Sbe41n configuration successful.
+(Jun 04 2024 17:18:57,    2028 sec) Sbe41cpTsWait()      Configuration successful.
+(Jun 04 2024 17:19:02,    2033 sec) Sbe41cpEnableAll()   Full sensor sweep sampling enabled.
+(Jun 04 2024 17:19:02,    2033 sec) SelfTest()           Passed: SBE41cp configuration was successful.
+(Jun 04 2024 17:19:15,    2046 sec) Sbe41cpPOffSet()     Configuration successful: POffset(0.0).
+(Jun 04 2024 17:19:16,    2046 sec) SelfTest()           Passed: SBE41cp pressure-offset initialized to zero.
+(Jun 04 2024 17:19:18,    2048 sec) Sbe41cpCompressMode( Sbe41cp CP compression disabled.
+(Jun 04 2024 17:19:24,    2054 sec) Sbe41cpLogCal()      SBE 41N V 5.5.1  SERIAL NO. 20156
+(Jun 04 2024 17:19:24,    2055 sec) Sbe41cpLogCal()      temperature_1:  22-Mar-24
+(Jun 04 2024 17:19:24,    2055 sec) Sbe41cpLogCal()          TA0 = -9.563993e-04
+(Jun 04 2024 17:19:25,    2055 sec) Sbe41cpLogCal()          TA1 = 2.957194e-04
+(Jun 04 2024 17:19:25,    2056 sec) Sbe41cpLogCal()          TA2 = -3.491501e-06
+(Jun 04 2024 17:19:25,    2056 sec) Sbe41cpLogCal()          TA3 = 1.513153e-07
+(Jun 04 2024 17:19:26,    2056 sec) Sbe41cpLogCal()      temperature_2:  22-Mar-24
+(Jun 04 2024 17:19:26,    2057 sec) Sbe41cpLogCal()          TA0 = -8.163393e-04
+(Jun 04 2024 17:19:26,    2057 sec) Sbe41cpLogCal()          TA1 = 2.916159e-04
+(Jun 04 2024 17:19:27,    2057 sec) Sbe41cpLogCal()          TA2 = -3.680900e-06
+(Jun 04 2024 17:19:27,    2058 sec) Sbe41cpLogCal()          TA3 = 1.489342e-07
+(Jun 04 2024 17:19:27,    2058 sec) Sbe41cpLogCal()      conductivity: 22-Mar-24
+(Jun 04 2024 17:19:27,    2058 sec) Sbe41cpLogCal()          G = -1.011142e+00
+(Jun 04 2024 17:19:28,    2058 sec) Sbe41cpLogCal()          H = 1.515114e-01
+(Jun 04 2024 17:19:28,    2059 sec) Sbe41cpLogCal()          I = -1.592765e-04
+(Jun 04 2024 17:19:28,    2059 sec) Sbe41cpLogCal()          J = 3.247835e-05
+(Jun 04 2024 17:19:29,    2059 sec) Sbe41cpLogCal()          WBOTC = 7.091380e-07
+(Jun 04 2024 17:19:29,    2060 sec) Sbe41cpLogCal()          CTCOR = 3.250000e-06
+(Jun 04 2024 17:19:29,    2060 sec) Sbe41cpLogCal()          CPCOR = -9.570000e-08
+(Jun 04 2024 17:19:30,    2060 sec) Sbe41cpLogCal()      pressure S/N = 12607254, range = 2900 psia:  18-Mar-24
+(Jun 04 2024 17:19:30,    2061 sec) Sbe41cpLogCal()          PA0 = 4.988259e-01
+(Jun 04 2024 17:19:31,    2061 sec) Sbe41cpLogCal()          PA1 = 3.925454e-04
+(Jun 04 2024 17:19:31,    2061 sec) Sbe41cpLogCal()          PA2 = -2.817318e-13
+(Jun 04 2024 17:19:31,    2062 sec) Sbe41cpLogCal()          PTCA0 = 2.530709e+03
+(Jun 04 2024 17:19:31,    2062 sec) Sbe41cpLogCal()          PTCA1 = 1.191437e+02
+(Jun 04 2024 17:19:32,    2062 sec) Sbe41cpLogCal()          PTCA2 = -2.791080e+00
+(Jun 04 2024 17:19:32,    2063 sec) Sbe41cpLogCal()          PTCB0 = 3.218690e+05
+(Jun 04 2024 17:19:32,    2063 sec) Sbe41cpLogCal()          PTCB1 = 2.510754e+00
+(Jun 04 2024 17:19:33,    2063 sec) Sbe41cpLogCal()          PTCB2 = 1.001901e-02
+(Jun 04 2024 17:19:33,    2064 sec) Sbe41cpLogCal()          PTHA0 = -7.177080e+01
+(Jun 04 2024 17:19:33,    2064 sec) Sbe41cpLogCal()          PTHA1 = 5.169855e-02
+(Jun 04 2024 17:19:34,    2064 sec) Sbe41cpLogCal()          PTHA2 = -5.253713e-07
+(Jun 04 2024 17:19:34,    2065 sec) Sbe41cpLogCal()          POFFSET = 0.000000e+00
+(Jun 04 2024 17:19:45,    2076 sec) SelfTest()           Passed: LBT model: 9523N
+(Jun 04 2024 17:19:46,    2077 sec) SelfTest()           Passed: LBT firmware revision: DB17011
+(Jun 04 2024 17:19:47,    2078 sec) IrModemConfigure()   Modem configured for fixed (19200) baud rate.
+(Jun 04 2024 17:19:48,    2078 sec) IrModemConfigure()   Configuration saved to modem's NVRAM.
+(Jun 04 2024 17:19:48,    2079 sec) IrModemConfigure()   Modem configuration successful.
+(Jun 04 2024 17:19:48,    2079 sec) SelfTest()           Passed: LBT configuration was successful.
+(Jun 04 2024 17:19:49,    2080 sec) SelfTest()           Passed: LBT IMEI: 300125062552300
+(Jun 04 2024 17:19:55,    2086 sec) SelfTest()           Passed: SIM card ICCID: 8988169234005116017
+(Jun 04 2024 17:19:57,    2088 sec) ConfigGarmin15()     Garmin GPS15 configuration initiated.
+(Jun 04 2024 17:20:07,    2098 sec) pgrmo()              Attempt to configure Garmin GPS15 failed.
+(Jun 04 2024 17:20:08,    2098 sec) ConfigGarmin15()     Attempt to disable all NMEA sentences failed.
+(Jun 04 2024 17:20:14,    2105 sec) ConfigGarmin15()     Garmin GPS15 successfully configured.
+(Jun 04 2024 17:20:38,    2128 sec) SelfTest()           Passed: OptOxSen SerNo: 0100
+(Jun 04 2024 17:20:49,    2140 sec) SelfTest()           OptOxSen Model: SBE83 rev B
+(Jun 04 2024 17:21:11,    2161 sec) O2SensConfig()       Configuration successful.
+(Jun 04 2024 17:21:11,    2162 sec) SelfTest()           Passed: OptOxSen configuration was successful.
+(Jun 04 2024 17:21:15,    2165 sec) O2SensLogConfig()    Model               =   SBE83 rev B
+(Jun 04 2024 17:21:15,    2166 sec) O2SensLogConfig()    Serial#             =   0100
+(Jun 04 2024 17:21:16,    2166 sec) O2SensLogConfig()    PCBID Analog        =   42073 SN278697
+(Jun 04 2024 17:21:16,    2167 sec) O2SensLogConfig()    PCBID Digital       =   42074 SN278619
+(Jun 04 2024 17:21:16,    2167 sec) O2SensLogConfig()    Sensor Film Serial# =   0000
+(Jun 04 2024 17:21:17,    2167 sec) O2SensLogConfig()    Firmware Rev        =   4.2.2 Dec 29 2020 11:06:40
+(Jun 04 2024 17:21:17,    2168 sec) O2SensLogConfig()    Firmware Loader Ver =   SBE 63 FirmwareLoader V 1.0
+(Jun 04 2024 17:21:18,    2168 sec) O2SensLogConfig()    MFG days +1/1/2000  =   8788
+(Jun 04 2024 17:21:18,    2169 sec) O2SensLogConfig()    CAL days +1/1/2000  =   8809
+(Jun 04 2024 17:21:18,    2169 sec) O2SensLogConfig()    Supply Voltage      =   8.09
+(Jun 04 2024 17:21:19,    2169 sec) O2SensLogConfig()    Baudrate            =   9600
+(Jun 04 2024 17:21:19,    2170 sec) O2SensLogConfig()    Analog Gain         =   02
+(Jun 04 2024 17:21:19,    2170 sec) O2SensLogConfig()    Analog Offset       =   00
+(Jun 04 2024 17:21:20,    2170 sec) O2SensLogConfig()    Blue On-time [sec]  =   9
+(Jun 04 2024 17:21:20,    2171 sec) O2SensLogConfig()    Samples Averaged    =   02
+(Jun 04 2024 17:21:20,    2171 sec) O2SensLogConfig()    Sample Intvl [sec]  =   0004
+(Jun 04 2024 17:21:21,    2171 sec) O2SensLogConfig()    Boot Delay [sec]    =   004
+(Jun 04 2024 17:21:21,    2172 sec) O2SensLogConfig()    Output format       =   01
+(Jun 04 2024 17:21:21,    2172 sec) O2SensLogConfig()    Autorun [0/1]       =   0
+(Jun 04 2024 17:21:22,    2172 sec) O2SensLogConfig()    BlueTUpdate [0/1]   =   0
+(Jun 04 2024 17:21:22,    2173 sec) O2SensLogConfig()    SerPause [0/1]      =   0
+(Jun 04 2024 17:21:22,    2173 sec) O2SensLogConfig()    Echo [0/1]          =   1
+(Jun 04 2024 17:21:23,    2173 sec) O2SensLogConfig()    TxPwrsave [0/1]     =   1
+(Jun 04 2024 17:21:23,    2174 sec) O2SensLogConfig()    Flags               =   0x62
+(Jun 04 2024 17:21:33,    2183 sec) O2SensLogCoef()      Caldate =    8809
+(Jun 04 2024 17:21:33,    2184 sec) O2SensLogCoef()      A0     =    +1.051300e+00
+(Jun 04 2024 17:21:33,    2184 sec) O2SensLogCoef()      A1     =    -1.500000e-03
+(Jun 04 2024 17:21:34,    2184 sec) O2SensLogCoef()      A2     =    +4.381100e-01
+(Jun 04 2024 17:21:34,    2185 sec) O2SensLogCoef()      B0     =    -2.595600e-01
+(Jun 04 2024 17:21:34,    2185 sec) O2SensLogCoef()      B1     =    +1.683900e+00
+(Jun 04 2024 17:21:35,    2185 sec) O2SensLogCoef()      C0     =    +1.002800e-01
+(Jun 04 2024 17:21:35,    2186 sec) O2SensLogCoef()      C1     =    +4.174800e-03
+(Jun 04 2024 17:21:35,    2186 sec) O2SensLogCoef()      C2     =    +5.829599e-05
+(Jun 04 2024 17:21:36,    2186 sec) O2SensLogCoef()      E      =    +1.100000e-02
+(Jun 04 2024 17:21:36,    2187 sec) O2SensLogCoef()      TA0    =    +6.973800e-04
+(Jun 04 2024 17:21:36,    2187 sec) O2SensLogCoef()      TA1    =    +2.530400e-04
+(Jun 04 2024 17:21:37,    2187 sec) O2SensLogCoef()      TA2    =    +4.932099e-07
+(Jun 04 2024 17:21:37,    2188 sec) O2SensLogCoef()      TA3    =    +1.045500e-07
+(Jun 04 2024 17:21:37,    2188 sec) O2SensLogCoef()      SOLB0  =    -6.245230e-03
+(Jun 04 2024 17:21:38,    2188 sec) O2SensLogCoef()      SOLB1  =    -7.376141e-03
+(Jun 04 2024 17:21:38,    2189 sec) O2SensLogCoef()      SOLB2  =    -1.034100e-02
+(Jun 04 2024 17:21:38,    2189 sec) O2SensLogCoef()      SOLB3  =    -8.170830e-03
+(Jun 04 2024 17:21:39,    2189 sec) O2SensLogCoef()      SOLC0  =    -4.886820e-07
+(Jun 04 2024 17:21:39,    2190 sec) O2SensLogCoef()      RefSal =    +0.000000e+00
+(Jun 04 2024 17:21:39,    2190 sec) O2SensLogCoef()      RefP   =    +0.000000e+00
+(Jun 04 2024 17:21:40,    2190 sec) O2SensLogCoef()      TAU20  =    +5.500000e+00
+(Jun 04 2024 17:21:49,    2200 sec) SelfTest()           Passed: MCOMS SerNo: 0499
+(Jun 04 2024 17:21:53,    2203 sec) SelfTest()           Passed: MCOMS FwRev accepted: [MCOMS 5.45]
+(Jun 04 2024 17:21:58,    2209 sec) McomsConfig()        MCOMS configuration successful.
+(Jun 04 2024 17:21:59,    2210 sec) SelfTest()           Passed: MCOMS configuration was successful.
+(Jun 04 2024 17:22:05,    2215 sec) SelfTest()           Passed: OCR504 SerNo: 2440
+(Jun 04 2024 17:22:10,    2220 sec) SelfTest()           Passed: OCR504 FwRev accepted: [5.1.0]
+(Jun 04 2024 17:22:28,    2238 sec) Ocr504Config()       OCR504 Configuration successful.
+(Jun 04 2024 17:22:29,    2239 sec) SelfTest()           Passed: OCR504 configuration was successful.
+(Jun 04 2024 17:22:32,    2243 sec) Ocr504LogConfig()    OCR-504 configuration:
+(Jun 04 2024 17:22:33,    2243 sec) Ocr504LogConfig()       sensor type: irradiance
+(Jun 04 2024 17:22:33,    2244 sec) Ocr504LogConfig()       serial number: 2440
+(Jun 04 2024 17:22:33,    2244 sec) Ocr504LogConfig()       frame type: short
+(Jun 04 2024 17:22:34,    2244 sec) Ocr504LogConfig()       header: satai4
+(Jun 04 2024 17:22:34,    2245 sec) Ocr504LogConfig()       telemetry baud rate: 9600 bps
+(Jun 04 2024 17:22:34,    2245 sec) Ocr504LogConfig()       maximum frame rate: 1 hz
+(Jun 04 2024 17:22:35,    2245 sec) Ocr504LogConfig()       initialize silent mode: on
+(Jun 04 2024 17:22:35,    2246 sec) Ocr504LogConfig()       initialize power down: off
+(Jun 04 2024 17:22:35,    2246 sec) Ocr504LogConfig()       initialize automatic telemetry: on
+(Jun 04 2024 17:22:36,    2246 sec) Ocr504LogConfig()       network mode: off
+(Jun 04 2024 17:22:36,    2247 sec) Ocr504LogConfig()       network address: 001
+(Jun 04 2024 17:22:36,    2247 sec) Ocr504LogConfig()       network baud rate: 9600 bps
+(Jun 04 2024 17:22:37,    2247 sec) Ocr504LogConfig()       averaging: on
+(Jun 04 2024 17:22:37,    2248 sec) Ocr504LogConfig()       immersed: on
+(Jun 04 2024 17:22:37,    2248 sec) Ocr504LogConfig()       calibrated output: off
+(Jun 04 2024 17:22:38,    2248 sec) Ocr504LogConfig()       sensor latency: 0
+(Jun 04 2024 17:22:38,    2249 sec) Ocr504LogConfig()       cal coefficients: 
+(Jun 04 2024 17:22:38,    2249 sec) Ocr504LogConfig()        optical channel 1: 
+(Jun 04 2024 17:22:39,    2249 sec) Ocr504LogConfig()       	a0:2147186701.9 [2147186701]
+(Jun 04 2024 17:22:39,    2250 sec) Ocr504LogConfig()       	a1:1.57295438279e-007 [1.57295e-07]
+(Jun 04 2024 17:22:39,    2250 sec) Ocr504LogConfig()       	im:1.161 [1.161]
+(Jun 04 2024 17:22:40,    2250 sec) Ocr504LogConfig()        optical channel 2: 
+(Jun 04 2024 17:22:40,    2251 sec) Ocr504LogConfig()       	a0:2146882150.9 [2146882150]
+(Jun 04 2024 17:22:40,    2251 sec) Ocr504LogConfig()       	a1:1.93785635866e-007 [1.93785e-07]
+(Jun 04 2024 17:22:41,    2251 sec) Ocr504LogConfig()       	im:1.410 [1.41]
+(Jun 04 2024 17:22:41,    2252 sec) Ocr504LogConfig()        optical channel 3: 
+(Jun 04 2024 17:22:41,    2252 sec) Ocr504LogConfig()       	a0:2146083899.8 [2146083899]
+(Jun 04 2024 17:22:42,    2252 sec) Ocr504LogConfig()       	a1:1.87304761785e-007 [1.87304e-07]
+(Jun 04 2024 17:22:42,    2253 sec) Ocr504LogConfig()       	im:1.365 [1.365]
+(Jun 04 2024 17:22:42,    2253 sec) Ocr504LogConfig()        optical channel 4: 
+(Jun 04 2024 17:22:43,    2253 sec) Ocr504LogConfig()       	a0:2148643939.6 [2148643939]
+(Jun 04 2024 17:22:43,    2254 sec) Ocr504LogConfig()       	a1:2.06215817413e-007 [2.06215e-07]
+(Jun 04 2024 17:22:43,    2254 sec) Ocr504LogConfig()       	im:1.372 [1.372]
+(Jun 04 2024 17:22:46,    2257 sec) SelfTest()           Passed: Ocr504 configuration logged.
+(Jun 04 2024 17:22:50,    2261 sec) SelfTest()           Passed: DuraFET pH SerNo: 721-00117
+(Jun 04 2024 17:22:57,    2268 sec) PhConfig()           PH configuration successful.
+(Jun 04 2024 17:22:58,    2269 sec) SelfTest()           Passed: DuraFET pH configuration was successful.
+(Jun 04 2024 17:23:25,    2296 sec) SelfTest()           Passed: ISUS initialization successful.
+(Jun 04 2024 17:23:26,    2297 sec) SelfTest()           Passed: ISUS RTC initialized.
+(Jun 04 2024 17:23:27,    2298 sec) IsusConfigLog_()     H, SUNA Serial    Number , SN:2264
+(Jun 04 2024 17:23:28,    2298 sec) IsusConfigLog_()     H, Application      Name , SUNA-V2
+(Jun 04 2024 17:23:28,    2298 sec) IsusConfigLog_()     H, Firmware      Version , 2.2.14
+(Jun 04 2024 17:23:28,    2299 sec) IsusConfigLog_()     H, App Build        Date , Aug 30 2013, 10:43:21
+(Jun 04 2024 17:23:28,    2299 sec) IsusConfigLog_()     H, Operating        Mode , APF
+(Jun 04 2024 17:23:29,    2299 sec) IsusConfigLog_()     H, Power Up Time   (UTC) , 06/04/2024 17:16:18
+(Jun 04 2024 17:23:29,    2300 sec) IsusConfigLog_()     H, Current  Time   (UTC) , 06/04/2024 17:23:26
+(Jun 04 2024 17:23:29,    2300 sec) IsusConfigLog_()     H, Power Active  Timeout , 10
+(Jun 04 2024 17:23:30,    2300 sec) IsusConfigLog_()     H, Power Cycle   Counter , 0
+(Jun 04 2024 17:23:30,    2301 sec) IsusConfigLog_()     H, System Reset  Counter , 0
+(Jun 04 2024 17:23:30,    2301 sec) IsusConfigLog_()     H, Sample Record Counter , 0
+(Jun 04 2024 17:23:30,    2301 sec) IsusConfigLog_()     H, Last Sample Rec. Time , 01/01/1970 00:00:00
+(Jun 04 2024 17:23:31,    2301 sec) IsusConfigLog_()     H, Error Record  Counter , 0
+(Jun 04 2024 17:23:31,    2302 sec) IsusConfigLog_()     H, Last Error Event Type , 0
+(Jun 04 2024 17:23:31,    2302 sec) IsusConfigLog_()     H, Last Error Event Time , 01/01/1970 00:00:00
+(Jun 04 2024 17:23:31,    2302 sec) IsusConfigLog_()     H, Fiberlite    Odometer , 0050:00:38
+(Jun 04 2024 17:23:32,    2302 sec) IsusConfigLog_()     H, Calibration      File , SNA2264B.CAL
+(Jun 04 2024 17:23:32,    2303 sec) IsusConfigLog_()     H, Spec Integration Time , 300
+(Jun 04 2024 17:23:32,    2303 sec) IsusConfigLog_()     H, Wavelength Fit  Range , 217.00 <-> 240.00
+(Jun 04 2024 17:23:33,    2303 sec) IsusConfigLog_()     H, Fitted Concentrations , 2
+(Jun 04 2024 17:23:33,    2304 sec) IsusConfigLog_()     H, Baseline        Model , 1
+(Jun 04 2024 17:23:33,    2304 sec) IsusConfigLog_()     H, Br Temp  Compensation , On
+(Jun 04 2024 17:23:33,    2304 sec) IsusConfigLog_()     H, Bromide Term in Model , will be FIXED (to external CTD value)
+(Jun 04 2024 17:23:34,    2305 sec) IsusConfigLog_()     H, Absorbance     Cutoff , 10.000000
+(Jun 04 2024 17:23:34,    2305 sec) IsusConfigLog_()     H, Zeiss Coefficient Vals, 1.882030e+02, 7.974720e-01, 1.353620e-04, -3.165360e-07
+(Jun 04 2024 17:23:38,    2308 sec) SelfTest()           Passed: Query for ISUS configuration.
+(Jun 04 2024 17:23:40,    2311 sec) SelfTest()           Passed: ISUS serial number accepted: [2264]
+(Jun 04 2024 17:23:43,    2314 sec) SelfTest()           Passed: ISUS FwRev accepted: [Aug 30 2013, 10:43:21]
+(Jun 04 2024 17:23:46,    2317 sec) SelfTest()           Passed: ISUS TimeOut(10Hr) accepted.
+(Jun 04 2024 17:24:05,    2336 sec) IsusConfig()         Passed: ISUS constraints ok.
+(Jun 04 2024 17:24:19,    2349 sec) IsusConfig()         ISUS sanity checks ok.
+(Jun 04 2024 17:24:19,    2350 sec) IsusConfig()         Waiting for ISUS to reboot...done.
+(Jun 04 2024 17:24:39,    2370 sec) SelfTest()           Passed: ISUS configuration OK.
+(Jun 04 2024 17:24:47,    2378 sec) PActivateInit()      Self-test passed.
+(Jun 04 2024 17:24:47,    2378 sec) PActivateInit()      Pressure activation mode initiated. [itime=2378]
+(Jun 04 2024 17:24:47,       0 sec) BuoyancyAdjustAbsWTO  0920->0345 0919 0918 0917 0916 0915 0914 0913 0912 0911 0910 0909 0908 0907 0906 0905 0904 0903 0902 0901 0900 0899 0898 0897 0896 0895 0894 0893 0892 0891 0890 0889 0888 0887 0886 0885 0884 0883 0882 0881 0880 0879 0878 0877 0876 0875 0874 0873 0872 0871 0870 0869 0868 0867 0866 0865 0864 0863 0862 0861 0860 0859 0858 0857 0856 0855 0854 0853 0852 0851 0850 0849 0848 0847 0846 0845 0844 0843 0842 0841 0840 0839 0838 0837 0836 0835 0834 0833 0832 0831 0830 0829 0828 0827 0826 0825 0824 0823 0822 0821 0820 0819 0818 0817 0816 0815 0814 0813 0812 0811 0810 0809 0808 0807 0806 0805 0804 0803 0802 0801 0800 0799 0798 0797 0796 0795 0794 0793 0792 0791 0790 0789 0788 0787 0786 0785 0784 0783 0782 0781 0780 0779 0778 0777 0776 0775 0774 0773 0772 0771 0770 0769 0768 0767 0766 0765 0764 0763 0762 0761 0760 0759 0758 0757 0756 0755 0754 0753 0752 0751 0750 0749 0748 0747 0746 0745 0744 0743 0742 0741 0740 0739 0738 0737 0736 0735 0734 0733 0732 0731 0730 0729 0728 0727 0726 0725 0724 0723 0722 0721 0720 0719 0718 0717 0716 0715 0714 0713 0712 0711 0710 0709 0708 0707 0706 0705 0704 0703 0702 0701 0700 0699 0698 0697 0696 0695 0694 0693 0692 0691 0690 0689 0688 0687 0686 0685 0684 0683 0682 0681 0680 0679 0678 0677 0676 0675 0674 0673 0672 0671 0670 0669 0668 0667 0666 0665 0664 0663 0662 0661 0660 0659 0658 0657 0656 0655 0654 0653 0652 0651 0650 0649 0648 0647 0646 0645 0644 0643 0642 0641 0640 0639 0638 0637 0636 0635 0634 0633 0632 0631 0630 0629 0628 0627 0626 0625 0624 0623 0622 0621 0620 0619 0618 0617 0616 0615 0614 0613 0612 0611 0610 0609 0608 0607 0606 0605 0604 0603 0602 0601 0600 0599 0598 0597 0596 0595 0594 0593 0592 0591 0590 0589 0588 0587 0586 0585 0584 0583 0582 0581 0580 0579 0578 0577 0576 0575 0574 0573 0572 0571 0570 0569 0568 0567 0566 0565 0564 0563 0562 0561 0560 0559 0558 0557 0556 0555 0554 0553 0552 0551 0550 0549 0548 0547 0546 0545 0544 0543 0542 0541 0540 0539 0538 0537 0536 0535 0534 0533 0532 0531 0530 0529 0528 0527 0526 0525 0524 0523 0522 0521 0520 0519 0518 0517 0516 0515 0514 0513 0512 0511 0510 0509 0508 0507 0506 0505 0504 0503 0502 0501 0500 0499 0498 0497 0496 0495 0494 0493 0492 0491 0490 0489 0488 0487 0486 0485 0484 0483 0482 0481 0480 0479 0478 0477 0476 0475 0474 0473 0472 0471 0470 0469 0468 0467 0466 0465 0464 0463 0462 0461 0460 0459 0458 0457 0456 0455 0454 0453 0452 0451 0450 0449 0448 0447 0446 0445 0444 0443 0442 0441 0440 0439 0438 0437 0436 0435 0434 0433 0432 0431 0430 0429 0428 0427 0426 0425 0424 0423 0422 0421 0420 0419 0418 0417 0416 0415 0414 0413 0412 0411 0410 0409 0408 0407 0406 0405 0404 0403 0402 0401 0400 0399 0398 0397 0396 0395 0394 0393 0392 0391 0390 0389 0388 0387 0386 0385 0384 0383 0382 0381 0380 0379 0378 0377 0376 0375 0374 0373 0372 0371 0370 0369 0368 0367 0366 0365 0364 0363 0362 0361 0360 0359 0358 0357 0356 0355 0354 0353 0352 0351 0350 0349 0348 0347 0346 0345 [4049sec, 11.6Volts, 0.012Amps, CPT:19sec]
+(Jun 04 2024 18:33:00,    4093 sec) NpfInit()            Wake-up initiated by connected console.
+(Jul 10 2024 00:13:10, 3049211 sec) PActivate()          Pressure activation triggered. P=679.0dbar.
+(Jul 10 2024 00:13:10,       0 sec) PreludeInit()        Mission restarted. [pid=0, itime=3049211]
+(Jul 10 2024 00:13:10,       0 sec) BuoyancyAdjustAbsWTO  0346->0920 0347 0348 0349 0350 0351 0352 0353 0354 0355 0356 0357 0358 0359 0360 0361 0362 0363 0364 0365 0366 0367 0368 0369 0370 0371 0372 0373 0374 0375 0376 0377 0378 0379 0380 0381 0382 0383 0384 0385 0386 0387 0388 0389 0390 0391 0392 0393 0394 0395 0396 0397 0398 0399 0400 0401 0402 0403 0404 0405 0406 0407 0408 0409 0410 0411 0412 0413 0414 0415 0416 0417 0418 0419 0420 0421 0422 0423 0424 0425 0426 0427 0428 0429 0430 0431 0432 0433 0434 0435 0436 0437 0438 0439 0440 0441 0442 0443 0444 0445 0446 0447 0448 0449 0450 0451 0452 0453 0454 0455 0456 0457 0458 0459 0460 0461 0462 0463 0464 0465 0466 0467 0468 0469 0470 0471 0472 0473 0474 0475 0476 0477 0478 0479 0480 0481 0482 0483 0484 0485 0486 0487 0488 0489 0490 0491 0492 0493 0494 0495 0496 0497 0498 0499 0500 0501 0502 0503 0504 0505 0506 0507 0508 0509 0510 0511 0512 0513 0514 0515 0516 0517 0518 0519 0520 0521 0522 0523 0524 0525 0526 0527 0528 0529 0530 0531 0532 0533 0534 0535 0536 0537 0538 0539 0540 0541 0542 0543 0544 0545 0546 0547 0548 0549 0550 0551 0552 0553 0554 0555 0556 0557 0558 0559 0560 0561 0562 0563 0564 0565 0566 0567 0568 0569 0570 0571 0572 0573 0574 0575 0576 0577 0578 0579 0580 0581 0582 0583 0584 0585 0586 0587 0588 0589 0590 0591 0592 0593 0594 0595 0596 0597 0598 0599 0600 0601 0602 0603 0604 0605 0606 0607 0608 0609 0610 0611 0612 0613 0614 0615 0616 0617 0618 0619 0620 0621 0622 0623 0624 0625 0626 0627 0628 0629 0630 0631 0632 0633 0634 0635 0636 0637 0638 0639 0640 0641 0642 0643 0644 0645 0646 0647 0648 0649 0650 0651 0652 0653 0654 0655 0656 0657 0658 0659 0660 0661 0662 0663 0664 0665 0666 0667 0668 0669 0670 0671 0672 0673 0674 0675 0676 0677 0678 0679 0680 0681 0682 0683 0684 0685 0686 0687 0688 0689 0690 0691 0692 0693 0694 0695 0696 0697 0698 0699 0700 0701 0702 0703 0704 0705 0706 0707 0708 0709 0710 0711 0712 0713 0714 0715 0716 0717 0718 0719 0720 0721 0722 0723 0724 0725 0726 0727 0728 0729 0730 0731 0732 0733 0734 0735 0736 0737 0738 0739 0740 0741 0742 0743 0744 0745 0746 0747 0748 0749 0750 0751 0752 0753 0754 0755 0756 0757 0758 0759 0760 0761 0762 0763 0764 0765 0766 0767 0768 0769 0770 0771 0772 0773 0774 0775 0776 0777 0778 0779 0780 0781 0782 0783 0784 0785 0786 0787 0788 0789 0790 0791 0792 0793 0794 0795 0796 0797 0798 0799 0800 0801 0802 0803 0804 0805 0806 0807 0808 0809 0810 0811 0812 0813 0814 0815 0816 0817 0818 0819 0820 0821 0822 0823 0824 0825 0826 0827 0828 0829 0830 0831 0832 0833 0834 0835 0836 0837 0838 0839 0840 0841 0842 0843 0844 0845 0846 0847 0848 0849 0850 0851 0852 0853 0854 0855 0856 0857 0858 0859 0860 0861 0862 0863 0864 0865 0866 0867 0868 0869 0870 0871 0872 0873 0874 0875 0876 0877 0878 0879 0880 0881 0882 0883 0884 0885 0886 0887 0888 0889 0890 0891 0892 0893 0894 0895 0896 0897 0898 0899 0900 0901 0902 0903 0904 0905 0906 0907 0908 0909 0910 0911 0912 0913 0914 0915 0916 0917 0918 0919 0920 [1393sec, 10.8Volts, 0.308Amps, CPT:1393sec]
+(Jul 10 2024 00:36:32,    1402 sec) Prelude()            Logging configuration and initiating telemetry.
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()   Mission configuration for Npf FwRev NAUT_BGCi_AIRDO_SUNA_PH_OCR_ICE 240319:
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      AirCalSamplePeriod(10) [sec]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      AscentTimeOut(500) [min]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      AtDialCmd(AT+CBST=71,0,1;DT00881600005496) [primary]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      AltDialCmd(ATDT0012066163256) [alternate]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      BuoyancyNudge(30) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      BuoyancyNudgeInitial(60) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      ConnectTimeOut(60) [sec]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      CpActivationP(985) [dbar]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      CpCompressMode(0) [Enable > 0]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      DeepProfileDescentTime(240) [min]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      DeepProfileBuoyancyPos(264) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      DeepProfilePressure(2020) [dbar]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      DownTime(1080) [min]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      FatFsEnable(1)
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      HpvClosedVolts(1.915) [Volts]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      HpvOpenVolts(2.216) [Volts]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      HpvStallAmps(0.175) [Amps]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      FloatId(0065)
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      FullExtension(920) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      FullRetraction(137) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      IceDetectionP(50.00)
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      IceEvasionP(20.00)
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      IceMLTCritical(-1.78)
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      IceMonths(0x000)
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      IsusInit(-1) [Enable<0, Disable=0, Enable&Init>0]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      MaxAirBladder(126) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      MaxLogKb(59) [KByte]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      MissionPrelude(360) [min]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      OkVacuum(96) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      MaxVacPerK(0.325) [count/K]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      PActivationBuoyancyPosition(345) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      ParkDescentTime(240) [min]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      ParkBuoyancyPos(395) [count]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      ParkPressure(1000) [dbar]
+(Jul 10 2024 00:36:32,    1402 sec) LogConfiguration()      PhBattMode(1) [Enable > 0]
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      PnPCycleLen(1)
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      Pwd(0xafb3)
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      TelemetryRetry(15) [min]
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      TimeOfDay(DISABLED) [min]
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      UpTime(660) [min]
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      User(n0065)
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      ZModemTimeOut(80) [sec]
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      Verbosity(2)
+(Jul 10 2024 00:36:33,    1402 sec) LogConfiguration()      DebugBits(0x0002)
+
+<EOT>
