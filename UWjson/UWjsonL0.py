@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-version = "0.7.1"
+DECODER_VERSION = "0.7.1"
+JSON_PROCESSING_LEVEL = 0
 
 import io, re, csv, itertools
 from datetime import datetime, timezone, UTC
@@ -10,11 +11,11 @@ from decimal import Decimal
 
 # default supplemental information for output json
 default_supp = {
-  "DECODER_VERSION": version,
   "SCHEMA_VERSION": "0.4.0",
   "PI": "Steven RISER",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
+  "PROGRAM_NAME": "Argo UW",    
   "PROJECT_NAME": "Argo UW"
 }
 
@@ -35,7 +36,7 @@ mmmdy_hms = r"[A-Z][a-z]{2}\s+[0-9]+\s+[0-9]+\s+[0-9]+:[0-9]+:[0-9]+"
 mmdy_hms = r"[0-9]+/[0-9]+/[0-9]+\s+[0-9]+:[0-9]+:[0-9]+"
 
 # regex for mission header
-mission_config_rx = re.compile(r"\$ Mission configuration for\s+([A-Za-z0-9]+)\(([0-9]+)\)\s+FwRev\s+([0-9]+):")
+mission_config_rx = re.compile(r"\$ Mission configuration for\s+([A-Za-z0-9]+)\(([0-9]+)\)\s+FwRev(\s+[_A-Za-z0-9]+)?\s+([0-9]+):")
 
 # regex for mission parameters
 mission_params_rx = re.compile(r"\$ ([A-Za-z0-9]+)\((.*?)\)(?: \[(.*?)\])?")
@@ -76,6 +77,9 @@ irid_geo_rx = re.compile(r"IridiumGeo: <x,y,z>:\s*([\S]+)\s+([\S]+)\s+([\S]+)\s*
 # regex for Iridium lat,lon coordinates
 irid_fix_rx = re.compile(r"IridiumFix: <lon,lat>:\s*([\S]+)\s+([\S]+)\s*IrEpoch:\s*([0-9]+)sec\s*(" + mmdy_hms + ")")
 
+# regex for Navis parked sample
+parkPPtM_rx = re.compile(r"PPtM:\s+([1-9][0-9]+)\s+(.*?)$")
+
 # regex for parked sample
 parkpt_rx = re.compile(r"ParkPt:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
 
@@ -87,8 +91,17 @@ parkptflbb_rx = re.compile(r"ParkPtFlbb:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*
 
 parkpt_empty_rx = re.compile(r": Empty set of park-level.*? samples")
 
+# regex for custom header
+custom_header_rx = re.compile(r"^\s+UNIX (?:T|t)ime (.*?)$")
+
+# regex for discrete sampling data
+disc_line_rx = re.compile(r"^  +(?:nan|[.0-9]+)")
+
 # regex for Optode air-calibration data
-air_cal_rx = re.compile(r"^\s*(\w+)AirCal:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+air_cal_rx = re.compile(r"^\s*([A-Za-z0-9]+)AirCal:\s+(" + mmmdy_hms + r")\s+([0-9]+)\s+(.*)$")
+
+# regex for Navis air-calibration data
+air_cal_rx2 = re.compile(r"\s*([A-Za-z0-9]+)AirCal:\s+([1-9][0-9]+)\s+(.*)$")
 
 # regex for engineering parameters
 engr_rx = re.compile(r"^([A-Za-z0-9]+)=(.*?)$")
@@ -1382,7 +1395,11 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     stage = 1
                     mission_config["model"] = { "value": rx_match[1] }
                     mission_config["Id"] = { "value": rx_match[2] }
-                    mission_config["FwRev"] = { "value": rx_match[3] }
+                    if rx_match[3] and rx_match[3].strip():
+                        mission_config["FwType"] = { "value": rx_match[3].strip() }
+                    else:
+                        mission_config["FwType"] = { "value": None }
+                    mission_config["FwRev"] = { "value": rx_match[4] }
 
                 # skip SBD MSG generator header
                 elif (line.startswith("$ SBD MSG Generator")):
@@ -1425,7 +1442,7 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                         headers = []
 
                     # reading discrete samples
-                    while line.startswith("  "):
+                    while disc_line_rx.match(line):
                         n = len(headers)
                         values = line.split(maxsplit=n)
                         entry = {}
@@ -1609,6 +1626,45 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
 
                 else:
                      logger('Not decoded: "' + line + '"')
+
+            elif (header := custom_header_rx.match(line)):
+                custom_header = ["UNIX_time"] + header[1].split()
+
+                line = next(lines_iter).rstrip()
+
+                if parkPPtM_rx.match(line):
+                    while(rx_match := parkPPtM_rx.match(line)):
+
+                        PPtM = {custom_header[0]: rx_match[1]}
+                        for key, val in zip(custom_header[1:], rx_match[2].split()):
+                            PPtM[key] = val
+
+                        if "ParkPt" in out:
+                            out["ParkPt"].append(PPtM)
+                        else:
+                            out["ParkPt"] = [ PPtM ]
+
+                        line = next(lines_iter).rstrip()
+
+                elif air_cal_rx2.match(line):
+                    while rx_match := air_cal_rx2.match(line):
+
+                        air_cal = {"type": rx_match[1], custom_header[0]: rx_match[2]}
+                        for key, val in zip(custom_header[1:], rx_match[3].split()):
+                            air_cal[key] = val
+
+                        if "AirCal" in out:
+                            out["AirCal"].append(air_cal)
+                        else:
+                            out["AirCal"] = [ air_cal ]
+
+                        line = next(lines_iter).rstrip()
+
+                else:
+                    logger('Field header with no data followed:' + custom_header)
+
+                # rewind one element
+                lines_iter = itertools.chain([line], lines_iter)
 
             # Engineering data
             elif "=" in line and stage == 3:
@@ -2087,9 +2143,8 @@ def isus_tokenizer(
 
 def L0_parser(
     msg_dict, log_dict, dura_dict, isus_dict, cp_dict, 
-    AOML_map, WMO_map, OCR_map,
-    supp_dict=None, consume=False, 
-    fill_value=None, fill_NaT=None, 
+    AOML_map, WMO_map, OCR_map, supp_dict, 
+    consume=False, fill_value=None, fill_NaT=None, 
     logger=lambda x: print("[L0 parser] " + x)
 ):
     '''
@@ -2098,9 +2153,6 @@ def L0_parser(
     Warning: the input msg_dict and log_dict may be modified in-place. 
     Use defensive copy if needed
     '''
-
-    if supp_dict is None:
-        supp_dict = default_supp.copy()
 
     config_dict = msg_dict.get("mission_config", {})
     engr_list = msg_dict.get("engineering_data", [{}])
@@ -2114,7 +2166,7 @@ def L0_parser(
     float_id = int(engr_dict["FloatId"])
     out_dict["FILE_CREATION_DATE"] = t_string
     out_dict["FILE_UPDATE_DATE"] = t_string
-    out_dict["DECODER_VERSION"] = supp_dict["DECODER_VERSION"]
+    out_dict["DECODER_VERSION"] = DECODER_VERSION
     out_dict["SCHEMA_VERSION"] = supp_dict["SCHEMA_VERSION"]
     out_dict["INTERNAL_ID_NUMBER"] = float_id
     out_dict["TRANSMISSION_ID_NUMBER"] = float_id
@@ -2124,6 +2176,7 @@ def L0_parser(
     out_dict["OPERATING_INSTITUTION"] = supp_dict["OPERATING_INSTITUTION"]
     out_dict["FILE_CREATION_INSTITUTION"] = supp_dict["FILE_CREATION_INSTITUTION"]
     out_dict["PI"] = supp_dict["PI"]
+    out_dict["PROGRAM_NAME"] = supp_dict["PROGRAM_NAME"]
     out_dict["PROJECT_NAME"] = supp_dict["PROJECT_NAME"]
     out_dict["CYCLE_NUMBER"] = int(engr_dict["ProfileId"], 10)
     out_dict["POSITIONING_SYSTEM"] = infer_positioning(msg_dict)
