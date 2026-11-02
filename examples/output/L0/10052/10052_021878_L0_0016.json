@@ -1,16 +1,18 @@
 {
-  "FILE_CREATION_DATE": "2026-09-08T17:05:17Z",
-  "FILE_UPDATE_DATE": "2026-09-08T17:05:17Z",
+  "FILE_CREATION_DATE": "2026-11-02T02:28:35Z",
+  "FILE_UPDATE_DATE": "2026-11-02T02:28:35Z",
   "DECODER_VERSION": "0.7.1",
   "SCHEMA_VERSION": "0.4.0",
+  "JSON_PROCESSING_LEVEL": 0,
   "INTERNAL_ID_NUMBER": 21878,
   "TRANSMISSION_ID_NUMBER": 21878,
   "AOML_ID_NUMBER": 10052,
   "WMO_ID_NUMBER": 5907150,
-  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "INSTRUMENT_TYPE": "UW-APEX-BGC",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
   "PI": "Steven RISER",
+  "PROGRAM_NAME": "Argo UW",
   "PROJECT_NAME": "Argo UW",
   "CYCLE_NUMBER": 16,
   "POSITIONING_SYSTEM": "GPS",
@@ -9313,10 +9315,12 @@
       "unit": "min"
     },
     "AtDialCmd": {
-      "value": "AT+CBST=71,0,1;DT00881600005496"
+      "value": "AT+CBST=71,0,1;DT00881600005496",
+      "remark": "primary"
     },
     "AltDialCmd": {
-      "value": "ATDT0012066163256"
+      "value": "ATDT0012066163256",
+      "remark": "alternate"
     },
     "BuoyancyNudge": {
       "value": "10",
@@ -9355,7 +9359,7 @@
     },
     "DuraInit": {
       "value": "-1",
-      "unit": "Enable<0, Disable=0, Enable&Init>0"
+      "remark": "Enable<0, Disable=0, Enable&Init>0"
     },
     "FatFsEnable": {
       "value": "1"
@@ -9380,7 +9384,7 @@
     },
     "IsusInit": {
       "value": "-1",
-      "unit": "Enable<0, Disable=0, Enable&Init>0"
+      "remark": "Enable<0, Disable=0, Enable&Init>0"
     },
     "MaxAirBladder": {
       "value": "154",
@@ -9552,8 +9556,8 @@
         "Vrs_stdev": 9e-06,
         "Vk_mean": -1.186716,
         "Vk_stdev": 2.3e-05,
-        "Ik": 1.652e-18,
-        "Ib": 1.058e-19
+        "Ik": 1.652e-09,
+        "Ib": 1.058e-10
       },
       {
         "CRC": "0x2A3F",
@@ -9575,8 +9579,8 @@
         "Vrs_stdev": 2.2e-05,
         "Vk_mean": -1.186306,
         "Vk_stdev": 1.2e-05,
-        "Ik": 4.704e-18,
-        "Ib": 5.046e-19
+        "Ik": 4.704e-09,
+        "Ib": 5.046e-10
       },
       {
         "CRC": "0xEE22",
@@ -9598,8 +9602,8 @@
         "Vrs_stdev": 1.4e-05,
         "Vk_mean": -1.185634,
         "Vk_stdev": 2e-05,
-        "Ik": 3.54e-18,
-        "Ib": 5.534e-19
+        "Ik": 3.54e-09,
+        "Ib": 5.534e-10
       },
       {
         "CRC": "0x2DD2",
@@ -9621,8 +9625,8 @@
         "Vrs_stdev": 1.6e-05,
         "Vk_mean": -1.185225,
         "Vk_stdev": 1.4e-05,
-        "Ik": 9.725e-18,
-        "Ib": 1.896e-18
+        "Ik": 9.725e-09,
+        "Ib": 1.896e-09
       },
       {
         "CRC": "0x8A58",
@@ -9644,8 +9648,8 @@
         "Vrs_stdev": 1.3e-05,
         "Vk_mean": -1.184738,
         "Vk_stdev": 1.3e-05,
-        "Ik": 3.125e-18,
-        "Ib": -3.597e-18
+        "Ik": 3.125e-09,
+        "Ib": -3.597e-09
       },
       {
         "CRC": "0xF4FD",
@@ -9667,8 +9671,8 @@
         "Vrs_stdev": 2.1e-05,
         "Vk_mean": -1.183993,
         "Vk_stdev": 1.1e-05,
-        "Ik": 1.904e-18,
-        "Ib": -1.204e-18
+        "Ik": 1.904e-09,
+        "Ib": -1.204e-09
       },
       {
         "CRC": "0xFFD9",
@@ -9690,8 +9694,8 @@
         "Vrs_stdev": 1.5e-05,
         "Vk_mean": -1.183612,
         "Vk_stdev": 2.1e-05,
-        "Ik": 3.296e-18,
-        "Ib": 1.058e-19
+        "Ik": 3.296e-09,
+        "Ib": 1.058e-10
       },
       {
         "CRC": "0xFEB7",
@@ -9713,8 +9717,8 @@
         "Vrs_stdev": 1.6e-05,
         "Vk_mean": -1.183128,
         "Vk_stdev": 6e-06,
-        "Ik": 3.182e-18,
-        "Ib": 6.429e-19
+        "Ik": 3.182e-09,
+        "Ib": 6.429e-10
       },
       {
         "CRC": "0x5281",
@@ -9736,8 +9740,8 @@
         "Vrs_stdev": 2.1e-05,
         "Vk_mean": -1.182373,
         "Vk_stdev": 3e-05,
-        "Ik": 6.185e-19,
-        "Ib": -2.197e-19
+        "Ik": 6.185e-10,
+        "Ib": -2.197e-10
       },
       {
         "CRC": "0xE344",
@@ -9759,8 +9763,8 @@
         "Vrs_stdev": 1.1e-05,
         "Vk_mean": -1.181684,
         "Vk_stdev": 6.9e-05,
-        "Ik": 5.705e-18,
-        "Ib": -5.859e-19
+        "Ik": 5.705e-09,
+        "Ib": -5.859e-10
       },
       {
         "CRC": "0x8666",
@@ -9782,8 +9786,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.180953,
         "Vk_stdev": 2.2e-05,
-        "Ik": 5.054e-18,
-        "Ib": -1.546e-19
+        "Ik": 5.054e-09,
+        "Ib": -1.546e-10
       },
       {
         "CRC": "0xDF58",
@@ -9805,8 +9809,8 @@
         "Vrs_stdev": 1.7e-05,
         "Vk_mean": -1.180617,
         "Vk_stdev": 1.9e-05,
-        "Ik": 6.942e-18,
-        "Ib": -4.069e-20
+        "Ik": 6.942e-09,
+        "Ib": -4.069e-11
       },
       {
         "CRC": "0x7753",
@@ -9828,8 +9832,8 @@
         "Vrs_stdev": 1.6e-05,
         "Vk_mean": -1.180197,
         "Vk_stdev": 3.5e-05,
-        "Ik": 4.11e-18,
-        "Ib": 5.208e-19
+        "Ik": 4.11e-09,
+        "Ib": 5.208e-10
       },
       {
         "CRC": "0x0555",
@@ -9851,8 +9855,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.179718,
         "Vk_stdev": 1.1e-05,
-        "Ik": 2.279e-19,
-        "Ib": -1.79e-19
+        "Ik": 2.279e-10,
+        "Ib": -1.79e-10
       },
       {
         "CRC": "0xBEA8",
@@ -9874,8 +9878,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.179666,
         "Vk_stdev": 2.3e-05,
-        "Ik": 7.894e-19,
-        "Ib": 8.545e-19
+        "Ik": 7.894e-10,
+        "Ib": 8.545e-10
       },
       {
         "CRC": "0x5D89",
@@ -9897,8 +9901,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.17957,
         "Vk_stdev": 1.5e-05,
-        "Ik": 1.668e-18,
-        "Ib": -5.941e-19
+        "Ik": 1.668e-09,
+        "Ib": -5.941e-10
       },
       {
         "CRC": "0xE554",
@@ -9920,8 +9924,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.179514,
         "Vk_stdev": 2.3e-05,
-        "Ik": 4.142e-18,
-        "Ib": 8.138e-21
+        "Ik": 4.142e-09,
+        "Ib": 8.138e-12
       },
       {
         "CRC": "0x112C",
@@ -9943,8 +9947,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.179651,
         "Vk_stdev": 1.2e-05,
-        "Ik": 3.735e-18,
-        "Ib": 1.799e-18
+        "Ik": 3.735e-09,
+        "Ib": 1.799e-09
       },
       {
         "CRC": "0x7EB9",
@@ -9966,8 +9970,8 @@
         "Vrs_stdev": 2.5e-05,
         "Vk_mean": -1.179803,
         "Vk_stdev": 2.1e-05,
-        "Ik": 2.832e-18,
-        "Ib": 5.697e-20
+        "Ik": 2.832e-09,
+        "Ib": 5.697e-11
       },
       {
         "CRC": "0x8BF4",
@@ -9989,8 +9993,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.179881,
         "Vk_stdev": 1.9e-05,
-        "Ik": 1.253e-18,
-        "Ib": 1.31e-18
+        "Ik": 1.253e-09,
+        "Ib": 1.31e-09
       },
       {
         "CRC": "0x152F",
@@ -10012,8 +10016,8 @@
         "Vrs_stdev": 1e-05,
         "Vk_mean": -1.179575,
         "Vk_stdev": 1.4e-05,
-        "Ik": -9.847e-19,
-        "Ib": -1.204e-18
+        "Ik": -9.847e-10,
+        "Ib": -1.204e-09
       },
       {
         "CRC": "0xFEF8",
@@ -10035,8 +10039,8 @@
         "Vrs_stdev": 1.7e-05,
         "Vk_mean": -1.178587,
         "Vk_stdev": 2.3e-05,
-        "Ik": 2.612e-18,
-        "Ib": 1.489e-18
+        "Ik": 2.612e-09,
+        "Ib": 1.489e-09
       },
       {
         "CRC": "0xE7DE",
@@ -10058,8 +10062,8 @@
         "Vrs_stdev": 1.7e-05,
         "Vk_mean": -1.17773,
         "Vk_stdev": 1.3e-05,
-        "Ik": 1.09e-18,
-        "Ib": 3.743e-19
+        "Ik": 1.09e-09,
+        "Ib": 3.743e-10
       },
       {
         "CRC": "0x8AB7",
@@ -10081,8 +10085,8 @@
         "Vrs_stdev": 3.2e-05,
         "Vk_mean": -1.17938,
         "Vk_stdev": 9e-06,
-        "Ik": 2.466e-18,
-        "Ib": 1.546e-19
+        "Ik": 2.466e-09,
+        "Ib": 1.546e-10
       },
       {
         "CRC": "0x203C",
@@ -10104,8 +10108,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.179183,
         "Vk_stdev": 1.4e-05,
-        "Ik": 1.473e-18,
-        "Ib": 5.615e-19
+        "Ik": 1.473e-09,
+        "Ib": 5.615e-10
       },
       {
         "CRC": "0x0F50",
@@ -10127,8 +10131,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.179361,
         "Vk_stdev": 8e-06,
-        "Ik": 2.303e-18,
-        "Ib": -1.066e-18
+        "Ik": 2.303e-09,
+        "Ib": -1.066e-09
       },
       {
         "CRC": "0x3655",
@@ -10150,8 +10154,8 @@
         "Vrs_stdev": 1.4e-05,
         "Vk_mean": -1.178077,
         "Vk_stdev": 2.3e-05,
-        "Ik": 1.742e-18,
-        "Ib": -6.755e-19
+        "Ik": 1.742e-09,
+        "Ib": -6.755e-10
       },
       {
         "CRC": "0x80CB",
@@ -10173,8 +10177,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.178045,
         "Vk_stdev": 1.4e-05,
-        "Ik": 3.499e-19,
-        "Ib": -3.581e-19
+        "Ik": 3.499e-10,
+        "Ib": -3.581e-10
       },
       {
         "CRC": "0x9D48",
@@ -10196,8 +10200,8 @@
         "Vrs_stdev": 2e-05,
         "Vk_mean": -1.177607,
         "Vk_stdev": 1e-05,
-        "Ik": 2.336e-18,
-        "Ib": 4.72e-19
+        "Ik": 2.336e-09,
+        "Ib": 4.72e-10
       },
       {
         "CRC": "0xC1AC",
@@ -10219,8 +10223,8 @@
         "Vrs_stdev": 1.6e-05,
         "Vk_mean": -1.177401,
         "Vk_stdev": 2.1e-05,
-        "Ik": 1.302e-18,
-        "Ib": 1.107e-18
+        "Ik": 1.302e-09,
+        "Ib": 1.107e-09
       },
       {
         "CRC": "0x25A4",
@@ -10242,8 +10246,8 @@
         "Vrs_stdev": 2.7e-05,
         "Vk_mean": -1.177812,
         "Vk_stdev": 2.6e-05,
-        "Ik": 9.44e-19,
-        "Ib": 1.628e-19
+        "Ik": 9.44e-10,
+        "Ib": 1.628e-10
       },
       {
         "CRC": "0xDAA6",
@@ -10265,8 +10269,8 @@
         "Vrs_stdev": 2.4e-05,
         "Vk_mean": -1.178274,
         "Vk_stdev": 1.6e-05,
-        "Ik": 3.589e-18,
-        "Ib": 7.731e-19
+        "Ik": 3.589e-09,
+        "Ib": 7.731e-10
       },
       {
         "CRC": "0xB3E8",
@@ -10288,8 +10292,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.178819,
         "Vk_stdev": 1.2e-05,
-        "Ik": 5.697e-18,
-        "Ib": 8.138e-19
+        "Ik": 5.697e-09,
+        "Ib": 8.138e-10
       },
       {
         "CRC": "0x4590",
@@ -10311,8 +10315,8 @@
         "Vrs_stdev": 2.6e-05,
         "Vk_mean": -1.179176,
         "Vk_stdev": 2.1e-05,
-        "Ik": 3.524e-18,
-        "Ib": 6.185e-19
+        "Ik": 3.524e-09,
+        "Ib": 6.185e-10
       },
       {
         "CRC": "0xA665",
@@ -10334,7 +10338,7 @@
         "Vrs_stdev": 1.2e-05,
         "Vk_mean": -1.18007,
         "Vk_stdev": 3e-06,
-        "Ik": 1.986e-18,
+        "Ik": 1.986e-09,
         "Ib": 0.0
       },
       {
@@ -10357,8 +10361,8 @@
         "Vrs_stdev": 1e-05,
         "Vk_mean": -1.18048,
         "Vk_stdev": 1e-05,
-        "Ik": 1.839e-18,
-        "Ib": 8.626e-19
+        "Ik": 1.839e-09,
+        "Ib": 8.626e-10
       },
       {
         "CRC": "0x1A85",
@@ -10380,8 +10384,8 @@
         "Vrs_stdev": 3.2e-05,
         "Vk_mean": -1.180676,
         "Vk_stdev": 1.4e-05,
-        "Ik": 1.953e-18,
-        "Ib": 6.022e-19
+        "Ik": 1.953e-09,
+        "Ib": 6.022e-10
       },
       {
         "CRC": "0x52E3",
@@ -10403,8 +10407,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.180911,
         "Vk_stdev": 2.4e-05,
-        "Ik": 2.547e-18,
-        "Ib": -7.406e-19
+        "Ik": 2.547e-09,
+        "Ib": -7.406e-10
       },
       {
         "CRC": "0x4626",
@@ -10426,8 +10430,8 @@
         "Vrs_stdev": 1.5e-05,
         "Vk_mean": -1.18108,
         "Vk_stdev": 9e-06,
-        "Ik": 1.53e-18,
-        "Ib": -9.766e-19
+        "Ik": 1.53e-09,
+        "Ib": -9.766e-10
       },
       {
         "CRC": "0x21EE",
@@ -10449,8 +10453,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.180972,
         "Vk_stdev": 1.3e-05,
-        "Ik": 1.156e-18,
-        "Ib": 3.418e-19
+        "Ik": 1.156e-09,
+        "Ib": 3.418e-10
       },
       {
         "CRC": "0x4A6C",
@@ -10472,8 +10476,8 @@
         "Vrs_stdev": 2.5e-05,
         "Vk_mean": -1.181052,
         "Vk_stdev": 1.6e-05,
-        "Ik": 2.108e-18,
-        "Ib": 5.615e-19
+        "Ik": 2.108e-09,
+        "Ib": 5.615e-10
       },
       {
         "CRC": "0x9BA2",
@@ -10495,8 +10499,8 @@
         "Vrs_stdev": 1.7e-05,
         "Vk_mean": -1.18107,
         "Vk_stdev": 2.1e-05,
-        "Ik": 1.628e-18,
-        "Ib": -2.108e-18
+        "Ik": 1.628e-09,
+        "Ib": -2.108e-09
       },
       {
         "CRC": "0xAAE6",
@@ -10518,8 +10522,8 @@
         "Vrs_stdev": 2.2e-05,
         "Vk_mean": -1.180081,
         "Vk_stdev": 2.1e-05,
-        "Ik": 2.124e-18,
-        "Ib": 1.302e-19
+        "Ik": 2.124e-09,
+        "Ib": 1.302e-10
       },
       {
         "CRC": "0x5D0B",
@@ -10541,8 +10545,8 @@
         "Vrs_stdev": 1.6e-05,
         "Vk_mean": -1.178756,
         "Vk_stdev": 6e-06,
-        "Ik": -5.859e-19,
-        "Ib": -1.237e-18
+        "Ik": -5.859e-10,
+        "Ib": -1.237e-09
       },
       {
         "CRC": "0x8BDD",
@@ -10564,8 +10568,8 @@
         "Vrs_stdev": 1.7e-05,
         "Vk_mean": -1.176967,
         "Vk_stdev": 3.2e-05,
-        "Ik": -7.406e-19,
-        "Ib": -1.4e-18
+        "Ik": -7.406e-10,
+        "Ib": -1.4e-09
       },
       {
         "CRC": "0x19D0",
@@ -10587,8 +10591,8 @@
         "Vrs_stdev": 1.2e-05,
         "Vk_mean": -1.173633,
         "Vk_stdev": 1.8e-05,
-        "Ik": -1.579e-18,
-        "Ib": 1.375e-18
+        "Ik": -1.579e-09,
+        "Ib": 1.375e-09
       },
       {
         "CRC": "0xED19",
@@ -10610,8 +10614,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.172055,
         "Vk_stdev": 1.6e-05,
-        "Ik": -2.531e-18,
-        "Ib": -2.539e-18
+        "Ik": -2.531e-09,
+        "Ib": -2.539e-09
       },
       {
         "CRC": "0xD591",
@@ -10633,8 +10637,8 @@
         "Vrs_stdev": 1.3e-05,
         "Vk_mean": -1.169568,
         "Vk_stdev": 1.7e-05,
-        "Ik": -1.619e-18,
-        "Ib": -3.792e-18
+        "Ik": -1.619e-09,
+        "Ib": -3.792e-09
       },
       {
         "CRC": "0xA0BF",
@@ -10656,8 +10660,8 @@
         "Vrs_stdev": 2.6e-05,
         "Vk_mean": -1.162726,
         "Vk_stdev": 1.6e-05,
-        "Ik": -5.208e-19,
-        "Ib": 2.604e-19
+        "Ik": -5.208e-10,
+        "Ib": 2.604e-10
       },
       {
         "CRC": "0x6B0D",
@@ -10679,8 +10683,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.1605,
         "Vk_stdev": 1.9e-05,
-        "Ik": -1.164e-18,
-        "Ib": -1.123e-18
+        "Ik": -1.164e-09,
+        "Ib": -1.123e-09
       },
       {
         "CRC": "0x3A29",
@@ -10702,8 +10706,8 @@
         "Vrs_stdev": 3.1e-05,
         "Vk_mean": -1.156116,
         "Vk_stdev": 1.6e-05,
-        "Ik": -3.125e-18,
-        "Ib": 1.383e-18
+        "Ik": -3.125e-09,
+        "Ib": 1.383e-09
       },
       {
         "CRC": "0xC499",
@@ -10725,8 +10729,8 @@
         "Vrs_stdev": 2.4e-05,
         "Vk_mean": -1.15348,
         "Vk_stdev": 2.3e-05,
-        "Ik": -6.966e-18,
-        "Ib": -2.718e-18
+        "Ik": -6.966e-09,
+        "Ib": -2.718e-09
       },
       {
         "CRC": "0x0532",
@@ -10748,8 +10752,8 @@
         "Vrs_stdev": 2.7e-05,
         "Vk_mean": -1.148194,
         "Vk_stdev": 1.1e-05,
-        "Ik": -3.296e-18,
-        "Ib": -3.255e-18
+        "Ik": -3.296e-09,
+        "Ib": -3.255e-09
       },
       {
         "CRC": "0xBB69",
@@ -10771,8 +10775,8 @@
         "Vrs_stdev": 1.2e-05,
         "Vk_mean": -1.146183,
         "Vk_stdev": 2.1e-05,
-        "Ik": 3.255e-20,
-        "Ib": 1.115e-18
+        "Ik": 3.255e-11,
+        "Ib": 1.115e-09
       },
       {
         "CRC": "0x67C2",
@@ -10794,8 +10798,8 @@
         "Vrs_stdev": 2.9e-05,
         "Vk_mean": -1.144384,
         "Vk_stdev": 1.9e-05,
-        "Ik": -9.619e-18,
-        "Ib": 2.97e-18
+        "Ik": -9.619e-09,
+        "Ib": 2.97e-09
       },
       {
         "CRC": "0x39B5",
@@ -10817,8 +10821,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.142869,
         "Vk_stdev": 1.9e-05,
-        "Ik": -5.298e-18,
-        "Ib": -1.733e-18
+        "Ik": -5.298e-09,
+        "Ib": -1.733e-09
       },
       {
         "CRC": "0xF327",
@@ -10840,8 +10844,8 @@
         "Vrs_stdev": 1.1e-05,
         "Vk_mean": -1.140965,
         "Vk_stdev": 2.1e-05,
-        "Ik": -1.921e-18,
-        "Ib": -9.44e-19
+        "Ik": -1.921e-09,
+        "Ib": -9.44e-10
       },
       {
         "CRC": "0xAA8D",
@@ -10863,8 +10867,8 @@
         "Vrs_stdev": 2.5e-05,
         "Vk_mean": -1.134561,
         "Vk_stdev": 2.6e-05,
-        "Ik": 2.547e-18,
-        "Ib": -1.831e-18
+        "Ik": 2.547e-09,
+        "Ib": -1.831e-09
       },
       {
         "CRC": "0xE48F",
@@ -10886,8 +10890,8 @@
         "Vrs_stdev": 3e-05,
         "Vk_mean": -1.132747,
         "Vk_stdev": 1.6e-05,
-        "Ik": -8.138e-19,
-        "Ib": -3.711e-18
+        "Ik": -8.138e-10,
+        "Ib": -3.711e-09
       },
       {
         "CRC": "0x2E73",
@@ -10909,8 +10913,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.131279,
         "Vk_stdev": 2.6e-05,
-        "Ik": -9.342e-18,
-        "Ib": -3.084e-18
+        "Ik": -9.342e-09,
+        "Ib": -3.084e-09
       },
       {
         "CRC": "0x6C24",
@@ -10932,8 +10936,8 @@
         "Vrs_stdev": 2.5e-05,
         "Vk_mean": -1.129859,
         "Vk_stdev": 2.4e-05,
-        "Ik": -6.836e-19,
-        "Ib": 1.636e-18
+        "Ik": -6.836e-10,
+        "Ib": 1.636e-09
       },
       {
         "CRC": "0x0DE1",
@@ -10955,8 +10959,8 @@
         "Vrs_stdev": 2.3e-05,
         "Vk_mean": -1.128656,
         "Vk_stdev": 2.4e-05,
-        "Ik": 5.322e-18,
-        "Ib": 2.832e-18
+        "Ik": 5.322e-09,
+        "Ib": 2.832e-09
       },
       {
         "CRC": "0x58B7",
@@ -10978,8 +10982,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.12748,
         "Vk_stdev": 3.4e-05,
-        "Ik": -5.07e-18,
-        "Ib": -1.4e-18
+        "Ik": -5.07e-09,
+        "Ib": -1.4e-09
       },
       {
         "CRC": "0xC2A4",
@@ -11001,8 +11005,8 @@
         "Vrs_stdev": 1.9e-05,
         "Vk_mean": -1.126522,
         "Vk_stdev": 3e-06,
-        "Ik": -2.344e-18,
-        "Ib": 2.441e-18
+        "Ik": -2.344e-09,
+        "Ib": 2.441e-09
       },
       {
         "CRC": "0x4A3F",
@@ -11024,8 +11028,8 @@
         "Vrs_stdev": 1.7e-05,
         "Vk_mean": -1.125387,
         "Vk_stdev": 1.1e-05,
-        "Ik": -4.093e-18,
-        "Ib": 3.743e-19
+        "Ik": -4.093e-09,
+        "Ib": 3.743e-10
       },
       {
         "CRC": "0x5A04",
@@ -11047,8 +11051,8 @@
         "Vrs_stdev": 3.4e-05,
         "Vk_mean": -1.1241,
         "Vk_stdev": 2.3e-05,
-        "Ik": -2.23e-18,
-        "Ib": -2.523e-19
+        "Ik": -2.23e-09,
+        "Ib": -2.523e-10
       },
       {
         "CRC": "0x3A5C",
@@ -11070,8 +11074,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.122842,
         "Vk_stdev": 1.8e-05,
-        "Ik": -4.712e-18,
-        "Ib": -4.663e-18
+        "Ik": -4.712e-09,
+        "Ib": -4.663e-09
       },
       {
         "CRC": "0x2B3D",
@@ -11093,8 +11097,8 @@
         "Vrs_stdev": 2.1e-05,
         "Vk_mean": -1.121319,
         "Vk_stdev": 3.1e-05,
-        "Ik": -4.272e-18,
-        "Ib": -6.836e-19
+        "Ik": -4.272e-09,
+        "Ib": -6.836e-10
       },
       {
         "CRC": "0x53CA",
@@ -11116,8 +11120,8 @@
         "Vrs_stdev": 1.8e-05,
         "Vk_mean": -1.11897,
         "Vk_stdev": 1.8e-05,
-        "Ik": 2.686e-19,
-        "Ib": -4.118e-18
+        "Ik": 2.686e-10,
+        "Ib": -4.118e-09
       },
       {
         "CRC": "0x82D0",
@@ -11139,8 +11143,8 @@
         "Vrs_stdev": 1.4e-05,
         "Vk_mean": -1.117461,
         "Vk_stdev": 2.2e-05,
-        "Ik": -3.451e-18,
-        "Ib": -5.778e-19
+        "Ik": -3.451e-09,
+        "Ib": -5.778e-10
       }
     ],
     "engineering_data": [
@@ -11149,56 +11153,56 @@
         "ProfileId": 16,
         "Timestamp": "2026-01-07T09:34:18Z",
         "Datalogger Serial Num": "SN:1146",
-        "Application      Name": "APF_MAIN.C",
-        "App Build        Date": "Oct 20 2020, 10:40:18",
-        "Power Up Time   (GMT)": "01/07/2026 09:33:50",
-        "Current  Time   (GMT)": "01/07/2026 09:34:23",
-        "Alarm    Time   (GMT)": "01/07/2026 19:34:22",
-        "Power Active  Timeout": "10",
+        "Application Name": "APF_MAIN.C",
+        "App Build Date": "Oct 20 2020, 10:40:18",
+        "Power Up Time (GMT)": "01/07/2026 09:33:50",
+        "Current Time (GMT)": "01/07/2026 09:34:23",
+        "Alarm Time (GMT)": "01/07/2026 19:34:22",
+        "Power Active Timeout": "10",
         "Persistor CF2-1M Info": "S/N:17509 - BIOS:4.03 - PicoDOS:4.03",
-        "Compact FLASH    Size": "256614400",
-        "Compact FLASH    Left": "98.30%",
-        "Power Cycle   Counter": "16",
-        "System Reset  Counter": "16",
-        "System Error  Counter": "0",
-        "Last System     Error": "0",
+        "Compact FLASH Size": "256614400",
+        "Compact FLASH Left": "98.30%",
+        "Power Cycle Counter": "16",
+        "System Reset Counter": "16",
+        "System Error Counter": "0",
+        "Last System Error": "0",
         "Last System ErrorTime": "01/01/1970 00:00:00",
-        "DURA  Error   Counter": "0",
-        "Last DURA       Error": "0",
-        "Last DURA Error  Time": "01/01/1970 00:00:00",
-        "DURA Sample   Counter": "1029",
+        "DURA Error Counter": "0",
+        "Last DURA Error": "0",
+        "Last DURA Error Time": "01/01/1970 00:00:00",
+        "DURA Sample Counter": "1029",
         "Last Sample Rec. Time": "12/28/2025 08:19:15",
         "AtoD Reads per Sample": "10",
-        "AtoD Reading    Delay": "100",
-        "Samps per AtoD  Recal": "250"
+        "AtoD Reading Delay": "100",
+        "Samps per AtoD Recal": "250"
       },
       {
         "Id": 21878,
         "ProfileId": 16,
         "Timestamp": "2026-01-07T16:34:46Z",
         "Datalogger Serial Num": "SN:1146",
-        "Application      Name": "APF_MAIN.C",
-        "App Build        Date": "Oct 20 2020, 10:40:18",
-        "Power Up Time   (GMT)": "01/07/2026 09:33:50",
-        "Current  Time   (GMT)": "01/07/2026 16:34:50",
-        "Alarm    Time   (GMT)": "01/07/2026 19:34:22",
-        "Power Active  Timeout": "10",
+        "Application Name": "APF_MAIN.C",
+        "App Build Date": "Oct 20 2020, 10:40:18",
+        "Power Up Time (GMT)": "01/07/2026 09:33:50",
+        "Current Time (GMT)": "01/07/2026 16:34:50",
+        "Alarm Time (GMT)": "01/07/2026 19:34:22",
+        "Power Active Timeout": "10",
         "Persistor CF2-1M Info": "S/N:17509 - BIOS:4.03 - PicoDOS:4.03",
-        "Compact FLASH    Size": "256614400",
-        "Compact FLASH    Left": "98.22%",
-        "Power Cycle   Counter": "16",
-        "System Reset  Counter": "16",
-        "System Error  Counter": "0",
-        "Last System     Error": "0",
+        "Compact FLASH Size": "256614400",
+        "Compact FLASH Left": "98.22%",
+        "Power Cycle Counter": "16",
+        "System Reset Counter": "16",
+        "System Error Counter": "0",
+        "Last System Error": "0",
         "Last System ErrorTime": "01/01/1970 00:00:00",
-        "DURA  Error   Counter": "0",
-        "Last DURA       Error": "0",
-        "Last DURA Error  Time": "01/01/1970 00:00:00",
-        "DURA Sample   Counter": "1099",
+        "DURA Error Counter": "0",
+        "Last DURA Error": "0",
+        "Last DURA Error Time": "01/01/1970 00:00:00",
+        "DURA Sample Counter": "1099",
         "Last Sample Rec. Time": "01/07/2026 16:27:38",
         "AtoD Reads per Sample": "10",
-        "AtoD Reading    Delay": "100",
-        "Samps per AtoD  Recal": "250"
+        "AtoD Reading Delay": "100",
+        "Samps per AtoD Recal": "250"
       }
     ]
   },

@@ -1,16 +1,18 @@
 {
-  "FILE_CREATION_DATE": "2026-09-08T17:05:19Z",
-  "FILE_UPDATE_DATE": "2026-09-08T17:05:19Z",
+  "FILE_CREATION_DATE": "2026-11-02T02:28:36Z",
+  "FILE_UPDATE_DATE": "2026-11-02T02:28:36Z",
   "DECODER_VERSION": "0.7.1",
   "SCHEMA_VERSION": "0.4.0",
+  "JSON_PROCESSING_LEVEL": 0,
   "INTERNAL_ID_NUMBER": 24583,
   "TRANSMISSION_ID_NUMBER": 24583,
   "AOML_ID_NUMBER": 10526,
   "WMO_ID_NUMBER": 7902270,
-  "INSTRUMENT_TYPE": "UW-APEX-core",
+  "INSTRUMENT_TYPE": "UW-APEX-BGC",
   "OPERATING_INSTITUTION": "UW, Seattle, WA",
   "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
   "PI": "Steven RISER",
+  "PROGRAM_NAME": "Argo UW",
   "PROJECT_NAME": "Argo UW",
   "CYCLE_NUMBER": 8,
   "POSITIONING_SYSTEM": "GPS",
@@ -9523,10 +9525,12 @@
       "unit": "min"
     },
     "AtDialCmd": {
-      "value": "AT+CBST=71,0,1;DT00881600005496"
+      "value": "AT+CBST=71,0,1;DT00881600005496",
+      "remark": "primary"
     },
     "AltDialCmd": {
-      "value": "ATDT0012066163256"
+      "value": "ATDT0012066163256",
+      "remark": "alternate"
     },
     "BuoyancyNudge": {
       "value": "10",
@@ -9565,7 +9569,7 @@
     },
     "DuraInit": {
       "value": "-1",
-      "unit": "Enable<0, Disable=0, Enable&Init>0"
+      "remark": "Enable<0, Disable=0, Enable&Init>0"
     },
     "FatFsEnable": {
       "value": "1"
@@ -9590,7 +9594,7 @@
     },
     "IsusInit": {
       "value": "-1",
-      "unit": "Enable<0, Disable=0, Enable&Init>0"
+      "remark": "Enable<0, Disable=0, Enable&Init>0"
     },
     "MaxAirBladder": {
       "value": "154",
@@ -12786,23 +12790,23 @@
         "ProfileId": 8,
         "Timestamp": "2026-06-14T08:54:07Z",
         "Datalogger Serial Num": "SN:3028",
-        "Application      Name": "MoSoS v5.1.7 MSC3 1290 revB",
-        "App Build        Date": "Jun  6 2025, 20:24:34",
-        "Power Up Time   (GMT)": "06/14/2026 08:54:04",
-        "Current  Time   (GMT)": "06/14/2026 08:54:10",
+        "Application Name": "MoSoS v5.1.7 MSC3 1290 revB",
+        "App Build Date": "Jun  6 2025, 20:24:34",
+        "Power Up Time (GMT)": "06/14/2026 08:54:04",
+        "Current Time (GMT)": "06/14/2026 08:54:10",
         "Serial Inactive Sleep": "30 sec",
         "MSC3 Info": "Tiva 1290 running MoSoS v5",
-        "Storage          Size": "973504",
-        "Storage          Left": "99.72%",
-        "WatchDog      Counter": "0",
-        "System Reset  Counter": "949",
-        "System Error  Counter": "0",
-        "Last System     Error": "0",
+        "Storage Size": "973504",
+        "Storage Left": "99.72%",
+        "WatchDog Counter": "0",
+        "System Reset Counter": "949",
+        "System Error Counter": "0",
+        "Last System Error": "0",
         "Last System ErrorTime": "06/14/2026 08:54:10",
-        "DURA  Error   Counter": "0",
-        "Last DURA       Error": "0",
-        "Last DURA Error  Time": "01/01/1900 06:00:00",
-        "DURA Sample   Counter": "464",
+        "DURA Error Counter": "0",
+        "Last DURA Error": "0",
+        "Last DURA Error Time": "01/01/1900 06:00:00",
+        "DURA Sample Counter": "464",
         "Last Sample Rec. Time": "06/04/2026 08:20:01"
       },
       {
@@ -12810,23 +12814,23 @@
         "ProfileId": 8,
         "Timestamp": "2026-06-14T15:08:47Z",
         "Datalogger Serial Num": "SN:3028",
-        "Application      Name": "MoSoS v5.1.7 MSC3 1290 revB",
-        "App Build        Date": "Jun  6 2025, 20:24:34",
-        "Power Up Time   (GMT)": "06/14/2026 15:08:34",
-        "Current  Time   (GMT)": "06/14/2026 15:08:49",
+        "Application Name": "MoSoS v5.1.7 MSC3 1290 revB",
+        "App Build Date": "Jun  6 2025, 20:24:34",
+        "Power Up Time (GMT)": "06/14/2026 15:08:34",
+        "Current Time (GMT)": "06/14/2026 15:08:49",
         "Serial Inactive Sleep": "30 sec",
         "MSC3 Info": "Tiva 1290 running MoSoS v5",
-        "Storage          Size": "973504",
-        "Storage          Left": "99.70%",
-        "WatchDog      Counter": "0",
-        "System Reset  Counter": "1086",
-        "System Error  Counter": "0",
-        "Last System     Error": "0",
+        "Storage Size": "973504",
+        "Storage Left": "99.70%",
+        "WatchDog Counter": "0",
+        "System Reset Counter": "1086",
+        "System Error Counter": "0",
+        "Last System Error": "0",
         "Last System ErrorTime": "06/14/2026 15:08:49",
-        "DURA  Error   Counter": "0",
-        "Last DURA       Error": "0",
-        "Last DURA Error  Time": "01/01/1900 06:00:00",
-        "DURA Sample   Counter": "532",
+        "DURA Error Counter": "0",
+        "Last DURA Error": "0",
+        "Last DURA Error Time": "01/01/1900 06:00:00",
+        "DURA Sample Counter": "532",
         "Last Sample Rec. Time": "06/14/2026 15:03:04"
       }
     ]

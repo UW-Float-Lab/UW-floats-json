@@ -9,19 +9,12 @@ from decimal import Decimal
 
 #### Default configurations
 
-# default supplemental information for output json
-default_supp = {
-  "SCHEMA_VERSION": "0.4.0",
-  "PI": "Steven RISER",
-  "OPERATING_INSTITUTION": "UW, Seattle, WA",
-  "FILE_CREATION_INSTITUTION": "UW, Seattle, WA",
-  "PROGRAM_NAME": "Argo UW",    
-  "PROJECT_NAME": "Argo UW"
-}
 
 #### constants
 
 nan = float("nan")
+SENTINEL = object()
+
 
 #### Regular expressions
 
@@ -144,8 +137,34 @@ log_pistonmove_rx = re.compile(
     r"\[([0-9]+)sec, ([0-9]+(?:\.[0-9]+))Volts, ([0-9]+(?:\.[0-9]+))Amps, CPT:([0-9]+)sec\]"
 )
 
+cp_ser_rx = re.compile(r"(ser[0-9]+): ([A-Za-z0-9]+),\s*([0-9]+)")
+
+cp_flag_rx = re.compile(r"\s*([A-Za-z0-9]+):\s+([+-_A-Za-z0-9]+)\b")
+
+cp_tail_rx = re.compile(r"Resm\s+([0-9]+)\s*,\s+Rstr\s+([0-9]+)\s*,\s+Rbt\s+([0-9]+)")
 
 #### Utility functions
+
+def isFillValue(val, fill_val=None):
+
+    if fill_val is None:
+        return (val is None)
+    else:
+        return (val == fill_val)
+
+
+def rename_key(in_dict, old_key, new_key, fill=False, fill_value=None):
+    '''
+    Rename the key of a dictionary
+    '''
+    val = in_dict.pop(old_key, SENTINEL)
+    if (val is SENTINEL):
+        if fill:
+            in_dict[new_key] = fill_value
+    else:
+        in_dict[new_key] = val
+
+    return in_dict
 
 
 def count_sigfig(s):
@@ -248,7 +267,7 @@ def parseDimInt(val, fill_value=None):
 def decode_hex(
     code, 
     jump = 0x10000, cut = 0x8000, scalar = 1, offset = 0, dp = 0, 
-    fill_value=None
+    fill_value=None, extra_fill_keys = None
 ):
     '''
     Decode hexadecimal code into floating point values, where the code follows a 
@@ -258,9 +277,12 @@ def decode_hex(
     a scale factor `scalar`, and offset `offset`, and is rounded to `dp` decimal
     places
     '''
+    if (extra_fill_keys is not None) and (code in extra_fill_keys):
+        return fill_value
+
     # decode hex to unsigned integer
     val = int(code, 16)
-        
+ 
     # out of range or non-finite values
     if cut - 1 <= val <= cut + 1:
         return fill_value
@@ -356,10 +378,31 @@ def infer_instrument(msg_dict):
     Infer the float type
     '''
     # to be further developed
-    if "OptodeAirCal" in msg_dict:
-        return "UW-APEX-BGC"
-    else:
-        return "UW-APEX-core"
+
+    config = msg_dict['mission_config']
+    model = config["model"]["value"]
+    BGC_keywords = {"DuraInit", "IsusInit", "OcrInit", "FlbbMode", "OptodeMode"}
+
+
+    if model in { "Apf11" }:
+        if BGC_keywords.isdisjoint(config):
+            hyperretraction = config.get("CompensatorHyperRetraction", {}).get("value", None)
+            if hyperretraction == "0":
+                return "UW-APEX-Core"
+            elif hyperretraction == "254":
+                return "NAVIS-Core"
+            else:
+                return "Unknown"
+        else:
+            return "UW-APEX-BGC"
+
+    elif model in { "Npf" }:
+        if BGC_keywords.isdisjoint(config):
+            return "NAVIS-Core"
+        else:
+            return "NAVIS-BGC"
+
+    return "Unknown"
 
 
 def infer_positioning(msg_dict):
@@ -986,9 +1029,17 @@ def parse_mission_config(config_dict):
     '''
 
     if "AtDialCmd" in config_dict:
-        config_dict["AtDialCmd"] = { "value": config_dict["AtDialCmd"]["value"] }
+        rename_key(config_dict["AtDialCmd"], "unit", "remark")
+    
     if "AltDialCmd" in config_dict:
-        config_dict["AltDialCmd"] = { "value": config_dict["AltDialCmd"]["value"] }
+        rename_key(config_dict["AltDialCmd"], "unit", "remark")
+    
+    if "DuraInit" in config_dict:
+        rename_key(config_dict["DuraInit"], "unit", "remark")
+
+    if "IsusInit" in config_dict:
+         rename_key(config_dict["IsusInit"], "unit", "remark")       
+
 
     return config_dict
 
@@ -1397,8 +1448,6 @@ def msg_tokenizer(file, logger=lambda x: print("[MSG] " + x)):
                     mission_config["Id"] = { "value": rx_match[2] }
                     if rx_match[3] and rx_match[3].strip():
                         mission_config["FwType"] = { "value": rx_match[3].strip() }
-                    else:
-                        mission_config["FwType"] = { "value": None }
                     mission_config["FwRev"] = { "value": rx_match[4] }
 
                 # skip SBD MSG generator header
@@ -1904,6 +1953,7 @@ def log_tokenizer(
     elif EOT_cnt > 1:
         logger('More than 1 "<EOT>" found')
 
+    # pick the log section to output
     num_out = len(out_list)
     if num_out == 1:
         out = out_list[0]
@@ -1924,7 +1974,7 @@ def log_tokenizer(
 
 
 def dura_tokenizer(
-    file, dura_type, fill_value=None, fill_NaT=None, 
+    file, dura_type=None, fill_value=None, fill_NaT=None, 
     logger=lambda x: print("[DURA] " + x)
 ):
 
@@ -1953,7 +2003,7 @@ def dura_tokenizer(
 
             if (rx_match := dura_engr_rx.match(line)):
 
-                key = rx_match[1].strip()
+                key = " ".join(rx_match[1].split())
                 val = rx_match[2].strip()
 
                 if stage != 1 and stage != 3:
@@ -1964,8 +2014,15 @@ def dura_tokenizer(
 
             elif line.startswith("0x"):
 
+                if dura_type is None:
+                    if "MSC3 Info" in engr_dict:
+                        dura_type = "MSC3"
+                    else:
+                        dura_type = "MSC1"
+
                 if stage == 1:
                     stage = 2
+
                 if stage != 2:
                     logger(f'Science data at the wrong stage (={stage})')
 
@@ -2030,7 +2087,24 @@ def dura_tokenizer(
     elif EOT_cnt > 1:
         logger('More than 1 "<EOT>" found')
 
-    return out_list[-1]
+    # pick the dura section to output
+    num_out = len(out_list)
+    if num_out == 1:
+        out = out_list[0]
+    elif num_out == 0:
+        out = []
+    else:
+        # find the longest science record
+        out_lens = [len(_x.get("science_data", [])) for _x in out_list]
+        max_len = 0
+        max_idx = 0
+        for (_i, _x) in enumerate(out_lens):
+            if _x > max_len:
+                max_idx = _i
+                max_len = _x
+        out = out_list[max_idx]
+
+    return out
 
 
 def isus_tokenizer(
@@ -2136,7 +2210,283 @@ def isus_tokenizer(
     elif EOT_cnt > 1:
         logger('More than 1 "<EOT>" found')
 
-    return out_list[-1]
+    # pick the isus section to output
+    num_out = len(out_list)
+    if num_out == 1:
+        out = out_list[0]
+    elif num_out == 0:
+        out = []
+    else:
+        # find the longest science record
+        out_lens = [len(_x.get("science_data", [])) for _x in out_list]
+        max_len = 0
+        max_idx = 0
+        for (_i, _x) in enumerate(out_lens):
+            if _x > max_len:
+                max_idx = _i
+                max_len = _x
+        out = out_list[max_idx]
+
+    return out
+
+
+def cp_parser(
+    file, OCR_map=None, fill_value=None, fill_NaT=None, 
+    logger=lambda x: print("[CP] " + x)
+):
+
+    out_list = []
+    stage = 0
+    EOT_cnt = 0
+    meta_dict = {}
+    sci_data = []
+
+    # read the entire file at once
+    if isinstance(file, io.IOBase):
+        lines = file.readlines()
+    else:
+        with open(file, "r") as infile:
+            lines = infile.readlines()
+
+    lines_iter = iter(lines)
+
+    if OCR_map is None:
+        OCR0 = "OCR0"
+        OCR1 = "OCR1"
+        OCR2 = "OCR2"
+        OCR3 = "OCR3"
+    else:
+        OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
+        OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
+        OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
+        if OCR_map["OCR3"] == "PAR":
+            OCR3 = "RAW_DOWNWELLING_PAR"
+        else:
+            OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
+
+    try:
+        # parse line by line
+        line = next(lines_iter).rstrip()
+        while True:
+
+            if (rx_match := cont_data_rx.match(line)):
+
+                if stage == 1:
+                    stage = 2
+
+                if stage != 2:
+                    logger("Packed data at the wrong stage")
+                
+                data = {}
+                hex_str = rx_match[1]
+                n = len(hex_str)
+
+                if n == 86 or n == 78: 
+                    # P(4) + T(4) + S(4) + N(2) + O2_ph(6) + O2_V(6) + O2_N(2) + 
+                    # FL(6) + BB(6) + CD(6) + FLBB_N(2) + OCR(6 * 4) + OCR_N(2) +
+                    # tilt(2) + Dtilt(2) + [ pH_V(6) + pH_N(2) ]
+
+                    n_samp =  decode_hex(hex_str[12:14], fill_value = fill_value)
+                    if isFillValue(n_samp, fill_value) or n_samp == 0:
+                        data |= {
+                            "PRES": fill_value,
+                            "TEMP": fill_value,
+                            "PSAL": fill_value,
+                            "n_samp": n_samp
+                        }
+                    else:
+                        data |= {
+                            "PRES": decode_hex(
+                                hex_str[:4], cut = 0x8000, scalar = 0.1, dp = 1, 
+                                fill_value = fill_value
+                            ),
+                            "TEMP": decode_hex(
+                                hex_str[4:8], cut = 0xf000, scalar = 0.001, dp = 3, 
+                                fill_value = fill_value
+                            ),
+                            "PSAL": decode_hex(
+                                hex_str[8:12], cut = 0xf000, scalar = 0.001, dp = 3,
+                                fill_value = fill_value
+                            ),
+                            "n_samp" : n_samp
+                        }
+
+                    n_samp = decode_hex(hex_str[26:28], fill_value = fill_value)
+                    if isFillValue(n_samp, fill_value) or n_samp == 0:
+                        data |= {
+                            "Phase": fill_value,
+                            "TEMP_DOXY": fill_value,
+                            "n_DOXY": n_samp
+                        }
+                    else:
+                        data |= {
+                            "Phase": decode_hex(
+                                hex_str[14:20], 
+                                cut = 0x1000000, scalar = 1e-5, offset = -10, dp = 5,
+                                fill_value = fill_value
+                            ),
+                            "TEMP_DOXY": decode_hex(
+                                hex_str[20:26],
+                                cut = 0x1000000, scalar = 1e-6, offset = -1, dp = 6,
+                                fill_value = fill_value
+                            ),
+                            "n_DOXY": n_samp
+                        }
+
+                    n_samp = decode_hex(hex_str[46:48], fill_value = fill_value)
+                    if isFillValue(n_samp, fill_value) or n_samp == 0:
+                        data |= {
+                            "FLUORESCENCE_CHLA": fill_value,
+                            "BETA_BACKSCATTERING700": fill_value,
+                            "CDOM": fill_value,
+                            "n_ECO": n_samp
+                        }
+                    else:
+                        data |= {
+                            "FLUORESCENCE_CHLA": decode_hex(
+                                hex_str[28:34], cut=0x1000000, offset=-500,
+                                fill_value = fill_value
+                            ),
+                            "BETA_BACKSCATTERING700": decode_hex(
+                                hex_str[34:40], cut=0x1000000, offset=-500,
+                                fill_value = fill_value
+                            ),
+                            "CDOM": decode_hex(
+                                hex_str[40:46], cut=0x1000000, offset=-500,
+                                fill_value = fill_value
+                            ),
+                            "n_ECO" : n_samp
+                        }
+
+                    n_samp = decode_hex(hex_str[72:74], fill_value = fill_value)
+                    if isFillValue(n_samp, fill_value) or n_samp == 0:
+                        data |= {
+                            OCR0: fill_value,
+                            OCR1: fill_value,
+                            OCR2: fill_value,
+                            OCR3: fill_value,
+                            "n_OCR": n_samp
+                        }
+                    else:
+                        data |= {
+                            OCR0: decode_hex(hex_str[48:54], cut=0x1000000),
+                            OCR1: decode_hex(hex_str[54:60], cut=0x1000000),
+                            OCR2: decode_hex(hex_str[60:66], cut=0x1000000),
+                            OCR3: decode_hex(hex_str[66:72], cut=0x1000000),
+                            "n_OCR": n_samp                            
+                        }
+
+                    data |= {
+                        "tilt": decode_hex(hex_str[74:76], cut=0x100, scalar = 0.1),
+                        "tilt_sd": decode_hex(hex_str[76:78], cut=0x100, scalar = 0.01)
+                    }
+
+                    if n == 86:
+
+                        n_samp = decode_hex(hex_str[84:86], fill_value = fill_value)
+                        if isFillValue(n_samp, fill_value) or n_samp == 0:
+                            data["pH_V"] = fill_value
+                            data["n_pH"] = n_samp
+                        else:
+                            data["pH_V"] = decode_hex(
+                                hex_str[78:84],
+                                cut=0x1000000, scalar=1e-6, offset=-2.5000005, dp=6,
+                                fill_value = fill_value
+                            )
+                            data["n_pH"] = n_samp
+
+                if rx_match[2] is None:
+                    repeat = 1
+                else:
+                    repeat = int(rx_match[2])
+                
+                for _i in range(repeat):
+                    sci_data.append(data.copy())
+
+            elif (rx_match := cont_header_rx.match(line)):
+
+                meta_dict["datetime"] = rx_match[1]
+                meta_dict["instrument"] = rx_match[2]
+                meta_dict["SerNo"] = rx_match[3]
+                meta_dict["NSample"] = parseInt(rx_match[4], fill_value) 
+                meta_dict["NBin"] = parseInt(rx_match[5], fill_value)
+
+                if stage != 0:
+                    logger(f'header at the wrong stage')
+                
+                stage = 1
+
+            elif cp_ser_rx.match(line):
+
+                if stage != 1:
+                    logger(f'header at the wrong stage')
+                    stage = 1
+
+                for rx_match in cp_ser_rx.finditer(line):
+                    meta_dict[rx_match[1]] = { "device": rx_match[2], "SerNo": rx_match[3] }
+                line2 = line[rx_match.span()[1]:]
+                for rx_match in cp_flag_rx.finditer(line2):
+                    meta_dict[rx_match[1]] = rx_match[2]
+
+            elif (rx_match := cp_tail_rx.match(line)):
+
+                if stage == 2:
+                    stage = 3
+
+                if stage != 3:
+                    logger(f"footer at the wrong stage")
+
+                meta_dict["Resm"] = int(rx_match[1])
+                meta_dict["Rstr"] = int(rx_match[2])
+                meta_dict["Rbt"] = int(rx_match[3])
+
+            elif line.strip() == "":
+                pass
+
+            elif line.strip() == "<EOT>":
+                EOT_cnt += 1
+                stage = 0
+
+                out_list.append( (sci_data, meta_dict) )
+                meta_dict = {}
+                sci_data = []
+
+            else:
+                logger('Not decoded: "' + line + '"')
+
+            line = next(lines_iter).rstrip()
+
+    except StopIteration:
+        if sci_data:
+            logger('Science data found after the last "<EOT>"')
+        if meta_dict:
+            logger('Metadata found after the last "<EOT>"')
+
+    # EOT check
+    if EOT_cnt == 0:
+        logger('"<EOT>" missing')
+    elif EOT_cnt > 1:
+        logger('More than 1 "<EOT>" found')
+
+    # pick the isus section to output
+    num_out = len(out_list)
+    if num_out == 1:
+        out = out_list[0]
+    elif num_out == 0:
+        out = []
+    else:
+        # find the longest science record
+        out_lens = [len(_x[1]) for _x in out_list]
+        max_len = 0
+        max_idx = 0
+        for (_i, _x) in enumerate(out_lens):
+            if _x > max_len:
+                max_idx = _i
+                max_len = _x
+        out = out_list[max_idx]
+
+    return out
+
 
 
 #### overall parser
@@ -2168,11 +2518,17 @@ def L0_parser(
     out_dict["FILE_UPDATE_DATE"] = t_string
     out_dict["DECODER_VERSION"] = DECODER_VERSION
     out_dict["SCHEMA_VERSION"] = supp_dict["SCHEMA_VERSION"]
+    out_dict["JSON_PROCESSING_LEVEL"] = JSON_PROCESSING_LEVEL
     out_dict["INTERNAL_ID_NUMBER"] = float_id
     out_dict["TRANSMISSION_ID_NUMBER"] = float_id
     out_dict["AOML_ID_NUMBER"] = AOML_map[float_id]
     out_dict["WMO_ID_NUMBER"] = WMO_map[float_id]
-    out_dict["INSTRUMENT_TYPE"] = infer_instrument(msg_dict)
+
+    instrument = infer_instrument(msg_dict)
+    out_dict["INSTRUMENT_TYPE"] = instrument
+    if instrument == "Unknown":
+        logger("Unknown instrument type")
+
     out_dict["OPERATING_INSTITUTION"] = supp_dict["OPERATING_INSTITUTION"]
     out_dict["FILE_CREATION_INSTITUTION"] = supp_dict["FILE_CREATION_INSTITUTION"]
     out_dict["PI"] = supp_dict["PI"]
@@ -2393,7 +2749,8 @@ if __name__=="__main__":
     default_aoml = "AomlIdMap"
     default_wmo = "WmoIdMap"
     default_ocr = "OcrMap.csv"
-    dura_type = "MSC3"
+    default_supp = "json_supp.json"
+    dura_type = None
 
     def is_latter_newer(path1, path2):
         t1 = pathlib.Path(path1).stat().st_mtime
@@ -2442,6 +2799,7 @@ if __name__=="__main__":
         AOML_map = aux["aoml"]
         WMO_map = aux["wmo"]
         OCR_map = aux["ocr"]
+        supp_dict = aux["supp"]
 
         msg = pathlib.Path(msg_path)
         stem = msg.with_suffix("")
@@ -2508,9 +2866,8 @@ if __name__=="__main__":
 
         out = L0_parser(
             msg_dict, log_list, dura_dict, isus_dict, cp_dict,
-            AOML_map, WMO_map, OCR_map,
-            supp_dict=None, consume=False,
-            fill_value=-999, fill_NaT=None, 
+            AOML_map, WMO_map, OCR_map, supp_dict,
+            consume=False, fill_value=-999, fill_NaT=None, 
             logger=lambda x: print("[L0 parser] " + x)
         )
 
@@ -2529,11 +2886,12 @@ if __name__=="__main__":
         return None
 
 
-    def write_mapping(aoml, wmo, ocr, out, update=False, logger=print):
+    def write_mapping(aoml, wmo, ocr, supp, out, update=False, logger=print):
 
         aoml_p = pathlib.Path(aoml)
         wmo_p = pathlib.Path(wmo)
         ocr_p = pathlib.Path(ocr)
+        supp_p = pathlib.Path(supp)
         out_p = pathlib.Path(out)
 
         if update and pathlib.Path(out).is_file():
@@ -2541,9 +2899,10 @@ if __name__=="__main__":
             aoml_t = aoml_p.stat().st_mtime if aoml_p.is_file() else 0
             wmo_t = wmo_p.stat().st_mtime if wmo_p.is_file() else 0
             ocr_t = ocr_p.stat().st_mtime if ocr_p.is_file() else 0
+            supp_t = supp_p.stat().st_mtime if supp_p.is_file() else 0
             out_t = out_p.stat().st_mtime
 
-            if (out_t > ocr_t) and (out_t > aoml_t) and (out_t > wmo_t):
+            if (out_t > ocr_t) and (out_t > aoml_t) and (out_t > wmo_t) and (out_t > supp_t):
                 logger("Nothing to do. Exit.")
                 return # nothing to do
 
@@ -2563,6 +2922,10 @@ if __name__=="__main__":
             if (out_t < wmo_t):
                 logger("Parsing WMO ID file...")
                 data["wmo"] = parse_WMO_ID_map(wmo_p, logger=logger)
+            if (out_t < supp_t):
+                logger("Parsing supplemental info file...")
+                with open(supp_p, "r") as infile:
+                    data["supp"] = json.load(infile)
 
         else:
             data = {}
@@ -2575,6 +2938,10 @@ if __name__=="__main__":
 
             logger("Parsing WMO ID file...")
             data["wmo"] = parse_WMO_ID_map(wmo_p, logger=logger)
+
+            logger("Parsing supplemental info file...")
+            with open(supp_p, "r") as infile:
+                data["supp"] = json.load(infile)
 
         if out_p.suffix == ".json":
             logger(f"Writing output to {out_p}")
@@ -2590,7 +2957,7 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description='''
         UW json decoder, Level 0, version {}.
         Combine .msg, .log, .dura, .isus and .cp files into a single .json file.
-    '''.format(version))
+    '''.format(DECODER_VERSION))
     subparsers = parser.add_subparsers(dest="command")
 
     # build-aux command
@@ -2613,6 +2980,10 @@ if __name__=="__main__":
     p_build.add_argument(
         "--ocr", default=default_ocr,
         help="path of the OCR channel identification file"
+    )
+    p_build.add_argument(
+        "--supp", default=default_supp,
+        help="path of the supplemental json information file"
     )
     p_build.add_argument(
         "-d", "--in_dir", default=".",
@@ -2698,9 +3069,10 @@ if __name__=="__main__":
         aoml = root.joinpath(args.aoml)
         wmo = root.joinpath(args.wmo)
         ocr = root.joinpath(args.ocr)
+        supp = root.joinpath(args.supp)
         out = pathlib.Path(args.output)
 
-        write_mapping(aoml, wmo, ocr, out, update=args.update)
+        write_mapping(aoml, wmo, ocr, supp, out, update=args.update)
 
     # perform conversion to json
     elif args.command == "convert":
