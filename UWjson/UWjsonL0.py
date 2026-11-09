@@ -514,11 +514,15 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     is_conductivity = False
     is_Aanderaa_optode = False
     is_Sbe83_optode = False
+    is_Sbe83_N_optode = False
     is_NO3 = False
     is_pH = False
     is_FLBB = False
     is_FL2BB = False
+    is_SUNA = False
     is_OCR = False
+    is_N_OCR = False
+    is_tilt = False
 
     for key in ["p", "t", "s"]:
         try:
@@ -549,6 +553,13 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
             headers_set.remove("T83")
         except KeyError:
             logger("Discrete data column 'T83' expected but not found.")
+    elif "O2ph" in headers_set:
+        is_Sbe83_N_optode = True
+        headers_set.remove("O2ph")
+        try:
+            headers_set.remove("O2tV")
+        except KeyError:
+            logger("Discrete data column 'O2tV' expected but not found.")
 
     if "no3" in headers_set:
        is_NO3 = True
@@ -574,6 +585,14 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 headers_set.remove(key)
             except KeyError:
                 logger(f"Discrete data column '{key}' expected but not found.")
+    elif "Mch1" in headers_set:
+        is_SUNA = True
+        headers_set.remove("Mch1")
+        for key in ["Mch2", "Mch3"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")           
 
     if "Ocr[0]" in headers_set:
         is_OCR = True
@@ -583,11 +602,23 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 headers_set.remove(key)
             except KeyError:
                 logger(f"Discrete data column '{key}' expected but not found.")
+    elif "OCRch1" in headers_set:
+        is_N_OCR = True
+        headers_set.remove("OCRch1")
+        for key in ["OCRch2", "OCRch3", "OCRch4"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")  
+
+    if "tilt" in headers_set:
+        is_tilt = True
+        headers_set.remove("tilt")
 
     for key in headers_set:
         logger(f"Unexpected discrete data column '{key}'")
 
-    if is_OCR:
+    if is_OCR or is_N_OCR:
         if OCR_map is None:
             OCR0 = "OCR0"
             OCR1 = "OCR1"
@@ -638,6 +669,13 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 "TEMP_DOXY": parseFloat(item.get("T83", fill_value), fill_value),
                 "Phase": parseFloat(item.get("Phase", fill_value), fill_value)
             })
+        # NAVIS-BGC Sbe83 optode data
+        elif is_Sbe83_N_optode:
+            Optode.append({
+                "PRES": p,
+                "O2tV": parseFloat(item.get("O2tV", fill_value), fill_value),
+                "Phase": parseFloat(item.get("O2ph", fill_value), fill_value)
+            })
 
         # nitrate
         if is_NO3:
@@ -652,6 +690,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 "pH_V": parseFloat(item.get("pH(V)", fill_value), fill_value)
             })
 
+        # Fluorescence
         if is_FLBB:
             FLBB.append({
                 "PRES": p, 
@@ -667,6 +706,13 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
                 "temp_signal": parseInt(item["TSig"], fill_value)
             })
+        elif is_SUNA:
+            FLBB.append({
+                "PRES": p, 
+                "FLUORESCENCE_CHLA": parseInt(item["Mch1"], fill_value),
+                "BETA_BACKSCATTERING700": parseInt(item["Mch2"], fill_value),
+                "CDOM": parseInt(item["Mch3"], fill_value)
+            })
 
         if is_OCR:
             OCR.append({
@@ -676,6 +722,24 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 OCR2: parseHex(item["Ocr[2]"], fill_value), 
                 OCR3: parseHex(item["Ocr[3]"], fill_value)
             })
+        elif is_N_OCR:
+            if is_tilt:
+                OCR.append({
+                    "PRES": p, 
+                    OCR0: parseInt(item["OCRch1"], fill_value), 
+                    OCR1: parseInt(item["OCRch2"], fill_value),
+                    OCR2: parseInt(item["OCRch3"], fill_value), 
+                    OCR3: parseInt(item["OCRch4"], fill_value),
+                    "tilt": parseFloat(item["tilt"], fill_value)
+                })      
+            else:
+                OCR.append({
+                    "PRES": p, 
+                    OCR0: parseInt(item["OCRch1"], fill_value), 
+                    OCR1: parseInt(item["OCRch2"], fill_value),
+                    OCR2: parseInt(item["OCRch3"], fill_value), 
+                    OCR3: parseInt(item["OCRch4"], fill_value)
+                })     
 
         # add remarks to the single park-phase data
         if "parked" in item:
@@ -1439,43 +1503,83 @@ def parse_dura_science(line, dura_type, fill_value=None, fill_NaT=None, logger=p
     return out
 
 
-def parse_isus_science(line, fill_value=None, fill_NaT=None, logger=print):
+def parse_isus_science(line, isus_type, fill_value=None, fill_NaT=None, logger=print):
 
     out = {}
-
     vals = line.split(",")
-    assert len(vals) == 26
 
-    out["CRC"] = vals[0]
-    out["ID"] = vals[1]
-    out["datetime"] = decode_time(vals[2], fill_NaT)
-    out["CTD_depth"] = parseFloat(vals[4], fill_value)
-    out["CTD_temp"] = parseFloat(vals[5], fill_value)
-    out["CTD_salinity"] = parseFloat(vals[6], fill_value)
-    out["sample_counter"] = parseInt(vals[7], fill_value)
-    out["POR_counter"] = parseInt(vals[8], fill_value)
-    out["isus_error_counter"] = parseInt(vals[9], fill_value)
-    out["sys_error_counter"] = parseInt(vals[10], fill_value)
-    out["housing_temp"] = parseFloat(vals[11], fill_value)
-    out["housing_humidity"] = parseFloat(vals[12], fill_value)
-    out["input_voltage"] = parseFloat(vals[13], fill_value)
-    out["input_current"] = parseFloat(vals[14], fill_value)
-    out["max_lamp_intensity"] = parseFloat(vals[15], fill_value)
-    out["min_lamp_intensity"] = parseFloat(vals[16], fill_value)
-    out["DC_mean"] = parseFloat(vals[17], fill_value)
-    out["DC_stdev"] = parseFloat(vals[18], fill_value)
-    out["isus_salinity"] = parseFloat(vals[19], fill_value)
-    out["isus_nitrate"] = parseFloat(vals[20], fill_value)
-    out["fit_error"] = parseFloat(vals[21], fill_value)
-    out["data_pixel_begin"] = parseInt(vals[22], fill_value)
-    out["data_pixel_end"] = parseInt(vals[23], fill_value)
-    out["DC_sw"] = parseFloat(vals[25], fill_value)
+    if isus_type in {"MSC1", "MSC3"}:
 
-    hex_str = vals[24]
-    packed = [parseHex(hex_str[i:i+4], fill_value) for i in range(0, len(hex_str), 4)]
-    assert len(packed) == out["data_pixel_end"] - out["data_pixel_begin"] + 1
+        assert len(vals) == 26
 
-    out["packed_data"] = packed
+        out["CRC"] = vals[0]
+        out["ID"] = vals[1]
+        out["datetime"] = decode_time(vals[2], fill_NaT)
+        out["CTD_depth"] = parseFloat(vals[4], fill_value)
+        out["CTD_temp"] = parseFloat(vals[5], fill_value)
+        out["CTD_salinity"] = parseFloat(vals[6], fill_value)
+        out["sample_counter"] = parseInt(vals[7], fill_value)
+        out["POR_counter"] = parseInt(vals[8], fill_value)
+        out["isus_error_counter"] = parseInt(vals[9], fill_value)
+        out["sys_error_counter"] = parseInt(vals[10], fill_value)
+        out["housing_temp"] = parseFloat(vals[11], fill_value)
+        out["housing_humidity"] = parseFloat(vals[12], fill_value)
+        out["input_voltage"] = parseFloat(vals[13], fill_value)
+        out["input_current"] = parseFloat(vals[14], fill_value)
+        out["max_lamp_intensity"] = parseFloat(vals[15], fill_value)
+        out["min_lamp_intensity"] = parseFloat(vals[16], fill_value)
+        out["dark_count_mean"] = parseFloat(vals[17], fill_value)
+        out["dark_count_stdev"] = parseFloat(vals[18], fill_value)
+        out["isus_salinity"] = parseFloat(vals[19], fill_value)
+        out["isus_nitrate"] = parseFloat(vals[20], fill_value)
+        out["fit_error"] = parseFloat(vals[21], fill_value)
+        out["data_pixel_begin"] = parseInt(vals[22], fill_value)
+        out["data_pixel_end"] = parseInt(vals[23], fill_value)
+        out["dark_count_seawater"] = parseFloat(vals[25], fill_value)
+
+        hex_str = vals[24]
+        packed = [parseHex(hex_str[i:i+4], fill_value) for i in range(0, len(hex_str), 4)]
+        assert len(packed) == out["data_pixel_end"] - out["data_pixel_begin"] + 1
+
+        out["packed_data"] = packed
+
+    elif isus_type == "SUNA":
+
+        assert len(vals) == 26
+
+        out["CRC"] = vals[0]
+        out["ID"] = vals[1]
+        out["datetime"] = decode_time(vals[2], fill_NaT)
+        out["CTD_depth"] = parseFloat(vals[4], fill_value)
+        out["CTD_temp"] = parseFloat(vals[5], fill_value)
+        out["CTD_salinity"] = parseFloat(vals[6], fill_value)
+        out["sample_counter"] = parseInt(vals[7], fill_value)
+        out["power_cycle_counter"] = parseInt(vals[8], fill_value)
+        out["error_counter"] = parseInt(vals[9], fill_value)
+        out["internal_temp"] = parseFloat(vals[10], fill_value)
+        out["spectrometer_temp"] = parseFloat(vals[11], fill_value)
+        out["internal_humidity"] = parseFloat(vals[12], fill_value)
+        out["input_voltage"] = parseFloat(vals[13], fill_value)
+        out["input_current"] = parseFloat(vals[14], fill_value)
+        out["ref_detector_mean"] = parseFloat(vals[15], fill_value)
+        out["ref_detector_stdev"] = parseFloat(vals[16], fill_value)
+        out["dark_count_mean"] = parseFloat(vals[17], fill_value)
+        out["dark_count_stdev"] = parseFloat(vals[18], fill_value)
+        out["isus_salinity"] = parseFloat(vals[19], fill_value)
+        out["isus_nitrate"] = parseFloat(vals[20], fill_value)
+        out["fit_error"] = parseFloat(vals[21], fill_value)
+        out["data_pixel_begin"] = parseInt(vals[22], fill_value)
+        out["data_pixel_end"] = parseInt(vals[23], fill_value)
+        out["dark_count_seawater"] = parseFloat(vals[25], fill_value)
+
+        hex_str = vals[24]
+        packed = [parseHex(hex_str[i:i+4], fill_value) for i in range(0, len(hex_str), 4)]
+        assert len(packed) == out["data_pixel_end"] - out["data_pixel_begin"] + 1
+
+        out["packed_data"] = packed
+
+    else:
+        raise ValueError(f'Unknown isus_type "{isus_type}"')
 
     return out
 
@@ -2198,8 +2302,10 @@ def dura_tokenizer(
                 if dura_type is None:
                     if "MSC3 Info" in engr_dict:
                         dura_type = "MSC3"
-                    else:
+                    elif engr_dict.get("Application Name", "") == "APF_MAIN.C":
                         dura_type = "MSC1"
+                    else:
+                        dura_type = "unknown"
 
                 if stage == 1:
                     stage = 2
@@ -2297,7 +2403,7 @@ def dura_tokenizer(
 
 
 def isus_tokenizer(
-    file, fill_value=None, fill_NaT=None, 
+    file, isus_type=None, fill_value=None, fill_NaT=None, 
     logger=lambda x: print("[ISUS] " + x)
 ):
 
@@ -2326,7 +2432,7 @@ def isus_tokenizer(
 
             if (rx_match := dura_engr_rx.match(line)):
 
-                key = rx_match[1].strip()
+                key = " ".join(rx_match[1].split())
                 val = rx_match[2].strip()
 
                 if stage != 1 and stage != 3:
@@ -2336,12 +2442,24 @@ def isus_tokenizer(
                 engr_dict[key] = val
 
             elif line.startswith("0x"):
+
                 if stage == 1:
                     stage = 2
                 if stage != 2:
                     logger(f'Science data at the wrong stage (={stage})')
+                    stage = 2
 
-                sci_data.append(parse_isus_science(line, fill_value, fill_NaT, logger))
+                if isus_type is None:
+                    if "MSC3 Info" in engr_dict:
+                        isus_type = "MSC3"
+                    elif "SUNA Serial Number" in engr_dict:
+                        isus_type = "SUNA"
+                    elif engr_dict.get("Application Name", "") == "APF_MAIN.C":
+                        isus_type = "MSC1"
+                    else:
+                        isus_type = "unknown"
+
+                sci_data.append(parse_isus_science(line, isus_type, fill_value, fill_NaT, logger))
 
             elif (rx_match := dura_header_rx.match(line)):
 
@@ -2470,6 +2588,10 @@ def cp_decoder(
                     # P(4) + T(4) + S(4) + N(2) + O2_ph(6) + O2_V(6) + O2_N(2) + 
                     # FL(6) + BB(6) + CD(6) + FLBB_N(2) + OCR(6 * 4) + OCR_N(2) +
                     # tilt(2) + Dtilt(2) + [ pH_V(6) + pH_N(2) ]
+
+                    # skip if line has no information
+                    if hex_str == "00000000000000FFFFFFFFFFFF00FFFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFFFFFFFFFFF00FFFF":
+                        continue
 
                     n_samp =  decode_hex(hex_str[12:14], fill_value = fill_value)
                     if isFillValue(n_samp, fill_value) or n_samp == 0:
