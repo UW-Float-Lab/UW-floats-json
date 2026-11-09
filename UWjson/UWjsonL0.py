@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-DECODER_VERSION = "0.7.1"
+DECODER_VERSION = "0.8.0"
 JSON_PROCESSING_LEVEL = 0
 
 import io, re, csv, itertools
@@ -324,6 +324,27 @@ def decode_if_number(value, fill_value=None):
             return out2
 
 
+def decode_UNIX_time(value, fill_value=None):
+    '''
+    Decode a string or integer that represent UNIX timestamp (i.e., seconds 
+    since UNIX epoch). The resulting datetime object is then recoded using
+    the ISO 8601 standard
+    '''
+
+    if isinstance(value, str):
+        try:
+            value = int(value)
+        except ValueError:
+            return fill_value
+
+    try:
+        tstamp = datetime.fromtimestamp(value, tz=timezone.utc)
+    except TypeError:
+        return fill_value
+
+    return tstamp.isoformat().replace("+00:00", "Z")
+
+
 def decode_time(value, fill_value=None):
     '''
     Decode a string that represent calendar date time. Common formats for the 
@@ -517,6 +538,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     is_Sbe83_N_optode = False
     is_NO3 = False
     is_pH = False
+    is_N_pH = False
     is_FLBB = False
     is_FL2BB = False
     is_SUNA = False
@@ -568,6 +590,14 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
     if "pH(V)" in headers_set:
         is_pH = True
         headers_set.remove("pH(V)")
+    elif "phVrs" in headers_set:
+        is_N_pH = True
+        headers_set.remove("phVrs")
+        for key in ["phVk", "pHIk", "phIb"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Discrete data column '{key}' expected but not found.")
 
     if "FSig" in headers_set:
         is_FLBB = True
@@ -684,11 +714,21 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
                 "nitrate_onboard": parseFloat(item.get("no3", fill_value), fill_value)
             })
 
+        # pH
         if is_pH:
             pH.append({
                 "PRES": p, 
-                "pH_V": parseFloat(item.get("pH(V)", fill_value), fill_value)
+                "VRS_PH": parseFloat(item.get("pH(V)", fill_value), fill_value)
             })
+        elif is_N_pH:
+            pH.append({
+                "PRES": p, 
+                "VRS_PH": parseFloat(item.get("phVrs", fill_value), fill_value),
+                "VK_PH": parseFloat(item.get("phVk", fill_value), fill_value),
+                "IK_PH": parseFloat(item.get("pHIk", fill_value), fill_value),
+                "IB_PH": parseFloat(item.get("phIb", fill_value), fill_value)
+            })
+
 
         # Fluorescence
         if is_FLBB:
@@ -928,7 +968,7 @@ def parse_continuous(cont_list, OCR_map=None, fill_value=None, logger=print):
     CTD = []
     Optode = []
     pH = []
-    MCOMS = []
+    FLBB = []
     OCR = []
 
     if not cont_list:
@@ -1047,12 +1087,12 @@ def parse_continuous(cont_list, OCR_map=None, fill_value=None, logger=print):
         if is_pH:
             pH.append({
                 "PRES": p, 
-                "pH_V": item.get("pH_V", fill_value),
+                "VRS_PH": item.get("pH_V", fill_value),
                 "n_pH": item.get("n_pH", fill_value)
             })
 
         if is_MCOMS:
-            MCOMS.append({
+            FLBB.append({
                 "PRES": p, 
                 "FLUORESCENCE_CHLA": item.get("FLUORESCENCE_CHLA", fill_value), 
                 "BETA_BACKSCATTERING700": item.get("BETA_BACKSCATTERING700", fill_value), 
@@ -1073,8 +1113,8 @@ def parse_continuous(cont_list, OCR_map=None, fill_value=None, logger=print):
         out["Optode"] = Optode
     if pH:
         out["pH"] = pH
-    if MCOMS:
-        out["FLBB"] = MCOMS
+    if FLBB:
+        out["FLBB"] = FLBB
     if OCR:
         out["OCR"] = OCR
 
@@ -1094,81 +1134,109 @@ def parse_parked(
     FLBB = []
     Traj = []
 
-    if meas_type == "ParkPt":
+    match meas_type:
 
-        for item in park_dict:
+        case "ParkPt":
 
-            p = parseFloat(item["p"], fill_value)
-            T = parseFloat(item["t"], fill_value)
-            t = decode_time(item["time"], fill_NaT)
+            for item in park_dict:
 
-            CTD.append({
-                "PRES": p,
-                "TEMP": T,
-                "TIME": t
-            })
-            Traj.append({
-                "TIME": t,
-                "PRES": p
-            })
+                p = parseFloat(item["p"], fill_value)
+                T = parseFloat(item["t"], fill_value)
+                t = decode_time(item["time"], fill_NaT)
 
-    elif meas_type == "ParkPts":
-
-        for item in park_dict:
-
-            p = parseFloat(item["p"], fill_value)
-            T = parseFloat(item["t"], fill_value)
-            s = parseFloat(item["s"], fill_value)
-            t = decode_time(item["time"], fill_NaT)
-
-            CTD.append({
-                "PRES": p,
-                "TEMP": T,
-                "PSAL": s,
-                "TIME": t
-            })
-            Traj.append({
-                "TIME": t,
-                "PRES": p
-            })
-
-    elif meas_type == "ParkPtFlbb":
-
-        for item in park_dict:
-
-            p = parseFloat(item["p"], fill_value)
-            T = parseFloat(item["t"], fill_value)
-            t = decode_time(item["time"], fill_NaT)
-
-            CTD.append({
-                "PRES": p,
-                "TEMP": T,
-                "TIME": t
-            })
-            Traj.append({
-                "TIME": t,
-                "PRES": p
-            })
-            if "FSig" in item: # FLBB
-                FLBB.append({
+                CTD.append({
                     "PRES": p,
-                    "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value),
-                    "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
-                    "temp_signal": parseInt(item["TSig"], fill_value),
+                    "TEMP": T,
                     "TIME": t
                 })
-            elif "FSig[0]" in item: # FL2BB
-                FLBB.append({
-                    "PRES": p,
-                    "FLUORESCENCE_CHLA": parseInt(item["FSig[0]"], fill_value),
-                    "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
-                    "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
-                    "temp_signal": parseInt(item["TSig"], fill_value),
-                    "TIME": t
+                Traj.append({
+                    "TIME": t,
+                    "PRES": p
                 })
 
-    else:
-        logger("Unknown measurement type. No entries returned")
+        case "ParkPts":
+
+            for item in park_dict:
+
+                p = parseFloat(item["p"], fill_value)
+                T = parseFloat(item["t"], fill_value)
+                s = parseFloat(item["s"], fill_value)
+                t = decode_time(item["time"], fill_NaT)
+
+                CTD.append({
+                    "PRES": p,
+                    "TEMP": T,
+                    "PSAL": s,
+                    "TIME": t
+                })
+                Traj.append({
+                    "TIME": t,
+                    "PRES": p
+                })
+
+        case "ParkPtFlbb":
+
+            for item in park_dict:
+
+                p = parseFloat(item["p"], fill_value)
+                T = parseFloat(item["t"], fill_value)
+                t = decode_time(item["time"], fill_NaT)
+
+                CTD.append({
+                    "PRES": p,
+                    "TEMP": T,
+                    "TIME": t
+                })
+                Traj.append({
+                    "TIME": t,
+                    "PRES": p
+                })
+                if "FSig" in item: # FLBB
+                    FLBB.append({
+                        "PRES": p,
+                        "FLUORESCENCE_CHLA": parseInt(item.get("FSig", fill_value), fill_value),
+                        "BETA_BACKSCATTERING700": parseInt(item.get("BbSig", fill_value), fill_value),
+                        "temp_signal": parseInt(item.get("TSig", fill_value), fill_value),
+                        "TIME": t
+                    })
+                elif "FSig[0]" in item: # FL2BB
+                    FLBB.append({
+                        "PRES": p,
+                        "FLUORESCENCE_CHLA": parseInt(item.get("FSig[0]", fill_value), fill_value),
+                        "FLUORESCENCE_CHLA435": parseInt(item.get("FSig[1]", fill_value), fill_value),
+                        "BETA_BACKSCATTERING700": parseInt(item.get("BbSig", fill_value), fill_value),
+                        "temp_signal": parseInt(item.get("TSig", fill_value), fill_value),
+                        "TIME": t
+                    })
+
+        case "NAVIS_ParkPt":
+
+            for item in park_dict:
+
+                p = parseFloat(item["p"], fill_value)
+                T = parseFloat(item["t"], fill_value)
+                t = decode_UNIX_time(item["UNIX_time"], fill_NaT)
+
+                CTD.append({
+                    "PRES": p,
+                    "TEMP": T,
+                    "TIME": t
+                })
+                Traj.append({
+                    "TIME": t,
+                    "PRES": p
+                })
+                if "Mch1" in item: # SUNA
+                    FLBB.append({
+                        "PRES": p,
+                        "FLUORESCENCE_CHLA": parseInt(item.get("Mch1", fill_value), fill_value),
+                        "BETA_BACKSCATTERING700": parseInt(item.get("Mch2", fill_value), fill_value),
+                        "CDOM": parseInt(item.get("Mch3", fill_value), fill_value),
+                        "TIME": t
+                    })
+
+        case _:
+            logger("Unknown measurement type. No entries returned")
 
     if CTD:
         out["CTD"] = CTD
@@ -1180,81 +1248,105 @@ def parse_parked(
     return out
 
 
-def parse_AirCal(air_cal_list, OCR_map=None, fill_value=None, fill_NaT=None):
+def parse_AirCal(air_cal_list, air_cal_type, OCR_map=None, fill_value=None, fill_NaT=None):
 
     out = {}
     Optode = []
     FLBB = []
     OCR = []
 
-    if "Ocr[0]" in air_cal_list[0]:
-        if OCR_map is None:
-            OCR0 = "OCR0"
-            OCR1 = "OCR1"
-            OCR2 = "OCR2"
-            OCR3 = "OCR3"
-        else:
-            OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
-            OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
-            OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
-            if OCR_map["OCR3"] == "PAR":
-                OCR3 = "RAW_DOWNWELLING_PAR"
+    if air_cal_type == "APEX":
+
+        if "Ocr[0]" in air_cal_list[0]:
+            if OCR_map is None:
+                OCR0 = "OCR0"
+                OCR1 = "OCR1"
+                OCR2 = "OCR2"
+                OCR3 = "OCR3"
             else:
-                OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
+                OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
+                OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
+                OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
+                if OCR_map["OCR3"] == "PAR":
+                    OCR3 = "RAW_DOWNWELLING_PAR"
+                else:
+                    OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
 
-    for item in air_cal_list:
+        for item in air_cal_list:
 
-        airP = parseInt(item["AirP"], fill_value)
-        p = parseFloat(item["p"], fill_value)
-        t = decode_time(item["time"], fill_NaT)
+            airP = parseInt(item["AirP"], fill_value)
+            p = parseFloat(item["p"], fill_value)
+            t = decode_time(item["time"], fill_NaT)
 
-        if "RPhase" in item: # Aanderaa optode
+            if "RPhase" in item: # Aanderaa optode
+                Optode.append({
+                    "Pres_air": airP,
+                    "PRES": p,
+                    "TIME": t,
+                    "TEMP_DOXY": parseFloat(item["optodeT"], fill_value),
+                    "TPhase": parseFloat(item["TPhase"], fill_value),
+                    "RPhase": parseFloat(item["RPhase"], fill_value)
+                })
+            elif "Phase" in item: # Sbe83 optode
+                Optode.append({
+                    "Pres_air": airP,
+                    "PRES": p,
+                    "TIME": t,
+                    "TEMP_DOXY": parseFloat(item["Sbe83T"], fill_value),
+                    "Phase": parseFloat(item["Phase"], fill_value)
+                })
+
+            if "FSig" in item: # FLBB
+                FLBB.append({
+                    "Pres_air": airP,
+                    "PRES": p,
+                    "TIME": t,
+                    "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value),
+                    "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                    "temp_signal": parseInt(item["TSig"], fill_value)
+                })
+            elif "FSig[0]" in item: # FL2BB
+                FLBB.append({
+                    "Pres_air": airP,
+                    "PRES": p,
+                    "TIME": t,
+                    "FLUORESCENCE_CHLA": parseInt(item["FSig[0]"], fill_value),
+                    "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
+                    "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
+                    "temp_signal": parseInt(item["TSig"], fill_value)
+                })
+
+            if "Ocr[0]" in item: # OCR
+                OCR.append({
+                    "Pres_air": airP,
+                    "PRES": p,
+                    "TIME": t,
+                    OCR0: parseHex(item["Ocr[0]"], fill_value),
+                    OCR1: parseHex(item["Ocr[1]"], fill_value),
+                    OCR2: parseHex(item["Ocr[2]"], fill_value),
+                    OCR3: parseHex(item["Ocr[3]"], fill_value)
+                })
+
+    elif air_cal_type == "NAVIS":
+
+        for item in air_cal_list:
+
+            airP = parseInt(item["pnm"], fill_value)
+            p = parseFloat(item["P"], fill_value)
+            T = parseFloat(item["T"], fill_value)
+            t = decode_UNIX_time(item["UNIX_time"], fill_NaT)
+
             Optode.append({
                 "Pres_air": airP,
                 "PRES": p,
                 "TIME": t,
-                "TEMP_DOXY": parseFloat(item["optodeT"], fill_value),
-                "TPhase": parseFloat(item["TPhase"], fill_value),
-                "RPhase": parseFloat(item["RPhase"], fill_value)
-            })
-        elif "Phase" in item: # Sbe83 optode
-            Optode.append({
-                "Pres_air": airP,
-                "PRES": p,
-                "TIME": t,
-                "TEMP_DOXY": parseFloat(item["Sbe83T"], fill_value),
-                "Phase": parseFloat(item["Phase"], fill_value)
+                "TEMP": T,
+                "Phase": parseFloat(item["O2ph"], fill_value),
+                "O2tV": parseFloat(item["O2TV"], fill_value)
             })
 
-        if "FSig" in item: # FLBB
-            FLBB.append({
-                "Pres_air": airP,
-                "PRES": p,
-                "TIME": t,
-                "FLUORESCENCE_CHLA": parseInt(item["FSig"], fill_value),
-                "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
-                "temp_signal": parseInt(item["TSig"], fill_value)
-            })
-        elif "FSig[0]" in item: # FL2BB
-            FLBB.append({
-                "Pres_air": airP,
-                "PRES": p,
-                "TIME": t,
-                "FLUORESCENCE_CHLA": parseInt(item["FSig[0]"], fill_value),
-                "FLUORESCENCE_CHLA435": parseInt(item["FSig[0]"], fill_value),
-                "BETA_BACKSCATTERING700": parseInt(item["BbSig"], fill_value),
-                "temp_signal": parseInt(item["TSig"], fill_value)
-            })
-        if "Ocr[0]" in item: # OCR
-            OCR.append({
-                "Pres_air": airP,
-                "PRES": p,
-                "TIME": t,
-                OCR0: parseHex(item["Ocr[0]"], fill_value),
-                OCR1: parseHex(item["Ocr[1]"], fill_value),
-                OCR2: parseHex(item["Ocr[2]"], fill_value),
-                OCR3: parseHex(item["Ocr[3]"], fill_value)
-            })
+    else:
+        raise ValueError(f"Unknown air_cal_type '{air_cal_type}'")
 
     if Optode:
         out["Optode"] = Optode
@@ -2946,16 +3038,21 @@ def L0_parser(
         continuous = []
         meta_continuous = {}
 
-    
-
-
 
     if "ParkPt" in msg_dict:
-        parked = parse_parked(
-            msg_dict["ParkPt"], "ParkPt", 
-            fill_value = fill_value, fill_NaT = fill_NaT,
-            logger = logger
-        )
+        parked = msg_dict["ParkPt"]
+        if "UNIX_time" in parked[0]:
+            parked = parse_parked(
+                parked, "NAVIS_ParkPt", 
+                fill_value = fill_value, fill_NaT = fill_NaT,
+                logger = logger
+            )
+        else:
+            parked = parse_parked(
+                parked, "ParkPt", 
+                fill_value = fill_value, fill_NaT = fill_NaT,
+                logger = logger
+            )
         if consume: del msg_dict["ParkPt"]
     elif "ParkPts" in msg_dict:
         parked = parse_parked(
@@ -2976,11 +3073,17 @@ def L0_parser(
 
     # interpret calibration data
     if "AirCal" in msg_dict:
-        air_cal = parse_AirCal(
-            msg_dict["AirCal"],
-            OCR_map = OCR_submap,
-            fill_value = fill_value, fill_NaT = fill_NaT
-        )
+        air_cal = msg_dict["AirCal"]
+        if "UNIX_time" in air_cal[0]:
+            air_cal = parse_AirCal(
+                air_cal, "NAVIS", OCR_map = OCR_submap,
+                fill_value = fill_value, fill_NaT = fill_NaT
+            )
+        else:
+            air_cal = parse_AirCal(
+                air_cal, "APEX", OCR_map = OCR_submap,
+                fill_value = fill_value, fill_NaT = fill_NaT
+            )
         if consume: del msg_dict["AirCal"]
     else:
         air_cal = {}

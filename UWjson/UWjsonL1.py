@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-DECODER_VERSION = "0.7.1"
+DECODER_VERSION = "0.8.0"
 JSON_PROCESSING_LEVEL = 1
 
 import operator

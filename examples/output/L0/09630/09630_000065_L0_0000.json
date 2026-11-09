@@ -1,6 +1,6 @@
 {
-  "FILE_CREATION_DATE": "2026-11-01T18:16:57Z",
-  "FILE_UPDATE_DATE": "2026-11-01T18:16:57Z",
+  "FILE_CREATION_DATE": "2026-11-09T21:53:38Z",
+  "FILE_UPDATE_DATE": "2026-11-09T21:53:38Z",
   "DECODER_VERSION": "0.7.1",
   "SCHEMA_VERSION": "0.4.0",
   "JSON_PROCESSING_LEVEL": 0,
@@ -65,10 +65,12 @@
       "unit": "min"
     },
     "AtDialCmd": {
-      "value": "AT+CBST=71,0,1;DT00881600005496"
+      "value": "AT+CBST=71,0,1;DT00881600005496",
+      "remark": "primary"
     },
     "AltDialCmd": {
-      "value": "ATDT0012066163256"
+      "value": "ATDT0012066163256",
+      "remark": "alternate"
     },
     "BuoyancyNudge": {
       "value": "30",
@@ -129,7 +131,7 @@
     },
     "IsusInit": {
       "value": "-1",
-      "unit": "Enable<0, Disable=0, Enable&Init>0"
+      "remark": "Enable<0, Disable=0, Enable&Init>0"
     },
     "HpvOpenVolts": {
       "value": "2.216",
