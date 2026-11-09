@@ -618,7 +618,7 @@ def parse_discrete(disc_dict, OCR_map=None, fill_value=None, logger=print):
         if is_conductivity:
             CTD_val |= {
                 "conductivity": parseFloat(item.get("c", fill_value), fill_value),
-                "conducivitiy_temp": parseFloat(item.get("ct", fill_value), fill_value)
+                "conductivity_temp": parseFloat(item.get("ct", fill_value), fill_value)
             }
 
         CTD.append(CTD_val)
@@ -748,12 +748,12 @@ def parse_discrete_hires(hires_dict, sort=None, fill_value=None, fill_NaT=None, 
             out.append(tmp)
 
     else:
-        logger("Unknown hex legnth. No entries returned")
+        logger("Unknown hex length. No entries returned")
 
     return out, meta
 
 
-def parse_continuous(cont_dict, sort=None, fill_value=None, fill_NaT=None, logger=print):
+def decode_continuous(cont_dict, sort=None, fill_value=None, fill_NaT=None, logger=print):
     '''
     Parse continuous CTD samples of the float
     '''
@@ -823,17 +823,198 @@ def parse_continuous(cont_dict, sort=None, fill_value=None, fill_NaT=None, logge
             out.append(tmp)
 
     else:
-        logger("Unknown hex legnth. No entries returned")
+        logger("Unknown hex length. No entries returned")
         return out, meta
 
     if not sort:
         pass
+
     elif sort.lower().startswith("asc"):
-        out.sort(key=lambda x: -x["PRES"])
+
+        out_fill = []
+        out_actual = []
+        for _x in out:
+            if isFillValue(_x["PRES"], fill_value):
+                out_fill.append(_x)
+            else:
+                out_actual.append(_x)
+        out_actual.sort(key=lambda x: -x["PRES"])
+        out = out_actual + out_fill
+
     elif sort.lower().startswith("desc"):
-        out.sort(key=lambda x: x["PRES"])
+
+        out_fill = []
+        out_actual = []
+        for _x in out:
+            if isFillValue(_x["PRES"], fill_value):
+                out_fill.append(_x)
+            else:
+                out_actual.append(_x)
+        out_actual.sort(key=lambda x: x["PRES"])
+        out = out_actual + out_fill
 
     return out, meta
+
+
+def parse_continuous(cont_list, OCR_map=None, fill_value=None, logger=print):
+    '''
+    Parse continuous CTD samples of the float
+    '''
+    out = {}
+    CTD = []
+    Optode = []
+    pH = []
+    MCOMS = []
+    OCR = []
+
+    if not cont_list:
+        return {"CTD": []}
+
+    headers_set = list(cont_list[0].keys())
+
+    is_conductivity = False
+    is_optode = False
+    is_pH = False
+    is_MCOMS = False
+    is_OCR = False
+    is_tilt = False
+
+    for key in ["PRES", "TEMP", "PSAL"]:
+        try:
+            headers_set.remove(key)
+        except KeyError:
+            logger(f"Continuous data column '{key}' expected but not found.")
+
+    if "conductivity_temp" in headers_set:
+        is_conductivity = True
+        headers_set.remove("conductivity_temp")
+
+    if "Phase" in headers_set:
+        is_optode = True
+        headers_set.remove("Phase")
+        for key in ['TEMP_DOXY', 'n_DOXY']:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Continuous data column '{key}' expected but not found.")
+
+    if "pH_V" in headers_set:
+        is_pH = True
+        headers_set.remove("pH_V")
+        try:
+            headers_set.remove("n_pH")
+        except KeyError:
+            logger("Continuous data column 'n_pH' expected but not found.")
+
+    if 'CDOM' in headers_set:
+        is_MCOMS = True
+        headers_set.remove("CDOM")
+        for key in ['FLUORESCENCE_CHLA', 'BETA_BACKSCATTERING700', 'n_ECO']:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Continuous data column '{key}' expected but not found.")
+
+    if "OCR0" in headers_set:
+        is_OCR = True
+        headers_set.remove("OCR0")
+        for key in ["OCR1", "OCR2", "OCR3"]:
+            try:
+                headers_set.remove(key)
+            except KeyError:
+                logger(f"Continuous data column '{key}' expected but not found.")
+
+    if "tilt" in headers_set:
+        is_tilt = True
+        headers_set.remove("tilt")
+        try:
+            headers_set.remove("tilt_sd")
+        except KeyError:
+            logger("Continuous data column 'tilt_sd' expected but not found.")
+
+    for key in headers_set:
+        logger(f"Unexpected continuous data column '{key}'")
+
+    if is_OCR:
+        if OCR_map is None:
+            OCR0 = "OCR0"
+            OCR1 = "OCR1"
+            OCR2 = "OCR2"
+            OCR3 = "OCR3"
+        else:
+            OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
+            OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
+            OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
+            if OCR_map["OCR3"] == "PAR":
+                OCR3 = "RAW_DOWNWELLING_PAR"
+            else:
+                OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
+
+    for item in cont_list:
+
+        # pressure, always present
+        p = item.get("PRES", fill_value)
+
+        # CTD data: always present
+        CTD_val = {
+            "PRES": p, 
+            "TEMP": item.get("TEMP", fill_value),
+            "PSAL": item.get("PSAL", fill_value)
+        }
+
+        # Rbr sensor also reads conductivity and conductivity-temperature
+        if is_conductivity:
+            CTD_val |= {
+                "conductivity_temp": item.get("conductivity_temp", fill_value)
+            }
+
+        CTD.append(CTD_val)
+
+        # Aanderaa optode data
+        if is_optode:
+            Optode.append({
+                "PRES": p, 
+                "TEMP_DOXY": item.get("TEMP_DOXY", fill_value),
+                "Phase": item.get("Phase", fill_value),
+                "n_DOXY": item.get("n_DOXY", fill_value)
+            })
+
+        # pH
+        if is_pH:
+            pH.append({
+                "PRES": p, 
+                "pH_V": item.get("pH_V", fill_value),
+                "n_pH": item.get("n_pH", fill_value)
+            })
+
+        if is_MCOMS:
+            MCOMS.append({
+                "PRES": p, 
+                "FLUORESCENCE_CHLA": item.get("FLUORESCENCE_CHLA", fill_value), 
+                "BETA_BACKSCATTERING700": item.get("BETA_BACKSCATTERING700", fill_value), 
+                "CDOM": item("CDOM", fill_value)
+            })
+
+        if is_OCR:
+            OCR.append({
+                "PRES": p, 
+                OCR0: item.get("OCR0", fill_value), 
+                OCR1: item.get("OCR1", fill_value), 
+                OCR2: item.get("OCR2", fill_value), 
+                OCR3: item.get("OCR3", fill_value)
+            })
+
+    out["CTD"] = CTD
+    if Optode:
+        out["Optode"] = Optode
+    if pH:
+        out["pH"] = pH
+    if MCOMS:
+        out["FLBB"] = MCOMS
+    if OCR:
+        out["OCR"] = OCR
+
+    return out
 
 
 def parse_parked(
@@ -2080,6 +2261,14 @@ def dura_tokenizer(
             logger('Science data found after the last "<EOT>"')
         if engr_dict or engr_list:
             logger('Engineering data found after the last "<EOT>"')
+        if sci_data or engr_dict or engr_list:
+            engr_list.append(engr_dict)
+            out["science_data"] = sci_data
+            out["engineering_data"] = engr_list
+            out_list.append(out)
+            engr_list = []
+            engr_dict = {}
+            sci_data = []
 
     # EOT check
     if EOT_cnt == 0:
@@ -2203,6 +2392,15 @@ def isus_tokenizer(
             logger('Science data found after the last "<EOT>"')
         if engr_list or engr_dict:
             logger('Engineering data found after the last "<EOT>"')
+        if sci_data or engr_list or engr_dict:
+            engr_list.append(engr_dict)
+            out["science_data"] = sci_data
+            out["engineering_data"] = engr_list
+            out_list.append(out)
+            out = {}
+            engr_list = []
+            engr_dict = {}
+            sci_data = []
 
     # EOT check
     if EOT_cnt == 0:
@@ -2230,12 +2428,13 @@ def isus_tokenizer(
     return out
 
 
-def cp_parser(
-    file, OCR_map=None, fill_value=None, fill_NaT=None, 
+def cp_decoder(
+    file, sort=None, fill_value=None, fill_NaT=None, 
     logger=lambda x: print("[CP] " + x)
 ):
 
     out_list = []
+    out = {}
     stage = 0
     EOT_cnt = 0
     meta_dict = {}
@@ -2249,20 +2448,6 @@ def cp_parser(
             lines = infile.readlines()
 
     lines_iter = iter(lines)
-
-    if OCR_map is None:
-        OCR0 = "OCR0"
-        OCR1 = "OCR1"
-        OCR2 = "OCR2"
-        OCR3 = "OCR3"
-    else:
-        OCR0 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR0"]
-        OCR1 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR1"]
-        OCR2 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR2"]
-        if OCR_map["OCR3"] == "PAR":
-            OCR3 = "RAW_DOWNWELLING_PAR"
-        else:
-            OCR3 = "RAW_DOWNWELLING_IRRADIANCE" + OCR_map["OCR3"]
 
     try:
         # parse line by line
@@ -2361,18 +2546,18 @@ def cp_parser(
                     n_samp = decode_hex(hex_str[72:74], fill_value = fill_value)
                     if isFillValue(n_samp, fill_value) or n_samp == 0:
                         data |= {
-                            OCR0: fill_value,
-                            OCR1: fill_value,
-                            OCR2: fill_value,
-                            OCR3: fill_value,
+                            "OCR0": fill_value,
+                            "OCR1": fill_value,
+                            "OCR2": fill_value,
+                            "OCR3": fill_value,
                             "n_OCR": n_samp
                         }
                     else:
                         data |= {
-                            OCR0: decode_hex(hex_str[48:54], cut=0x1000000),
-                            OCR1: decode_hex(hex_str[54:60], cut=0x1000000),
-                            OCR2: decode_hex(hex_str[60:66], cut=0x1000000),
-                            OCR3: decode_hex(hex_str[66:72], cut=0x1000000),
+                            "OCR0": decode_hex(hex_str[48:54], cut=0x1000000),
+                            "OCR1": decode_hex(hex_str[54:60], cut=0x1000000),
+                            "OCR2": decode_hex(hex_str[60:66], cut=0x1000000),
+                            "OCR3": decode_hex(hex_str[66:72], cut=0x1000000),
                             "n_OCR": n_samp                            
                         }
 
@@ -2446,8 +2631,8 @@ def cp_parser(
             elif line.strip() == "<EOT>":
                 EOT_cnt += 1
                 stage = 0
-
-                out_list.append( (sci_data, meta_dict) )
+                out = {"data": sci_data, "meta": meta_dict}
+                out_list.append(out)
                 meta_dict = {}
                 sci_data = []
 
@@ -2461,6 +2646,11 @@ def cp_parser(
             logger('Science data found after the last "<EOT>"')
         if meta_dict:
             logger('Metadata found after the last "<EOT>"')
+        if sci_data or meta_dict:
+            out = {"data": sci_data, "meta": meta_dict}
+            out_list.append(out)
+            meta_dict = {}
+            sci_data = []
 
     # EOT check
     if EOT_cnt == 0:
@@ -2476,7 +2666,7 @@ def cp_parser(
         out = []
     else:
         # find the longest science record
-        out_lens = [len(_x[1]) for _x in out_list]
+        out_lens = [len(_x["data"]) for _x in out_list]
         max_len = 0
         max_idx = 0
         for (_i, _x) in enumerate(out_lens):
@@ -2485,8 +2675,34 @@ def cp_parser(
                 max_len = _x
         out = out_list[max_idx]
 
-    return out
+    if not sort:
+        pass
 
+    elif sort.lower().startswith("asc"):
+
+        data_fill = []
+        data_actual = []
+        for _x in out["data"]:
+            if isFillValue(_x["PRES"], fill_value):
+                data_fill.append(_x)
+            else:
+                data_actual.append(_x)
+        data_actual.sort(key=lambda x: -x["PRES"])
+        out["data"] = data_actual + data_fill
+
+    elif sort.lower().startswith("desc"):
+
+        data_fill = []
+        data_actual = []
+        for _x in out["data"]:
+            if isFillValue(_x["PRES"], fill_value):
+                data_fill.append(_x)
+            else:
+                data_actual.append(_x)
+        data_actual.sort(key=lambda x: x["PRES"])
+        out["data"] = data_actual + data_fill
+
+    return out
 
 
 #### overall parser
@@ -2584,16 +2800,33 @@ def L0_parser(
         hires_discrete = []
         hires_meta = {}
 
+
     if "cont_samples" in msg_dict:
-        continuous, meta_continuous = parse_continuous(
+        continuous, meta_continuous = decode_continuous(
             msg_dict["cont_samples"], sort="asc", 
             fill_value=fill_value, fill_NaT=fill_NaT,
             logger=logger
         )
-        if consume: del msg_dict["cont_samples"]
+        if consume: 
+            del msg_dict["cont_samples"]
+
+        if cp_dict is not None and cp_dict:
+            logger("Binned data found in both .msg and .cp files")
+            if len(continuous) < len(cp_dict["data"]):
+                continuous = cp_dict["data"]
+                meta_continuous = cp_dict["meta"]
+
+    elif (cp_dict is not None) and cp_dict:
+        continuous = cp_dict["data"]
+        meta_continuous = cp_dict["meta"]
+
     else:
         continuous = []
         meta_continuous = {}
+
+    
+
+
 
     if "ParkPt" in msg_dict:
         parked = parse_parked(
@@ -2643,7 +2876,9 @@ def L0_parser(
         out_dict["Piston"] = log_out["Piston"]
 
     if "profile_terminated" in msg_dict:
-        out_dict["profile_terminated"] = decode_time(msg_dict["profile_terminated"]["time"], fill_NaT)
+        out_dict["profile_terminated"] = decode_time(
+            msg_dict["profile_terminated"]["time"], fill_NaT
+        )
 
     if "meta" in discrete:
         out_dict["metadata_Discrete"] = discrete["meta"]
